@@ -26,6 +26,9 @@ logger = logging.getLogger("rosclaw.judgment_generator")
 
 _JUDGMENTS_DIR = "judgments"
 
+# File-based cache for _load_index to avoid re-reading index.json on every request
+_INDEX_CACHE: dict[str, tuple[float, dict[str, Any] | None]] = {}
+
 # Regex to extract parameter declarations from page body
 # e.g., "Peak torque: 237 Nm" or "peak_torque = 237 Nm"
 _PARAM_EXTRACT_RE = re.compile(
@@ -546,7 +549,7 @@ def generate_judgment_from_scan(param_info: dict[str, Any], wiki_root: str) -> J
 
 
 def _load_index(wiki_root: str) -> dict[str, Any] | None:
-    """Load wiki/judgments/index.json if it exists."""
+    """Load wiki/judgments/index.json if it exists. Uses mtime-based cache."""
     candidates = [
         Path(wiki_root) / _JUDGMENTS_DIR / "index.json",
         Path("wiki") / _JUDGMENTS_DIR / "index.json",
@@ -554,13 +557,21 @@ def _load_index(wiki_root: str) -> dict[str, Any] | None:
     for index_path in candidates:
         if index_path.exists():
             try:
-                return json.loads(index_path.read_text(encoding="utf-8"))
+                mtime = index_path.stat().st_mtime
+                cache_key = str(index_path)
+                if cache_key in _INDEX_CACHE:
+                    cached_mtime, cached_data = _INDEX_CACHE[cache_key]
+                    if cached_mtime == mtime:
+                        return cached_data
+                data = json.loads(index_path.read_text(encoding="utf-8"))
+                _INDEX_CACHE[cache_key] = (mtime, data)
+                return data
             except Exception:
                 pass
     return None
 
 
-def get_judgment(entity: str, context: str | None = None, wiki_root: str | None = None) -> dict[str, Any]:
+def get_judgment(entity: str, context: str | None = None, wiki_root: str | None = None, limit: int = 50) -> dict[str, Any]:
     """Retrieve judgment(s) for a specific entity and optional context.
 
     Phase 8:优先从 index.json 读取。
@@ -595,11 +606,15 @@ def get_judgment(entity: str, context: str | None = None, wiki_root: str | None 
 
     if matches:
         matches.sort(key=lambda x: x["confidence"], reverse=True)
+        total = len(matches)
+        if limit > 0 and total > limit:
+            matches = matches[:limit]
         return {
             "status": "found",
             "entity": entity,
             "context": context,
-            "count": len(matches),
+            "count": total,
+            "returned": len(matches),
             "judgments": matches,
         }
 

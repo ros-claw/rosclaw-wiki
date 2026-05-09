@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import logging
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -17,6 +18,10 @@ from typing import Any
 import wiki_engine as engine
 
 logger = logging.getLogger("rosclaw.dream")
+
+# Simple TTL cache for expensive insight generation
+_INSIGHTS_CACHE: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+_INSIGHTS_TTL_SEC = 300  # 5 minutes
 
 
 # ── Phase 1: Repair & Merge ──
@@ -173,7 +178,15 @@ def generate_insights(wiki_root: str) -> list[dict[str, Any]]:
 
     Returns:
         List of insight dicts with type, description, suggested_action.
+        Results are cached for 5 minutes to avoid expensive re-computation.
     """
+    cache_key = str(wiki_root)
+    now = time.time()
+    if cache_key in _INSIGHTS_CACHE:
+        cached_at, cached_data = _INSIGHTS_CACHE[cache_key]
+        if now - cached_at < _INSIGHTS_TTL_SEC:
+            return cached_data
+
     insights: list[dict[str, Any]] = []
 
     # Insight 1: High-orphan areas
@@ -217,6 +230,7 @@ def generate_insights(wiki_root: str) -> list[dict[str, Any]]:
             "severity": "low",
         })
 
+    _INSIGHTS_CACHE[cache_key] = (now, insights)
     return insights
 
 

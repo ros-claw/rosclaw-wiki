@@ -31,7 +31,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-from fastapi import FastAPI, Header, HTTPException, Request
+from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.responses import JSONResponse
 
 from auth_manager import validate_api_key
@@ -181,6 +181,7 @@ async def search_hybrid(
 @app.get("/v1/judgments/{entity}")
 async def get_judgments(
     entity: str,
+    limit: int = Query(50, ge=1, le=500, description="Max judgments to return"),
     x_api_key: str = Header(..., alias="X-API-Key"),
 ) -> JSONResponse:
     tenant = _get_tenant(x_api_key)
@@ -194,7 +195,7 @@ async def get_judgments(
 
     try:
         from judgment_generator import get_judgment
-        result = get_judgment(entity, wiki_root=WIKI_ROOT)
+        result = get_judgment(entity, wiki_root=WIKI_ROOT, limit=limit)
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
