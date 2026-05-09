@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Boston-Dynamics-Spot",
+    "parameter": "MAX_PAYLOAD",
+    "recommended_value": 14.0,
+    "unit": "kg",
+    "confidence": 0.94,
+    "sources": [
+      "[[Spot-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum payload including arm. 70% of structural limit.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Boston-Dynamics-Spot",
+    "parameter": "MAX_INCLINE",
+    "recommended_value": 30.0,
+    "unit": "deg",
+    "confidence": 0.91,
+    "sources": [
+      "[[Spot-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum traversable incline. 86% of motor torque limit.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Boston-Dynamics-Spot",
+    "parameter": "OPERATING_TEMP",
+    "recommended_value": -20.0,
+    "unit": "°C",
+    "confidence": 0.89,
+    "sources": [
+      "[[Spot-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Minimum operating temperature. MIL-STD-810G rated.",
+    "unresolved": false
+  }
+]

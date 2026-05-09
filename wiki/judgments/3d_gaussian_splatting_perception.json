@@ -1,0 +1,22 @@
+[
+  {
+    "context": "perception",
+    "entity": "3D Gaussian Splatting",
+    "parameter": "The_process_involves",
+    "recommended_value": 1.0,
+    "unit": "Collecting",
+    "confidence": 0.8,
+    "sources": [
+      "[[Aerial Navigation]]",
+      "[[Novel View Synthesis]]",
+      "[[Sim-to-Real Transfer]]",
+      "[[VLA-AN]]",
+      "[[extends]]"
+    ],
+    "conflicts_resolved": [
+      "Auto-extracted from wiki page"
+    ],
+    "usage_notes": "Auto-extracted from 3d_gaussian_splatting.md",
+    "unresolved": false
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "entity": "Matterport3D-Simulator",
+  "context": "simulator",
+  "parameter": "VIEWPOINT_SPACING",
+  "recommended_value": "2.25",
+  "confidence": 0.9,
+  "unit": "m",
+  "hardware_limit": null,
+  "sources": [
+    "[[Matterport3D-Simulator-Spec]]"
+  ],
+  "usage_notes": "Average spacing between navigable viewpoints."
+}

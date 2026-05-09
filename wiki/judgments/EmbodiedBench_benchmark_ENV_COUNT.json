@@ -1,0 +1,13 @@
+{
+  "entity": "EmbodiedBench",
+  "context": "benchmark",
+  "parameter": "ENV_COUNT",
+  "recommended_value": "4",
+  "confidence": 0.95,
+  "unit": "environments",
+  "hardware_limit": null,
+  "sources": [
+    "[[EmbodiedBench-ICML2025]]"
+  ],
+  "usage_notes": "EB-ALFRED, EB-Habitat, EB-Navigation, EB-Manipulation."
+}

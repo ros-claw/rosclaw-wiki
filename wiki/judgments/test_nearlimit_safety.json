@@ -1,0 +1,19 @@
+[
+  {
+    "context": "safety_test",
+    "entity": "Test-NearLimit",
+    "parameter": "WARNING_PARAM",
+    "recommended_value": "95",
+    "unit": "%",
+    "hardware_limit": 100,
+    "confidence": 0.8,
+    "sources": [
+      "[[Test-Safety]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Test parameter for WARNING boundary check. At 95% of hardware limit.",
+    "unresolved": false
+  }
+]

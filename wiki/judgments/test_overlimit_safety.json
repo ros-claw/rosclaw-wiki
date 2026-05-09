@@ -1,0 +1,19 @@
+[
+  {
+    "context": "safety_test",
+    "entity": "Test-Overlimit",
+    "parameter": "DANGER_PARAM",
+    "recommended_value": "999",
+    "unit": "N·m",
+    "hardware_limit": 100,
+    "confidence": 0.8,
+    "sources": [
+      "[[Test-Safety]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Test parameter for CRITICAL boundary check. Exceeds hardware limit by 10x.",
+    "unresolved": false
+  }
+]

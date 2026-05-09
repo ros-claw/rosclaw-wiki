@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Jetson-Orin-AGX",
+    "parameter": "CUDA_CORES",
+    "recommended_value": 2048.0,
+    "unit": "cores",
+    "confidence": 0.95,
+    "sources": [
+      "[[Jetson-Orin-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Ampere architecture CUDA cores.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Jetson-Orin-AGX",
+    "parameter": "MAX_POWER",
+    "recommended_value": 60.0,
+    "unit": "W",
+    "confidence": 0.92,
+    "sources": [
+      "[[Jetson-Orin-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum module power consumption at 50W mode + 10W headroom.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Jetson-Orin-AGX",
+    "parameter": "AI_PERF",
+    "recommended_value": 275.0,
+    "unit": "TOPS",
+    "confidence": 0.94,
+    "sources": [
+      "[[Jetson-Orin-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "INT8 sparse AI performance. 91.7% of theoretical peak.",
+    "unresolved": false
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "context": "navigation",
+    "entity": "Topometric Navigation",
+    "parameter": "How_It_Works\n\nA_typical_topometric_navigation_system",
+    "recommended_value": 1.0,
+    "unit": "Builds",
+    "confidence": 0.8,
+    "sources": [
+      "[[Long-Horizon Navigation]]",
+      "[[Map Representation]]",
+      "[[Metric Navigation]]",
+      "[[Navigation Planning]]",
+      "[[SLAM]]",
+      "[[TANGO]]",
+      "[[Topological Navigation]]",
+      "[[related_to]]"
+    ],
+    "conflicts_resolved": [
+      "Auto-extracted from wiki page"
+    ],
+    "usage_notes": "Auto-extracted from topometric_navigation.md",
+    "unresolved": false
+  }
+]

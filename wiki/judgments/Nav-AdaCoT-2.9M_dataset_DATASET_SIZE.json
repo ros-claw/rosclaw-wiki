@@ -1,0 +1,13 @@
+{
+  "entity": "Nav-AdaCoT-2.9M",
+  "context": "dataset",
+  "parameter": "DATASET_SIZE",
+  "recommended_value": "2900000",
+  "confidence": 0.93,
+  "unit": "samples",
+  "hardware_limit": null,
+  "sources": [
+    "[[Nav-AdaCoT-Paper-2601.08665]]"
+  ],
+  "usage_notes": "2.9 million samples with adaptive chain-of-thought annotations."
+}

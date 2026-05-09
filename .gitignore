@@ -1,0 +1,56 @@
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+web_ui.log
+
+# Data
+data/raw/
+data/events.jsonl
+data/processed_files.log
+data/failed_files.log
+data/benchmarks/
+seekdb_data/
+wiki/.search_index/
+wiki/.vector_index/
+wiki/.locks/
+
+# Claude Flow
+.claude-flow/
+
+# Testing
+.pytest_cache/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+data/code_graph.json
+data/code_graph_external.json
+seekdb.db/
+*.db

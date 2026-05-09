@@ -1,0 +1,13 @@
+{
+  "entity": "Prevalent",
+  "context": "model",
+  "parameter": "R2R_SPL",
+  "recommended_value": "51",
+  "confidence": 0.91,
+  "unit": "%",
+  "hardware_limit": null,
+  "sources": [
+    "[[Prevalent-Paper-2002.10638]]"
+  ],
+  "usage_notes": "Success rate weighted by path length on R2R benchmark."
+}

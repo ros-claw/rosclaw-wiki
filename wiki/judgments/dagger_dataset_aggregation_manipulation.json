@@ -1,0 +1,22 @@
+[
+  {
+    "context": "manipulation",
+    "entity": "DAgger (Dataset Aggregation)",
+    "parameter": "The_algorithm_works_by",
+    "recommended_value": 1.0,
+    "unit": "Training",
+    "confidence": 0.8,
+    "sources": [
+      "[[DAggerFM]]",
+      "[[behavioral cloning]]",
+      "[[extends]]",
+      "[[imitation learning]]",
+      "[[inverse reinforcement learning]]"
+    ],
+    "conflicts_resolved": [
+      "Auto-extracted from wiki page"
+    ],
+    "usage_notes": "Auto-extracted from dagger_dataset_aggregation.md",
+    "unresolved": false
+  }
+]

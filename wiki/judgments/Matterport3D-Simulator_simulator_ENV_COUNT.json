@@ -1,0 +1,13 @@
+{
+  "entity": "Matterport3D-Simulator",
+  "context": "simulator",
+  "parameter": "ENV_COUNT",
+  "recommended_value": "90",
+  "confidence": 0.95,
+  "unit": "environments",
+  "hardware_limit": null,
+  "sources": [
+    "[[Matterport3D-Dataset]]"
+  ],
+  "usage_notes": "Number of indoor environments in the dataset."
+}

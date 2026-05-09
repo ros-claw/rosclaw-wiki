@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Unitree-Go2",
+    "parameter": "MAX_TORQUE",
+    "recommended_value": 45.0,
+    "unit": "N·m",
+    "confidence": 0.9,
+    "sources": [
+      "[[Unitree-Go2-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Knee joint max torque. 90% of actuator limit.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Unitree-Go2",
+    "parameter": "MAX_VELOCITY",
+    "recommended_value": 5.0,
+    "unit": "m/s",
+    "confidence": 0.88,
+    "sources": [
+      "[[Unitree-Go2-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum running speed. 83% of motor limit.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Unitree-Go2",
+    "parameter": "BATTERY_CAPACITY",
+    "recommended_value": 15000.0,
+    "unit": "mAh",
+    "confidence": 0.92,
+    "sources": [
+      "[[Unitree-Go2-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Li-ion battery capacity. 2-4 hour runtime.",
+    "unresolved": false
+  }
+]

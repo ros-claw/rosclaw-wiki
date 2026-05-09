@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Velodyne-VLP16",
+    "parameter": "RANGE_MAX",
+    "recommended_value": 100.0,
+    "unit": "m",
+    "confidence": 0.93,
+    "sources": [
+      "[[Velodyne-VLP16-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum detection range at 80% reflectivity.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Velodyne-VLP16",
+    "parameter": "VERTICAL_FOV",
+    "recommended_value": 30.0,
+    "unit": "deg",
+    "confidence": 0.91,
+    "sources": [
+      "[[Velodyne-VLP16-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Vertical field of view (+15° to -15°).",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Velodyne-VLP16",
+    "parameter": "POINT_RATE",
+    "recommended_value": 300000.0,
+    "unit": "pts/s",
+    "confidence": 0.9,
+    "sources": [
+      "[[Velodyne-VLP16-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Points per second at 10Hz rotation.",
+    "unresolved": false
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "entity": "DROID",
+  "context": "dataset",
+  "parameter": "SCENES",
+  "recommended_value": "564",
+  "confidence": 0.93,
+  "unit": "scenes",
+  "hardware_limit": null,
+  "sources": [
+    "[[DROID-Paper-2403.12945]]"
+  ],
+  "usage_notes": "Number of unique scenes covered."
+}

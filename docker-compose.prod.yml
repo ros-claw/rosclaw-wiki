@@ -1,0 +1,68 @@
+version: "3.8"
+
+services:
+  seekdb:
+    image: oceanbase/seekdb:latest
+    container_name: rosclaw-seekdb
+    ports:
+      - "2881:2881"
+    volumes:
+      - seekdb_data:/var/lib/seekdb
+    environment:
+      - SEEKDB_MODE=server
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:2881/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  rosclaw-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: rosclaw-api
+    ports:
+      - "8000:8000"
+    environment:
+      - WIKI_ROOT=/app/wiki
+      - WIKI_BACKEND=seekdb
+      - SEEKDB_MODE=server
+      - SEEKDB_HOST=seekdb
+      - SEEKDB_PORT=2881
+    volumes:
+      - ./wiki:/app/wiki:ro
+      - ./data:/app/data:ro
+    depends_on:
+      seekdb:
+        condition: service_healthy
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: rosclaw-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - certbot_data:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    depends_on:
+      - rosclaw-api
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot
+    container_name: rosclaw-certbot
+    volumes:
+      - certbot_data:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h; done'"
+    restart: unless-stopped
+
+volumes:
+  seekdb_data:
+  certbot_data:
+  certbot_www:

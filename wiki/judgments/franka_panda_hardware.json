@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Franka-Panda",
+    "parameter": "MAX_TORQUE",
+    "recommended_value": 87.0,
+    "unit": "N·m",
+    "confidence": 0.93,
+    "sources": [
+      "[[Franka-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Joint 1 max torque. 87% of actuator limit.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Franka-Panda",
+    "parameter": "REACH",
+    "recommended_value": 0.855,
+    "unit": "m",
+    "confidence": 0.91,
+    "sources": [
+      "[[Franka-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum reach from base.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Franka-Panda",
+    "parameter": "PAYLOAD",
+    "recommended_value": 3.0,
+    "unit": "kg",
+    "confidence": 0.9,
+    "sources": [
+      "[[Franka-Datasheet]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum payload at TCP.",
+    "unresolved": false
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "entity": "R2R-CE-Dataset",
+  "context": "dataset",
+  "parameter": "ETPNAV_IMPROVEMENT",
+  "recommended_value": "10",
+  "confidence": 0.85,
+  "unit": "%",
+  "hardware_limit": null,
+  "sources": [
+    "[[ETPNav-Paper-2304.03047]]"
+  ],
+  "usage_notes": "ETPNav improvement over prior SOTA on VLN-CE benchmark."
+}

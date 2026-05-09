@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rosclaw-wiki": {
+      "url": "https://api.rosclaw.io/wiki/mcp",
+      "transport": "streamable-http"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Intel-RealSense-D435",
+    "parameter": "DEPTH_FOV_H",
+    "recommended_value": 87.0,
+    "unit": "deg",
+    "confidence": 0.92,
+    "sources": [
+      "[[RealSense-D435-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Horizontal depth FOV.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Intel-RealSense-D435",
+    "parameter": "DEPTH_RANGE_MIN",
+    "recommended_value": 0.28,
+    "unit": "m",
+    "confidence": 0.89,
+    "sources": [
+      "[[RealSense-D435-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Minimum measurable depth distance.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Intel-RealSense-D435",
+    "parameter": "DEPTH_RANGE_MAX",
+    "recommended_value": 10.0,
+    "unit": "m",
+    "confidence": 0.87,
+    "sources": [
+      "[[RealSense-D435-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum depth accuracy range (optimal).",
+    "unresolved": false
+  }
+]

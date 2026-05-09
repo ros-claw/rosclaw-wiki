@@ -1,0 +1,13 @@
+{
+  "entity": "DROID",
+  "context": "dataset",
+  "parameter": "DEMONSTRATIONS",
+  "recommended_value": "76000",
+  "confidence": 0.94,
+  "unit": "trajectories",
+  "hardware_limit": null,
+  "sources": [
+    "[[DROID-Paper-2403.12945]]"
+  ],
+  "usage_notes": "Total demonstration trajectories in the dataset."
+}

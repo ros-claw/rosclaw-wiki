@@ -1,0 +1,13 @@
+{
+  "entity": "EmbodiedBench",
+  "context": "benchmark",
+  "parameter": "TASK_COUNT",
+  "recommended_value": "1128",
+  "confidence": 0.94,
+  "unit": "tasks",
+  "hardware_limit": null,
+  "sources": [
+    "[[EmbodiedBench-ICML2025]]"
+  ],
+  "usage_notes": "Total testing tasks across 4 environments and 6 subsets."
+}

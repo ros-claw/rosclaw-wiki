@@ -1,0 +1,13 @@
+{
+  "entity": "Qwen2.5-VL-3B",
+  "context": "model",
+  "parameter": "NAV_SUCCESS_RATE",
+  "recommended_value": "72.3",
+  "confidence": 0.9,
+  "unit": "%",
+  "hardware_limit": null,
+  "sources": [
+    "[[SeeNav-Agent-Paper-2512.02631]]"
+  ],
+  "usage_notes": "Navigation success rate on EmbodiedBench Navigation after SRGPO post-training."
+}

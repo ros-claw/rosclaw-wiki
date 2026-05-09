@@ -1,0 +1,18 @@
+[
+  {
+    "context": "safety",
+    "entity": "Test-Overlimit",
+    "parameter": "DANGER_PARAM",
+    "recommended_value": 99,
+    "unit": "9",
+    "confidence": 0.8,
+    "sources": [
+      "[[Test-Overlimit]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via conflict resolver (score=0.8)"
+    ],
+    "usage_notes": "",
+    "unresolved": false
+  }
+]

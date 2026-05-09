@@ -1,0 +1,13 @@
+{
+  "entity": "Habitat",
+  "context": "simulator",
+  "parameter": "RENDER_SPEED",
+  "recommended_value": "1000",
+  "confidence": 0.88,
+  "unit": "fps",
+  "hardware_limit": null,
+  "sources": [
+    "[[Habitat-Sim-Paper]]"
+  ],
+  "usage_notes": "Thousands of environment steps per second for large-scale training."
+}

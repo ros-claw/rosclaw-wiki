@@ -1,0 +1,13 @@
+{
+  "entity": "Room-to-Room-Benchmark",
+  "context": "benchmark",
+  "parameter": "PREV_SOTA_SPL",
+  "recommended_value": "47",
+  "confidence": 0.89,
+  "unit": "%",
+  "hardware_limit": null,
+  "sources": [
+    "[[Prevalent-Paper-2002.10638]]"
+  ],
+  "usage_notes": "Previous state-of-the-art SPL before Prevalent."
+}

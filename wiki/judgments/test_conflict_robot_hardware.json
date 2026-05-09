@@ -1,0 +1,50 @@
+[
+  {
+    "context": "hardware",
+    "entity": "Test Conflict Robot",
+    "parameter": "weight",
+    "recommended_value": 35.0,
+    "unit": "kg",
+    "confidence": 0.85,
+    "sources": [
+      "[[Test-Conflict-Robot-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Robot chassis weight. 87.5% of max payload capacity.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Test Conflict Robot",
+    "parameter": "height",
+    "recommended_value": 1.2,
+    "unit": "m",
+    "confidence": 0.82,
+    "sources": [
+      "[[Test-Conflict-Robot-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Total height with sensor mast.",
+    "unresolved": false
+  },
+  {
+    "context": "hardware",
+    "entity": "Test Conflict Robot",
+    "parameter": "max_speed",
+    "recommended_value": 1.5,
+    "unit": "m/s",
+    "confidence": 0.88,
+    "sources": [
+      "[[Test-Conflict-Robot-Spec]]"
+    ],
+    "conflicts_resolved": [
+      "Resolved via authority_weighted"
+    ],
+    "usage_notes": "Maximum linear velocity on flat terrain.",
+    "unresolved": false
+  }
+]

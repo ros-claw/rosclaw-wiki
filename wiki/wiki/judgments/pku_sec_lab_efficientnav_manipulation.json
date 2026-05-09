@@ -1,0 +1,23 @@
+[
+  {
+    "context": "manipulation",
+    "entity": "PKU-SEC-Lab_EfficientNav",
+    "parameter": "cmake",
+    "recommended_value": "3.14.0 conda",
+    "unit": "conda",
+    "confidence": 0.7,
+    "sources": [
+      "[[Code Repository]]",
+      "[[Embodied 3D Occupancy Prediction]]",
+      "[[GRPO reinforcement learning]]",
+      "[[GRPO]]",
+      "[[Language-guided urban navigation]]",
+      "[[Navigation from Dialog History]]"
+    ],
+    "conflicts_resolved": [
+      "Auto-extracted from wiki page"
+    ],
+    "usage_notes": "Auto-extracted from pku_sec_lab_efficientnav.md",
+    "unresolved": false
+  }
+]

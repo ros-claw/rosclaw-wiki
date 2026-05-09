@@ -1,0 +1,13 @@
+{
+  "entity": "DROID",
+  "context": "dataset",
+  "parameter": "TASKS",
+  "recommended_value": "84",
+  "confidence": 0.92,
+  "unit": "tasks",
+  "hardware_limit": null,
+  "sources": [
+    "[[DROID-Paper-2403.12945]]"
+  ],
+  "usage_notes": "Number of manipulation tasks covered."
+}

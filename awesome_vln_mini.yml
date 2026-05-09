@@ -1,0 +1,47 @@
+articles:
+- title: https://leggedrobotics.github.io/wildos/
+  url: https://leggedrobotics.github.io/wildos/
+- title: https://embodiedbench.github.io/
+  url: https://embodiedbench.github.io/
+code_repos:
+- name: nebula2-wildos
+  url: https://github.com/nasa-jpl/nebula2-wildos
+- name: NavSpace
+  url: https://github.com/TidalHarley/NavSpace
+- name: EfficientNav
+  url: https://github.com/PKU-SEC-Lab/EfficientNav
+papers:
+- arxiv_id: '2602.19308'
+  title: 'WildOS: Open-Vocabulary Object Search in the Wild'
+  url: https://arxiv.org/pdf/2602.19308
+- arxiv_id: '2603.16166'
+  title: 'SignNav: Leveraging Signage for Semantic Visual Navigation in Large-Scale
+    Indoor Environments'
+  url: https://arxiv.org/pdf/2603.16166
+- arxiv_id: '2510.08173'
+  title: 'NavSpace: How Navigation Agents Follow Spatial Intelligence Instructions'
+  url: https://arxiv.org/pdf/2510.08173
+- arxiv_id: '2602.15864'
+  title: 'ReasonNavi: Human-Inspired Global Map Reasoning for Zero-Shot Embodied Navigation'
+  url: https://arxiv.org/pdf/2602.15864
+- arxiv_id: '2510.18546'
+  title: 'EfficientNav: Towards On-Device Object-Goal Navigation with Navigation Map
+    Caching and Retrieval'
+  url: https://arxiv.org/pdf/2510.18546v2
+- arxiv_id: '2602.09972'
+  title: 'Hydra-Nav: Object Navigation via Adaptive Dual-Process Reasoning'
+  url: https://arxiv.org/pdf/2602.09972
+- arxiv_id: '2602.11598'
+  title: 'ABot-N0: Technical Report on the VLA Foundation Model for Versatile Embodied
+    Navigation'
+  url: https://arxiv.org/pdf/2602.11598
+- arxiv_id: '2602.09765'
+  title: 'NavDreamer: Video Models as Zero-Shot 3D Navigators'
+  url: https://arxiv.org/pdf/2602.09765
+- arxiv_id: '2602.05467'
+  title: 'MerNav: A Highly Generalizable Memory–Execute–Review Framework for Zero-Shot
+    Object Goal Navigation'
+  url: https://arxiv.org/pdf/2602.05467
+- arxiv_id: '2508.01766'
+  title: 'VPN: Visual Prompt Navigation'
+  url: https://arxiv.org/pdf/2508.01766v6
