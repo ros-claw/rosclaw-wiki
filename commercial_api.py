@@ -27,9 +27,17 @@ from __future__ import annotations
 
 import logging
 import os
+import sys
 import time
 from pathlib import Path
 from typing import Any
+
+# Add subdirectories to path so modules can be imported flat (legacy compat)
+_PROJECT_ROOT = Path(__file__).parent
+for _pkg_dir in ["api", "core", "search", "ingest", "knowledge", "code", "robot", "utils", "dream", "tests"]:
+    _pkg_path = _PROJECT_ROOT / _pkg_dir
+    if str(_pkg_path) not in sys.path:
+        sys.path.insert(0, str(_pkg_path))
 
 from fastapi import FastAPI, Header, HTTPException, Query, Request
 from fastapi.responses import JSONResponse

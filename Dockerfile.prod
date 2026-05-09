@@ -27,9 +27,12 @@ RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTr
 # Create necessary directories
 RUN mkdir -p /app/data /app/wiki /app/logs
 
+# Ensure subdirectories are importable
+ENV PYTHONPATH=/app/api:/app/core:/app/search:/app/ingest:/app/knowledge:/app/code:/app/robot:/app/utils:/app/dream:/app/tests:/app
+
 # Healthcheck
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
-    CMD curl -f http://localhost:8000/wiki/v1/health || exit 1
+    CMD curl -f http://localhost:8000/v1/health || exit 1
 
 EXPOSE 8000
 

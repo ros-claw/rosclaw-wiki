@@ -14,6 +14,13 @@ import os
 import sys
 from pathlib import Path
 
+# Add subdirectories to path so modules can be imported flat (legacy compat)
+_PROJECT_ROOT = Path(__file__).parent
+for _pkg_dir in ["api", "core", "search", "ingest", "knowledge", "code", "robot", "utils", "dream", "tests"]:
+    _pkg_path = _PROJECT_ROOT / _pkg_dir
+    if str(_pkg_path) not in sys.path:
+        sys.path.insert(0, str(_pkg_path))
+
 try:
     from mcp.server.fastmcp import FastMCP
 except ImportError as _import_err:
