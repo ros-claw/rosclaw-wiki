@@ -28,17 +28,36 @@ Thumbs.db
 # Logs
 *.log
 web_ui.log
+log.md
+wiki/log.md
 
-# Data
-data/raw/
-data/events.jsonl
-data/processed_files.log
-data/failed_files.log
-data/benchmarks/
+# Runtime / Generated
+data/
 seekdb_data/
+seekdb_schema.sql
 wiki/.search_index/
 wiki/.vector_index/
 wiki/.locks/
+web_ui/
+web_ui.pid
+skills/
+
+# Tests & Reports (not for release)
+test_*.py
+test_awesome.md
+TEST_*.md
+PHASE*_REPORT*.md
+PHASE_*_CLOSED
+*_COMPLETE_STATUS_REPORT.md
+compare_fulltext_abstract.py
+test_real_ingest.py
+
+# Docs (dev-only)
+docs/
+
+# Generated artifacts
+awesome_vln*.yml
+awesome_vln*.json
 
 # Claude Flow
 .claude-flow/
