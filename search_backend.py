@@ -33,7 +33,8 @@ _DEFAULT_SCHEMA = Schema(
 
 
 def _get_index_dir(wiki_root: str) -> Path:
-    return Path(wiki_root) / ".search_index"
+    # Use data dir for index to support read-only wiki mounts in production
+    return Path(wiki_root).parent / "data" / ".search_index"
 
 
 def init_index(wiki_root: str) -> Any:
