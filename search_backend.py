@@ -43,7 +43,11 @@ def init_index(wiki_root: str) -> Any:
         return None
 
     idx_dir = _get_index_dir(wiki_root)
-    idx_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        idx_dir.mkdir(parents=True, exist_ok=True)
+    except OSError:
+        logger.warning("Cannot create whoosh index dir (read-only fs); search will use grep fallback")
+        return None
 
     if whoosh_index.exists_in(str(idx_dir)):
         return whoosh_index.open_dir(str(idx_dir))
