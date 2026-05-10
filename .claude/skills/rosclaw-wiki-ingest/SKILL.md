@@ -382,6 +382,136 @@ wiki/
 └── archive/              # Superseded pages (with redirect stubs)
 ```
 
+## Batch Ingestion (Multiple Awesome Lists)
+
+When ingesting more than one Awesome List, follow this pattern to avoid data loss and graph fragmentation.
+
+### Wiki Pages — Natural Accumulation
+
+Wiki pages accumulate automatically. Each new awesome list adds `.md` files to `wiki/` subdirectories. No merge step is required.
+
+```bash
+# Batch 1: Vision-Language Navigation
+python rosclaw_fetch.py --input awesome-vln.md --output-dir data/raw
+# → LLM extraction → wiki/ 新增 ~200 页
+
+# Batch 2: Robotics Manipulation
+python rosclaw_fetch.py --input awesome-manipulation.md --output-dir data/raw
+# → LLM extraction → wiki/ 新增 ~300 页
+
+# Batch 3: Quadruped Locomotion
+python rosclaw_fetch.py --input awesome-quadruped.md --output-dir data/raw
+# → LLM extraction → wiki/ 新增 ~150 页
+```
+
+After all batches, rebuild the index once:
+```bash
+python -c "from wiki_engine import update_index; update_index('wiki')"
+```
+
+### Code Graphs — MUST Merge
+
+**Critical**: each batch of repo analysis generates a separate `code_graph_{batch}.json`. The API reads **all** `code_graph*.json` files and aggregates their stats, but for long-term maintainability you should merge them into a single canonical file.
+
+```bash
+# After each batch, generate a batch-specific code graph.
+# Naming convention (the API relies on this):
+#   - data/code_graph.json              = canonical merged graph (always keep)
+#   - data/code_graph_batch_{name}.json = temporary batch graph
+#   - data/code_graph_*_merged.json     = intermediate merges (can delete)
+ls data/code_graph*.json
+#  code_graph.json              # canonical master
+#  code_graph_batch_vln.json   # batch 1
+#  code_graph_batch_manip.json # batch 2
+
+# Merge all into the canonical file
+python code_graph_merger.py \
+  --inputs data/code_graph.json data/code_graph_batch_*.json \
+  --output data/code_graph.json
+
+# Clean up temporary batch files after successful merge
+rm data/code_graph_batch_*.json
+
+# Or just preview stats without merging
+python code_graph_merger.py \
+  --inputs data/code_graph.json data/code_graph_batch_*.json \
+  --output /dev/null \
+  --stats-only
+```
+
+**Deduplication rules**:
+- Nodes are deduplicated by `id` (later files override earlier ones)
+- Edges are deduplicated by `(source, target, type)`
+- `repo_count` is summed across all files
+
+### Database (seekdb) — Incremental Append
+
+`seekdb_compat.db` is an SQLite database. Judgments and usage records are INSERT-only. Multiple batches naturally append data. No merge step is required for the DB.
+
+If you run ingestion on **multiple devices** and need to sync their databases:
+1. Each device exports its SQLite judgments as JSONL:
+   ```bash
+   sqlite3 seekdb_compat.db ".mode json" "SELECT * FROM judgments" > judgments_device_A.jsonl
+   ```
+2. Aggregate on the production server and import:
+   ```bash
+   cat judgments_*.jsonl | python -c "import sys, json; ... # import into production DB"
+   ```
+3. **Better long-term**: switch production to PostgreSQL (`llmwiki` hosted mode supports this via `DATABASE_URL`). PostgreSQL handles concurrent writes from multiple devices natively.
+
+## Cloud Storage Architecture (R2 / S3)
+
+For production deployments that ingest from multiple devices, store large/static assets in object storage.
+
+| Data | Fits R2? | Recommended Pattern |
+|------|----------|---------------------|
+| `wiki/*.md` | ✅ Excellent | rclone mount or API reads via S3 SDK |
+| `data/raw/` | ✅ Excellent | Cold storage. Download to local only when re-ingesting |
+| `data/code_graph*.json` | ✅ Good | 150MB+ files, ideal for object storage. Download on API startup |
+| `seekdb_compat.db` | ❌ **Poor** | SQLite requires random I/O. Use local disk or PostgreSQL |
+
+### Example: R2 Sync Workflow
+
+```bash
+# 1. Device A finishes ingestion
+rclone sync wiki/ r2:rosclaw-wiki/wiki --transfers 32
+rclone sync data/raw/ r2:rosclaw-wiki/raw --transfers 32
+rclone copy data/code_graph_batch_A.json r2:rosclaw-wiki/graphs/
+
+# 2. Production server pulls updates
+rclone sync r2:rosclaw-wiki/wiki ./wiki
+rclone sync r2:rosclaw-wiki/graphs ./data/
+
+# 3. Merge code graphs on server
+python code_graph_merger.py --inputs data/code_graph.json data/code_graph_batch_*.json --output data/code_graph.json
+rm -f data/code_graph_batch_*.json
+
+# 4. Restart API to pick up new wiki pages and graph
+sudo docker-compose -f docker-compose.prod.yml restart rosclaw-api
+```
+
+### Docker Compose with R2 (FUSE)
+
+If you want the API to read directly from R2 without local copies, mount R2 as a FUSE filesystem:
+
+```yaml
+# docker-compose.prod.yml (add service)
+services:
+  rclone-mount:
+    image: rclone/rclone
+    privileged: true
+    volumes:
+      - /etc/rclone.conf:/config/rclone/rclone.conf:ro
+    command: mount r2:rosclaw-wiki /mnt/r2 --vfs-cache-mode writes --allow-other
+  
+  rosclaw-api:
+    volumes:
+      - /mnt/r2/wiki:/app/wiki:ro
+      - /mnt/r2/data:/app/data:ro
+```
+
+**Note**: FUSE adds latency. For high-traffic APIs, keep `wiki/` and `code_graph.json` on local SSD and only use R2 for `data/raw/` cold storage.
+
 ## Common Pitfalls
 
 1. **Never mutate `data/raw/`** — Raw sources are immutable. All derived content goes in `wiki/`.

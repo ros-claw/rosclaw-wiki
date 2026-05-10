@@ -1205,18 +1205,30 @@ async def hub_stats() -> JSONResponse:
     except Exception as exc:
         logger.warning("Hub stats wikilink scan failed: %s", exc)
 
-    # Code knowledge graph: load from code_graph.json if available
+    # Code knowledge graph: aggregate canonical graph + unmerged batch graphs.
+    # Naming convention:
+    #   - data/code_graph.json          = canonical merged graph (always read)
+    #   - data/code_graph_batch_*.json  = temporary batch graphs (read if present)
+    #   - data/code_graph_*_merged.json = intermediate merges (ignored)
+    #   - data/code_graph_*_backup.json = backups (ignored)
     try:
-        code_graph_path = Path(WIKI_ROOT).parent / "data" / "code_graph.json"
-        if code_graph_path.exists():
+        data_dir = Path(WIKI_ROOT).parent / "data"
+        cg_files: list[Path] = []
+        canonical = data_dir / "code_graph.json"
+        if canonical.exists():
+            cg_files.append(canonical)
+        cg_files.extend(sorted(data_dir.glob("code_graph_batch_*.json")))
+        total_nodes = 0
+        total_edges = 0
+        if cg_files:
             import json
-            with open(code_graph_path, encoding="utf-8") as f:
-                cg_data = json.load(f)
-            stats["total_code_graph_nodes"] = len(cg_data.get("nodes", []))
-            stats["total_code_graph_edges"] = len(cg_data.get("edges", []))
-        else:
-            stats["total_code_graph_nodes"] = 0
-            stats["total_code_graph_edges"] = 0
+            for cg_path in cg_files:
+                with open(cg_path, encoding="utf-8") as f:
+                    cg_data = json.load(f)
+                total_nodes += len(cg_data.get("nodes", []))
+                total_edges += len(cg_data.get("edges", []))
+        stats["total_code_graph_nodes"] = total_nodes
+        stats["total_code_graph_edges"] = total_edges
     except Exception as exc:
         logger.warning("Hub stats code graph failed: %s", exc)
 
