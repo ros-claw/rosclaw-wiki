@@ -1205,11 +1205,24 @@ async def hub_stats() -> JSONResponse:
     except Exception as exc:
         logger.warning("Hub stats wikilink scan failed: %s", exc)
 
-    # Causal chains: count from constraint graph if available
+    # Code knowledge graph: load from code_graph.json if available
+    try:
+        code_graph_path = Path(WIKI_ROOT).parent / "data" / "code_graph.json"
+        if code_graph_path.exists():
+            import json
+            with open(code_graph_path, encoding="utf-8") as f:
+                cg_data = json.load(f)
+            stats["total_code_graph_nodes"] = len(cg_data.get("nodes", []))
+            stats["total_code_graph_edges"] = len(cg_data.get("edges", []))
+        else:
+            stats["total_code_graph_nodes"] = 0
+            stats["total_code_graph_edges"] = 0
+    except Exception as exc:
+        logger.warning("Hub stats code graph failed: %s", exc)
+
+    # Causal chains: count from constraint graph / physical ontology if available
     try:
         cg = _get_constraint_graph()
-        stats["total_code_graph_nodes"] = len(cg.ontology.nodes)
-        stats["total_code_graph_edges"] = len(cg.ontology.edges)
         stats["causal_chains"] = len([
             e for e in cg.ontology.edges
             if getattr(e, "edge_type", "") == "causes"
