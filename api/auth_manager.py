@@ -113,4 +113,96 @@ def check_rate_limit(api_key: str, window: str = "day") -> dict[str, Any]:
     return {"allowed": used < limit, "remaining": remaining, "limit": limit, "reset_time": reset}
 
 
-__all__ = ["generate_api_key", "validate_api_key", "check_rate_limit", "_PLAN_LIMITS"]
+def get_or_create_api_key_for_email(email: str, plan: str = "free") -> dict[str, Any]:
+    """Get existing API key for email, or create a new one.
+
+    Used by OAuth login flow: frontend passes email from Google/GitHub OAuth,
+    backend returns the associated API key (creating one if needed).
+    """
+    if plan not in _PLAN_LIMITS:
+        raise ValueError(f"Unknown plan: {plan}")
+
+    with get_connection() as conn:
+        # Check if email already has an API key
+        cur = conn.execute(
+            "SELECT api_key_hash, plan, created_at, expires_at FROM api_keys WHERE tenant_id = ?",
+            (email,),
+        )
+        row = cur.fetchone()
+        if row:
+            # Return existing info (note: we can't return plaintext key from hash)
+            return {
+                "tenant_id": email,
+                "plan": row["plan"],
+                "created_at": row["created_at"],
+                "exists": True,
+                "api_key": None,  # Cannot recover plaintext from hash
+            }
+
+    # No existing key — generate new one
+    result = generate_api_key(tenant_id=email, plan=plan)
+    result["exists"] = False
+    return result
+
+
+def get_user_info_by_api_key(api_key: str) -> dict[str, Any] | None:
+    """Return full user info for an API key.
+
+    Returns:
+        Dict with user profile + usage stats, or None if invalid.
+    """
+    info = validate_api_key(api_key)
+    if info is None:
+        return None
+
+    tenant_id = info["tenant_id"]
+    plan = info["plan"]
+    limit = _PLAN_LIMITS.get(plan)
+
+    # Get today's usage
+    import datetime
+    day_start = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+    key_hash = _hash_key(api_key)
+
+    with get_connection() as conn:
+        cur = conn.execute(
+            "SELECT COUNT(*) FROM api_usage WHERE api_key_hash = ? AND created_at >= ?",
+            (key_hash, day_start),
+        )
+        usage_today = cur.fetchone()[0]
+
+        # Get key creation date
+        cur = conn.execute(
+            "SELECT created_at FROM api_keys WHERE api_key_hash = ?",
+            (key_hash,),
+        )
+        row = cur.fetchone()
+        created_at = row["created_at"] if row else ""
+
+    daily_limit = limit if limit is not None else -1
+
+    # Masked API key: show first 8 chars + last 4 chars
+    masked = api_key[:8] + "****" + api_key[-4:] if len(api_key) > 12 else api_key[:4] + "****"
+
+    return {
+        "user": {
+            "id": tenant_id,
+            "email": tenant_id,
+            "plan": plan,
+            "created_at": created_at,
+        },
+        "api_key": api_key,
+        "api_key_masked": masked,
+        "usage_today": usage_today,
+        "daily_limit": daily_limit,
+    }
+
+
+__all__ = [
+    "generate_api_key",
+    "validate_api_key",
+    "check_rate_limit",
+    "get_or_create_api_key_for_email",
+    "get_user_info_by_api_key",
+    "_PLAN_LIMITS",
+]

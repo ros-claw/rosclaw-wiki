@@ -40,9 +40,15 @@ for _pkg_dir in ["api", "core", "search", "ingest", "knowledge", "code", "robot"
         sys.path.insert(0, str(_pkg_path))
 
 from fastapi import FastAPI, Header, HTTPException, Query, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from auth_manager import validate_api_key
+from auth_manager import (
+    generate_api_key,
+    get_or_create_api_key_for_email,
+    get_user_info_by_api_key,
+    validate_api_key,
+)
 from billing_middleware import get_usage_summary, log_usage
 from rate_limiter import RateLimitExceeded, enforce_rate_limit
 from search_interface import get_search_impl
@@ -51,6 +57,19 @@ from storage_interface import get_storage_impl
 logger = logging.getLogger("rosclaw.api")
 
 app = FastAPI(title="ROSClaw Wiki API", version="1.0.0")
+
+# CORS: allow Vercel frontend + local dev
+CORS_ORIGINS = os.environ.get(
+    "CORS_ORIGINS",
+    "https://www.rosclaw.io,https://rosclaw.io,http://localhost:3000,http://localhost:5173",
+).split(",")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[o.strip() for o in CORS_ORIGINS if o.strip()],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 WIKI_ROOT = os.environ.get("WIKI_ROOT", "wiki")
 
@@ -1051,6 +1070,211 @@ async def upload_complete(
         "pages_imported": 0,
         "judgments_added": 0,
         "message": "Upload accepted. Import queued.",
+    })
+
+
+# ── Wiki Frontend Integration (Phase 19+) ──
+
+@app.post("/wiki/v1/auth/exchange")
+async def auth_exchange(request: Request) -> JSONResponse:
+    """Exchange OAuth user identity (email) for an API Key.
+
+    Frontend calls this after Google/GitHub OAuth login succeeds.
+    If the email already has an API key, returns `exists: true` and the
+    frontend should use the locally-stored key. If not, a new key is
+    generated and returned in plaintext (show-once).
+    """
+    body = await request.json()
+    email = body.get("email", "").strip().lower()
+    name = body.get("name", "")
+    provider = body.get("provider", "")
+
+    if not email or "@" not in email:
+        raise HTTPException(status_code=400, detail="valid email is required")
+
+    result = get_or_create_api_key_for_email(email, plan="free")
+
+    if result.get("exists"):
+        # Key already exists — frontend should have it in localStorage
+        return JSONResponse(content={
+            "status": "ok",
+            "exists": True,
+            "tenant_id": result["tenant_id"],
+            "plan": result["plan"],
+            "created_at": result["created_at"],
+            "message": "API key already exists. Use the key stored in your browser.",
+        })
+
+    # New key generated — return plaintext (show-once)
+    return JSONResponse(content={
+        "status": "ok",
+        "exists": False,
+        "api_key": result["api_key"],
+        "tenant_id": result["tenant_id"],
+        "plan": result["plan"],
+        "created_at": result["created_at"],
+    })
+
+
+@app.get("/wiki/v1/auth/me")
+async def auth_me(x_api_key: str = Header(..., alias="X-API-Key")) -> JSONResponse:
+    """Get current user profile + usage stats.
+
+    Authenticated via X-API-Key (the same key used for all other API calls).
+    """
+    info = get_user_info_by_api_key(x_api_key)
+    if info is None:
+        raise HTTPException(status_code=401, detail="Invalid API key")
+
+    return JSONResponse(content={
+        "status": "ok",
+        "user": info["user"],
+        "api_key": info["api_key"],
+        "api_key_masked": info["api_key_masked"],
+        "usage_today": info["usage_today"],
+        "daily_limit": info["daily_limit"],
+    })
+
+
+@app.get("/wiki/v1/usage")
+async def wiki_usage(
+    x_api_key: str = Header(..., alias="X-API-Key"),
+    days: int = 30,
+) -> JSONResponse:
+    """Alias for /v1/usage with /wiki/v1/ prefix (frontend compatibility)."""
+    tenant = _get_tenant(x_api_key)
+    summary = get_usage_summary(x_api_key, days=days)
+    return JSONResponse(content={"status": "ok", "usage": summary})
+
+
+@app.get("/wiki/v1/hub/stats")
+async def hub_stats() -> JSONResponse:
+    """Public wiki overview stats + keyword graph data.
+
+    No authentication required. Used by the /hub landing page.
+    """
+    from seekdb_client import get_connection
+
+    stats: dict[str, Any] = {
+        "total_pages": 0,
+        "total_wikilinks": 0,
+        "total_judgments": 0,
+        "total_code_graph_nodes": 0,
+        "total_code_graph_edges": 0,
+        "robots_covered": 0,
+        "entities_covered": 0,
+        "causal_chains": 0,
+        "last_updated": "",
+    }
+
+    try:
+        with get_connection() as conn:
+            # Total pages
+            cur = conn.execute("SELECT COUNT(*) FROM wiki_pages")
+            stats["total_pages"] = cur.fetchone()[0]
+
+            # Total judgments
+            cur = conn.execute("SELECT COUNT(*) FROM judgments")
+            stats["total_judgments"] = cur.fetchone()[0]
+
+            # Entities from entity_graph
+            cur = conn.execute("SELECT COUNT(DISTINCT source) FROM entity_graph")
+            stats["entities_covered"] = cur.fetchone()[0]
+    except Exception as exc:
+        logger.warning("Hub stats DB query failed: %s", exc)
+
+    # Wikilinks: scan markdown files for [[...]] syntax
+    try:
+        import re
+        wikilink_re = re.compile(r"\[\[([^\]]+)\]\]")
+        wiki_root = Path(WIKI_ROOT)
+        wikilink_count = 0
+        robot_set: set[str] = set()
+        if wiki_root.exists():
+            for md_file in wiki_root.rglob("*.md"):
+                if md_file.name in ("index.md", "log.md"):
+                    continue
+                content = md_file.read_text(encoding="utf-8", errors="ignore")
+                wikilink_count += len(wikilink_re.findall(content))
+                # Detect robot entities by filename or frontmatter
+                stem = md_file.stem.lower()
+                if any(r in stem for r in ["unitree", "g1", "go2", "h1", "ur5", "ur10", "kinova", "franka"]):
+                    robot_set.add(stem)
+        stats["total_wikilinks"] = wikilink_count
+        stats["robots_covered"] = len(robot_set)
+    except Exception as exc:
+        logger.warning("Hub stats wikilink scan failed: %s", exc)
+
+    # Causal chains: count from constraint graph if available
+    try:
+        cg = _get_constraint_graph()
+        stats["total_code_graph_nodes"] = len(cg.ontology.nodes)
+        stats["total_code_graph_edges"] = len(cg.ontology.edges)
+        stats["causal_chains"] = len([
+            e for e in cg.ontology.edges
+            if getattr(e, "edge_type", "") == "causes"
+        ])
+    except Exception as exc:
+        logger.warning("Hub stats constraint graph failed: %s", exc)
+
+    # Last updated: use latest api_usage or wiki page mtime
+    try:
+        with get_connection() as conn:
+            cur = conn.execute("SELECT MAX(created_at) as last FROM api_usage")
+            row = cur.fetchone()
+            stats["last_updated"] = row["last"] if row and row["last"] else ""
+    except Exception:
+        pass
+
+    # Keywords: top entities/concepts from wiki_pages frontmatter
+    keywords: list[dict[str, Any]] = []
+    try:
+        import wiki_engine as engine
+        wiki_root = Path(WIKI_ROOT)
+        type_counts: dict[str, int] = {}
+        if wiki_root.exists():
+            for md_file in wiki_root.rglob("*.md"):
+                if md_file.name in ("index.md", "log.md"):
+                    continue
+                try:
+                    meta, _ = engine.parse_frontmatter(
+                        md_file.read_text(encoding="utf-8")
+                    )
+                    title = meta.get("title", md_file.stem)
+                    ptype = meta.get("type", "unknown")
+                    type_counts[ptype] = type_counts.get(ptype, 0) + 1
+                    keywords.append({
+                        "name": title,
+                        "weight": round(meta.get("confidence", 0.5), 2),
+                        "type": ptype,
+                        "pages": 1,
+                    })
+                except Exception:
+                    continue
+        # Sort by weight desc, cap at 20
+        keywords.sort(key=lambda k: k["weight"], reverse=True)
+        keywords = keywords[:20]
+    except Exception as exc:
+        logger.warning("Hub stats keywords failed: %s", exc)
+
+    # Build keyword_categories from keywords
+    keyword_categories: dict[str, list[dict[str, Any]]] = {}
+    for kw in keywords:
+        cat = kw["type"]
+        if cat not in keyword_categories:
+            keyword_categories[cat] = []
+        keyword_categories[cat].append(kw)
+
+    return JSONResponse(content={
+        "status": "ok",
+        "wiki_name": "ROSClaw Wiki",
+        "description": (
+            "具身智能物理常识中枢 —— "
+            "覆盖视觉语言导航、机器人控制、物理参数判据等核心领域"
+        ),
+        "global_stats": stats,
+        "keywords": keywords,
+        "keyword_categories": keyword_categories,
     })
 
 

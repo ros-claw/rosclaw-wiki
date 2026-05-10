@@ -46,7 +46,7 @@ def get_usage_summary(api_key: str, days: int = 30) -> dict[str, Any]:
     """Get usage summary for an API key.
 
     Returns:
-        Dict with total_calls, total_tokens, avg_latency.
+        Dict with total_calls, total_tokens, avg_latency, by_endpoint, daily_breakdown.
     """
     import datetime
 
@@ -54,6 +54,7 @@ def get_usage_summary(api_key: str, days: int = 30) -> dict[str, Any]:
     start = (datetime.datetime.now() - datetime.timedelta(days=days)).isoformat()
 
     with get_connection() as conn:
+        # Overall totals
         cur = conn.execute(
             """
             SELECT COUNT(*) as calls, COALESCE(SUM(tokens_used), 0) as tokens, AVG(latency_ms) as avg_latency
@@ -62,12 +63,39 @@ def get_usage_summary(api_key: str, days: int = 30) -> dict[str, Any]:
             (key_hash, start),
         )
         row = cur.fetchone()
+
+        # By endpoint breakdown
+        cur = conn.execute(
+            """
+            SELECT endpoint, COUNT(*) as calls
+            FROM api_usage WHERE api_key_hash = ? AND created_at >= ?
+            GROUP BY endpoint ORDER BY calls DESC
+            """,
+            (key_hash, start),
+        )
+        by_endpoint = {r["endpoint"]: r["calls"] for r in cur.fetchall()}
+
+        # Daily breakdown
+        cur = conn.execute(
+            """
+            SELECT DATE(created_at) as day, COUNT(*) as calls
+            FROM api_usage WHERE api_key_hash = ? AND created_at >= ?
+            GROUP BY day ORDER BY day DESC
+            """,
+            (key_hash, start),
+        )
+        daily_breakdown = [
+            {"date": r["day"], "calls": r["calls"]} for r in cur.fetchall()
+        ]
+
         return {
             "api_key_prefix": api_key[:8] + "...",
             "total_calls": row["calls"],
             "total_tokens": row["tokens"],
             "avg_latency_ms": round(row["avg_latency"] or 0, 2),
             "period_days": days,
+            "by_endpoint": by_endpoint,
+            "daily_breakdown": daily_breakdown,
         }
 
 
