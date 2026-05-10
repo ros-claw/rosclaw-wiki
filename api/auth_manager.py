@@ -37,16 +37,17 @@ def generate_api_key(tenant_id: str, plan: str = "free") -> dict[str, Any]:
 
     raw_key = "rw_" + secrets.token_urlsafe(32)
     key_hash = _hash_key(raw_key)
+    created_at = datetime.now().isoformat()
 
     with get_connection() as conn:
         conn.execute(
             "INSERT INTO api_keys (api_key_hash, tenant_id, plan, created_at, expires_at) VALUES (?, ?, ?, ?, ?)",
-            (key_hash, tenant_id, plan, datetime.now().isoformat(), (datetime.now() + timedelta(days=365)).isoformat()),
+            (key_hash, tenant_id, plan, created_at, (datetime.now() + timedelta(days=365)).isoformat()),
         )
         conn.commit()
 
     logger.info("Generated API key for tenant=%s plan=%s", tenant_id, plan)
-    return {"api_key": raw_key, "tenant_id": tenant_id, "plan": plan}
+    return {"api_key": raw_key, "tenant_id": tenant_id, "plan": plan, "created_at": created_at}
 
 
 def validate_api_key(api_key: str) -> dict[str, Any] | None:
