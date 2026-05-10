@@ -139,11 +139,26 @@ python -c "import arxiv; arxiv.Client().download(arxiv.Search(id_list=['2301.123
 **Step B — Extract Full Text**
 
 ```python
-import fitz  # PyMuPDF
+import fitz  # PyMuPDF — already in requirements.txt
+
 doc = fitz.open("data/raw/papers/2301.12345.pdf")
 full_text = "\n".join(page.get_text() for page in doc)
-# full_text now contains Abstract, Methods, Results, Discussion
+
+# Fallback: if text is too short, the PDF may be scanned images
+if len(full_text.strip()) < 500:
+    # Install: pip install paddlepaddle paddleocr
+    from paddleocr import PaddleOCR
+    ocr = PaddleOCR(use_angle_cls=True, lang='en', show_log=False)
+    for page in doc:
+        pix = page.get_pixmap(dpi=300)
+        result = ocr.ocr(pix.tobytes(), cls=True)
+        # Extract text from OCR result...
 ```
+
+**Why two tools?**
+- **PyMuPDF** = fast, accurate for text-based PDFs (99% of arXiv papers)
+- **PaddleOCR** = needed only for scanned/image-based pages
+- Try PyMuPDF first. Fall back to PaddleOCR only when extracted text is insufficient.
 
 **Step C — LLM Entity Extraction (MANDATORY)**
 
