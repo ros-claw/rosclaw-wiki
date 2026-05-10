@@ -50,7 +50,7 @@ services:
       - REDIS_DB=0
     volumes:
       - ./wiki:/app/wiki:ro
-      - ./data:/app/data:ro
+      - ./data:/app/data
     depends_on:
       seekdb:
         condition: service_healthy
