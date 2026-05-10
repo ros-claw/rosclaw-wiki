@@ -16,6 +16,17 @@ from typing import Any, Optional
 
 import yaml
 
+try:
+    from cache_client import cache_get, cache_set
+except Exception:
+    # Fallback if cache_client not available (e.g. during testing without deps)
+    def cache_get(key: str) -> Any | None:  # noqa: F811
+        return None
+
+    def cache_set(key: str, value: Any, ttl: int = 300) -> bool:  # noqa: F811
+        return False
+
+
 logger = logging.getLogger("rosclaw.engine")
 
 _FRONTMATTER_RE = re.compile(r"\A---[ \t]*\n(.+?\n)---[ \t]*\n", re.DOTALL)

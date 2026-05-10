@@ -26,9 +26,6 @@ logger = logging.getLogger("rosclaw.judgment_generator")
 
 _JUDGMENTS_DIR = "judgments"
 
-# File-based cache for _load_index to avoid re-reading index.json on every request
-_INDEX_CACHE: dict[str, tuple[float, dict[str, Any] | None]] = {}
-
 # Regex to extract parameter declarations from page body
 # e.g., "Peak torque: 237 Nm" or "peak_torque = 237 Nm"
 _PARAM_EXTRACT_RE = re.compile(
@@ -549,7 +546,9 @@ def generate_judgment_from_scan(param_info: dict[str, Any], wiki_root: str) -> J
 
 
 def _load_index(wiki_root: str) -> dict[str, Any] | None:
-    """Load wiki/judgments/index.json if it exists. Uses mtime-based cache."""
+    """Load wiki/judgments/index.json if it exists. Uses Redis/shared cache."""
+    from cache_client import cache_get, cache_set
+
     candidates = [
         Path(wiki_root) / _JUDGMENTS_DIR / "index.json",
         Path("wiki") / _JUDGMENTS_DIR / "index.json",
@@ -557,14 +556,13 @@ def _load_index(wiki_root: str) -> dict[str, Any] | None:
     for index_path in candidates:
         if index_path.exists():
             try:
+                cache_key = f"judgments:index:{index_path}"
                 mtime = index_path.stat().st_mtime
-                cache_key = str(index_path)
-                if cache_key in _INDEX_CACHE:
-                    cached_mtime, cached_data = _INDEX_CACHE[cache_key]
-                    if cached_mtime == mtime:
-                        return cached_data
+                cached = cache_get(cache_key)
+                if cached and cached.get("mtime") == mtime:
+                    return cached.get("data")
                 data = json.loads(index_path.read_text(encoding="utf-8"))
-                _INDEX_CACHE[cache_key] = (mtime, data)
+                cache_set(cache_key, {"mtime": mtime, "data": data}, ttl=600)
                 return data
             except Exception:
                 pass

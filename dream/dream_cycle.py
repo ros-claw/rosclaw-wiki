@@ -19,8 +19,6 @@ import wiki_engine as engine
 
 logger = logging.getLogger("rosclaw.dream")
 
-# Simple TTL cache for expensive insight generation
-_INSIGHTS_CACHE: dict[str, tuple[float, list[dict[str, Any]]]] = {}
 _INSIGHTS_TTL_SEC = 300  # 5 minutes
 
 
@@ -180,12 +178,10 @@ def generate_insights(wiki_root: str) -> list[dict[str, Any]]:
         List of insight dicts with type, description, suggested_action.
         Results are cached for 5 minutes to avoid expensive re-computation.
     """
-    cache_key = str(wiki_root)
-    now = time.time()
-    if cache_key in _INSIGHTS_CACHE:
-        cached_at, cached_data = _INSIGHTS_CACHE[cache_key]
-        if now - cached_at < _INSIGHTS_TTL_SEC:
-            return cached_data
+    cache_key = f"insights:{wiki_root}"
+    cached = engine.cache_get(cache_key)
+    if cached is not None:
+        return cached
 
     insights: list[dict[str, Any]] = []
 
@@ -230,7 +226,7 @@ def generate_insights(wiki_root: str) -> list[dict[str, Any]]:
             "severity": "low",
         })
 
-    _INSIGHTS_CACHE[cache_key] = (now, insights)
+    engine.cache_set(cache_key, insights, ttl=_INSIGHTS_TTL_SEC)
     return insights
 
 

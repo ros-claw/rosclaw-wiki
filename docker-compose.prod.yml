@@ -1,6 +1,20 @@
 version: "3.8"
 
 services:
+  redis:
+    image: redis:7-alpine
+    container_name: rosclaw-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
   seekdb:
     image: oceanbase/seekdb:latest
     container_name: rosclaw-seekdb
@@ -30,11 +44,16 @@ services:
       - SEEKDB_MODE=server
       - SEEKDB_HOST=seekdb
       - SEEKDB_PORT=2881
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
     volumes:
       - ./wiki:/app/wiki:ro
       - ./data:/app/data:ro
     depends_on:
       seekdb:
+        condition: service_healthy
+      redis:
         condition: service_healthy
     restart: unless-stopped
 
@@ -63,6 +82,7 @@ services:
     restart: unless-stopped
 
 volumes:
+  redis_data:
   seekdb_data:
   certbot_data:
   certbot_www:
