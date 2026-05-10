@@ -1178,7 +1178,7 @@ async def hub_stats() -> JSONResponse:
             stats["total_judgments"] = cur.fetchone()[0]
 
             # Entities from entity_graph
-            cur = conn.execute("SELECT COUNT(DISTINCT source) FROM entity_graph")
+            cur = conn.execute("SELECT COUNT(DISTINCT source_entity) FROM entity_graph")
             stats["entities_covered"] = cur.fetchone()[0]
     except Exception as exc:
         logger.warning("Hub stats DB query failed: %s", exc)
