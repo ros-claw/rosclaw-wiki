@@ -26,10 +26,11 @@ services:
       - SEEKDB_MODE=server
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "--http0.9", "http://localhost:2881/health"]
-      interval: 30s
-      timeout: 10s
+      test: ["CMD-SHELL", "python3 -c \"import socket; s=socket.create_connection(('127.0.0.1',2881), timeout=5); s.close()\""]
+      interval: 15s
+      timeout: 8s
       retries: 3
+      start_period: 60s
 
   rosclaw-api:
     build:
