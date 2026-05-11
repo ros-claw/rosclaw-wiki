@@ -61,7 +61,7 @@ app = FastAPI(title="ROSClaw Wiki API", version="1.0.0")
 # CORS: allow Vercel frontend + local dev
 CORS_ORIGINS = os.environ.get(
     "CORS_ORIGINS",
-    "https://www.rosclaw.io,https://rosclaw.io,http://localhost:3000,http://localhost:5173",
+    "https://www.rosclaw.io,https://rosclaw.io,https://wiki.rosclaw.io,http://localhost:3000,http://localhost:5173",
 ).split(",")
 app.add_middleware(
     CORSMiddleware,
