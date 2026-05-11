@@ -1,6 +1,6 @@
 # ROSClaw Wiki 前后端适配指南
 
-> **版本**：v1.0  
+> **版本**：v1.1  
 > **面向**：前端开发人员（Vercel / Next.js）  
 > **后端地址**：`https://api.rosclaw.io`  
 > **前端地址**：`https://www.rosclaw.io`
@@ -20,12 +20,16 @@
          │  3. 后续所有请求带 X-API-Key header
          ▼
 ┌─────────────────┐
-│  api.rosclaw.io │  ← FastAPI + SQLite/SeekDB + Redis
+│  api.rosclaw.io │  ← FastAPI + SeekDB (pyseekdb) + SQLite + Redis
 │  (后端 API)      │
 └─────────────────┘
 ```
 
-**关键设计**：前端 OAuth 只负责"身份确认"，真正的 API 认证使用后端颁发的 `X-API-Key`。这样前后端解耦，后端不依赖任何 OAuth provider。
+**关键设计**：
+- 前端 OAuth 只负责"身份确认"，真正的 API 认证使用后端颁发的 `X-API-Key`
+- 搜索后端使用 **SeekDB**（pyseekdb），健康检查 `GET /v1/health` 会返回 `"backend": "seekdb"`
+- SQLite (`seekdb_compat.db`) 只用于关系型查询（auth、usage、entity_graph）
+- 多设备批量同步通过 `batch_sync.py` + R2 完成（见第七节）
 
 ---
 
@@ -58,7 +62,7 @@ if (data.api_key) {
 **说明**：
 - 同一个 email 第二次调用会返回 `exists: true`，不会生成新 key
 - 前端应始终优先使用 localStorage 中的 key，仅在首次登录时保存
-- API Key 格式：`rw_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`（34 字符）
+- API Key 格式：`rw_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`（46 字符）
 
 ### Step 3: 所有 API 请求带 Key
 
@@ -76,14 +80,17 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
 
 | 端点 | 方法 | 认证 | 说明 |
 |------|------|------|------|
-| `/wiki/v1/auth/exchange` | POST | 无 | OAuth email → API Key |
-| `/wiki/v1/auth/me` | GET | X-API-Key | 用户信息 + 用量 |
-| `/wiki/v1/usage?days=30` | GET | X-API-Key | 用量统计（含每日/端点 breakdown） |
-| `/wiki/v1/hub/stats` | GET | 无 | Wiki 总览 + 关键词图谱 |
-| `/v1/health` | GET | 无 | 健康检查 |
-| `/v1/search` | POST | X-API-Key | 搜索 |
+| `/v1/health` | GET | 无 | 健康检查（返回 `backend: "seekdb"` 表示正常） |
+| `/wiki/v1/hub/stats` | GET | 无 | Wiki 总览 + 关键词图谱数据 |
+| `/v1/search` | POST | X-API-Key | 搜索（支持 hybrid/semantic/keyword/judgment/expanded） |
+| `/v1/search/hybrid` | POST | X-API-Key | 高精度混合搜索 |
 | `/v1/judgments/{entity}` | GET | X-API-Key | 物理判据 |
 | `/v1/insights` | GET | X-API-Key | 知识洞察 |
+| `/wiki/v1/auth/exchange` | POST | 无 | OAuth email → API Key |
+| `/wiki/v1/auth/me` | GET | X-API-Key | 用户信息 + 用量 |
+| `/wiki/v1/usage?days=30` | GET | X-API-Key | 用量统计 |
+| `/wiki/v1/upload/request` | POST | X-API-Key | 申请 R2 预签名上传 URL |
+| `/wiki/v1/upload/complete` | POST | X-API-Key | 通知上传完成 |
 
 > **注意**：所有 `/v1/...` 端点也支持 `/wiki/v1/...` 前缀（已配置别名）。前端统一用 `/wiki/v1/...` 即可。
 
@@ -91,7 +98,108 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
 
 ## 四、端点详细说明
 
-### 4.1 `POST /wiki/v1/auth/exchange` — 换取 API Key
+### 4.1 `GET /v1/health` — 健康检查
+
+**无需认证**
+
+**响应**：
+```json
+{
+  "status": "ok",
+  "backend": "seekdb",
+  "wiki_pages": 804,
+  "judgments": 1024
+}
+```
+
+**前端展示建议**：
+- 右上角显示一个小圆点：绿色 = `backend === "seekdb"`，红色/黄色 = 其他
+- 悬浮提示显示 `wiki_pages` 和 `judgments` 数量
+- **注意**：如果显示 `"backend": "sqlite_compat"`，说明 SeekDB 连接异常，应提示"搜索服务降级中"
+
+---
+
+### 4.2 `GET /wiki/v1/hub/stats` — Wiki 总览（公开）
+
+**无需认证**
+
+**响应**：
+```json
+{
+  "status": "ok",
+  "wiki_name": "ROSClaw Wiki",
+  "description": "具身智能物理常识中枢...",
+  "global_stats": {
+    "total_pages": 804,
+    "total_wikilinks": 7650,
+    "total_judgments": 1024,
+    "total_code_graph_nodes": 69668,
+    "total_code_graph_edges": 672112,
+    "robots_covered": 4,
+    "entities_covered": 0,
+    "causal_chains": 0,
+    "last_updated": "2026-05-10 00:04:49"
+  },
+  "keywords": [...],
+  "keyword_categories": { "entity": [...], "concept": [...], ... }
+}
+```
+
+**实际数据说明**（截至 2026-05-11）：
+| 字段 | 实际值 | 前端展示建议 |
+|------|--------|-------------|
+| total_pages | 804 | 正常展示 |
+| total_wikilinks | 7650 | 正常展示 |
+| total_judgments | 1024 | 正常展示 |
+| total_code_graph_nodes | 69668 | ⚠️ 含 google-research 通用代码噪音，后续会过滤 |
+| total_code_graph_edges | 672112 | ⚠️ 同上 |
+| robots_covered | 4 | 正常展示 |
+| entities_covered | 0 | **建议显示"待构建"而非 0**，因为 entity_graph 表尚未填充 |
+| causal_chains | 0 | **建议显示"待构建"而非 0**，因为 physical_ontology.json 尚未填充 |
+
+---
+
+### 4.3 `POST /v1/search` — 搜索
+
+**请求头**：`X-API-Key: rw_xxx`  
+**请求体**：
+```json
+{
+  "query": "unitree g1 humanoid",
+  "search_type": "hybrid",
+  "top_k": 5
+}
+```
+
+**search_type 选项**：
+| 类型 | 说明 | 适用场景 |
+|------|------|---------|
+| `keyword` | 关键词匹配（BM25） | 精确查找术语 |
+| `semantic` | 语义向量搜索 | 同义词、概念相关 |
+| `hybrid` | 关键词 + 语义混合（默认） | 通用搜索 |
+| `expanded` | 混合 + LLM 查询扩展 | 需要深度理解时 |
+| `judgment` | 判据搜索 | 查找物理参数建议 |
+
+**响应**：
+```json
+{
+  "status": "ok",
+  "query": "unitree g1 humanoid",
+  "results": [
+    {
+      "file_path": "unitree_g1",
+      "title": "Unitree-G1",
+      "snippet": "Humanoid robot by Unitree.\n\n## Parameters...",
+      "score": 1.0
+    }
+  ],
+  "count": 5
+}
+```
+
+---
+
+### 4.4 `POST /wiki/v1/auth/exchange` — 换取 API Key
 
 **请求**：
 ```json
@@ -107,7 +215,7 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
 {
   "status": "ok",
   "exists": false,
-  "api_key": "rw_sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "api_key": "rw_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "tenant_id": "user@example.com",
   "plan": "free",
   "created_at": "2026-05-10T12:00:00"
@@ -121,14 +229,15 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
   "exists": true,
   "tenant_id": "user@example.com",
   "plan": "free",
-  "created_at": "2026-05-10T12:00:00",
-  "message": "API key already exists. Use the key stored in your browser."
+  "message": "API key already exists."
 }
 ```
 
-### 4.2 `GET /wiki/v1/auth/me` — 用户信息
+---
 
-**请求头**：`X-API-Key: rw_sk_xxx`
+### 4.5 `GET /wiki/v1/auth/me` — 用户信息
+
+**请求头**：`X-API-Key: rw_xxx`
 
 **响应**：
 ```json
@@ -140,111 +249,46 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
     "plan": "free",
     "created_at": "2026-05-10T12:00:00"
   },
-  "api_key": "rw_sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-  "api_key_masked": "rw_sk_****...****abcd",
+  "api_key": "rw_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "api_key_masked": "rw_****...****abcd",
   "usage_today": 15,
   "daily_limit": 100
 }
 ```
 
-**Profile 页面展示**：
-- 顶部：邮箱 + 计划类型标签（free/pro/enterprise）
-- API Key 行：默认展示 `api_key_masked`，点击 [👁 Show] 切换显示 `api_key`，点击 [📋 Copy] 复制
-- 用量进度条：`usage_today / daily_limit`
-- 下方附 cURL 示例：
-  ```bash
-  curl -H "X-API-Key: rw_sk_xxx" https://api.rosclaw.io/v1/search \
-    -H "Content-Type: application/json" \
-    -d '{"query": "G1 gait", "search_type": "hybrid"}'
-  ```
+---
 
-### 4.3 `GET /wiki/v1/usage?days=30` — 用量统计
+### 4.6 `POST /wiki/v1/upload/request` + `/wiki/v1/upload/complete` — 批量提交
 
-**请求头**：`X-API-Key: rw_sk_xxx`
+用于多设备炼化结果的提交。设备端打包后上传到 R2，生产服务器合并。
 
-**响应**：
-```json
-{
-  "status": "ok",
-  "usage": {
-    "total_calls": 245,
-    "total_tokens": 125000,
-    "avg_latency_ms": 45.2,
-    "period_days": 30,
-    "by_endpoint": {
-      "/v1/search": 120,
-      "/v1/judgments": 45,
-      "/v1/physics/impact": 30
-    },
-    "daily_breakdown": [
-      {"date": "2026-05-10", "calls": 15},
-      {"date": "2026-05-09", "calls": 42}
-    ]
-  }
-}
+**Step 1: 申请上传 URL**
+```typescript
+const res = await fetch("https://api.rosclaw.io/wiki/v1/upload/request", {
+  method: "POST",
+  headers: { "X-API-Key": API_KEY, "Content-Type": "application/json" },
+  body: JSON.stringify({
+    file_name: "batch_vln.tar.gz",
+    file_size: 52428800,
+    wiki_name: "batch_vln"
+  }),
+});
+// { upload_id: "...", presigned_url: "...", expires_in: 3600 }
 ```
 
-**Dashboard 页面展示**：
-- 顶部：API Key 组件（与 Profile 共享）
-- 用量卡片：总调用次数、总 Token、平均延迟
-- 端点分布图：饼图或柱状图（`by_endpoint`）
-- 每日折线图：30 天趋势（`daily_breakdown`）
-- 配额进度条
-
-### 4.4 `GET /wiki/v1/hub/stats` — Wiki 总览（公开）
-
-**无需认证**
-
-**响应**：
-```json
-{
-  "status": "ok",
-  "wiki_name": "ROSClaw Wiki",
-  "description": "具身智能物理常识中枢 —— 覆盖视觉语言导航、机器人控制...",
-  "global_stats": {
-    "total_pages": 804,
-    "total_wikilinks": 9579,
-    "total_judgments": 1024,
-    "total_code_graph_nodes": 69668,
-    "total_code_graph_edges": 672112,
-    "robots_covered": 4,
-    "entities_covered": 25,
-    "causal_chains": 10,
-    "last_updated": "2026-05-10T08:00:00"
-  },
-  "keywords": [
-    {"name": "Visual Language Navigation", "weight": 1.0, "type": "concept", "pages": 1},
-    {"name": "Unitree-G1", "weight": 0.92, "type": "entity", "pages": 1}
-  ],
-  "keyword_categories": {
-    "entity": [...],
-    "concept": [...],
-    "property": [...],
-    "algorithm": [...],
-    "constraint": [...]
-  }
-}
+**Step 2: 直传 R2**
+```typescript
+await fetch(presigned_url, { method: "PUT", body: tarBlob });
 ```
 
-**Hub 页面展示**：
-
-**顶部 Hero**：
-- 标题："ROSClaw Wiki —— 具身智能物理常识中枢"
-- 副标题：`{total_pages} 页面 · {total_wikilinks} 连接 · {total_judgments} 判据 · {robots_covered} 机器人`
-
-**中部关键词图谱**（核心视觉）：
-- Canvas / D3.js 渲染节点-边
-- 节点颜色按 `type`：
-  - `entity`（机器人）：`#3b82f6` 蓝色
-  - `property`（参数）：`#f59e0b` 琥珀色
-  - `concept`（概念）：`#06b6d4` 青色
-  - `algorithm`（算法）：`#10b981` 绿色
-  - `constraint`（约束）：`#8b5cf6` 紫色
-- 节点大小按 `weight` 缩放，`weight >= 0.8` 加粗边框
-- 鼠标悬停：Tooltip 显示 `名称 · 类型 · {pages} 页面`
-
-**底部统计卡片**（6 个）：
-- 页面数 / 链接数 / 判据数 / 图谱节点 / 图谱边 / 机器人覆盖
+**Step 3: 通知完成**
+```typescript
+await fetch("https://api.rosclaw.io/wiki/v1/upload/complete", {
+  method: "POST",
+  headers: { "X-API-Key": API_KEY, "Content-Type": "application/json" },
+  body: JSON.stringify({ upload_id }),
+});
+```
 
 ---
 
@@ -256,6 +300,7 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
 | 401 | API Key 无效或缺失 | 清除 localStorage，跳转登录 |
 | 429 | 频率限制 | 显示"请求过于频繁，请稍后" |
 | 500 | 服务器内部错误 | 显示"服务暂时不可用" |
+| 502/503 | 后端服务未就绪 | 显示"服务启动中，请稍候"（常见于 seekdb 启动阶段） |
 
 **通用错误响应格式**：
 ```json
@@ -273,11 +318,27 @@ const res = await fetch("https://api.rosclaw.io/wiki/v1/auth/me", {
 - [ ] Profile 页面：`/wiki/v1/auth/me` + Show/Copy Key
 - [ ] Dashboard 页面：`/wiki/v1/usage?days=30` + 图表
 - [ ] Hub 页面：`/wiki/v1/hub/stats` + 关键词图谱
+- [ ] **Hub 页面：0 值字段显示"待构建"而非数字 0**
+- [ ] **搜索页面：提供 search_type 选择器（keyword/semantic/hybrid/expanded/judgment）**
+- [ ] **顶部状态栏：显示 `/v1/health` 的 backend 状态（seekdb = 绿点）**
 - [ ] 所有 API 请求统一走 `https://api.rosclaw.io`
 
 ---
 
-## 七、本地开发
+## 七、多设备批量同步（Batch Sync）
+
+**背景**：多个设备可以在本地炼化知识库，通过 R2 提交到生产服务器合并。
+
+**前端无需实现设备端逻辑**，但应在管理后台提供：
+1. **提交记录列表**：显示各设备的 `batch_name`、`device_id`、`status`（pending/completed/merged）
+2. **预览变更**：调用 `batch_sync.py production-merge --dry-run` 的结果
+3. **一键合并**：触发生产服务器合并（管理员权限）
+
+详见后端 `batch_sync.py` 和 SKILL.md。
+
+---
+
+## 八、本地开发
 
 如需本地联调，在 `.env.local` 中：
 ```
