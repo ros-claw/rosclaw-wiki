@@ -444,53 +444,144 @@ python code_graph_merger.py \
 - Edges are deduplicated by `(source, target, type)`
 - `repo_count` is summed across all files
 
-### Database (seekdb) — Incremental Append
+## Multi-Device → R2 → Production Merge Pipeline
 
-`seekdb_compat.db` is an SQLite database. Judgments and usage records are INSERT-only. Multiple batches naturally append data. No merge step is required for the DB.
+**Use case**: Multiple devices ingest locally, push results to Cloudflare R2, and the production server pulls, reviews, and merges into the canonical knowledge base.
 
-If you run ingestion on **multiple devices** and need to sync their databases:
-1. Each device exports its SQLite judgments as JSONL:
-   ```bash
-   sqlite3 seekdb_compat.db ".mode json" "SELECT * FROM judgments" > judgments_device_A.jsonl
-   ```
-2. Aggregate on the production server and import:
-   ```bash
-   cat judgments_*.jsonl | python -c "import sys, json; ... # import into production DB"
-   ```
-3. **Better long-term**: switch production to PostgreSQL (`llmwiki` hosted mode supports this via `DATABASE_URL`). PostgreSQL handles concurrent writes from multiple devices natively.
+**Why not just rclone sync?**
+- rclone sync overwrites files blindly — no conflict detection, no deduplication
+- Code graphs MUST be merged with deduplication, not replaced
+- Seekdb/SQLite databases cannot sync via R2 (SQLite requires random I/O)
+- We need checksum validation and dry-run preview before applying changes
 
-## Cloud Storage Architecture (R2 / S3)
+**Solution**: `batch_sync.py` — a unified CLI tool that packages, uploads, downloads, validates, and merges.
 
-For production deployments that ingest from multiple devices, store large/static assets in object storage.
+### Architecture
 
-| Data | Fits R2? | Recommended Pattern |
-|------|----------|---------------------|
-| `wiki/*.md` | ✅ Excellent | rclone mount or API reads via S3 SDK |
-| `data/raw/` | ✅ Excellent | Cold storage. Download to local only when re-ingesting |
-| `data/code_graph*.json` | ✅ Good | 150MB+ files, ideal for object storage. Download on API startup |
-| `seekdb_compat.db` | ❌ **Poor** | SQLite requires random I/O. Use local disk or PostgreSQL |
-
-### Example: R2 Sync Workflow
-
-```bash
-# 1. Device A finishes ingestion
-rclone sync wiki/ r2:rosclaw-wiki/wiki --transfers 32
-rclone sync data/raw/ r2:rosclaw-wiki/raw --transfers 32
-rclone copy data/code_graph_batch_A.json r2:rosclaw-wiki/graphs/
-
-# 2. Production server pulls updates
-rclone sync r2:rosclaw-wiki/wiki ./wiki
-rclone sync r2:rosclaw-wiki/graphs ./data/
-
-# 3. Merge code graphs on server
-python code_graph_merger.py --inputs data/code_graph.json data/code_graph_batch_*.json --output data/code_graph.json
-rm -f data/code_graph_batch_*.json
-
-# 4. Restart API to pick up new wiki pages and graph
-sudo docker-compose -f docker-compose.prod.yml restart rosclaw-api
+```
+Device A (local ingest)          R2 (object storage)          Production Server
+┌─────────────────┐              ┌──────────────┐            ┌──────────────────────┐
+│ awesome-vln.md  │──fetch──▶    │              │            │                      │
+│ awesome-manip.  │──fetch──▶    │              │            │  Canonical wiki/     │
+│ md              │              │ submissions/ │            │  Canonical           │
+│                 │──extract──▶  │ ├── batch_   │            │  code_graph.json     │
+│ wiki/*.md       │              │ │   vln.tar  │            │  seekdb (pyseekdb)   │
+│ code_graph_     │──package──▶  │ │   .gz      │◄──pull────│  SQLite compat       │
+│ batch_vln.json  │              │ ├── batch_   │            │                      │
+│ judgments (SQL) │              │ │   manip.   │            │  batch_sync.py       │
+│                 │              │ │   tar.gz   │  ──merge──▶│  --production-merge  │
+└─────────────────┘              └──────────────┘            └──────────────────────┘
 ```
 
-### Docker Compose with R2 (FUSE)
+### Data Compatibility
+
+| Data | Merge Strategy | R2 Suitable? |
+|------|----------------|-------------|
+| `wiki/*.md` | Accumulate (copy new, overwrite older by `created_at`) | ✅ Yes |
+| `data/code_graph_batch_*.json` | Deduplicated merge via `code_graph_merger.py` | ✅ Yes |
+| `data/raw/` | Cold storage, accumulate | ✅ Yes |
+| Judgments / wiki_pages | **JSONL export/import** — SQLite cannot be synced | ✅ Yes (JSONL) |
+| `seekdb_compat.db` (SQLite) | ❌ Do NOT sync SQLite files | ❌ No |
+
+### Step 1: Device Side — Package & Upload
+
+After local ingestion finishes:
+
+```bash
+# Package everything into a submission tarball
+python batch_sync.py device-package \
+  --name batch_vln \
+  --output-dir ./submissions
+
+# Result: submissions/batch_vln_20260510_143022.tar.gz
+# Contents:
+#   wiki/          → all .md pages (excluding index.md, log.md)
+#   data/          → code_graph_batch_*.json + judgments JSONL + wiki_pages JSONL
+#   manifest.json  → file list with MD5 checksums + stats
+
+# Upload to R2
+python batch_sync.py device-upload \
+  --tar submissions/batch_vln_20260510_143022.tar.gz \
+  --r2-prefix submissions
+```
+
+**What gets exported:**
+- **Wiki pages**: All `.md` files under `wiki/` (excluding `index.md`, `log.md`)
+- **Code graphs**: All `data/code_graph_batch_*.json` files
+- **Judgments**: Exported from `seekdb_compat.db` (SQLite) or seekdb collections → `data/judgments_{name}.jsonl`
+- **Wiki pages DB**: Exported from SQLite/seekdb → `data/wiki_pages_{name}.jsonl`
+
+**Environment variables** (for upload):
+```bash
+export R2_ENDPOINT="https://<account>.r2.cloudflarestorage.com"
+export R2_ACCESS_KEY_ID="..."
+export R2_SECRET_ACCESS_KEY="..."
+export R2_BUCKET="rosclaw-wiki"
+export DEVICE_ID="laptop-A"  # optional, defaults to HOSTNAME
+```
+
+### Step 2: Production Side — Review & Merge
+
+```bash
+# Option A: Merge a local tarball (after manual download)
+python batch_sync.py production-merge \
+  --submission submissions/batch_vln_20260510_143022.tar.gz \
+  --dry-run
+
+# If preview looks good, apply it:
+python batch_sync.py production-merge \
+  --submission submissions/batch_vln_20260510_143022.tar.gz
+
+# Option B: Pull directly from R2 and merge
+python batch_sync.py production-merge \
+  --r2-key submissions/batch_vln_20260510_143022.tar.gz \
+  --dry-run
+
+# Apply:
+python batch_sync.py production-merge \
+  --r2-key submissions/batch_vln_20260510_143022.tar.gz
+```
+
+**What the merge does:**
+1. **Validate**: Check manifest checksums (MD5) for every file
+2. **Merge wiki pages**: Copy new pages; overwrite existing ones only if the incoming page has a newer `created_at` in frontmatter. Conflicts are counted but not blocked.
+3. **Merge code graphs**: Run `code_graph_merger.py` to deduplicate nodes/edges into `data/code_graph.json`. Clean up merged batch files.
+4. **Import judgments**: Upsert JSONL rows into SQLite (`judgments` table) AND seekdb (`judgments` collection).
+5. **Import wiki_pages**: Upsert JSONL rows into SQLite (`wiki_pages` table) AND seekdb (`wiki_pages` collection).
+6. **Rebuild index**: Call `wiki_engine.update_index('wiki')`.
+
+**Skip flags** (useful for partial merges):
+```bash
+python batch_sync.py production-merge --submission ... \
+  --skip-code-graph   # Don't merge code graphs
+  --skip-judgments    # Don't import judgments
+  --skip-wiki-pages   # Don't merge wiki pages or wiki_pages DB
+```
+
+### Step 3: Production API — Upload Endpoint
+
+Devices can also use the API's built-in upload endpoints (no S3 credentials needed on device):
+
+```bash
+# 1. Request presigned upload URL
+curl -X POST https://api.rosclaw.io/wiki/v1/upload/request \
+  -H "X-API-Key: $API_KEY" \
+  -d '{"file_name": "batch_vln.tar.gz", "file_size": 52428800, "wiki_name": "batch_vln"}'
+
+# Response: {"upload_id": "...", "presigned_url": "...", "expires_in": 3600}
+
+# 2. Upload directly to R2 via presigned URL
+curl -X PUT "$PRESIGNED_URL" --upload-file batch_vln.tar.gz
+
+# 3. Notify server that upload is complete
+curl -X POST https://api.rosclaw.io/wiki/v1/upload/complete \
+  -H "X-API-Key: $API_KEY" \
+  -d '{"upload_id": "..."}'
+```
+
+After `upload/complete`, the server marks the submission as "completed" and you can run `batch_sync.py production-merge --r2-key uploads/<upload_id>/batch_vln.tar.gz` on the server.
+
+### Docker Compose with R2 (FUSE) — NOT RECOMMENDED for High Traffic
 
 If you want the API to read directly from R2 without local copies, mount R2 as a FUSE filesystem:
 
@@ -503,14 +594,14 @@ services:
     volumes:
       - /etc/rclone.conf:/config/rclone/rclone.conf:ro
     command: mount r2:rosclaw-wiki /mnt/r2 --vfs-cache-mode writes --allow-other
-  
+
   rosclaw-api:
     volumes:
       - /mnt/r2/wiki:/app/wiki:ro
       - /mnt/r2/data:/app/data:ro
 ```
 
-**Note**: FUSE adds latency. For high-traffic APIs, keep `wiki/` and `code_graph.json` on local SSD and only use R2 for `data/raw/` cold storage.
+**Note**: FUSE adds latency. For high-traffic APIs, keep `wiki/` and `code_graph.json` on local SSD and only use R2 for `data/raw/` cold storage and submission tarballs.
 
 ## Common Pitfalls
 
