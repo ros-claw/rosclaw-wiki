@@ -285,6 +285,7 @@
 
     function buildGraph(keywords) {
       graph.clear();
+      document.getElementById('loading').textContent = '加载知识图谱...';
       if (!keywords.length) {
         document.getElementById('loading').textContent = '暂无关键词数据';
         return;
@@ -301,7 +302,7 @@
           y: Math.random(),
           size: size,
           color: color,
-          type: k.type,
+          _type: k.type,
           weight: k.weight,
           pages: k.pages,
         });
@@ -314,7 +315,7 @@
         for (let j = i + 1; j < ids.length; j++) {
           const a = graph.getNodeAttributes(ids[i]);
           const b = graph.getNodeAttributes(ids[j]);
-          if (a.type === b.type && a.type !== 'unknown') {
+          if (a._type === b._type && a._type !== 'unknown') {
             graph.addEdge(ids[i], ids[j], {
               size: 0.5,
               color: 'rgba(148, 163, 184, 0.15)',
@@ -368,6 +369,7 @@
         labelSize: 12,
         labelColor: { color: '#e2e8f0' },
         hideEdgesOnMove: true,
+        defaultNodeType: 'circle',
       });
 
       renderer.on('enterNode', ({ node }) => showTooltip(node));
@@ -386,7 +388,7 @@
       const tooltip = document.getElementById('tooltip');
       tooltip.innerHTML = `
         <div class="title">${attrs.label}</div>
-        <div class="type">${attrs.type || 'unknown'}</div>
+        <div class="type">${attrs._type || 'unknown'}</div>
         <div class="pages">涉及 ${attrs.pages || 0} 个页面 · 权重 ${(attrs.weight || 0).toFixed(2)}</div>
       `;
       tooltip.style.display = 'block';
@@ -402,7 +404,7 @@
       activeFilter = type;
       if (!renderer) return;
       graph.forEachNode((node, attrs) => {
-        const hidden = activeFilter !== 'all' && attrs.type !== activeFilter;
+        const hidden = activeFilter !== 'all' && attrs._type !== activeFilter;
         graph.setNodeAttribute(node, 'hidden', hidden);
       });
       renderer.refresh();
