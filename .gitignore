@@ -38,8 +38,8 @@ seekdb_schema.sql
 wiki/.search_index/
 wiki/.vector_index/
 wiki/.locks/
-web_ui/
 web_ui.pid
+web_ui/__pycache__/
 skills/
 
 # Tests & Reports (not for release)
