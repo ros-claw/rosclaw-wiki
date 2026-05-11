@@ -1323,8 +1323,10 @@ async def wiki_graph() -> JSONResponse:
     """Return the full wiki page graph (nodes + wikilink edges) for Obsidian-style visualization.
 
     No authentication required. Nodes are wiki pages, edges are [[wikilink]] references.
+    Extracts links from both the wikilinks JSON column and the markdown body content.
     """
     import json as _json
+    import re
     from seekdb_client import get_connection
 
     nodes: list[dict[str, Any]] = []
@@ -1334,7 +1336,7 @@ async def wiki_graph() -> JSONResponse:
     try:
         with get_connection() as conn:
             cur = conn.execute(
-                "SELECT id, type, title, confidence, wikilinks FROM wiki_pages"
+                "SELECT id, type, title, confidence, wikilinks, body FROM wiki_pages"
             )
             rows = cur.fetchall()
 
@@ -1344,25 +1346,60 @@ async def wiki_graph() -> JSONResponse:
                 title = row["title"] or pid
                 confidence = row["confidence"] or 0.5
                 wikilinks_raw = row["wikilinks"] or "[]"
+                body = row["body"] or ""
                 try:
                     wikilinks = _json.loads(wikilinks_raw)
                 except Exception:
                     wikilinks = []
+
+                # Also extract [[...]] wikilinks from markdown body
+                body_links: list[str] = []
+                for match in re.finditer(r"\[\[([^\]|]+)(?:\|[^\]]*)?\]\]", body):
+                    link_target = match.group(1).strip()
+                    # Normalize: lowercase, replace spaces/special chars with underscore
+                    normalized = re.sub(r"[^a-zA-Z0-9_]+", "_", link_target.lower()).strip("_")
+                    if normalized:
+                        body_links.append(normalized)
 
                 nodes.append({
                     "id": pid,
                     "title": title,
                     "type": ptype,
                     "confidence": round(confidence, 2),
-                    "links": wikilinks if isinstance(wikilinks, list) else [],
+                    "links": list(set(
+                        (wikilinks if isinstance(wikilinks, list) else []) + body_links
+                    )),
                 })
                 node_ids.add(pid)
 
-            # Build edges from wikilinks (only if target exists in graph)
+            # Build title-to-id mapping for fuzzy matching
+            title_to_id: dict[str, str] = {}
+            for node in nodes:
+                title_to_id[node["id"].lower()] = node["id"]
+                title_to_id[node["title"].lower()] = node["id"]
+
+            # Build edges from wikilinks (match by exact id or normalized title)
+            edge_set: set[tuple[str, str]] = set()
             for node in nodes:
                 for target in node.get("links", []):
-                    if target in node_ids and target != node["id"]:
-                        edges.append({"source": node["id"], "target": target})
+                    target_norm = target.lower().strip()
+                    matched_id: str | None = None
+                    if target_norm in node_ids:
+                        matched_id = target_norm
+                    elif target_norm in title_to_id:
+                        matched_id = title_to_id[target_norm]
+                    # Try normalized version (spaces->underscores)
+                    if matched_id is None:
+                        target_normalized = re.sub(r"[^a-zA-Z0-9_]+", "_", target_norm).strip("_")
+                        if target_normalized in node_ids:
+                            matched_id = target_normalized
+                        elif target_normalized in title_to_id:
+                            matched_id = title_to_id[target_normalized]
+                    if matched_id and matched_id != node["id"]:
+                        pair = tuple(sorted([node["id"], matched_id]))
+                        if pair not in edge_set:
+                            edge_set.add(pair)
+                            edges.append({"source": node["id"], "target": matched_id})
 
             # Compute link_count (degree) for each node
             link_counts: dict[str, int] = {n["id"]: 0 for n in nodes}
