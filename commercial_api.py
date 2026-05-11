@@ -132,9 +132,11 @@ async def health() -> dict[str, Any]:
             judgment_count = row[0] if row else 0
     except Exception:
         pass
+    # Reflect the actual configured search backend
+    backend = os.environ.get("WIKI_BACKEND", h.get("backend", "unknown"))
     return {
         "status": "ok",
-        "backend": h.get("backend", "unknown"),
+        "backend": backend,
         "wiki_pages": h.get("pages", 0),
         "judgments": judgment_count,
     }

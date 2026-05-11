@@ -125,9 +125,18 @@ class SeekDBClient:
             conn = self.get_connection()
             cur = conn.execute("SELECT COUNT(*) FROM wiki_pages")
             page_count = cur.fetchone()[0]
+            # Detect if pyseekdb collections are actually reachable
+            backend = "sqlite_compat"
+            try:
+                from seekdb_collection_client import get_wiki_collection
+                coll = get_wiki_collection()
+                _ = coll.count()  # ping the collection
+                backend = "seekdb"
+            except Exception:
+                pass
             return {
                 "status": "ok",
-                "backend": "sqlite_compat",
+                "backend": backend,
                 "pages": page_count,
                 "db_path": self.db_path,
             }
