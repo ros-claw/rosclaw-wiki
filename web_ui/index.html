@@ -8,152 +8,359 @@
   <script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #e2e8f0; overflow: hidden; }
-    #app { display: flex; height: 100vh; flex-direction: column; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0a0e1a;
+      color: #e2e8f0;
+      overflow: hidden;
+      height: 100vh;
+    }
 
-    /* Top bar */
-    #topbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 16px; background: #1e293b; border-bottom: 1px solid #334155; }
-    #topbar .left { display: flex; align-items: center; gap: 12px; }
-    #topbar .logo { font-size: 1.1rem; font-weight: 700; color: #38bdf8; }
-    #topbar .status { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: #94a3b8; }
-    #topbar .status-dot { width: 8px; height: 8px; border-radius: 50%; }
+    /* ── Top Bar ── */
+    #topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      height: 48px;
+      background: #111827;
+      border-bottom: 1px solid #1e293b;
+      flex-shrink: 0;
+    }
+    #topbar .logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #38bdf8;
+      white-space: nowrap;
+    }
+    #topbar .logo span { color: #94a3b8; font-weight: 400; font-size: 0.8rem; margin-left: 6px; }
+    #topbar .search-wrap {
+      flex: 1;
+      max-width: 400px;
+      display: flex;
+      gap: 0;
+    }
+    #topbar .search-wrap input {
+      flex: 1;
+      padding: 6px 12px;
+      border-radius: 6px 0 0 6px;
+      border: 1px solid #334155;
+      border-right: none;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 0.85rem;
+    }
+    #topbar .search-wrap button {
+      padding: 6px 14px;
+      border-radius: 0 6px 6px 0;
+      border: 1px solid #334155;
+      background: #1e40af;
+      color: #fff;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    #topbar .search-wrap button:hover { background: #2563eb; }
+    #topbar .apikey-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    #topbar .apikey-wrap input {
+      width: 180px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 0.75rem;
+      font-family: monospace;
+    }
+    #topbar .apikey-wrap button {
+      padding: 6px 10px;
+      border-radius: 4px;
+      border: none;
+      background: #334155;
+      color: #e2e8f0;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    #topbar .status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      white-space: nowrap;
+    }
+    #topbar .status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
     #topbar .status-dot.ok { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
     #topbar .status-dot.warn { background: #f59e0b; box-shadow: 0 0 6px #f59e0b; }
     #topbar .status-dot.err { background: #ef4444; box-shadow: 0 0 6px #ef4444; }
-    #topbar .apikey-wrap { display: flex; align-items: center; gap: 8px; }
-    #topbar .apikey-wrap input { width: 260px; padding: 5px 10px; border-radius: 4px; border: 1px solid #475569; background: #0f172a; color: #e2e8f0; font-size: 0.8rem; font-family: monospace; }
-    #topbar .apikey-wrap button { padding: 5px 12px; border-radius: 4px; border: none; background: #38bdf8; color: #0f172a; font-size: 0.8rem; cursor: pointer; }
-    #topbar .apikey-wrap button:hover { background: #7dd3fc; }
-    #topbar .stats-bar { display: flex; gap: 16px; font-size: 0.75rem; color: #94a3b8; }
-    #topbar .stats-bar span { color: #e2e8f0; font-weight: 600; }
 
-    /* Main */
-    #main { display: flex; flex: 1; overflow: hidden; }
+    /* ── Main Layout ── */
+    #main {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 48px);
+      overflow: hidden;
+    }
 
-    /* Sidebar */
-    #sidebar { width: 360px; background: #1e293b; border-right: 1px solid #334155; display: flex; flex-direction: column; overflow-y: auto; }
-    .section { padding: 14px 16px; border-bottom: 1px solid #334155; }
-    .section h3 { font-size: 0.75rem; color: #94a3b8; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.06em; }
+    /* ── Left Sidebar ── */
+    #sidebar {
+      width: 260px;
+      background: #111827;
+      border-right: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    #sidebar .section {
+      padding: 14px 16px;
+      border-bottom: 1px solid #1e293b;
+    }
+    #sidebar .section h3 {
+      font-size: 0.7rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .stat-card {
+      background: #1e293b;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+    .stat-card .num.zero { color: #64748b; font-size: 0.85rem; }
+    .stat-card .label {
+      font-size: 0.65rem;
+      color: #64748b;
+      margin-top: 3px;
+    }
 
-    /* Search */
-    .search-row { display: flex; gap: 8px; }
-    .search-row input { flex: 1; padding: 8px 12px; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: #e2e8f0; font-size: 0.9rem; }
-    .search-row select { padding: 8px 10px; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color: #e2e8f0; font-size: 0.85rem; }
-    .search-row button { padding: 8px 16px; border-radius: 6px; border: none; background: #38bdf8; color: #0f172a; font-weight: 600; cursor: pointer; }
-    .search-row button:hover { background: #7dd3fc; }
-    .search-results { max-height: 260px; overflow-y: auto; margin-top: 10px; }
-    .search-result { padding: 10px 12px; border-bottom: 1px solid #334155; cursor: pointer; transition: background 0.15s; border-radius: 4px; }
-    .search-result:hover { background: #334155; }
-    .search-result .title { font-weight: 600; font-size: 0.88rem; color: #38bdf8; }
-    .search-result .snippet { font-size: 0.78rem; color: #94a3b8; margin-top: 3px; line-height: 1.4; }
-    .search-result .score { font-size: 0.7rem; color: #64748b; margin-top: 3px; }
+    /* Type filters */
+    .filter-list { display: flex; flex-direction: column; gap: 4px; }
+    .filter-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      transition: background 0.15s;
+    }
+    .filter-item:hover { background: #1e293b; }
+    .filter-item.active { background: #1e293b; color: #e2e8f0; }
+    .filter-item .dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .filter-item .count {
+      margin-left: auto;
+      font-size: 0.7rem;
+      color: #64748b;
+    }
 
-    /* Stats cards */
-    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .stat-card { background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 10px; text-align: center; }
-    .stat-card .num { font-size: 1.3rem; font-weight: 700; color: #38bdf8; }
-    .stat-card .num.zero { color: #64748b; }
-    .stat-card .num.warn { color: #f59e0b; }
-    .stat-card .label { font-size: 0.7rem; color: #94a3b8; margin-top: 4px; }
+    /* ── Graph Area ── */
+    #graph-wrap {
+      flex: 1;
+      position: relative;
+      background: #0a0e1a;
+    }
+    #sigma {
+      width: 100%; height: 100%;
+    }
+    #graph-loading {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.9rem;
+      color: #64748b;
+      pointer-events: none;
+    }
+    #graph-hint {
+      position: absolute;
+      bottom: 12px; left: 12px;
+      font-size: 0.7rem;
+      color: #475569;
+      pointer-events: none;
+      background: rgba(10,14,26,0.8);
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
 
-    /* Filters */
-    .filter-row { display: flex; flex-wrap: wrap; gap: 6px; }
-    .filter-btn { padding: 4px 10px; border-radius: 4px; border: 1px solid #475569; background: transparent; color: #cbd5e1; font-size: 0.78rem; cursor: pointer; }
-    .filter-btn.active { background: #334155; border-color: #38bdf8; }
-    .filter-btn.entity { border-color: #3b82f6; color: #3b82f6; }
-    .filter-btn.entity.active { background: rgba(59,130,246,0.15); }
-    .filter-btn.algorithm { border-color: #22c55e; color: #22c55e; }
-    .filter-btn.algorithm.active { background: rgba(34,197,94,0.15); }
-    .filter-btn.concept { border-color: #f59e0b; color: #f59e0b; }
-    .filter-btn.concept.active { background: rgba(245,158,11,0.15); }
-    .filter-btn.skill { border-color: #ec4899; color: #ec4899; }
-    .filter-btn.skill.active { background: rgba(236,72,153,0.15); }
+    /* ── Right Detail Panel ── */
+    #detail-panel {
+      width: 340px;
+      background: #111827;
+      border-left: 1px solid #1e293b;
+      display: none;
+      flex-direction: column;
+      flex-shrink: 0;
+      overflow-y: auto;
+    }
+    #detail-panel.open { display: flex; }
+    #detail-header {
+      padding: 16px;
+      border-bottom: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      background: #111827;
+      z-index: 10;
+    }
+    #detail-header .close-btn {
+      float: right;
+      background: none;
+      border: none;
+      color: #64748b;
+      font-size: 1.2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    #detail-header .close-btn:hover { color: #e2e8f0; }
+    #detail-header h2 {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      padding-right: 24px;
+      word-break: break-word;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge-entity { background: rgba(59,130,246,0.15); color: #60a5fa; }
+    .badge-algorithm { background: rgba(34,197,94,0.15); color: #4ade80; }
+    .badge-concept { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .badge-skill { background: rgba(236,72,153,0.15); color: #f472b6; }
+    .badge-unknown { background: rgba(100,116,139,0.15); color: #94a3b8; }
 
-    /* Graph area */
-    #graph-container { flex: 1; position: relative; background: #0f172a; }
-    #sigma { width: 100%; height: 100%; }
+    #detail-body { padding: 16px; }
+    #detail-body .meta-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #1e293b;
+      font-size: 0.8rem;
+    }
+    #detail-body .meta-row .key { color: #64748b; }
+    #detail-body .meta-row .val { color: #e2e8f0; font-weight: 500; }
+    #detail-body .section-title {
+      font-size: 0.7rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 16px 0 8px;
+    }
+    .link-list { display: flex; flex-direction: column; gap: 4px; }
+    .link-item {
+      padding: 6px 10px;
+      border-radius: 6px;
+      background: #1e293b;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .link-item:hover { background: #334155; color: #e2e8f0; }
+    .link-item .arrow { color: #475569; margin-right: 4px; }
 
-    /* Tooltip */
-    #tooltip { position: absolute; pointer-events: none; background: rgba(30, 41, 59, 0.95); border: 1px solid #475569; border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; z-index: 100; display: none; max-width: 280px; }
-    #tooltip .title { font-weight: 700; color: #38bdf8; margin-bottom: 4px; }
-    #tooltip .type { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
-    #tooltip .pages { font-size: 0.75rem; margin-top: 4px; color: #cbd5e1; }
-
-    /* Loading */
-    #loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1rem; color: #94a3b8; }
-
-    /* Error toast */
-    #toast { position: fixed; bottom: 20px; right: 20px; padding: 12px 18px; border-radius: 8px; background: #ef4444; color: #fff; font-size: 0.85rem; z-index: 200; display: none; }
-    #toast.info { background: #38bdf8; color: #0f172a; }
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 20px; left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 0.85rem;
+      display: none;
+      z-index: 1000;
+      border: 1px solid #334155;
+    }
+    #toast.info { border-color: #38bdf8; }
+    #toast.err { border-color: #ef4444; }
   </style>
 </head>
 <body>
-  <div id="app">
-    <div id="topbar">
-      <div class="left">
-        <div class="logo">ROSClaw Wiki</div>
-        <div class="status">
-          <div class="status-dot warn" id="status-dot"></div>
-          <span id="status-text">连接中...</span>
+  <div id="topbar">
+    <div class="logo">ROSClaw<span>Wiki Graph</span></div>
+    <div class="search-wrap">
+      <input id="search-input" type="text" placeholder="搜索 Wiki 页面..." onkeydown="if(event.key==='Enter')doSearch()">
+      <button onclick="doSearch()">搜索</button>
+    </div>
+    <div class="apikey-wrap">
+      <input id="api-key" type="password" placeholder="API Key">
+      <button onclick="saveKey()">保存</button>
+    </div>
+    <div class="status">
+      <div id="status-dot" class="status-dot err"></div>
+      <span id="status-text">连接中...</span>
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="sidebar">
+      <div class="section">
+        <h3>知识库统计</h3>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="num" id="s-pages">-</div><div class="label">Wiki 页面</div></div>
+          <div class="stat-card"><div class="num" id="s-links">-</div><div class="label">交叉链接</div></div>
+          <div class="stat-card"><div class="num" id="s-judg">-</div><div class="label">物理判据</div></div>
+          <div class="stat-card"><div class="num" id="s-nodes">-</div><div class="label">图谱节点</div></div>
+          <div class="stat-card"><div class="num" id="s-edges">-</div><div class="label">图谱边</div></div>
+          <div class="stat-card"><div class="num" id="s-robots">-</div><div class="label">机器人覆盖</div></div>
         </div>
       </div>
-      <div class="stats-bar" id="stats-bar">
-        <div>Pages: <span id="h-pages">-</span></div>
-        <div>Links: <span id="h-links">-</span></div>
-        <div>Judgments: <span id="h-judg">-</span></div>
-        <div>Code Nodes: <span id="h-cgnodes">-</span></div>
-      </div>
-      <div class="apikey-wrap">
-        <input type="password" id="api-key" placeholder="API Key: rw_..." />
-        <button onclick="saveKey()">保存</button>
+      <div class="section">
+        <h3>节点类型过滤</h3>
+        <div class="filter-list" id="filter-list">
+          <div class="filter-item active" data-type="all" onclick="setFilter('all')">
+            <span class="dot" style="background:#e2e8f0"></span>全部<span class="count" id="c-all">-</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div id="main">
-      <div id="sidebar">
-        <div class="section">
-          <div class="search-row">
-            <input type="text" id="search-input" placeholder="搜索知识库..." onkeydown="if(event.key==='Enter')doSearch()" />
-            <select id="search-type">
-              <option value="hybrid">混合</option>
-              <option value="semantic">语义</option>
-              <option value="keyword">关键词</option>
-              <option value="expanded">扩展</option>
-              <option value="judgment">判据</option>
-            </select>
-            <button onclick="doSearch()">搜索</button>
-          </div>
-          <div class="search-results" id="search-results"></div>
-        </div>
+    <div id="graph-wrap">
+      <div id="graph-loading">加载知识图谱...</div>
+      <div id="sigma"></div>
+      <div id="graph-hint">滚轮缩放 · 拖拽节点 · 点击查看详情</div>
+    </div>
 
-        <div class="section">
-          <h3>知识库概览</h3>
-          <div class="stat-grid">
-            <div class="stat-card"><div class="num" id="s-pages">-</div><div class="label">Wiki 页面</div></div>
-            <div class="stat-card"><div class="num" id="s-links">-</div><div class="label">交叉链接</div></div>
-            <div class="stat-card"><div class="num" id="s-judg">-</div><div class="label">物理判据</div></div>
-            <div class="stat-card"><div class="num" id="s-robots">-</div><div class="label">机器人覆盖</div></div>
-            <div class="stat-card"><div class="num" id="s-cgnodes">-</div><div class="label">代码图谱节点</div></div>
-            <div class="stat-card"><div class="num" id="s-cgedges">-</div><div class="label">代码图谱边</div></div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h3>节点过滤</h3>
-          <div class="filter-row">
-            <button class="filter-btn active" data-type="all" onclick="setFilter('all')">全部</button>
-            <button class="filter-btn entity" data-type="entity" onclick="setFilter('entity')">实体</button>
-            <button class="filter-btn algorithm" data-type="algorithm" onclick="setFilter('algorithm')">算法</button>
-            <button class="filter-btn concept" data-type="concept" onclick="setFilter('concept')">概念</button>
-            <button class="filter-btn skill" data-type="skill" onclick="setFilter('skill')">技能</button>
-          </div>
-        </div>
+    <div id="detail-panel">
+      <div id="detail-header">
+        <button class="close-btn" onclick="closeDetail()">&times;</button>
+        <h2 id="d-title">-</h2>
+        <span class="badge" id="d-badge">-</span>
       </div>
-
-      <div id="graph-container">
-        <div id="loading">加载知识图谱...</div>
-        <div id="sigma"></div>
-        <div id="tooltip"></div>
+      <div id="detail-body">
+        <div class="meta-row"><span class="key">链接数</span><span class="val" id="d-links">-</span></div>
+        <div class="meta-row"><span class="key">置信度</span><span class="val" id="d-confidence">-</span></div>
+        <div class="section-title">出链</div>
+        <div class="link-list" id="d-outgoing"></div>
+        <div class="section-title">入链</div>
+        <div class="link-list" id="d-incoming"></div>
       </div>
     </div>
   </div>
@@ -167,79 +374,64 @@
       algorithm: '#22c55e',
       concept: '#f59e0b',
       skill: '#ec4899',
-      index: '#94a3b8',
-      unknown: '#64748b',
+      unknown: '#94a3b8',
+    };
+    const BADGE_CLASS = {
+      entity: 'badge-entity',
+      algorithm: 'badge-algorithm',
+      concept: 'badge-concept',
+      skill: 'badge-skill',
+      unknown: 'badge-unknown',
     };
 
     let graph = new graphology.Graph({ multi: false, allowSelfLoops: false });
     let renderer = null;
+    let camera = null;
     let activeFilter = 'all';
-    let keywordsData = [];
+    let graphData = { nodes: [], edges: [] };
+    let typeCounts = {};
+    let hoveredNode = null;
 
     function getKey() {
       return localStorage.getItem('rosclaw_api_key') || document.getElementById('api-key').value.trim();
     }
-
     function saveKey() {
       const key = document.getElementById('api-key').value.trim();
-      if (key) {
-        localStorage.setItem('rosclaw_api_key', key);
-        document.getElementById('api-key').value = '';
-        showToast('API Key 已保存', 'info');
-        loadHealth();
-      }
+      if (key) { localStorage.setItem('rosclaw_api_key', key); showToast('API Key 已保存', 'info'); }
     }
-
     function showToast(msg, type) {
       const t = document.getElementById('toast');
-      t.textContent = msg;
-      t.className = type === 'info' ? 'info' : '';
-      t.style.display = 'block';
+      t.textContent = msg; t.className = type; t.style.display = 'block';
       setTimeout(() => t.style.display = 'none', 3000);
     }
 
     async function apiGet(path) {
-      const key = getKey();
       const headers = { 'Content-Type': 'application/json' };
-      if (key) headers['X-API-Key'] = key;
+      const key = getKey(); if (key) headers['X-API-Key'] = key;
       const res = await fetch(API_BASE + path, { headers });
-      if (res.status === 401) {
-        showToast('API Key 无效或缺失，请在顶部输入');
-        throw new Error('401');
-      }
+      if (res.status === 401) { showToast('API Key 无效', 'err'); throw new Error('401'); }
       return res.json();
     }
-
     async function apiPost(path, body) {
-      const key = getKey();
       const headers = { 'Content-Type': 'application/json' };
-      if (key) headers['X-API-Key'] = key;
+      const key = getKey(); if (key) headers['X-API-Key'] = key;
       const res = await fetch(API_BASE + path, { method: 'POST', headers, body: JSON.stringify(body) });
-      if (res.status === 401) {
-        showToast('API Key 无效或缺失，请在顶部输入');
-        throw new Error('401');
-      }
+      if (res.status === 401) { showToast('API Key 无效', 'err'); throw new Error('401'); }
       return res.json();
     }
 
+    // ── Health ──
     async function loadHealth() {
       try {
         const data = await apiGet('/v1/health');
         const dot = document.getElementById('status-dot');
         const text = document.getElementById('status-text');
         if (data.backend === 'seekdb') {
-          dot.className = 'status-dot ok';
-          text.textContent = 'SeekDB 在线';
+          dot.className = 'status-dot ok'; text.textContent = 'SeekDB 在线';
         } else if (data.status === 'ok') {
-          dot.className = 'status-dot warn';
-          text.textContent = 'SQLite 降级模式';
+          dot.className = 'status-dot warn'; text.textContent = 'SQLite 降级';
         } else {
-          dot.className = 'status-dot err';
-          text.textContent = '服务异常';
-        }
-        if (data.wiki_pages != null) {
-          document.getElementById('h-pages').textContent = data.wiki_pages;
-          document.getElementById('h-judg').textContent = data.judgments;
+          dot.className = 'status-dot err'; text.textContent = '服务异常';
         }
       } catch (e) {
         document.getElementById('status-dot').className = 'status-dot err';
@@ -247,212 +439,260 @@
       }
     }
 
-    async function loadHubStats() {
+    // ── Load Graph ──
+    async function loadGraph() {
       try {
-        const data = await apiGet('/wiki/v1/hub/stats');
+        const data = await apiGet('/wiki/v1/graph');
         if (data.status !== 'ok') return;
-        const s = data.global_stats || {};
-
-        function setStat(id, val, zeroLabel) {
-          const el = document.getElementById(id);
-          if (val === 0 && zeroLabel) {
-            el.textContent = zeroLabel;
-            el.className = 'num zero';
-          } else {
-            el.textContent = val ?? '-';
-            el.className = 'num';
-          }
-        }
-
-        setStat('s-pages', s.total_pages);
-        setStat('s-links', s.total_wikilinks);
-        setStat('s-judg', s.total_judgments);
-        setStat('s-robots', s.robots_covered);
-        setStat('s-cgnodes', s.total_code_graph_nodes);
-        setStat('s-cgedges', s.total_code_graph_edges);
-
-        document.getElementById('h-pages').textContent = s.total_pages ?? '-';
-        document.getElementById('h-links').textContent = s.total_wikilinks ?? '-';
-        document.getElementById('h-judg').textContent = s.total_judgments ?? '-';
-        document.getElementById('h-cgnodes').textContent = s.total_code_graph_nodes ?? '-';
-
-        keywordsData = data.keywords || [];
-        buildGraph(keywordsData);
+        graphData = data;
+        buildGraph(data.nodes, data.edges);
+        updateStats(data.nodes.length, data.edges.length);
+        buildFilters(data.nodes);
+        document.getElementById('graph-loading').style.display = 'none';
       } catch (e) {
-        document.getElementById('loading').textContent = '加载数据失败: ' + e.message;
+        document.getElementById('graph-loading').textContent = '加载失败: ' + e.message;
       }
     }
 
-    function buildGraph(keywords) {
+    function buildGraph(nodes, edges) {
       graph.clear();
-      document.getElementById('loading').textContent = '加载知识图谱...';
-      if (!keywords.length) {
-        document.getElementById('loading').textContent = '暂无关键词数据';
-        return;
-      }
+      if (!nodes.length) return;
 
-      const nodeMap = {};
-      keywords.forEach((k, i) => {
-        const id = 'kw_' + i;
-        const size = Math.max(4, Math.min(20, (k.weight || 0.5) * 20));
-        const color = TYPE_COLORS[k.type] || TYPE_COLORS.unknown;
-        graph.addNode(id, {
-          label: k.name,
-          x: Math.random(),
-          y: Math.random(),
+      // Add nodes
+      nodes.forEach(n => {
+        const size = Math.max(3, Math.min(16, 3 + (n.link_count || 0) * 0.7));
+        const color = TYPE_COLORS[n.type] || TYPE_COLORS.unknown;
+        graph.addNode(n.id, {
+          label: n.title || n.id,
+          x: Math.random() * 100 - 50,
+          y: Math.random() * 100 - 50,
           size: size,
           color: color,
-          _type: k.type,
-          weight: k.weight,
-          pages: k.pages,
+          _type: n.type,
+          _title: n.title,
+          _confidence: n.confidence,
+          _linkCount: n.link_count || 0,
         });
-        nodeMap[id] = k;
       });
 
-      // Build edges: connect keywords of same type to form clusters
-      const ids = Object.keys(nodeMap);
-      for (let i = 0; i < ids.length; i++) {
-        for (let j = i + 1; j < ids.length; j++) {
-          const a = graph.getNodeAttributes(ids[i]);
-          const b = graph.getNodeAttributes(ids[j]);
-          if (a._type === b._type && a._type !== 'unknown') {
-            graph.addEdge(ids[i], ids[j], {
+      // Add edges
+      edges.forEach(e => {
+        if (graph.hasNode(e.source) && graph.hasNode(e.target)) {
+          try {
+            graph.addEdge(e.source, e.target, {
               size: 0.5,
-              color: 'rgba(148, 163, 184, 0.15)',
+              color: 'rgba(148,163,184,0.12)',
             });
-          }
+          } catch (err) { /* duplicate edge */ }
         }
-      }
+      });
 
-      // Simple force-directed layout (no external dependency)
-      function runLayout(g, iterations) {
-        const nodes = g.nodes().map(id => ({ id, x: g.getNodeAttribute(id, 'x'), y: g.getNodeAttribute(id, 'y'), vx: 0, vy: 0 }));
-        const nodeMap = {};
-        nodes.forEach(n => nodeMap[n.id] = n);
-        for (let iter = 0; iter < iterations; iter++) {
-          // Repulsion
-          for (let i = 0; i < nodes.length; i++) {
-            for (let j = i + 1; j < nodes.length; j++) {
-              const a = nodes[i], b = nodes[j];
-              let dx = a.x - b.x, dy = a.y - b.y;
-              let dist = Math.sqrt(dx * dx + dy * dy) || 0.01;
-              const f = 80 / (dist * dist);
-              const fx = (dx / dist) * f, fy = (dy / dist) * f;
-              a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
-            }
-          }
-          // Attraction (edges)
-          g.forEachEdge((edge, attrs, source, target) => {
-            const s = nodeMap[source], t = nodeMap[target];
-            if (!s || !t) return;
-            let dx = t.x - s.x, dy = t.y - s.y;
-            let dist = Math.sqrt(dx * dx + dy * dy) || 0.01;
-            const f = dist * 0.008;
-            const fx = (dx / dist) * f, fy = (dy / dist) * f;
-            s.vx += fx; s.vy += fy; t.vx -= fx; t.vy -= fy;
-          });
-          // Apply + center gravity
-          for (const n of nodes) {
-            n.vx *= 0.6; n.vy *= 0.6;
-            n.vx -= n.x * 0.003; n.vy -= n.y * 0.003;
-            n.x += n.vx; n.y += n.vy;
-          }
-        }
-        for (const n of nodes) g.setNodeAttribute(n.id, 'x', n.x);
-        for (const n of nodes) g.setNodeAttribute(n.id, 'y', n.y);
-      }
-      runLayout(graph, 200);
+      // Layout
+      runLayout(graph, 250);
 
+      // Render
       if (renderer) renderer.kill();
       renderer = new Sigma(graph, document.getElementById('sigma'), {
         renderEdgeLabels: false,
-        labelSize: 12,
-        labelColor: { color: '#e2e8f0' },
+        labelSize: 11,
+        labelColor: { color: '#cbd5e1' },
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
+        nodeReducer: (node, attrs) => {
+          // Dim non-connected nodes when hovering
+          if (hoveredNode && hoveredNode !== node) {
+            const isNeighbor = graph.neighbors(hoveredNode).includes(node);
+            if (!isNeighbor) {
+              return { ...attrs, color: '#1e293b', label: '', zIndex: 0 };
+            }
+          }
+          // Filter by type
+          if (activeFilter !== 'all' && attrs._type !== activeFilter) {
+            return { ...attrs, hidden: true };
+          }
+          return attrs;
+        },
+        edgeReducer: (edge, attrs) => {
+          if (hoveredNode) {
+            const [src, tgt] = graph.extremities(edge);
+            const isConnected = src === hoveredNode || tgt === hoveredNode;
+            if (!isConnected) {
+              return { ...attrs, color: 'rgba(30,41,59,0.3)', hidden: false };
+            }
+            return { ...attrs, color: 'rgba(148,163,184,0.5)', size: 1.2 };
+          }
+          return attrs;
+        },
       });
 
-      renderer.on('enterNode', ({ node }) => showTooltip(node));
-      renderer.on('leaveNode', () => hideTooltip());
-      renderer.on('clickNode', ({ node }) => {
-        const attrs = graph.getNodeAttributes(node);
-        document.getElementById('search-input').value = attrs.label;
-        doSearch();
+      camera = renderer.getCamera();
+
+      // Events
+      renderer.on('enterNode', ({ node }) => {
+        hoveredNode = node;
+        renderer.refresh();
       });
-
-      document.getElementById('loading').style.display = 'none';
-    }
-
-    function showTooltip(nodeId) {
-      const attrs = graph.getNodeAttributes(nodeId);
-      const tooltip = document.getElementById('tooltip');
-      tooltip.innerHTML = `
-        <div class="title">${attrs.label}</div>
-        <div class="type">${attrs._type || 'unknown'}</div>
-        <div class="pages">涉及 ${attrs.pages || 0} 个页面 · 权重 ${(attrs.weight || 0).toFixed(2)}</div>
-      `;
-      tooltip.style.display = 'block';
-    }
-
-    function hideTooltip() {
-      document.getElementById('tooltip').style.display = 'none';
-    }
-
-    function setFilter(type) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      document.querySelector(`.filter-btn[data-type="${type}"]`).classList.add('active');
-      activeFilter = type;
-      if (!renderer) return;
-      graph.forEachNode((node, attrs) => {
-        const hidden = activeFilter !== 'all' && attrs._type !== activeFilter;
-        graph.setNodeAttribute(node, 'hidden', hidden);
+      renderer.on('leaveNode', () => {
+        hoveredNode = null;
+        renderer.refresh();
       });
-      renderer.refresh();
+      renderer.on('clickNode', ({ node }) => showDetail(node));
     }
 
-    async function doSearch() {
-      const q = document.getElementById('search-input').value.trim();
-      const type = document.getElementById('search-type').value;
-      if (!q) {
-        document.getElementById('search-results').innerHTML = '';
-        return;
-      }
-      try {
-        const data = await apiPost('/v1/search', { query: q, search_type: type, top_k: 8 });
-        const container = document.getElementById('search-results');
-        container.innerHTML = '';
-        if (data.status === 'ok' && data.results && data.results.length) {
-          data.results.forEach(r => {
-            const div = document.createElement('div');
-            div.className = 'search-result';
-            div.innerHTML = `
-              <div class="title">${r.title}</div>
-              <div class="snippet">${(r.snippet || '').substring(0, 180)}</div>
-              <div class="score">score: ${(r.score || 0).toFixed(3)}</div>
-            `;
-            container.appendChild(div);
-          });
-        } else {
-          container.innerHTML = '<div class="search-result"><div class="snippet">无结果</div></div>';
+    // Simple force-directed layout
+    function runLayout(g, iterations) {
+      const nodes = g.nodes().map(id => ({ id, x: g.getNodeAttribute(id, 'x'), y: g.getNodeAttribute(id, 'y'), vx: 0, vy: 0 }));
+      const nodeMap = {}; nodes.forEach(n => nodeMap[n.id] = n);
+      for (let iter = 0; iter < iterations; iter++) {
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const a = nodes[i], b = nodes[j];
+            let dx = a.x - b.x, dy = a.y - b.y;
+            let dist = Math.sqrt(dx * dx + dy * dy) || 0.01;
+            const f = 60 / (dist * dist);
+            const fx = (dx / dist) * f, fy = (dy / dist) * f;
+            a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+          }
         }
-      } catch (e) {
-        console.error('Search failed', e);
+        g.forEachEdge((edge, attrs, source, target) => {
+          const s = nodeMap[source], t = nodeMap[target];
+          if (!s || !t) return;
+          let dx = t.x - s.x, dy = t.y - s.y;
+          let dist = Math.sqrt(dx * dx + dy * dy) || 0.01;
+          const f = dist * 0.006;
+          const fx = (dx / dist) * f, fy = (dy / dist) * f;
+          s.vx += fx; s.vy += fy; t.vx -= fx; t.vy -= fy;
+        });
+        for (const n of nodes) {
+          n.vx *= 0.6; n.vy *= 0.6;
+          n.vx -= n.x * 0.002; n.vy -= n.y * 0.002;
+          n.x += n.vx; n.y += n.vy;
+        }
       }
+      for (const n of nodes) { g.setNodeAttribute(n.id, 'x', n.x); g.setNodeAttribute(n.id, 'y', n.y); }
     }
 
-    document.getElementById('sigma').addEventListener('mousemove', (e) => {
-      const tooltip = document.getElementById('tooltip');
-      if (tooltip.style.display === 'block') {
-        tooltip.style.left = (e.clientX + 15) + 'px';
-        tooltip.style.top = (e.clientY + 15) + 'px';
+    // ── Stats ──
+    async function updateStats(nodeCount, edgeCount) {
+      try {
+        const data = await apiGet('/wiki/v1/hub/stats');
+        const s = data.global_stats || {};
+        document.getElementById('s-pages').textContent = s.total_pages ?? '-';
+        document.getElementById('s-links').textContent = s.total_wikilinks ?? '-';
+        document.getElementById('s-judg').textContent = s.total_judgments ?? '-';
+        document.getElementById('s-nodes').textContent = nodeCount;
+        document.getElementById('s-edges').textContent = edgeCount;
+        document.getElementById('s-robots').textContent = s.robots_covered ?? '-';
+      } catch (e) {}
+    }
+
+    // ── Filters ──
+    function buildFilters(nodes) {
+      typeCounts = {};
+      nodes.forEach(n => { typeCounts[n.type] = (typeCounts[n.type] || 0) + 1; });
+      const list = document.getElementById('filter-list');
+      list.innerHTML = `
+        <div class="filter-item active" data-type="all" onclick="setFilter('all')">
+          <span class="dot" style="background:#e2e8f0"></span>全部<span class="count" id="c-all">${nodes.length}</span>
+        </div>`;
+      Object.entries(typeCounts).forEach(([type, count]) => {
+        const color = TYPE_COLORS[type] || TYPE_COLORS.unknown;
+        list.innerHTML += `
+          <div class="filter-item" data-type="${type}" onclick="setFilter('${type}')">
+            <span class="dot" style="background:${color}"></span>${type}<span class="count">${count}</span>
+          </div>`;
+      });
+    }
+    function setFilter(type) {
+      document.querySelectorAll('.filter-item').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.filter-item[data-type="${type}"]`)?.classList.add('active');
+      activeFilter = type;
+      if (renderer) renderer.refresh();
+    }
+
+    // ── Detail Panel ──
+    function showDetail(nodeId) {
+      const attrs = graph.getNodeAttributes(nodeId);
+      const node = graphData.nodes.find(n => n.id === nodeId);
+      if (!node) return;
+
+      document.getElementById('d-title').textContent = attrs._title || nodeId;
+      const badge = document.getElementById('d-badge');
+      badge.textContent = attrs._type || 'unknown';
+      badge.className = 'badge ' + (BADGE_CLASS[attrs._type] || BADGE_CLASS.unknown);
+
+      document.getElementById('d-links').textContent = attrs._linkCount;
+      document.getElementById('d-confidence').textContent = (attrs._confidence || 0).toFixed(2);
+
+      // Outgoing links
+      const outgoing = graphData.edges.filter(e => e.source === nodeId).map(e => e.target);
+      const outEl = document.getElementById('d-outgoing');
+      outEl.innerHTML = outgoing.length
+        ? outgoing.map(tid => {
+            const t = graphData.nodes.find(n => n.id === tid);
+            return `<div class="link-item" onclick="focusNode('${tid}')"><span class="arrow">→</span>${t ? t.title : tid}</div>`;
+          }).join('')
+        : '<div class="link-item" style="opacity:0.5">无出链</div>';
+
+      // Incoming links
+      const incoming = graphData.edges.filter(e => e.target === nodeId).map(e => e.source);
+      const inEl = document.getElementById('d-incoming');
+      inEl.innerHTML = incoming.length
+        ? incoming.map(sid => {
+            const s = graphData.nodes.find(n => n.id === sid);
+            return `<div class="link-item" onclick="focusNode('${sid}')"><span class="arrow">←</span>${s ? s.title : sid}</div>`;
+          }).join('')
+        : '<div class="link-item" style="opacity:0.5">无入链</div>';
+
+      document.getElementById('detail-panel').classList.add('open');
+    }
+    function closeDetail() {
+      document.getElementById('detail-panel').classList.remove('open');
+    }
+    function focusNode(nodeId) {
+      if (!graph.hasNode(nodeId) || !camera) return;
+      const attrs = graph.getNodeAttributes(nodeId);
+      camera.animate({ x: attrs.x, y: attrs.y, ratio: 0.3 }, { duration: 400 });
+      showDetail(nodeId);
+    }
+
+    // ── Search ──
+    async function doSearch() {
+      const q = document.getElementById('search-input').value.trim().toLowerCase();
+      if (!q) return;
+
+      // First try API search
+      try {
+        const data = await apiPost('/v1/search', { query: q, search_type: 'hybrid', top_k: 5 });
+        if (data.status === 'ok' && data.results && data.results.length) {
+          const first = data.results[0];
+          const nodeId = first.file_path;
+          if (graph.hasNode(nodeId)) {
+            focusNode(nodeId);
+            showToast(`已定位: ${first.title}`, 'info');
+            return;
+          }
+        }
+      } catch (e) {}
+
+      // Fallback: search in graph nodes
+      const matches = graphData.nodes.filter(n =>
+        (n.title || '').toLowerCase().includes(q) ||
+        (n.id || '').toLowerCase().includes(q)
+      );
+      if (matches.length) {
+        focusNode(matches[0].id);
+        showToast(`已定位: ${matches[0].title || matches[0].id}`, 'info');
+      } else {
+        showToast('未找到匹配的页面', 'err');
       }
-    });
+    }
 
     // Init
     const savedKey = localStorage.getItem('rosclaw_api_key');
-    if (savedKey) document.getElementById('api-key').placeholder = 'API Key 已保存 (点击保存可覆盖)';
+    if (savedKey) document.getElementById('api-key').placeholder = 'API Key 已保存';
     loadHealth();
-    loadHubStats();
+    loadGraph();
     setInterval(loadHealth, 30000);
   </script>
 </body>
