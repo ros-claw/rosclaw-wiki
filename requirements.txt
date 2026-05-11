@@ -16,3 +16,4 @@ uvicorn[standard]>=0.27.0
 gunicorn>=21.0.0
 python-multipart>=0.0.9
 redis>=5.0.0
+pyseekdb>=1.2.0
