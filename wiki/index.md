@@ -32,6 +32,14 @@ Auto-generated catalog of the knowledge base.
 - [[entities/driving_videos|driving videos]] — <!-- TODO -->
 - [[entities/droid_distributed_robot_interaction_dataset|DROID (Distributed Robot Interaction Dataset)]] — <!-- TODO -->
 - [[entities/drone_unmanned_aerial_vehicle|Drone (Unmanned Aerial Vehicle)]] — <!-- TODO -->
+- [[entities/deepmind_alphafold|DeepMind AlphaFold]] — Protein structure prediction with deep learning
+- [[entities/deepmind_byol|DeepMind BYOL]] — Bootstrap Your Own Latent self-supervised learning
+- [[entities/deepmind_causal_reasoning|DeepMind Causal Reasoning]] — Causal inference for robust generalization
+- [[entities/deepmind_curl|DeepMind CURL]] — Contrastive unsupervised RL representations
+- [[entities/deepmind_enformer|DeepMind Enformer]] — Gene expression prediction from DNA sequence
+- [[entities/deepmind_graph_matching|DeepMind Graph Matching Networks]] — Learned graph similarity via GNNs
+- [[entities/deepmind_learning_to_simulate|DeepMind Learning to Simulate]] — Particle-based learned physics simulation
+- [[entities/deepmind_meshgraphnets|DeepMind MeshGraphNets]] — Mesh-based learned simulation with GNNs
 - [[entities/eb_alfred|EB-ALFRED]] — <!-- TODO -->
 - [[entities/eb_habitat|EB-Habitat]] — <!-- TODO -->
 - [[entities/eb_manipulation|EB-Manipulation]] — <!-- TODO -->
