@@ -85,6 +85,7 @@ Auto-generated catalog of the knowledge base.
 - [[entities/nav_adacot_29m|Nav-AdaCoT-2.9M]] — <!-- TODO -->
 - [[entities/navigator|Navigator]] — <!-- TODO -->
 - [[entities/navr2_cot_dataset|NavR^2-CoT dataset]] — <!-- TODO -->
+- [[entities/nasa_jpl_nebula2_wildos|NASA JPL Nebula2-WildOS]] — Open-vocabulary object search in outdoor environments (ROS/ROS2)
 - [[entities/observer|Observer]] — <!-- TODO -->
 - [[entities/occ_scannet|Occ-ScanNet]] — <!-- TODO -->
 - [[entities/panoramic_occupancy_dataset_for_humanoid_robots|Panoramic occupancy dataset for humanoid robots]] — <!-- TODO -->
