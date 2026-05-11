@@ -1318,6 +1318,72 @@ async def hub_stats() -> JSONResponse:
     })
 
 
+@app.get("/wiki/v1/graph")
+async def wiki_graph() -> JSONResponse:
+    """Return the full wiki page graph (nodes + wikilink edges) for Obsidian-style visualization.
+
+    No authentication required. Nodes are wiki pages, edges are [[wikilink]] references.
+    """
+    import json as _json
+    from seekdb_client import get_connection
+
+    nodes: list[dict[str, Any]] = []
+    edges: list[dict[str, Any]] = []
+    node_ids: set[str] = set()
+
+    try:
+        with get_connection() as conn:
+            cur = conn.execute(
+                "SELECT id, type, title, confidence, wikilinks FROM wiki_pages"
+            )
+            rows = cur.fetchall()
+
+            for row in rows:
+                pid = row["id"]
+                ptype = row["type"] or "unknown"
+                title = row["title"] or pid
+                confidence = row["confidence"] or 0.5
+                wikilinks_raw = row["wikilinks"] or "[]"
+                try:
+                    wikilinks = _json.loads(wikilinks_raw)
+                except Exception:
+                    wikilinks = []
+
+                nodes.append({
+                    "id": pid,
+                    "title": title,
+                    "type": ptype,
+                    "confidence": round(confidence, 2),
+                    "links": wikilinks if isinstance(wikilinks, list) else [],
+                })
+                node_ids.add(pid)
+
+            # Build edges from wikilinks (only if target exists in graph)
+            for node in nodes:
+                for target in node.get("links", []):
+                    if target in node_ids and target != node["id"]:
+                        edges.append({"source": node["id"], "target": target})
+
+            # Compute link_count (degree) for each node
+            link_counts: dict[str, int] = {n["id"]: 0 for n in nodes}
+            for edge in edges:
+                link_counts[edge["source"]] = link_counts.get(edge["source"], 0) + 1
+                link_counts[edge["target"]] = link_counts.get(edge["target"], 0) + 1
+            for node in nodes:
+                node["link_count"] = link_counts.get(node["id"], 0)
+                # Remove links array to reduce payload size
+                node.pop("links", None)
+
+    except Exception as exc:
+        logger.warning("Wiki graph query failed: %s", exc)
+
+    return JSONResponse(content={
+        "status": "ok",
+        "nodes": nodes,
+        "edges": edges,
+    })
+
+
 # ── Startup / Admin helpers ──
 
 @app.on_event("startup")
