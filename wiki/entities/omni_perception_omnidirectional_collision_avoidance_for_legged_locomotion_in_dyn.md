@@ -1,0 +1,30 @@
+---
+id: omni_perception_omnidirectional_collision_avoidance_for_legged_locomotion_in_dyn
+type: algorithm
+tags:
+- vln
+- vision-language-navigation
+- '2025'
+confidence: 0.8
+created_at: '2026-05-11'
+sources:
+- https://arxiv.org/pdf/2505.19214
+- https://github.com/aCodeDog/OmniPerception
+---
+
+# Omni-Perception: Omnidirectional Collision Avoidance for Legged Locomotion in Dynamic Environments
+
+**Year**: 2025  
+**Venue**: CoRL  
+**arXiv**: [2505.19214](https://arxiv.org/pdf/2505.19214)  
+**Code**: [https://github.com/aCodeDog/OmniPerception](https://github.com/aCodeDog/OmniPerception)  
+
+## Overview
+
+---
+
+## See Also
+
+- [[vision_and_language_navigation|Vision-Language Navigation]]
+- [[object_goal_navigation|Object-Goal Navigation]]
+
