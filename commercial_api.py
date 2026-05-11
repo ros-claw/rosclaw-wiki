@@ -1222,13 +1222,26 @@ async def hub_stats() -> JSONResponse:
         cg_files.extend(sorted(data_dir.glob("code_graph_batch_*.json")))
         total_nodes = 0
         total_edges = 0
+        # Exclude generic/noisy repos that inflate stats without adding embodied-intelligence value
+        _EXCLUDED_CODE_REPOS = {"google-research_google-research"}
         if cg_files:
             import json
             for cg_path in cg_files:
                 with open(cg_path, encoding="utf-8") as f:
                     cg_data = json.load(f)
-                total_nodes += len(cg_data.get("nodes", []))
-                total_edges += len(cg_data.get("edges", []))
+                nodes = cg_data.get("nodes", [])
+                edges = cg_data.get("edges", [])
+                # Build set of node IDs belonging to excluded repos for edge filtering
+                excluded_ids = {
+                    n["id"] for n in nodes
+                    if n.get("repo", "") in _EXCLUDED_CODE_REPOS
+                }
+                total_nodes += sum(
+                    1 for n in nodes if n.get("repo", "") not in _EXCLUDED_CODE_REPOS
+                )
+                total_edges += sum(
+                    1 for e in edges if e.get("source", "") not in excluded_ids
+                )
         stats["total_code_graph_nodes"] = total_nodes
         stats["total_code_graph_edges"] = total_edges
     except Exception as exc:
