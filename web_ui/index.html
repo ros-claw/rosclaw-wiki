@@ -6,7 +6,6 @@
   <title>ROSClaw Wiki — Knowledge Graph</title>
   <script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/graphology-layout-forceatlas2@0.10.1/index.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #e2e8f0; overflow: hidden; }
@@ -324,13 +323,44 @@
         }
       }
 
-      // Layout
-      const layout = new graphologyLibrary.layout.forceatlas2(graph, {
-        iterations: 300,
-        settings: { gravity: 0.05, scalingRatio: 10, strongGravityMode: true },
-      });
-      layout.start();
-      setTimeout(() => layout.stop(), 2500);
+      // Simple force-directed layout (no external dependency)
+      function runLayout(g, iterations) {
+        const nodes = g.nodes().map(id => ({ id, x: g.getNodeAttribute(id, 'x'), y: g.getNodeAttribute(id, 'y'), vx: 0, vy: 0 }));
+        const nodeMap = {};
+        nodes.forEach(n => nodeMap[n.id] = n);
+        for (let iter = 0; iter < iterations; iter++) {
+          // Repulsion
+          for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+              const a = nodes[i], b = nodes[j];
+              let dx = a.x - b.x, dy = a.y - b.y;
+              let dist = Math.sqrt(dx * dx + dy * dy) || 0.01;
+              const f = 80 / (dist * dist);
+              const fx = (dx / dist) * f, fy = (dy / dist) * f;
+              a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+            }
+          }
+          // Attraction (edges)
+          g.forEachEdge((edge, attrs, source, target) => {
+            const s = nodeMap[source], t = nodeMap[target];
+            if (!s || !t) return;
+            let dx = t.x - s.x, dy = t.y - s.y;
+            let dist = Math.sqrt(dx * dx + dy * dy) || 0.01;
+            const f = dist * 0.008;
+            const fx = (dx / dist) * f, fy = (dy / dist) * f;
+            s.vx += fx; s.vy += fy; t.vx -= fx; t.vy -= fy;
+          });
+          // Apply + center gravity
+          for (const n of nodes) {
+            n.vx *= 0.6; n.vy *= 0.6;
+            n.vx -= n.x * 0.003; n.vy -= n.y * 0.003;
+            n.x += n.vx; n.y += n.vy;
+          }
+        }
+        for (const n of nodes) g.setNodeAttribute(n.id, 'x', n.x);
+        for (const n of nodes) g.setNodeAttribute(n.id, 'y', n.y);
+      }
+      runLayout(graph, 200);
 
       if (renderer) renderer.kill();
       renderer = new Sigma(graph, document.getElementById('sigma'), {
