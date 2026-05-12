@@ -1430,6 +1430,110 @@ async def wiki_graph() -> JSONResponse:
     })
 
 
+# ── Batch Sync API ──
+
+from pydantic import BaseModel
+
+class BatchPreviewRequest(BaseModel):
+    batch_id: str
+
+class BatchMergeRequest(BaseModel):
+    batch_id: str
+
+class BatchRejectRequest(BaseModel):
+    batch_id: str
+
+
+@app.get("/wiki/v1/batch/list")
+async def batch_list() -> JSONResponse:
+    """List pending batch submissions from R2."""
+    try:
+        from r2_sync import list_submissions
+        keys = list_submissions("submissions")
+        batches = []
+        for key in keys:
+            if not key.endswith(".tar.gz"):
+                continue
+            name = Path(key).stem
+            batches.append({
+                "id": key,
+                "batch_name": name,
+                "device_id": "unknown",
+                "status": "pending",
+                "created_at": "",
+            })
+        return JSONResponse(content={"status": "ok", "batches": batches})
+    except Exception as exc:
+        logger.warning("batch_list failed: %s", exc)
+        return JSONResponse(
+            content={"status": "error", "message": str(exc), "batches": []},
+            status_code=500,
+        )
+
+
+@app.post("/wiki/v1/batch/preview")
+async def batch_preview(req: BatchPreviewRequest) -> JSONResponse:
+    """Preview a batch submission by reading its manifest."""
+    import tempfile, tarfile, json
+    try:
+        from r2_sync import generate_presigned_download_url
+        url = generate_presigned_download_url(req.batch_id, expiry=3600)
+        tar_path = Path(tempfile.gettempdir()) / f"preview_{Path(req.batch_id).name}"
+        import urllib.request
+        urllib.request.urlretrieve(url, tar_path)
+        with tarfile.open(tar_path, "r:gz") as tf:
+            manifest = json.load(tf.extractfile("manifest.json"))
+        return JSONResponse(content={"status": "ok", "manifest": manifest})
+    except Exception as exc:
+        logger.warning("batch_preview failed: %s", exc)
+        return JSONResponse(
+            content={"status": "error", "message": str(exc)},
+            status_code=500,
+        )
+
+
+@app.post("/wiki/v1/batch/merge")
+async def batch_merge(req: BatchMergeRequest) -> JSONResponse:
+    """Merge a batch submission into production."""
+    try:
+        from batch_sync import production_merge_from_r2
+        result = production_merge_from_r2(req.batch_id)
+        return JSONResponse(content={"status": "ok", "result": result})
+    except Exception as exc:
+        logger.warning("batch_merge failed: %s", exc)
+        return JSONResponse(
+            content={"status": "error", "message": str(exc)},
+            status_code=500,
+        )
+
+
+@app.post("/wiki/v1/batch/reject")
+async def batch_reject(req: BatchRejectRequest) -> JSONResponse:
+    """Reject (delete) a batch submission from R2."""
+    try:
+        import boto3
+        from botocore.config import Config
+        endpoint = os.environ["R2_ENDPOINT"]
+        access_key = os.environ["R2_ACCESS_KEY_ID"]
+        secret_key = os.environ["R2_SECRET_ACCESS_KEY"]
+        bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
+        s3 = boto3.client(
+            "s3",
+            endpoint_url=endpoint,
+            aws_access_key_id=access_key,
+            aws_secret_access_key=secret_key,
+            config=Config(signature_version="s3v4"),
+        )
+        s3.delete_object(Bucket=bucket, Key=req.batch_id)
+        return JSONResponse(content={"status": "ok", "message": f"Deleted {req.batch_id}"})
+    except Exception as exc:
+        logger.warning("batch_reject failed: %s", exc)
+        return JSONResponse(
+            content={"status": "error", "message": str(exc)},
+            status_code=500,
+        )
+
+
 # ── Startup / Admin helpers ──
 
 @app.on_event("startup")
