@@ -28,6 +28,14 @@ Chronological record of ingests, queries, and maintenance passes.
 
 ## [2026-05-11T13:10:00] stats | wiki_pages: 1032 total | entities: 344 | concepts: ~15 | skills: ~10 | SQLite import: 220 new, 812 updated
 
+## [2026-05-12T04:12:00] maintenance | P0: orphan link batch fix | 923 relation-predicate errors fixed (`[[uses]]` → `**uses**`) | 93 new concept/entity stub pages created (VLN, LLM, Semantic Mapping, Transformer, etc.) | 2376 low-frequency orphans de-linkified | Valid link rate: 50% → 87.3%
+
+## [2026-05-12T04:12:00] maintenance | P1: paper-code link enhancement | 752 pages enriched with arXiv URLs (from PDF paths) | 62 paper-code pairs matched from awesome_vln.yml | 347 pages added GitHub code links | Paper+code coverage: 20% → 49.9% | Total wiki pages: 1127
+
+## [2026-05-12T04:12:00] docs | DEPLOY.md updated | Added R2 `.env` configuration, wiki maintenance commands, expanded troubleshooting table
+
+## [2026-05-12T04:12:00] docs | AGENTS.md updated | Added wikilink quality standards (relation predicates must be bold, not links), sources format standard (paper + code URLs), monthly maintenance cadence
+
 ## [2026-04-27T23:49:36] ingest | articles/wildos.md | entity: ExploRFM | action: create_new
 
 ## [2026-04-27T23:49:43] ingest | articles/wildos.md | entity: Particle-filter goal triangulation | action: create_new
@@ -14342,11 +14350,11 @@ Chronological record of ingests, queries, and maintenance passes.
 
 ## [2026-04-29T19:19:32] entity_linker | 1 link(s) discovered for [[ExploRFM]]
 
-## [2026-04-29T19:19:32] entity_linker | 1 link(s) discovered for [[Particle-filter goal triangulation]] ⚠️ ⚠️ ⚠️
+## [2026-04-29T19:19:32] entity_linker | 1 link(s) discovered for Particle-filter goal triangulation ⚠️ ⚠️ ⚠️
 
 ## [2026-04-29T19:19:32] entity_linker | 1 link(s) discovered for [[Visual Language Navigation]] ⚠️ ⚠️ ⚠️
 
-## [2026-04-29T19:19:32] entity_linker | 2 link(s) discovered for [[Sparse navigation graph]] ⚠️ ⚠️ ⚠️
+## [2026-04-29T19:19:32] entity_linker | 2 link(s) discovered for Sparse navigation graph ⚠️ ⚠️ ⚠️
 
 ## [2026-04-29T19:19:33] judgment_generator | 0 page(s), 0 judgment(s)
 
@@ -14963,11 +14971,11 @@ Chronological record of ingests, queries, and maintenance passes.
 
 ## [2026-04-29T19:49:43] entity_linker | 1 link(s) discovered for [[ExploRFM]]
 
-## [2026-04-29T19:49:43] entity_linker | 1 link(s) discovered for [[Particle-filter goal triangulation]] ⚠️ ⚠️ ⚠️
+## [2026-04-29T19:49:43] entity_linker | 1 link(s) discovered for Particle-filter goal triangulation ⚠️ ⚠️ ⚠️
 
 ## [2026-04-29T19:49:44] entity_linker | 1 link(s) discovered for [[Visual Language Navigation]] ⚠️ ⚠️ ⚠️
 
-## [2026-04-29T19:49:44] entity_linker | 2 link(s) discovered for [[Sparse navigation graph]] ⚠️ ⚠️ ⚠️
+## [2026-04-29T19:49:44] entity_linker | 2 link(s) discovered for Sparse navigation graph ⚠️ ⚠️ ⚠️
 
 ## [2026-04-29T19:49:44] judgment_generator | 0 page(s), 0 judgment(s)
 
@@ -15266,11 +15274,11 @@ Chronological record of ingests, queries, and maintenance passes.
 
 ## [2026-04-29T20:08:18] entity_linker | 1 link(s) discovered for [[ExploRFM]]
 
-## [2026-04-29T20:08:25] entity_linker | 1 link(s) discovered for [[Particle-filter goal triangulation]] ⚠️ ⚠️ ⚠️
+## [2026-04-29T20:08:25] entity_linker | 1 link(s) discovered for Particle-filter goal triangulation ⚠️ ⚠️ ⚠️
 
 ## [2026-04-29T20:08:28] entity_linker | 1 link(s) discovered for [[Visual Language Navigation]] ⚠️ ⚠️ ⚠️
 
-## [2026-04-29T20:08:30] entity_linker | 2 link(s) discovered for [[Sparse navigation graph]] ⚠️ ⚠️ ⚠️
+## [2026-04-29T20:08:30] entity_linker | 2 link(s) discovered for Sparse navigation graph ⚠️ ⚠️ ⚠️
 
 ## [2026-04-29T20:08:30] judgment_generator | 0 page(s), 0 judgment(s)
 
@@ -18113,7 +18121,7 @@ Chronological record of ingests, queries, and maintenance passes.
 
 ## [2026-04-30T00:26:42] ingest | papers/2512.08186.pdf | entity: dynamic obstacle avoidance | action: create_new | text_source: abstract_only
 
-## [2026-04-30T00:27:18] entity_linker | 1 link(s) discovered for [[Sim-to-Real Transfer]]
+## [2026-04-30T00:27:18] entity_linker | 1 link(s) discovered for [[sim_to_real_transfer]]
 
 ## [2026-04-30T00:27:18] ingest | papers/2508.08240.pdf | entity: Sim-to-Real Transfer | action: create_new | text_source: abstract_only
 
@@ -18947,7 +18955,7 @@ Chronological record of ingests, queries, and maintenance passes.
 
 ## [2026-04-30T02:24:47] code_scanner | created [[Google Research]] from google-research_google-research
 
-## [2026-04-30T02:24:49] code_scanner | created [[WildOS: Open-Vocabulary Object Search in the Wild]] from nasa-jpl_nebula2-wildos
+## [2026-04-30T02:24:49] code_scanner | created WildOS: Open-Vocabulary Object Search in the Wild from nasa-jpl_nebula2-wildos
 
 ## [2026-04-30T02:24:54] code_scanner | created [[PKU-SEC-Lab_EfficientNav]] from PKU-SEC-Lab_EfficientNav
 
