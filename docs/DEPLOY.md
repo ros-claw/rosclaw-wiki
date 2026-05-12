@@ -1,0 +1,242 @@
+# ROSClaw Wiki 生产部署指南
+
+> 覆盖 Cloudflare Tunnel、R2 存储、Gunicorn/Flask 服务管理的完整部署文档。
+
+---
+
+## 架构概览
+
+```
+用户 → wiki.rosclaw.io ──Cloudflare Tunnel──→ cloudflared ──→ localhost:5000 (Flask wiki UI)
+     → api.rosclaw.io  ──Nginx/Gunicorn────→ localhost:8000 (FastAPI commercial_api)
+     → www.rosclaw.io  ──Vercel CDN────────→ Next.js 前端
+```
+
+| 组件 | 域名 | 端口 | 技术 |
+|------|------|------|------|
+| Wiki 可视化界面 | `wiki.rosclaw.io` | 5000 | Flask + SocketIO |
+| API 服务 | `api.rosclaw.io` | 8000 | FastAPI + Gunicorn |
+| 前端网站 | `www.rosclaw.io` | 443 | Vercel (Next.js) |
+| R2 存储 | — | — | Cloudflare R2 (S3-compatible) |
+
+---
+
+## 1. Cloudflare Tunnel 部署
+
+### 1.1 Dashboard 创建 Tunnel
+
+1. 登录 [Cloudflare Zero Trust Dashboard](https://one.dash.cloudflare.com)
+2. Networks → Tunnels → **Create a tunnel**
+3. Tunnel name: `rosclaw-wiki`
+4. 选择 Connector: **Debian**（Ubuntu 兼容）
+5. 复制 token（形如 `eyJhIjoi...`）
+
+### 1.2 配置 Public Hostname
+
+在 Tunnel 详情页 → **Public Hostname** → Add a public hostname：
+
+| 字段 | 值 |
+|------|-----|
+| Subdomain | `wiki` |
+| Domain | `rosclaw.io` |
+| Path | 留空 |
+| Type | `HTTP` |
+| URL | `localhost:5000` |
+
+保存后 Dashboard 显示：
+```
+wiki.rosclaw.io → http://localhost:5000
+```
+
+### 1.3 服务器安装与启动
+
+```bash
+# 安装 cloudflared
+sudo mkdir -p --mode=0755 /usr/share/keyrings
+curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | \
+  sudo tee /usr/share/keyrings/cloudflare-main.gpg > /dev/null
+
+echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] \
+  https://pkg.cloudflare.com/cloudflared any main' | \
+  sudo tee /etc/apt/sources.list.d/cloudflared.list
+
+sudo apt-get update && sudo apt-get install cloudflared
+
+# 安装为系统服务（用 Dashboard 给的 token）
+sudo cloudflared service install <YOUR_TOKEN_HERE>
+
+# 启动并设置开机自启
+sudo systemctl start cloudflared
+sudo systemctl enable cloudflared
+
+# 验证状态
+sudo systemctl status cloudflared
+# 期望输出: Active: active (running)
+```
+
+### 1.4 SSL/TLS 设置
+
+Cloudflare Dashboard → `rosclaw.io` → **SSL/TLS → Overview**：
+
+- **Encryption mode**: 选择 `Full` 或 `Full (strict)`
+- 不要选 `Flexible`（会导致无限重定向）
+- 不要选 `Off`（无加密）
+
+### 1.5 DNS 检查
+
+Tunnel 会自动管理 DNS，不需要手动添加记录。但需确保：
+
+- 删除旧的 A 记录 `wiki`（如果有）
+- DNS 中的 `wiki` 记录由 Tunnel 自动创建为 CNAME
+
+验证：
+```bash
+dig wiki.rosclaw.io +short
+# 期望输出: <tunnel-id>.cfargotunnel.com（不是服务器 IP）
+```
+
+---
+
+## 2. Flask Wiki UI 服务
+
+### 2.1 启动 Flask
+
+```bash
+cd ~/rosclaw/rosclaw-wiki
+
+# 安装依赖
+pip install flask flask-socketio pyyaml
+
+# 后台启动
+nohup python3 -m web_ui.app > web_ui.log 2>&1 &
+
+# 验证端口
+ss -tlnp | grep 5000
+# 期望: LISTEN 0.0.0.0:5000
+```
+
+### 2.2 设为 systemd 服务（推荐）
+
+创建 `/etc/systemd/system/rosclaw-wiki-ui.service`：
+
+```ini
+[Unit]
+Description=ROSClaw Wiki UI (Flask)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/rosclaw/rosclaw-wiki
+ExecStart=/home/ubuntu/rosclaw/rosclaw-wiki/.venv/bin/python -m web_ui.app
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable rosclaw-wiki-ui
+sudo systemctl start rosclaw-wiki-ui
+```
+
+---
+
+## 3. FastAPI / Gunicorn 服务
+
+### 3.1 Gunicorn 启动配置
+
+```bash
+cd ~/rosclaw/rosclaw-wiki
+
+# 启动（已配置 preload_app 缓存 code_graph.json）
+gunicorn commercial_api:app \
+  --bind 127.0.0.1:8000 \
+  --workers 2 \
+  --worker-class uvicorn.workers.UvicornWorker \
+  --preload \
+  --access-logfile - \
+  --error-logfile -
+```
+
+### 3.2 重载（代码更新后）
+
+```bash
+# 修改代码后，graceful reload 使缓存刷新
+sudo kill -HUP $(pgrep -f 'gunicorn.*commercial_api')
+```
+
+---
+
+## 4. R2 存储配置
+
+### 4.1 环境变量
+
+```bash
+export R2_ENDPOINT="https://<account-id>.r2.cloudflarestorage.com"
+export R2_ACCESS_KEY_ID="<your-access-key-id>"
+export R2_SECRET_ACCESS_KEY="<your-secret-access-key>"
+export R2_BUCKET="rosclaw-wiki"
+```
+
+建议写入 `~/.bashrc` 或 systemd service 的 `Environment=` 中。
+
+### 4.2 设备端：打包 + 上传
+
+```bash
+# 1. 打包本地 wiki 变更
+python3 batch_sync.py device-package --name batch_name
+
+# 2. 上传到 R2
+python3 batch_sync.py device-upload \
+  --tar submissions/batch_name_YYYYMMDD_HHMMSS.tar.gz \
+  --r2-prefix submissions
+```
+
+### 4.3 生产端：从 R2 合并
+
+```bash
+# 下载并合并 submission
+python3 batch_sync.py production-merge \
+  --r2-key submissions/batch_name_YYYYMMDD_HHMMSS.tar.gz
+```
+
+---
+
+## 5. Docker 方案（可选）
+
+如果你偏好容器化部署：
+
+```bash
+# cloudflared Docker
+docker run -d --name cloudflared \
+  --restart unless-stopped \
+  cloudflare/cloudflared:latest tunnel run --token <YOUR_TOKEN>
+
+# Flask wiki UI Docker（需自行构建镜像）
+docker run -d --name rosclaw-wiki-ui \
+  -p 127.0.0.1:5000:5000 \
+  -v ~/rosclaw/rosclaw-wiki:/app \
+  -w /app \
+  python:3.11-slim \
+  bash -c "pip install flask flask-socketio pyyaml && python -m web_ui.app"
+```
+
+**当前不推荐 Docker 的原因**：
+- 单服务器裸跑已足够，Docker 增加网络/日志复杂度
+- 当扩展到 K8s 或多机部署时，再容器化更合适
+
+---
+
+## 6. 故障排查
+
+| 现象 | 原因 | 修复 |
+|------|------|------|
+| `ERR_TUNNEL_CONNECTION_FAILED` | Tunnel 未运行或 token 错误 | `sudo systemctl status cloudflared` |
+| `{"detail":"Not Found"}` | 请求到了 FastAPI (8000) 而非 Flask (5000) | 检查 Tunnel Public Hostname URL 是否为 `localhost:5000` |
+| `502 Bad Gateway` | Flask 未在 5000 端口运行 | `ss -tlnp | grep 5000` |
+| 浏览器显示"不安全" | SSL/TLS 模式为 Off/Flexible | Dashboard → SSL/TLS → 改为 Full |
+| `dig` 返回服务器 IP | 旧 A 记录未删除 | DNS 中删除 `wiki` A 记录，让 Tunnel 自动管理 |
+| CORS 报错 | wiki.rosclaw.io 不在 allow_origins | 检查 `commercial_api.py` 的 `CORS_ORIGINS` 环境变量 |

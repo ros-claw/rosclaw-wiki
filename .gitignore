@@ -54,6 +54,7 @@ test_real_ingest.py
 
 # Docs (dev-only)
 docs/
+!docs/DEPLOY.md
 
 # Generated artifacts
 awesome_vln*.yml
