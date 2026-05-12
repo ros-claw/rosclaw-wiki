@@ -39,7 +39,7 @@ for _pkg_dir in ["api", "core", "search", "ingest", "knowledge", "code", "robot"
     if str(_pkg_path) not in sys.path:
         sys.path.insert(0, str(_pkg_path))
 
-from fastapi import FastAPI, Header, HTTPException, Query, Request
+from fastapi import BackgroundTasks, FastAPI, Header, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
@@ -1493,11 +1493,23 @@ async def batch_preview(req: BatchPreviewRequest) -> JSONResponse:
 
 
 @app.post("/wiki/v1/batch/merge")
-async def batch_merge(req: BatchMergeRequest) -> JSONResponse:
-    """Merge a batch submission into production."""
+async def batch_merge(req: BatchMergeRequest, background: BackgroundTasks) -> JSONResponse:
+    """Merge a batch submission into production.
+
+    The synchronous response covers the fast path (file copy, code-graph merge,
+    SQLite import). The seekdb sync — which computes embeddings for hundreds of
+    documents — runs as a background task so the request doesn't hit the
+    Cloudflare/nginx upstream timeout.
+    """
     try:
-        from batch_sync import production_merge_from_r2
-        result = production_merge_from_r2(req.batch_id)
+        from batch_sync import production_merge_from_r2, reindex_seekdb_from_tarball
+        result = production_merge_from_r2(req.batch_id, skip_seekdb=True)
+        tar_path = result.pop("tar_path", None)
+        if tar_path:
+            background.add_task(reindex_seekdb_from_tarball, tar_path)
+            result["seekdb_reindex"] = "scheduled"
+        else:
+            result["seekdb_reindex"] = "skipped"
         return JSONResponse(content={"status": "ok", "result": result})
     except Exception as exc:
         logger.warning("batch_merge failed: %s", exc)

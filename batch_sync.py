@@ -400,6 +400,7 @@ def production_merge(
     skip_code_graph: bool = False,
     skip_judgments: bool = False,
     skip_wiki_pages: bool = False,
+    skip_seekdb: bool = False,
 ) -> dict[str, Any]:
     """Merge a submission tarball into the canonical production dataset.
 
@@ -407,9 +408,12 @@ def production_merge(
       1. Validate manifest and checksums
       2. Merge wiki/*.md pages
       3. Merge code_graph_batch_*.json into canonical code_graph.json
-      4. Import judgments JSONL into SQLite + seekdb
-      5. Import wiki_pages JSONL into SQLite + seekdb
+      4. Import judgments JSONL into SQLite (+ seekdb unless skip_seekdb)
+      5. Import wiki_pages JSONL into SQLite (+ seekdb unless skip_seekdb)
       6. Rebuild wiki index
+
+    `skip_seekdb=True` makes the merge complete in seconds (no embedding work);
+    callers can re-sync seekdb later via reindex_seekdb_from_tarball().
     """
     manifest = _load_manifest(tar_path)
     logger.info("Merging submission: %s from device=%s", manifest["batch_name"], manifest["device_id"])
@@ -519,8 +523,9 @@ def production_merge(
             else:
                 # SQLite
                 result["judgments_imported"] = _import_jsonl_to_sqlite(j_path, "judgments")
-                # Seekdb
-                _import_jsonl_to_seekdb(j_path, "judgments")
+                # Seekdb (skip when caller wants a fast merge)
+                if not skip_seekdb:
+                    _import_jsonl_to_seekdb(j_path, "judgments")
 
     # ── 5. Import wiki_pages ──
     wp_rel = manifest.get("wiki_pages")
@@ -533,7 +538,8 @@ def production_merge(
                 result["wiki_pages_imported"] = count
             else:
                 result["wiki_pages_imported"] = _import_jsonl_to_sqlite(wp_path, "wiki_pages")
-                _import_jsonl_to_seekdb(wp_path, "wiki_pages")
+                if not skip_seekdb:
+                    _import_jsonl_to_seekdb(wp_path, "wiki_pages")
 
     # ── 6. Rebuild index ──
     if not dry_run:
@@ -577,7 +583,49 @@ def production_merge_from_r2(r2_key: str, **kwargs: Any) -> dict[str, Any]:
     logger.info("Downloaded to %s", tar_path)
 
     result = production_merge(tar_path, WIKI_ROOT, DATA_DIR, **kwargs)
+    result["tar_path"] = str(tar_path)
     return result
+
+
+def reindex_seekdb_from_tarball(tar_path: Path | str) -> dict[str, int]:
+    """Run only the seekdb import step against a previously-merged tarball.
+
+    Used as a background task after a fast production_merge(skip_seekdb=True)
+    so the embedding work doesn't block the HTTP response.
+    """
+    tar_path = Path(tar_path)
+    if not tar_path.exists():
+        logger.warning("reindex_seekdb_from_tarball: tarball missing at %s", tar_path)
+        return {"judgments": 0, "wiki_pages": 0}
+
+    manifest = _load_manifest(tar_path)
+    staging = Path(tempfile.mkdtemp(prefix=f"rosclaw_seekdb_{manifest['batch_name']}_"))
+    counts = {"judgments": 0, "wiki_pages": 0}
+    try:
+        with tarfile.open(tar_path, "r:gz") as tf:
+            tf.extractall(path=staging)
+
+        j_rel = manifest.get("judgments")
+        if j_rel:
+            j_path = staging / j_rel
+            if j_path.exists():
+                counts["judgments"] = _import_jsonl_to_seekdb(j_path, "judgments")
+
+        wp_rel = manifest.get("wiki_pages")
+        if wp_rel:
+            wp_path = staging / wp_rel
+            if wp_path.exists():
+                counts["wiki_pages"] = _import_jsonl_to_seekdb(wp_path, "wiki_pages")
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
+
+    logger.info(
+        "Seekdb reindex done for %s: judgments=%d wiki_pages=%d",
+        manifest["batch_name"],
+        counts["judgments"],
+        counts["wiki_pages"],
+    )
+    return counts
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
