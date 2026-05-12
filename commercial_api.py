@@ -1511,20 +1511,12 @@ async def batch_merge(req: BatchMergeRequest) -> JSONResponse:
 async def batch_reject(req: BatchRejectRequest) -> JSONResponse:
     """Reject (delete) a batch submission from R2."""
     try:
-        import boto3
-        from botocore.config import Config
-        endpoint = os.environ["R2_ENDPOINT"]
-        access_key = os.environ["R2_ACCESS_KEY_ID"]
-        secret_key = os.environ["R2_SECRET_ACCESS_KEY"]
-        bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
-        s3 = boto3.client(
-            "s3",
-            endpoint_url=endpoint,
-            aws_access_key_id=access_key,
-            aws_secret_access_key=secret_key,
-            config=Config(signature_version="s3v4"),
-        )
-        s3.delete_object(Bucket=bucket, Key=req.batch_id)
+        from r2_sync import delete_object
+        if not delete_object(req.batch_id):
+            return JSONResponse(
+                content={"status": "error", "message": f"Failed to delete {req.batch_id}"},
+                status_code=500,
+            )
         return JSONResponse(content={"status": "ok", "message": f"Deleted {req.batch_id}"})
     except Exception as exc:
         logger.warning("batch_reject failed: %s", exc)

@@ -1,7 +1,7 @@
-"""Cloudflare R2 sync — S3-compatible upload with presigned URLs.
+"""Cloudflare R2 sync — S3-compatible object storage for ROSClaw Wiki batch pipeline.
 
-Users never touch S3 credentials. The API gateway generates presigned PUT URLs
-that the client uses to upload directly to R2.
+Users never touch S3 credentials directly. The API gateway generates presigned
+PUT/GET URLs that the client uses to upload/download directly to R2.
 """
 
 from __future__ import annotations
@@ -14,33 +14,29 @@ logger = logging.getLogger("rosclaw.r2")
 
 
 def _get_r2_client() -> Any:
-    """Lazy-load boto3 S3 client for R2."""
+    """Lazy-load boto3 S3 client for Cloudflare R2."""
     import boto3
+    from botocore.config import Config
+
     endpoint = os.environ.get("R2_ENDPOINT")
     access_key = os.environ.get("R2_ACCESS_KEY_ID")
     secret_key = os.environ.get("R2_SECRET_ACCESS_KEY")
     if not all([endpoint, access_key, secret_key]):
-        raise RuntimeError("R2 credentials not configured. Set R2_ENDPOINT, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY.")
+        raise RuntimeError(
+            "R2 credentials not configured. Set R2_ENDPOINT, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY."
+        )
     return boto3.client(
         "s3",
         endpoint_url=endpoint,
         aws_access_key_id=access_key,
         aws_secret_access_key=secret_key,
         region_name="auto",
+        config=Config(signature_version="s3v4"),
     )
 
 
 def generate_presigned_upload_url(key: str, file_size: int, expiry: int = 3600) -> str:
-    """Generate a presigned PUT upload URL (valid for 1 hour by default).
-
-    Args:
-        key: Object key in R2 (e.g. "uploads/test-wiki.tar.gz").
-        file_size: Expected file size in bytes (for validation hints).
-        expiry: URL expiry time in seconds.
-
-    Returns:
-        Presigned PUT URL string.
-    """
+    """Generate a presigned PUT upload URL (default 1 hour validity)."""
     s3 = _get_r2_client()
     bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
     return s3.generate_presigned_url(
@@ -74,3 +70,23 @@ def head_object(key: str) -> dict[str, Any] | None:
     except Exception as exc:
         logger.warning("R2 head_object failed for %s: %s", key, exc)
         return None
+
+
+def list_submissions(r2_prefix: str = "submissions") -> list[str]:
+    """List submission object keys in the R2 bucket under the given prefix."""
+    s3 = _get_r2_client()
+    bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
+    response = s3.list_objects_v2(Bucket=bucket, Prefix=r2_prefix)
+    return [obj["Key"] for obj in response.get("Contents", [])]
+
+
+def delete_object(key: str) -> bool:
+    """Delete an object from the R2 bucket. Returns True on success."""
+    s3 = _get_r2_client()
+    bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
+    try:
+        s3.delete_object(Bucket=bucket, Key=key)
+        return True
+    except Exception as exc:
+        logger.warning("R2 delete_object failed for %s: %s", key, exc)
+        return False
