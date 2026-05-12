@@ -495,6 +495,10 @@ def production_merge(
     # ── 6. Rebuild index ──
     if not dry_run:
         try:
+            # wiki_engine lives in core/ subdirectory
+            _core_path = str(Path(__file__).parent / "core")
+            if _core_path not in sys.path:
+                sys.path.insert(0, _core_path)
             import wiki_engine as engine
             engine.update_index(str(wiki_root))
             logger.info("Wiki index rebuilt")

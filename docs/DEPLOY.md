@@ -174,6 +174,8 @@ sudo kill -HUP $(pgrep -f 'gunicorn.*commercial_api')
 
 ### 4.1 环境变量
 
+**方式一：直接导出（临时）**
+
 ```bash
 export R2_ENDPOINT="https://<account-id>.r2.cloudflarestorage.com"
 export R2_ACCESS_KEY_ID="<your-access-key-id>"
@@ -181,7 +183,32 @@ export R2_SECRET_ACCESS_KEY="<your-secret-access-key>"
 export R2_BUCKET="rosclaw-wiki"
 ```
 
-建议写入 `~/.bashrc` 或 systemd service 的 `Environment=` 中。
+**方式二：`.env` 文件（推荐，本地开发）**
+
+```bash
+cd ~/rosclaw/rosclaw-wiki
+cat > .env << 'EOF'
+R2_ENDPOINT=https://<account-id>.r2.cloudflarestorage.com
+R2_ACCESS_KEY_ID=<your-access-key-id>
+R2_SECRET_ACCESS_KEY=<your-secret-access-key>
+R2_BUCKET=rosclaw-wiki
+EOF
+```
+
+**方式三：systemd 环境变量（生产环境）**
+
+在 `/etc/systemd/system/rosclaw-wiki-ui.service` 的 `[Service]` 段添加：
+
+```ini
+Environment="R2_ENDPOINT=https://<account-id>.r2.cloudflarestorage.com"
+Environment="R2_ACCESS_KEY_ID=<your-access-key-id>"
+Environment="R2_SECRET_ACCESS_KEY=<your-secret-access-key>"
+Environment="R2_BUCKET=rosclaw-wiki"
+```
+
+然后 `sudo systemctl daemon-reload && sudo systemctl restart rosclaw-wiki-ui`。
+
+> **安全提示**：`.env` 文件已加入 `.gitignore`，不会被提交到 git。切勿将密钥写入代码文件。
 
 ### 4.2 设备端：打包 + 上传
 
@@ -240,3 +267,60 @@ docker run -d --name rosclaw-wiki-ui \
 | 浏览器显示"不安全" | SSL/TLS 模式为 Off/Flexible | Dashboard → SSL/TLS → 改为 Full |
 | `dig` 返回服务器 IP | 旧 A 记录未删除 | DNS 中删除 `wiki` A 记录，让 Tunnel 自动管理 |
 | CORS 报错 | wiki.rosclaw.io 不在 allow_origins | 检查 `commercial_api.py` 的 `CORS_ORIGINS` 环境变量 |
+| wiki 页面点击 404 | 孤儿链接（orphaned wikilink）| 运行 `python3 -c "import wiki_engine; wiki_engine.list_pages('wiki')"` 检查 |
+| R2 上传报错 `KeyError: R2_ENDPOINT` | 环境变量未设置 | 确认 `.env` 文件存在且已 source |
+| wiki.rosclaw.io 返回 `{"detail":"Not Found"}` | Tunnel 指向了 8000 而非 5000 | Dashboard 检查 Public Hostname URL 为 `http://localhost:5000` |
+
+---
+
+## 7. Wiki 维护命令
+
+### 7.1 检查知识健康
+
+```bash
+# 统计页面数和孤儿链接
+python3 -c "
+import re
+from pathlib import Path
+from collections import Counter
+
+wiki = Path('wiki')
+pages = list(wiki.rglob('*.md'))
+print(f'总页面: {len(pages)}')
+
+existing = {}
+for f in pages:
+    existing[f.stem.lower()] = f.stem
+    m = re.search(r'^title: (.+)$', f.read_text(), re.M)
+    if m: existing[m.group(1).strip().lower()] = m.group(1).strip()
+
+orphans = Counter()
+for f in pages:
+    for m in re.finditer(r'\[\[([^\]|]+)\]\]', f.read_text()):
+        link = m.group(1).strip()
+        if link.lower() not in existing:
+            orphans[link] += 1
+
+print(f'孤儿链接: {sum(orphans.values())} (种类: {len(orphans)})')
+for l, c in orphans.most_common(10):
+    print(f'  {c:4d} {l}')
+"
+```
+
+### 7.2 更新 wiki 索引
+
+```bash
+python3 -c "
+import wiki_engine
+wiki_engine.update_index('wiki')
+"
+```
+
+### 7.3 重新导出知识图谱
+
+```bash
+python3 -c "
+from graph_exporter import export_graph
+export_graph('wiki', output_dir='data/graph_export', fmt='json')
+"
+```

@@ -47,7 +47,24 @@ sources: ["data/raw/..."]
 
 - `id`: URL-safe slug (e.g., `unitree_g1`).
 - `confidence`: initial value depends on source type (see below).
-- `sources`: list of raw file paths that back this page.
+- `sources`: list of source URLs and local paths.
+
+### Sources Format Standard
+
+Every page should link to both **paper** and **code** when available:
+
+```yaml
+sources:
+  - papers/2203.04006.pdf           # Local PDF (primary)
+  - https://arxiv.org/abs/2203.04006  # arXiv abstract URL
+  - https://github.com/openai/CLIP   # Official code repository
+```
+
+**Rules:**
+1. **Always include local PDF path** if the paper was downloaded (e.g., `papers/arxiv_id.pdf`).
+2. **Always derive and add arXiv URL** from the PDF filename (`papers/2203.04006.pdf` → `https://arxiv.org/abs/2203.04006`).
+3. **Add GitHub URL when available** — check awesome lists, paper page, or project website.
+4. **Target**: every paper-backed page should have both arXiv URL and code URL (if code exists).
 
 ## Linking Rules
 
@@ -55,6 +72,16 @@ sources: ["data/raw/..."]
 - Prefer typed relationships in prose: `[[Unitree G1]] uses [[ROS2 Humble]]`.
 - Supported relation types: `uses`, `implements`, `depends_on`, `contradicts`, `supersedes`, `part_of`.
 - When you mention a concept that lacks a page, create a stub episode for it or add it to `index.md` as a TODO.
+
+### Wikilink Quality Standards
+
+- **Relation predicates must NOT be wikilinked**. Use bold, not links:
+  - CORRECT: `**uses** [[ROS2]]` or `**related_to** [[VLN]]`
+  - WRONG: `[[uses]] [[ROS2]]` or `[[related_to]] [[VLN]]`
+- **Create stub pages for high-frequency concepts** (linked from >= 5 pages).
+- **De-linkify one-off mentions** of niche concepts that will never have dedicated pages.
+- **Target page title must match exactly**. If page title is `Embodied AI`, link `[[Embodied AI]]`, not `[[embodied AI]]`.
+- **Current health target**: > 85% valid wikilink rate (orphans < 15%).
 
 ## Confidence & Lifecycle
 
@@ -84,4 +111,6 @@ Initial confidence by source type:
 - After every **5 ingests**: run `wiki_auto_lint` and address flagged pages.
 - On **session end**: compress observations into episode summaries; promote repeated episodes to semantic pages.
 - After every **ingest**: check `Admin_Dashboard.md` for orphan pages and create at least one `[[wikilink]]` for each orphan.
+- After every **batch ingest**: run orphan link check (`python3 -c "import re; ..."`); fix relation-predicate errors and create stubs for high-frequency orphans.
 - Weekly: review `Admin_Dashboard.md` Dataview queries for low-confidence and stale knowledge; prioritize pages with confidence < 0.5.
+- Monthly: run `wiki_auto_lint` and audit sources coverage (arXiv URL + code URL).
