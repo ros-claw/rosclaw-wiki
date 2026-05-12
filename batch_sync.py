@@ -131,7 +131,12 @@ def _import_jsonl_to_sqlite(jsonl_path: Path, table: str, on_conflict: str = "RE
 
 
 def _import_jsonl_to_seekdb(jsonl_path: Path, collection_name: str) -> int:
-    """Import JSONL rows into seekdb collections via pyseekdb."""
+    """Import JSONL rows into seekdb collections via pyseekdb.
+
+    seekdb's Collection.upsert() requires parallel lists: `ids`, `documents`,
+    `metadatas`, and optionally `embeddings`. The JSONL rows mirror the SQLite
+    schema (id, body/text, plus metadata fields).
+    """
     try:
         from seekdb_collection_client import get_wiki_collection, get_judgments_collection
     except ImportError:
@@ -143,9 +148,36 @@ def _import_jsonl_to_seekdb(jsonl_path: Path, collection_name: str) -> int:
         return 0
 
     coll = get_wiki_collection() if collection_name == "wiki_pages" else get_judgments_collection()
-    count = 0
-    batch: list[dict[str, Any]] = []
     batch_size = 100
+
+    ids_batch: list[str] = []
+    docs_batch: list[str] = []
+    meta_batch: list[dict[str, Any]] = []
+    embeds_batch: list[list[float]] = []
+    has_embeddings = False
+    count = 0
+
+    def _flush(final: bool = False) -> None:
+        nonlocal count
+        if not ids_batch:
+            return
+        kwargs: dict[str, Any] = {
+            "ids": ids_batch,
+            "documents": docs_batch,
+            "metadatas": meta_batch,
+        }
+        if has_embeddings and len(embeds_batch) == len(ids_batch):
+            kwargs["embeddings"] = embeds_batch
+        try:
+            coll.upsert(**kwargs)
+            count += len(ids_batch)
+        except Exception as exc:
+            label = "final batch" if final else "batch"
+            logger.warning("Seekdb %s upsert failed: %s", label, exc)
+        ids_batch.clear()
+        docs_batch.clear()
+        meta_batch.clear()
+        embeds_batch.clear()
 
     with open(jsonl_path, encoding="utf-8") as f:
         for line in f:
@@ -153,32 +185,43 @@ def _import_jsonl_to_seekdb(jsonl_path: Path, collection_name: str) -> int:
             if not line:
                 continue
             row = json.loads(line)
-            # Map SQLite schema to seekdb collection schema
-            doc: dict[str, Any] = {"id": row.get("id", str(count)), "metadata": {}}
+
+            row_id = str(row.get("id") or row.get("page_id") or count)
+            document = (
+                row.get("body")
+                or row.get("text")
+                or row.get("description")
+                or ""
+            )
+
+            metadata: dict[str, Any] = {}
+            embedding: list[float] | None = None
             for k, v in row.items():
-                if k == "id":
+                if k in {"id", "page_id", "body", "text", "description"}:
                     continue
                 if k == "embedding" and v is not None:
                     if isinstance(v, str):
-                        v = json.loads(v)
-                    doc["embeddings"] = v
+                        try:
+                            embedding = json.loads(v)
+                        except json.JSONDecodeError:
+                            embedding = None
+                    elif isinstance(v, list):
+                        embedding = v
                 else:
-                    doc["metadata"][k] = v
-            batch.append(doc)
-            if len(batch) >= batch_size:
-                try:
-                    coll.upsert(documents=batch)
-                    count += len(batch)
-                except Exception as exc:
-                    logger.warning("Seekdb batch upsert failed: %s", exc)
-                batch = []
+                    # seekdb metadata values must be scalar; serialize collections
+                    metadata[k] = v if isinstance(v, (str, int, float, bool)) or v is None else json.dumps(v, ensure_ascii=False)
 
-    if batch:
-        try:
-            coll.upsert(documents=batch)
-            count += len(batch)
-        except Exception as exc:
-            logger.warning("Seekdb final batch upsert failed: %s", exc)
+            ids_batch.append(row_id)
+            docs_batch.append(document if isinstance(document, str) else json.dumps(document, ensure_ascii=False))
+            meta_batch.append(metadata)
+            if embedding is not None:
+                embeds_batch.append(embedding)
+                has_embeddings = True
+
+            if len(ids_batch) >= batch_size:
+                _flush()
+
+    _flush(final=True)
 
     logger.info("Imported %d documents into seekdb collection %s", count, collection_name)
     return count
