@@ -555,6 +555,20 @@ def production_merge(
             logger.warning("Index rebuild failed: %s", exc)
             result["errors"].append(f"index_rebuild: {exc}")
 
+        # Rebuild SeekDB index so merged pages are searchable immediately
+        if not skip_seekdb:
+            try:
+                _search_path = str(Path(__file__).parent / "search")
+                if _search_path not in sys.path:
+                    sys.path.insert(0, _search_path)
+                from seekdb_search_impl import SeekDBSearchImpl
+                seekdb_search = SeekDBSearchImpl(str(wiki_root))
+                seekdb_result = seekdb_search.rebuild_index()
+                logger.info("SeekDB index rebuilt: %s", seekdb_result)
+            except Exception as exc:
+                logger.warning("SeekDB index rebuild failed: %s", exc)
+                result["errors"].append(f"seekdb_rebuild: {exc}")
+
     # Cleanup
     shutil.rmtree(staging)
 

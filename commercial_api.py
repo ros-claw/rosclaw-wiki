@@ -925,8 +925,8 @@ async def manifest() -> dict[str, Any]:
         "version": "1.0.0",
         "status": "Ever-expanding Universe of Embodied Knowledge",
         "endpoints": {
-            "rest": "https://api.rosclaw.io/wiki/v1/",
-            "mcp": "https://api.rosclaw.io/wiki/mcp",
+            "rest": "https://api.rosclaw.io/v1/",
+            "mcp": "https://api.rosclaw.io/mcp",
         },
         "capabilities": {
             "semantic_density": f"High — {node_count} nodes woven into {edge_count} edges",

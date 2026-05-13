@@ -789,33 +789,74 @@
 
     // ── Search ──
     async function doSearch() {
-      const q = document.getElementById('search-input').value.trim().toLowerCase();
+      const q = document.getElementById('search-input').value.trim();
       if (!q) return;
 
-      // First try API search
+      // 1. Call local Flask backend (no API key needed)
       try {
-        const data = await apiPost('/v1/search', { query: q, search_type: 'hybrid', top_k: 5 });
-        if (data.status === 'ok' && data.results && data.results.length) {
-          const first = data.results[0];
-          const nodeId = first.file_path;
-          if (graph.hasNode(nodeId)) {
-            focusNode(nodeId);
-            showToast(`已定位: ${first.title}`, 'info');
-            return;
-          }
+        const res = await fetch(`/api/search?q=${encodeURIComponent(q)}&type=hybrid&limit=5`);
+        const data = await res.json();
+        if (data.status === 'done' && data.matches && data.matches.length) {
+          // Show results in a simple dropdown
+          _showSearchResults(data.matches, q);
+          return;
         }
-      } catch (e) {}
+      } catch (e) {
+        console.error('Search error:', e);
+      }
 
-      // Fallback: search in graph nodes
+      // 2. Fallback: search in graph nodes
+      const qLower = q.toLowerCase();
       const matches = graphData.nodes.filter(n =>
-        (n.title || '').toLowerCase().includes(q) ||
-        (n.id || '').toLowerCase().includes(q)
+        (n.title || '').toLowerCase().includes(qLower) ||
+        (n.id || '').toLowerCase().includes(qLower)
       );
       if (matches.length) {
+        showGraph();
         focusNode(matches[0].id);
         showToast(`已定位: ${matches[0].title || matches[0].id}`, 'info');
       } else {
         showToast('未找到匹配的页面', 'err');
+      }
+    }
+
+    function _showSearchResults(matches, query) {
+      let panel = document.getElementById('search-results');
+      if (!panel) {
+        panel = document.createElement('div');
+        panel.id = 'search-results';
+        panel.style.cssText = 'position:absolute;top:60px;left:20px;right:20px;max-width:600px;margin:0 auto;background:#0f172a;border:1px solid #334155;border-radius:12px;z-index:100;max-height:400px;overflow-y:auto;padding:8px 0;';
+        document.body.appendChild(panel);
+      }
+      panel.innerHTML = matches.map(m => {
+        const pageId = m.file_path;
+        const title = m.title || pageId;
+        const snippet = (m.snippet || '').substring(0, 120).replace(/[#*`]/g, '');
+        return `<div style="padding:10px 16px;cursor:pointer;border-bottom:1px solid #1e293b;" onclick="_clickSearchResult('${pageId}')" onmouseover="this.style.background='#1e293b'" onmouseout="this.style.background='transparent'">
+          <div style="font-weight:600;color:#e2e8f0;font-size:14px;">${title}</div>
+          <div style="color:#94a3b8;font-size:12px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${snippet}</div>
+        </div>`;
+      }).join('');
+      panel.style.display = 'block';
+      // Click outside to close
+      setTimeout(() => {
+        document.addEventListener('click', function closeSearch(e) {
+          if (!panel.contains(e.target) && e.target.id !== 'search-input') {
+            panel.style.display = 'none';
+            document.removeEventListener('click', closeSearch);
+          }
+        });
+      }, 100);
+    }
+
+    function _clickSearchResult(pageId) {
+      const panel = document.getElementById('search-results');
+      if (panel) panel.style.display = 'none';
+      if (graph.hasNode(pageId)) {
+        showGraph();
+        focusNode(pageId);
+      } else {
+        showPage(pageId);
       }
     }
 
