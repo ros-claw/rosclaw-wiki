@@ -286,9 +286,14 @@ class SeekDBSearchImpl(SearchInterface):
         page_type = meta.get("type", "episode")
         tags = ",".join(meta.get("tags", []))
         confidence = meta.get("confidence", 0.5)
-        created_at = meta.get("created_at", "")
-        last_reinforced = meta.get("last_reinforced", "")
-        sources = json.dumps(meta.get("sources", []), ensure_ascii=False)
+        created_at = str(meta.get("created_at", ""))
+        last_reinforced = str(meta.get("last_reinforced", ""))
+        def _json_default(obj: Any) -> str:
+            if hasattr(obj, "isoformat"):
+                return obj.isoformat()
+            return str(obj)
+
+        sources = json.dumps(meta.get("sources", []), ensure_ascii=False, default=_json_default)
         wikilinks = ",".join(
             [m.group(1).split("|")[0].strip() for m in __import__("re").finditer(r"\[\[([^\]]+)\]\]", body)]
         )
@@ -310,6 +315,15 @@ class SeekDBSearchImpl(SearchInterface):
                         break
         except Exception:
             pass
+
+        # Fallback: generate embedding on the fly if no pre-computed vector
+        if embedding is None:
+            try:
+                model = self._get_model()
+                emb = model.encode(body, show_progress_bar=False).astype(np.float32)
+                embedding = [round(float(x), 6) for x in emb.tolist()]
+            except Exception as exc:
+                logger.warning("Embedding generation failed for %s: %s", page_id, exc)
 
         coll = self._wiki_collection()
         try:

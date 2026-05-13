@@ -120,25 +120,19 @@ async def add_process_time_header(request: Request, call_next: Any) -> Any:
 
 @app.get("/v1/health")
 async def health() -> dict[str, Any]:
-    from seekdb_client import health_check
-    h = health_check()
-    # Count judgments from SQLite/SeekDB
-    judgment_count = 0
+    # Real SeekDB (pyseekdb) health — reflects actual backend state
+    seekdb_status: dict[str, Any] = {"status": "unknown"}
     try:
-        from seekdb_client import get_connection
-        with get_connection() as conn:
-            cur = conn.execute("SELECT COUNT(*) FROM judgments")
-            row = cur.fetchone()
-            judgment_count = row[0] if row else 0
-    except Exception:
-        pass
-    # Reflect the actual configured search backend
-    backend = os.environ.get("WIKI_BACKEND", h.get("backend", "unknown"))
+        from seekdb_collection_client import health_check as seekdb_health
+        seekdb_status = seekdb_health()
+    except Exception as exc:
+        seekdb_status = {"status": "error", "error": str(exc)}
+
+    backend = os.environ.get("WIKI_BACKEND", "unknown")
     return {
         "status": "ok",
         "backend": backend,
-        "wiki_pages": h.get("pages", 0),
-        "judgments": judgment_count,
+        "seekdb": seekdb_status,
     }
 
 

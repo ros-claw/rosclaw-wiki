@@ -15,6 +15,9 @@ import time
 from pathlib import Path
 from typing import Any
 
+# Pre-load stdlib 'code' before sys.path gets polluted by project root
+import code as _stdlib_code  # noqa: F401
+
 _SCRIPT_DIR = Path(__file__).parent.resolve()
 _PROJECT_ROOT = _SCRIPT_DIR.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
@@ -118,7 +121,9 @@ def api_stats() -> dict[str, Any]:
 
 @app.route("/api/search")
 def api_search() -> dict[str, Any]:
-    """Search wiki pages."""
+    """Search wiki pages via SearchInterface abstraction."""
+    from search_interface import get_search_impl
+
     query = request.args.get("q", "")
     search_type = request.args.get("type", "hybrid")
     limit = int(request.args.get("limit", 20))
@@ -127,51 +132,8 @@ def api_search() -> dict[str, Any]:
         return jsonify({"status": "error", "message": "Missing query parameter 'q'"}), 400
 
     try:
-        if search_type == "semantic":
-            from vector_index import search_semantic
-            matches = search_semantic(str(_get_wiki_root()), query, top_k=limit)
-        elif search_type == "hybrid":
-            from vector_index import search_hybrid
-            matches = search_hybrid(str(_get_wiki_root()), query, top_k=limit)
-        elif search_type == "multimodal":
-            from vector_index import search_hybrid
-            matches = search_hybrid(str(_get_wiki_root()), query, top_k=limit * 2)
-            query_lower = query.lower()
-            enriched = []
-            for hit in matches:
-                rel = hit.get("file_path", "")
-                score = hit.get("score", 0)
-                snippet = hit.get("snippet", "")
-                has_figure = False
-                page_path = wiki / rel
-                if page_path.exists():
-                    try:
-                        text = page_path.read_text(encoding="utf-8")
-                        _, body = engine.parse_frontmatter(text)
-                        if "### 📊 图表分析" in body:
-                            fig_section = body.split("### 📊 图表分析")[-1]
-                            fig_section = fig_section.split("\n## ")[0]
-                            if query_lower in fig_section.lower():
-                                score += 15
-                                has_figure = True
-                                for line in fig_section.splitlines():
-                                    if query_lower in line.lower():
-                                        snippet = f"[图表] {line.strip()[:200]}"
-                                        break
-                    except Exception:
-                        pass
-                enriched.append({
-                    "file_path": rel,
-                    "title": hit.get("title", "?"),
-                    "snippet": snippet,
-                    "score": round(score, 4),
-                    "has_figure_analysis": has_figure,
-                })
-            matches = enriched[:limit]
-        else:
-            import search_backend
-            matches = search_backend.search_index(str(_get_wiki_root()), query, limit=limit)
-
+        search_impl = get_search_impl(str(_get_wiki_root()))
+        matches = search_impl.search(query, search_type=search_type, top_k=limit)
         return jsonify({"status": "done", "query": query, "search_type": search_type, "matches": matches})
     except Exception as exc:
         logger.exception("api_search failed")
