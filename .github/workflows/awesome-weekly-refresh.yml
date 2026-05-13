@@ -1,0 +1,97 @@
+name: Awesome List Weekly Refresh
+
+# Incrementally ingest every awesome list in data/awesome_lists.txt and
+# upload new pages to R2 for production merge.
+#
+# Schedule: every Monday at 02:13 UTC (off the :00/:30 boundary on purpose
+# so it doesn't pile up with other cron-driven jobs).
+#
+# Required repository secrets:
+#   DEEPSEEK_API_KEY      — provider key for LLM extraction (utils/llm_interface.py auto-detects)
+#   R2_ENDPOINT
+#   R2_ACCESS_KEY_ID
+#   R2_SECRET_ACCESS_KEY
+#   R2_BUCKET             — default "rosclaw-wiki"
+#
+# Outputs:
+#   - data/ingest_state.json (committed back to main after each run so state persists)
+#   - new wiki/skills/*.md   (committed back as well — production picks them up via batch merge in admin UI)
+#   - submissions/*.tar.gz   (uploaded to R2; not committed)
+
+on:
+  schedule:
+    - cron: "13 2 * * 1"
+  workflow_dispatch:
+    inputs:
+      only_url:
+        description: "Optional: single awesome-list URL to refresh (skip the rest)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # cap at 6h — orchestrator is resumable, so we just stop and resume next week
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run orchestrator over every list
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          R2_ENDPOINT:      ${{ secrets.R2_ENDPOINT }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET:        ${{ secrets.R2_BUCKET || 'rosclaw-wiki' }}
+          ONLY_URL:         ${{ github.event.inputs.only_url }}
+        run: |
+          set -euo pipefail
+          if [[ -n "${ONLY_URL}" ]]; then
+            echo ">>> [single-list mode] ${ONLY_URL}"
+            python scripts/awesome_to_wiki.py --url "${ONLY_URL}" --push-r2
+          else
+            while IFS= read -r line; do
+              # strip leading/trailing whitespace
+              url="$(echo "$line" | sed -E 's/^[[:space:]]+|[[:space:]]+$//g')"
+              [[ -z "${url}" || "${url}" == \#* ]] && continue
+              echo ">>> ingesting ${url}"
+              python scripts/awesome_to_wiki.py --url "${url}" --push-r2 || {
+                echo "!!! ${url} failed, continuing with next" >&2
+              }
+            done < data/awesome_lists.txt
+          fi
+
+      - name: Commit state + new pages back to main
+        run: |
+          git config user.name  "rosclaw-wiki-bot"
+          git config user.email "bot@rosclaw.io"
+          git add data/ingest_state.json wiki/skills/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(awesome-refresh): weekly ingest run
+
+          Ran scripts/awesome_to_wiki.py over data/awesome_lists.txt.
+          State file updated with last_commit_sha + processed_urls; new
+          wiki/skills/*.md committed. Tarballs were already pushed to R2 —
+          the admin UI on www.rosclaw.io/admin will show them as pending."
+          git push origin "${GITHUB_REF_NAME}"

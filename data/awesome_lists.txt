@@ -1,0 +1,28 @@
+# Awesome lists tracked by scripts/awesome_to_wiki.py.
+# One URL per line. Lines starting with `#` are comments.
+#
+# Used by:
+#   - scripts/awesome_to_wiki.py (manual ingestion)
+#   - .github/workflows/awesome-weekly-refresh.yml (scheduled cron)
+#
+# Order does not matter; the orchestrator de-duplicates via data/ingest_state.json.
+
+# ── Claude Skills ecosystem ──
+https://github.com/ComposioHQ/awesome-claude-skills
+https://github.com/VoltAgent/awesome-openclaw-skills
+https://github.com/sickn33/antigravity-awesome-skills
+https://github.com/hesreallyhim/awesome-claude-code
+https://github.com/ComposioHQ/awesome-claude-plugins
+
+# ── Agent / OpenClaw ──
+https://github.com/VoltAgent/awesome-agent-skills
+https://github.com/hesamsheikh/awesome-openclaw-usecases
+https://github.com/mergisi/awesome-openclaw-agents
+
+# ── MCP servers ──
+https://github.com/punkpeye/awesome-mcp-servers
+https://github.com/yzfly/Awesome-MCP-ZH
+
+# ── Adjacent / infrastructure ──
+https://github.com/walkinglabs/awesome-harness-engineering
+https://github.com/alvinreal/awesome-autoresearch

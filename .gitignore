@@ -32,7 +32,10 @@ log.md
 wiki/log.md
 
 # Runtime / Generated
-data/
+data/*
+data/**/
+!data/awesome_lists.txt
+!data/ingest_state.json
 seekdb_data/
 seekdb_schema.sql
 wiki/.search_index/
@@ -63,6 +66,7 @@ docs/**/
 !docs/DEPLOY.md
 !docs/ADMIN_BATCH_SYNC.md
 !docs/ENVIRONMENT.md
+!docs/TUTORIAL_AWESOME_INGEST.md
 !docs/api_spec_v1.json
 
 # Generated artifacts
