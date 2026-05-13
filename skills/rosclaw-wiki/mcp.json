@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "rosclaw-steward": {
+      "command": "python",
+      "args": ["-m", "mcp_server"],
+      "env": {
+        "WIKI_ROOT": "./wiki",
+        "WIKI_BACKEND": "seekdb",
+        "SEEKDB_MODE": "server",
+        "SEEKDB_HOST": "127.0.0.1",
+        "SEEKDB_PORT": "2881"
+      }
+    }
+  }
+}

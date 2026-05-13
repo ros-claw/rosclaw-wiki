@@ -40,7 +40,12 @@ wiki/.vector_index/
 wiki/.locks/
 web_ui.pid
 web_ui/__pycache__/
-skills/
+# Skills ship with the repo — both Claude Code (.claude/skills) and OpenClaw
+# (skills/rosclaw-wiki) variants. .claude/skills/ is tracked by default; the
+# anchored /skills/ rule below only blocks stray top-level skills directories.
+/skills/*
+!/skills/rosclaw-wiki/
+!/skills/rosclaw-wiki/**
 
 # Tests & Reports (not for release)
 test_*.py
