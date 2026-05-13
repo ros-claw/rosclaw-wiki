@@ -82,6 +82,38 @@ def list_submissions(r2_prefix: str = "submissions") -> list[str]:
     return [obj["Key"] for obj in response.get("Contents", [])]
 
 
+def list_submissions_detailed(r2_prefix: str = "submissions") -> list[dict[str, Any]]:
+    """List submission objects with metadata (Key, LastModified, Size)."""
+    s3 = _get_r2_client()
+    bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
+    response = s3.list_objects_v2(Bucket=bucket, Prefix=r2_prefix)
+    out: list[dict[str, Any]] = []
+    for obj in response.get("Contents", []):
+        out.append({
+            "key": obj["Key"],
+            "size": obj.get("Size", 0),
+            "last_modified": obj["LastModified"].isoformat() if obj.get("LastModified") else "",
+        })
+    return out
+
+
+def move_object(src_key: str, dest_key: str) -> bool:
+    """Copy src_key to dest_key and delete the original. Returns True on success."""
+    s3 = _get_r2_client()
+    bucket = os.environ.get("R2_BUCKET", "rosclaw-wiki")
+    try:
+        s3.copy_object(
+            Bucket=bucket,
+            CopySource={"Bucket": bucket, "Key": src_key},
+            Key=dest_key,
+        )
+        s3.delete_object(Bucket=bucket, Key=src_key)
+        return True
+    except Exception as exc:
+        logger.warning("R2 move_object %s -> %s failed: %s", src_key, dest_key, exc)
+        return False
+
+
 def delete_object(key: str) -> bool:
     """Delete an object from the R2 bucket. Returns True on success."""
     s3 = _get_r2_client()

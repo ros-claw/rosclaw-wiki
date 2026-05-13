@@ -1446,13 +1446,20 @@ class BatchRejectRequest(BaseModel):
 
 @app.get("/wiki/v1/batch/list")
 async def batch_list() -> JSONResponse:
-    """List pending batch submissions from R2."""
+    """List pending batch submissions from R2.
+
+    Anything under `submissions/processed/` is considered already-merged and is
+    omitted from the pending view (see batch_merge for the archive step).
+    """
     try:
-        from r2_sync import list_submissions
-        keys = list_submissions("submissions")
+        from r2_sync import list_submissions_detailed
+        objects = list_submissions_detailed("submissions")
         batches = []
-        for key in keys:
+        for obj in objects:
+            key = obj["key"]
             if not key.endswith(".tar.gz"):
+                continue
+            if "/processed/" in key:
                 continue
             name = Path(key).stem
             batches.append({
@@ -1460,7 +1467,8 @@ async def batch_list() -> JSONResponse:
                 "batch_name": name,
                 "device_id": "unknown",
                 "status": "pending",
-                "created_at": "",
+                "created_at": obj.get("last_modified", ""),
+                "size": obj.get("size", 0),
             })
         return JSONResponse(content={"status": "ok", "batches": batches})
     except Exception as exc:
@@ -1499,10 +1507,13 @@ async def batch_merge(req: BatchMergeRequest, background: BackgroundTasks) -> JS
     The synchronous response covers the fast path (file copy, code-graph merge,
     SQLite import). The seekdb sync — which computes embeddings for hundreds of
     documents — runs as a background task so the request doesn't hit the
-    Cloudflare/nginx upstream timeout.
+    Cloudflare/nginx upstream timeout. After the merge, the source tarball is
+    archived under `submissions/processed/` so it disappears from the pending
+    list in the admin UI but stays retrievable for audit / reprocessing.
     """
     try:
         from batch_sync import production_merge_from_r2, reindex_seekdb_from_tarball
+        from r2_sync import move_object
         result = production_merge_from_r2(req.batch_id, skip_seekdb=True)
         tar_path = result.pop("tar_path", None)
         if tar_path:
@@ -1510,6 +1521,14 @@ async def batch_merge(req: BatchMergeRequest, background: BackgroundTasks) -> JS
             result["seekdb_reindex"] = "scheduled"
         else:
             result["seekdb_reindex"] = "skipped"
+
+        # Archive the merged tarball so it leaves the pending list.
+        if not result.get("errors"):
+            src_key = req.batch_id
+            archived_key = src_key.replace("submissions/", "submissions/processed/", 1)
+            background.add_task(move_object, src_key, archived_key)
+            result["archived_to"] = archived_key
+
         return JSONResponse(content={"status": "ok", "result": result})
     except Exception as exc:
         logger.warning("batch_merge failed: %s", exc)
