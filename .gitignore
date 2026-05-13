@@ -52,9 +52,13 @@ PHASE_*_CLOSED
 compare_fulltext_abstract.py
 test_real_ingest.py
 
-# Docs (dev-only)
-docs/
+# Docs (dev-only — only the listed files ship publicly)
+docs/*
+docs/**/
 !docs/DEPLOY.md
+!docs/ADMIN_BATCH_SYNC.md
+!docs/ENVIRONMENT.md
+!docs/api_spec_v1.json
 
 # Generated artifacts
 awesome_vln*.yml

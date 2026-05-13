@@ -232,28 +232,93 @@ python3 batch_sync.py production-merge \
 
 ---
 
-## 5. Docker 方案（可选）
+## 5. Docker Compose 部署（推荐 / 当前生产方案）
 
-如果你偏好容器化部署：
+`api.rosclaw.io` 目前就是用 `docker-compose.prod.yml` 跑的。三个服务：
+
+| 服务 | 镜像 / 来源 | 端口 | 角色 |
+|------|-------------|------|------|
+| `rosclaw-api` | `Dockerfile.prod` 本地构建（python:3.11-slim） | 8000 | FastAPI + Gunicorn (`commercial_api:app`) |
+| `rosclaw-seekdb` | `oceanbase/seekdb:latest` | 2881 | 向量库 |
+| `rosclaw-redis` | `redis:7-alpine` | 6379 | Job/缓存 |
+
+### 5.1 准备 `.env`
+
+把仓库根目录的 `.env.example` 复制为 `.env`，填上：
 
 ```bash
-# cloudflared Docker
-docker run -d --name cloudflared \
-  --restart unless-stopped \
-  cloudflare/cloudflared:latest tunnel run --token <YOUR_TOKEN>
+# R2（device → admin merge 必需，详见 docs/ADMIN_BATCH_SYNC.md）
+R2_ENDPOINT=https://<account-id>.r2.cloudflarestorage.com
+R2_ACCESS_KEY_ID=<key>
+R2_SECRET_ACCESS_KEY=<secret>
+R2_BUCKET=rosclaw-wiki
 
-# Flask wiki UI Docker（需自行构建镜像）
-docker run -d --name rosclaw-wiki-ui \
-  -p 127.0.0.1:5000:5000 \
-  -v ~/rosclaw/rosclaw-wiki:/app \
-  -w /app \
-  python:3.11-slim \
-  bash -c "pip install flask flask-socketio pyyaml && python -m web_ui.app"
+# 一般不用改
+WIKI_ROOT=/app/wiki
+WIKI_BACKEND=seekdb
+SEEKDB_MODE=server
 ```
 
-**当前不推荐 Docker 的原因**：
-- 单服务器裸跑已足够，Docker 增加网络/日志复杂度
-- 当扩展到 K8s 或多机部署时，再容器化更合适
+> `docker compose` 启动时会自动读这个 `.env` 完成变量替换。**不要把 `.env` 提交到 git**（仓库 `.gitignore` 已经覆盖）。
+
+### 5.2 构建 + 启动
+
+```bash
+cd ~/rosclaw/rosclaw-wiki
+sudo docker compose -f docker-compose.prod.yml build rosclaw-api
+sudo docker compose -f docker-compose.prod.yml up -d
+sudo docker compose -f docker-compose.prod.yml ps
+```
+
+健康检查：
+
+```bash
+curl -s http://localhost:8000/v1/health | jq
+curl -s https://api.rosclaw.io/v1/health | jq      # 经过 host nginx + Cloudflare
+curl -s https://api.rosclaw.io/wiki/v1/batch/list  # 应返回 {"status":"ok","batches":[]}
+```
+
+### 5.3 升级流程（修改后端代码后）
+
+```bash
+cd ~/rosclaw/rosclaw-wiki
+git pull origin main
+sudo docker compose -f docker-compose.prod.yml build rosclaw-api
+sudo docker compose -f docker-compose.prod.yml up -d rosclaw-api
+```
+
+容器 healthcheck 通过后请求会自动恢复。若只改 `wiki/` 或 `data/`（绑定挂载），无需重建镜像，但 `gunicorn` 仍需 `kill -HUP` 才会清空 `code_graph.json` 的 preload 缓存：
+
+```bash
+sudo docker exec rosclaw-api kill -HUP 1
+```
+
+### 5.4 关键挂载与权限
+
+```yaml
+volumes:
+  - ./wiki:/app/wiki      # RW —— admin batch merge 会写新页面进来
+  - ./data:/app/data      # RW —— SQLite / code_graph.json / submissions 缓存
+```
+
+> 历史教训：早期 `/app/wiki` 挂的是 `:ro`，admin UI 一点 merge 就 `[Errno 30] Read-only file system`。改成 RW 后批量合并才能落盘。
+
+### 5.5 nginx 上游超时
+
+`commercial_api.batch_merge` 已经把慢的 seekdb embedding 放到 BackgroundTasks，但 nginx 默认 `proxy_read_timeout 60s` 仍然偏紧。生产 `/etc/nginx/sites-enabled/rosclaw` 给 `/wiki/v1/batch/` 单独抬到 600s：
+
+```nginx
+location /wiki/v1/batch/ {
+  proxy_pass http://rosclaw_api;
+  proxy_read_timeout 600s;
+  proxy_send_timeout 600s;
+  ...
+}
+```
+
+### 5.6 老方案（裸跑 gunicorn）
+
+第 3 节描述的 systemd 直接跑 `gunicorn` 仍然能用，但**当前生产没在用**——保留是为了灾备 / 单机本地开发。两个方案不要同时启动 `:8000`，否则会端口冲突。
 
 ---
 

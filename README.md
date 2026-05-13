@@ -28,11 +28,34 @@ Designed for a hybrid workflow, ROSClaw allows researchers to **Forge** speciali
 
 ## Quick Start
 
+### Prerequisites
+
+- **Python 3.11** (pinned — see `.python-version`). Anything older lacks the
+  features used by the FastAPI / seekdb stack; anything newer is untested.
+  The production Docker image is built from `python:3.11-slim`.
+
 ### Install
 
 ```bash
 pip install rosclaw-wiki
 ```
+
+### Local development
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+cp .env.example .env       # fill in R2 / SEEKDB / REDIS credentials
+```
+
+### Production deployment
+
+The canonical production layout is Docker Compose with three services
+(`rosclaw-api`, `rosclaw-seekdb`, `rosclaw-redis`) fronted by host nginx
+and Cloudflare. See [`docs/DEPLOY.md`](docs/DEPLOY.md) for the full guide
+and [`docs/ADMIN_BATCH_SYNC.md`](docs/ADMIN_BATCH_SYNC.md) for the
+device → R2 → admin UI merge workflow.
 
 ### Forge a Wiki from Papers
 

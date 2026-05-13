@@ -339,6 +339,170 @@
           }
         }
       }
+    },
+    "/wiki/v1/batch/list": {
+      "get": {
+        "summary": "List pending batch submissions",
+        "description": "Returns batch tarballs currently sitting in the R2 `submissions/` prefix (excluding anything already merged into `submissions/processed/`).",
+        "tags": [
+          "admin"
+        ],
+        "operationId": "batch_list",
+        "responses": {
+          "200": {
+            "description": "Pending batches with R2 metadata",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wiki/v1/batch/preview": {
+      "post": {
+        "summary": "Preview a batch submission manifest",
+        "description": "Downloads the tarball via presigned R2 URL, extracts `manifest.json`, and returns it without merging anything.",
+        "tags": [
+          "admin"
+        ],
+        "operationId": "batch_preview",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchIdRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Parsed manifest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchPreviewResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wiki/v1/batch/merge": {
+      "post": {
+        "summary": "Merge a batch submission into production",
+        "description": "Runs the fast path synchronously (file copy, code-graph merge, SQLite import) and schedules the seekdb embedding sync as a background task. On success, the source tarball is archived under `submissions/processed/`. Response returns in ~10s even when the batch carries 800+ wiki pages.",
+        "tags": [
+          "admin"
+        ],
+        "operationId": "batch_merge",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchIdRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Merge result (seekdb_reindex runs in background)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchMergeResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wiki/v1/batch/reject": {
+      "post": {
+        "summary": "Reject (delete) a batch submission",
+        "description": "Hard-deletes the tarball from R2. Use when a submission is broken or no longer wanted.",
+        "tags": [
+          "admin"
+        ],
+        "operationId": "batch_reject",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchIdRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tarball deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusMessage"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wiki/v1/graph": {
+      "get": {
+        "summary": "Wiki concept graph",
+        "description": "Aggregated graph of wiki pages and their [[wikilink]] cross-references. Used by the Sigma.js visualization on www.rosclaw.io and the Obsidian-like graph view.",
+        "tags": [
+          "graph"
+        ],
+        "operationId": "wiki_graph",
+        "responses": {
+          "200": {
+            "description": "Nodes + edges in Sigma.js-compatible shape",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wiki/v1/hub/stats": {
+      "get": {
+        "summary": "Hub statistics",
+        "description": "Top-level counts for wiki pages, judgments, code-graph nodes/edges, and orphan wikilinks. Drives the dashboard hero cards.",
+        "tags": [
+          "graph"
+        ],
+        "operationId": "hub_stats",
+        "responses": {
+          "200": {
+            "description": "Counts and ratios",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -395,7 +559,180 @@
           "type"
         ],
         "title": "ValidationError"
+      },
+      "BatchIdRequest": {
+        "type": "object",
+        "required": [
+          "batch_id"
+        ],
+        "properties": {
+          "batch_id": {
+            "type": "string",
+            "description": "Full R2 object key, e.g. submissions/deepmind_20260511_043855.tar.gz"
+          }
+        }
+      },
+      "BatchSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "R2 object key (also used as batch_id)."
+          },
+          "batch_name": {
+            "type": "string"
+          },
+          "device_id": {
+            "type": "string",
+            "description": "Empty/unknown for legacy uploads; set from manifest when available."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "R2 LastModified."
+          },
+          "size": {
+            "type": "integer"
+          }
+        }
+      },
+      "BatchListResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "error"
+            ]
+          },
+          "batches": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BatchSummary"
+            }
+          },
+          "message": {
+            "type": "string",
+            "description": "Present when status=error."
+          }
+        }
+      },
+      "BatchPreviewResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "error"
+            ]
+          },
+          "manifest": {
+            "type": "object",
+            "additionalProperties": true,
+            "description": "Parsed manifest.json from the tarball; shape includes batch_name, device_id, created_at, files[], code_graphs[], judgments, wiki_pages, stats."
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "BatchMergeResultStats": {
+        "type": "object",
+        "properties": {
+          "batch_name": {
+            "type": "string"
+          },
+          "dry_run": {
+            "type": "boolean"
+          },
+          "wiki_merged": {
+            "type": "integer"
+          },
+          "wiki_conflicts": {
+            "type": "integer",
+            "description": "Pages overwritten because the same file already existed in production."
+          },
+          "code_graph_merged": {
+            "type": "boolean",
+            "description": "false when the manifest lists no code_graphs."
+          },
+          "judgments_imported": {
+            "type": "integer"
+          },
+          "wiki_pages_imported": {
+            "type": "integer"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "seekdb_reindex": {
+            "type": "string",
+            "enum": [
+              "scheduled",
+              "skipped"
+            ],
+            "description": "scheduled = embedding sync is running in a background task."
+          },
+          "archived_to": {
+            "type": "string",
+            "description": "Destination key under submissions/processed/ when no errors."
+          }
+        }
+      },
+      "BatchMergeResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "error"
+            ]
+          },
+          "result": {
+            "$ref": "#/components/schemas/BatchMergeResultStats"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "StatusMessage": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "error"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        }
       }
     }
-  }
+  },
+  "tags": [
+    {
+      "name": "admin",
+      "description": "Admin batch sync endpoints — backing the /admin UI on www.rosclaw.io."
+    },
+    {
+      "name": "graph",
+      "description": "Wiki concept graph and hub statistics endpoints."
+    }
+  ]
 }
