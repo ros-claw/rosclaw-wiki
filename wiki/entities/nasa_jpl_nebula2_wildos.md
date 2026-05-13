@@ -23,10 +23,10 @@ WildOS enables autonomous navigation to distant, semantically specified targets 
 | Module | Description |
 |--------|-------------|
 | [[ExploRFM]] | Foundation-model-based vision module scoring frontier nodes |
-| [[triangulation3d]] | Particle-filter-based coarse localization of target queries |
-| [[graphnav_planner]] | Sparse navigation graph planner for exploration |
+| triangulation3d | Particle-filter-based coarse localization of target queries |
+| graphnav_planner | Sparse navigation graph planner for exploration |
 | [[visual_navigation]] | Visual navigation components |
-| [[nvidia_radio]] | NVIDIA radio communication interface |
+| nvidia_radio | NVIDIA radio communication interface |
 
 ## Architecture
 
