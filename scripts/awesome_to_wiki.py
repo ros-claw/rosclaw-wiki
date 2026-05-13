@@ -416,8 +416,15 @@ def _main() -> int:
         logger.info("Packaging batch for R2 upload ...")
         batch_name = "awesome_" + list_key(args.url)[-30:]
         subprocess.run([sys.executable, str(PROJECT_ROOT / "batch_sync.py"), "device-package", "--name", batch_name], check=True)
+        # device-package writes submissions/<name>_YYYYMMDD_HHMMSS.tar.gz — pick the latest match
+        candidates = sorted((PROJECT_ROOT / "submissions").glob(f"{batch_name}_*.tar.gz"))
+        if not candidates:
+            logger.error("device-package finished but no submissions/%s_*.tar.gz found", batch_name)
+            return 1
+        tar_path = candidates[-1]
+        logger.info("Uploading %s to R2 ...", tar_path.name)
         subprocess.run([sys.executable, str(PROJECT_ROOT / "batch_sync.py"), "device-upload",
-                        "--tar", str(PROJECT_ROOT / "submissions" / f"{batch_name}_latest.tar.gz")], check=True)
+                        "--tar", str(tar_path)], check=True)
 
     return 0 if not result["errors"] else 1
 
