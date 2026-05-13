@@ -1161,6 +1161,11 @@ async def hub_stats() -> JSONResponse:
         "total_pages": 0,
         "total_wikilinks": 0,
         "total_judgments": 0,
+        # Two layers of "graph" we expose — see ADMIN_BATCH_SYNC.md.
+        # wiki_graph_*: concept graph (nodes = wiki pages, edges = deduped wikilinks).
+        # code_graph_*: AST graph (nodes = Python module/class/function, edges = imports/calls).
+        "wiki_graph_nodes": 0,
+        "wiki_graph_edges": 0,
         "total_code_graph_nodes": 0,
         "total_code_graph_edges": 0,
         "core_code_graph_nodes": 0,
@@ -1176,6 +1181,7 @@ async def hub_stats() -> JSONResponse:
             # Total pages
             cur = conn.execute("SELECT COUNT(*) FROM wiki_pages")
             stats["total_pages"] = cur.fetchone()[0]
+            stats["wiki_graph_nodes"] = stats["total_pages"]
 
             # Total judgments
             cur = conn.execute("SELECT COUNT(*) FROM judgments")
@@ -1184,6 +1190,32 @@ async def hub_stats() -> JSONResponse:
             # Entities from entity_graph
             cur = conn.execute("SELECT COUNT(DISTINCT source_entity) FROM entity_graph")
             stats["entities_covered"] = cur.fetchone()[0]
+
+            # Wiki concept-graph edges: deduped (id, target) pairs that resolve
+            # to a real page on both ends — same definition as /wiki/v1/graph.
+            try:
+                import json as _json
+                cur = conn.execute("SELECT id, wikilinks FROM wiki_pages")
+                rows = cur.fetchall()
+                node_ids = {row["id"] for row in rows}
+                edge_pairs: set[tuple[str, str]] = set()
+                for row in rows:
+                    raw = row["wikilinks"] or "[]"
+                    try:
+                        links = _json.loads(raw)
+                    except Exception:
+                        links = []
+                    if not isinstance(links, list):
+                        continue
+                    src = row["id"]
+                    for target in links:
+                        if not isinstance(target, str):
+                            continue
+                        if target in node_ids and target != src:
+                            edge_pairs.add(tuple(sorted([src, target])))
+                stats["wiki_graph_edges"] = len(edge_pairs)
+            except Exception as exc:
+                logger.warning("Hub stats wiki-graph edge count failed: %s", exc)
     except Exception as exc:
         logger.warning("Hub stats DB query failed: %s", exc)
 

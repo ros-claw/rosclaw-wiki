@@ -324,13 +324,24 @@
       <div class="section">
         <h3>知识库统计</h3>
         <div class="stat-grid">
-          <div class="stat-card"><div class="num" id="s-pages">-</div><div class="label">Wiki 页面</div></div>
-          <div class="stat-card"><div class="num" id="s-links">-</div><div class="label">交叉链接</div></div>
-          <div class="stat-card"><div class="num" id="s-judg">-</div><div class="label">物理判据</div></div>
-          <div class="stat-card"><div class="num" id="s-nodes">-</div><div class="label">图谱节点</div></div>
-          <div class="stat-card"><div class="num" id="s-edges">-</div><div class="label">图谱边</div></div>
-          <div class="stat-card"><div class="num" id="s-robots">-</div><div class="label">机器人覆盖</div></div>
+          <div class="stat-card"><div class="num" id="s-pages">-</div><div class="label">📄 Wiki 页面</div></div>
+          <div class="stat-card"><div class="num" id="s-links">-</div><div class="label">🔗 交叉链接</div></div>
+          <div class="stat-card"><div class="num" id="s-judg">-</div><div class="label">⚖️ 物理判据</div></div>
+          <div class="stat-card"><div class="num" id="s-robots">-</div><div class="label">🤖 机器人覆盖</div></div>
         </div>
+        <h4 style="margin: 12px 0 6px; font-size: 0.85rem; color: #475569;">Wiki 概念图 (Obsidian 视图)</h4>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="num" id="s-wnodes">-</div><div class="label">概念节点</div></div>
+          <div class="stat-card"><div class="num" id="s-wedges">-</div><div class="label">概念边</div></div>
+        </div>
+        <h4 style="margin: 12px 0 6px; font-size: 0.85rem; color: #475569;">代码图 (Python AST)</h4>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="num" id="s-cnodes">-</div><div class="label">代码节点</div></div>
+          <div class="stat-card"><div class="num" id="s-cedges">-</div><div class="label">代码边</div></div>
+        </div>
+        <p style="margin: 8px 0 0; font-size: 0.72rem; color: #64748b; line-height: 1.5;">
+          概念图 = 页面 + <code>[[wikilink]]</code>；代码图 = 摄入的研究仓库的 Python 模块/调用关系。两者衡量不同层次。
+        </p>
       </div>
       <div class="section">
         <h3>节点类型过滤</h3>
@@ -579,16 +590,28 @@
     }
 
     // ── Stats ──
+    function fmt(n) {
+      if (typeof n !== 'number') return '-';
+      return n.toLocaleString();
+    }
     async function updateStats(nodeCount, edgeCount) {
       try {
         const data = await apiGet('/wiki/v1/hub/stats');
         const s = data.global_stats || {};
-        document.getElementById('s-pages').textContent = s.total_pages ?? '-';
-        document.getElementById('s-links').textContent = s.total_wikilinks ?? '-';
-        document.getElementById('s-judg').textContent = s.total_judgments ?? '-';
-        document.getElementById('s-nodes').textContent = nodeCount;
-        document.getElementById('s-edges').textContent = edgeCount;
-        document.getElementById('s-robots').textContent = s.robots_covered ?? '-';
+        document.getElementById('s-pages').textContent = fmt(s.total_pages);
+        document.getElementById('s-links').textContent = fmt(s.total_wikilinks);
+        document.getElementById('s-judg').textContent = fmt(s.total_judgments);
+        document.getElementById('s-robots').textContent = fmt(s.robots_covered);
+        // Wiki concept graph (current page): prefer rendered counts when available
+        const wn = (typeof nodeCount === 'number' && nodeCount > 0)
+          ? nodeCount : (s.wiki_graph_nodes ?? s.total_pages);
+        const we = (typeof edgeCount === 'number' && edgeCount > 0)
+          ? edgeCount : s.wiki_graph_edges;
+        document.getElementById('s-wnodes').textContent = fmt(wn);
+        document.getElementById('s-wedges').textContent = fmt(we);
+        // Underlying code graph (Python AST)
+        document.getElementById('s-cnodes').textContent = fmt(s.total_code_graph_nodes);
+        document.getElementById('s-cedges').textContent = fmt(s.total_code_graph_edges);
       } catch (e) {}
     }
 
