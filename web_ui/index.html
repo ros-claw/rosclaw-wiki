@@ -412,10 +412,6 @@
       <input id="search-input" type="text" placeholder="搜索 Wiki 页面..." onkeydown="if(event.key==='Enter')doSearch()">
       <button onclick="doSearch()">搜索</button>
     </div>
-    <div class="apikey-wrap">
-      <input id="api-key" type="password" placeholder="API Key">
-      <button onclick="saveKey()">保存</button>
-    </div>
     <div class="status">
       <div id="status-dot" class="status-dot err"></div>
       <span id="status-text">连接中...</span>
@@ -510,14 +506,8 @@
     let graphData = { nodes: [], edges: [] };
     let typeCounts = {};
     let hoveredNode = null;
+    let selectedNode = null;
 
-    function getKey() {
-      return localStorage.getItem('rosclaw_api_key') || document.getElementById('api-key').value.trim();
-    }
-    function saveKey() {
-      const key = document.getElementById('api-key').value.trim();
-      if (key) { localStorage.setItem('rosclaw_api_key', key); showToast('API Key 已保存', 'info'); }
-    }
     function showToast(msg, type) {
       const t = document.getElementById('toast');
       t.textContent = msg; t.className = type; t.style.display = 'block';
@@ -525,17 +515,17 @@
     }
 
     async function apiGet(path) {
-      const headers = { 'Content-Type': 'application/json' };
-      const key = getKey(); if (key) headers['X-API-Key'] = key;
-      const res = await fetch(API_BASE + path, { headers });
-      if (res.status === 401) { showToast('API Key 无效', 'err'); throw new Error('401'); }
+      const res = await fetch(API_BASE + path);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     }
     async function apiPost(path, body) {
-      const headers = { 'Content-Type': 'application/json' };
-      const key = getKey(); if (key) headers['X-API-Key'] = key;
-      const res = await fetch(API_BASE + path, { method: 'POST', headers, body: JSON.stringify(body) });
-      if (res.status === 401) { showToast('API Key 无效', 'err'); throw new Error('401'); }
+      const res = await fetch(API_BASE + path, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     }
 
@@ -613,17 +603,32 @@
       if (renderer) renderer.kill();
       renderer = new Sigma(graph, document.getElementById('sigma'), {
         renderEdgeLabels: false,
-        labelSize: 11,
-        labelColor: { color: '#cbd5e1' },
+        labelSize: 13,
+        labelColor: { color: '#f8fafc' },
+        labelWeight: 'bold',
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
         nodeReducer: (node, attrs) => {
-          // Dim non-connected nodes when hovering
-          if (hoveredNode && hoveredNode !== node) {
-            const isNeighbor = graph.neighbors(hoveredNode).includes(node);
+          // Selected node highlight
+          if (selectedNode && selectedNode === node) {
+            return {
+              ...attrs,
+              color: '#fbbf24',
+              size: attrs.size * 1.6,
+              zIndex: 10,
+              label: attrs.label,
+              highlighted: true,
+            };
+          }
+          // Dim non-connected nodes when hovering or selected
+          const focusNode = selectedNode || hoveredNode;
+          if (focusNode && focusNode !== node) {
+            const isNeighbor = graph.neighbors(focusNode).includes(node);
             if (!isNeighbor) {
-              return { ...attrs, color: '#1e293b', label: '', zIndex: 0 };
+              return { ...attrs, color: 'rgba(30,41,59,0.6)', label: '', zIndex: 0 };
             }
+            // Neighbor highlight
+            return { ...attrs, color: '#60a5fa', size: attrs.size * 1.2, zIndex: 5 };
           }
           // Filter by type
           if (activeFilter !== 'all' && attrs._type !== activeFilter) {
@@ -632,13 +637,14 @@
           return attrs;
         },
         edgeReducer: (edge, attrs) => {
-          if (hoveredNode) {
+          const focusNode = selectedNode || hoveredNode;
+          if (focusNode) {
             const [src, tgt] = graph.extremities(edge);
-            const isConnected = src === hoveredNode || tgt === hoveredNode;
+            const isConnected = src === focusNode || tgt === focusNode;
             if (!isConnected) {
-              return { ...attrs, color: 'rgba(30,41,59,0.3)', hidden: false };
+              return { ...attrs, color: 'rgba(30,41,59,0.15)', hidden: false };
             }
-            return { ...attrs, color: 'rgba(148,163,184,0.5)', size: 1.2 };
+            return { ...attrs, color: 'rgba(96,165,250,0.6)', size: 1.5, zIndex: 5 };
           }
           return attrs;
         },
@@ -655,7 +661,15 @@
         hoveredNode = null;
         renderer.refresh();
       });
-      renderer.on('clickNode', ({ node }) => showDetail(node));
+      renderer.on('clickNode', ({ node }) => {
+        selectedNode = node;
+        renderer.refresh();
+        showDetail(node);
+      });
+      renderer.on('clickStage', () => {
+        selectedNode = null;
+        renderer.refresh();
+      });
     }
 
     // Simple force-directed layout
@@ -970,8 +984,6 @@
     });
 
     // Init
-    const savedKey = localStorage.getItem('rosclaw_api_key');
-    if (savedKey) document.getElementById('api-key').placeholder = 'API Key 已保存';
     loadHealth();
     loadGraph();
     setInterval(loadHealth, 30000);
