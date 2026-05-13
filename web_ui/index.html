@@ -6,6 +6,7 @@
   <title>ROSClaw Wiki — Knowledge Graph</title>
   <script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -300,6 +301,108 @@
     }
     #toast.info { border-color: #38bdf8; }
     #toast.err { border-color: #ef4444; }
+
+    /* ── Page View ── */
+    #page-view {
+      display: none;
+      flex: 1;
+      overflow-y: auto;
+      background: #0a0e1a;
+      padding: 32px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    #page-view.active { display: block; }
+    #page-view .page-breadcrumb {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+    #page-view .page-breadcrumb a {
+      color: #38bdf8;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    #page-view .page-breadcrumb a:hover { text-decoration: underline; }
+    #page-view .page-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    #page-view .page-meta .meta-tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 4px;
+      background: #1e293b;
+      color: #94a3b8;
+      border: 1px solid #334155;
+    }
+    #page-view .page-meta .meta-tag.confidence-high { color: #4ade80; border-color: rgba(74,222,128,0.3); }
+    #page-view .page-meta .meta-tag.confidence-mid { color: #fbbf24; border-color: rgba(251,191,36,0.3); }
+    #page-view .page-meta .meta-tag.confidence-low { color: #f87171; border-color: rgba(248,113,113,0.3); }
+    #page-view h1 {
+      font-size: 1.8rem;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    #page-view h2 {
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e293b;
+    }
+    #page-view h3 {
+      font-size: 1rem;
+      color: #cbd5e1;
+      margin: 20px 0 10px;
+    }
+    #page-view p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+    #page-view ul, #page-view ol {
+      margin: 12px 0 12px 20px;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    #page-view li { margin-bottom: 6px; }
+    #page-view a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    #page-view a:hover { text-decoration: underline; }
+    #page-view strong { color: #e2e8f0; }
+    #page-view code {
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 0.85rem;
+      background: #1e293b;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #f472b6;
+    }
+    #page-view blockquote {
+      border-left: 3px solid #38bdf8;
+      margin: 16px 0;
+      padding: 8px 16px;
+      background: rgba(56,189,248,0.05);
+      color: #94a3b8;
+    }
+    #page-view .page-not-found {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    #page-view .page-not-found h2 {
+      font-size: 1.5rem;
+      color: #e2e8f0;
+      border: none;
+    }
+    #page-view .page-not-found p { color: #64748b; }
   </style>
 </head>
 <body>
@@ -357,6 +460,11 @@
       <div id="graph-loading">加载知识图谱...</div>
       <div id="sigma"></div>
       <div id="graph-hint">滚轮缩放 · 拖拽节点 · 点击查看详情</div>
+    </div>
+
+    <div id="page-view">
+      <div class="page-breadcrumb"><a onclick="showGraph()">← 知识图谱</a></div>
+      <div id="page-content"></div>
     </div>
 
     <div id="detail-panel">
@@ -460,12 +568,6 @@
         updateStats(data.nodes.length, data.edges.length);
         buildFilters(data.nodes);
         document.getElementById('graph-loading').style.display = 'none';
-
-        // Handle direct page URL (e.g. /unitree_go2)
-        const pathPage = window.location.pathname.replace(/^\//, '').replace(/\.html?$/, '');
-        if (pathPage && pathPage !== 'index' && graph.hasNode(pathPage)) {
-          setTimeout(() => focusNode(pathPage), 300);
-        }
       } catch (e) {
         document.getElementById('graph-loading').textContent = '加载失败: ' + e.message;
       }
@@ -717,12 +819,127 @@
       }
     }
 
+    // ── Client-side routing & page view ──
+    function getPageIdFromPath() {
+      const path = window.location.pathname.replace(/^\//, '').replace(/\.html?$/, '');
+      return path && path !== 'index' ? path : null;
+    }
+
+    function showGraph(pushState=true) {
+      document.getElementById('graph-wrap').style.display = 'block';
+      document.getElementById('page-view').classList.remove('active');
+      document.getElementById('detail-panel').classList.remove('open');
+      document.title = 'ROSClaw Wiki — Knowledge Graph';
+      if (pushState && window.location.pathname !== '/') {
+        history.pushState({view: 'graph'}, '', '/');
+      }
+    }
+
+    function pageIdToSlug(title) {
+      return title.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+    }
+
+    function parseWikilinks(html) {
+      return html.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (match, target, label) => {
+        const slug = pageIdToSlug(target);
+        const display = label || target;
+        return `<a href="/${slug}" onclick="event.preventDefault(); showPage('${slug}');">${display}</a>`;
+      });
+    }
+
+    function renderMarkdown(body) {
+      if (!body) return '';
+      let html = marked.parse(body);
+      html = parseWikilinks(html);
+      return html;
+    }
+
+    async function showPage(pageId, pushState=true) {
+      if (!pageId) { showGraph(); return; }
+
+      document.getElementById('graph-wrap').style.display = 'none';
+      document.getElementById('page-view').classList.add('active');
+      document.getElementById('detail-panel').classList.remove('open');
+
+      const contentEl = document.getElementById('page-content');
+      contentEl.innerHTML = '<p style="color:#64748b">加载中...</p>';
+
+      try {
+        const res = await fetch(`/api/page/${pageId}`);
+        const data = await res.json();
+
+        if (data.status !== 'done') {
+          contentEl.innerHTML = `
+            <div class="page-not-found">
+              <h2>页面未找到</h2>
+              <p>未找到 ID 为 "${pageId}" 的 Wiki 页面</p>
+            </div>`;
+          document.title = '页面未找到 — ROSClaw Wiki';
+          return;
+        }
+
+        const meta = data.meta || {};
+        const body = data.body || '';
+        const title = meta.title || pageId;
+
+        const confidence = parseFloat(meta.confidence || 0);
+        let confClass = 'confidence-low';
+        if (confidence >= 0.8) confClass = 'confidence-high';
+        else if (confidence >= 0.5) confClass = 'confidence-mid';
+
+        const metaTags = [];
+        metaTags.push(`<span class="meta-tag ${confClass}">置信度: ${confidence.toFixed(2)}</span>`);
+        if (meta.type) metaTags.push(`<span class="meta-tag">类型: ${meta.type}</span>`);
+        if (meta.created_at) metaTags.push(`<span class="meta-tag">创建于: ${meta.created_at}</span>`);
+        if (meta.sources && meta.sources.length) {
+          metaTags.push(`<span class="meta-tag">来源: ${meta.sources.length} 个</span>`);
+        }
+        if (meta.tags && meta.tags.length) {
+          meta.tags.forEach(t => metaTags.push(`<span class="meta-tag">#${t}</span>`));
+        }
+
+        contentEl.innerHTML = `
+          <div class="page-meta">${metaTags.join('')}</div>
+          ${renderMarkdown(body)}
+        `;
+        document.title = `${title} — ROSClaw Wiki`;
+
+        if (pushState) {
+          history.pushState({view: 'page', id: pageId}, '', `/${pageId}`);
+        }
+      } catch (e) {
+        contentEl.innerHTML = `<p style="color:#ef4444">加载失败: ${e.message}</p>`;
+      }
+    }
+
+    // Override graph node click → navigate to page view
+    const originalShowDetail = showDetail;
+    showDetail = function(nodeId) {
+      showPage(nodeId);
+    };
+
+    // Browser back/forward
+    window.addEventListener('popstate', (e) => {
+      const pageId = getPageIdFromPath();
+      if (pageId) {
+        showPage(pageId, false);
+      } else {
+        showGraph(false);
+      }
+    });
+
     // Init
     const savedKey = localStorage.getItem('rosclaw_api_key');
     if (savedKey) document.getElementById('api-key').placeholder = 'API Key 已保存';
     loadHealth();
     loadGraph();
     setInterval(loadHealth, 30000);
+
+    // Route on initial load
+    const initialPageId = getPageIdFromPath();
+    if (initialPageId) {
+      setTimeout(() => showPage(initialPageId, false), 100);
+    }
   </script>
 </body>
 </html>
