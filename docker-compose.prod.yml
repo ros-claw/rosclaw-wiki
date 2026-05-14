@@ -55,6 +55,7 @@ services:
     volumes:
       - ./wiki:/app/wiki
       - ./data:/app/data
+      - ./search:/app/search
     depends_on:
       seekdb:
         condition: service_healthy
