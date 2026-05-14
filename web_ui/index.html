@@ -603,34 +603,17 @@
       if (renderer) renderer.kill();
       renderer = new Sigma(graph, document.getElementById('sigma'), {
         renderEdgeLabels: false,
-        labelSize: 13,
+        labelSize: 14,
         labelFont: 'system-ui, -apple-system, sans-serif',
+        labelColor: { color: '#f8fafc' },
+        labelBackgroundColor: (node, attrs) => {
+          if (attrs._selected) return '#78350f';
+          if (attrs._hovered) return '#155e75';
+          if (attrs._neighbor) return '#1e3a8a';
+          return null;
+        },
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
-        // Custom label renderer: dark stroke + colored fill, NO background rect
-        defaultDrawNodeLabel: (context, data, settings) => {
-          if (!data.label) return;
-          const size = typeof data.labelSize === 'number' ? data.labelSize : settings.labelSize;
-          const font = settings.labelFont || 'Arial';
-          context.font = `bold ${size}px ${font}`;
-
-          // Pick text color by node state
-          let textColor = '#f1f5f9';
-          if (data._selected) textColor = '#fbbf24';
-          else if (data._hovered) textColor = '#22d3ee';
-          else if (data._neighbor) textColor = '#93c5fd';
-
-          // 1) Dark stroke outline so text is readable on ANY background
-          context.lineWidth = Math.max(2.5, size * 0.15);
-          context.lineJoin = 'round';
-          context.miterLimit = 2;
-          context.strokeStyle = 'rgba(2, 6, 23, 0.92)';
-          context.strokeText(data.label, data.x, data.y + size / 3);
-
-          // 2) Bright fill on top
-          context.fillStyle = textColor;
-          context.fillText(data.label, data.x, data.y + size / 3);
-        },
         nodeReducer: (node, attrs) => {
           // Selected node: gold border + much larger + giant label
           if (selectedNode && selectedNode === node) {
