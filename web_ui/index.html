@@ -606,7 +606,53 @@
         labelSize: 14,
         labelFont: 'system-ui, -apple-system, sans-serif',
         labelColor: { color: '#f8fafc' },
-        highlightedLabelBackgroundColor: null,
+        // Override Sigma's default hoverRenderer (which hard-codes white bg)
+        hoverRenderer: (context, data, settings) => {
+          if (!data.label) return;
+          const size = typeof data.labelSize === 'number' ? data.labelSize : 16;
+          const font = settings.labelFont || 'system-ui, sans-serif';
+          context.font = `bold ${size}px ${font}`;
+
+          // Pick background by state
+          const isSelected = selectedNode === data.key;
+          const bgColor = isSelected ? '#78350f' : '#155e75';
+          const borderColor = isSelected ? '#fbbf24' : '#22d3ee';
+
+          // Measure text
+          const padX = 10;
+          const padY = 6;
+          const textWidth = context.measureText(data.label).width;
+          const boxW = textWidth + padX * 2;
+          const boxH = size + padY * 2;
+          const boxX = data.x - boxW / 2;
+          const boxY = data.y + (data.size || 8) + 6;
+
+          // Rounded rectangle background
+          const r = 6;
+          context.beginPath();
+          context.moveTo(boxX + r, boxY);
+          context.lineTo(boxX + boxW - r, boxY);
+          context.quadraticCurveTo(boxX + boxW, boxY, boxX + boxW, boxY + r);
+          context.lineTo(boxX + boxW, boxY + boxH - r);
+          context.quadraticCurveTo(boxX + boxW, boxY + boxH, boxX + boxW - r, boxY + boxH);
+          context.lineTo(boxX + r, boxY + boxH);
+          context.quadraticCurveTo(boxX, boxY + boxH, boxX, boxY + boxH - r);
+          context.lineTo(boxX, boxY + r);
+          context.quadraticCurveTo(boxX, boxY, boxX + r, boxY);
+          context.closePath();
+
+          context.fillStyle = bgColor;
+          context.fill();
+          context.strokeStyle = borderColor;
+          context.lineWidth = 2;
+          context.stroke();
+
+          // White text
+          context.fillStyle = '#ffffff';
+          context.textAlign = 'center';
+          context.textBaseline = 'middle';
+          context.fillText(data.label, data.x, boxY + boxH / 2);
+        },
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
         nodeReducer: (node, attrs) => {
