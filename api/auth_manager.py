@@ -37,12 +37,12 @@ def generate_api_key(tenant_id: str, plan: str = "free") -> dict[str, Any]:
 
     raw_key = "rw_" + secrets.token_urlsafe(32)
     key_hash = _hash_key(raw_key)
-    created_at = datetime.now().isoformat()
+    created_at = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     with get_connection() as conn:
         conn.execute(
             "INSERT INTO api_keys (api_key_hash, tenant_id, plan, created_at, expires_at) VALUES (?, ?, ?, ?, ?)",
-            (key_hash, tenant_id, plan, created_at, (datetime.now() + timedelta(days=365)).isoformat()),
+            (key_hash, tenant_id, plan, created_at, (datetime.now() + timedelta(days=365)).strftime('%Y-%m-%d %H:%M:%S')),
         )
         conn.commit()
 
@@ -96,13 +96,13 @@ def check_rate_limit(api_key: str, window: str = "day") -> dict[str, Any]:
 
     with get_connection() as conn:
         if window == "day":
-            start = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+            start = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).strftime('%Y-%m-%d %H:%M:%S')
             cur = conn.execute(
                 "SELECT COUNT(*) FROM api_usage WHERE api_key_hash = ? AND created_at >= ?",
                 (key_hash, start),
             )
         else:
-            start = (datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)).isoformat()
+            start = (datetime.now().replace(day=1, hour=0, minute=0, second=0, microsecond=0)).strftime('%Y-%m-%d %H:%M:%S')
             cur = conn.execute(
                 "SELECT COUNT(*) FROM api_usage WHERE api_key_hash = ? AND created_at >= ?",
                 (key_hash, start),
@@ -110,7 +110,7 @@ def check_rate_limit(api_key: str, window: str = "day") -> dict[str, Any]:
         used = cur.fetchone()[0]
 
     remaining = max(0, limit - used)
-    reset = (datetime.now() + timedelta(days=1)).replace(hour=0, minute=0, second=0).isoformat()
+    reset = (datetime.now() + timedelta(days=1)).replace(hour=0, minute=0, second=0).strftime('%Y-%m-%d %H:%M:%S')
     return {"allowed": used < limit, "remaining": remaining, "limit": limit, "reset_time": reset}
 
 
@@ -162,7 +162,7 @@ def get_user_info_by_api_key(api_key: str) -> dict[str, Any] | None:
 
     # Get today's usage
     import datetime
-    day_start = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
+    day_start = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).strftime('%Y-%m-%d %H:%M:%S')
     key_hash = _hash_key(api_key)
 
     with get_connection() as conn:

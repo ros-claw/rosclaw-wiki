@@ -51,7 +51,7 @@ def get_usage_summary(api_key: str, days: int = 30) -> dict[str, Any]:
     import datetime
 
     key_hash = hashlib.sha256(api_key.encode()).hexdigest()[:64]
-    start = (datetime.datetime.now() - datetime.timedelta(days=days)).isoformat()
+    start = (datetime.datetime.now() - datetime.timedelta(days=days)).strftime('%Y-%m-%d %H:%M:%S')
 
     with get_connection() as conn:
         # Overall totals
