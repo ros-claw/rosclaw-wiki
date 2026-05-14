@@ -453,6 +453,7 @@ def production_merge(
         return result
 
     # ── 2. Merge wiki pages ──
+    merged_page_paths: list[Path] = []
     wiki_staging = staging / "wiki"
     if wiki_staging.exists() and not skip_wiki_pages:
         for src_file in wiki_staging.rglob("*.md"):
@@ -478,6 +479,7 @@ def production_merge(
             if not dry_run:
                 dest_file.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(src_file, dest_file)
+                merged_page_paths.append(dest_file)
             result["wiki_merged"] += 1
             if dry_run:
                 logger.info("[dry-run] Would merge wiki page: %s", rel)
@@ -556,15 +558,26 @@ def production_merge(
             result["errors"].append(f"index_rebuild: {exc}")
 
         # Rebuild SeekDB index so merged pages are searchable immediately
-        if not skip_seekdb:
+        if not skip_seekdb and merged_page_paths:
             try:
                 _search_path = str(Path(__file__).parent / "search")
                 if _search_path not in sys.path:
                     sys.path.insert(0, _search_path)
                 from seekdb_search_impl import SeekDBSearchImpl
                 seekdb_search = SeekDBSearchImpl(str(wiki_root))
-                seekdb_result = seekdb_search.rebuild_index()
-                logger.info("SeekDB index rebuilt: %s", seekdb_result)
+                _ = seekdb_search._get_model()  # eager-load model
+                indexed = 0
+                errors = 0
+                for md_path in merged_page_paths:
+                    try:
+                        if seekdb_search.index_page(str(md_path)):
+                            indexed += 1
+                        else:
+                            errors += 1
+                    except Exception as page_exc:
+                        logger.warning("SeekDB index_page(%s) failed: %s", md_path, page_exc)
+                        errors += 1
+                logger.info("SeekDB incremental index: indexed=%d errors=%d", indexed, errors)
             except Exception as exc:
                 logger.warning("SeekDB index rebuild failed: %s", exc)
                 result["errors"].append(f"seekdb_rebuild: {exc}")
