@@ -38,7 +38,9 @@ class SeekDBSearchImpl(SearchInterface):
     def _get_model(self) -> Any:
         if SeekDBSearchImpl._model is None:
             from sentence_transformers import SentenceTransformer
-            SeekDBSearchImpl._model = SentenceTransformer("all-MiniLM-L6-v2")
+            SeekDBSearchImpl._model = SentenceTransformer(
+                "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+            )
         return SeekDBSearchImpl._model
 
     @classmethod
@@ -145,7 +147,7 @@ class SeekDBSearchImpl(SearchInterface):
         except Exception as exc:
             logger.warning("Hybrid search error, fallback to keyword: %s", exc)
             return self._search_keyword(query, top_k)
-        return self._format_results(results)
+        return self._format_results(results, distance_key="distances")
 
     def _search_expanded(self, query: str, top_k: int, llm_func: Any) -> list[dict[str, Any]]:
         variants = [query]
