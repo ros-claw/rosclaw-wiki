@@ -22,6 +22,12 @@ _SCRIPT_DIR = Path(__file__).parent.resolve()
 _PROJECT_ROOT = _SCRIPT_DIR.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 
+# Ensure subdirectories are importable (flat imports like commercial_api.py)
+for _pkg_dir in ["core", "search", "utils", "knowledge", "ingest", "code", "robot", "api", "dream"]:
+    _pkg_path = str(_PROJECT_ROOT / _pkg_dir)
+    if _pkg_path not in sys.path:
+        sys.path.insert(0, _pkg_path)
+
 from flask import Flask, jsonify, request, send_from_directory
 from flask_socketio import SocketIO
 
