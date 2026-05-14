@@ -18,7 +18,7 @@ AACL is an algorithm for Vision-and-Language Navigation (VLN) that maps visual o
 
 **Type:** `algorithm`  
 **Confidence:** 0.8 (peer-reviewed paper)  
-**Related:** [[Vision-and-Language Navigation]], [[CLIP]], [[Observation Co-embedding Module]] ⚠️ ⚠️
+**Related:** Vision-and-Language Navigation, CLIP, Observation Co-embedding Module ⚠️ ⚠️
 
 ---
 
@@ -39,7 +39,7 @@ AACL is an algorithm for Vision-and-Language Navigation (VLN) that maps visual o
 The AACL framework consists of three main modules:
 
 1. **Concept mapping module**  
-   Uses [[CLIP]] (Contrastive Language–Image Pretraining) and the [[VLN Environment]] ⚠️ ⚠️ to map observations into actional atomic concept representations. This module extracts visual features and projects them into a concept space aligned with navigation-relevant semantics.
+   Uses CLIP (Contrastive Language–Image Pretraining) and the VLN Environment ⚠️ ⚠️ to map observations into actional atomic concept representations. This module extracts visual features and projects them into a concept space aligned with navigation-relevant semantics.
 
 2. **Concept refining adapter**  
    Encourages instruction‑oriented object concept extraction by re‑ranking CLIP predictions. The adapter refines the set of candidate atomic concepts so that only those relevant to the current natural language instruction remain active, reducing noise from irrelevant objects.
@@ -51,12 +51,12 @@ The AACL framework consists of three main modules:
 
 ## Relationships
 
-- **uses** → [[Contrastive Language‑Image Pretraining (CLIP)]] ⚠️ (visual‑language pretrained model for concept mapping)
-- **uses** → [[VLN Environment]] ⚠️ ⚠️ (simulation platform for training and evaluation)
-- **depends_on** → [[Vision‑and‑Language Navigation]] ⚠️ (the broader task formulation that AACL addresses)
-- **depends_on** → [[Observation Co‑embedding Module]] ⚠️ (core component of AACL)
-- **part_of** → [[Embodied AI]] algorithmic family
-- **implements** → [[Grounding (VLN)]] ⚠️ (bridging visual observations to language instructions)
+- **uses** → Contrastive Language‑Image Pretraining (CLIP) ⚠️ (visual‑language pretrained model for concept mapping)
+- **uses** → VLN Environment ⚠️ ⚠️ (simulation platform for training and evaluation)
+- **depends_on** → Vision‑and‑Language Navigation ⚠️ (the broader task formulation that AACL addresses)
+- **depends_on** → Observation Co‑embedding Module ⚠️ (core component of AACL)
+- **part_of** → Embodied AI algorithmic family
+- **implements** → Grounding (VLN) ⚠️ (bridging visual observations to language instructions)
 
 ---
 
@@ -72,9 +72,9 @@ On standard VLN benchmarks, AACL achieves state‑of‑the‑art results:
 
 | Benchmark | Task type | Performance |
 |-----------|-----------|-------------|
-| [[R2R]] | Fine‑grained navigation | SOTA |
-| [[REVERIE]] | High‑level navigation | SOTA |
-| [[R2R‑Last]] ⚠️ | Target‑oriented navigation | SOTA |
+| R2R | Fine‑grained navigation | SOTA |
+| REVERIE | High‑level navigation | SOTA |
+| R2R‑Last ⚠️ | Target‑oriented navigation | SOTA |
 
 The method’s improved interpretability also allows post‑hoc analysis of which atomic concepts drove each action, a valuable property for debugging and trust in embodied agents.
 
@@ -83,11 +83,11 @@ The method’s improved interpretability also allows post‑hoc analysis of whic
 ## Resources
 
 - **Paper:** *Actional Atomic-Concept Learning for Vision-and-Language Navigation* (arXiv:2302.06072)
-- **Related benchmarks:** [[R2R]], [[REVERIE]], [[R2R-Last]] ⚠️
-- **See also:** [[Concept Refining Adapter]] ⚠️, [[Observation Co-embedding Module]] ⚠️ ⚠️
+- **Related benchmarks:** R2R, REVERIE, R2R-Last ⚠️
+- **See also:** Concept Refining Adapter ⚠️, Observation Co-embedding Module ⚠️ ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Confirmed links:**
-- `Actional Atomic-Concept Learning (AACL)` --[[based_on]] ⚠️ ⚠️--> `Vision-and-Language Navigation`
-- `Actional Atomic-Concept Learning (AACL)` --[[based_on]] ⚠️ ⚠️--> `Embodied AI`
+- `Actional Atomic-Concept Learning (AACL)` --based_on ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `Actional Atomic-Concept Learning (AACL)` --based_on ⚠️ ⚠️--> `Embodied AI`

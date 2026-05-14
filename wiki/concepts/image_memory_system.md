@@ -26,4 +26,4 @@ The image memory system provides a transient or persistent store of visual repre
 
 ### Relationships
 
-- **[[NeSy task planner]]** – Uses the image memory system to access visual context during task decomposition and replanning.
+- **NeSy task planner** – Uses the image memory system to access visual context during task decomposition and replanning.

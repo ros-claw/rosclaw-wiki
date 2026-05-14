@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Multi-Task Learning for VLN
 
-**Multi-Task Learning for VLN** is an algorithm that jointly predicts multiple 3D scene properties from a shared volumetric representation, specifically targeting tasks critical to [[Vision-Language Navigation]] (VLN). By learning to infer occupancy, room layout, and object bounding boxes in parallel, the model gains a richer understanding of the environment, which translates into improved navigation performance.
+**Multi-Task Learning for VLN** is an algorithm that jointly predicts multiple 3D scene properties from a shared volumetric representation, specifically targeting tasks critical to Vision-Language Navigation (VLN). By learning to infer occupancy, room layout, and object bounding boxes in parallel, the model gains a richer understanding of the environment, which translates into improved navigation performance.
 
 ### Parameters
 
@@ -28,13 +28,13 @@ These tasks are learned simultaneously from the same volumetric feature space, e
 
 ### Capabilities
 
-- Jointly predicts multiple 3D scene properties (occupancy, layout, bounding boxes) from a [[Volumetric Environment Representation]].
+- Jointly predicts multiple 3D scene properties (occupancy, layout, bounding boxes) from a Volumetric Environment Representation.
 - Leads to significant performance gains on standard VLN benchmarks by providing a structured understanding of the navigable space.
 
 ### Relationships
 
-- **Depends on** [[Volumetric Environment Representation]] and [[Coarse-to-Fine Feature Extraction]] — the multi-task heads are applied on top of the coarse-to-fine volumetric features.
-- **Part of** [[Vision-Language Navigation]] — this approach is specifically designed to improve language-guided navigation in 3D environments.
+- **Depends on** Volumetric Environment Representation and Coarse-to-Fine Feature Extraction — the multi-task heads are applied on top of the coarse-to-fine volumetric features.
+- **Part of** Vision-Language Navigation — this approach is specifically designed to improve language-guided navigation in 3D environments.
 
 ### Description
 

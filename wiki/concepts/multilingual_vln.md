@@ -14,15 +14,15 @@ source_type: arxiv_paper
 
 ## Definition
 
-Multilingual Vision-and-Language Navigation (Multilingual VLN) extends the standard [[VLN|Vision-and-Language Navigation (VLN)]] paradigm to multiple natural languages, enabling agents to follow navigation instructions expressed in diverse languages beyond English. This addresses systematic language biases present in existing VLN datasets and benchmarks, which predominantly focus on English-only instructions.
+Multilingual Vision-and-Language Navigation (Multilingual VLN) extends the standard Vision-and-Language Navigation (VLN) paradigm to multiple natural languages, enabling agents to follow navigation instructions expressed in diverse languages beyond English. This addresses systematic language biases present in existing VLN datasets and benchmarks, which predominantly focus on English-only instructions.
 
 ## Languages and Motivation
 
-The primary implementation studied in [[Room-Across-Room (RxR)]] supports three languages:
+The primary implementation studied in Room-Across-Room (RxR) supports three languages:
 
-- [[English]] ⚠️
-- [[Hindi]] ⚠️
-- [[Telugu]] ⚠️
+- English ⚠️
+- Hindi ⚠️
+- Telugu ⚠️
 
 The motivation for multilingual VLN is to build agents that can ground natural language instructions to visual environments **independently of the input language**, thus testing and improving the language-agnostic grounding capabilities of embodied agents.
 
@@ -34,17 +34,17 @@ The motivation for multilingual VLN is to build agents that can ground natural l
 
 ## Related Concepts
 
-- **[[Room-Across-Room (RxR)]]** – The dataset that introduces multilingual VLN with aligned English, Hindi, and Telugu instructions. Multilingual VLN is a core component of RxR.
-- **[[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️** – The foundational task that multilingual VLN extends.
-- **[[Language Grounding]] ⚠️ ⚠️** – The ability to map language to perception, which is tested across languages in this setting.
+- **Room-Across-Room (RxR)** – The dataset that introduces multilingual VLN with aligned English, Hindi, and Telugu instructions. Multilingual VLN is a core component of RxR.
+- **Vision-and-Language Navigation (VLN) ⚠️ ⚠️** – The foundational task that multilingual VLN extends.
+- **Language Grounding ⚠️ ⚠️** – The ability to map language to perception, which is tested across languages in this setting.
 
 ## Relationship Annotations
 
-- `part_of` [[Room-Across-Room (RxR)]]  
-- `extends` [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️  
-- `implements` [[Language Grounding]] ⚠️ ⚠️ (in a cross-lingual context)
+- `part_of` Room-Across-Room (RxR)  
+- `extends` Vision-and-Language Navigation (VLN) ⚠️ ⚠️  
+- `implements` Language Grounding ⚠️ ⚠️ (in a cross-lingual context)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Multilingual VLN` --[[related_to]] ⚠️--> `Room-Across-Room (RxR)`
+- `Multilingual VLN` --related_to ⚠️--> `Room-Across-Room (RxR)`

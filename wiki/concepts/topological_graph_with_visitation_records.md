@@ -38,12 +38,12 @@ The graph is built incrementally as the agent moves. New waypoints from the pred
 
 ## Relationships
 
-- **Used by**: [[TopoGraph-and-VisitInfo-Aware Prompting]] — this prompting strategy feeds graph and visitation information into a language model to generate navigational commands.
-- **Part of**: [[Zero-Shot VLN Framework with TopoGraph Prompting]] — the topological graph is a core component enabling the framework to perform navigation without prior training on specific environments.
+- **Used by**: TopoGraph-and-VisitInfo-Aware Prompting — this prompting strategy feeds graph and visitation information into a language model to generate navigational commands.
+- **Part of**: Zero-Shot VLN Framework with TopoGraph Prompting — the topological graph is a core component enabling the framework to perform navigation without prior training on specific environments.
 
 ## Usage
 
-During a VLN episode, the graph is initialized empty and extended as the agent moves. After each step, new waypoints are added, and visitation counts for the current node are incremented. The resulting structure is then used by the [[TopoGraph-and-VisitInfo-Aware Prompting]] module to produce context-aware instructions, such as "go to the unexplored corridor to the left" or "return to the kitchen where you started." This allows the agent to exhibit systematic exploration rather than random wandering.
+During a VLN episode, the graph is initialized empty and extended as the agent moves. After each step, new waypoints are added, and visitation counts for the current node are incremented. The resulting structure is then used by the TopoGraph-and-VisitInfo-Aware Prompting module to produce context-aware instructions, such as "go to the unexplored corridor to the left" or "return to the kitchen where you started." This allows the agent to exhibit systematic exploration rather than random wandering.
 
 ## Source
 
@@ -52,4 +52,4 @@ During a VLN episode, the graph is initialized empty and extended as the agent m
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Topological Graph with Visitation Records` --[[related_to]] ⚠️--> `TopoGraph-and-VisitInfo-Aware Prompting` _(wikilink)_
+- `Topological Graph with Visitation Records` --related_to ⚠️--> `TopoGraph-and-VisitInfo-Aware Prompting` _(wikilink)_

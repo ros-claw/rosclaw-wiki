@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # R2R-Last Dataset
 
-The **R2R-Last** dataset is a specialized benchmark within the [[Room-to-Room (R2R)]] family, designed to evaluate Vision-and-Language Navigation (VLN) agents on the **last action** prediction task. Unlike the standard R2R dataset which requires full path instruction following, R2R-Last isolates the final step of a navigation episode, testing an agent's ability to correctly identify the terminating action (typically a `stop` or final direction) based on the full preceding trajectory and instruction.
+The **R2R-Last** dataset is a specialized benchmark within the Room-to-Room (R2R) family, designed to evaluate Vision-and-Language Navigation (VLN) agents on the **last action** prediction task. Unlike the standard R2R dataset which requires full path instruction following, R2R-Last isolates the final step of a navigation episode, testing an agent's ability to correctly identify the terminating action (typically a `stop` or final direction) based on the full preceding trajectory and instruction.
 
 ## Overview
 
@@ -28,13 +28,13 @@ The benchmark splits existing R2R trajectories into a prefix (all steps except t
 
 ## Relationships
 
-- `evaluates` → [[Actional Atomic-Concept Learning (AACL)]]: The R2R-Last benchmark is specifically employed in the AACL framework to test whether learned atomic concepts (e.g., "turn left", "stop") are correctly aligned with visual observations.
+- `evaluates` → Actional Atomic-Concept Learning (AACL): The R2R-Last benchmark is specifically employed in the AACL framework to test whether learned atomic concepts (e.g., "turn left", "stop") are correctly aligned with visual observations.
 
 ## See Also
 
-- [[Room-to-Room (R2R) Dataset]]
-- [[Vision-and-Language Navigation (VLN)]] ⚠️
-- [[Actional Atomic-Concept Learning (AACL)]]
+- Room-to-Room (R2R) Dataset
+- Vision-and-Language Navigation (VLN) ⚠️
+- Actional Atomic-Concept Learning (AACL)
 
 ## References
 
@@ -43,6 +43,6 @@ The benchmark splits existing R2R trajectories into a prefix (all steps except t
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `R2R-Last dataset` --[[applies_to]] ⚠️--> `Room-to-Room (R2R) Dataset`
+- `R2R-Last dataset` --applies_to ⚠️--> `Room-to-Room (R2R) Dataset`
 **Pending review:**
-- `R2R-Last dataset` --[[related_to]] ⚠️--> `Actional Atomic-Concept Learning (AACL)` _(wikilink)_
+- `R2R-Last dataset` --related_to ⚠️--> `Actional Atomic-Concept Learning (AACL)` _(wikilink)_

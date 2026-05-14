@@ -17,14 +17,14 @@ If NavSpace is useful for your work, a **GitHub star** helps others discover the
 **Languages:** Python
 
 ## Relationships
-- **Implements / Related to**: [[EB-ALFRED]]
-- **Implements / Related to**: [[Gibson dataset]]
-- **Implements / Related to**: [[VLN Agent]]
-- **Implements / Related to**: [[SpatialNav]]
-- **Implements / Related to**: [[GEL-R2R]]
+- **Implements / Related to**: EB-ALFRED
+- **Implements / Related to**: Gibson dataset
+- **Implements / Related to**: VLN Agent
+- **Implements / Related to**: SpatialNav
+- **Implements / Related to**: GEL-R2R
 
 ## See Also
-- [[Code Repository]] ⚠️ — general code entity guidelines
-- [[EB-ALFRED]]
-- [[Gibson dataset]]
-- [[VLN Agent]]
+- Code Repository ⚠️ — general code entity guidelines
+- EB-ALFRED
+- Gibson dataset
+- VLN Agent

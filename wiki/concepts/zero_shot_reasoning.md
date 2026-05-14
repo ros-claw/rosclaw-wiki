@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 ## Description
 
-In the context of [[NavGPT]], zero-shot reasoning refers to using [[Large Language Models]] (LLMs) to directly predict navigation actions without prior training on VLN (Vision-and-Language Navigation) datasets. Instead of task-specific fine-tuning, the model leverages its inherent reasoning abilities—acquired from broad pre-training—to interpret natural language instructions and generate appropriate movement commands in unseen environments.
+In the context of NavGPT, zero-shot reasoning refers to using Large Language Models (LLMs) to directly predict navigation actions without prior training on VLN (Vision-and-Language Navigation) datasets. Instead of task-specific fine-tuning, the model leverages its inherent reasoning abilities—acquired from broad pre-training—to interpret natural language instructions and generate appropriate movement commands in unseen environments.
 
 ## Key Characteristics
 
@@ -30,10 +30,10 @@ In the context of [[NavGPT]], zero-shot reasoning refers to using [[Large Langua
 
 ## Examples
 
-- [[NavGPT]] exemplifies [[Zero-shot Reasoning]] by using an LLM to generate navigation sequences in real-time, without ever being trained on navigation-specific datasets like R2R or REVERIE.
+- NavGPT exemplifies Zero-shot Reasoning by using an LLM to generate navigation sequences in real-time, without ever being trained on navigation-specific datasets like R2R or REVERIE.
 
 ## Relationships
 
-- [[Zero-shot Reasoning]] is a paradigm closely related to [[Few-shot Reasoning]] ⚠️ and [[In-context Learning]] ⚠️.
-- It depends_on the broad pre-training of [[Large Language Models]] and general knowledge representations.
-- [[NavGPT]] implements [[Zero-shot Reasoning]] for the specific domain of visual-language navigation.
+- Zero-shot Reasoning is a paradigm closely related to Few-shot Reasoning ⚠️ and In-context Learning ⚠️.
+- It depends_on the broad pre-training of Large Language Models and general knowledge representations.
+- NavGPT implements Zero-shot Reasoning for the specific domain of visual-language navigation.

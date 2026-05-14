@@ -39,23 +39,23 @@ Zero-shot navigation enables scalable real‑world autonomy because agents can b
 
 Zero-shot navigation is not an isolated capability; it depends crucially on two foundational components:
 
-- **[[Open-Vocabulary Semantics]]**: The agent must understand arbitrary natural‑language instructions and associate them with visual concepts in the environment, without relying on a fixed set of classes or landmarks.
-- **[[LLM‑based Planning]] ⚠️ ⚠️**: A large language model drives high‑level reasoning and sub‑goal decomposition, enabling the agent to break down complex navigation commands into executable steps.
+- **Open-Vocabulary Semantics**: The agent must understand arbitrary natural‑language instructions and associate them with visual concepts in the environment, without relying on a fixed set of classes or landmarks.
+- **LLM‑based Planning ⚠️ ⚠️**: A large language model drives high‑level reasoning and sub‑goal decomposition, enabling the agent to break down complex navigation commands into executable steps.
 
 ## Demonstrations
 
-Zero-shot navigation has been demonstrated on the [[Unitree Go2]] quadrupedal robot across multiple indoor environments, achieving a success rate of over **88%** without any environment‑specific training or fine‑tuning. This result, reported in a recent arxiv paper (2410.06239), validates the approach in realistic, cluttered settings and underscores the effectiveness of combining open‑vocabulary semantics with LLM‑driven planning. Additional work (e.g., paper 2312.03275) shows that zero‑shot navigation can be integrated into systems like [[VLFM]] to locate unseen semantic objects in novel environments.
+Zero-shot navigation has been demonstrated on the Unitree Go2 quadrupedal robot across multiple indoor environments, achieving a success rate of over **88%** without any environment‑specific training or fine‑tuning. This result, reported in a recent arxiv paper (2410.06239), validates the approach in realistic, cluttered settings and underscores the effectiveness of combining open‑vocabulary semantics with LLM‑driven planning. Additional work (e.g., paper 2312.03275) shows that zero‑shot navigation can be integrated into systems like VLFM to locate unseen semantic objects in novel environments.
 
 ## Relationships
 
-- **Implemented by**: [[VLN‑Zero]] ⚠️, a specific algorithmic framework that achieves zero‑shot visual‑language navigation without environment‑specific fine‑tuning.
-- **Used by**: [[VLFM]] (Vision‑Language Foundation Models for navigation), which leverages zero‑shot navigation to locate objects in novel environments using pre‑trained semantic knowledge.
-- **Depends on**: [[Open-Vocabulary Semantics]], [[LLM‑based Planning]] ⚠️ ⚠️
-- **Related to**: [[Embodied AI]], [[Sim‑to‑Real Transfer]] ⚠️, [[VLN]] ⚠️
+- **Implemented by**: VLN‑Zero ⚠️, a specific algorithmic framework that achieves zero‑shot visual‑language navigation without environment‑specific fine‑tuning.
+- **Used by**: VLFM (Vision‑Language Foundation Models for navigation), which leverages zero‑shot navigation to locate objects in novel environments using pre‑trained semantic knowledge.
+- **Depends on**: Open-Vocabulary Semantics, LLM‑based Planning ⚠️ ⚠️
+- **Related to**: Embodied AI, Sim‑to‑Real Transfer ⚠️, VLN ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Zero-Shot Navigation` --[[related_to]] ⚠️--> `Embodied AI`
+- `Zero-Shot Navigation` --related_to ⚠️--> `Embodied AI`
 
 *Sources: papers/2410.06239.pdf (reinforcements: definition, dependencies, demonstration on Unitree Go2); papers/2312.03275.pdf (reinforcements: description, capabilities, used_by VLFM)*

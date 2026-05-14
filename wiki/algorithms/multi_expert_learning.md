@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Multi-Expert Learning** is an algorithmic framework within the [[MM-Nav]] training pipeline that combines multiple specialized [[Reinforcement Learning]] (RL) experts—each focused on a distinct sub-task—to produce a unified navigation policy. The experts are dynamically balanced according to their individual performance on a given capability, enabling adaptive behavior in complex manipulation and avoidance scenarios.
+**Multi-Expert Learning** is an algorithmic framework within the MM-Nav training pipeline that combines multiple specialized Reinforcement Learning (RL) experts—each focused on a distinct sub-task—to produce a unified navigation policy. The experts are dynamically balanced according to their individual performance on a given capability, enabling adaptive behavior in complex manipulation and avoidance scenarios.
 
 ## Architecture
 
@@ -36,13 +36,13 @@ Multi-Expert Learning employs three dedicated RL experts, each trained independe
 
 ## Relationship to MM-Nav
 
-Multi-Expert Learning is a core component of the **MM-Nav** (Multi-Modal Navigation) training pipeline. It uses [[Reinforcement Learning]] as the underlying learning paradigm and depends on [[Privileged Depth Information]] for efficient training. The output of this algorithm is a composite policy that integrates the strengths of all three experts.
+Multi-Expert Learning is a core component of the **MM-Nav** (Multi-Modal Navigation) training pipeline. It uses Reinforcement Learning as the underlying learning paradigm and depends on Privileged Depth Information for efficient training. The output of this algorithm is a composite policy that integrates the strengths of all three experts.
 
 ### Relationships
 
-- `uses` → [[Reinforcement Learning]]
-- `uses` → [[Privileged Depth Information]]
-- `part_of` → [[MM-Nav]] (training pipeline)
+- `uses` → Reinforcement Learning
+- `uses` → Privileged Depth Information
+- `part_of` → MM-Nav (training pipeline)
 
 ## Advantages
 
@@ -51,4 +51,4 @@ By explicitly decomposing navigation into reaching, squeezing, and avoiding beha
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Multi-Expert Learning` --[[extends]] ⚠️--> `MM-Nav`
+- `Multi-Expert Learning` --extends ⚠️--> `MM-Nav`

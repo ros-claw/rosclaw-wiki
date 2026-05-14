@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # VLN in Continuous Environments (VLN-CE)
 
-**VLN-CE** (Vision-Language Navigation in Continuous Environments) is a specialized formulation of [[Vision-Language Navigation (VLN)]] in which agents navigate in continuous, non-discrete spaces rather than the discretized graph nodes or waypoints typical of earlier VLN benchmarks. This setting better reflects real-world deployment, where the agent must move freely and react to obstacles, dynamics, and fine-grained spatial details.
+**VLN-CE** (Vision-Language Navigation in Continuous Environments) is a specialized formulation of Vision-Language Navigation (VLN) in which agents navigate in continuous, non-discrete spaces rather than the discretized graph nodes or waypoints typical of earlier VLN benchmarks. This setting better reflects real-world deployment, where the agent must move freely and react to obstacles, dynamics, and fine-grained spatial details.
 
 ## Description
 
@@ -22,11 +22,11 @@ VLN-CE is a more practical setting where the agent navigates in continuous envir
 
 ## Capabilities
 
-- **Navigation in continuous, non-discrete environments** – Agents operate in photorealistic 3D scans (e.g., [[Habitat]], [[Matterport3D]] ⚠️ ⚠️) without a precomputed navigation graph, using raw RGB-D observations and language instructions to decide where and how to move.
+- **Navigation in continuous, non-discrete environments** – Agents operate in photorealistic 3D scans (e.g., Habitat, Matterport3D ⚠️ ⚠️) without a precomputed navigation graph, using raw RGB-D observations and language instructions to decide where and how to move.
 
 ## Relationships
 
-- **subtype_of**: [[Vision-Language Navigation (VLN)]] – VLN-CE inherits the core task of following natural language instructions to reach a goal, but adopts a more realistic continuous action space and sensorimotor loop.
+- **subtype_of**: Vision-Language Navigation (VLN) – VLN-CE inherits the core task of following natural language instructions to reach a goal, but adopts a more realistic continuous action space and sensorimotor loop.
 
 ## Background and Motivation
 
@@ -34,7 +34,7 @@ Traditional VLN benchmarks discretize environments into nodes (e.g., pre-defined
 
 ## Usage in Research
 
-VLN-CE has become a standard testbed for evaluating models that combine language understanding with continuous control. Approaches often rely on **cross-modal encoders**, **policy networks**, and **sim-to-real transfer** techniques. The task is commonly benchmarked on the [[VLN-CE dataset]] ⚠️ (derived from [[Matterport3D]] ⚠️ ⚠️) using metrics such as success rate (SR), oracle success rate (OSR), and navigation error (NE).
+VLN-CE has become a standard testbed for evaluating models that combine language understanding with continuous control. Approaches often rely on **cross-modal encoders**, **policy networks**, and **sim-to-real transfer** techniques. The task is commonly benchmarked on the VLN-CE dataset ⚠️ (derived from Matterport3D ⚠️ ⚠️) using metrics such as success rate (SR), oracle success rate (OSR), and navigation error (NE).
 
 ## Source
 

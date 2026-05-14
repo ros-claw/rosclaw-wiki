@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Two-stage Training Pipeline for REVERIE** is a learning architecture designed for the [[REVERIE task]] ⚠️ ⚠️ (Remote Embodied Referring Expressions). It enables an agent to localize a remote target object from a high-level natural language instruction and navigate to it in real indoor environments. The pipeline fuses vision and language representations with past memory experiences to generate accurate action sequences.
+The **Two-stage Training Pipeline for REVERIE** is a learning architecture designed for the REVERIE task ⚠️ ⚠️ (Remote Embodied Referring Expressions). It enables an agent to localize a remote target object from a high-level natural language instruction and navigate to it in real indoor environments. The pipeline fuses vision and language representations with past memory experiences to generate accurate action sequences.
 
 ## Stages
 
@@ -24,14 +24,14 @@ The pipeline consists of two stages:
 
 In this stage, the agent is pretrained using two cross-modal alignment sub-tasks:
 
-- **[[Scene Grounding]] ⚠️ ⚠️** – learns *where* to stop, i.e., which scene or region in the environment corresponds to the instruction.
-- **[[Object Grounding]] ⚠️ ⚠️** – learns *what* to attend to, i.e., which specific object within the scene is referenced.
+- **Scene Grounding ⚠️ ⚠️** – learns *where* to stop, i.e., which scene or region in the environment corresponds to the instruction.
+- **Object Grounding ⚠️ ⚠️** – learns *what* to attend to, i.e., which specific object within the scene is referenced.
 
 These sub-tasks align visual observations with linguistic cues without requiring explicit action supervision.
 
 ### Stage 2: Action Sequence Generation with Memory-augmented Decoder
 
-In the second stage, a **[[Memory-augmented attentive action decoder]]** generates action sequences by fusing vision-language representations with past memory experiences. This allows the agent to maintain temporal context and improve navigation efficiency.
+In the second stage, a **Memory-augmented attentive action decoder** generates action sequences by fusing vision-language representations with past memory experiences. This allows the agent to maintain temporal context and improve navigation efficiency.
 
 ## Capabilities
 
@@ -42,13 +42,13 @@ In the second stage, a **[[Memory-augmented attentive action decoder]]** generat
 ## Relationships
 
 - **Uses**:
-  - [[Scene Grounding]] ⚠️ ⚠️ sub-task
-  - [[Object Grounding]] ⚠️ ⚠️ sub-task
-  - [[Memory-augmented attentive action decoder]]
+  - Scene Grounding ⚠️ ⚠️ sub-task
+  - Object Grounding ⚠️ ⚠️ sub-task
+  - Memory-augmented attentive action decoder
 - **Depends on**:
-  - [[REVERIE task]] ⚠️ ⚠️
+  - REVERIE task ⚠️ ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Two-stage Training Pipeline for REVERIE` --[[extends]] ⚠️--> `Memory-augmented attentive action decoder`
+- `Two-stage Training Pipeline for REVERIE` --extends ⚠️--> `Memory-augmented attentive action decoder`

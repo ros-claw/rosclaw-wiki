@@ -28,15 +28,15 @@ Hierarchical planning breaks down a high-level task into a sequence of lower-lev
 
 ## Relationships
 
-This concept is **implemented by** [[NavForesee]], which uses hierarchical planning to navigate dynamic environments.
+This concept is **implemented by** NavForesee, which uses hierarchical planning to navigate dynamic environments.
 
 ## Related Concepts
 
-- [[Task Planning]] ⚠️ – broader discipline of sequencing actions.
-- [[Hierarchical Task Networks]] ⚠️ – a classical AI planning formalism closely related to hierarchical planning.
-- [[Sim-to-Real Transfer]] – often benefits from hierarchical decomposition to bridge simulation and reality.
+- Task Planning ⚠️ – broader discipline of sequencing actions.
+- Hierarchical Task Networks ⚠️ – a classical AI planning formalism closely related to hierarchical planning.
+- Sim-to-Real Transfer – often benefits from hierarchical decomposition to bridge simulation and reality.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Hierarchical Planning` --[[related_to]] ⚠️--> `NavForesee` _(wikilink)_
+- `Hierarchical Planning` --related_to ⚠️--> `NavForesee` _(wikilink)_

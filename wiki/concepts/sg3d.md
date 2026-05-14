@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # SG3D
 
-**SG3D** is a benchmark designed for [[Embodied Navigation]] tasks, focused on evaluating 3D scene understanding, generalization, and question‑answering capabilities. It provides a standardized environment and metrics to assess how well navigation agents can operate and answer queries in simulated 3D worlds.
+**SG3D** is a benchmark designed for Embodied Navigation tasks, focused on evaluating 3D scene understanding, generalization, and question‑answering capabilities. It provides a standardized environment and metrics to assess how well navigation agents can operate and answer queries in simulated 3D worlds.
 
 ## Capabilities
 
@@ -23,15 +23,15 @@ source_type: arxiv_paper
 
 ## Key Results
 
-In the SG3D benchmark, the [[MTU3D]] architecture achieved a **9% improvement in success rate** over the previous state‑of‑the‑art (SOTA). This result was reported in the paper *"MTU3D: Multi‑Task Unified 3D Navigation"* (arXiv:2507.04047).
+In the SG3D benchmark, the MTU3D architecture achieved a **9% improvement in success rate** over the previous state‑of‑the‑art (SOTA). This result was reported in the paper *"MTU3D: Multi‑Task Unified 3D Navigation"* (arXiv:2507.04047).
 
 ## Relationship Annotations
 
-- **SG3D** → **[[Embodied Navigation]]**: A task [[for]] ⚠️ which SG3D serves as a benchmark.
-- **SG3D** → **[[MTU3D]]**: [[evaluates]] ⚠️ the performance of MTU3D; MTU3D [[improves upon]] ⚠️ previous SOTA on SG3D. MTU3D [[uses]] ⚠️ SG3D as an evaluation platform.
-- **SG3D** → **[[SOTA]] ⚠️**: [[compares against]] ⚠️ existing state‑of‑the‑art methods via the benchmark.
-- **SG3D** → **[[3D Scene Understanding]] ⚠️**: The benchmark [[tests]] ⚠️ aspects of 3D scene understanding and perception.
-- **SG3D** → **[[Embodied Question Answering]] ⚠️**: The benchmark [[extends]] ⚠️ to evaluating question‑answering in embodied contexts.
+- **SG3D** → **Embodied Navigation**: A task for ⚠️ which SG3D serves as a benchmark.
+- **SG3D** → **MTU3D**: evaluates ⚠️ the performance of MTU3D; MTU3D improves upon ⚠️ previous SOTA on SG3D. MTU3D uses ⚠️ SG3D as an evaluation platform.
+- **SG3D** → **SOTA ⚠️**: compares against ⚠️ existing state‑of‑the‑art methods via the benchmark.
+- **SG3D** → **3D Scene Understanding ⚠️**: The benchmark tests ⚠️ aspects of 3D scene understanding and perception.
+- **SG3D** → **Embodied Question Answering ⚠️**: The benchmark extends ⚠️ to evaluating question‑answering in embodied contexts.
 
 ## Context
 

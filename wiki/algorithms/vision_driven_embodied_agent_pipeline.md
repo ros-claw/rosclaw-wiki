@@ -16,7 +16,7 @@ source_type: blog_post
 
 **Type:** Algorithm  
 
-A unified framework for processing multimodal inputs, reasoning through interactions, and generating structured executable plans composed of sequential actions. The [[Vision-driven Embodied Agent Pipeline]] is designed to bridge perception and action by leveraging [[Multi-modal Large Language Models (MLLMs)]] ⚠️ ⚠️ as core reasoning engines. It is used by [[EmbodiedBench]] to evaluate the capability of MLLMs as embodied agents.
+A unified framework for processing multimodal inputs, reasoning through interactions, and generating structured executable plans composed of sequential actions. The Vision-driven Embodied Agent Pipeline is designed to bridge perception and action by leveraging Multi-modal Large Language Models (MLLMs) ⚠️ ⚠️ as core reasoning engines. It is used by EmbodiedBench to evaluate the capability of MLLMs as embodied agents.
 
 ## Pipeline Overview
 
@@ -34,14 +34,14 @@ The pipeline operates in four sequential stages:
 
 ## Relationships
 
-- **used_by** → [[EmbodiedBench]] (the pipeline serves as the agent evaluation framework)
-- **uses** → [[Multi-modal Large Language Models (MLLMs)]] ⚠️ ⚠️ (the reasoning and plan generation stages depend on MLLM capabilities)
+- **used_by** → EmbodiedBench (the pipeline serves as the agent evaluation framework)
+- **uses** → Multi-modal Large Language Models (MLLMs) ⚠️ ⚠️ (the reasoning and plan generation stages depend on MLLM capabilities)
 
 ## Additional Context
 
-This pipeline is a key component of the [[EmbodiedBench]] benchmark, which tests how well MLLMs can function as embodied agents in simulated and real‑world tasks. The structured nature of the output allows for direct comparison across different model architectures and training regimes.
+This pipeline is a key component of the EmbodiedBench benchmark, which tests how well MLLMs can function as embodied agents in simulated and real‑world tasks. The structured nature of the output allows for direct comparison across different model architectures and training regimes.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Vision-driven Embodied Agent Pipeline` --[[implements]] ⚠️--> `EmbodiedBench`
+- `Vision-driven Embodied Agent Pipeline` --implements ⚠️--> `EmbodiedBench`

@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-Room-to-Room (R2R) is a standard benchmark for **vision-and-language navigation** (VLN) in indoor environments. It evaluates an agent's ability to follow natural language instructions to navigate through a series of connected rooms. The [[Scene- and Object-Aware Transformer (SOAT)]] achieves a **1.8% absolute improvement in SPL** on this benchmark.
+Room-to-Room (R2R) is a standard benchmark for **vision-and-language navigation** (VLN) in indoor environments. It evaluates an agent's ability to follow natural language instructions to navigate through a series of connected rooms. The Scene- and Object-Aware Transformer (SOAT) achieves a **1.8% absolute improvement in SPL** on this benchmark.
 
 ### Benchmark Details
 
@@ -34,12 +34,12 @@ Room-to-Room (R2R) is a standard benchmark for **vision-and-language navigation*
 
 ### Relationships
 
-- **Used by**: [[Scene- and Object-Aware Transformer (SOAT)]] – SOAT leverages R2R as the primary evaluation benchmark.
-- **Related to**: [[Room-Across-Room (RxR)]] – an extension of R2R that includes multilingual instructions and longer, more complex routes across multiple rooms and buildings.
+- **Used by**: Scene- and Object-Aware Transformer (SOAT) – SOAT leverages R2R as the primary evaluation benchmark.
+- **Related to**: Room-Across-Room (RxR) – an extension of R2R that includes multilingual instructions and longer, more complex routes across multiple rooms and buildings.
 
-> **Note on links**: [[SPL]] and [[Success Rate]] ⚠️ are common VLN metrics; if dedicated pages exist, they may be linked from here.
+> **Note on links**: SPL and Success Rate ⚠️ are common VLN metrics; if dedicated pages exist, they may be linked from here.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Room-to-Room (R2R)` --[[related_to]] ⚠️--> `Room-Across-Room (RxR)`
+- `Room-to-Room (R2R)` --related_to ⚠️--> `Room-Across-Room (RxR)`

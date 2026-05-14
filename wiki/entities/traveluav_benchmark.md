@@ -27,13 +27,13 @@ TravelUAV addresses the challenge of navigating UAVs through complex environment
 
 ## Evaluation
 
-Used to evaluate [[OpenVLN]] performance. Experiments are conducted with dataset scaling across diverse reward settings, assessing how well models generalize under varying conditions.
+Used to evaluate OpenVLN performance. Experiments are conducted with dataset scaling across diverse reward settings, assessing how well models generalize under varying conditions.
 
 ## Relationships
 
-- Used by **[[OpenVLN]]** – The OpenVLN framework leverages TravelUAV for evaluating its aerial navigation models.
+- Used by **OpenVLN** – The OpenVLN framework leverages TravelUAV for evaluating its aerial navigation models.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `TravelUAV benchmark` --[[uses]] ⚠️--> `OpenVLN`
+- `TravelUAV benchmark` --uses ⚠️--> `OpenVLN`

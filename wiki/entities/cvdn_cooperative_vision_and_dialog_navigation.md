@@ -16,9 +16,9 @@ source_type: arxiv_paper
 
 ## Overview
 
-**CVDN** (Cooperative Vision-and-Dialog Navigation) is a benchmark dataset and task designed to evaluate an agent's ability to follow dialogue-based instructions in a visual environment. Unlike standard [[Vision-and-Language Navigation]] (VLN) tasks that rely on static, human‑generated navigation instructions, CVDN introduces an interactive dialog setting: an `oracle` (human) provides step‑by‑step guidance through natural language, and the agent must ground these instructions in real‑time visual observations. This benchmark tests not only visual grounding and path planning, but also the ability to maintain dialogue context and ask clarifying questions when instructions are ambiguous.
+**CVDN** (Cooperative Vision-and-Dialog Navigation) is a benchmark dataset and task designed to evaluate an agent's ability to follow dialogue-based instructions in a visual environment. Unlike standard Vision-and-Language Navigation (VLN) tasks that rely on static, human‑generated navigation instructions, CVDN introduces an interactive dialog setting: an `oracle` (human) provides step‑by‑step guidance through natural language, and the agent must ground these instructions in real‑time visual observations. This benchmark tests not only visual grounding and path planning, but also the ability to maintain dialogue context and ask clarifying questions when instructions are ambiguous.
 
-CVDN is a **part of** the broader [[VLN benchmarks]] ⚠️ ⚠️ suite, which includes other navigation tasks such as [[R2R]], [[REVERIE]], and [[Touchdown]] ⚠️.
+CVDN is a **part of** the broader VLN benchmarks ⚠️ ⚠️ suite, which includes other navigation tasks such as R2R, REVERIE, and Touchdown ⚠️.
 
 ## Task Parameters
 
@@ -35,9 +35,9 @@ CVDN is a **part of** the broader [[VLN benchmarks]] ⚠️ ⚠️ suite, which 
 
 ## Relationships
 
-- **part_of** → [[VLN benchmarks]] ⚠️ ⚠️ – CVDN is one of the standard evaluation tasks for vision‑and‑language navigation research.
-- **depends_on** → [[Visual Simulation Environments]] ⚠️ (e.g., [[Matterport3D Simulator]]) – The benchmark runs within photorealistic 3D environments.
-- **depends_on** → [[Dialogue Management]] ⚠️ – The interactive nature of the task requires the agent to parse and respond to turn‑based dialog.
+- **part_of** → VLN benchmarks ⚠️ ⚠️ – CVDN is one of the standard evaluation tasks for vision‑and‑language navigation research.
+- **depends_on** → Visual Simulation Environments ⚠️ (e.g., Matterport3D Simulator) – The benchmark runs within photorealistic 3D environments.
+- **depends_on** → Dialogue Management ⚠️ – The interactive nature of the task requires the agent to parse and respond to turn‑based dialog.
 
 ## Source
 
@@ -46,13 +46,13 @@ CVDN is a **part of** the broader [[VLN benchmarks]] ⚠️ ⚠️ suite, which 
 
 ## See Also
 
-- [[Vision-and-Language Navigation]] – The broader research area.
-- [[Embodied Question Answering]] ⚠️ – Another task combining dialog and visual navigation.
-- [[Human‑in‑the‑Loop Evaluation]] ⚠️ – Methodology used for cooperative navigation benchmarks.
-- [[Matterport3D]] ⚠️ – The underlying 3D dataset used in CVDN.
+- Vision-and-Language Navigation – The broader research area.
+- Embodied Question Answering ⚠️ – Another task combining dialog and visual navigation.
+- Human‑in‑the‑Loop Evaluation ⚠️ – Methodology used for cooperative navigation benchmarks.
+- Matterport3D ⚠️ – The underlying 3D dataset used in CVDN.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `CVDN (Cooperative Vision-and-Dialog Navigation)` --[[related_to]] ⚠️--> `Vision-and-Language Navigation`
-- `CVDN (Cooperative Vision-and-Dialog Navigation)` --[[depends_on]] ⚠️--> `Matterport3D Simulator`
+- `CVDN (Cooperative Vision-and-Dialog Navigation)` --related_to ⚠️--> `Vision-and-Language Navigation`
+- `CVDN (Cooperative Vision-and-Dialog Navigation)` --depends_on ⚠️--> `Matterport3D Simulator`

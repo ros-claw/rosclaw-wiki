@@ -17,7 +17,7 @@ source_type: arxiv_paper
 **Type:** Algorithm  
 **Tags:** `zero-shot`, `open-vocabulary`, `navigation`, `visual-in-context-learning`, `VLM`
 
-**RANGER** is a zero-shot, open-vocabulary semantic navigation framework that operates using only a monocular camera, eliminating the need for ground-truth depth, pose sensors, or environment-specific training. It leverages **[[3D foundation models]] ⚠️ ⚠️** and **visual in-context learning** to adapt to unseen environments from a short traversal video.
+**RANGER** is a zero-shot, open-vocabulary semantic navigation framework that operates using only a monocular camera, eliminating the need for ground-truth depth, pose sensors, or environment-specific training. It leverages **3D foundation models ⚠️ ⚠️** and **visual in-context learning** to adapt to unseen environments from a short traversal video.
 
 ## Overview
 
@@ -35,8 +35,8 @@ The framework integrates five main components:
 
 ## Dependencies & Evaluation
 
-- **Depends on:** [[HM3D benchmark]] ⚠️ for quantitative evaluation.
-- **Uses:** [[3D foundation models]] ⚠️ ⚠️ (e.g., DUSt3R, MASt3R), [[Vision-Language Model (VLM)]] (e.g., LLaVA, GPT-4V), and standard depth-free reconstruction pipelines.
+- **Depends on:** HM3D benchmark ⚠️ for quantitative evaluation.
+- **Uses:** 3D foundation models ⚠️ ⚠️ (e.g., DUSt3R, MASt3R), Vision-Language Model (VLM) (e.g., LLaVA, GPT-4V), and standard depth-free reconstruction pipelines.
 
 ## Experiments
 
@@ -54,12 +54,12 @@ RANGER was evaluated on the **HM3D benchmark** and in real-world environments. I
 
 ## Related Pages
 
-- [[Object Goal Navigation]]
-- [[Zero-shot Navigation]]
-- [[Visual In-Context Learning]] ⚠️
-- [[Semantic Point Cloud]] ⚠️
-- [[3D Foundation Models]] ⚠️
-- [[Vision-Language Model (VLM)]]
+- Object Goal Navigation
+- Zero-shot Navigation
+- Visual In-Context Learning ⚠️
+- Semantic Point Cloud ⚠️
+- 3D Foundation Models ⚠️
+- Vision-Language Model (VLM)
 
 ## References
 
@@ -68,4 +68,4 @@ RANGER was evaluated on the **HM3D benchmark** and in real-world environments. I
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `RANGER` --[[based_on]] ⚠️--> `Vision-Language Model (VLM)`
+- `RANGER` --based_on ⚠️--> `Vision-Language Model (VLM)`

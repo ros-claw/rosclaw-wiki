@@ -27,14 +27,14 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **Part of** [[Autonomous Navigation for Wheeled-Legged Robots]] — this skill is one of the key modules in the overall navigation stack for robots such as the [[Unitree G1]] or similar platforms.
-- **Supplies** [[Mobility-Aware Local Navigation Planning]] — the coarse route produced by large‑scale planning serves as the reference path for local planners, which then refine the trajectory while accounting for dynamic obstacles and terrain constraints.
+- **Part of** Autonomous Navigation for Wheeled-Legged Robots — this skill is one of the key modules in the overall navigation stack for robots such as the Unitree G1 or similar platforms.
+- **Supplies** Mobility-Aware Local Navigation Planning — the coarse route produced by large‑scale planning serves as the reference path for local planners, which then refine the trajectory while accounting for dynamic obstacles and terrain constraints.
 
 ### Integration
 
 Provides a high-level route that the local planner follows, ensuring that the robot can complete long‑duration missions autonomously. The topological map is updated periodically to reflect changes in the environment (e.g., road closures), and the planner re‑routes as needed without requiring full recomputation.
 
-**Source:** [[papers/2405.01792.pdf]] ⚠️  
+**Source:** papers/2405.01792.pdf ⚠️  
 **Reinforces:** *Confidence: 0.8* (peer‑reviewed paper)
 
 ### 自动链接关系
@@ -42,5 +42,5 @@ _These relationships were discovered automatically by the heuristic entity linke
 **Confirmed links:**
 - `Large-Scale Path Planning` --[[operates_on]] ⚠️--> `Unitree G1`
 **Pending review:**
-- `Large-Scale Path Planning` --[[related_to]] ⚠️ ⚠️--> `Autonomous Navigation for Wheeled-Legged Robots` _(wikilink)_
-- `Large-Scale Path Planning` --[[related_to]] ⚠️ ⚠️--> `Mobility-Aware Local Navigation Planning` _(wikilink)_
+- `Large-Scale Path Planning` --related_to ⚠️ ⚠️--> `Autonomous Navigation for Wheeled-Legged Robots` _(wikilink)_
+- `Large-Scale Path Planning` --related_to ⚠️ ⚠️--> `Mobility-Aware Local Navigation Planning` _(wikilink)_

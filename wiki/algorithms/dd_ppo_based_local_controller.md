@@ -18,13 +18,13 @@ The **DD-PPO-based local controller** is a reinforcement learning algorithm that
 
 ## Overview
 
-This controller implements [[DD-PPO]] ⚠️ ⚠️ ⚠️ (Decentralized Distributed Proximal Policy Optimization), a scalable on‑policy RL algorithm. It processes the current observation (e.g., depth image, odometry) and a local target waypoint, then outputs direct action commands (e.g., linear and angular velocities) to steer the robot toward that waypoint. The controller operates in real‑time as the lowest‑level motion planner, bridging the gap between a global navigation plan and raw motor output.
+This controller implements DD-PPO ⚠️ ⚠️ ⚠️ (Decentralized Distributed Proximal Policy Optimization), a scalable on‑policy RL algorithm. It processes the current observation (e.g., depth image, odometry) and a local target waypoint, then outputs direct action commands (e.g., linear and angular velocities) to steer the robot toward that waypoint. The controller operates in real‑time as the lowest‑level motion planner, bridging the gap between a global navigation plan and raw motor output.
 
 ## Parameters
 
 | Field | Value |
 |-------|-------|
-| **Algorithm base** | [[DD-PPO]] ⚠️ ⚠️ ⚠️ (Decentralized Distributed Proximal Policy Optimization) |
+| **Algorithm base** | DD-PPO ⚠️ ⚠️ ⚠️ (Decentralized Distributed Proximal Policy Optimization) |
 | **Input** | Current observation (sensor data) + waypoint (target pose relative to robot) |
 | **Output** | Action command (e.g., velocity commands, joint torques) |
 
@@ -38,8 +38,8 @@ This controller implements [[DD-PPO]] ⚠️ ⚠️ ⚠️ (Decentralized Distri
 
 > _These connections are maintained in the wiki for traceability._
 
-- **part_of** → [[Vision and Language Navigation in the Real World via Online Visual Language Mapping]] ⚠️ – The controller is a core component of that overall navigation system.
-- **depends_on** → [[DD-PPO]] ⚠️ ⚠️ ⚠️ – The training and inference are built upon the DD-PPO algorithm.
+- **part_of** → Vision and Language Navigation in the Real World via Online Visual Language Mapping ⚠️ – The controller is a core component of that overall navigation system.
+- **depends_on** → DD-PPO ⚠️ ⚠️ ⚠️ – The training and inference are built upon the DD-PPO algorithm.
 
 ## Context & Usage
 

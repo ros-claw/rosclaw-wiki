@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Vision-and-Language Navigation in Continuous Environments (VLN-CE)** is an [[embodied AI]] research problem setting in which an agent must follow natural language instructions to navigate in continuous, realistic 3D environments without relying on discretized actions. It extends discrete [[Visual Language Navigation (VLN)]] ⚠️ ⚠️ by requiring continuous movement, obstacle avoidance, and deeper environmental understanding, rather than selecting from a predefined set of discrete locations. The agent must understand complex instructions, perceive its surroundings dynamically, and execute long-range plans with smooth motion control.
+**Vision-and-Language Navigation in Continuous Environments (VLN-CE)** is an embodied AI research problem setting in which an agent must follow natural language instructions to navigate in continuous, realistic 3D environments without relying on discretized actions. It extends discrete Visual Language Navigation (VLN) ⚠️ ⚠️ by requiring continuous movement, obstacle avoidance, and deeper environmental understanding, rather than selecting from a predefined set of discrete locations. The agent must understand complex instructions, perceive its surroundings dynamically, and execute long-range plans with smooth motion control.
 
 ## Key Capabilities
 
@@ -32,10 +32,10 @@ A successful VLN‑CE agent must demonstrate:
 
 To bridge the gap between raw continuous observation and high‑level instruction following, many VLN‑CE systems employ a decomposition strategy:
 
-1. **Discretize the environment** — A [[waypoint predictor]] estimates reachable locations (waypoints) from the agent’s current observation, converting the continuous space into a sparse set of viable steps.
+1. **Discretize the environment** — A waypoint predictor estimates reachable locations (waypoints) from the agent’s current observation, converting the continuous space into a sparse set of viable steps.
 2. **Simplify navigation into a view selection task** — Instead of continuous low‑level control, the agent selects which waypoint to move toward, effectively reducing the planning problem to a classification over candidate views.
 
-This pipeline couples a learned representation of the scene with the language instruction, but the reliance on discretization can lead to misalignment between the predicted waypoints and the true free space. Alternative approaches use **[[Topological Maps]] ⚠️ ⚠️** to represent the environment at a higher level, enabling more abstract reasoning without fine‑grained waypoint prediction.
+This pipeline couples a learned representation of the scene with the language instruction, but the reliance on discretization can lead to misalignment between the predicted waypoints and the true free space. Alternative approaches use **Topological Maps ⚠️ ⚠️** to represent the environment at a higher level, enabling more abstract reasoning without fine‑grained waypoint prediction.
 
 ## Exemplary Methods
 
@@ -43,15 +43,15 @@ This pipeline couples a learned representation of the scene with the language in
 
 ## Relevance
 
-VLN‑CE is a more practical and challenging variant of vision‑language navigation. By operating in continuous environments without discretized actions, it closely mirrors real‑world robotic deployment: the agent must perform smooth motion control, avoid obstacles, and react to environmental changes. Success in VLN‑CE therefore has direct implications for deploying [[instruction following]] ⚠️ ⚠️ on physical platforms such as [[Unitree Go2]] or [[Jackal UGV]] ⚠️.
+VLN‑CE is a more practical and challenging variant of vision‑language navigation. By operating in continuous environments without discretized actions, it closely mirrors real‑world robotic deployment: the agent must perform smooth motion control, avoid obstacles, and react to environmental changes. Success in VLN‑CE therefore has direct implications for deploying instruction following ⚠️ ⚠️ on physical platforms such as Unitree Go2 or Jackal UGV ⚠️.
 
 ## Related Concepts
 
-- **part_of** → [[embodied AI navigation]] ⚠️ – VLN‑CE is a sub‑problem within the broader field of embodied navigation.
-- **related_to** → [[Visual Language Navigation (VLN)]] ⚠️ ⚠️ – both tasks use natural language and visual inputs, but VLN‑CE operates in continuous space rather than on a graph of pre‑defined nodes.
-- **depends_on** → [[scene understanding]] ⚠️, [[language grounding]] ⚠️, [[continuous control]] ⚠️ – the agent must parse instructions, perceive its surroundings, and execute fine‑grained motions.
-- **uses** → [[waypoint predictor]], [[Topological Maps]] ⚠️ ⚠️ – common techniques for structuring the continuous space.
-- **implements** → [[instruction following]] ⚠️ ⚠️ in the context of physical, mobile robots.
+- **part_of** → embodied AI navigation ⚠️ – VLN‑CE is a sub‑problem within the broader field of embodied navigation.
+- **related_to** → Visual Language Navigation (VLN) ⚠️ ⚠️ – both tasks use natural language and visual inputs, but VLN‑CE operates in continuous space rather than on a graph of pre‑defined nodes.
+- **depends_on** → scene understanding ⚠️, language grounding ⚠️, continuous control ⚠️ – the agent must parse instructions, perceive its surroundings, and execute fine‑grained motions.
+- **uses** → waypoint predictor, Topological Maps ⚠️ ⚠️ – common techniques for structuring the continuous space.
+- **implements** → instruction following ⚠️ ⚠️ in the context of physical, mobile robots.
 
 ## Challenges
 
@@ -60,7 +60,7 @@ Because the environment is continuous and dynamic, VLN‑CE demands robust perce
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Vision-and-Language Navigation in Continuous Environments (VLN-CE)` --[[related_to]] ⚠️ ⚠️--> `embodied AI`
-- `Vision-and-Language Navigation in Continuous Environments (VLN-CE)` --[[applies_to]] ⚠️--> `Unitree Go2`
+- `Vision-and-Language Navigation in Continuous Environments (VLN-CE)` --related_to ⚠️ ⚠️--> `embodied AI`
+- `Vision-and-Language Navigation in Continuous Environments (VLN-CE)` --applies_to ⚠️--> `Unitree Go2`
 **Pending review:**
-- `Vision-and-Language Navigation in Continuous Environments (VLN-CE)` --[[related_to]] ⚠️ ⚠️--> `waypoint predictor` _(wikilink)_
+- `Vision-and-Language Navigation in Continuous Environments (VLN-CE)` --related_to ⚠️ ⚠️--> `waypoint predictor` _(wikilink)_

@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Help, Anna! Task** is a [[VLN|Vision-and-Language Navigation (VLN)]] benchmark where an agent must follow natural language instructions to help a person named Anna, often involving object manipulation or interaction in a visual environment. This task extends standard VLN by incorporating an interactive social component, requiring the agent to understand both spatial navigation and task-oriented language.
+The **Help, Anna! Task** is a Vision-and-Language Navigation (VLN) benchmark where an agent must follow natural language instructions to help a person named Anna, often involving object manipulation or interaction in a visual environment. This task extends standard VLN by incorporating an interactive social component, requiring the agent to understand both spatial navigation and task-oriented language.
 
 ## Capabilities
 
@@ -25,8 +25,8 @@ The **Help, Anna! Task** is a [[VLN|Vision-and-Language Navigation (VLN)]] bench
 
 ## Relationships
 
-- **Part of [[VLN tasks]] ⚠️** — The Help, Anna! Task is a specific instance of VLN, adding an interactive, human-in-the-loop element.
-- **Improved by [[Prevalent Pre-training]] ⚠️** — Prevalent, a pre-training method for VLN, demonstrates transferability by achieving state-of-the-art results on this task, validating the effectiveness of its representation learning approach.
+- **Part of VLN tasks ⚠️** — The Help, Anna! Task is a specific instance of VLN, adding an interactive, human-in-the-loop element.
+- **Improved by Prevalent Pre-training ⚠️** — Prevalent, a pre-training method for VLN, demonstrates transferability by achieving state-of-the-art results on this task, validating the effectiveness of its representation learning approach.
 
 ## Source
 

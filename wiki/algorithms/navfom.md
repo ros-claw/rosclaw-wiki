@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # NavFoM
 
-**NavFoM** (Navigation Foundation Model) is a unified, cross-embodiment and cross-task navigation algorithm that processes multimodal inputs to enable a single model to perform multiple navigation tasks across different robot platforms. It leverages [[Vision-Language Models]] ⚠️ ⚠️ and introduces [[Identifier Tokens]] plus a [[Dynamic Sampling Strategy]] to achieve state-of-the-art performance without task-specific fine-tuning.
+**NavFoM** (Navigation Foundation Model) is a unified, cross-embodiment and cross-task navigation algorithm that processes multimodal inputs to enable a single model to perform multiple navigation tasks across different robot platforms. It leverages Vision-Language Models ⚠️ ⚠️ and introduces Identifier Tokens plus a Dynamic Sampling Strategy to achieve state-of-the-art performance without task-specific fine-tuning.
 
 ## Architecture
 
@@ -23,13 +23,13 @@ NavFoM employs a unified architecture that accepts multimodal navigation inputs 
 ## Training
 
 The model is trained on **eight million navigation samples** spanning four distinct embodiment categories:
-- [[Quadrupeds]] ⚠️
-- [[Drones]] ⚠️
-- [[Wheeled Robots]] ⚠️
+- Quadrupeds ⚠️
+- Drones ⚠️
+- Wheeled Robots ⚠️
 - Vehicles
 
 These samples cover a diverse set of tasks:
-- Vision-and-language navigation ([[VLN]] ⚠️)
+- Vision-and-language navigation (VLN ⚠️)
 - Object searching
 - Target tracking
 - Autonomous driving
@@ -50,9 +50,9 @@ To meet real-world deployment constraints, NavFoM includes a token management me
 
 ## Relationships
 
-- **Uses**: [[Vision-Language Models]] ⚠️ ⚠️ to interpret natural language instructions and visual observations.
-- **Depends on**: The [[Identifier Tokens]] that encode embodiment and temporal context, and the [[Dynamic Sampling Strategy]] for efficient token selection.
-- **Implements**: A unified architecture that can be applied to multiple [[Navigation]] ⚠️ paradigms.
+- **Uses**: Vision-Language Models ⚠️ ⚠️ to interpret natural language instructions and visual observations.
+- **Depends on**: The Identifier Tokens that encode embodiment and temporal context, and the Dynamic Sampling Strategy for efficient token selection.
+- **Implements**: A unified architecture that can be applied to multiple Navigation ⚠️ paradigms.
 
 ## References
 

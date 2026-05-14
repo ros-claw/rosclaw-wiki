@@ -18,13 +18,13 @@ A **topological map** in the context of embodied navigation is a graph-based rep
 
 ### Description
 
-In the [[MC-GPT]] architecture, a topological map is used to store the agent's navigation experience. It retains:
+In the MC-GPT architecture, a topological map is used to store the agent's navigation experience. It retains:
 
 - **Viewpoints** — key positions visited during exploration.
 - **Objects** — detected or described objects associated with each viewpoint.
 - **Spatial relationships** — how viewpoints and objects connect (e.g., "next to", "facing", "precedes").
 
-This map also serves as the **global action space** for the agent, meaning the [[LLM]] ⚠️ ⚠️-based planner selects the next navigation action by choosing a node (viewpoint) from the map rather than regressing continuous coordinates. This simplifies decision-making and leverages the map's semantic structure.
+This map also serves as the **global action space** for the agent, meaning the LLM ⚠️ ⚠️-based planner selects the next navigation action by choosing a node (viewpoint) from the map rather than regressing continuous coordinates. This simplifies decision-making and leverages the map's semantic structure.
 
 ### Role
 
@@ -40,21 +40,21 @@ The topological map enhances **memory construction** for long-term navigation ta
 ### Capabilities
 
 - Retains navigation history across episodes.
-- Provides a structured, traversable action space for an [[LLM]] ⚠️ ⚠️-based agent, enabling reasoning over spatial sequences.
+- Provides a structured, traversable action space for an LLM ⚠️ ⚠️-based agent, enabling reasoning over spatial sequences.
 
 ### Relationships
 
-- **Part of**: [[MC-GPT]] — the topological map is a fundamental sub-component of the MC-GPT framework.
-- **Used by**: [[Memory Map]] ⚠️ — the topological map's structure and data are consumed by a higher-level memory module for decision-making and recall.
+- **Part of**: MC-GPT — the topological map is a fundamental sub-component of the MC-GPT framework.
+- **Used by**: Memory Map ⚠️ — the topological map's structure and data are consumed by a higher-level memory module for decision-making and recall.
 
 ### See Also
 
-- [[SLAM]] — classical metric-based mapping (contrast with topological approach).
-- [[Scene Graph]] ⚠️ — a richer semantic map that extends topological nodes with object attributes and relations.
-- [[Embodied Navigation]] — broader context where topological maps are applied.
+- SLAM — classical metric-based mapping (contrast with topological approach).
+- Scene Graph ⚠️ — a richer semantic map that extends topological nodes with object attributes and relations.
+- Embodied Navigation — broader context where topological maps are applied.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Topological Map (navigation)` --[[related_to]] ⚠️ ⚠️--> `MC-GPT` _(wikilink)_
-- `Topological Map (navigation)` --[[related_to]] ⚠️ ⚠️--> `SLAM` _(wikilink)_
+- `Topological Map (navigation)` --related_to ⚠️ ⚠️--> `MC-GPT` _(wikilink)_
+- `Topological Map (navigation)` --related_to ⚠️ ⚠️--> `SLAM` _(wikilink)_

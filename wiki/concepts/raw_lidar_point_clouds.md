@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Raw LiDAR Point Clouds
 
-**Type:** [[Concept]] ⚠️
+**Type:** Concept ⚠️
 
 Raw LiDAR point clouds refer to the unprocessed, three-dimensional spatial data collected by LiDAR sensors, consisting of individual measurement points with coordinates (x, y, z) and often intensity values. Unlike filtered or aggregated representations (e.g., elevation maps, occupancy grids), raw point clouds retain the full, high-resolution geometry of the environment.
 
@@ -29,8 +29,8 @@ Raw LiDAR point clouds provide dense spatial information without the computation
 
 ## Relationships
 
-- **Contrasts with:** [[Depth-Based Perception]] ⚠️ — while depth maps (e.g., from stereo cameras) are 2.5D projections, raw LiDAR point clouds provide full 3D structure without occlusion-based depth ambiguity.
-- **Used by:** [[Omni-Perception]] — this architecture leverages raw point clouds as its primary sensory input for learning locomotion and navigation policies.
+- **Contrasts with:** Depth-Based Perception ⚠️ — while depth maps (e.g., from stereo cameras) are 2.5D projections, raw LiDAR point clouds provide full 3D structure without occlusion-based depth ambiguity.
+- **Used by:** Omni-Perception — this architecture leverages raw point clouds as its primary sensory input for learning locomotion and navigation policies.
 
 ## Source
 
@@ -39,4 +39,4 @@ Raw LiDAR point clouds provide dense spatial information without the computation
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Raw LiDAR Point Clouds` --[[related_to]] ⚠️--> `Omni-Perception` _(wikilink)_
+- `Raw LiDAR Point Clouds` --related_to ⚠️--> `Omni-Perception` _(wikilink)_

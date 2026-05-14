@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Visual-Assisted Linguistic Memory Module
 
-A **Visual-Assisted Linguistic Memory Module** is a persistent cross-modal semantic memory algorithm designed for embodied navigation agents. It integrates visual and linguistic modalities to construct long-term memory of past observations, enabling agents to prevent repetitive exploration and infer movement trends in dynamic environments. This module is a core component of the [[VLingNav]] system.
+A **Visual-Assisted Linguistic Memory Module** is a persistent cross-modal semantic memory algorithm designed for embodied navigation agents. It integrates visual and linguistic modalities to construct long-term memory of past observations, enabling agents to prevent repetitive exploration and infer movement trends in dynamic environments. This module is a core component of the VLingNav system.
 
 ## Architecture
 
@@ -32,10 +32,10 @@ The module allows the agent to query past spatial information in order to avoid 
 
 ## Relationships
 
-- **Part of** → [[VLingNav]]
-- **Depends on** → [[Persistent Memory]] ⚠️, [[Cross-modal Mapping]] ⚠️
+- **Part of** → VLingNav
+- **Depends on** → Persistent Memory ⚠️, Cross-modal Mapping ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual-Assisted Linguistic Memory Module` --[[extends]] ⚠️--> `VLingNav`
+- `Visual-Assisted Linguistic Memory Module` --extends ⚠️--> `VLingNav`

@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Definition
 
-**TopoGraph-and-VisitInfo-Aware Prompting** is a prompt engineering strategy used within a [[Zero-Shot VLN Framework]] ⚠️ that provides a [[Multimodal Large Language Model (MLLM)]] with a dynamically updated [[Topological Graph with Visitation Records]]. By embedding both spatial connectivity and exploration history directly into the prompt, the agent can reason about visited versus unvisited regions and plan navigation actions accordingly.
+**TopoGraph-and-VisitInfo-Aware Prompting** is a prompt engineering strategy used within a Zero-Shot VLN Framework ⚠️ that provides a Multimodal Large Language Model (MLLM) with a dynamically updated Topological Graph with Visitation Records. By embedding both spatial connectivity and exploration history directly into the prompt, the agent can reason about visited versus unvisited regions and plan navigation actions accordingly.
 
 ## Overview
 
@@ -45,13 +45,13 @@ The topological graph is dynamically updated with nodes representing visited way
 
 ## Relationships
 
-- **uses** → [[Topological Graph with Visitation Records]]  
-- **uses** → [[Multimodal Large Language Model (MLLM)]]  
-- **depends_on** → [[Abstract Obstacle Map-Based Waypoint Predictor]]  
+- **uses** → Topological Graph with Visitation Records  
+- **uses** → Multimodal Large Language Model (MLLM)  
+- **depends_on** → Abstract Obstacle Map-Based Waypoint Predictor  
 
-The [[Abstract Obstacle Map-Based Waypoint Predictor]] provides candidate waypoints, which are then filtered or prioritized by the MLLM using the visitation‑aware prompt.
+The Abstract Obstacle Map-Based Waypoint Predictor provides candidate waypoints, which are then filtered or prioritized by the MLLM using the visitation‑aware prompt.
 
-> **Note**: An automatic entity linker also suggested that this algorithm [[extends]] ⚠️ the [[Abstract Obstacle Map-Based Waypoint Predictor]], but the source material describes a dependency relationship only. The discrepancy is recorded here for review.
+> **Note**: An automatic entity linker also suggested that this algorithm extends ⚠️ the Abstract Obstacle Map-Based Waypoint Predictor, but the source material describes a dependency relationship only. The discrepancy is recorded here for review.
 
 ## Error Correction
 

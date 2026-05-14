@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Panoramic Occupancy Dataset for Humanoid Robots** is the first panoramic occupancy dataset specifically curated for the [[humanoid robots]] ⚠️ ⚠️ domain. It provides a structured benchmark for training and evaluating occupancy perception systems in humanoid platforms, addressing the prior lack of specialized datasets for this modality.
+The **Panoramic Occupancy Dataset for Humanoid Robots** is the first panoramic occupancy dataset specifically curated for the humanoid robots ⚠️ ⚠️ domain. It provides a structured benchmark for training and evaluating occupancy perception systems in humanoid platforms, addressing the prior lack of specialized datasets for this modality.
 
 ## Description
 
@@ -29,16 +29,16 @@ The dataset offers a valuable resource for future research in humanoid robot per
 
 ## Relationships
 
-- **Created by** → [[Humanoid Occupancy project]] ⚠️ ⚠️
-- **Used for** → Training and evaluation of [[occupancy perception systems]] ⚠️ ⚠️
+- **Created by** → Humanoid Occupancy project ⚠️ ⚠️
+- **Used for** → Training and evaluation of occupancy perception systems ⚠️ ⚠️
 
 ## Related Pages
 
-- [[Humanoid Occupancy project]] ⚠️ ⚠️ (creator project)
-- [[occupancy perception systems]] ⚠️ ⚠️ (primary application)
-- [[humanoid robots]] ⚠️ ⚠️ (target domain)
-- [[occupancy grid mapping]] ⚠️ (underlying technique)
-- [[panoramic imaging]] ⚠️ (sensor modality)
+- Humanoid Occupancy project ⚠️ ⚠️ (creator project)
+- occupancy perception systems ⚠️ ⚠️ (primary application)
+- humanoid robots ⚠️ ⚠️ (target domain)
+- occupancy grid mapping ⚠️ (underlying technique)
+- panoramic imaging ⚠️ (sensor modality)
 
 ## Sources
 

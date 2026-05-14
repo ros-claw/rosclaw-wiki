@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Run Across Tilted Ramps (Parkour)
 
-The **Run across tilted ramps** skill enables a robot to perform dynamic locomotion across slanted surfaces, simulating parkour-style traversal on inclined ramps. It is a core capability demonstrated by the [[Extreme Parkour Robot]] under the control of the [[Extreme Parkour Policy]]. The skill emphasizes stability, agility, and adaptability on non-flat terrain.
+The **Run across tilted ramps** skill enables a robot to perform dynamic locomotion across slanted surfaces, simulating parkour-style traversal on inclined ramps. It is a core capability demonstrated by the Extreme Parkour Robot under the control of the Extreme Parkour Policy. The skill emphasizes stability, agility, and adaptability on non-flat terrain.
 
 ## Parameters
 
@@ -31,8 +31,8 @@ The **Run across tilted ramps** skill enables a robot to perform dynamic locomot
 
 ## Relationships
 
-- **Performed by**: [[Extreme Parkour Robot]] (implements)
-- **Controlled by**: [[Extreme Parkour Policy]] (depends_on)
+- **Performed by**: Extreme Parkour Robot (implements)
+- **Controlled by**: Extreme Parkour Policy (depends_on)
 
 ## Description
 

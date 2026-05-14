@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## LLM-based Planner
 
-An **LLM-based Planner** is an algorithmic approach that leverages a Large Language Model (LLM) to generate and adapt navigation plans from natural language instructions. It operates within a [[Hierarchical Scene Graph Construction]] framework built on top of a [[Semantic Object Map]] ⚠️ ⚠️ ⚠️, enabling open-vocabulary reasoning about the environment.
+An **LLM-based Planner** is an algorithmic approach that leverages a Large Language Model (LLM) to generate and adapt navigation plans from natural language instructions. It operates within a Hierarchical Scene Graph Construction framework built on top of a Semantic Object Map ⚠️ ⚠️ ⚠️, enabling open-vocabulary reasoning about the environment.
 
 ### Input & Context
 
@@ -31,17 +31,17 @@ The LLM-based planner can:
 
 ### Dependencies
 
-- **depends_on**: [[Hierarchical Scene Graph Construction]] and [[Semantic Object Map]] ⚠️ ⚠️ ⚠️ — these provide the symbolic grounding necessary for the LLM to reason about the physical world.
+- **depends_on**: Hierarchical Scene Graph Construction and Semantic Object Map ⚠️ ⚠️ ⚠️ — these provide the symbolic grounding necessary for the LLM to reason about the physical world.
 
 ### Related Pages
 
-- [[Large Language Models]] — the foundation of the planner.
-- [[Semantic Navigation]] ⚠️ ⚠️ — the broader family of approaches that the LLM-based planner belongs to.
-- [[Scene Graph]] ⚠️ — the representation format used to encode the environment.
+- Large Language Models — the foundation of the planner.
+- Semantic Navigation ⚠️ ⚠️ — the broader family of approaches that the LLM-based planner belongs to.
+- Scene Graph ⚠️ — the representation format used to encode the environment.
 
 ### Relationship Annotations
 
-- **implements** [[Semantic Navigation]] ⚠️ ⚠️ algorithms.
-- **uses** [[Hierarchical Scene Graph Construction]].
-- **uses** [[Semantic Object Map]] ⚠️ ⚠️ ⚠️.
+- **implements** Semantic Navigation ⚠️ ⚠️ algorithms.
+- **uses** Hierarchical Scene Graph Construction.
+- **uses** Semantic Object Map ⚠️ ⚠️ ⚠️.
 - **depends_on** both of the above.

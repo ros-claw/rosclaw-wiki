@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 ## Domain and Method
 
-Zero-shot sim-to-real transfer in this context is applied to the **navigation** domain. The method used is an **end-to-end learned policy** that leverages [[privileged information guidance]] — i.e., access to ground-truth state information during training that is not available at deployment time. The policy is trained fully in simulation but generalizes to diverse real-world environments without requiring any real-world adaptation.
+Zero-shot sim-to-real transfer in this context is applied to the **navigation** domain. The method used is an **end-to-end learned policy** that leverages privileged information guidance — i.e., access to ground-truth state information during training that is not available at deployment time. The policy is trained fully in simulation but generalizes to diverse real-world environments without requiring any real-world adaptation.
 
 ## Capabilities
 
@@ -28,8 +28,8 @@ Zero-shot sim-to-real transfer in this context is applied to the **navigation** 
 
 ## Relationships
 
-- **Used by**: [[Navigation Diffusion Policy (NavDP)]] — zero-shot sim-to-real transfer is a key enabler for NavDP’s ability to navigate dynamic open-world environments.
-- **Depends on**: [[privileged information guidance]] — the policy learns to infer hidden real-world dynamics by being conditioned on privileged simulation states during training. This relationship is an implementation of @depends_on.
+- **Used by**: Navigation Diffusion Policy (NavDP) — zero-shot sim-to-real transfer is a key enabler for NavDP’s ability to navigate dynamic open-world environments.
+- **Depends on**: privileged information guidance — the policy learns to infer hidden real-world dynamics by being conditioned on privileged simulation states during training. This relationship is an implementation of @depends_on.
 
 ## Significance
 
@@ -42,4 +42,4 @@ Zero-shot sim-to-real transfer allows robots to navigate dynamic open-world envi
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Zero-Shot Sim-to-Real Transfer` --[[related_to]] ⚠️--> `Navigation Diffusion Policy (NavDP)` _(wikilink)_
+- `Zero-Shot Sim-to-Real Transfer` --related_to ⚠️--> `Navigation Diffusion Policy (NavDP)` _(wikilink)_

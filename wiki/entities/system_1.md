@@ -14,13 +14,13 @@ source_type: arxiv_paper
 
 # System 1
 
-**System 1** is the **local motion controller** component within the [[DualVLN]] architecture. It is implemented as a **lightweight multi-modal conditioning Diffusion Transformer policy** that translates high-level navigation intent into smooth, executable trajectories.
+**System 1** is the **local motion controller** component within the DualVLN architecture. It is implemented as a **lightweight multi-modal conditioning Diffusion Transformer policy** that translates high-level navigation intent into smooth, executable trajectories.
 
 ## Input
 
 System 1 accepts two types of input:
 - **Explicit pixel goals** — visual targets derived from the environment.
-- **Latent features** from [[System 2]] — the higher-level reasoning module that provides task context and subgoal planning.
+- **Latent features** from System 2 — the higher-level reasoning module that provides task context and subgoal planning.
 
 ## Capabilities
 
@@ -30,9 +30,9 @@ System 1 accepts two types of input:
 
 ## Relationships
 
-- **Part of**: [[DualVLN]] — System 1 forms the lower‑level motion layer of the dual-system visual language navigation framework.
-- **Depends on**: [[System 2]] — System 1 relies on System 2 for task decomposition, global planning, and latent features that condition its policy.
-- **Uses**: [[Diffusion Transformer]] ⚠️ — the underlying generative model architecture for trajectory prediction.
+- **Part of**: DualVLN — System 1 forms the lower‑level motion layer of the dual-system visual language navigation framework.
+- **Depends on**: System 2 — System 1 relies on System 2 for task decomposition, global planning, and latent features that condition its policy.
+- **Uses**: Diffusion Transformer ⚠️ — the underlying generative model architecture for trajectory prediction.
 
 ## Source
 
@@ -41,4 +41,4 @@ System 1 accepts two types of input:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `System 1` --[[uses]] ⚠️--> `DualVLN`
+- `System 1` --uses ⚠️--> `DualVLN`

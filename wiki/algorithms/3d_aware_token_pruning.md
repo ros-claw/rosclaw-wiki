@@ -28,13 +28,13 @@ source_type: arxiv_paper
 
 #### Relationships
 
-- **Used by:** [[StreamVLN]] uses 3D-Aware Token Pruning as part of its slow-updating memory context; also employed in [[SlowFast Context Modeling]].
-- **Depends on:** the [[3D spatial structure of visual data]] ⚠️ to identify which tokens are spatially redundant and safe to prune.
+- **Used by:** StreamVLN uses 3D-Aware Token Pruning as part of its slow-updating memory context; also employed in SlowFast Context Modeling.
+- **Depends on:** the 3D spatial structure of visual data ⚠️ to identify which tokens are spatially redundant and safe to prune.
 
 The algorithm is described in the paper `papers/2507.05240.pdf` and forms a core component of the **StreamVLN** architecture, where it compresses historical frames within a slow-updating visual context buffer.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `3D-Aware Token Pruning` --[[extends]] ⚠️ ⚠️--> `StreamVLN`
-- `3D-Aware Token Pruning` --[[extends]] ⚠️ ⚠️--> `SlowFast Context Modeling`
+- `3D-Aware Token Pruning` --extends ⚠️ ⚠️--> `StreamVLN`
+- `3D-Aware Token Pruning` --extends ⚠️ ⚠️--> `SlowFast Context Modeling`

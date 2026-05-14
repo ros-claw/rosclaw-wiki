@@ -23,7 +23,7 @@ source_type: arxiv_paper
 
 ### Role in the ROSClaw Knowledge Base
 
-In the context of embodied intelligence, 3D Gaussian Splatting is primarily employed by the [[VLA-AN]] (Vision-Language-Action for Aerial Navigation) system, where it serves as a core dataset generation component. The rendered outputs from 3D Gaussian Splatting are used to train policies that generalize from simulated environments to real-world aerial navigation scenarios.
+In the context of embodied intelligence, 3D Gaussian Splatting is primarily employed by the VLA-AN (Vision-Language-Action for Aerial Navigation) system, where it serves as a core dataset generation component. The rendered outputs from 3D Gaussian Splatting are used to train policies that generalize from simulated environments to real-world aerial navigation scenarios.
 
 ### Dataset Construction
 
@@ -37,10 +37,10 @@ This approach enables the creation of large-scale, photo-realistic datasets with
 
 ### Related Entities
 
-- **[[VLA-AN]]** – Uses 3D Gaussian Splatting for dataset construction. (*uses*)
-- **[[Sim-to-Real Transfer]]** – The bridging capability directly facilitates transfer learning. (*implements*)
-- **[[Novel View Synthesis]] ⚠️** – Core algorithmic foundation. (*part_of*)
-- **[[Aerial Navigation]] ⚠️** – Downstream application domain. (*used_for*)
+- **VLA-AN** – Uses 3D Gaussian Splatting for dataset construction. (*uses*)
+- **Sim-to-Real Transfer** – The bridging capability directly facilitates transfer learning. (*implements*)
+- **Novel View Synthesis ⚠️** – Core algorithmic foundation. (*part_of*)
+- **Aerial Navigation ⚠️** – Downstream application domain. (*used_for*)
 
 ### Status
 
@@ -49,4 +49,4 @@ This page is derived from the source: `data/raw/papers/2512.15258.pdf`. The algo
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `3D Gaussian Splatting` --[[extends]] ⚠️--> `VLA-AN`
+- `3D Gaussian Splatting` --extends ⚠️--> `VLA-AN`

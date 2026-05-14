@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Adaptive Vocabulary Update
 
-**Adaptive Vocabulary Update** is an algorithm that enables open-vocabulary navigation by dynamically extending or modifying the set of recognizable semantic labels during inference. It is a core component of the [[MSGNav]] system.
+**Adaptive Vocabulary Update** is an algorithm that enables open-vocabulary navigation by dynamically extending or modifying the set of recognizable semantic labels during inference. It is a core component of the MSGNav system.
 
 ## Overview
 
@@ -22,13 +22,13 @@ Traditional navigation systems are limited to a fixed set of object categories o
 
 ## Role in MSGNav
 
-As part of [[MSGNav]], the algorithm maintains an updatable vocabulary that interacts with the system’s perception and planning modules. When a new label is encountered (e.g., from a user command or visual input), the vocabulary is updated to include it. This updated vocabulary is then used for grounding the instruction in the current environment, enabling zero-shot generalization to unseen categories.
+As part of MSGNav, the algorithm maintains an updatable vocabulary that interacts with the system’s perception and planning modules. When a new label is encountered (e.g., from a user command or visual input), the vocabulary is updated to include it. This updated vocabulary is then used for grounding the instruction in the current environment, enabling zero-shot generalization to unseen categories.
 
 ## Relationship with Other Components
 
-- **Part of** → [[MSGNav]]  
-- **Enables** → [[Open Vocabulary]] ⚠️ navigation  
-- **Depends on** → The underlying feature extractor and semantic similarity metric (typically from a [[Vision-Language Model]] or [[CLIP]])
+- **Part of** → MSGNav  
+- **Enables** → Open Vocabulary ⚠️ navigation  
+- **Depends on** → The underlying feature extractor and semantic similarity metric (typically from a Vision-Language Model or CLIP)
 
 ## References
 
@@ -37,5 +37,5 @@ As part of [[MSGNav]], the algorithm maintains an updatable vocabulary that inte
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Adaptive Vocabulary Update` --[[extends]] ⚠️ ⚠️--> `MSGNav`
-- `Adaptive Vocabulary Update` --[[extends]] ⚠️ ⚠️--> `CLIP`
+- `Adaptive Vocabulary Update` --extends ⚠️ ⚠️--> `MSGNav`
+- `Adaptive Vocabulary Update` --extends ⚠️ ⚠️--> `CLIP`

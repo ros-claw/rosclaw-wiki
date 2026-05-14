@@ -24,9 +24,9 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Used by** — [[CL-CoTNav]] (Continual Learning Chain-of-Thought Navigation) and other ObjectNav methods that rely on Habitat's standardized evaluation protocol and diverse scenes.
-- **Supports** — [[ObjectNav]] tasks, where an agent must locate and navigate to a target object category without an explicit map.
-- **Depends on** — [[PyTorch]] ⚠️ or similar deep learning frameworks for agent model integration, and [[ROS]] ⚠️ for interfacing with real-world robotic hardware (used in sim-to-real pipelines).
+- **Used by** — CL-CoTNav (Continual Learning Chain-of-Thought Navigation) and other ObjectNav methods that rely on Habitat's standardized evaluation protocol and diverse scenes.
+- **Supports** — ObjectNav tasks, where an agent must locate and navigate to a target object category without an explicit map.
+- **Depends on** — PyTorch ⚠️ or similar deep learning frameworks for agent model integration, and ROS ⚠️ for interfacing with real-world robotic hardware (used in sim-to-real pipelines).
 
 ## References
 
@@ -35,4 +35,4 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `AI Habitat` --[[uses]] ⚠️--> `CL-CoTNav`
+- `AI Habitat` --uses ⚠️--> `CL-CoTNav`

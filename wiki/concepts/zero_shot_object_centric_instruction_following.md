@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-Zero-shot Object-centric Instruction Following is a [[Concept]] ⚠️ that enables a robot or agent to execute natural language instructions involving specific objects in previously unseen environments without any fine-tuning or environment-specific training. The paradigm combines the semantic understanding of [[Foundation Models]] (e.g., large language models, vision-language models) with the robust spatial mapping of traditional [[SLAM]] (Simultaneous Localization and Mapping) techniques. This integration allows the agent to ground abstract, object-referring commands to physical landmarks and execute them zero-shot.
+Zero-shot Object-centric Instruction Following is a Concept ⚠️ that enables a robot or agent to execute natural language instructions involving specific objects in previously unseen environments without any fine-tuning or environment-specific training. The paradigm combines the semantic understanding of Foundation Models (e.g., large language models, vision-language models) with the robust spatial mapping of traditional SLAM (Simultaneous Localization and Mapping) techniques. This integration allows the agent to ground abstract, object-referring commands to physical landmarks and execute them zero-shot.
 
 ## Parameters
 
@@ -24,7 +24,7 @@ Zero-shot Object-centric Instruction Following is a [[Concept]] ⚠️ that enab
 |-----------|-------|
 | **Paradigm** | Zero-shot |
 | **Task** | Object-centric instruction following |
-| **Integration** | Foundation models ↔ Traditional navigation ([[SLAM]], [[Mapping]] ⚠️) |
+| **Integration** | Foundation models ↔ Traditional navigation (SLAM, Mapping ⚠️) |
 
 ## Capabilities
 
@@ -33,7 +33,7 @@ Zero-shot Object-centric Instruction Following is a [[Concept]] ⚠️ that enab
 
 ## Relationships
 
-- **Implemented by** → [[Language-Inferred Factor Graph for Instruction Following (LIFGIF)]] – This architecture realizes the zero-shot object-centric instruction following paradigm by constructing a factor graph from language cues and SLAM-based maps.
+- **Implemented by** → Language-Inferred Factor Graph for Instruction Following (LIFGIF) – This architecture realizes the zero-shot object-centric instruction following paradigm by constructing a factor graph from language cues and SLAM-based maps.
 
 ## Context
 
@@ -41,10 +41,10 @@ Zero-shot Object-centric Instruction Following bridges two historically separate
 
 ---
 
-*See also: [[Natural Language Grounding]] ⚠️, [[Factor Graphs]] ⚠️, [[Zero-shot Learning]], [[Object Detection]], [[Semantic Mapping]] ⚠️*
+*See also: Natural Language Grounding ⚠️, Factor Graphs ⚠️, Zero-shot Learning, Object Detection, Semantic Mapping ⚠️*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Zero-shot Object-centric Instruction Following` --[[related_to]] ⚠️ ⚠️--> `SLAM` _(wikilink)_
-- `Zero-shot Object-centric Instruction Following` --[[related_to]] ⚠️ ⚠️--> `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` _(wikilink)_
+- `Zero-shot Object-centric Instruction Following` --related_to ⚠️ ⚠️--> `SLAM` _(wikilink)_
+- `Zero-shot Object-centric Instruction Following` --related_to ⚠️ ⚠️--> `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` _(wikilink)_

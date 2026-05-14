@@ -32,17 +32,17 @@ The queue records exploration history, allowing the system to maintain context o
 
 ## Relationships
 
-- **part_of** → [[Memory-guided Decision-Making mechanism]] ⚠️  
+- **part_of** → Memory-guided Decision-Making mechanism ⚠️  
   The queue is a core component of a larger mechanism that uses memory to inform step-by-step decisions.
-- **used_by** → [[PanoNav]]  
+- **used_by** → PanoNav  
   The queue is employed by the PanoNav system to guide navigation tasks.
 
 ## See also
 
-- [[Navigation]] ⚠️
-- [[Exploration Strategy]] ⚠️
+- Navigation ⚠️
+- Exploration Strategy ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Dynamic Bounded Memory Queue` --[[related_to]] ⚠️--> `PanoNav` _(wikilink)_
+- `Dynamic Bounded Memory Queue` --related_to ⚠️--> `PanoNav` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Bird's-Eye-View (BEV) Representation
 
-**Bird's-Eye-View (BEV)** is a grid-level representation of the environment as seen from an overhead perspective. It encodes 3D scene geometry, captures spatial layouts and relationships, and reduces ambiguity in panoramic view selection. BEV representations are commonly used in [[autonomous driving]] ⚠️ ⚠️ and [[indoor navigation]] ⚠️ ⚠️ to provide geometric and semantic cues.
+**Bird's-Eye-View (BEV)** is a grid-level representation of the environment as seen from an overhead perspective. It encodes 3D scene geometry, captures spatial layouts and relationships, and reduces ambiguity in panoramic view selection. BEV representations are commonly used in autonomous driving ⚠️ ⚠️ and indoor navigation ⚠️ ⚠️ to provide geometric and semantic cues.
 
 ## Parameters
 
@@ -30,10 +30,10 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Used in:** [[BSG (BEV Scene Graph)]]
-- **Related to:** [[autonomous driving]] ⚠️ ⚠️, [[indoor navigation]] ⚠️ ⚠️
+- **Used in:** BSG (BEV Scene Graph)
+- **Related to:** autonomous driving ⚠️ ⚠️, indoor navigation ⚠️ ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Bird's-Eye-View (BEV) Representation` --[[related_to]] ⚠️--> `BSG (BEV Scene Graph)` _(wikilink)_
+- `Bird's-Eye-View (BEV) Representation` --related_to ⚠️--> `BSG (BEV Scene Graph)` _(wikilink)_

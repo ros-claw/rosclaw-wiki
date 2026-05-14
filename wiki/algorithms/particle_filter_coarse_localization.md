@@ -18,17 +18,17 @@ source_type: arxiv_paper
 # Particle Filter Coarse Localization
 
 **Type**: Algorithm  
-**Source**: [[arXiv:2602.19308]] ⚠️ (WildOS paper), supplemented by WildOS blog post
+**Source**: arXiv:2602.19308 ⚠️ (WildOS paper), supplemented by WildOS blog post
 
 ## Overview
 
-**Particle Filter Coarse Localization** is a localization algorithm designed for navigation toward distant semantic goals. Unlike traditional particle filters that require a global map and precise sensor measurements, this algorithm estimates candidate goal positions beyond the robot's depth-sensing horizon using only an open-vocabulary target query and image observations. It is a core component of the [[WildOS]] system for long-range exploration.
+**Particle Filter Coarse Localization** is a localization algorithm designed for navigation toward distant semantic goals. Unlike traditional particle filters that require a global map and precise sensor measurements, this algorithm estimates candidate goal positions beyond the robot's depth-sensing horizon using only an open-vocabulary target query and image observations. It is a core component of the WildOS system for long-range exploration.
 
 This method enables a robot to reason about where a semantically described object (e.g., "a red mailbox") is located across a large environment, even when the object is not immediately visible or within range of onboard depth sensors. The output is a coarse 3D target location beyond direct sensor range.
 
 ## Method
 
-A particle filter maintains a distribution over possible goal locations. Each particle represents a candidate position in the robot's internal navigation graph. The weight of each particle is computed based on an **object similarity score** derived from [[ExploRFM]], which compares the open-vocabulary query to observations at that position. Over time, particles converge to regions that are semantically consistent with the target query.
+A particle filter maintains a distribution over possible goal locations. Each particle represents a candidate position in the robot's internal navigation graph. The weight of each particle is computed based on an **object similarity score** derived from ExploRFM, which compares the open-vocabulary query to observations at that position. Over time, particles converge to regions that are semantically consistent with the target query.
 
 More specifically, the algorithm performs **probabilistic goal triangulation from multiple viewpoints**. Object detections from several vantage points are fused probabilistically to estimate a coarse 3D target location beyond direct sensor range. Projected particles represent the uncertainty in this goal location.
 
@@ -56,20 +56,20 @@ Object detections from multiple viewpoints are fused by a probabilistic goal tri
 
 ## Relationships
 
-- **Part of**: [[WildOS]]
-- **Depends on**: [[Object similarity scoring]] ⚠️ from [[ExploRFM]]
-- **Enables**: [[Planning toward distant goals]] ⚠️ (navigation to semantically identified locations)
+- **Part of**: WildOS
+- **Depends on**: Object similarity scoring ⚠️ from ExploRFM
+- **Enables**: Planning toward distant goals ⚠️ (navigation to semantically identified locations)
 
 ## See Also
 
-- [[Particle Filter]] ⚠️ (general algorithm)
-- [[Coarse-to-fine localization]] ⚠️
-- [[Long-horizon semantic navigation]] ⚠️
-- [[WildOS]] (system architecture)
-- [[ExploRFM]] (similarity scoring backbone)
+- Particle Filter ⚠️ (general algorithm)
+- Coarse-to-fine localization ⚠️
+- Long-horizon semantic navigation ⚠️
+- WildOS (system architecture)
+- ExploRFM (similarity scoring backbone)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Particle Filter Coarse Localization` --[[extends]] ⚠️ ⚠️--> `WildOS`
-- `Particle Filter Coarse Localization` --[[extends]] ⚠️ ⚠️--> `ExploRFM`
+- `Particle Filter Coarse Localization` --extends ⚠️ ⚠️--> `WildOS`
+- `Particle Filter Coarse Localization` --extends ⚠️ ⚠️--> `ExploRFM`

@@ -15,11 +15,11 @@ source_type: arxiv_paper
 
 # Gibson Dataset
 
-The **Gibson Dataset** is a dataset of real-world indoor scenes used for navigation tasks in [[Habitat]]. It provides photo-realistic indoor environments and a connectivity graph that serves as spatial priors for navigation and planning tasks in embodied AI research.
+The **Gibson Dataset** is a dataset of real-world indoor scenes used for navigation tasks in Habitat. It provides photo-realistic indoor environments and a connectivity graph that serves as spatial priors for navigation and planning tasks in embodied AI research.
 
 ## Description
 
-The Gibson Dataset consists of real-world indoor environments scanned and reconstructed to support embodied AI agents. It is widely used as a benchmark and training resource for navigation tasks, especially within the [[Habitat]] simulation platform.
+The Gibson Dataset consists of real-world indoor environments scanned and reconstructed to support embodied AI agents. It is widely used as a benchmark and training resource for navigation tasks, especially within the Habitat simulation platform.
 
 ## Capabilities
 
@@ -28,10 +28,10 @@ The Gibson Dataset consists of real-world indoor environments scanned and recons
 
 ## Relationships
 
-- Used by [[GVNav]] for ground-truth-based navigation evaluation.
-- Used in [[VLFM]] evaluation.
+- Used by GVNav for ground-truth-based navigation evaluation.
+- Used in VLFM evaluation.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Gibson dataset` --[[uses]] ⚠️--> `GVNav`
+- `Gibson dataset` --uses ⚠️--> `GVNav`

@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Navigator
 
-**Navigator** is a **language-guided navigation model** that learns to follow natural language instructions to navigate through environments. It is a core component of the [[Self-Refining Data Flywheel (SRDF)]] pipeline.
+**Navigator** is a **language-guided navigation model** that learns to follow natural language instructions to navigate through environments. It is a core component of the Self-Refining Data Flywheel (SRDF) pipeline.
 
 ## Overview
 
-The Navigator model takes an instruction (e.g., "go to the kitchen and pick up the apple") and generates a trajectory — a sequence of actions — to execute the instruction. It is trained on [[instruction-trajectory pairs]] ⚠️ ⚠️ and employs a data filtering mechanism that enables a self-refining flywheel: the model itself helps curate higher-quality training data, leading to iterative improvement.
+The Navigator model takes an instruction (e.g., "go to the kitchen and pick up the apple") and generates a trajectory — a sequence of actions — to execute the instruction. It is trained on instruction-trajectory pairs ⚠️ ⚠️ and employs a data filtering mechanism that enables a self-refining flywheel: the model itself helps curate higher-quality training data, leading to iterative improvement.
 
 ## Capabilities
 
@@ -40,11 +40,11 @@ On the Room-to-Room (R2R) benchmark, the Navigator achieves an **SPL of 78%** wh
 
 ## Relationships
 
-- [[Navigator]] **depends on** [[instruction-trajectory pairs]] ⚠️ ⚠️ for training.
-- [[Navigator]] **implements** language-guided navigation.
-- [[Navigator]] **is used by** [[Self-Refining Data Flywheel (SRDF)]].
+- Navigator **depends on** instruction-trajectory pairs ⚠️ ⚠️ for training.
+- Navigator **implements** language-guided navigation.
+- Navigator **is used by** Self-Refining Data Flywheel (SRDF).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Navigator` --[[uses]] ⚠️--> `Self-Refining Data Flywheel (SRDF)`
+- `Navigator` --uses ⚠️--> `Self-Refining Data Flywheel (SRDF)`

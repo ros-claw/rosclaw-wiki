@@ -28,13 +28,13 @@ PD-RiskNet uses a hierarchical design: a proximal sub-network captures fine-grai
 
 ### Relationships
 
-- **Part of** [[Omni-Perception]] — PD-RiskNet serves as the risk-assessment module within the broader omnidirectional perception framework.
-- **Used in** [[end-to-end locomotion policy]] ⚠️ — PD-RiskNet provides risk-aware representations directly to a locomotion policy, enabling reactive and anticipatory control.
-- **Uses** [[LiDAR]] — the algorithm operates directly on raw point cloud data from LiDAR sensors.
+- **Part of** Omni-Perception — PD-RiskNet serves as the risk-assessment module within the broader omnidirectional perception framework.
+- **Used in** end-to-end locomotion policy ⚠️ — PD-RiskNet provides risk-aware representations directly to a locomotion policy, enabling reactive and anticipatory control.
+- **Uses** LiDAR — the algorithm operates directly on raw point cloud data from LiDAR sensors.
 - **Depends on** spatio-temporal processing — relies on sequential point cloud data to produce time-aware risk estimates.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `PD-RiskNet` --[[extends]] ⚠️--> `Omni-Perception`
-- `PD-RiskNet` --[[implements]] ⚠️--> `LiDAR`
+- `PD-RiskNet` --extends ⚠️--> `Omni-Perception`
+- `PD-RiskNet` --implements ⚠️--> `LiDAR`

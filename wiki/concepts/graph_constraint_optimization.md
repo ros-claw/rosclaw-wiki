@@ -32,15 +32,15 @@ The system treats path generation as a **constraint satisfaction problem (CSP)**
 
 ### Relationship to GC-VLN
 
-Graph Constraint Optimization is the core reasoning engine used in **[[GC-VLN]]**, a Vision-Language Navigation system. GC-VLN implements graph constraint optimization to perform grounded, zero-shot navigation in continuous 3D scenes. The method uses a pre-trained open-vocabulary model to detect nodes (objects) and a constraint solver to generate feasible paths.
+Graph Constraint Optimization is the core reasoning engine used in **GC-VLN**, a Vision-Language Navigation system. GC-VLN implements graph constraint optimization to perform grounded, zero-shot navigation in continuous 3D scenes. The method uses a pre-trained open-vocabulary model to detect nodes (objects) and a constraint solver to generate feasible paths.
 
 ### See Also
 
-- [[Constraint Satisfaction Problem]] ⚠️ · [[Zero-Shot Learning]] in robotics · [[Interpretability in Navigation]] ⚠️
-- [[Vision-Language Navigation]] (VLN) – the broader task domain.
-- [[Spatial Reasoning]] ⚠️ – underlying cognitive module.
+- Constraint Satisfaction Problem ⚠️ · Zero-Shot Learning in robotics · Interpretability in Navigation ⚠️
+- Vision-Language Navigation (VLN) – the broader task domain.
+- Spatial Reasoning ⚠️ – underlying cognitive module.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Graph Constraint Optimization` --[[related_to]] ⚠️--> `GC-VLN` _(wikilink)_
+- `Graph Constraint Optimization` --related_to ⚠️--> `GC-VLN` _(wikilink)_

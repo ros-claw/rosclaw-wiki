@@ -27,11 +27,11 @@ The primary purpose of Cache-Enabled Execution is to **accelerate adaptation** b
 
 ## Cache Mechanism
 
-A dedicated cache stores **task-location trajectories** collected during an [[exploration phase]] ⚠️. When the robot encounters a known task at a known location, it queries the cache for a matching trajectory. If found, the cached trajectory is reused (potentially after minor adjustments), bypassing the full planning pipeline. The cache can be structured by task type and spatial coordinates, allowing efficient retrieval.
+A dedicated cache stores **task-location trajectories** collected during an exploration phase ⚠️. When the robot encounters a known task at a known location, it queries the cache for a matching trajectory. If found, the cached trajectory is reused (potentially after minor adjustments), bypassing the full planning pipeline. The cache can be structured by task type and spatial coordinates, allowing efficient retrieval.
 
 ## Relationships
 
-- **Used by**: [[VLN-Zero]] – the Visual Language Navigation framework that implements this concept to enhance embodied navigation.
-- **Depends on**: [[Exploration phase trajectories]] ⚠️ – the set of trajectories generated during an initial exploration of the environment, which populate the cache prior to deployment.
+- **Used by**: VLN-Zero – the Visual Language Navigation framework that implements this concept to enhance embodied navigation.
+- **Depends on**: Exploration phase trajectories ⚠️ – the set of trajectories generated during an initial exploration of the environment, which populate the cache prior to deployment.
 
 *Source: arxiv paper 2509.18592*

@@ -47,11 +47,11 @@ LANA uses two encoders (one for routes, one for language) that are shared by two
 ### Relationships
 
 - **Uses:**
-    - [[Encoder-decoder architecture]] ⚠️ — LANA’s core architecture relies on shared encoders and separate decoders for the two tasks.
-    - [[Cross-task knowledge]] ⚠️ — Joint training allows the agent to leverage shared representations between instruction following and generation.
+    - Encoder-decoder architecture ⚠️ — LANA’s core architecture relies on shared encoders and separate decoders for the two tasks.
+    - Cross-task knowledge ⚠️ — Joint training allows the agent to leverage shared representations between instruction following and generation.
 - **Depends on:**
-    - [[Visual-Language Navigation (VLN)]] ⚠️ — LANA is an algorithm designed for the VLN task, operating on visual input and natural language commands.
-    - [[Pretraining and fine-tuning]] ⚠️ — The model follows a two-stage training paradigm where large-scale pretraining is followed by task-specific fine-tuning.
+    - Visual-Language Navigation (VLN) ⚠️ — LANA is an algorithm designed for the VLN task, operating on visual input and natural language commands.
+    - Pretraining and fine-tuning ⚠️ — The model follows a two-stage training paradigm where large-scale pretraining is followed by task-specific fine-tuning.
 - **Supersedes:**
     - Task‑specific VLN agents that only perform instruction following, by adding instruction generation capability without a separate generation pipeline.
 

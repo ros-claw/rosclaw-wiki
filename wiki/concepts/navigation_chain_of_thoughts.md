@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Navigation Chain of Thoughts
 
-**Navigation Chain of Thoughts** is a reasoning module within [[MC-GPT]] that leverages [[human_navigation_examples]] ⚠️ ⚠️ ⚠️ to produce diverse chains of reasoning for navigation tasks. It enriches navigation strategy diversity and improves decision-making in [[Visual Language Navigation (VLN)]] ⚠️.
+**Navigation Chain of Thoughts** is a reasoning module within MC-GPT that leverages human_navigation_examples ⚠️ ⚠️ ⚠️ to produce diverse chains of reasoning for navigation tasks. It enriches navigation strategy diversity and improves decision-making in Visual Language Navigation (VLN) ⚠️.
 
 ## Key Insight
 
@@ -22,20 +22,20 @@ This approach addresses a fundamental limitation of prior LLM-based VLN systems:
 
 ## Parameters
 
-- **Based on**: [[human_navigation_examples]] ⚠️ ⚠️ ⚠️
+- **Based on**: human_navigation_examples ⚠️ ⚠️ ⚠️
 - **Purpose**: Enrich navigation strategy diversity
 
 ## Capabilities
 
 - Generates diverse navigation reasoning chains
-- Improves decision-making in [[VLN]] ⚠️
+- Improves decision-making in VLN ⚠️
 
 ## Relationships
 
-- **part_of**: [[MC-GPT]]
-- **uses**: [[Large Language Models]], [[human_navigation_examples]] ⚠️ ⚠️ ⚠️
+- **part_of**: MC-GPT
+- **uses**: Large Language Models, human_navigation_examples ⚠️ ⚠️ ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Navigation Chain of Thoughts` --[[related_to]] ⚠️--> `MC-GPT` _(wikilink)_
+- `Navigation Chain of Thoughts` --related_to ⚠️--> `MC-GPT` _(wikilink)_

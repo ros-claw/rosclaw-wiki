@@ -23,19 +23,19 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **Used by** [[Target-Bench]] — SLAM provides the trajectory and mapping inputs required for benchmarking target-driven navigation tasks. In the context of [[Target-Bench]], SLAM‑derived trajectories are used as ground‑truth motion tendency references for evaluating the predictions of video world models.
-- **Used by** [[Video World Models]] — SLAM-derived motion tendencies help condition or supervise video prediction models that learn physical dynamics from robot experience.
+- **Used by** Target-Bench — SLAM provides the trajectory and mapping inputs required for benchmarking target-driven navigation tasks. In the context of Target-Bench, SLAM‑derived trajectories are used as ground‑truth motion tendency references for evaluating the predictions of video world models.
+- **Used by** Video World Models — SLAM-derived motion tendencies help condition or supervise video prediction models that learn physical dynamics from robot experience.
 
 ### Role in Target-Bench
 
-SLAM‑based trajectories serve as ground‑truth motion tendency references for evaluating video world model predictions. This enables [[Target-Bench]] to assess whether a learned world model accurately captures the robot’s physical motion and spatial understanding, rather than relying solely on visual reconstruction fidelity.
+SLAM‑based trajectories serve as ground‑truth motion tendency references for evaluating video world model predictions. This enables Target-Bench to assess whether a learned world model accurately captures the robot’s physical motion and spatial understanding, rather than relying solely on visual reconstruction fidelity.
 
 ### Context
 
-SLAM is a mature field with many variants (EKF-SLAM, GraphSLAM, ORB-SLAM, etc.). In the context of the source paper (arxiv `2511.17792`), SLAM is employed as a preprocessing or grounding module to extract structured spatiotemporal information from raw sensor streams, which is then leveraged by video world models for downstream tasks such as planning and simulation. Its ability to produce high‑fidelity trajectory and motion cues makes it a reliable prior for learning‑based approaches. The use of SLAM as a ground‑truth reference in [[Target-Bench]] further underscores its value for benchmarking embodied AI systems.
+SLAM is a mature field with many variants (EKF-SLAM, GraphSLAM, ORB-SLAM, etc.). In the context of the source paper (arxiv `2511.17792`), SLAM is employed as a preprocessing or grounding module to extract structured spatiotemporal information from raw sensor streams, which is then leveraged by video world models for downstream tasks such as planning and simulation. Its ability to produce high‑fidelity trajectory and motion cues makes it a reliable prior for learning‑based approaches. The use of SLAM as a ground‑truth reference in Target-Bench further underscores its value for benchmarking embodied AI systems.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `SLAM` --[[used_by]] ⚠️ ⚠️--> `Target-Bench`
-- `SLAM` --[[used_by]] ⚠️ ⚠️--> `Video World Models`
+- `SLAM` --used_by ⚠️ ⚠️--> `Target-Bench`
+- `SLAM` --used_by ⚠️ ⚠️--> `Video World Models`

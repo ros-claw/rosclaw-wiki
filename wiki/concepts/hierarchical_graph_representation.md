@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Hierarchical Graph Representation
 
-**Hierarchical Graph Representation** is a multi-level graph structure for representing large-scale outdoor environments, based on [[Lane Graph Connectivity]]. It serves as a core component of the [[OpenGraph]] system, enabling scalable semantic understanding and navigation.
+**Hierarchical Graph Representation** is a multi-level graph structure for representing large-scale outdoor environments, based on Lane Graph Connectivity. It serves as a core component of the OpenGraph system, enabling scalable semantic understanding and navigation.
 
 ## Description
 
@@ -32,10 +32,10 @@ The environment is segmented into regions using lane connectivity, then objects 
 
 ## Relationships
 
-- **Part of**: [[OpenGraph]]
-- **Depends on**: [[Lane Graph Connectivity]]
+- **Part of**: OpenGraph
+- **Depends on**: Lane Graph Connectivity
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Hierarchical Graph Representation` --[[related_to]] ⚠️--> `OpenGraph` _(wikilink)_
+- `Hierarchical Graph Representation` --related_to ⚠️--> `OpenGraph` _(wikilink)_

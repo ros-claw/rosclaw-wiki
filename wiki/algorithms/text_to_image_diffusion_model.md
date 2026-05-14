@@ -18,7 +18,7 @@ A **Text-to-Image Diffusion Model** is a diffusion-based generative model that i
 
 ## Overview
 
-Diffusion models operate by learning to reverse a Markov chain of Gaussian noise applied to training images. When conditioned on text embeddings (e.g., from a [[CLIP]] encoder), the model generates images that align with the semantic content of the prompt. The architecture typically combines a U-Net denoiser with cross-attention layers for text conditioning. Input is a text prompt; output is a synthetic image.
+Diffusion models operate by learning to reverse a Markov chain of Gaussian noise applied to training images. When conditioned on text embeddings (e.g., from a CLIP encoder), the model generates images that align with the semantic content of the prompt. The architecture typically combines a U-Net denoiser with cross-attention layers for text conditioning. Input is a text prompt; output is a synthetic image.
 
 ## Capabilities
 
@@ -31,8 +31,8 @@ In the proposed pipeline, a text-to-image diffusion model synthesizes visual ima
 
 ## Relationships
 
-- **Used by** [[VLN-Imagine]] (also referred to as **Imagination-Augmented VLN**) — this model serves as the imagination module in the VLN-Imagine framework, producing visual goals for navigation. The two phrases describe the same framework from the same source paper.
-- **Depends on** — The algorithm itself is a type of [[Diffusion Model]] ⚠️ and relies on large-scale text-image datasets for training (e.g., [[LAION-5B]] ⚠️, [[Conceptual Captions]]).
+- **Used by** VLN-Imagine (also referred to as **Imagination-Augmented VLN**) — this model serves as the imagination module in the VLN-Imagine framework, producing visual goals for navigation. The two phrases describe the same framework from the same source paper.
+- **Depends on** — The algorithm itself is a type of Diffusion Model ⚠️ and relies on large-scale text-image datasets for training (e.g., LAION-5B ⚠️, Conceptual Captions).
 
 ## Architectural Notes
 
@@ -45,5 +45,5 @@ In the context of VLN-Imagine, the text-to-image diffusion model is fine-tuned t
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Text-to-Image Diffusion Model` --[[extends]] ⚠️--> `VLN-Imagine`
-- `Text-to-Image Diffusion Model` --[[used_by]] ⚠️--> `Imagination-Augmented VLN`
+- `Text-to-Image Diffusion Model` --extends ⚠️--> `VLN-Imagine`
+- `Text-to-Image Diffusion Model` --used_by ⚠️--> `Imagination-Augmented VLN`

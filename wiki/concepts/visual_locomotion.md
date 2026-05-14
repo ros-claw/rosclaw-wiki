@@ -24,14 +24,14 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Implements**: [[Visual Locomotion Policy]] ⚠️ — the learned neural network that directly maps visual and proprioceptive observations to joint actions.
-- **Used in**: [[ViNL]] — a system that combines visual navigation and visual locomotion to navigate cluttered environments.
+- **Implements**: Visual Locomotion Policy ⚠️ — the learned neural network that directly maps visual and proprioceptive observations to joint actions.
+- **Used in**: ViNL — a system that combines visual navigation and visual locomotion to navigate cluttered environments.
 
 ## Source
 
-Derived from the ViNL paper (2210.14791), which demonstrates a visual locomotion policy trained to step over obstacles while following velocity commands. The policy is trained in simulation and deployed on a real [[Unitree Go1]] ⚠️ robot.
+Derived from the ViNL paper (2210.14791), which demonstrates a visual locomotion policy trained to step over obstacles while following velocity commands. The policy is trained in simulation and deployed on a real Unitree Go1 ⚠️ robot.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Visual Locomotion` --[[related_to]] ⚠️--> `ViNL` _(wikilink)_
+- `Visual Locomotion` --related_to ⚠️--> `ViNL` _(wikilink)_

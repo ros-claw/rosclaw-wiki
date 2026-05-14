@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Instruction-trajectory compatibility model
 
-The **instruction-trajectory compatibility model** is a scoring mechanism used in [[Vision-and-Language Navigation (VLN) evaluation]] to assess how well a natural language instruction matches a given navigation trajectory. Unlike traditional metrics that compare against a reference instruction, this model evaluates individual instructions in isolation, making it more aligned with human wayfinding performance.
+The **instruction-trajectory compatibility model** is a scoring mechanism used in Vision-and-Language Navigation (VLN) evaluation to assess how well a natural language instruction matches a given navigation trajectory. Unlike traditional metrics that compare against a reference instruction, this model evaluates individual instructions in isolation, making it more aligned with human wayfinding performance.
 
 ### Capabilities
 
@@ -23,7 +23,7 @@ The **instruction-trajectory compatibility model** is a scoring mechanism used i
 
 ### Dependencies
 
-- `depends_on::[[Vision-and-Language Navigation (VLN) evaluation]]` – the model is designed as a component of the VLN evaluation framework and relies on standard VLN input formats (instruction text and sequence of viewpoints/actions).
+- `depends_on::Vision-and-Language Navigation (VLN) evaluation` – the model is designed as a component of the VLN evaluation framework and relies on standard VLN input formats (instruction text and sequence of viewpoints/actions).
 
 ### Source
 

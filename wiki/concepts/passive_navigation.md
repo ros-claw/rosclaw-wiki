@@ -14,13 +14,13 @@ source_type: arxiv_paper
 
 # Passive Navigation
 
-**Passive navigation** is a subtype of [[Multi-turn navigation]] in which the agent is not allowed to question the instruction. The agent must follow the provided turn-by-turn commands without requesting clarification, reprompting, or seeking additional information during the traversal.
+**Passive navigation** is a subtype of Multi-turn navigation in which the agent is not allowed to question the instruction. The agent must follow the provided turn-by-turn commands without requesting clarification, reprompting, or seeking additional information during the traversal.
 
 This contrasts with **active navigation** (or interactive navigation), where the agent can ask for disambiguation or query the environment to resolve ambiguity. In passive navigation, all instructions are assumed to be complete and sufficient at the outset, placing a greater burden on the agent to interpret and execute them correctly.
 
 ## Relationship to Multi‑turn Navigation
 
-- **subtype_of** [[Multi-turn navigation]] – passive navigation inherits the multi-turn (stepwise) structure of its parent category but restricts the interaction modality.
+- **subtype_of** Multi-turn navigation – passive navigation inherits the multi-turn (stepwise) structure of its parent category but restricts the interaction modality.
 
 ## Key Characteristics
 

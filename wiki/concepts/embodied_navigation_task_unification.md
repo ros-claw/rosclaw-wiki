@@ -16,11 +16,11 @@ source_type: arxiv_paper
 
 ## Definition
 
-**Embodied Navigation Task Unification** is a conceptual approach in embodied AI that trains a single model to perform multiple navigation-related tasks—such as [[instruction following]] ⚠️, [[object search]] ⚠️, [[Visual Question Answering|navigation QA]], [[person tracking]] ⚠️, and mixed long-horizon tasks—by harmonizing their input and output configurations into a common format.
+**Embodied Navigation Task Unification** is a conceptual approach in embodied AI that trains a single model to perform multiple navigation-related tasks—such as instruction following ⚠️, object search ⚠️, navigation QA, person tracking ⚠️, and mixed long-horizon tasks—by harmonizing their input and output configurations into a common format.
 
 ## Key Idea
 
-Instead of developing separate, task-specific models for each navigation scenario, task unification enables a single [[Vision-Language-Action model]] to handle all these tasks simultaneously. This is achieved through careful [[data harmonization]] ⚠️ ⚠️ across diverse datasets and [[multi-task learning]] ⚠️ ⚠️ strategies that allow the model to share representations and decision policies.
+Instead of developing separate, task-specific models for each navigation scenario, task unification enables a single Vision-Language-Action model to handle all these tasks simultaneously. This is achieved through careful data harmonization ⚠️ ⚠️ across diverse datasets and multi-task learning ⚠️ ⚠️ strategies that allow the model to share representations and decision policies.
 
 ## Capabilities
 
@@ -43,9 +43,9 @@ Instead of developing separate, task-specific models for each navigation scenari
 
 ## Relationships
 
-- **Uses**: [[data harmonization]] ⚠️ ⚠️, [[multi-task learning]] ⚠️ ⚠️
-- **Depends On**: [[Vision-Language-Action models]] ⚠️, large-scale navigation datasets (e.g., [[Habitat]], [[Matterport3D]] ⚠️, [[Gibson]] ⚠️)
-- **Related Concepts**: [[Embodied AI]], [[Task-Agnostic Policy]] ⚠️, [[Multi-Task Reinforcement Learning]] ⚠️
+- **Uses**: data harmonization ⚠️ ⚠️, multi-task learning ⚠️ ⚠️
+- **Depends On**: Vision-Language-Action models ⚠️, large-scale navigation datasets (e.g., Habitat, Matterport3D ⚠️, Gibson ⚠️)
+- **Related Concepts**: Embodied AI, Task-Agnostic Policy ⚠️, Multi-Task Reinforcement Learning ⚠️
 
 ## Source
 
@@ -54,4 +54,4 @@ This concept is defined in the paper *"A Unified Framework for Embodied Navigati
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Embodied Navigation Task Unification` --[[related_to]] ⚠️--> `Embodied AI`
+- `Embodied Navigation Task Unification` --related_to ⚠️--> `Embodied AI`

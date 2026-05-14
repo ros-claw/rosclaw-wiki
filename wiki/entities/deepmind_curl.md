@@ -15,7 +15,7 @@ CURL combines [[contrastive_learning|contrastive learning]] with [[reinforcement
 
 ## Motivation
 
-Standard RL from pixels (e.g., [[dqn|DQN]], [[sac|SAC]]) learns task-specific representations that:
+Standard RL from pixels (e.g., DQN, SAC) learns task-specific representations that:
 - Require millions of environment steps
 - Overfit to training environments
 - Fail to transfer across tasks
@@ -49,7 +49,7 @@ Observation → Encoder → Projection Head → Contrastive Loss
 
 ## Technical Details
 
-- **Encoder**: Standard CNN (similar to [[resnet|ResNet]])
+- **Encoder**: Standard CNN (similar to ResNet)
 - **Projection**: MLP with 2-3 layers
 - **Memory**: Momentum-encoded key encoder with queue
 - **Augmentations**: Random crop, color jitter, grayscale
@@ -66,4 +66,4 @@ CURL is directly applicable to robotic visual learning:
 - [[deepmind_byol|BYOL]] — Self-supervised learning without negatives
 - [[contrastive_learning|Contrastive Learning]]
 - [[reinforcement_learning|Reinforcement Learning]]
-- [[sim_to_real|Sim-to-Real Transfer]]
+- Sim-to-Real Transfer

@@ -21,10 +21,10 @@ source_type: arxiv_paper
 
 | Parameter | Value |
 |-----------|-------|
-| **Metric for** | [[Instruction Generation]] ⚠️ ⚠️ quality |
-| **Value improvement** | 23.5 → 26.2 (using [[SRDF]] ⚠️ ⚠️ ⚠️) |
+| **Metric for** | Instruction Generation ⚠️ ⚠️ quality |
+| **Value improvement** | 23.5 → 26.2 (using SRDF ⚠️ ⚠️ ⚠️) |
 
-The improvement from a baseline SPICE score of 23.5 to 26.2 was achieved through the application of **[[SRDF]] ⚠️ ⚠️ ⚠️** (Structure‑aware Reward Diffusion Framework), which refines the generation policy to better align with semantic correctness.
+The improvement from a baseline SPICE score of 23.5 to 26.2 was achieved through the application of **SRDF ⚠️ ⚠️ ⚠️** (Structure‑aware Reward Diffusion Framework), which refines the generation policy to better align with semantic correctness.
 
 ### Capabilities
 
@@ -35,11 +35,11 @@ The improvement from a baseline SPICE score of 23.5 to 26.2 was achieved through
 
 ### Related Concepts
 
-- [[Metric]] ⚠️ – higher‑level category for evaluation measures.
-- [[SRDF]] ⚠️ ⚠️ ⚠️ – implements reward shaping that directly improves SPICE scores during training.
-- [[Instruction Generation]] ⚠️ ⚠️ – the task for which SPICE serves as an evaluation metric.
-- [[Semantic Similarity]] ⚠️ – the core property assessed by SPICE.
-- [[Reference Instructions]] ⚠️ – the ground‑truth input required by SPICE (implied usage).
+- Metric ⚠️ – higher‑level category for evaluation measures.
+- SRDF ⚠️ ⚠️ ⚠️ – implements reward shaping that directly improves SPICE scores during training.
+- Instruction Generation ⚠️ ⚠️ – the task for which SPICE serves as an evaluation metric.
+- Semantic Similarity ⚠️ – the core property assessed by SPICE.
+- Reference Instructions ⚠️ – the ground‑truth input required by SPICE (implied usage).
 
 ### References
 

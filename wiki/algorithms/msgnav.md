@@ -14,18 +14,18 @@ source_type: arxiv_paper
 
 # MSGNav
 
-**MSGNav** (Multi-modal Scene Graph Navigation) is a zero‑shot embodied navigation system that builds on a [[Multi‑modal 3D Scene Graph (M3DSG)]] ⚠️ ⚠️ ⚠️ to achieve state‑of‑the‑art performance on [[GOAT‑Bench]] ⚠️ ⚠️ and [[HM3D‑ObjNav]] ⚠️ ⚠️. It operates without any reinforcement learning training, preserves rich visual cues from the scene graph, and generalizes to arbitrary natural‑language goals with minimal adaptation overhead.
+**MSGNav** (Multi-modal Scene Graph Navigation) is a zero‑shot embodied navigation system that builds on a Multi‑modal 3D Scene Graph (M3DSG) ⚠️ ⚠️ ⚠️ to achieve state‑of‑the‑art performance on GOAT‑Bench ⚠️ ⚠️ and HM3D‑ObjNav ⚠️ ⚠️. It operates without any reinforcement learning training, preserves rich visual cues from the scene graph, and generalizes to arbitrary natural‑language goals with minimal adaptation overhead.
 
 ## Summary
 
-MSGNav is a zero‑shot navigation system that uses [[Multi‑modal 3D Scene Graph (M3DSG)]] ⚠️ ⚠️ ⚠️ to preserve visual cues. It includes modules for key subgraph selection, adaptive vocabulary updating, closed‑loop reasoning, and visibility‑based viewpoint decision to resolve the last‑mile problem.
+MSGNav is a zero‑shot navigation system that uses Multi‑modal 3D Scene Graph (M3DSG) ⚠️ ⚠️ ⚠️ to preserve visual cues. It includes modules for key subgraph selection, adaptive vocabulary updating, closed‑loop reasoning, and visibility‑based viewpoint decision to resolve the last‑mile problem.
 
 ## Capabilities
 
 - **Zero‑shot embodied navigation without RL training** – operates in unseen environments using only the scene graph and language goal, requiring no prior exploration or reward‑based learning.
 - **Open‑vocabulary generalization** – can follow arbitrary natural‑language goals, not limited to a fixed set of object classes.
 - **Low training overhead** – lightweight adaptation makes deployment practical on real robots.
-- **State‑of‑the‑art performance** – achieves top scores on both [[GOAT‑Bench]] ⚠️ ⚠️ and [[HM3D‑ObjNav]] ⚠️ ⚠️.
+- **State‑of‑the‑art performance** – achieves top scores on both GOAT‑Bench ⚠️ ⚠️ and HM3D‑ObjNav ⚠️ ⚠️.
 
 ## Components
 
@@ -45,12 +45,12 @@ Resolves the *last‑mile problem* – the difficulty of precisely localizing a 
 
 ## Relationships
 
-- [[uses]] ⚠️([[Multi‑modal 3D Scene Graph (M3DSG)]] ⚠️ ⚠️ ⚠️) – MSGNav builds entirely on the rich, hierarchical representation provided by M3DSG.
-- [[implements]] ⚠️([[Zero‑Shot Embodied Navigation]] ⚠️) – the algorithm directly instantiates the concept of navigating without prior training.
-- [[depends_on]] ⚠️([[Key Subgraph Selection]], [[Adaptive Vocabulary Update]], [[Closed‑Loop Reasoning]] ⚠️, [[Visibility‑based Viewpoint Decision]] ⚠️) – these four modules form the core pipeline.
+- uses ⚠️(Multi‑modal 3D Scene Graph (M3DSG) ⚠️ ⚠️ ⚠️) – MSGNav builds entirely on the rich, hierarchical representation provided by M3DSG.
+- implements ⚠️(Zero‑Shot Embodied Navigation ⚠️) – the algorithm directly instantiates the concept of navigating without prior training.
+- depends_on ⚠️(Key Subgraph Selection, Adaptive Vocabulary Update, Closed‑Loop Reasoning ⚠️, Visibility‑based Viewpoint Decision ⚠️) – these four modules form the core pipeline.
 
 ## Integration with Embodied AI
 
-MSGNav aligns with the broader [[Embodied AI]] paradigm by combining perception, reasoning, and action in a closed loop. It can be deployed on platforms such as [[Unitree G1]] or [[Manipulation]] ⚠️ robots, enabling real‑time navigation in novel environments.
+MSGNav aligns with the broader Embodied AI paradigm by combining perception, reasoning, and action in a closed loop. It can be deployed on platforms such as Unitree G1 or Manipulation ⚠️ robots, enabling real‑time navigation in novel environments.
 
-*See also:* [[Zero‑Shot Navigation]] ⚠️, [[Scene Graph]] ⚠️, [[Sim‑to‑Real Transfer]] ⚠️.
+*See also:* Zero‑Shot Navigation ⚠️, Scene Graph ⚠️, Sim‑to‑Real Transfer ⚠️.

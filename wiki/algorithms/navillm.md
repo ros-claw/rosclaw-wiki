@@ -16,11 +16,11 @@ source_type: arxiv_paper
 
 ## Summary
 
-NaviLLM is the first generalist model for embodied navigation, adapting [[Large Language Models]] via schema-based instruction to unify diverse navigation tasks and datasets into a single sequence generation framework.
+NaviLLM is the first generalist model for embodied navigation, adapting Large Language Models via schema-based instruction to unify diverse navigation tasks and datasets into a single sequence generation framework.
 
 ## Overview
 
-NaviLLM is a generalist model designed specifically for [[Embodied Navigation]] tasks. It adapts [[Large Language Models]] to the challenges of physical navigation by introducing **schema-based instruction**, a novel approach that casts a wide variety of navigation tasks into unified sequence generation problems. This enables the model to be trained jointly across multiple datasets and to generalize to unseen tasks such as embodied question answering and 3D captioning. NaviLLM supersedes [[task-specific agents]] ⚠️ ⚠️ by providing a single model that handles multiple navigation benchmarks.
+NaviLLM is a generalist model designed specifically for Embodied Navigation tasks. It adapts Large Language Models to the challenges of physical navigation by introducing **schema-based instruction**, a novel approach that casts a wide variety of navigation tasks into unified sequence generation problems. This enables the model to be trained jointly across multiple datasets and to generalize to unseen tasks such as embodied question answering and 3D captioning. NaviLLM supersedes task-specific agents ⚠️ ⚠️ by providing a single model that handles multiple navigation benchmarks.
 
 ## Capabilities
 
@@ -32,20 +32,20 @@ NaviLLM is a generalist model designed specifically for [[Embodied Navigation]] 
 
 | Parameter      | Value                                    |
 |----------------|------------------------------------------|
-| Base Model     | [[Large Language Model]] (architecture unspecified in original paper) |
+| Base Model     | Large Language Model (architecture unspecified in original paper) |
 | Task Type      | Embodied Navigation                      |
 | Method         | Schema-based Instruction                 |
 
-The backbone is an off-the-shelf pre-trained [[Large Language Model]], augmented with a perception module that maps visual observations into the LLM's embedding space.
+The backbone is an off-the-shelf pre-trained Large Language Model, augmented with a perception module that maps visual observations into the LLM's embedding space.
 
 ## Relationships
 
-- **uses** → [[Large Language Models]] — the core reasoning engine.
-- **uses** → [[Schema-based Instruction]] — the method for unifying task definitions.
-- **implements** → [[Embodied Navigation]] — NaviLLM directly solves navigation tasks in simulation and real environments.
-- **depends_on** → [[Schema-based Instruction]] — the key innovation enabling joint training across tasks.
-- **supersedes** → [[task-specific agents]] ⚠️ ⚠️ — replaces separate models for each navigation benchmark with a single generalist architecture.
-- **depends_on** → [[Vision-Language Pretraining]] ⚠️ — achieves cross-modal understanding via schema-based instruction.
+- **uses** → Large Language Models — the core reasoning engine.
+- **uses** → Schema-based Instruction — the method for unifying task definitions.
+- **implements** → Embodied Navigation — NaviLLM directly solves navigation tasks in simulation and real environments.
+- **depends_on** → Schema-based Instruction — the key innovation enabling joint training across tasks.
+- **supersedes** → task-specific agents ⚠️ ⚠️ — replaces separate models for each navigation benchmark with a single generalist architecture.
+- **depends_on** → Vision-Language Pretraining ⚠️ — achieves cross-modal understanding via schema-based instruction.
 
 ## Source
 
@@ -54,4 +54,4 @@ The backbone is an off-the-shelf pre-trained [[Large Language Model]], augmented
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `NaviLLM` --[[based_on]] ⚠️--> `Schema-based Instruction`
+- `NaviLLM` --based_on ⚠️--> `Schema-based Instruction`

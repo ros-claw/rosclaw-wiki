@@ -14,25 +14,25 @@ source_type: arxiv_paper
 
 # ANYmal
 
-**ANYmal** is a quadrupedal legged robot designed for navigating complex environments. It serves as the validation platform in the research on [[Learned Perceptive Forward Dynamics Model]] for safe navigation, as described in the source paper `papers/2504.19322.pdf`.
+**ANYmal** is a quadrupedal legged robot designed for navigating complex environments. It serves as the validation platform in the research on Learned Perceptive Forward Dynamics Model for safe navigation, as described in the source paper `papers/2504.19322.pdf`.
 
 ## Capabilities
 
-- Navigates complex environments using a [[Learned Perceptive Forward Dynamics Model]].
-- Demonstrates [[Sim-to-real transfer]] to bridge simulation and real-world performance.
-- Employs [[Model Predictive Path Integral (MPPI)]] for motion planning and control.
+- Navigates complex environments using a Learned Perceptive Forward Dynamics Model.
+- Demonstrates Sim-to-real transfer to bridge simulation and real-world performance.
+- Employs Model Predictive Path Integral (MPPI) for motion planning and control.
 
 ## Relationships
 
-- **uses** → [[Learned Perceptive Forward Dynamics Model]]
-- **uses** → [[Model Predictive Path Integral (MPPI)]]
-- **depends_on** → [[Sim-to-real transfer]]
+- **uses** → Learned Perceptive Forward Dynamics Model
+- **uses** → Model Predictive Path Integral (MPPI)
+- **depends_on** → Sim-to-real transfer
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `ANYmal` --[[uses]] ⚠️ ⚠️--> `Learned Perceptive Forward Dynamics Model`
-- `ANYmal` --[[uses]] ⚠️ ⚠️--> `Model Predictive Path Integral (MPPI)`
+- `ANYmal` --uses ⚠️ ⚠️--> `Learned Perceptive Forward Dynamics Model`
+- `ANYmal` --uses ⚠️ ⚠️--> `Model Predictive Path Integral (MPPI)`
 
 ---
 

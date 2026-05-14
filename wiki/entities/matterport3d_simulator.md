@@ -14,7 +14,7 @@ source_type: official_manual
 
 # Matterport3D Simulator
 
-The **Matterport3D Simulator** is a high-performance, photorealistic 3D environment simulator designed for embodied AI research. Built atop the [[Matterport3D Dataset]], it provides an interactive, traversal-based simulation of 90 real-world indoor environments with densely sampled 360° RGB-D panoramas. The simulator is used for training and evaluating navigation agents in deep reinforcement learning, vision-and-language navigation, and robotics research.
+The **Matterport3D Simulator** is a high-performance, photorealistic 3D environment simulator designed for embodied AI research. Built atop the Matterport3D Dataset, it provides an interactive, traversal-based simulation of 90 real-world indoor environments with densely sampled 360° RGB-D panoramas. The simulator is used for training and evaluating navigation agents in deep reinforcement learning, vision-and-language navigation, and robotics research.
 
 ## Overview
 
@@ -44,15 +44,15 @@ A simulator for AI agents to interact with real 3D indoor environments using RGB
 
 ## Dataset
 
-The simulator is based on the [[Matterport3D Dataset]], which consists of 90 indoor environments including homes, offices, churches, and hotels. Each environment contains densely sampled 360° RGB-D images, with between 8 and 349 viewpoints per environment.
+The simulator is based on the Matterport3D Dataset, which consists of 90 indoor environments including homes, offices, churches, and hotels. Each environment contains densely sampled 360° RGB-D images, with between 8 and 349 viewpoints per environment.
 
 ## Room-to-Room (R2R) Navigation Task
 
-The simulator ships with the **Room-to-Room (R2R)** benchmark, a standard task in embodied AI where an agent must follow a natural language navigation instruction to reach a goal in a previously unseen building. Results are tracked on the [[EvalAI]] ⚠️ leaderboard.
+The simulator ships with the **Room-to-Room (R2R)** benchmark, a standard task in embodied AI where an agent must follow a natural language navigation instruction to reach a goal in a previously unseen building. Results are tracked on the EvalAI ⚠️ leaderboard.
 
 ## Installation
 
-Recommended installation is via Docker; requires an [[Nvidia GPU]] ⚠️ ⚠️ ⚠️ and [[nvidia-docker]] ⚠️ 2.0. Build the simulator with CMake, choosing the rendering option (EGL recommended for speed). Dependencies include [[CUDA]] ⚠️ ⚠️, [[OpenGL]] ⚠️ ⚠️ ⚠️/[[EGL]] ⚠️ ⚠️/[[OSMesa]] ⚠️ ⚠️, [[OpenCV]] ⚠️ ⚠️, and a [[C++11 compiler]] ⚠️ ⚠️.
+Recommended installation is via Docker; requires an Nvidia GPU ⚠️ ⚠️ ⚠️ and nvidia-docker ⚠️ 2.0. Build the simulator with CMake, choosing the rendering option (EGL recommended for speed). Dependencies include CUDA ⚠️ ⚠️, OpenGL ⚠️ ⚠️ ⚠️/EGL ⚠️ ⚠️/OSMesa ⚠️ ⚠️, OpenCV ⚠️ ⚠️, and a C++11 compiler ⚠️ ⚠️.
 
 ## Dataset Preprocessing
 
@@ -68,5 +68,5 @@ After building the simulator, you can run an interactive demo:
 
 ## Relationships
 
-- **Uses**: [[Matterport3D Dataset]], [[Docker]] ⚠️ ⚠️, [[Nvidia GPU]] ⚠️ ⚠️ ⚠️, [[CMake]] ⚠️, [[OpenCV]] ⚠️ ⚠️, [[OpenGL]] ⚠️ ⚠️ ⚠️
-- **Depends on**: [[Nvidia GPU]] ⚠️ ⚠️ ⚠️ with driver ≥ 396.37, [[CUDA]] ⚠️ ⚠️, [[OpenGL]] ⚠️ ⚠️ ⚠️/[[EGL]] ⚠️ ⚠️/[[OSMesa]] ⚠️ ⚠️, [[Docker]] ⚠️ ⚠️, [[nvidia-docker2.0]] ⚠️, [[C++11 compiler]] ⚠️ ⚠️
+- **Uses**: Matterport3D Dataset, Docker ⚠️ ⚠️, Nvidia GPU ⚠️ ⚠️ ⚠️, CMake ⚠️, OpenCV ⚠️ ⚠️, OpenGL ⚠️ ⚠️ ⚠️
+- **Depends on**: Nvidia GPU ⚠️ ⚠️ ⚠️ with driver ≥ 396.37, CUDA ⚠️ ⚠️, OpenGL ⚠️ ⚠️ ⚠️/EGL ⚠️ ⚠️/OSMesa ⚠️ ⚠️, Docker ⚠️ ⚠️, nvidia-docker2.0 ⚠️, C++11 compiler ⚠️ ⚠️

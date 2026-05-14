@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Scene-Intuitive Agent
 
-The **Scene-Intuitive Agent** is a remote embodied visual grounding algorithm designed to navigate to a target object specified by a high-level instruction. It mimics the human intuitive understanding of visual environments and natural language, enabling agents to interpret complex spatial relationships and semantic cues. The agent is evaluated on the [[REVERIE task]] ⚠️ ⚠️ and relies on cross-modal alignment between visual scenes and language descriptions.
+The **Scene-Intuitive Agent** is a remote embodied visual grounding algorithm designed to navigate to a target object specified by a high-level instruction. It mimics the human intuitive understanding of visual environments and natural language, enabling agents to interpret complex spatial relationships and semantic cues. The agent is evaluated on the REVERIE task ⚠️ ⚠️ and relies on cross-modal alignment between visual scenes and language descriptions.
 
 ## Architecture and Training
 
@@ -22,13 +22,13 @@ The agent is trained in **2 stages**, each focusing on a distinct subtask:
 - **Scene Grounding** – learning to associate visual scene context with global instruction semantics.
 - **Object Grounding** – fine-grained alignment of local object features with specific noun phrases in an instruction.
 
-The core action decoder is the [[Memory-Augmented Attentive Action Decoder]], which combines an episodic memory buffer with cross-modal attention to decide navigation steps.
+The core action decoder is the Memory-Augmented Attentive Action Decoder, which combines an episodic memory buffer with cross-modal attention to decide navigation steps.
 
 ## Dependencies
 
-- **Depends on**: [[Cross-modal pretraining]] ⚠️ to initialize visual and language encoders with aligned representations.
-- **Uses**: [[REVERIE task]] ⚠️ ⚠️ (Remote Embodied Visual Referring Expression in Indoor Environments) as the benchmark for evaluation.
-- **Uses**: [[Cross-modal alignment]] to fuse visual and linguistic features at multiple temporal scales.
+- **Depends on**: Cross-modal pretraining ⚠️ to initialize visual and language encoders with aligned representations.
+- **Uses**: REVERIE task ⚠️ ⚠️ (Remote Embodied Visual Referring Expression in Indoor Environments) as the benchmark for evaluation.
+- **Uses**: Cross-modal alignment to fuse visual and linguistic features at multiple temporal scales.
 
 ## Capabilities
 
@@ -39,5 +39,5 @@ The core action decoder is the [[Memory-Augmented Attentive Action Decoder]], wh
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Scene-Intuitive Agent` --[[extends]] ⚠️--> `Memory-Augmented Attentive Action Decoder`
-- `Scene-Intuitive Agent` --[[based_on]] ⚠️--> `Cross-modal alignment`
+- `Scene-Intuitive Agent` --extends ⚠️--> `Memory-Augmented Attentive Action Decoder`
+- `Scene-Intuitive Agent` --based_on ⚠️--> `Cross-modal alignment`

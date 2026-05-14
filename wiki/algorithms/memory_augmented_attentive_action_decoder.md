@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Description
 
-The **Memory-augmented Attentive Action Decoder** is a neural network component that generates action sequences for navigation tasks. It operates by attending to both current visual-language representations (from perception) and a memory of past experiences, allowing the agent to leverage historical context when deciding the next action. This decoder is specifically designed to fuse vision and language representations while incorporating past memory experiences, making it well-suited for embodied tasks in the [[REVERIE]] benchmark.
+The **Memory-augmented Attentive Action Decoder** is a neural network component that generates action sequences for navigation tasks. It operates by attending to both current visual-language representations (from perception) and a memory of past experiences, allowing the agent to leverage historical context when deciding the next action. This decoder is specifically designed to fuse vision and language representations while incorporating past memory experiences, making it well-suited for embodied tasks in the REVERIE benchmark.
 
 ## Components
 
@@ -34,10 +34,10 @@ The decoder consists of three main components:
 
 ## Relationships
 
-- **Part of**: This decoder is a key component of the [[Two-stage Training Pipeline for REVERIE]], where it operates after a cross-modal feature extraction stage.
-- **Depends on**: The decoder relies on [[pretrained cross-modal features]] ⚠️ to align visual observations with language instructions before memory-augmented decoding.
+- **Part of**: This decoder is a key component of the Two-stage Training Pipeline for REVERIE, where it operates after a cross-modal feature extraction stage.
+- **Depends on**: The decoder relies on pretrained cross-modal features ⚠️ to align visual observations with language instructions before memory-augmented decoding.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Memory-augmented attentive action decoder` --[[extends]] ⚠️--> `Two-stage Training Pipeline for REVERIE`
+- `Memory-augmented attentive action decoder` --extends ⚠️--> `Two-stage Training Pipeline for REVERIE`

@@ -24,7 +24,7 @@ In embodied navigation, this concept is critical for tasks where partial observa
 
 ## Enhancements
 
-- Enhanced by **[[Dynamic Bounded Memory Queue]]** – A fixed‑size, sliding‑window memory structure that retains the most recent observations and actions. Its bounded nature keeps computational cost predictable while still providing sufficient context for short‑term planning.
+- Enhanced by **Dynamic Bounded Memory Queue** – A fixed‑size, sliding‑window memory structure that retains the most recent observations and actions. Its bounded nature keeps computational cost predictable while still providing sufficient context for short‑term planning.
 
 ## Mechanism
 
@@ -32,9 +32,9 @@ Memory-guided Decision-Making combines the current observation with memory to ma
 
 ## Relationships
 
-- **Used by** **[[PanoNav]]** – The panoramic navigation system integrates a memory‑guided decision module to leverage historical viewpoints when traversing complex indoor environments.
+- **Used by** **PanoNav** – The panoramic navigation system integrates a memory‑guided decision module to leverage historical viewpoints when traversing complex indoor environments.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Memory-guided Decision-Making` --[[related_to]] ⚠️--> `PanoNav` _(wikilink)_
+- `Memory-guided Decision-Making` --related_to ⚠️--> `PanoNav` _(wikilink)_

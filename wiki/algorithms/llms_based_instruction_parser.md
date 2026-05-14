@@ -14,13 +14,13 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **LLMs-based instruction parser** is an algorithm component that leverages pre-trained [[Foundation models|large language models (LLMs)]] to translate free-form natural language instructions into structured, executable macro-action sequences. It serves as the language understanding backbone for embodied agents, bridging high‑level task descriptions and low‑level control.
+The **LLMs-based instruction parser** is an algorithm component that leverages pre-trained large language models (LLMs) to translate free-form natural language instructions into structured, executable macro-action sequences. It serves as the language understanding backbone for embodied agents, bridging high‑level task descriptions and low‑level control.
 
 ## Parameters
 
 - **Input**: natural language instruction (free-form text)
 - **Output**: sequence of macro-action descriptions (e.g., "go to the door", "turn left")
-- **Base model**: [[Foundation models|Large language model (LLM)]] – the parser relies on the broad semantic and syntactic knowledge captured by pre‑trained LLMs.
+- **Base model**: Large language model (LLM) – the parser relies on the broad semantic and syntactic knowledge captured by pre‑trained LLMs.
 
 ## Capabilities
 
@@ -29,9 +29,9 @@ The **LLMs-based instruction parser** is an algorithm component that leverages p
 
 ## Relationships
 
-- **Depends on**: [[Foundation models]] – the parser uses a pre‑trained LLM for language understanding.
-- **Part of**: [[Vision and Language Navigation in the Real World via Online Visual Language Mapping]] ⚠️ – this parser is integrated into a real‑world VLN system that combines visual, linguistic, and metric mapping.
-- **Used by**: [[Proposed VLN framework]] ⚠️ – previously noted as the high-level system using this parser; the same framework corresponds to the paper cited above.
+- **Depends on**: Foundation models – the parser uses a pre‑trained LLM for language understanding.
+- **Part of**: Vision and Language Navigation in the Real World via Online Visual Language Mapping ⚠️ – this parser is integrated into a real‑world VLN system that combines visual, linguistic, and metric mapping.
+- **Used by**: Proposed VLN framework ⚠️ – previously noted as the high-level system using this parser; the same framework corresponds to the paper cited above.
 
 ## Instruction Parsing
 

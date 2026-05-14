@@ -20,9 +20,9 @@ source_type: arxiv_paper
 
 | Attribute | Value |
 |-----------|-------|
-| Type | [[Imitation Learning]] (online, interactive) |
+| Type | Imitation Learning (online, interactive) |
 | Purpose | Distillation and aggregation of expert policies |
-| Relationship | `implements` → [[Imitation Learning]] |
+| Relationship | `implements` → Imitation Learning |
 
 ## Capabilities
 
@@ -31,18 +31,18 @@ source_type: arxiv_paper
 
 ## Role in Framework
 
-DAgger algorithm is used to distill multiple expert policies into a single **[[Foundation Policy]] ⚠️**. In this setting, each expert provides corrective feedback on states visited by the current policy, and the aggregated dataset trains a unified model that captures the strengths of all experts.
+DAgger algorithm is used to distill multiple expert policies into a single **Foundation Policy ⚠️**. In this setting, each expert provides corrective feedback on states visited by the current policy, and the aggregated dataset trains a unified model that captures the strengths of all experts.
 
-- `depends_on` → [[Expert Policies]] ⚠️ ⚠️ (source of corrective actions)
-- `used_by` → [[Multi-expert Distillation]] (as a core mechanism for fusing multiple experts)
+- `depends_on` → Expert Policies ⚠️ ⚠️ (source of corrective actions)
+- `used_by` → Multi-expert Distillation (as a core mechanism for fusing multiple experts)
 
 ## Relationships
 
 | Relation | Target | Description |
 |----------|--------|-------------|
-| `used_by` | [[Multi-expert Distillation]] | The Multi-expert Distillation framework employs DAgger to collect expert feedback across multiple domains. |
-| `implements` | [[Imitation Learning]] | DAgger is a canonical example of interactive imitation learning. |
-| `depends_on` | [[Expert Policies]] ⚠️ ⚠️ | Requires at least one expert to provide corrective actions during training. |
+| `used_by` | Multi-expert Distillation | The Multi-expert Distillation framework employs DAgger to collect expert feedback across multiple domains. |
+| `implements` | Imitation Learning | DAgger is a canonical example of interactive imitation learning. |
+| `depends_on` | Expert Policies ⚠️ ⚠️ | Requires at least one expert to provide corrective actions during training. |
 
 ## Further Reading
 
@@ -51,4 +51,4 @@ DAgger algorithm is used to distill multiple expert policies into a single **[[F
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `DAgger` --[[extends]] ⚠️--> `Multi-expert Distillation`
+- `DAgger` --extends ⚠️--> `Multi-expert Distillation`

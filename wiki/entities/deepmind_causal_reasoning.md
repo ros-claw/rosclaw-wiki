@@ -32,7 +32,7 @@ Learning causal graphs from observational data using:
 ### Causal Representation Learning
 
 Disentangling causal variables from raw observations:
-- [[causal_vae|Causal VAEs]] that separate causal factors from noise
+- Causal VAEs that separate causal factors from noise
 - Independent mechanism analysis for modular representations
 
 ### Causal Reinforcement Learning
@@ -58,7 +58,7 @@ A robot navigating a home should understand:
 
 ## See Also
 
-- [[causal_inference|Causal Inference]]
+- Causal Inference
 - [[reinforcement_learning|Reinforcement Learning]]
-- [[transfer_learning|Transfer Learning]]
-- [[robustness|Robustness and Generalization]]
+- Transfer Learning
+- Robustness and Generalization

@@ -33,5 +33,5 @@ During training, the action decoder does not deterministically select the expert
 
 ## Dependencies and Relationships
 
-- **Depends on**: `[[Monte Carlo sampling]] ⚠️` – the stochastic sampling process relies on Monte Carlo methods to draw actions from a probability distribution.
-- **Used by**: `[[Vision-and-Language Navigation (VLN)]] ⚠️` – this technique has been successfully applied in VLN tasks to improve generalization and error recovery, as demonstrated in the source paper (arXiv:1909.02244).
+- **Depends on**: `Monte Carlo sampling ⚠️` – the stochastic sampling process relies on Monte Carlo methods to draw actions from a probability distribution.
+- **Used by**: `Vision-and-Language Navigation (VLN) ⚠️` – this technique has been successfully applied in VLN tasks to improve generalization and error recovery, as demonstrated in the source paper (arXiv:1909.02244).

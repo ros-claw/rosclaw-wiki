@@ -16,15 +16,15 @@ source_type: arxiv_paper
 
 ## Overview
 
-HumanoidPano is a hybrid cross-modal perception framework that synergistically integrates panoramic vision and LiDAR sensing for [[Humanoid Robot|humanoid robots]]. It leverages a [[Spherical Vision Transformer]] ⚠️ ⚠️ architecture to produce accurate [[BEV Segmentation Maps]] ⚠️ ⚠️ from 360-degree inputs, overcoming the limited field-of-view and self-occlusion challenges that plague conventional camera-LiDAR fusion on bipedal platforms.
+HumanoidPano is a hybrid cross-modal perception framework that synergistically integrates panoramic vision and LiDAR sensing for humanoid robots. It leverages a Spherical Vision Transformer ⚠️ ⚠️ architecture to produce accurate BEV Segmentation Maps ⚠️ ⚠️ from 360-degree inputs, overcoming the limited field-of-view and self-occlusion challenges that plague conventional camera-LiDAR fusion on bipedal platforms.
 
 ## Parameters & Architecture
 
 | Parameter | Value |
 |-----------|-------|
 | **Architecture** | Spherical Vision Transformer with SGC, SDA, AUG |
-| **Input Modalities** | [[Panoramic Camera]] ⚠️ ⚠️ and [[LiDAR]] |
-| **Output** | [[BEV Segmentation Maps]] ⚠️ ⚠️ |
+| **Input Modalities** | Panoramic Camera ⚠️ ⚠️ and LiDAR |
+| **Output** | BEV Segmentation Maps ⚠️ ⚠️ |
 
 The framework processes synchronized panoramic imagery and LiDAR point clouds through a transformer backbone designed for spherical geometry.
 
@@ -33,7 +33,7 @@ The framework processes synchronized panoramic imagery and LiDAR point clouds th
 - Enables seamless fusion of 360-degree visual context with LiDAR depth for robust perception
 - Overcomes self-occlusion and limited FOV inherent in humanoid robotic platforms
 - Generates accurate BEV segmentation maps essential for navigation and obstacle avoidance
-- Achieves state-of-the-art performance on the [[360BEV-Matterport Benchmark]]
+- Achieves state-of-the-art performance on the 360BEV-Matterport Benchmark
 
 ## Components
 
@@ -47,17 +47,17 @@ HumanoidPano is built from three specialized modules:
 
 | Relation | Target |
 |----------|--------|
-| Uses | [[Panoramic Camera]] ⚠️ ⚠️, [[LiDAR]], [[Spherical Vision Transformer]] ⚠️ ⚠️ |
-| Depends on | [[360BEV-Matterport Benchmark]] |
-| Implements | Cross-modal fusion for [[Humanoid Robot]] navigation |
+| Uses | Panoramic Camera ⚠️ ⚠️, LiDAR, Spherical Vision Transformer ⚠️ ⚠️ |
+| Depends on | 360BEV-Matterport Benchmark |
+| Implements | Cross-modal fusion for Humanoid Robot navigation |
 
 ## Benchmark Performance
 
-On the [[360BEV-Matterport Benchmark]], HumanoidPano outperforms prior methods (including [[Frustum-PointNet]] ⚠️, [[LSS]] ⚠️, and flat-transformer baselines) by a significant margin in terms of BEV mean IoU and pixel accuracy. The method demonstrates particular strength in handling partial occlusions and variable robot height, which are common failure modes for humanoid perception systems.
+On the 360BEV-Matterport Benchmark, HumanoidPano outperforms prior methods (including Frustum-PointNet ⚠️, LSS ⚠️, and flat-transformer baselines) by a significant margin in terms of BEV mean IoU and pixel accuracy. The method demonstrates particular strength in handling partial occlusions and variable robot height, which are common failure modes for humanoid perception systems.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `HumanoidPano` --[[implements]] ⚠️ ⚠️--> `Humanoid Robot`
-- `HumanoidPano` --[[implements]] ⚠️ ⚠️--> `LiDAR`
-- `HumanoidPano` --[[based_on]] ⚠️--> `360BEV-Matterport Benchmark`
+- `HumanoidPano` --implements ⚠️ ⚠️--> `Humanoid Robot`
+- `HumanoidPano` --implements ⚠️ ⚠️--> `LiDAR`
+- `HumanoidPano` --based_on ⚠️--> `360BEV-Matterport Benchmark`

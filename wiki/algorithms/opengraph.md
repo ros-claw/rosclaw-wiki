@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 # OpenGraph
 
-OpenGraph is the first **open-vocabulary hierarchical 3D graph representation** algorithm for large-scale outdoor environments. It combines [[Visual-Language Model (VLM)]] ⚠️ reasoning with [[LiDAR]] to create a semantically rich, scalable map. Introduced in the paper “OpenGraph: Open-Vocabulary Graph Construction for Large-Scale Outdoor Environments” (arXiv:2403.09412), it achieves state‑of‑the‑art segmentation and query accuracy on the [[SemanticKITTI]] dataset.
+OpenGraph is the first **open-vocabulary hierarchical 3D graph representation** algorithm for large-scale outdoor environments. It combines Visual-Language Model (VLM) ⚠️ reasoning with LiDAR to create a semantically rich, scalable map. Introduced in the paper “OpenGraph: Open-Vocabulary Graph Construction for Large-Scale Outdoor Environments” (arXiv:2403.09412), it achieves state‑of‑the‑art segmentation and query accuracy on the SemanticKITTI dataset.
 
 ## Overview
 
@@ -24,12 +24,12 @@ OpenGraph proposes an open-vocabulary hierarchical 3D graph representation for l
 ## Methodology
 
 1. **Instance and caption extraction** – Visual images are processed using VLMs to extract object instances and generate descriptive captions, enabling open-set recognition.
-2. **Image‑to‑LiDAR projection and 3D incremental mapping** – Extracted instances and captions are projected onto [[LiDAR point clouds]] ⚠️ to obtain geometric grounding. Features are accumulated over time to build persistent 3D object representations.
+2. **Image‑to‑LiDAR projection and 3D incremental mapping** – Extracted instances and captions are projected onto LiDAR point clouds ⚠️ to obtain geometric grounding. Features are accumulated over time to build persistent 3D object representations.
 3. **Lane graph connectivity segmentation** – The environment is segmented based on lane graph structure, yielding a hierarchical graph that organizes objects for navigation and planning.
 
 ## Validation
 
-OpenGraph was evaluated on the [[SemanticKITTI]] dataset, achieving the highest segmentation and query accuracy among comparable open‑vocabulary methods. It acts as a benchmark for future open‑vocabulary outdoor mapping algorithms.
+OpenGraph was evaluated on the SemanticKITTI dataset, achieving the highest segmentation and query accuracy among comparable open‑vocabulary methods. It acts as a benchmark for future open‑vocabulary outdoor mapping algorithms.
 
 ## Capabilities
 
@@ -48,11 +48,11 @@ OpenGraph was evaluated on the [[SemanticKITTI]] dataset, achieving the highest 
 
 ## Relationships
 
-OpenGraph **uses** [[Visual-Language Models (VLMs)]] for image‑text reasoning, [[LiDAR]] for geometric grounding, and lane graph connectivity for structural segmentation. It **implements** incremental 3D object‑centric mapping and open‑vocabulary segmentation. The algorithm **depends on** several processing steps: instance extraction from images, caption generation, and projection onto point clouds. For real‑time deployment it **depends on** [[ROS2]] and typical autonomous driving sensor stacks (implied by its outdoor application).
+OpenGraph **uses** Visual-Language Models (VLMs) for image‑text reasoning, LiDAR for geometric grounding, and lane graph connectivity for structural segmentation. It **implements** incremental 3D object‑centric mapping and open‑vocabulary segmentation. The algorithm **depends on** several processing steps: instance extraction from images, caption generation, and projection onto point clouds. For real‑time deployment it **depends on** ROS2 and typical autonomous driving sensor stacks (implied by its outdoor application).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `OpenGraph` --[[uses]] ⚠️ ⚠️--> `Visual-Language Models (VLMs)`
-- `OpenGraph` --[[uses]] ⚠️ ⚠️--> `LiDAR`
-- `OpenGraph` --[[depends_on]] ⚠️--> `SemanticKITTI`
+- `OpenGraph` --uses ⚠️ ⚠️--> `Visual-Language Models (VLMs)`
+- `OpenGraph` --uses ⚠️ ⚠️--> `LiDAR`
+- `OpenGraph` --depends_on ⚠️--> `SemanticKITTI`

@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ### Definition
 
-Percentage of navigation episodes that reach the goal. [[OpenVLN]] improves SR by up to 4.34%.
+Percentage of navigation episodes that reach the goal. OpenVLN improves SR by up to 4.34%.
 
 ### Usage in Evaluation
 
@@ -32,15 +32,15 @@ An episode is considered successful when the agent stops within a predefined dis
 
 ### Relationship to Other Concepts
 
-- **[[OpenVLN]]** → SR is the key performance indicator improved by this framework.  
-- **depends_on**: Reliable goal detection and path planning from [[Robot Navigation]] ⚠️ stacks.  
+- **OpenVLN** → SR is the key performance indicator improved by this framework.  
+- **depends_on**: Reliable goal detection and path planning from Robot Navigation ⚠️ stacks.  
 - **contrasts with**: Metrics like **Path Length** (efficiency) or **Execution Time** (speed); SR focuses purely on goal‑reaching outcome.
 
 ### Typical Improvements
 
-In recent literature (e.g., [[OpenVLN]]), SR gains are reported in percentage points. The 4.34% improvement cited indicates a relative or absolute increase over baseline methods, depending on the experimental setup.
+In recent literature (e.g., OpenVLN), SR gains are reported in percentage points. The 4.34% improvement cited indicates a relative or absolute increase over baseline methods, depending on the experimental setup.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Success Rate (SR)` --[[related_to]] ⚠️--> `OpenVLN` _(wikilink)_
+- `Success Rate (SR)` --related_to ⚠️--> `OpenVLN` _(wikilink)_

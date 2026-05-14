@@ -18,12 +18,12 @@ A **Terrain-Aware Locomotion Policy with a Blind Backbone** is an algorithm that
 
 ## Description
 
-This algorithm integrates a [[Blind Backbone]] ⚠️ ⚠️ (a locomotion policy that operates without exteroceptive feedback) with a perception guidance system built from pre-trained [[Elevation Map-based Perception]]. The elevation map provides a sparse but informative terrain signal that reduces the amount of exploration needed during reinforcement learning, enabling the policy to be trained with significantly fewer real-world or simulated rollouts.
+This algorithm integrates a Blind Backbone ⚠️ ⚠️ (a locomotion policy that operates without exteroceptive feedback) with a perception guidance system built from pre-trained Elevation Map-based Perception. The elevation map provides a sparse but informative terrain signal that reduces the amount of exploration needed during reinforcement learning, enabling the policy to be trained with significantly fewer real-world or simulated rollouts.
 
 ## Parameters
 
-- **Backbone**: [[Blind Backbone]] ⚠️ ⚠️ – a locomotion policy that relies purely on proprioceptive signals (e.g., joint angles, IMU) and ignores visual input during nominal execution.
-- **Perception Guidance**: Pre-trained [[Elevation Map-based Perception]] – a module that extracts terrain height information from depth images (or similar sensors) and feeds it as a conditioning signal to the backbone.
+- **Backbone**: Blind Backbone ⚠️ ⚠️ – a locomotion policy that relies purely on proprioceptive signals (e.g., joint angles, IMU) and ignores visual input during nominal execution.
+- **Perception Guidance**: Pre-trained Elevation Map-based Perception – a module that extracts terrain height information from depth images (or similar sensors) and feeds it as a conditioning signal to the backbone.
 
 ## Capabilities
 
@@ -32,14 +32,14 @@ This algorithm integrates a [[Blind Backbone]] ⚠️ ⚠️ (a locomotion polic
 
 ## Relationships
 
-- **depends_on**: [[Reinforcement Learning]], [[Elevation Map-based Perception]]
-- **part_of**: [[DPL (Depth-only Perceptive Locomotion) Framework]] ⚠️
+- **depends_on**: Reinforcement Learning, Elevation Map-based Perception
+- **part_of**: DPL (Depth-only Perceptive Locomotion) Framework ⚠️
 
 ## Cross-References
 
-For related concepts, see [[Blind Locomotion Policy]] ⚠️, [[Terrain-Aware Controller]] ⚠️, and [[Sim-to-Real Transfer for Locomotion]] ⚠️.
+For related concepts, see Blind Locomotion Policy ⚠️, Terrain-Aware Controller ⚠️, and Sim-to-Real Transfer for Locomotion ⚠️.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Terrain-Aware Locomotion Policy with a Blind Backbone` --[[based_on]] ⚠️--> `Elevation Map-based Perception`
+- `Terrain-Aware Locomotion Policy with a Blind Backbone` --based_on ⚠️--> `Elevation Map-based Perception`

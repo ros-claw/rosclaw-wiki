@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Retrospective Curiosity-Encouraging Imitation Learning** is an [[algorithm]] ⚠️ that combines [[Imitation Learning]] with [[Curiosity-driven learning]] ⚠️ ⚠️ and a retrospective review mechanism. It teaches agents to avoid repeating past mistakes while simultaneously predicting future progress, thereby encouraging curiosity‑driven exploration and improving the effectiveness of help‑seeking behavior. The approach was introduced in the 2019 paper *Retrospective Curiosity-Encouraging Imitation Learning* (arXiv:1909.01871) and is used by a [[Memory-augmented neural agent]] such as the [[HANNA Agent]].
+**Retrospective Curiosity-Encouraging Imitation Learning** is an algorithm ⚠️ that combines Imitation Learning with Curiosity-driven learning ⚠️ ⚠️ and a retrospective review mechanism. It teaches agents to avoid repeating past mistakes while simultaneously predicting future progress, thereby encouraging curiosity‑driven exploration and improving the effectiveness of help‑seeking behavior. The approach was introduced in the 2019 paper *Retrospective Curiosity-Encouraging Imitation Learning* (arXiv:1909.01871) and is used by a Memory-augmented neural agent such as the HANNA Agent.
 
 ## Description
 
@@ -26,7 +26,7 @@ A novel imitation learning algorithm that incorporates retrospective curiosity. 
 
 - **Type**: Imitation learning with curiosity and retrospective aspects  
 - **Underlying technique**: Imitation learning with curiosity  
-- **Architecture**: [[Memory-augmented neural agent]]  
+- **Architecture**: Memory-augmented neural agent  
 - **Training data**: Expert demonstrations and agent’s own interaction history
 
 ## Capabilities
@@ -39,20 +39,20 @@ A novel imitation learning algorithm that incorporates retrospective curiosity. 
 
 ## Architecture
 
-The algorithm is built on a [[Memory-augmented neural network]] ⚠️ that stores episodic memories of past successes and failures. During training, the agent reviews these memories and uses a curiosity signal (based on prediction error) to guide exploration. The combination of retrospective review and intrinsic motivation allows the agent to request human assistance when it anticipates low future progress.
+The algorithm is built on a Memory-augmented neural network ⚠️ that stores episodic memories of past successes and failures. During training, the agent reviews these memories and uses a curiosity signal (based on prediction error) to guide exploration. The combination of retrospective review and intrinsic motivation allows the agent to request human assistance when it anticipates low future progress.
 
 ## Relationships
 
-- **Used by**: [[Memory-augmented neural agent]] (e.g., [[HANNA Agent]])  
-- **Depends on**: [[Imitation Learning]], [[Curiosity-driven learning]] ⚠️ ⚠️ (curiosity-based exploration)  
-- **Implements**: [[HANNA Agent]]
+- **Used by**: Memory-augmented neural agent (e.g., HANNA Agent)  
+- **Depends on**: Imitation Learning, Curiosity-driven learning ⚠️ ⚠️ (curiosity-based exploration)  
+- **Implements**: HANNA Agent
 
 ## Related Algorithms
 
-- [[Behavioral Cloning]] ⚠️  
-- [[Generative Adversarial Imitation Learning (GAIL)]] ⚠️  
-- [[DQN with Intrinsic Motivation]] ⚠️  
-- [[Intrinsic Curiosity Module (ICM)]] ⚠️  
+- Behavioral Cloning ⚠️  
+- Generative Adversarial Imitation Learning (GAIL) ⚠️  
+- DQN with Intrinsic Motivation ⚠️  
+- Intrinsic Curiosity Module (ICM) ⚠️  
 
 ## References
 

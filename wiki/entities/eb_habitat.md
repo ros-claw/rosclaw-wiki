@@ -12,11 +12,11 @@ sources:
 source_type: blog_post
 ---
 
-**EB-Habitat** is a component of the [[EmbodiedBench]] benchmark suite that focuses on high-level task decomposition and planning within the [[Habitat environment]] ⚠️ ⚠️ ⚠️. It provides an action interface for abstract, semantically rich commands rather than low-level motor control.
+**EB-Habitat** is a component of the EmbodiedBench benchmark suite that focuses on high-level task decomposition and planning within the Habitat environment ⚠️ ⚠️ ⚠️. It provides an action interface for abstract, semantically rich commands rather than low-level motor control.
 
 ## Overview
 
-EB-Habitat evaluates an agent’s ability to reason about sequential tasks — such as navigating to a room, picking up an object, or rearranging furniture — by issuing high-level instructions in the [[Habitat environment]] ⚠️ ⚠️ ⚠️. It is designed to test planning, common sense, and task sequencing capabilities without requiring the agent to handle raw sensorimotor details.
+EB-Habitat evaluates an agent’s ability to reason about sequential tasks — such as navigating to a room, picking up an object, or rearranging furniture — by issuing high-level instructions in the Habitat environment ⚠️ ⚠️ ⚠️. It is designed to test planning, common sense, and task sequencing capabilities without requiring the agent to handle raw sensorimotor details.
 
 ## Capabilities
 
@@ -26,8 +26,8 @@ EB-Habitat evaluates an agent’s ability to reason about sequential tasks — s
 
 | Relation | Entity | Description |
 |----------|--------|-------------|
-| `part_of` | [[EmbodiedBench]] | EB-Habitat is one of the evaluation suites within the broader EmbodiedBench framework. |
-| `uses` | [[Habitat environment]] ⚠️ ⚠️ ⚠️ | Relies on the Habitat simulation platform for 3D scene rendering, physics, and interactive object manipulation. |
+| `part_of` | EmbodiedBench | EB-Habitat is one of the evaluation suites within the broader EmbodiedBench framework. |
+| `uses` | Habitat environment ⚠️ ⚠️ ⚠️ | Relies on the Habitat simulation platform for 3D scene rendering, physics, and interactive object manipulation. |
 
 ## Action Level
 
@@ -36,4 +36,4 @@ EB-Habitat evaluates an agent’s ability to reason about sequential tasks — s
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EB-Habitat` --[[depends_on]] ⚠️--> `EmbodiedBench`
+- `EB-Habitat` --depends_on ⚠️--> `EmbodiedBench`

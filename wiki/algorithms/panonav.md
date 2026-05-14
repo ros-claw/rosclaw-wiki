@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # PanoNav
 
-**PanoNav** is a fully **RGB-only**, mapless **Zero-Shot Object Navigation (ZSON)** framework that integrates a [[Panoramic Scene Parsing module]] ⚠️ ⚠️ and a [[Memory-guided Decision-Making]] mechanism enhanced by a [[Dynamic Bounded Memory Queue]] to avoid local deadlocks. It leverages the semantic understanding of [[Multimodal Large Language Models (MLLMs)]] ⚠️ ⚠️ to operate without explicit maps or depth sensors.
+**PanoNav** is a fully **RGB-only**, mapless **Zero-Shot Object Navigation (ZSON)** framework that integrates a Panoramic Scene Parsing module ⚠️ ⚠️ and a Memory-guided Decision-Making mechanism enhanced by a Dynamic Bounded Memory Queue to avoid local deadlocks. It leverages the semantic understanding of Multimodal Large Language Models (MLLMs) ⚠️ ⚠️ to operate without explicit maps or depth sensors.
 
 ## Overview
 
@@ -39,13 +39,13 @@ PanoNav addresses the challenge of mobile robot object navigation in unseen envi
 ## Relationships
 
 - **uses**:
-  - [[Multimodal Large Language Models (MLLMs)]] ⚠️ ⚠️
-  - [[Panoramic Scene Parsing module]] ⚠️ ⚠️
-  - [[Memory-guided Decision-Making]]
-  - [[Dynamic Bounded Memory Queue]]
+  - Multimodal Large Language Models (MLLMs) ⚠️ ⚠️
+  - Panoramic Scene Parsing module ⚠️ ⚠️
+  - Memory-guided Decision-Making
+  - Dynamic Bounded Memory Queue
 - **depends_on**:
-  - [[RGB-only perception]] ⚠️
-  - [[RGB camera]] ⚠️
+  - RGB-only perception ⚠️
+  - RGB camera ⚠️
 
 ## References
 

@@ -14,14 +14,14 @@ source_type: arxiv_paper
 
 ### GPT-4.1
 
-**GPT-4.1** is a Large Vision-Language Model (LVLM) developed by OpenAI. In the context of embodied intelligence, it serves as a backbone for zero-shot visual navigation when paired with a dual-view **[[Visual Prompt (VP)]]** module, achieving state-of-the-art performance on the EmbodiedBench Navigation benchmark.
+**GPT-4.1** is a Large Vision-Language Model (LVLM) developed by OpenAI. In the context of embodied intelligence, it serves as a backbone for zero-shot visual navigation when paired with a dual-view **Visual Prompt (VP)** module, achieving state-of-the-art performance on the EmbodiedBench Navigation benchmark.
 
 #### Capabilities
 
 - Performs **zero-shot visual navigation** when combined with a dual-view Visual Prompt — no fine-tuning or task-specific training required.
-- Outperforms the previous best LVLM by approximately 20 percentage points on the **[[EmbodiedBench]]** navigation task.
+- Outperforms the previous best LVLM by approximately 20 percentage points on the **EmbodiedBench** navigation task.
 
-#### Usage in [[SeeNav-Agent]]
+#### Usage in SeeNav-Agent
 
 GPT-4.1 acts as the core reasoning backbone of SeeNav-Agent. The system augments the model with a **zero-shot Visual Prompt** module that transforms raw camera observations into structured prompts, enabling the model to produce goal-directed navigation actions without explicit imitation learning or reinforcement.
 
@@ -31,10 +31,10 @@ When evaluated on the EmbodiedBench Navigation benchmark, **GPT-4.1 with zero-sh
 
 #### Relationships
 
-- **used_in** → [[SeeNav-Agent]]
-- **enhanced_by** → [[Visual Prompt (VP)]]
+- **used_in** → SeeNav-Agent
+- **enhanced_by** → Visual Prompt (VP)
 - **implements** → zero-shot visual navigation
-- **depends_on** → [[EmbodiedBench]] for evaluation
+- **depends_on** → EmbodiedBench for evaluation
 
 #### Parameters
 
@@ -46,10 +46,10 @@ When evaluated on the EmbodiedBench Navigation benchmark, **GPT-4.1 with zero-sh
 
 ---
 
-*Source: [[2512.02631.pdf]] ⚠️ (SeeNav-Agent paper)*
+*Source: 2512.02631.pdf ⚠️ (SeeNav-Agent paper)*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `GPT-4.1` --[[depends_on]] ⚠️--> `EmbodiedBench`
-- `GPT-4.1` --[[uses]] ⚠️--> `SeeNav-Agent`
+- `GPT-4.1` --depends_on ⚠️--> `EmbodiedBench`
+- `GPT-4.1` --uses ⚠️--> `SeeNav-Agent`

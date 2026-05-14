@@ -23,7 +23,7 @@ RAG follows a pattern where an LLM retrieves external knowledge — here, scene 
 
 ## Capabilities
 
-- **Enhances semantic navigation** by querying the [[Embodied Graph]] – the graph serves as the retrieval corpus, providing spatial and semantic facts about the environment.
+- **Enhances semantic navigation** by querying the Embodied Graph – the graph serves as the retrieval corpus, providing spatial and semantic facts about the environment.
 - **Enables open-vocabulary query handling** – because retrieval is decoupled from generation, the system can respond to arbitrary natural language queries without re‑training.
 - **Retrieves relevant scene information from a hierarchical tree** – in implementations like NavRAG, the retrieval structure is a tree encoding object‑scene relationships.
 - **Supports diverse instruction generation** – the retrieved context can be fed to an LLM to produce different types of instructions (e.g., navigation, manipulation) from a single environment model.
@@ -31,22 +31,22 @@ RAG follows a pattern where an LLM retrieves external knowledge — here, scene 
 ## Parameters / Context Type
 
 The type of context retrieved varies by implementation:
-- In [[CausalNav]], the retrieval corpus is the [[Embodied Graph]] — a graph of objects, locations, and causal relations.
-- In [[NavRAG]], the retrieval corpus is a hierarchical tree of 3D scene descriptions.
+- In CausalNav, the retrieval corpus is the Embodied Graph — a graph of objects, locations, and causal relations.
+- In NavRAG, the retrieval corpus is a hierarchical tree of 3D scene descriptions.
 
 Both serve the same core purpose: grounding language generation in explicit world knowledge.
 
 ## Dependencies
 
 - **depends_on** (general): An external knowledge structure (graph, tree, etc.) that encodes environmental facts.
-- **depends_on** in CausalNav: [[Embodied Graph]] – the retrieved knowledge is drawn from this structured, updatable graph.
+- **depends_on** in CausalNav: Embodied Graph – the retrieved knowledge is drawn from this structured, updatable graph.
 - **depends_on** in NavRAG: A hierarchical scene tree that organizes objects and spatial relations.
 
 ## Usage
 
-- **used_by**: [[CausalNav]] – CausalNav employs RAG to fetch relevant subgraphs or node descriptions from the Embodied Graph, which are then fed to a planner or language model to generate step‑by‑step navigation instructions.
-- **used_by**: [[NavRAG]] – NavRAG uses RAG to retrieve relevant scene‑tree nodes before generating diverse navigation or manipulation instructions.
-- **part_of**: [[NavRAG framework]] ⚠️ – RAG is a core component of the NavRAG architecture.
+- **used_by**: CausalNav – CausalNav employs RAG to fetch relevant subgraphs or node descriptions from the Embodied Graph, which are then fed to a planner or language model to generate step‑by‑step navigation instructions.
+- **used_by**: NavRAG – NavRAG uses RAG to retrieve relevant scene‑tree nodes before generating diverse navigation or manipulation instructions.
+- **part_of**: NavRAG framework ⚠️ – RAG is a core component of the NavRAG architecture.
 
 ## Role in CausalNav
 
@@ -61,6 +61,6 @@ In the NavRAG framework, RAG retrieves relevant branches from a hierarchical tre
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Pending review:**
-- `Retrieval-Augmented Generation (RAG)` --[[related_to]] ⚠️ ⚠️--> `CausalNav` _(wikilink)_
-- `Retrieval-Augmented Generation (RAG)` --[[related_to]] ⚠️ ⚠️--> `NavRAG` _(wikilink)_  
-- `Retrieval-Augmented Generation (RAG)` --[[part_of]] ⚠️--> `NavRAG framework` _(wikilink)_
+- `Retrieval-Augmented Generation (RAG)` --related_to ⚠️ ⚠️--> `CausalNav` _(wikilink)_
+- `Retrieval-Augmented Generation (RAG)` --related_to ⚠️ ⚠️--> `NavRAG` _(wikilink)_  
+- `Retrieval-Augmented Generation (RAG)` --part_of ⚠️--> `NavRAG framework` _(wikilink)_

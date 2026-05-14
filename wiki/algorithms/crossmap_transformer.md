@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## CrossMap Transformer
 
-The **CrossMap Transformer** is a crossmodal masked path Transformer that uses double back‑translation for [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️. It predicts a sequence of actions given natural-language navigation instructions while jointly learning to generate both paths and instructions. The core innovation is a double back‑translation loop that mutually enhances path generation and instruction generation via shared latent features.
+The **CrossMap Transformer** is a crossmodal masked path Transformer that uses double back‑translation for Vision-and-Language Navigation (VLN) ⚠️ ⚠️. It predicts a sequence of actions given natural-language navigation instructions while jointly learning to generate both paths and instructions. The core innovation is a double back‑translation loop that mutually enhances path generation and instruction generation via shared latent features.
 
 ---
 
@@ -28,7 +28,7 @@ CrossMap Transformer is a crossmodal masked path Transformer that uses double ba
 - **Components**:
   - **Encoder** for linguistic and visual features
   - **Path generator**
-  - **Double back‑translation loop** (comprising a [[Transformer]] ⚠️ ⚠️-based speaker and a separate instruction generator)
+  - **Double back‑translation loop** (comprising a Transformer ⚠️ ⚠️-based speaker and a separate instruction generator)
 
 ### Capabilities
 
@@ -40,11 +40,11 @@ CrossMap Transformer is a crossmodal masked path Transformer that uses double ba
 ### Relationships
 
 - **Uses**:
-  - [[Transformer]] ⚠️ ⚠️
-  - [[Double Back Translation]]
-  - [[Transformer-based Speaker]]
+  - Transformer ⚠️ ⚠️
+  - Double Back Translation
+  - Transformer-based Speaker
 - **Depends on**:
-  - [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️
+  - Vision-and-Language Navigation (VLN) ⚠️ ⚠️
 - **Part of**:
   - *(none listed)*
 
@@ -55,4 +55,4 @@ CrossMap Transformer is a crossmodal masked path Transformer that uses double ba
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `CrossMap Transformer` --[[extends]] ⚠️--> `Double Back Translation`
+- `CrossMap Transformer` --extends ⚠️--> `Double Back Translation`

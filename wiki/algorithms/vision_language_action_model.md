@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-A **Vision-Language-Action Model** (VLA) is a category of multimodal model that extends [[Vision-Language Models]] ⚠️ ⚠️ (VLMs) to generate motor commands or action sequences for [[Embodied AI]] systems. These models take both visual observations and natural language instructions as input and output low-level or high-level actions, enabling language-conditioned robotic tasks.
+A **Vision-Language-Action Model** (VLA) is a category of multimodal model that extends Vision-Language Models ⚠️ ⚠️ (VLMs) to generate motor commands or action sequences for Embodied AI systems. These models take both visual observations and natural language instructions as input and output low-level or high-level actions, enabling language-conditioned robotic tasks.
 
 ## Description
 
@@ -35,10 +35,10 @@ This taxonomy covers a broad spectrum of approaches, from modular pipelines to f
 
 ## Relationships
 
-- **Uses**: [[Large Language Models]] (LLMs) for language understanding and reasoning, [[Vision-Language Models]] ⚠️ ⚠️ (VLMs) for joint visual-linguistic representation learning.
-- **Depends on**: [[Embodied AI]] as the overarching research area that provides the physical grounding and task definitions needed to train and evaluate action generation.
+- **Uses**: Large Language Models (LLMs) for language understanding and reasoning, Vision-Language Models ⚠️ ⚠️ (VLMs) for joint visual-linguistic representation learning.
+- **Depends on**: Embodied AI as the overarching research area that provides the physical grounding and task definitions needed to train and evaluate action generation.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Vision-Language-Action Model` --[[based_on]] ⚠️--> `Embodied AI`
+- `Vision-Language-Action Model` --based_on ⚠️--> `Embodied AI`

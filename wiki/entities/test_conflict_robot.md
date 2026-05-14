@@ -33,7 +33,7 @@ new_value: 1.25m | new_source: papers/test2.pdf
 CONFLICT_END
 
 ## See Also
-- [[Robotics]] ⚠️
+- Robotics ⚠️
 
 ### 已裁决冲突
 _These conflicts were adjudicated by the conflict resolution engine._

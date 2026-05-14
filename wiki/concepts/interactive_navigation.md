@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Interactive Navigation
 
-**Interactive navigation** is a subtype of [[Multi-turn navigation]] in which the agent is allowed to query the instruction during execution. This contrasts with passive navigation, where the agent receives a fixed instruction and must follow it without clarification.
+**Interactive navigation** is a subtype of Multi-turn navigation in which the agent is allowed to query the instruction during execution. This contrasts with passive navigation, where the agent receives a fixed instruction and must follow it without clarification.
 
 ## Capabilities
 
@@ -22,7 +22,7 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **subtype_of**: [[Multi-turn navigation]] – Interactive navigation extends the multi-turn paradigm by enabling bidirectional communication.
+- **subtype_of**: Multi-turn navigation – Interactive navigation extends the multi-turn paradigm by enabling bidirectional communication.
 
 ## Source
 

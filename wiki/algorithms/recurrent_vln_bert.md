@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 ### Description
 
-Recurrent VLN‑BERT is an extension of the original [[VLN-BERT]] model designed for Vision-and-Language Navigation. Unlike its predecessor, which operates over discrete graph nodes, this variant is adapted to **continuous environments** by integrating a [[Waypoints Predictor]] ⚠️ ⚠️. The agent takes high-level actions (node-to-node jumps) as in standard VLN, but the waypoint prediction module bridges the discrete-to-continuous gap.
+Recurrent VLN‑BERT is an extension of the original VLN-BERT model designed for Vision-and-Language Navigation. Unlike its predecessor, which operates over discrete graph nodes, this variant is adapted to **continuous environments** by integrating a Waypoints Predictor ⚠️ ⚠️. The agent takes high-level actions (node-to-node jumps) as in standard VLN, but the waypoint prediction module bridges the discrete-to-continuous gap.
 
 ### Parameters
 
@@ -33,9 +33,9 @@ Recurrent VLN‑BERT is an extension of the original [[VLN-BERT]] model designed
 
 ### Relationships
 
-- **Uses** (uses): [[Waypoints Predictor]] ⚠️ ⚠️ – a learned module that predicts continuous waypoints from a discrete set of candidate nodes.
-- **Depends on** (depends_on): [[VLN-BERT]] architecture (the recurrent BERT backbone for encoding instructions and visual observations).
-- **Contributes to** (part_of): [[Vision-and-Language Navigation (VLN)]] ⚠️ research, specifically the continuous‑environment sub‑area.
+- **Uses** (uses): Waypoints Predictor ⚠️ ⚠️ – a learned module that predicts continuous waypoints from a discrete set of candidate nodes.
+- **Depends on** (depends_on): VLN-BERT architecture (the recurrent BERT backbone for encoding instructions and visual observations).
+- **Contributes to** (part_of): Vision-and-Language Navigation (VLN) ⚠️ research, specifically the continuous‑environment sub‑area.
 
 ### Notes
 

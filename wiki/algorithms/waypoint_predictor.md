@@ -15,11 +15,11 @@ source_type: arxiv_paper
 
 # Waypoints Predictor
 
-A **waypoints predictor** is an algorithm component that generates a set of candidate waypoints during navigation, allowing agents designed with high-level actions to be transferred to and trained in continuous environments. It is a key sub-module in [[Vision and Language Navigation in the Continuous Environment (VLN-CE)]] ⚠️, where it selects intermediate sub-goals to guide the agent toward the final navigation target.
+A **waypoints predictor** is an algorithm component that generates a set of candidate waypoints during navigation, allowing agents designed with high-level actions to be transferred to and trained in continuous environments. It is a key sub-module in Vision and Language Navigation in the Continuous Environment (VLN-CE) ⚠️, where it selects intermediate sub-goals to guide the agent toward the final navigation target.
 
 ## Description
 
-The predictor generates candidate waypoints from a robot observation and the environment connectivity graph. It simplifies navigation in continuous space into a sequence of view-selection decisions, enabling agents originally developed for discrete environments (e.g., using graph-based navigation) to operate in continuous settings. The predictor is typically trained using refined connectivity graphs derived from [[Matterport3D]] ⚠️ ⚠️ datasets.
+The predictor generates candidate waypoints from a robot observation and the environment connectivity graph. It simplifies navigation in continuous space into a sequence of view-selection decisions, enabling agents originally developed for discrete environments (e.g., using graph-based navigation) to operate in continuous settings. The predictor is typically trained using refined connectivity graphs derived from Matterport3D ⚠️ ⚠️ datasets.
 
 ## Parameters
 
@@ -35,12 +35,12 @@ The predictor generates candidate waypoints from a robot observation and the env
 
 ## Dependencies
 
-- **Depends on**: [[Connectivity Graph]] (e.g., from [[Matterport3D]] ⚠️ ⚠️)
+- **Depends on**: Connectivity Graph (e.g., from Matterport3D ⚠️ ⚠️)
 
 ## Used By
 
-- [[Cross-Modal Matching Agent]]
-- [[Recurrent VLN-BERT]]
+- Cross-Modal Matching Agent
+- Recurrent VLN-BERT
 
 ## Limitations
 
@@ -48,16 +48,16 @@ Existing waypoint predictors often neglect object semantics and passibility attr
 
 ## Relationship Summary
 
-- **Used in**: [[VLN-CE]]
+- **Used in**: VLN-CE
 - **Has issue**: Neglects object semantics and passibility attributes (see Limitations)
-- **Depends on**: [[Connectivity Graph]]
+- **Depends on**: Connectivity Graph
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `waypoint predictor` --[[based_on]] ⚠️--> `VLN-CE`
+- `waypoint predictor` --based_on ⚠️--> `VLN-CE`
 
 **Newly identified links:**
-- `waypoint predictor` --[[used_by]] ⚠️ ⚠️--> [[Cross-Modal Matching Agent]]
-- `waypoint predictor` --[[used_by]] ⚠️ ⚠️--> [[Recurrent VLN-BERT]]
-- `waypoint predictor` --[[depends_on]] ⚠️--> [[Connectivity Graph]]
+- `waypoint predictor` --used_by ⚠️ ⚠️--> Cross-Modal Matching Agent
+- `waypoint predictor` --used_by ⚠️ ⚠️--> Recurrent VLN-BERT
+- `waypoint predictor` --depends_on ⚠️--> Connectivity Graph

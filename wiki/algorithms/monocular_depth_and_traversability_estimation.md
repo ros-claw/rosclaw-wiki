@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Monocular Depth and Traversability Estimation
 
-**Monocular Depth and Traversability Estimation** is an [[algorithm]] ⚠️ that predicts both depth and traversability from a single RGB image, enabling local metric control for robotic navigation. It leverages [[foundational models]] ⚠️ to achieve robust performance without requiring stereo or LiDAR input.
+**Monocular Depth and Traversability Estimation** is an algorithm ⚠️ that predicts both depth and traversability from a single RGB image, enabling local metric control for robotic navigation. It leverages foundational models ⚠️ to achieve robust performance without requiring stereo or LiDAR input.
 
 ## Overview
 
-This method uses a single camera to simultaneously estimate geometric depth and terrain traversability, providing a lightweight perception solution for mobile robots. By integrating with the [[TANGO]] system, it supports real-time navigation planning on resource-constrained platforms.
+This method uses a single camera to simultaneously estimate geometric depth and terrain traversability, providing a lightweight perception solution for mobile robots. By integrating with the TANGO system, it supports real-time navigation planning on resource-constrained platforms.
 
 ## Capabilities
 
@@ -34,8 +34,8 @@ This method uses a single camera to simultaneously estimate geometric depth and 
 
 ## Dependencies
 
-- **depends_on**: [[Foundational Models]] ⚠️ ⚠️
-- **part_of**: [[TANGO]]
+- **depends_on**: Foundational Models ⚠️ ⚠️
+- **part_of**: TANGO
 
 ## Technical Details
 
@@ -43,8 +43,8 @@ The estimation pipeline uses pre-trained foundational visual models adapted for 
 
 ## Relationships
 
-- [[Monocular Depth and Traversability Estimation]] depends on [[Foundational Models]] ⚠️ ⚠️
-- [[Monocular Depth and Traversability Estimation]] is part of [[TANGO]]
+- Monocular Depth and Traversability Estimation depends on Foundational Models ⚠️ ⚠️
+- Monocular Depth and Traversability Estimation is part of TANGO
 
 ## References
 
@@ -53,4 +53,4 @@ The estimation pipeline uses pre-trained foundational visual models adapted for 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Monocular Depth and Traversability Estimation` --[[extends]] ⚠️--> `TANGO`
+- `Monocular Depth and Traversability Estimation` --extends ⚠️--> `TANGO`

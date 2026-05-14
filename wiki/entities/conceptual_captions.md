@@ -31,7 +31,7 @@ Conceptual Captions is a large-scale dataset of image-text pairs automatically c
 
 ## Relationships
 
-- **Used by**: [[VLN-BERT]] — Conceptual Captions is used as a pretraining dataset for the VLN-BERT model.
-- **Supports**: [[Visual Grounding]] — The dataset enables learning of visual grounding tasks by mapping language to image regions.
+- **Used by**: VLN-BERT — Conceptual Captions is used as a pretraining dataset for the VLN-BERT model.
+- **Supports**: Visual Grounding — The dataset enables learning of visual grounding tasks by mapping language to image regions.
 
-Conceptual Captions depends on [[Web Scraping]] ⚠️ for data collection and is related to other image-text datasets such as [[COCO Captions]] ⚠️ and [[Flickr30k]] ⚠️.
+Conceptual Captions depends on Web Scraping ⚠️ for data collection and is related to other image-text datasets such as COCO Captions ⚠️ and Flickr30k ⚠️.

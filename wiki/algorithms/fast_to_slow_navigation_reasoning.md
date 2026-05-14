@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Fast-to-Slow Navigation Reasoning
 
-**Fast-to-Slow Navigation Reasoning** (FSR) is a navigation reasoning strategy within the [[FSR-VLN]] architecture that combines efficient candidate screening with language-driven refinement for visual-language navigation (VLN). It addresses the computational bottleneck of real-time goal selection by performing a rapid initial match over candidate spaces (rooms, views, objects) and then applying a [[VLM]] ⚠️ ⚠️-driven analysis to select the most appropriate final goal.
+**Fast-to-Slow Navigation Reasoning** (FSR) is a navigation reasoning strategy within the FSR-VLN architecture that combines efficient candidate screening with language-driven refinement for visual-language navigation (VLN). It addresses the computational bottleneck of real-time goal selection by performing a rapid initial match over candidate spaces (rooms, views, objects) and then applying a VLM ⚠️ ⚠️-driven analysis to select the most appropriate final goal.
 
 ### Mechanism
 
@@ -28,8 +28,8 @@ FSR first performs **fast matching** to efficiently select candidate rooms, view
 
 ### Relationships
 
-- **part_of** → [[FSR-VLN]]
-- **uses** → [[VLM]] ⚠️ ⚠️ (Visual Language Model)
+- **part_of** → FSR-VLN
+- **uses** → VLM ⚠️ ⚠️ (Visual Language Model)
 
 ### References
 
@@ -38,4 +38,4 @@ FSR first performs **fast matching** to efficiently select candidate rooms, view
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Fast-to-Slow Navigation Reasoning` --[[extends]] ⚠️--> `FSR-VLN`
+- `Fast-to-Slow Navigation Reasoning` --extends ⚠️--> `FSR-VLN`

@@ -14,8 +14,8 @@ source_type: arxiv_paper
 
 # Goal-oriented Navigation
 
-**Goal-oriented navigation** is a subtype of [[Single-turn Navigation]] in which instructions designate a single goal location. The agent’s objective is to reach that specified location from its current position, without intermediate sub‑goals or multi-step sequences.
+**Goal-oriented navigation** is a subtype of Single-turn Navigation in which instructions designate a single goal location. The agent’s objective is to reach that specified location from its current position, without intermediate sub‑goals or multi-step sequences.
 
 ## Relationship
 
-- **subtype\_of**: [[Single-turn Navigation]] — goal-oriented navigation inherits the properties of single-turn tasks, but restricts the instruction to a single goal rather than a path or sequence.
+- **subtype\_of**: Single-turn Navigation — goal-oriented navigation inherits the properties of single-turn tasks, but restricts the instruction to a single goal rather than a path or sequence.

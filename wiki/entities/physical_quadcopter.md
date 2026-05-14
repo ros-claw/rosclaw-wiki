@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Physical Quadcopter** is the unmanned aerial vehicle (UAV) platform used to evaluate the [[SuReAL]] (Supervised Reinforcement Learning with Language) system. It operates in real-world environments, executing natural language instruction-following tasks based solely on first-person visual observations. No specific hardware specifications (e.g., model, processor, sensors) are detailed in the source paper — the platform serves primarily as an embodied testbed for the SuReAL algorithm.
+The **Physical Quadcopter** is the unmanned aerial vehicle (UAV) platform used to evaluate the SuReAL (Supervised Reinforcement Learning with Language) system. It operates in real-world environments, executing natural language instruction-following tasks based solely on first-person visual observations. No specific hardware specifications (e.g., model, processor, sensors) are detailed in the source paper — the platform serves primarily as an embodied testbed for the SuReAL algorithm.
 
 ## Capabilities
 
@@ -25,9 +25,9 @@ The **Physical Quadcopter** is the unmanned aerial vehicle (UAV) platform used t
 
 ## Relationships
 
-- **Uses** — [[SuReAL]]: the quadcopter is controlled by the SuReAL policy, which combines imitation learning and reinforcement learning to map natural language instructions and first-person imagery to low-level flight actions.
-- **Depends on** — [[Simulated flight training]] ⚠️: the quadcopter policy is initially trained in simulation before deployment to the physical platform.
-- **Depends on** — [[Reinforcement learning policy]] ⚠️: the quadcopter's flight controller relies on a policy refined through reinforcement learning (part of the SuReAL framework) to generalize to real-world conditions.
+- **Uses** — SuReAL: the quadcopter is controlled by the SuReAL policy, which combines imitation learning and reinforcement learning to map natural language instructions and first-person imagery to low-level flight actions.
+- **Depends on** — Simulated flight training ⚠️: the quadcopter policy is initially trained in simulation before deployment to the physical platform.
+- **Depends on** — Reinforcement learning policy ⚠️: the quadcopter's flight controller relies on a policy refined through reinforcement learning (part of the SuReAL framework) to generalize to real-world conditions.
 
 ## Note
 
@@ -36,6 +36,6 @@ The **Physical Quadcopter** is the unmanned aerial vehicle (UAV) platform used t
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Physical Quadcopter` --[[uses]] ⚠️--> `SuReAL`
-- `Physical Quadcopter` --[[depends_on]] ⚠️ ⚠️--> `Simulated flight training`
-- `Physical Quadcopter` --[[depends_on]] ⚠️ ⚠️--> `Reinforcement learning policy`
+- `Physical Quadcopter` --uses ⚠️--> `SuReAL`
+- `Physical Quadcopter` --depends_on ⚠️ ⚠️--> `Simulated flight training`
+- `Physical Quadcopter` --depends_on ⚠️ ⚠️--> `Reinforcement learning policy`

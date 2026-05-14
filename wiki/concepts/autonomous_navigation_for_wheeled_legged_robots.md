@@ -26,10 +26,10 @@ source_type: arxiv_paper
 
 This concept builds on several foundational technologies: it depends on:
 
-- **[[Hierarchical Reinforcement Learning]]** – used to train locomotion policies that can switch between gait modes and adapt to terrain.
-- **[[Adaptive Locomotion Control]]** – provides real‑time adjustment of leg stiffness, foot placement, and wheel speeds based on ground feedback.
-- **[[Mobility-Aware Local Navigation Planning]]** – a planner that considers the robot’s current mobility capabilities (e.g., ability to climb a curb or roll over a smooth surface) when choosing short‑term trajectories.
-- **[[Large-Scale Path Planning]]** – a global planner that generates kilometer‑scale routes through city street networks, accounting for robot size, power constraints, and terrain constraints.
+- **Hierarchical Reinforcement Learning** – used to train locomotion policies that can switch between gait modes and adapt to terrain.
+- **Adaptive Locomotion Control** – provides real‑time adjustment of leg stiffness, foot placement, and wheel speeds based on ground feedback.
+- **Mobility-Aware Local Navigation Planning** – a planner that considers the robot’s current mobility capabilities (e.g., ability to climb a curb or roll over a smooth surface) when choosing short‑term trajectories.
+- **Large-Scale Path Planning** – a global planner that generates kilometer‑scale routes through city street networks, accounting for robot size, power constraints, and terrain constraints.
 
 ## Significance
 
@@ -47,4 +47,4 @@ The successful deployment of wheeled-legged robots for autonomous navigation at 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Autonomous Navigation for Wheeled-Legged Robots` --[[related_to]] ⚠️--> `Hierarchical Reinforcement Learning` _(wikilink)_
+- `Autonomous Navigation for Wheeled-Legged Robots` --related_to ⚠️--> `Hierarchical Reinforcement Learning` _(wikilink)_

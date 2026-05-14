@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Embodied Agent
 
-An **Embodied Agent** is an intelligent system that can perceive its environment, make decisions, and act within the physical or simulated world via a body (e.g., a robot, a virtual avatar, or a drone). It is a central concept in [[Embodied AI]], where intelligence emerges from the interaction between the agent's sensorimotor capabilities and its surroundings. Unlike disembodied models (e.g., text-based LLMs), an embodied agent must handle real-time data streams, low-level control, and environmental constraints.
+An **Embodied Agent** is an intelligent system that can perceive its environment, make decisions, and act within the physical or simulated world via a body (e.g., a robot, a virtual avatar, or a drone). It is a central concept in Embodied AI, where intelligence emerges from the interaction between the agent's sensorimotor capabilities and its surroundings. Unlike disembodied models (e.g., text-based LLMs), an embodied agent must handle real-time data streams, low-level control, and environmental constraints.
 
 ### Research Context
 
@@ -22,7 +22,7 @@ As identified in the source (arXiv:2407.06886), the Embodied Agent is **one of f
 
 ### Relationship to Embodied AI
 
-- **part_of** [[Embodied AI]] – The Embodied Agent concept is a fundamental pillar of this broader field, which studies how intelligence can be grounded in physical or simulated interaction.
+- **part_of** Embodied AI – The Embodied Agent concept is a fundamental pillar of this broader field, which studies how intelligence can be grounded in physical or simulated interaction.
 
 ### Capabilities and Parameters
 
@@ -30,11 +30,11 @@ As identified in the source (arXiv:2407.06886), the Embodied Agent is **one of f
 
 ### See Also
 
-- [[Embodied AI]]
-- [[Sim-to-Real Transfer]]
-- [[Reinforcement Learning for Robotics]] ⚠️
+- Embodied AI
+- Sim-to-Real Transfer
+- Reinforcement Learning for Robotics ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Embodied Agent` --[[related_to]] ⚠️--> `Embodied AI`
+- `Embodied Agent` --related_to ⚠️--> `Embodied AI`

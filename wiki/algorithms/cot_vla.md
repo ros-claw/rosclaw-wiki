@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ### CoT-VLA
 
-**CoT-VLA** is a multimodal [[Chain-of-Thought]] ⚠️ (CoT) method designed for Vision-and-Language Navigation ([[Vision-Language Navigation|VLN]]). It generates intermediate visual observations as part of its reasoning process, intending to improve decision-making and grounding in unseen environments.
+**CoT-VLA** is a multimodal Chain-of-Thought ⚠️ (CoT) method designed for Vision-and-Language Navigation (VLN). It generates intermediate visual observations as part of its reasoning process, intending to improve decision-making and grounding in unseen environments.
 
 #### Parameters/Limitations
 
@@ -23,10 +23,10 @@ source_type: arxiv_paper
 
 #### Relationships
 
-- **Part of**: [[Chain-of-Thought methods for VLN]] ⚠️.
-- **Improved by**: [[FantasyVLN]] — a subsequent method that addresses the token inflation problem while preserving the benefits of visual CoT reasoning.
+- **Part of**: Chain-of-Thought methods for VLN ⚠️.
+- **Improved by**: FantasyVLN — a subsequent method that addresses the token inflation problem while preserving the benefits of visual CoT reasoning.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `CoT-VLA` --[[extends]] ⚠️--> `FantasyVLN`
+- `CoT-VLA` --extends ⚠️--> `FantasyVLN`

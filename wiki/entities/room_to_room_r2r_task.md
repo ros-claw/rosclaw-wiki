@@ -23,15 +23,15 @@ The **Room-to-Room (R2R) Task** is a standard benchmark for evaluating **vision-
 
 ## Relationships
 
-- **Used by**: [[Generalizable Navigational Agent]] — the [[R2R Benchmark]] is used to assess the generalization performance of navigational agents that must adapt to unseen instructions and environments.
+- **Used by**: Generalizable Navigational Agent — the R2R Benchmark is used to assess the generalization performance of navigational agents that must adapt to unseen instructions and environments.
 
 ## Related Concepts
 
-- [[Vision-and-Language Navigation]]
-- [[Matterport3D]] ⚠️ (the environment used for R2R)
-- [[Embodied AI]]
-- [[Instruction Following]] ⚠️
-- [[Cross-Modal Grounding]] ⚠️
+- Vision-and-Language Navigation
+- Matterport3D ⚠️ (the environment used for R2R)
+- Embodied AI
+- Instruction Following ⚠️
+- Cross-Modal Grounding ⚠️
 
 ## References
 
@@ -40,5 +40,5 @@ The **Room-to-Room (R2R) Task** is a standard benchmark for evaluating **vision-
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Room-to-Room (R2R) Task` --[[related_to]] ⚠️ ⚠️--> `Vision-and-Language Navigation`
-- `Room-to-Room (R2R) Task` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Room-to-Room (R2R) Task` --related_to ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `Room-to-Room (R2R) Task` --related_to ⚠️ ⚠️--> `Embodied AI`

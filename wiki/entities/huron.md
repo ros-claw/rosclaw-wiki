@@ -14,13 +14,13 @@ source_type: arxiv_paper
 
 ### HuRoN
 
-**HuRoN** is a benchmark for visual navigation, specifically designed to evaluate the performance of embodied navigation agents. It was used as a test environment in the evaluation of [[UniWM]].
+**HuRoN** is a benchmark for visual navigation, specifically designed to evaluate the performance of embodied navigation agents. It was used as a test environment in the evaluation of UniWM.
 
 #### Relationships
 
-- **part_of**: [[Navigation benchmarks]] ⚠️
+- **part_of**: Navigation benchmarks ⚠️
 - **depends_on**: Visual navigation tasks and datasets (implicit)
-- **used_by**: [[UniWM]] for evaluation
+- **used_by**: UniWM for evaluation
 
 #### Description
 
@@ -29,4 +29,4 @@ HuRoN provides a standardized suite of visual navigation challenges, enabling fa
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `HuRoN` --[[uses]] ⚠️--> `UniWM`
+- `HuRoN` --uses ⚠️--> `UniWM`

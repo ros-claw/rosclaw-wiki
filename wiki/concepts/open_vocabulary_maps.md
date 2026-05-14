@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Open-Vocabulary Maps
 
-Open-Vocabulary Maps are a class of semantic map representations that leverage [[Visual-Language Models (VLMs)]] to understand and label spatial regions with arbitrary, natural language concepts, without requiring a predefined set of object classes. These environment representations enable robots to query and reason about their surroundings in flexible, human-like terms. They are typically deployed in **small-scale indoor environments**, where their ability to generalize to unseen objects is most effective.
+Open-Vocabulary Maps are a class of semantic map representations that leverage Visual-Language Models (VLMs) to understand and label spatial regions with arbitrary, natural language concepts, without requiring a predefined set of object classes. These environment representations enable robots to query and reason about their surroundings in flexible, human-like terms. They are typically deployed in **small-scale indoor environments**, where their ability to generalize to unseen objects is most effective.
 
 ## Key Enabler: Visual-Language Models (VLMs)
 
-The fundamental capability of open-vocabulary maps is made possible by [[Visual-Language Models (VLMs)]] — models that align visual and textual representations. By embedding map regions into a shared vision-language space, these maps can associate any textual description (e.g., "clean surface", "something to sit on") with the corresponding geometry or location, enabling **zero-shot recognition** of arbitrary object classes without predefined labels.
+The fundamental capability of open-vocabulary maps is made possible by Visual-Language Models (VLMs) — models that align visual and textual representations. By embedding map regions into a shared vision-language space, these maps can associate any textual description (e.g., "clean surface", "something to sit on") with the corresponding geometry or location, enabling **zero-shot recognition** of arbitrary object classes without predefined labels.
 
 ## Capabilities
 
@@ -32,11 +32,11 @@ Existing open-vocabulary maps are designed primarily for small-scale indoor area
 
 ## Relationship to Other Concepts
 
-- **Supersedes**: Open-vocabulary maps supersede [[closed-vocabulary semantic maps]] ⚠️. Whereas closed‑vocabulary maps require a fixed ontology and often fail on unseen objects, open‑vocabulary maps generalize to any concept expressible in natural language.
-- **Addressed by**: [[OpenGraph]] is a framework that directly targets the outdoor scaling limitation of open-vocabulary maps. OpenGraph builds open‑vocabulary graph‑based maps for long‑term robotic navigation, enabling persistent, queryable representations that can handle larger, more complex environments.
+- **Supersedes**: Open-vocabulary maps supersede closed-vocabulary semantic maps ⚠️. Whereas closed‑vocabulary maps require a fixed ontology and often fail on unseen objects, open‑vocabulary maps generalize to any concept expressible in natural language.
+- **Addressed by**: OpenGraph is a framework that directly targets the outdoor scaling limitation of open-vocabulary maps. OpenGraph builds open‑vocabulary graph‑based maps for long‑term robotic navigation, enabling persistent, queryable representations that can handle larger, more complex environments.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Open-Vocabulary Maps` --[[related_to]] ⚠️ ⚠️--> `Visual-Language Models (VLMs)` _(wikilink)_
-- `Open-Vocabulary Maps` --[[related_to]] ⚠️ ⚠️--> `OpenGraph` _(wikilink)_
+- `Open-Vocabulary Maps` --related_to ⚠️ ⚠️--> `Visual-Language Models (VLMs)` _(wikilink)_
+- `Open-Vocabulary Maps` --related_to ⚠️ ⚠️--> `OpenGraph` _(wikilink)_

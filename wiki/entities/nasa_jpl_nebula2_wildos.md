@@ -22,7 +22,7 @@ WildOS enables autonomous navigation to distant, semantically specified targets 
 
 | Module | Description |
 |--------|-------------|
-| [[ExploRFM]] | Foundation-model-based vision module scoring frontier nodes |
+| ExploRFM | Foundation-model-based vision module scoring frontier nodes |
 | triangulation3d | Particle-filter-based coarse localization of target queries |
 | graphnav_planner | Sparse navigation graph planner for exploration |
 | [[visual_navigation]] | Visual navigation components |
@@ -51,7 +51,7 @@ WildOS extends [[vision_and_language_navigation|Vision-Language Navigation (VLN)
 
 ## Datasets
 
-- [[wildos_dataset|WildOS Dataset]] available on HuggingFace
+- WildOS Dataset available on HuggingFace
 - Field experiments across diverse off-road and urban terrains
 
 ## See Also
@@ -60,4 +60,4 @@ WildOS extends [[vision_and_language_navigation|Vision-Language Navigation (VLN)
 - [[wildos_open_vocabulary_object_search_in_the_wild|WildOS Paper]] — Paper entity page
 - [[vision_and_language_navigation|Vision-Language Navigation]]
 - [[object_goal_navigation|Object-Goal Navigation]]
-- [[outdoor_navigation|Outdoor Navigation]]
+- Outdoor Navigation

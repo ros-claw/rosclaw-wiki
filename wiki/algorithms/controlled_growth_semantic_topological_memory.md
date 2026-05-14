@@ -37,14 +37,14 @@ Stores and organizes semantic observations in a controlled-growth topological ma
 
 ## Relationships
 
-- `part of` [[Decision-Driven Semantic Object Exploration (DD-SOE)]] – This memory forms the core semantic storage module of the broader DD-SOE framework, enabling the robot to decide where to explore based on accumulated semantic knowledge.
+- `part of` Decision-Driven Semantic Object Exploration (DD-SOE) – This memory forms the core semantic storage module of the broader DD-SOE framework, enabling the robot to decide where to explore based on accumulated semantic knowledge.
 
 ## Related Pages
 
-- [[Decision-Driven Semantic Object Exploration (DD-SOE)]] – The parent framework that integrates this memory with exploration policies and object detection.
-- [[Semantic Mapping]] ⚠️ – General concept of building maps that contain semantic labels.
-- [[Topological Mapping]] – Memory structure based on graph representations rather than metric grids.
-- [[Object-Centric Exploration]] ⚠️ – Exploration strategies focused on discovering and mapping objects, supported by this memory.
+- Decision-Driven Semantic Object Exploration (DD-SOE) – The parent framework that integrates this memory with exploration policies and object detection.
+- Semantic Mapping ⚠️ – General concept of building maps that contain semantic labels.
+- Topological Mapping – Memory structure based on graph representations rather than metric grids.
+- Object-Centric Exploration ⚠️ – Exploration strategies focused on discovering and mapping objects, supported by this memory.
 
 ## Notes
 
@@ -53,4 +53,4 @@ The controlled-growth mechanism is critical for long-horizon exploration; withou
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Controlled-Growth Semantic Topological Memory` --[[extends]] ⚠️--> `Decision-Driven Semantic Object Exploration (DD-SOE)`
+- `Controlled-Growth Semantic Topological Memory` --extends ⚠️--> `Decision-Driven Semantic Object Exploration (DD-SOE)`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Fine-grained Entity-Level Alignment (GELA)
 
-**Fine-grained Entity-Level Alignment** is a [[concept]] ⚠️ in [[Vision-and-Language Navigation]] (VLN) that improves navigation performance by mapping specific entity phrases from natural language instructions to corresponding landmarks in the visual environment. Unlike global instruction alignment, GELA operates at the level of individual objects or spatial landmarks, enabling more precise grounding and robust decision-making.
+**Fine-grained Entity-Level Alignment** is a [[concept]] ⚠️ in Vision-and-Language Navigation (VLN) that improves navigation performance by mapping specific entity phrases from natural language instructions to corresponding landmarks in the visual environment. Unlike global instruction alignment, GELA operates at the level of individual objects or spatial landmarks, enabling more precise grounding and robust decision-making.
 
 ### Capabilities
 
@@ -23,7 +23,7 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **Depends on**: [[Grounded entity-landmark annotations]] ⚠️ – requires a dataset linking textual entities to visual landmarks for training or inference.
+- **Depends on**: Grounded entity-landmark annotations ⚠️ – requires a dataset linking textual entities to visual landmarks for training or inference.
 
 ### Relevance
 
@@ -36,4 +36,4 @@ A novel aspect of GELA is its focus on fine-grained alignment, which improves VL
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Fine-grained entity-level alignment` --[[related_to]] ⚠️--> `Vision-and-Language Navigation`
+- `Fine-grained entity-level alignment` --related_to ⚠️--> `Vision-and-Language Navigation`

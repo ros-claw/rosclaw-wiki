@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Gaussian-to-voxel Splatting
 
-**Gaussian-to-voxel Splatting** is a rendering algorithm that transforms 3D semantic Gaussians into a global 3D occupancy grid. It serves as the final output stage in the [[EmbodiedOcc]] pipeline, converting refined Gaussian splats into dense voxel occupancy predictions. This splatting technique projects 3D Gaussians onto a voxel grid to produce the final occupancy prediction.
+**Gaussian-to-voxel Splatting** is a rendering algorithm that transforms 3D semantic Gaussians into a global 3D occupancy grid. It serves as the final output stage in the EmbodiedOcc pipeline, converting refined Gaussian splats into dense voxel occupancy predictions. This splatting technique projects 3D Gaussians onto a voxel grid to produce the final occupancy prediction.
 
 ## Parameters
 
@@ -32,11 +32,11 @@ Converts the refined 3D Gaussians to voxel occupancy for final output. This step
 
 ## Relationships
 
-- **used_by** → [[EmbodiedOcc]]  
+- **used_by** → EmbodiedOcc  
 
   Gaussian-to-voxel Splatting is a core algorithm within the EmbodiedOcc system, which performs holistic 3D scene perception from RGB images. It depends on preceding stages that produce the semantic Gaussians, and implements the final occupancy decoding.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Gaussian-to-voxel Splatting` --[[extends]] ⚠️--> `EmbodiedOcc`
+- `Gaussian-to-voxel Splatting` --extends ⚠️--> `EmbodiedOcc`

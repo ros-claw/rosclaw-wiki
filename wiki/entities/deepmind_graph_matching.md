@@ -47,7 +47,7 @@ Where the second sum is the cross-graph message from graph B.
 
 | Domain | Task |
 |--------|------|
-| Control | Learning control policies for [[combinatorial_optimization|combinatorial problems]] |
+| Control | Learning control policies for combinatorial problems |
 | Chemistry | Molecular similarity and reaction prediction |
 | Scene Understanding | Matching object graphs across viewpoints |
 

@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 **Topological mapping** is an online mapping algorithm that constructs a topological representation of an environment without requiring prior experience or pre-built maps. It self-organizes predicted waypoints along a traversed path, enabling a robot to build a compact, graph-like model of traversable space during exploration. The method is designed for embodied navigation tasks where annotation and prior knowledge are unavailable.
 
-This algorithm is a core component of the [[ETPNav]] framework.
+This algorithm is a core component of the ETPNav framework.
 
 ## Capabilities
 
@@ -27,7 +27,7 @@ This algorithm is a core component of the [[ETPNav]] framework.
 
 ## Relationships
 
-- **part_of**: [[ETPNav]] — Topological mapping serves as a key module within ETPNav, providing a spatial representation that supports downstream planning and navigation behaviors.
+- **part_of**: ETPNav — Topological mapping serves as a key module within ETPNav, providing a spatial representation that supports downstream planning and navigation behaviors.
 
 ## Technical Details
 
@@ -37,12 +37,12 @@ Because the map is constructed incrementally, it naturally adapts to the path ta
 
 ## See Also
 
-- [[Topological Map]] ⚠️ (concept)
-- [[Online Mapping]] ⚠️
-- [[Waypoint Generation]] ⚠️
-- [[Navigation Without Prior Map]] ⚠️
+- Topological Map ⚠️ (concept)
+- Online Mapping ⚠️
+- Waypoint Generation ⚠️
+- Navigation Without Prior Map ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Topological mapping` --[[extends]] ⚠️--> `ETPNav`
+- `Topological mapping` --extends ⚠️--> `ETPNav`

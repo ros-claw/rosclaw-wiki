@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**VLN-SIG** (Vision-and-Language Navigation with Semantics Image Generation) is a transformer-based method that enhances a [[Vision-and-Language Navigation]] agent by enabling it to generate the semantics of future navigation views. This generative capability improves the agent's decision-making and interpretability, particularly on longer navigation paths.
+**VLN-SIG** (Vision-and-Language Navigation with Semantics Image Generation) is a transformer-based method that enhances a Vision-and-Language Navigation agent by enabling it to generate the semantics of future navigation views. This generative capability improves the agent's decision-making and interpretability, particularly on longer navigation paths.
 
 The core approach introduces three training objectives — Masked Panorama Modeling, Masked Trajectory Modeling, and Action Prediction with Image Generation — and an auxiliary loss that minimizes the difference between generated and ground‑truth future view semantics.
 
@@ -31,7 +31,7 @@ The core approach introduces three training objectives — Masked Panorama Model
 ## Capabilities
 
 - Generates future-view image semantics during navigation — the agent can predict *what* a future observation will look like at a semantic level.
-- Improves VLN performance on standard benchmarks ([[Room-to-Room (R2R)]] and [[CVDN]]).
+- Improves VLN performance on standard benchmarks (Room-to-Room (R2R) and CVDN).
 - Enables interpretability by predicting missing patches in future views.
 - Provides stronger performance on longer navigation paths where anticipation of upcoming scenes is critical.
 
@@ -39,11 +39,11 @@ The core approach introduces three training objectives — Masked Panorama Model
 
 | Relation | Entity |
 |----------|--------|
-| `uses` | [[Masked Panorama Modeling]] |
-| `uses` | [[Masked Trajectory Modeling]] |
-| `uses` | [[Action Prediction with Image Generation]] |
-| `depends_on` | [[Vision-and-Language Navigation]] |
-| `depends_on` | [[Future-view image semantics]] |
+| `uses` | Masked Panorama Modeling |
+| `uses` | Masked Trajectory Modeling |
+| `uses` | Action Prediction with Image Generation |
+| `depends_on` | Vision-and-Language Navigation |
+| `depends_on` | Future-view image semantics |
 
 ## Training Objectives
 
@@ -66,4 +66,4 @@ VLN-SIG is a method that equips a VLN agent with the ability to generate semanti
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `VLN-SIG` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
+- `VLN-SIG` --based_on ⚠️--> `Vision-and-Language Navigation`

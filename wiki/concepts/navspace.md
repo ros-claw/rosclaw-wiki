@@ -18,7 +18,7 @@ source_type: official_manual
 
 **NavSpace** is a benchmark for evaluating spatial perception and reasoning in instruction-following navigation for embodied agents. It was introduced as the first comprehensive benchmark dedicated to spatial intelligence in embodied navigation, comprising 1,228 trajectory-instruction pairs across six distinct spatial subtasks. NavSpace evaluates 22 different navigation agents to measure their understanding of spatial relationships, viewpoint shifting, vertical perception, and precise movement.
 
-The benchmark leverages [[Habitat-Sim]] and the [[HM3D]] dataset for simulation and scene data. The baseline model is **SNav**, fine-tuned from [[LLaVA-Video]] ⚠️ ⚠️ ⚠️ ⚠️-7B-Qwen2, which achieves state-of-the-art performance on the benchmark.
+The benchmark leverages Habitat-Sim and the HM3D dataset for simulation and scene data. The baseline model is **SNav**, fine-tuned from LLaVA-Video ⚠️ ⚠️ ⚠️ ⚠️-7B-Qwen2, which achieves state-of-the-art performance on the benchmark.
 
 ## Capabilities
 
@@ -60,9 +60,9 @@ Data in NavSpace is provided in three formats for different stages of processing
 
 ## Baseline Model: SNav
 
-**SNav** (Spatial Navigation) is the proposed baseline model that achieves state-of-the-art results on NavSpace. It is fine-tuned from [[LLaVA-Video]] ⚠️ ⚠️ ⚠️ ⚠️-7B-Qwen2, a large multimodal model originally designed for video understanding. SNav leverages spatiotemporal visual features from [[LLaVA-Video]] ⚠️ ⚠️ ⚠️ ⚠️ to reason about camera viewpoints and spatial cues in the navigation episodes.
+**SNav** (Spatial Navigation) is the proposed baseline model that achieves state-of-the-art results on NavSpace. It is fine-tuned from LLaVA-Video ⚠️ ⚠️ ⚠️ ⚠️-7B-Qwen2, a large multimodal model originally designed for video understanding. SNav leverages spatiotemporal visual features from LLaVA-Video ⚠️ ⚠️ ⚠️ ⚠️ to reason about camera viewpoints and spatial cues in the navigation episodes.
 
 ## Relationships
 
-- **Uses**: [[Habitat-Sim]], [[HM3D]], [[LLaVA-Video]] ⚠️ ⚠️ ⚠️ ⚠️
-- **Depends on**: [[Habitat-Sim]] (simulation backend), [[HM3D]] (3D scene dataset)
+- **Uses**: Habitat-Sim, HM3D, LLaVA-Video ⚠️ ⚠️ ⚠️ ⚠️
+- **Depends on**: Habitat-Sim (simulation backend), HM3D (3D scene dataset)

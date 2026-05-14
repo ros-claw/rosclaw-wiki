@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Role
 
-In the context of the [[Humanoid Occupancy network architecture]] ⚠️ ⚠️, advanced multi-modal fusion techniques are employed to generate occupancy outputs. Specifically, features from different modalities are aligned and combined to produce dense, occupancy-aware representations that guide motion planning and control on humanoid platforms.
+In the context of the Humanoid Occupancy network architecture ⚠️ ⚠️, advanced multi-modal fusion techniques are employed to generate occupancy outputs. Specifically, features from different modalities are aligned and combined to produce dense, occupancy-aware representations that guide motion planning and control on humanoid platforms.
 
 The fusion process typically involves:
 - **Feature extraction**: Each modality is processed through dedicated encoders (e.g., CNNs for vision, point cloud networks for LiDAR).
@@ -27,14 +27,14 @@ The fusion process typically involves:
 
 ## Relationship Annotations
 
-- `part_of` [[Humanoid Occupancy network architecture]] ⚠️ ⚠️ — Multi-modal feature fusion is a core component of this architecture, enabling the network to reason about occupancy from heterogeneous sensory input.
-- `depends_on` [[Sensor Calibration]] ⚠️ — Accurate extrinsic and intrinsic calibration is required for successful feature alignment.
-- `uses` [[Attention Mechanisms]] ⚠️ — Learnable attention is commonly employed to weight modalities dynamically based on reliability.
-- `implements` [[Multi-modal Learning]] ⚠️ — The fusion scheme is a practical instantiation of multi-modal learning principles.
+- `part_of` Humanoid Occupancy network architecture ⚠️ ⚠️ — Multi-modal feature fusion is a core component of this architecture, enabling the network to reason about occupancy from heterogeneous sensory input.
+- `depends_on` Sensor Calibration ⚠️ — Accurate extrinsic and intrinsic calibration is required for successful feature alignment.
+- `uses` Attention Mechanisms ⚠️ — Learnable attention is commonly employed to weight modalities dynamically based on reliability.
+- `implements` Multi-modal Learning ⚠️ — The fusion scheme is a practical instantiation of multi-modal learning principles.
 
 ## See Also
 
-- [[Sensor Fusion]] ⚠️
-- [[Occupancy Networks]] ⚠️
-- [[Embodied Perception]]
-- [[Humanoid Robot Perception]] ⚠️
+- Sensor Fusion ⚠️
+- Occupancy Networks ⚠️
+- Embodied Perception
+- Humanoid Robot Perception ⚠️

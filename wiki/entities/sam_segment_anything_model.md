@@ -22,18 +22,18 @@ SAM is trained on the SA-1B dataset, which contains over 1 billion masks across 
 
 ## Capabilities
 
-- **Segmentation of visible ground for navigational affordances** – SAM is used to extract drivable terrain or walkable surfaces from egocentric camera views, providing an explicit "ground mask" that serves as a spatial constraint for [[Visual Affordances Prompting]] ⚠️ ⚠️ ⚠️.
+- **Segmentation of visible ground for navigational affordances** – SAM is used to extract drivable terrain or walkable surfaces from egocentric camera views, providing an explicit "ground mask" that serves as a spatial constraint for Visual Affordances Prompting ⚠️ ⚠️ ⚠️.
 - **Ground segmentation for affordances extraction** – This capability is further leveraged by other planners that require precise terrain delineation.
 
 ## Usage
 
-SAM is employed as a pre-processing step in the [[Visual Affordances Prompting]] ⚠️ ⚠️ ⚠️ pipeline. The raw image is passed to SAM with a foreground/background prompting strategy, and the resulting ground segmentation mask is combined with affordance features to guide robot locomotion. Additionally, SAM is used as a component in the [[AO-Planner]] system, where its ground segmentation output provides the spatial affordance cues needed for obstacle-aware path planning.
+SAM is employed as a pre-processing step in the Visual Affordances Prompting ⚠️ ⚠️ ⚠️ pipeline. The raw image is passed to SAM with a foreground/background prompting strategy, and the resulting ground segmentation mask is combined with affordance features to guide robot locomotion. Additionally, SAM is used as a component in the AO-Planner system, where its ground segmentation output provides the spatial affordance cues needed for obstacle-aware path planning.
 
 ## Relationships
 
 - **Used by**
-  - [[Visual Affordances Prompting]] ⚠️ ⚠️ ⚠️ – SAM provides the ground segmentation masks that are critical for deriving navigational affordances.
-  - [[AO-Planner]] – SAM's ground segmentation is integrated into the planner to supply terrain affordances for safe navigation.
+  - Visual Affordances Prompting ⚠️ ⚠️ ⚠️ – SAM provides the ground segmentation masks that are critical for deriving navigational affordances.
+  - AO-Planner – SAM's ground segmentation is integrated into the planner to supply terrain affordances for safe navigation.
 - **Depends on** No external dependencies (runs as a standalone model).
 
 ## References

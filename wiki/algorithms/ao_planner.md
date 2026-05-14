@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-AO-Planner integrates various foundation models to achieve affordances-oriented low-level motion planning and high-level decision-making, both in a zero-shot setting. It achieves state-of-the-art zero-shot performance on the [[R2R-CE]] and [[RxR-CE]] benchmarks, with an 8.8% improvement on **SPL** (Success weighted by Path Length) on R2R-CE. The system uses a modular architecture that separates semantic reasoning from motion execution, enabling robust navigation without task-specific training.
+AO-Planner integrates various foundation models to achieve affordances-oriented low-level motion planning and high-level decision-making, both in a zero-shot setting. It achieves state-of-the-art zero-shot performance on the R2R-CE and RxR-CE benchmarks, with an 8.8% improvement on **SPL** (Success weighted by Path Length) on R2R-CE. The system uses a modular architecture that separates semantic reasoning from motion execution, enabling robust navigation without task-specific training.
 
 ### Capabilities
 
@@ -40,8 +40,8 @@ AO-Planner uses two core components:
 
 The system relies on a stack of foundation models:
 
-- [[SAM]] ⚠️ ⚠️ – segmenting objects and regions of interest from visual input.
-- [[LLM]] ⚠️ ⚠️ – reasoning about navigation goals and generating natural language plans.
+- SAM ⚠️ ⚠️ – segmenting objects and regions of interest from visual input.
+- LLM ⚠️ ⚠️ – reasoning about navigation goals and generating natural language plans.
 - Depth information and camera intrinsic parameters – used to project 2D affordances into 3D space for motion planning.
 
 ### Dependencies
@@ -50,27 +50,27 @@ The system relies on a stack of foundation models:
 |------------|------|
 | Visual Affordances Prompting | uses |
 | PathAgent | uses |
-| [[SAM]] ⚠️ ⚠️ | uses |
-| [[LLM]] ⚠️ ⚠️ | uses |
+| SAM ⚠️ ⚠️ | uses |
+| LLM ⚠️ ⚠️ | uses |
 | depth information | uses, depends_on |
 | camera intrinsic parameters | uses, depends_on |
 
 ### Performance
 
-On the [[R2R-CE]] dataset, AO-Planner achieves:
+On the R2R-CE dataset, AO-Planner achieves:
 
 - **SPL**: +8.8% over previous zero-shot state-of-the-art
 - **Success Rate**: competitive with fully-supervised methods despite being **zero-shot**
 
-On the [[RxR-CE]] dataset, AO-Planner also holds state-of-the-art zero-shot results, demonstrating strong cross-dataset generalization without any fine-tuning.
+On the RxR-CE dataset, AO-Planner also holds state-of-the-art zero-shot results, demonstrating strong cross-dataset generalization without any fine-tuning.
 
 The model does not require any parameter updates or dataset-specific tuning, making it directly applicable to new environments.
 
 ### Related Work
 
-- [[VLN-BERT]] – prior work using BERT for vision-language navigation
-- [[CLIP]] – used in some zero-shot navigation pipelines
-- [[Continuous VLN]] ⚠️ – the problem setting AO-Planner addresses
+- VLN-BERT – prior work using BERT for vision-language navigation
+- CLIP – used in some zero-shot navigation pipelines
+- Continuous VLN ⚠️ – the problem setting AO-Planner addresses
 
 ### References
 
@@ -79,5 +79,5 @@ The model does not require any parameter updates or dataset-specific tuning, mak
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `AO-Planner` --[[implements]] ⚠️ ⚠️--> `R2R-CE`
-- `AO-Planner` --[[implements]] ⚠️ ⚠️--> `RxR-CE`
+- `AO-Planner` --implements ⚠️ ⚠️--> `R2R-CE`
+- `AO-Planner` --implements ⚠️ ⚠️--> `RxR-CE`

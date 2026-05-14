@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # CREStE
 
-**CREStE** is a scalable learning-based mapless navigation framework designed for open-world generalization and long-range autonomy in outdoor urban environments. It achieves kilometer-scale traversal with minimal human intervention by combining [[Visual Foundation Model (VFM) Distillation]] objectives with [[Counterfactual Inverse Reinforcement Learning]] ⚠️ to produce robust, expert-aligned navigation costs.
+**CREStE** is a scalable learning-based mapless navigation framework designed for open-world generalization and long-range autonomy in outdoor urban environments. It achieves kilometer-scale traversal with minimal human intervention by combining Visual Foundation Model (VFM) Distillation objectives with Counterfactual Inverse Reinforcement Learning ⚠️ to produce robust, expert-aligned navigation costs.
 
 ## Overview
 
@@ -43,22 +43,22 @@ CREStE addresses two key challenges in outdoor mapless navigation: (1) open-worl
 
 ## Relationships
 
-- **Uses** → [[Visual Foundation Model (VFM) Distillation Objective]], [[Counterfactual Inverse Reinforcement Learning (IRL)]]
-- **Depends on** → [[Visual Foundation Model]] ⚠️ ⚠️, [[Inverse Reinforcement Learning]] ⚠️ ⚠️
-- **Implements** → [[Mapless Navigation]]
+- **Uses** → Visual Foundation Model (VFM) Distillation Objective, Counterfactual Inverse Reinforcement Learning (IRL)
+- **Depends on** → Visual Foundation Model ⚠️ ⚠️, Inverse Reinforcement Learning ⚠️ ⚠️
+- **Implements** → Mapless Navigation
 
 ## Related Pages
 
-- [[Mapless Navigation]]
-- [[Visual Foundation Model]] ⚠️ ⚠️
-- [[Inverse Reinforcement Learning]] ⚠️ ⚠️
-- [[Behavior Cloning]] ⚠️ (contrast with IRL-based approach)
-- [[Sim-to-Real Transfer]] (relevant to open-world generalization)
+- Mapless Navigation
+- Visual Foundation Model ⚠️ ⚠️
+- Inverse Reinforcement Learning ⚠️ ⚠️
+- Behavior Cloning ⚠️ (contrast with IRL-based approach)
+- Sim-to-Real Transfer (relevant to open-world generalization)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `CREStE` --[[extends]] ⚠️ ⚠️ ⚠️--> `Visual Foundation Model (VFM) Distillation`
-- `CREStE` --[[extends]] ⚠️ ⚠️ ⚠️--> `Visual Foundation Model (VFM) Distillation Objective`
-- `CREStE` --[[extends]] ⚠️ ⚠️ ⚠️--> `Counterfactual Inverse Reinforcement Learning (IRL)`
-- `CREStE` --[[based_on]] ⚠️--> `Mapless Navigation`
+- `CREStE` --extends ⚠️ ⚠️ ⚠️--> `Visual Foundation Model (VFM) Distillation`
+- `CREStE` --extends ⚠️ ⚠️ ⚠️--> `Visual Foundation Model (VFM) Distillation Objective`
+- `CREStE` --extends ⚠️ ⚠️ ⚠️--> `Counterfactual Inverse Reinforcement Learning (IRL)`
+- `CREStE` --based_on ⚠️--> `Mapless Navigation`

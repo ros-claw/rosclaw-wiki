@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Zero-Shot Transfer
 
-**Zero-Shot Transfer** is a [[Sim-to-Real Transfer]] paradigm in which two independently trained components (e.g., a navigation policy and a locomotion policy) are deployed together at test time without any joint fine-tuning or co-adaptation. This eliminates the need for expensive co-training loops or shared reward engineering across subsystems.
+**Zero-Shot Transfer** is a Sim-to-Real Transfer paradigm in which two independently trained components (e.g., a navigation policy and a locomotion policy) are deployed together at test time without any joint fine-tuning or co-adaptation. This eliminates the need for expensive co-training loops or shared reward engineering across subsystems.
 
 ## Definition
 
-The ability to deploy two separately trained components together without any joint training. In the context of the [[ViNL]] system, the navigation policy’s velocity commands are directly fed to the locomotion policy at test time — no additional gradient updates, adaptation layers, or bridging modules are introduced.
+The ability to deploy two separately trained components together without any joint training. In the context of the ViNL system, the navigation policy’s velocity commands are directly fed to the locomotion policy at test time — no additional gradient updates, adaptation layers, or bridging modules are introduced.
 
 ## Parameters
 
@@ -27,7 +27,7 @@ The ability to deploy two separately trained components together without any joi
 | Domain    | Sim-to-Real |
 | Modality  | Policy co-deployment without co-training |
 
-- **Domain**: zero-shot transfer is primarily exercised in [[Sim-to-Real Transfer]] pipelines, where simulated training must generalise to real hardware without online retraining.
+- **Domain**: zero-shot transfer is primarily exercised in Sim-to-Real Transfer pipelines, where simulated training must generalise to real hardware without online retraining.
 - **Modality**: policies are trained independently (navigation in one simulator, locomotion in another, possibly with different observation spaces) and only combined at inference time.
 
 ## Capabilities
@@ -38,8 +38,8 @@ The ability to deploy two separately trained components together without any joi
 
 ## Relationships
 
-- **Used by**: [[ViNL]] uses zero-shot transfer to bridge the output of its navigation policy (high-level velocity commands) with the low-level locomotion controller.
-- **Related to**: [[Sim-to-Real Transfer]] — zero-shot transfer is a specific class of sim-to-real techniques that rely on robust policy representations rather than online adaptation.
+- **Used by**: ViNL uses zero-shot transfer to bridge the output of its navigation policy (high-level velocity commands) with the low-level locomotion controller.
+- **Related to**: Sim-to-Real Transfer — zero-shot transfer is a specific class of sim-to-real techniques that rely on robust policy representations rather than online adaptation.
 
 ## Example
 
@@ -52,4 +52,4 @@ Zero-shot transfer depends on the compatibility of action and observation spaces
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Zero-Shot Transfer` --[[related_to]] ⚠️--> `ViNL` _(wikilink)_
+- `Zero-Shot Transfer` --related_to ⚠️--> `ViNL` _(wikilink)_

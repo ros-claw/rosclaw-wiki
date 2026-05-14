@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Description
 
-GC-VLN is a training-free framework for [[Vision-and-Language Navigation]] that formulates navigation guidance as graph constraint optimization. It decomposes instructions into a [[Directed Acyclic Graph]] ⚠️ ⚠️ ⚠️ ⚠️ with waypoint and object nodes, retrieves spatial constraints from a library, and solves them to determine waypoints and the final goal.
+GC-VLN is a training-free framework for Vision-and-Language Navigation that formulates navigation guidance as graph constraint optimization. It decomposes instructions into a Directed Acyclic Graph ⚠️ ⚠️ ⚠️ ⚠️ with waypoint and object nodes, retrieves spatial constraints from a library, and solves them to determine waypoints and the final goal.
 
 ## Parameters
 
@@ -27,22 +27,22 @@ GC-VLN is a training-free framework for [[Vision-and-Language Navigation]] that 
 | Framework | Training-free VLN |
 | Environment | Continuous |
 | Instruction format | Natural language |
-| Representation | [[Directed Acyclic Graph]] ⚠️ ⚠️ ⚠️ ⚠️ |
-| Solver type | [[Constraint Solver]] ⚠️ |
+| Representation | Directed Acyclic Graph ⚠️ ⚠️ ⚠️ ⚠️ |
+| Solver type | Constraint Solver ⚠️ |
 | Type | Zero-shot |
 
 ## Capabilities
 
-- **Decompose instructions into graph constraints** – Parses a natural language instruction into a set of spatial and semantic constraints encoded as a [[Directed Acyclic Graph]] ⚠️ ⚠️ ⚠️ ⚠️.
+- **Decompose instructions into graph constraints** – Parses a natural language instruction into a set of spatial and semantic constraints encoded as a Directed Acyclic Graph ⚠️ ⚠️ ⚠️ ⚠️.
 - **Construct a navigation tree with backtracking** – Builds a dynamic search tree over possible paths, backtracking when constraints cannot be satisfied; handles no‑solution cases gracefully.
-- **Solve constraint optimization for waypoint positions** – Uses a [[constraint solver]] ⚠️ ⚠️ to select waypoints that simultaneously satisfy all active constraints along the current branch.
+- **Solve constraint optimization for waypoint positions** – Uses a constraint solver ⚠️ ⚠️ to select waypoints that simultaneously satisfy all active constraints along the current branch.
 - **Adapt to unseen environments zero-shot** – No environment-specific training or fine‑tuning is required; the same pipeline generalizes to any continuous space given a map or occupancy grid.
 - **Robust navigation** – Maintains performance even when instructions are ambiguous or the environment changes, thanks to the backtracking mechanism and constraint satisfaction.
 
 ## Dependencies
 
-- **depends_on**: [[Vision-and-Language Navigation]], [[constraint solver]] ⚠️ ⚠️
-- **uses**: [[Spatial Constraint Library]], [[Directed Acyclic Graph]] ⚠️ ⚠️ ⚠️ ⚠️, [[Navigation Tree]] ⚠️
+- **depends_on**: Vision-and-Language Navigation, constraint solver ⚠️ ⚠️
+- **uses**: Spatial Constraint Library, Directed Acyclic Graph ⚠️ ⚠️ ⚠️ ⚠️, Navigation Tree ⚠️
 
 ## Source
 

@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 # Vision-Language Model
 
-A **Vision-Language Model (VLM)** is a type of [[multimodal AI]] ⚠️ model that aligns visual and textual representations to jointly process, reason about, and generate content across these two modalities. VLMs enable tasks such as [[visual question answering]] ⚠️, [[image captioning]] ⚠️, and embodied reasoning — making them a core component of modern [[embodied AI]] systems like [[NavForesee]] and the broader family of [[Vision-Language-Action Model]]s.
+A **Vision-Language Model (VLM)** is a type of multimodal AI ⚠️ model that aligns visual and textual representations to jointly process, reason about, and generate content across these two modalities. VLMs enable tasks such as visual question answering ⚠️, image captioning ⚠️, and embodied reasoning — making them a core component of modern embodied AI systems like NavForesee and the broader family of Vision-Language-Action Models.
 
 ## Capabilities
 
@@ -29,8 +29,8 @@ These capabilities allow VLMs to bridge the gap between perception and language,
 
 ## Relationships
 
-- **used_by**: [[NavForesee]] (an embodied navigation framework that leverages a VLM for scene understanding and instruction following)
-- **used_by**: [[Vision-Language-Action Model]] (VLAs that combine vision, language, and action modalities for robotic control)
+- **used_by**: NavForesee (an embodied navigation framework that leverages a VLM for scene understanding and instruction following)
+- **used_by**: Vision-Language-Action Model (VLAs that combine vision, language, and action modalities for robotic control)
 
 ## Sources
 
@@ -40,7 +40,7 @@ These capabilities allow VLMs to bridge the gap between perception and language,
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Vision-Language Model` --[[related_to]] ⚠️ ⚠️--> `embodied AI`
-- `Vision-Language Model` --[[used_by]] ⚠️--> `Vision-Language-Action Model`
+- `Vision-Language Model` --related_to ⚠️ ⚠️--> `embodied AI`
+- `Vision-Language Model` --used_by ⚠️--> `Vision-Language-Action Model`
 **Pending review:**
-- `Vision-Language Model` --[[related_to]] ⚠️ ⚠️--> `NavForesee` _(wikilink)_
+- `Vision-Language Model` --related_to ⚠️ ⚠️--> `NavForesee` _(wikilink)_

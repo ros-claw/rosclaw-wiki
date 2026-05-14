@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Fine-grained Evaluation Framework for VLN
 
-The **Fine-grained Evaluation Framework for VLN** is a diagnostic tool that decomposes [[Vision-and-Language Navigation]] (VLN) performance into distinct subtasks, enabling granular analysis of model strengths and weaknesses. It is based on [[Context-Free Grammar]] ⚠️ ⚠️ ⚠️ and leverages [[Large Language Models]] to generate evaluation data across five well-defined instruction categories.
+The **Fine-grained Evaluation Framework for VLN** is a diagnostic tool that decomposes Vision-and-Language Navigation (VLN) performance into distinct subtasks, enabling granular analysis of model strengths and weaknesses. It is based on Context-Free Grammar ⚠️ ⚠️ ⚠️ and leverages Large Language Models to generate evaluation data across five well-defined instruction categories.
 
 ## Overview
 
@@ -22,7 +22,7 @@ Traditional VLN benchmarks aggregate success rates, masking systematic failures 
 
 ## Parameters
 
-- **Based on**: [[Context-Free Grammar]] ⚠️ ⚠️ ⚠️
+- **Based on**: Context-Free Grammar ⚠️ ⚠️ ⚠️
 - **Instruction categories** (five types):
   1. **Direction change** – e.g., "turn left", "go forward"
   2. **Landmark recognition** – e.g., "stop near the red chair"
@@ -41,8 +41,8 @@ The framework enables researchers to:
 ## Relationships
 
 - **Uses**:
-  - [[Context-Free Grammar]] ⚠️ ⚠️ ⚠️ → to define and generate instruction templates.
-  - [[Large Language Models]] → to fill templates with natural language variations for evaluation.
+  - Context-Free Grammar ⚠️ ⚠️ ⚠️ → to define and generate instruction templates.
+  - Large Language Models → to fill templates with natural language variations for evaluation.
 - **Depends on**: a fixed taxonomy of instruction categories derived from navigation environment structure.
 - **Contradicts**: the assumption that aggregate success metrics are sufficient for VLN model analysis.
 
@@ -58,10 +58,10 @@ When applied to state-of-the-art VLN models, the framework has shown that:
 - Performance on **numerical comprehension** often plateaus early and fails to improve with more training data.
 - Models exhibit **directional biases** – e.g., systematic difficulty with "turn right" vs. "turn left" depending on training distribution.
 
-This framework is a valuable tool for guiding targeted architectural improvements and data augmentation strategies in [[Embodied AI]] research.
+This framework is a valuable tool for guiding targeted architectural improvements and data augmentation strategies in Embodied AI research.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Fine-grained evaluation framework for VLN` --[[related_to]] ⚠️ ⚠️--> `Vision-and-Language Navigation`
-- `Fine-grained evaluation framework for VLN` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Fine-grained evaluation framework for VLN` --related_to ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `Fine-grained evaluation framework for VLN` --related_to ⚠️ ⚠️--> `Embodied AI`

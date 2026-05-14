@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 Traditional navigation systems often treat all drivable areas as equally traversable, or they assign costs based only on surface slope or roughness. Traversability-aware navigation goes further by learning or estimating a continuous traversability metric from terrain properties (e.g., deformability, friction, obstacle density, dynamic stability) and incorporating that metric as a primary input to the planner. This enables robots to prefer paths that minimize risk, energy, or slippage, even if they are geometrically longer.
 
-The concept is closely related to [[traversability estimation]] ⚠️, which provides the underlying terrain assessment, and to [[navigation costmaps]] ⚠️, which encode spatial costs for planning. Traversability-aware navigation can be implemented in both global and local planning layers.
+The concept is closely related to traversability estimation ⚠️, which provides the underlying terrain assessment, and to navigation costmaps ⚠️, which encode spatial costs for planning. Traversability-aware navigation can be implemented in both global and local planning layers.
 
 ## Capabilities
 
@@ -28,16 +28,16 @@ The concept is closely related to [[traversability estimation]] ⚠️, which pr
 
 ## Relationship to TANGO
 
-Traversability-aware navigation is a core design principle of the **[[TANGO]]** (Traversability-Aware Navigation for Ground robOts) system. TANGO explicitly implements traversability-aware planning at its foundation, using a learned traversability model to guide its local and global planners. This relationship can be annotated as:
+Traversability-aware navigation is a core design principle of the **TANGO** (Traversability-Aware Navigation for Ground robOts) system. TANGO explicitly implements traversability-aware planning at its foundation, using a learned traversability model to guide its local and global planners. This relationship can be annotated as:
 
-- `[[TANGO]]` **depends_on** `[[Traversability-aware navigation]]`
+- `TANGO` **depends_on** `Traversability-aware navigation`
 
 ## Related Concepts
 
-- `[[Terrain traversability]] ⚠️`
-- `[[Learning-based navigation]] ⚠️`
-- `[[Safe navigation]]`
-- `[[Costmap 2D]] ⚠️`
+- `Terrain traversability ⚠️`
+- `Learning-based navigation ⚠️`
+- `Safe navigation`
+- `Costmap 2D ⚠️`
 
 ## Source
 
@@ -46,4 +46,4 @@ Traversability-aware navigation is a core design principle of the **[[TANGO]]** 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Traversability-aware navigation` --[[related_to]] ⚠️--> `TANGO` _(wikilink)_
+- `Traversability-aware navigation` --related_to ⚠️--> `TANGO` _(wikilink)_

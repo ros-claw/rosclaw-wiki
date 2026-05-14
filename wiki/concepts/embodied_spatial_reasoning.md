@@ -23,13 +23,13 @@ source_type: arxiv_paper
 
 ## Context
 
-Embodied Spatial Reasoning is a component of [[Capability-Conditioned Navigation (CapNav)]], where navigation decisions depend on the agent’s own physical capabilities rather than assuming a generic point robot. It complements other perceptual and planning skills such as [[Occupancy Mapping (https://en.wikipedia.org/wiki/Occupancy_grid_mapping)]] ⚠️ and [[Motion Planning]] ⚠️.
+Embodied Spatial Reasoning is a component of Capability-Conditioned Navigation (CapNav), where navigation decisions depend on the agent’s own physical capabilities rather than assuming a generic point robot. It complements other perceptual and planning skills such as Occupancy Mapping (https://en.wikipedia.org/wiki/Occupancy_grid_mapping) ⚠️ and Motion Planning ⚠️.
 
 ## Relation to Other Concepts
 
-- **depends_on**: [[Embodied AI]], [[Spatial Understanding]] ⚠️
-- **part_of**: [[Capability-Conditioned Navigation (CapNav)]]
-- **implements**: [[Agent-Centric Navigation]] ⚠️
+- **depends_on**: Embodied AI, Spatial Understanding ⚠️
+- **part_of**: Capability-Conditioned Navigation (CapNav)
+- **implements**: Agent-Centric Navigation ⚠️
 
 ## Sources
 
@@ -38,4 +38,4 @@ Embodied Spatial Reasoning is a component of [[Capability-Conditioned Navigation
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Embodied Spatial Reasoning` --[[related_to]] ⚠️--> `Embodied AI`
+- `Embodied Spatial Reasoning` --related_to ⚠️--> `Embodied AI`

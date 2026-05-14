@@ -18,13 +18,13 @@ source_type: arxiv_paper
 
 **Onboard Deployment Pipeline Optimization** refers to a set of techniques and engineering practices that deeply optimize the deployment pipeline for neural network models and control software running directly on resource-constrained robotic platforms. The primary goal is to maximize real-time inference performance while minimizing latency and power consumption, thereby enabling full autonomy without reliance on offboard compute.
 
-This skill is essential for embodied agents that must perform closed-loop control with tight timing constraints, such as [[UAV]]s, legged robots, and other small-form-factor platforms. In practice, it involves model quantization, operator fusion, memory layout optimization, and hardware-specific kernel tuning.
+This skill is essential for embodied agents that must perform closed-loop control with tight timing constraints, such as UAVs, legged robots, and other small-form-factor platforms. In practice, it involves model quantization, operator fusion, memory layout optimization, and hardware-specific kernel tuning.
 
 ## Key Metrics
 
 | Metric | Value | Notes |
 |--------|-------|-------|
-| Inference throughput improvement | **8.3×** | Measured on resource-constrained [[UAV]]s |
+| Inference throughput improvement | **8.3×** | Measured on resource-constrained UAVs |
 | Scope | Full pipeline optimization | Covers preprocessing, DNN inference, and post-processing |
 
 ## Capabilities
@@ -36,13 +36,13 @@ The optimization enables:
 
 ## Relationship to Other Entities
 
-- **[[VLA-AN]]** – This optimization directly enables [[VLA-AN]] to be deployed onboard, as documented in the source paper. The pipeline was specifically tuned for the VLA-AN architecture to achieve its real-time performance. `used_by: VLA-AN`
+- **VLA-AN** – This optimization directly enables VLA-AN to be deployed onboard, as documented in the source paper. The pipeline was specifically tuned for the VLA-AN architecture to achieve its real-time performance. `used_by: VLA-AN`
 
 ## Related Sections
 
-- See also: [[Deployment Pipeline]] ⚠️, [[Model Quantization]] ⚠️, [[Edge Inference]] ⚠️
-- Implemented via: [[TensorRT]] ⚠️, [[ONNX Runtime]] ⚠️, [[TVM]] ⚠️, or custom kernel compilation
-- Relevant hardware targets: [[NVIDIA Jetson]] ⚠️, [[Qualcomm Snapdragon]] ⚠️, [[Intel NUC]] ⚠️
+- See also: Deployment Pipeline ⚠️, Model Quantization ⚠️, Edge Inference ⚠️
+- Implemented via: TensorRT ⚠️, ONNX Runtime ⚠️, TVM ⚠️, or custom kernel compilation
+- Relevant hardware targets: NVIDIA Jetson ⚠️, Qualcomm Snapdragon ⚠️, Intel NUC ⚠️
 
 ## References
 
@@ -53,4 +53,4 @@ The optimization enables:
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
 - `Onboard Deployment Pipeline Optimization` --[[operates_on]] ⚠️--> `UAV`
-- `Onboard Deployment Pipeline Optimization` --[[uses]] ⚠️--> `VLA-AN`
+- `Onboard Deployment Pipeline Optimization` --uses ⚠️--> `VLA-AN`

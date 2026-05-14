@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Definition
 
-Semantic Utility-Driven Subgoal Selection is an algorithm within the [[Decision-Driven Semantic Object Exploration (DD-SOE)]] framework. It defines how a robot chooses its next exploration target by evaluating a semantic utility function that balances semantic relevance, reliability, and reachability. The goal is to maximize information gain and task relevance while ensuring physical feasibility.
+Semantic Utility-Driven Subgoal Selection is an algorithm within the Decision-Driven Semantic Object Exploration (DD-SOE) framework. It defines how a robot chooses its next exploration target by evaluating a semantic utility function that balances semantic relevance, reliability, and reachability. The goal is to maximize information gain and task relevance while ensuring physical feasibility.
 
 ## Purpose
 
@@ -29,16 +29,16 @@ Uses a semantic utility function to choose subgoals that maximize the informatio
 
 ## Relationships
 
-- **part_of** [[Decision-Driven Semantic Object Exploration (DD-SOE)]] — this algorithm is a core component of the overall exploration framework, responsible for the decision-making step that selects the next semantic subgoal to pursue.
+- **part_of** Decision-Driven Semantic Object Exploration (DD-SOE) — this algorithm is a core component of the overall exploration framework, responsible for the decision-making step that selects the next semantic subgoal to pursue.
 
 ## Related Concepts
 
-- [[Semantic Utility]] ⚠️ — the metric computed by this algorithm to rank candidate subgoals.
-- [[Subgoal Selection]] ⚠️ — general problem of choosing intermediate targets in autonomous exploration.
-- [[Reachability Analysis]] ⚠️ — the algorithm ensures selected targets are physically accessible.
-- [[Information Gain]] ⚠️ — one of the factors balanced by the utility function.
+- Semantic Utility ⚠️ — the metric computed by this algorithm to rank candidate subgoals.
+- Subgoal Selection ⚠️ — general problem of choosing intermediate targets in autonomous exploration.
+- Reachability Analysis ⚠️ — the algorithm ensures selected targets are physically accessible.
+- Information Gain ⚠️ — one of the factors balanced by the utility function.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Semantic Utility-Driven Subgoal Selection` --[[extends]] ⚠️--> `Decision-Driven Semantic Object Exploration (DD-SOE)`
+- `Semantic Utility-Driven Subgoal Selection` --extends ⚠️--> `Decision-Driven Semantic Object Exploration (DD-SOE)`

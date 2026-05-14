@@ -36,10 +36,10 @@ VLE pre-trains a trajectory learning model using millions of RGB-D sequences col
 
 ### Relationships
 
-The original paper describes VLE as part of [[End-to-end trajectory learning]] and used by [[MTU3D (Move to Understand 3D)]] . However, a later source (same paper) suggests an inverted relationship: VLE is part of MTU3D and used by End-to-end trajectory learning. This discrepancy is noted; both views are presented:
+The original paper describes VLE as part of End-to-end trajectory learning and used by MTU3D (Move to Understand 3D) . However, a later source (same paper) suggests an inverted relationship: VLE is part of MTU3D and used by End-to-end trajectory learning. This discrepancy is noted; both views are presented:
 
-- **Part of [[End-to-end trajectory learning]]** (original claim) — VLE provides the pre-trained trajectory embeddings that end-to-end models fine-tune downstream.
-- **Used by [[MTU3D (Move to Understand 3D)]]** (original claim) — the MTU3D architecture adopts VLE as its foundation for 3D scene understanding while navigating.
+- **Part of End-to-end trajectory learning** (original claim) — VLE provides the pre-trained trajectory embeddings that end-to-end models fine-tune downstream.
+- **Used by MTU3D (Move to Understand 3D)** (original claim) — the MTU3D architecture adopts VLE as its foundation for 3D scene understanding while navigating.
 - Alternatively, VLE may be a component of MTU3D and employed by general end-to-end trajectory learning.
 
 ### Implementation Details
@@ -50,4 +50,4 @@ VLE is typically implemented using a Transformer-based encoder–decoder archite
 
 This page is derived from the arXiv preprint **2507.04047** (VLE: Vision-Language-Exploration Pre-training for Embodied Navigation).
 
-**Related pages:** [[Embodied AI]], [[Sim-to-real transfer]], [[Trajectory learning]] ⚠️, [[Self-supervised learning]]
+**Related pages:** Embodied AI, Sim-to-real transfer, Trajectory learning ⚠️, Self-supervised learning

@@ -28,15 +28,15 @@ This approach is lightweight, runs in real-time, and is particularly suited for 
 
 ## Relationships
 
--   **Used by** → [[MTU3D]] (Move to Understand 3D) – A framework that employs this spatial memory construction technique to guide active perception and object discovery.
+-   **Used by** → MTU3D (Move to Understand 3D) – A framework that employs this spatial memory construction technique to guide active perception and object discovery.
 
 ## Related Concepts
 
-- [[RGB-D Camera]] ⚠️
-- [[Online Mapping]] ⚠️
-- [[Spatial Memory]] ⚠️
-- [[Embodied Exploration]] ⚠️
-- [[Visual Representation Learning]] ⚠️
+- RGB-D Camera ⚠️
+- Online Mapping ⚠️
+- Spatial Memory ⚠️
+- Embodied Exploration ⚠️
+- Visual Representation Learning ⚠️
 
 ## References
 

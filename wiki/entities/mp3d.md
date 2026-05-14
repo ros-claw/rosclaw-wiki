@@ -26,23 +26,23 @@ MP3D is designed to test an agent's ability to understand spatial layouts, gener
 
 ## Usage
 
-MP3D has been employed in the evaluation of [[ASCENT]], a navigation framework that learns adaptive skill composition. In that work, MP3D serves as a challenging testbed to measure generalization across unseen buildings and floor transitions.
+MP3D has been employed in the evaluation of ASCENT, a navigation framework that learns adaptive skill composition. In that work, MP3D serves as a challenging testbed to measure generalization across unseen buildings and floor transitions.
 
 ## Related Concepts
 
-- [[Object Goal Navigation]] — the general task that MP3D evaluates
-- [[Embodied AI]] — the broader research domain
-- [[Matterport3D]] ⚠️ — the underlying dataset of 3D scans
-- [[Sim-to-Real Transfer]] — relevant for evaluating whether policies trained on MP3D generalize to real robots
+- Object Goal Navigation — the general task that MP3D evaluates
+- Embodied AI — the broader research domain
+- Matterport3D ⚠️ — the underlying dataset of 3D scans
+- Sim-to-Real Transfer — relevant for evaluating whether policies trained on MP3D generalize to real robots
 
 ## See Also
 
-- [[ASCENT]] — uses MP3D for evaluation (`used_in` → [[ASCENT]])
-- [[Habitat Simulator]] — often used to run MP3D episodes
-- [[PointNav vs ObjectNav]] ⚠️ — comparison of navigation benchmarks
+- ASCENT — uses MP3D for evaluation (`used_in` → ASCENT)
+- Habitat Simulator — often used to run MP3D episodes
+- PointNav vs ObjectNav ⚠️ — comparison of navigation benchmarks
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MP3D` --[[uses]] ⚠️--> `ASCENT`
-- `MP3D` --[[related_to]] ⚠️--> `Embodied AI`
+- `MP3D` --uses ⚠️--> `ASCENT`
+- `MP3D` --related_to ⚠️--> `Embodied AI`

@@ -36,22 +36,22 @@ Object-level sub-goals refer to semantically meaningful landmarks (e.g., "doorwa
 
 ### Relationships
 
-- **Part of** [[TANGO]] – TANGO (Topological Action Graph for Navigation in Global Operations) is an architecture that uses global topological path planning as its core reasoning layer. The planner selects sub-goal sequences from TANGO's object-level graph.
-- **Depends on** [[Foundational Models]] ⚠️ ⚠️ – These models provide semantic understanding of objects and scenes to construct and update the topological graph (e.g., object detection, open-vocabulary segmentation, and spatial reasoning from vision-language models).
+- **Part of** TANGO – TANGO (Topological Action Graph for Navigation in Global Operations) is an architecture that uses global topological path planning as its core reasoning layer. The planner selects sub-goal sequences from TANGO's object-level graph.
+- **Depends on** Foundational Models ⚠️ ⚠️ – These models provide semantic understanding of objects and scenes to construct and update the topological graph (e.g., object detection, open-vocabulary segmentation, and spatial reasoning from vision-language models).
 
 ### Section in TANGO
 
-Within [[TANGO]], global topological path planning sits above the metric control stack. It receives a go-to-object command, retrieves the relevant object-level sub-goals from the topological graph, and outputs an ordered list of intermediate targets for the local planner.
+Within TANGO, global topological path planning sits above the metric control stack. It receives a go-to-object command, retrieves the relevant object-level sub-goals from the topological graph, and outputs an ordered list of intermediate targets for the local planner.
 
 ### Related Pages
 
-- [[TANGO]] – The architecture that employs this algorithm.
-- [[Foundational Models]] ⚠️ ⚠️ – Enablers of semantic graph construction.
-- [[Topological Navigation]] ⚠️ – Broader concept covering graph-based navigation strategies.
-- [[Object-Level Representations]] ⚠️ – How objects are treated as nodes in the topological graph.
-- [[Long-Horizon Planning]] – Problem setting that this algorithm addresses.
+- TANGO – The architecture that employs this algorithm.
+- Foundational Models ⚠️ ⚠️ – Enablers of semantic graph construction.
+- Topological Navigation ⚠️ – Broader concept covering graph-based navigation strategies.
+- Object-Level Representations ⚠️ – How objects are treated as nodes in the topological graph.
+- Long-Horizon Planning – Problem setting that this algorithm addresses.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Global Topological Path Planning` --[[extends]] ⚠️--> `TANGO`
+- `Global Topological Path Planning` --extends ⚠️--> `TANGO`

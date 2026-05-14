@@ -14,7 +14,7 @@ source_type: blog_post
 
 # EB-Manipulation
 
-**EB-Manipulation** is a component of the [[EmbodiedBench]] benchmark suite, designed to evaluate embodied agents on **low-level manipulation tasks** that require precise perception and spatial reasoning. Unlike high-level task planning, EB-Manipulation focuses on fine-grained control and execution of physical interactions with objects.
+**EB-Manipulation** is a component of the EmbodiedBench benchmark suite, designed to evaluate embodied agents on **low-level manipulation tasks** that require precise perception and spatial reasoning. Unlike high-level task planning, EB-Manipulation focuses on fine-grained control and execution of physical interactions with objects.
 
 ## Overview
 
@@ -30,8 +30,8 @@ EB-Manipulation specifically tests the following agent capabilities:
 
 ## Relationships
 
-- **part_of** [[EmbodiedBench]] – EB-Manipulation is one of several sub-benchmarks within the broader EmbodiedBench ecosystem, which also includes tasks for navigation, high-level planning, and human-robot interaction.
-- **requires** [[low-level planning]] ⚠️, [[spatial reasoning]] ⚠️, [[precise perception]] ⚠️ – These are prerequisite skills evaluated by the benchmark.
+- **part_of** EmbodiedBench – EB-Manipulation is one of several sub-benchmarks within the broader EmbodiedBench ecosystem, which also includes tasks for navigation, high-level planning, and human-robot interaction.
+- **requires** low-level planning ⚠️, spatial reasoning ⚠️, precise perception ⚠️ – These are prerequisite skills evaluated by the benchmark.
 
 ## Usage
 
@@ -40,4 +40,4 @@ EB-Manipulation is typically used to benchmark robotic manipulation stacks that 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EB-Manipulation` --[[depends_on]] ⚠️--> `EmbodiedBench`
+- `EB-Manipulation` --depends_on ⚠️--> `EmbodiedBench`

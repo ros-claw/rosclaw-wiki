@@ -33,13 +33,13 @@ A higher SPL (range 0–1) indicates that the agent not only succeeds frequently
 
 ### Relationship to Other Metrics
 
-- **[[success rate]] ⚠️** (SR) – SPL incorporates SR as a binary factor, but penalizes long paths even when successful. Agents with high SR but overly long trajectories will have lower SPL.
+- **success rate ⚠️** (SR) – SPL incorporates SR as a binary factor, but penalizes long paths even when successful. Agents with high SR but overly long trajectories will have lower SPL.
 - **Normalized Dynamic Time Warping (NDTW)** – Another navigation metric that measures path similarity beyond discrete success, though SPL remains the most common single‑number metric in sim‑to‑real navigation.
 
 ### Usage
 
-SPL is used as the primary evaluation metric in many embodied navigation systems, including **[[FiLM‑Nav]] ⚠️**, where it measures the efficiency of the visual‑language navigation pipeline. It is also a key metric in benchmarks like **[[Habitat]]** and **[[PointGoal Navigation]] ⚠️**.
+SPL is used as the primary evaluation metric in many embodied navigation systems, including **FiLM‑Nav ⚠️**, where it measures the efficiency of the visual‑language navigation pipeline. It is also a key metric in benchmarks like **Habitat** and **PointGoal Navigation ⚠️**.
 
 ---
 
-*See also: [[evaluation metrics in embodied AI]] ⚠️, [[sim‑to‑real transfer]] ⚠️*
+*See also: evaluation metrics in embodied AI ⚠️, sim‑to‑real transfer ⚠️*

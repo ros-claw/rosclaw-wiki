@@ -37,17 +37,17 @@ These components together form a hierarchical and relational map of the environm
 
 ### Role in Zero-Shot Visual Language Navigation (VLN)
 
-In the [[SpatialNav]] framework, the Spatial Scene Graph allows the agent to reason about remote object locations and plan efficient paths without learning from navigation data. It provides the global context needed for zero-shot navigation agents to interpret natural language instructions and navigate to novel objects in unfamiliar environments. By storing a compressed but semantically rich spatial model, the SSG decouples perception from planning and supports reusable navigation knowledge.
+In the SpatialNav framework, the Spatial Scene Graph allows the agent to reason about remote object locations and plan efficient paths without learning from navigation data. It provides the global context needed for zero-shot navigation agents to interpret natural language instructions and navigate to novel objects in unfamiliar environments. By storing a compressed but semantically rich spatial model, the SSG decouples perception from planning and supports reusable navigation knowledge.
 
 ### Relationships
 
-- **Used by**: [[SpatialNav]] – the SpatialNav agent relies on the SSG as its global memory for reasoning and planning.
-- **Depends on**: [[Semantic Mapping]] ⚠️ – the SSG is typically built upon semantic segmentation and object detection outputs.
-- **Part of**: [[Scene Understanding]] ⚠️ – the SSG is a key component for holistic spatial intelligence in embodied agents.
+- **Used by**: SpatialNav – the SpatialNav agent relies on the SSG as its global memory for reasoning and planning.
+- **Depends on**: Semantic Mapping ⚠️ – the SSG is typically built upon semantic segmentation and object detection outputs.
+- **Part of**: Scene Understanding ⚠️ – the SSG is a key component for holistic spatial intelligence in embodied agents.
 
 For further reading, see the source paper: *SpatialNav: A Zero-Shot Visual Language Navigation Framework* (arxiv: 2601.06806).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Spatial Scene Graph` --[[applies_to]] ⚠️--> `SpatialNav`
+- `Spatial Scene Graph` --applies_to ⚠️--> `SpatialNav`

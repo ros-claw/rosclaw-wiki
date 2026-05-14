@@ -15,7 +15,7 @@ source_type: arxiv_paper
 # Hierarchical Planner
 
 ## Description
-The Hierarchical Planner is a high-level planning algorithm that leverages a [[Vision-Language Model]] to decompose complex language instructions into executable sub-tasks and guide precise actions. It overcomes the constrained egocentric perception challenges inherent to mobile platforms, enabling robust long-horizon task execution.
+The Hierarchical Planner is a high-level planning algorithm that leverages a Vision-Language Model to decompose complex language instructions into executable sub-tasks and guide precise actions. It overcomes the constrained egocentric perception challenges inherent to mobile platforms, enabling robust long-horizon task execution.
 
 ## Capabilities
 - **Long-horizon instruction decomposition**: Breaks down multi-step natural language commands into a sequence of manageable sub-tasks.
@@ -23,13 +23,13 @@ The Hierarchical Planner is a high-level planning algorithm that leverages a [[V
 - **Addressing egocentric perception challenges**: Mitigates the limited field-of-view and partial observability common on mobile platforms by combining linguistic context with visual reasoning.
 
 ## Relationships
-- **depends_on**: [[Vision-Language Model]]
-- **part_of**: [[ODYSSEY]]
+- **depends_on**: Vision-Language Model
+- **part_of**: ODYSSEY
 
 ## Usage in ODYSSEY
-Within the [[ODYSSEY]] system, the Hierarchical Planner acts as the cognitive orchestrator. It receives high-level instructions, queries the [[Vision-Language Model]] for environmental grounding and sub-task generation, and outputs structured plans that the robot's execution layer can follow. This architecture allows [[ODYSSEY]] to handle long-horizon mobile manipulation tasks that would otherwise be infeasible with flat, reactive planners.
+Within the ODYSSEY system, the Hierarchical Planner acts as the cognitive orchestrator. It receives high-level instructions, queries the Vision-Language Model for environmental grounding and sub-task generation, and outputs structured plans that the robot's execution layer can follow. This architecture allows ODYSSEY to handle long-horizon mobile manipulation tasks that would otherwise be infeasible with flat, reactive planners.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Hierarchical Planner` --[[extends]] ⚠️--> `ODYSSEY`
+- `Hierarchical Planner` --extends ⚠️--> `ODYSSEY`

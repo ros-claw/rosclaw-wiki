@@ -25,32 +25,32 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Used by** [[TANGO]] — TANGO (the paper referenced from `papers/2509.08699.pdf`) leverages foundational models to achieve open-set generalization in robotic tasks such as traversability and goal generation. The exact implementation details are described in the TANGO page.
+- **Used by** TANGO — TANGO (the paper referenced from `papers/2509.08699.pdf`) leverages foundational models to achieve open-set generalization in robotic tasks such as traversability and goal generation. The exact implementation details are described in the TANGO page.
 
-- **Depends on** [[Vision-Language Models]] ⚠️ ⚠️ and [[Large Pre-trained Backbones]] ⚠️ — Foundational models in robotics typically build on top of models like [[CLIP]], [[DINOv2]] ⚠️ ⚠️, or [[GPT-4V]] ⚠️ ⚠️.
+- **Depends on** Vision-Language Models ⚠️ ⚠️ and Large Pre-trained Backbones ⚠️ — Foundational models in robotics typically build on top of models like CLIP, DINOv2 ⚠️ ⚠️, or GPT-4V ⚠️ ⚠️.
 
-- **Implements** [[Open-Set Perception]] ⚠️ ⚠️ — By nature, foundational models allow robots to operate outside closed-set assumptions.
+- **Implements** Open-Set Perception ⚠️ ⚠️ — By nature, foundational models allow robots to operate outside closed-set assumptions.
 
 ## Usage Notes
 
-When integrating foundational models into a robot’s software stack (e.g., in a [[ROS 2]] ⚠️ node), careful consideration of computational cost, model latency, and environment-specific fine-tuning is necessary. Many implementations run the model on a separate GPU server and communicate via [[ROS 2 Topics]] ⚠️.
+When integrating foundational models into a robot’s software stack (e.g., in a ROS 2 ⚠️ node), careful consideration of computational cost, model latency, and environment-specific fine-tuning is necessary. Many implementations run the model on a separate GPU server and communicate via ROS 2 Topics ⚠️.
 
-For a practical example, see the [[TANGO]] skill page which demonstrates how to wire up a foundational model for traversability and goal generation in real-time.
+For a practical example, see the TANGO skill page which demonstrates how to wire up a foundational model for traversability and goal generation in real-time.
 
 ## Related Pages
 
-- [[TANGO]]
-- [[Open-Set Perception]] ⚠️ ⚠️
-- [[Vision-Language Models]] ⚠️ ⚠️
-- [[CLIP]]
-- [[DINOv2]] ⚠️ ⚠️
-- [[GPT-4V]] ⚠️ ⚠️
-- [[Depth Estimation (Algorithm)]] ⚠️
-- [[Traversability (Concept)]] ⚠️
-- [[Goal Generation (Concept)]] ⚠️
+- TANGO
+- Open-Set Perception ⚠️ ⚠️
+- Vision-Language Models ⚠️ ⚠️
+- CLIP
+- DINOv2 ⚠️ ⚠️
+- GPT-4V ⚠️ ⚠️
+- Depth Estimation (Algorithm) ⚠️
+- Traversability (Concept) ⚠️
+- Goal Generation (Concept) ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Foundational models in robotics` --[[related_to]] ⚠️ ⚠️--> `TANGO` _(wikilink)_
-- `Foundational models in robotics` --[[related_to]] ⚠️ ⚠️--> `CLIP` _(wikilink)_
+- `Foundational models in robotics` --related_to ⚠️ ⚠️--> `TANGO` _(wikilink)_
+- `Foundational models in robotics` --related_to ⚠️ ⚠️--> `CLIP` _(wikilink)_

@@ -26,19 +26,19 @@ Memory-Augmented Planning incorporates hierarchical memory mechanisms to retain 
 
 ## Relationships
 
-- **Depends on** [[Hierarchical Memory Mechanism]] ⚠️ ⚠️ for the encoding, storage, and retrieval of spatiotemporal experience.
-- **Used by** [[UniWM]] as a core module within its unified world model architecture for navigation.
+- **Depends on** Hierarchical Memory Mechanism ⚠️ ⚠️ for the encoding, storage, and retrieval of spatiotemporal experience.
+- **Used by** UniWM as a core module within its unified world model architecture for navigation.
 
 ## Related Concepts
 
-- [[Hierarchical Memory Mechanism]] ⚠️ ⚠️ – the underlying memory framework that stores short-term episodes and long-term trajectory knowledge.
-- [[UniWM]] – a world model that leverages memory-augmented planning to achieve stable long‑horizon reasoning.
-- [[Embodied AI]] – the broader field under which memory‑augmented planning is applied.
-- [[Sim-to-real]] ⚠️ – memory systems often require transfer from simulation to real-world deployment.
+- Hierarchical Memory Mechanism ⚠️ ⚠️ – the underlying memory framework that stores short-term episodes and long-term trajectory knowledge.
+- UniWM – a world model that leverages memory-augmented planning to achieve stable long‑horizon reasoning.
+- Embodied AI – the broader field under which memory‑augmented planning is applied.
+- Sim-to-real ⚠️ – memory systems often require transfer from simulation to real-world deployment.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Memory-Augmented Planning` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Memory-Augmented Planning` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Memory-Augmented Planning` --[[related_to]] ⚠️ ⚠️--> `UniWM` _(wikilink)_
+- `Memory-Augmented Planning` --related_to ⚠️ ⚠️--> `UniWM` _(wikilink)_

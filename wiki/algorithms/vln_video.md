@@ -14,9 +14,9 @@ source_type: arxiv_paper
 
 ## Overview
 
-**VLN-Video** is a deep learning algorithm for [[Vision-and-Language Navigation (VLN)]] ⚠️ that leverages large-scale, diverse outdoor driving videos — augmented with automatically generated instructions and actions — to improve navigation performance. It addresses the data scarcity problem in outdoor VLN by synthesizing high-quality training examples from raw video footage.
+**VLN-Video** is a deep learning algorithm for Vision-and-Language Navigation (VLN) ⚠️ that leverages large-scale, diverse outdoor driving videos — augmented with automatically generated instructions and actions — to improve navigation performance. It addresses the data scarcity problem in outdoor VLN by synthesizing high-quality training examples from raw video footage.
 
-The algorithm combines classical template infilling with deep learning methods: it generates natural language instructions from video frames using a template-based approach, and extracts ground-truth navigation actions via an image rotation similarity predictor. The resulting augmented dataset is used to pretrain a [[Cross-Modal Transformer]] ⚠️ ⚠️ with three proxy tasks: [[Masked Language Modeling]] ⚠️ ⚠️, [[Instruction and Trajectory Matching]] ⚠️ ⚠️, and [[Next Action Prediction]] ⚠️ ⚠️. This pretrain-then-finetune paradigm achieves state-of-the-art results on the [[Touchdown dataset]], with a +2.1% improvement in task completion rate.
+The algorithm combines classical template infilling with deep learning methods: it generates natural language instructions from video frames using a template-based approach, and extracts ground-truth navigation actions via an image rotation similarity predictor. The resulting augmented dataset is used to pretrain a Cross-Modal Transformer ⚠️ ⚠️ with three proxy tasks: Masked Language Modeling ⚠️ ⚠️, Instruction and Trajectory Matching ⚠️ ⚠️, and Next Action Prediction ⚠️ ⚠️. This pretrain-then-finetune paradigm achieves state-of-the-art results on the Touchdown dataset, with a +2.1% improvement in task completion rate.
 
 ## Methodology
 
@@ -35,7 +35,7 @@ The algorithm combines classical template infilling with deep learning methods: 
 3. Produces **automated action labels** for each video timestep.
 
 ### Proxy Tasks for Pretraining
-The model is pretrained on the augmented driving video dataset using three complementary proxy tasks, then fine-tuned on the [[Touchdown dataset]]:
+The model is pretrained on the augmented driving video dataset using three complementary proxy tasks, then fine-tuned on the Touchdown dataset:
 
 | Task | Description |
 |------|-------------|
@@ -47,16 +47,16 @@ Together, these proxy tasks enable the model to learn rich cross-modal represent
 
 ## Key Results
 
-- **Dataset**: Trained and evaluated on the [[Touchdown dataset]] (outdoor navigation).
+- **Dataset**: Trained and evaluated on the Touchdown dataset (outdoor navigation).
 - **Performance**: Achieves a **+2.1% improvement in task completion rate** over the previous state-of-the-art on Touchdown.
 - **Core insight**: Augmenting with driving videos from diverse U.S. cities significantly expands the training distribution, improving generalization to unseen environments.
 
 ## Relationships
 
-- **[[Uses]] ⚠️**: [[driving videos]], [[Touchdown dataset]], [[Masked Language Modeling]] ⚠️ ⚠️, [[Instruction and Trajectory Matching]] ⚠️ ⚠️, [[Next Action Prediction]] ⚠️ ⚠️, [[Cross-Modal Transformer]] ⚠️ ⚠️, image rotation similarity predictor, template infilling
-- **[[Depends on]] ⚠️**: [[classical approaches]] ⚠️ (template infilling), [[deep learning techniques]] ⚠️ (cross-modal fusion and action prediction)
-- **[[Technique]] ⚠️**: Combines [[classical template infilling]] ⚠️ with [[deep learning action prediction]] ⚠️
-- **[[Addresses]] ⚠️**: [[data scarcity in outdoor VLN]] ⚠️, [[generalization gap in VLN]] ⚠️
+- **Uses ⚠️**: driving videos, Touchdown dataset, Masked Language Modeling ⚠️ ⚠️, Instruction and Trajectory Matching ⚠️ ⚠️, Next Action Prediction ⚠️ ⚠️, Cross-Modal Transformer ⚠️ ⚠️, image rotation similarity predictor, template infilling
+- **Depends on ⚠️**: classical approaches ⚠️ (template infilling), deep learning techniques ⚠️ (cross-modal fusion and action prediction)
+- **Technique ⚠️**: Combines classical template infilling ⚠️ with deep learning action prediction ⚠️
+- **Addresses ⚠️**: data scarcity in outdoor VLN ⚠️, generalization gap in VLN ⚠️
 
 ## References
 
@@ -65,4 +65,4 @@ Together, these proxy tasks enable the model to learn rich cross-modal represent
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `VLN-Video` --[[implements]] ⚠️--> `Touchdown dataset`
+- `VLN-Video` --implements ⚠️--> `Touchdown dataset`

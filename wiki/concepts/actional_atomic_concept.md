@@ -30,7 +30,7 @@ An **actional atomic concept** is a natural language phrase that combines an ato
 
 ## Relationships
 
-- **Part of**: [[Actional Atomic-Concept Learning (AACL)]] – this framework learns a shared embedding space for actional atomic concepts from paired observation-instruction data. The concept is a core building block within AACL.
+- **Part of**: Actional Atomic-Concept Learning (AACL) – this framework learns a shared embedding space for actional atomic concepts from paired observation-instruction data. The concept is a core building block within AACL.
 
 ## Examples
 

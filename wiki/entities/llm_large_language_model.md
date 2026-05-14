@@ -18,7 +18,7 @@ A **Large Language Model (LLM)** is a neural network trained on vast text corpor
 
 ## Capabilities
 
-As reported by the [[AO-Planner]] and [[PathAgent]] systems (source: arxiv paper 2407.05890), an LLM is used to:
+As reported by the AO-Planner and PathAgent systems (source: arxiv paper 2407.05890), an LLM is used to:
 
 - **Select candidate waypoints** – from a set of reachable poses or regions, the LLM identifies those most relevant to the task, based on affordances and environmental context.
 - **Reason about a path** – it evaluates sequences of waypoints, considering feasibility, efficiency, and natural language constraints.
@@ -29,15 +29,15 @@ These capabilities allow an LLM to function as a *semantic planner*: converting 
 
 ## Usage
 
-The LLM is a core component of both [[AO-Planner]] and [[PathAgent]], each of which depends on its waypoint selection and path reasoning to produce executable motion commands.
+The LLM is a core component of both AO-Planner and PathAgent, each of which depends on its waypoint selection and path reasoning to produce executable motion commands.
 
-- [[AO-Planner]] **uses** [[LLM]] ⚠️ ⚠️ – the planner invokes the LLM to ground language in spatial reasoning.
-- [[PathAgent]] **uses** [[LLM]] ⚠️ ⚠️ – the agent relies on the LLM for high-level decision‑making during path generation.
+- AO-Planner **uses** LLM ⚠️ ⚠️ – the planner invokes the LLM to ground language in spatial reasoning.
+- PathAgent **uses** LLM ⚠️ ⚠️ – the agent relies on the LLM for high-level decision‑making during path generation.
 
 No other relationships are documented in the current source.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `LLM (Large Language Model)` --[[uses]] ⚠️ ⚠️--> `AO-Planner`
-- `LLM (Large Language Model)` --[[uses]] ⚠️ ⚠️--> `PathAgent`
+- `LLM (Large Language Model)` --uses ⚠️ ⚠️--> `AO-Planner`
+- `LLM (Large Language Model)` --uses ⚠️ ⚠️--> `PathAgent`

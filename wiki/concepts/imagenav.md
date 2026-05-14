@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # ImageNav
 
-**ImageNav** (Image Goal Navigation) is a navigation task where an agent must move to a location that matches a given image goal. It is part of the training mixture used in [[FiLM-Nav]] fine-tuning, providing diverse visual experiences to improve generalization.
+**ImageNav** (Image Goal Navigation) is a navigation task where an agent must move to a location that matches a given image goal. It is part of the training mixture used in FiLM-Nav fine-tuning, providing diverse visual experiences to improve generalization.
 
 ## Overview
 
@@ -34,9 +34,9 @@ Standard metrics for ImageNav include:
 
 ## Relationship to FiLM-Nav
 
-ImageNav is part of the [[FiLM-Nav]] training mixture. During fine-tuning, including ImageNav alongside other tasks (e.g., [[ObjectNav]]) helps the model learn robust visual grounding and navigation under varied goal representations. This diversity improves the agent's ability to handle different types of goal specifications in real-world deployment.
+ImageNav is part of the FiLM-Nav training mixture. During fine-tuning, including ImageNav alongside other tasks (e.g., ObjectNav) helps the model learn robust visual grounding and navigation under varied goal representations. This diversity improves the agent's ability to handle different types of goal specifications in real-world deployment.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `ImageNav` --[[related_to]] ⚠️--> `FiLM-Nav` _(wikilink)_
+- `ImageNav` --related_to ⚠️--> `FiLM-Nav` _(wikilink)_

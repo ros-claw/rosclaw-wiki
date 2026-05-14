@@ -27,12 +27,12 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **part of** [[Multi-Task Learning for VLN]] – bounding box prediction is one of several tasks (alongside depth estimation, semantic segmentation, etc.) jointly trained to improve navigation performance.
-- **part of** [[Volumetric Environment Representation]] – bounding boxes contribute to a structured, object‑centric map that is more efficient than raw occupancy grids for long‑horizon planning.
+- **part of** Multi-Task Learning for VLN – bounding box prediction is one of several tasks (alongside depth estimation, semantic segmentation, etc.) jointly trained to improve navigation performance.
+- **part of** Volumetric Environment Representation – bounding boxes contribute to a structured, object‑centric map that is more efficient than raw occupancy grids for long‑horizon planning.
 
-3D bounding box prediction typically **depends on** [[Depth Estimation]] ⚠️ and [[Semantic Segmentation]] ⚠️ to fuse geometric and categorical information. It is often **implemented** as a head in a transformer‑based model trained on data like [[ScanNet]] or [[Matterport3D]] ⚠️.
+3D bounding box prediction typically **depends on** Depth Estimation ⚠️ and Semantic Segmentation ⚠️ to fuse geometric and categorical information. It is often **implemented** as a head in a transformer‑based model trained on data like ScanNet or Matterport3D ⚠️.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `3D Bounding Box Prediction` --[[applies_to]] ⚠️--> `ScanNet`
+- `3D Bounding Box Prediction` --applies_to ⚠️--> `ScanNet`

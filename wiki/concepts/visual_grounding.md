@@ -26,16 +26,16 @@ Visual grounding bridges the gap between perception and language, enabling robot
 
 ## Usage in Embodied AI
 
-[[Visual Grounding]] is used by:
+Visual Grounding is used by:
 
-- [[Vision-and-Language Navigation (VLN)]] ⚠️ – agents must follow natural language instructions by grounding each instruction step to visual landmarks.
-- [[VLN-BERT]] – a transformer-based architecture that explicitly models the alignment between language tokens and visual features for grounded navigation decisions.
+- Vision-and-Language Navigation (VLN) ⚠️ – agents must follow natural language instructions by grounding each instruction step to visual landmarks.
+- VLN-BERT – a transformer-based architecture that explicitly models the alignment between language tokens and visual features for grounded navigation decisions.
 
 ## Related Concepts
 
-- [[Embodied AI]] – the broader field where visual grounding enables situated reasoning.
-- [[Semantic Segmentation]] ⚠️ – often used as a stepping stone for grounding object categories.
-- [[Referring Expression Comprehension]] ⚠️ – a specific instance of visual grounding that resolves referring expressions.
+- Embodied AI – the broader field where visual grounding enables situated reasoning.
+- Semantic Segmentation ⚠️ – often used as a stepping stone for grounding object categories.
+- Referring Expression Comprehension ⚠️ – a specific instance of visual grounding that resolves referring expressions.
 
 ## References
 
@@ -44,4 +44,4 @@ Visual grounding bridges the gap between perception and language, enabling robot
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual Grounding` --[[related_to]] ⚠️--> `Embodied AI`
+- `Visual Grounding` --related_to ⚠️--> `Embodied AI`

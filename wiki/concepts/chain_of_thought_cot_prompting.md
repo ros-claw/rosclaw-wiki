@@ -27,9 +27,9 @@ CoT operates in a multi-turn QA style where each step builds on the previous rea
 
 ### Relationships
 
-- **Used by**: [[CL-CoTNav]] – implements H-CoT to perform continual learning of navigation policies, extracting compositional knowledge from success/failure traces.
+- **Used by**: CL-CoTNav – implements H-CoT to perform continual learning of navigation policies, extracting compositional knowledge from success/failure traces.
 - **Inspired by**: Human cognitive search strategies – especially the process of narrowing down a target's location via spatial and categorical hierarchies.
-- **Relates to**: [[Embodied AI]] for task planning, [[Hierarchical RL]] ⚠️ for options decomposition, and [[Visual Language Models]] ⚠️ for grounding language instructions in visual observations.
+- **Relates to**: Embodied AI for task planning, Hierarchical RL ⚠️ for options decomposition, and Visual Language Models ⚠️ for grounding language instructions in visual observations.
 
 ### Source
 
@@ -38,4 +38,4 @@ This page derives from the paper *"CL-CoTNav: Continual Learning for Chain-of-Th
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Chain-of-Thought (CoT) Prompting` --[[related_to]] ⚠️--> `CL-CoTNav` _(wikilink)_
+- `Chain-of-Thought (CoT) Prompting` --related_to ⚠️--> `CL-CoTNav` _(wikilink)_

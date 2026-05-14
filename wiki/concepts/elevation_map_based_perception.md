@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Description
 
-**Elevation Map-based Perception** is a method in terrain perception that constructs a 2.5D grid map representing the height of the terrain at discrete cells. It uses depth sensors (e.g., [[Stereo Camera]] ⚠️, [[LiDAR]]) combined with [[Visual Odometry]] ⚠️ and [[IMU]] ⚠️-based localization to fuse successive measurements into a consistent elevation map. Historically, this approach has been a workhorse in traditional locomotion planning (e.g., for [[Legged Robots]] and rough-terrain navigation), but it incurs latency and robustness overhead due to the fusion of multiple sensor streams.
+**Elevation Map-based Perception** is a method in terrain perception that constructs a 2.5D grid map representing the height of the terrain at discrete cells. It uses depth sensors (e.g., Stereo Camera ⚠️, LiDAR) combined with Visual Odometry ⚠️ and IMU ⚠️-based localization to fuse successive measurements into a consistent elevation map. Historically, this approach has been a workhorse in traditional locomotion planning (e.g., for Legged Robots and rough-terrain navigation), but it incurs latency and robustness overhead due to the fusion of multiple sensor streams.
 
 ## Capabilities
 
@@ -24,12 +24,12 @@ source_type: arxiv_paper
 ## Dependencies
 
 - **Multiple vision sensors**: Typically two or more imaging modalities (e.g., depth cameras, LiDAR, or stereo rigs).
-- **Localization systems**: Requires high-frequency, drift-corrected odometry (e.g., [[Visual-Inertial Odometry]] ⚠️ or [[GPS]] ⚠️) to align successive depth measurements.
+- **Localization systems**: Requires high-frequency, drift-corrected odometry (e.g., Visual-Inertial Odometry ⚠️ or GPS ⚠️) to align successive depth measurements.
 
 ## Relationships
 
-- **Used by**: [[Terrain-Aware Locomotion Policy with a Blind Backbone]] — this approach augments a blind policy with an elevation map to improve adaptability.
-- **Alternative to**: [[Depth image-based end-to-end learning]] ⚠️ — the end-to-end method skips explicit map building and instead learns directly from depth images, trading structure for speed.
+- **Used by**: Terrain-Aware Locomotion Policy with a Blind Backbone — this approach augments a blind policy with an elevation map to improve adaptability.
+- **Alternative to**: Depth image-based end-to-end learning ⚠️ — the end-to-end method skips explicit map building and instead learns directly from depth images, trading structure for speed.
 
 ## References
 
@@ -38,6 +38,6 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Elevation Map-based Perception` --[[applies_to]] ⚠️--> `Legged Robots`
+- `Elevation Map-based Perception` --applies_to ⚠️--> `Legged Robots`
 **Pending review:**
-- `Elevation Map-based Perception` --[[related_to]] ⚠️--> `Terrain-Aware Locomotion Policy with a Blind Backbone` _(wikilink)_
+- `Elevation Map-based Perception` --related_to ⚠️--> `Terrain-Aware Locomotion Policy with a Blind Backbone` _(wikilink)_

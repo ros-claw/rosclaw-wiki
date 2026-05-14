@@ -11,11 +11,11 @@ sources:
 
 # AlphaFold
 
-AlphaFold is a deep learning system developed by [[DeepMind]] for predicting protein 3D structures from amino acid sequences. It achieved near-experimental accuracy at the CASP13 competition (2018), marking a significant breakthrough in computational biology.
+AlphaFold is a deep learning system developed by DeepMind for predicting protein 3D structures from amino acid sequences. It achieved near-experimental accuracy at the CASP13 competition (2018), marking a significant breakthrough in computational biology.
 
 ## Architecture
 
-AlphaFold uses a deep [[evolutionary_features|evolutionary]] and [[physical_constraints|physical]] approach:
+AlphaFold uses a deep evolutionary and physical approach:
 
 - **MSA (Multiple Sequence Alignment)**: Input sequences are aligned with evolutionary relatives
 - **Distogram Prediction**: Predicts probability distributions over residue-residue distances
@@ -32,9 +32,9 @@ AlphaFold uses a deep [[evolutionary_features|evolutionary]] and [[physical_cons
 ## Impact
 
 AlphaFold has been applied to:
-- Drug discovery and [[molecular_dynamics|molecular dynamics]] simulations
-- Understanding [[genetic_disease|genetic diseases]] through structure-function relationships
-- Engineering novel [[enzyme_design|enzymes]] and proteins
+- Drug discovery and molecular dynamics simulations
+- Understanding genetic diseases through structure-function relationships
+- Engineering novel enzymes and proteins
 
 ## Relationship to Embodied AI
 
@@ -43,5 +43,5 @@ While primarily a computational biology tool, AlphaFold's architecture innovatio
 ## See Also
 
 - [[deepmind_enformer|Enformer]] — Gene expression prediction from DNA sequence
-- [[protein_structure_prediction|Protein Structure Prediction]]
+- Protein Structure Prediction
 - [[attention_mechanism|Attention Mechanism]]

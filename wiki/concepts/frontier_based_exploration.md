@@ -23,21 +23,21 @@ Frontier-based exploration uses frontiers (boundaries between explored and unexp
 
 ### Capabilities
 
-- **uses frontier queries to represent unexplored locations** — In the scope of the paper [[2507.04047]] ⚠️, frontier regions are queried as a compressed representation of the unknown environment, allowing the exploration policy to reason about where to move next without requiring a full map reconstruction.
+- **uses frontier queries to represent unexplored locations** — In the scope of the paper 2507.04047 ⚠️, frontier regions are queried as a compressed representation of the unknown environment, allowing the exploration policy to reason about where to move next without requiring a full map reconstruction.
 - **identify boundaries between known free space and unknown space** — The core algorithm detects transition zones that separate mapped and unmapped regions.
 - **guide exploration to new areas** — Frontier cells serve as dynamic waypoints, directing the robot toward novel regions of the environment.
 
 ### Relationships
 
-- **implemented_by** [[Unified objective for grounding and exploring]] — The frontier-based approach is implemented as a single objective that simultaneously grounds language descriptions and explores the environment, replacing separate exploration and grounding modules.
-- **used_in** [[MTU3D]] — The exploration strategy is applied within the [[MTU3D]] framework, a multi-task unified architecture for 3D grounding and exploration tasks.
-- **used_by** [[VLFM]] — This classic paradigm is employed by the VLFM agent to guide embodied exploration in vision-language tasks.
+- **implemented_by** Unified objective for grounding and exploring — The frontier-based approach is implemented as a single objective that simultaneously grounds language descriptions and explores the environment, replacing separate exploration and grounding modules.
+- **used_in** MTU3D — The exploration strategy is applied within the MTU3D framework, a multi-task unified architecture for 3D grounding and exploration tasks.
+- **used_by** VLFM — This classic paradigm is employed by the VLFM agent to guide embodied exploration in vision-language tasks.
 
 ### Context
 
-In traditional mobile robotics, frontier-based exploration (Yamauchi, 1997) relies on occupancy grids and costmaps. The variant described here adapts the concept to embodied vision-language tasks: frontier queries serve as discrete spatial hypotheses that the agent can verify via active perception, bridging the gap between exploration and semantic grounding. More recent work, such as [[VLFM]], continues to use frontiers as efficient goal representations.
+In traditional mobile robotics, frontier-based exploration (Yamauchi, 1997) relies on occupancy grids and costmaps. The variant described here adapts the concept to embodied vision-language tasks: frontier queries serve as discrete spatial hypotheses that the agent can verify via active perception, bridging the gap between exploration and semantic grounding. More recent work, such as VLFM, continues to use frontiers as efficient goal representations.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Frontier-based exploration` --[[related_to]] ⚠️--> `Unified objective for grounding and exploring` _(wikilink)_
+- `Frontier-based exploration` --related_to ⚠️--> `Unified objective for grounding and exploring` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## NavGPT
 
-**NavGPT** is a purely LLM-based instruction-following navigation agent designed for **zero-shot sequential action prediction** in [[Vision-and-Language Navigation]] (VLN). By leveraging the reasoning abilities of large language models like [[ChatGPT]] ⚠️ ⚠️ ⚠️ and [[GPT-4]], NavGPT demonstrates explicit reasoning in complex embodied scenes without requiring fine-tuning or task-specific training.
+**NavGPT** is a purely LLM-based instruction-following navigation agent designed for **zero-shot sequential action prediction** in Vision-and-Language Navigation (VLN). By leveraging the reasoning abilities of large language models like ChatGPT ⚠️ ⚠️ ⚠️ and GPT-4, NavGPT demonstrates explicit reasoning in complex embodied scenes without requiring fine-tuning or task-specific training.
 
 ### Overview
 
@@ -24,9 +24,9 @@ NavGPT treats VLN as a language reasoning problem. It takes **textual descriptio
 
 | Parameter | Value |
 |-----------|-------|
-| Base models | [[ChatGPT]] ⚠️ ⚠️ ⚠️, [[GPT-4]] |
+| Base models | ChatGPT ⚠️ ⚠️ ⚠️, GPT-4 |
 | Input modalities | Textual descriptions of visual observations, navigation history, future explorable directions |
-| Task | Zero‑shot sequential action prediction for [[Vision-and-Language Navigation]] |
+| Task | Zero‑shot sequential action prediction for Vision-and-Language Navigation |
 
 ### Capabilities
 
@@ -41,9 +41,9 @@ NavGPT treats VLN as a language reasoning problem. It takes **textual descriptio
 
 ### Relationships
 
-- **uses** → [[LLMs]] ⚠️ ⚠️, [[ChatGPT]] ⚠️ ⚠️ ⚠️, [[GPT-4]]  
-- **applied_to** → [[Vision-and-Language Navigation]]  
-- **depends_on** → [[LLM reasoning capabilities]] ⚠️  
+- **uses** → LLMs ⚠️ ⚠️, ChatGPT ⚠️ ⚠️ ⚠️, GPT-4  
+- **applied_to** → Vision-and-Language Navigation  
+- **depends_on** → LLM reasoning capabilities ⚠️  
 
 ### How It Works (Conceptual)
 
@@ -55,9 +55,9 @@ NavGPT treats VLN as a language reasoning problem. It takes **textual descriptio
 
 ### Significance
 
-NavGPT illustrates that general‑purpose language models, without any specialized training, can serve as embodied navigation agents. Its success highlights the potential of [[LLMs]] ⚠️ ⚠️ for grounding language in real‑world environments and opens the door to using commonsense reasoning for robot navigation tasks.
+NavGPT illustrates that general‑purpose language models, without any specialized training, can serve as embodied navigation agents. Its success highlights the potential of LLMs ⚠️ ⚠️ for grounding language in real‑world environments and opens the door to using commonsense reasoning for robot navigation tasks.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `NavGPT` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
+- `NavGPT` --based_on ⚠️--> `Vision-and-Language Navigation`

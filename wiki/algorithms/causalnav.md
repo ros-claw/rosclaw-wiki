@@ -28,9 +28,9 @@ CausalNav takes as input:
 It outputs safe, executable navigation actions.
 
 The framework is built on three core components:
-- [[Embodied Graph]] — a hybrid representation combining topological map structures with semantic object-level nodes.
-- [[Large Language Models (LLM)]] ⚠️ ⚠️ — used for grounding open-vocabulary queries and reasoning about scene context.
-- [[Retrieval-Augmented Generation (RAG)]] — to efficiently retrieve relevant spatial and semantic information from the graph during planning.
+- Embodied Graph — a hybrid representation combining topological map structures with semantic object-level nodes.
+- Large Language Models (LLM) ⚠️ ⚠️ — used for grounding open-vocabulary queries and reasoning about scene context.
+- Retrieval-Augmented Generation (RAG) — to efficiently retrieve relevant spatial and semantic information from the graph during planning.
 
 ---
 
@@ -58,17 +58,17 @@ The planning pipeline uses the Embodied Graph to maintain a persistent world mod
 
 | Relationship | Entity |
 |--------------|--------|
-| `uses` | [[Embodied Graph]], [[Large Language Models (LLM)]] ⚠️ ⚠️, [[Retrieval-Augmented Generation (RAG)]] |
-| `depends_on` | [[Multi-level semantic scene graph construction]] ⚠️, [[Hierarchical planning modules]] ⚠️ |
+| `uses` | Embodied Graph, Large Language Models (LLM) ⚠️ ⚠️, Retrieval-Augmented Generation (RAG) |
+| `depends_on` | Multi-level semantic scene graph construction ⚠️, Hierarchical planning modules ⚠️ |
 
 ---
 
 ## Related Concepts
 
-- [[Semantic Navigation]] ⚠️
-- [[Open-Vocabulary Grounding]] ⚠️
-- [[Offline Map Fusion]] ⚠️
-- [[Dynamic Object Handling]] ⚠️
+- Semantic Navigation ⚠️
+- Open-Vocabulary Grounding ⚠️
+- Offline Map Fusion ⚠️
+- Dynamic Object Handling ⚠️
 
 ---
 

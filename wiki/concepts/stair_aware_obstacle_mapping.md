@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Stair-aware Obstacle Mapping
 
-**Stair-aware Obstacle Mapping** is a concept within [[Multi-Floor Abstraction]] that enables mobile robots to treat staircases not as impassable obstacles but as traversable transitions between floor levels. Unlike conventional obstacle maps that often ignore or block stair geometry, this approach explicitly detects stair geometry and integrates it into the floor map, allowing the robot to reason about multi-floor navigation.
+**Stair-aware Obstacle Mapping** is a concept within Multi-Floor Abstraction that enables mobile robots to treat staircases not as impassable obstacles but as traversable transitions between floor levels. Unlike conventional obstacle maps that often ignore or block stair geometry, this approach explicitly detects stair geometry and integrates it into the floor map, allowing the robot to reason about multi-floor navigation.
 
 ### Capabilities
 
@@ -23,9 +23,9 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **part_of** [[Multi-Floor Abstraction]] — Stair-aware mapping is a sub-component of the larger framework for representing and navigating multiple floors.
-- **depends_on** [[Semantic Mapping]] ⚠️ — Stair recognition relies on semantic labeling of the environment.
-- **implements** [[Traversable Transition Detection]] ⚠️ — It is a concrete implementation of detecting transitions between floors.
+- **part_of** Multi-Floor Abstraction — Stair-aware mapping is a sub-component of the larger framework for representing and navigating multiple floors.
+- **depends_on** Semantic Mapping ⚠️ — Stair recognition relies on semantic labeling of the environment.
+- **implements** Traversable Transition Detection ⚠️ — It is a concrete implementation of detecting transitions between floors.
 
 ### Usage Notes
 
@@ -34,4 +34,4 @@ When a robot uses stair-aware obstacle mapping, it can generate paths that inclu
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Stair-aware Obstacle Mapping` --[[related_to]] ⚠️--> `Multi-Floor Abstraction` _(wikilink)_
+- `Stair-aware Obstacle Mapping` --related_to ⚠️--> `Multi-Floor Abstraction` _(wikilink)_

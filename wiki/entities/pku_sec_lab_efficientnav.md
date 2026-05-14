@@ -36,14 +36,14 @@ Install habitat-lab:
 ``
 
 ## Relationships
-- **Implements / Related to**: [[GRPO]]
-- **Implements / Related to**: [[GRPO reinforcement learning]]
-- **Implements / Related to**: [[Language-guided urban navigation]]
-- **Implements / Related to**: [[Navigation from Dialog History]]
-- **Implements / Related to**: [[Embodied 3D Occupancy Prediction]]
+- **Implements / Related to**: GRPO
+- **Implements / Related to**: GRPO reinforcement learning
+- **Implements / Related to**: Language-guided urban navigation
+- **Implements / Related to**: Navigation from Dialog History
+- **Implements / Related to**: Embodied 3D Occupancy Prediction
 
 ## See Also
-- [[Code Repository]] ⚠️ — general code entity guidelines
-- [[GRPO]]
-- [[GRPO reinforcement learning]]
-- [[Language-guided urban navigation]]
+- Code Repository ⚠️ — general code entity guidelines
+- GRPO
+- GRPO reinforcement learning
+- Language-guided urban navigation

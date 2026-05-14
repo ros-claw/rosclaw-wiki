@@ -28,10 +28,10 @@ Topometric maps typically consist of a topological graph whose nodes represent k
 
 ## Relationship to Other Concepts
 
-- Used by: [[TANGO]] – the paper introducing TANGO (from `papers/2509.08699.pdf`) employs topometric navigation as a core component.
-- Depends on: [[Topological Navigation]] ⚠️, [[Metric Navigation]] ⚠️ – since it combines both paradigms.
-- Implements: [[Long-Horizon Navigation]] ⚠️ – enabling robots to navigate over hundreds of meters or more without global metric maps.
-- Related to: [[Navigation Planning]] ⚠️, [[Map Representation]] ⚠️, [[SLAM]] – topometric maps can be built using a hybrid SLAM approach that maintains both graph structure and local metrics.
+- Used by: TANGO – the paper introducing TANGO (from `papers/2509.08699.pdf`) employs topometric navigation as a core component.
+- Depends on: Topological Navigation ⚠️, Metric Navigation ⚠️ – since it combines both paradigms.
+- Implements: Long-Horizon Navigation ⚠️ – enabling robots to navigate over hundreds of meters or more without global metric maps.
+- Related to: Navigation Planning ⚠️, Map Representation ⚠️, SLAM – topometric maps can be built using a hybrid SLAM approach that maintains both graph structure and local metrics.
 
 ## How It Works
 
@@ -56,4 +56,4 @@ A typical topometric navigation system:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Topometric Navigation` --[[related_to]] ⚠️--> `TANGO` _(wikilink)_
+- `Topometric Navigation` --related_to ⚠️--> `TANGO` _(wikilink)_

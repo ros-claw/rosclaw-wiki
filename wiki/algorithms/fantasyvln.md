@@ -17,13 +17,13 @@ source_type: arxiv_paper
 
 # FantasyVLN
 
-**FantasyVLN** is a unified implicit reasoning framework for [[Vision-Language Navigation (VLN)]] that encodes imagined visual tokens into a compact latent space using a pretrained [[Visual AutoRegressor (VAR)]] during chain-of-thought reasoning training. By jointly learning from textual, visual, and multimodal chain-of-thought (CoT) modes under a unified multi-CoT strategy, FantasyVLN enables reasoning-aware yet real-time navigation with significantly reduced token overhead.
+**FantasyVLN** is a unified implicit reasoning framework for Vision-Language Navigation (VLN) that encodes imagined visual tokens into a compact latent space using a pretrained Visual AutoRegressor (VAR) during chain-of-thought reasoning training. By jointly learning from textual, visual, and multimodal chain-of-thought (CoT) modes under a unified multi-CoT strategy, FantasyVLN enables reasoning-aware yet real-time navigation with significantly reduced token overhead.
 
 ## Capabilities
 
 - **Reasoning-aware real-time navigation** – integrates high-level planning into a low-latency policy.
 - **Reduced inference latency** – achieves an order of magnitude speedup compared to explicit CoT methods.
-- **Improved success rates and efficiency** – outperforms prior methods on the [[LH-VLN benchmark]] ⚠️.
+- **Improved success rates and efficiency** – outperforms prior methods on the LH-VLN benchmark ⚠️.
 - **Direct instruction-to-action mapping** – bypasses explicit token-by-token reasoning by leveraging reasoning-aware latent representations.
 
 ## Methodology
@@ -37,11 +37,11 @@ FantasyVLN’s architecture centres on a **Visual AutoRegressor (VAR)** trained 
 These are unified via a **multi-CoT strategy**, allowing the model to internalise reasoning without generating explicit token sequences at inference time. The resulting representations are fed directly into a navigation policy, dramatically cutting latency.
 
 **Uses**:
-- [[Visual AutoRegressor (VAR)]]
-- [[Multi-CoT strategy]] ⚠️
+- Visual AutoRegressor (VAR)
+- Multi-CoT strategy ⚠️
 
 **Based on**:
-- [[Chain-of-Thought reasoning]] – extends explicit CoT to implicit, latent-space reasoning.
+- Chain-of-Thought reasoning – extends explicit CoT to implicit, latent-space reasoning.
 
 ## Limitations Addressed
 
@@ -54,10 +54,10 @@ FantasyVLN directly tackles two key shortcomings of prior VLN agents:
 
 FantasyVLN **improves upon** several recent VLN agents that rely on explicit CoT generation:
 
-- [[NavCoT]]
-- [[NavGPT-2]]
-- [[OctoNav-R1]]
-- [[CoT-VLA]]
+- NavCoT
+- NavGPT-2
+- OctoNav-R1
+- CoT-VLA
 
 By replacing their lengthy token sequences with compact latent codes, FantasyVLN both increases speed and maintains or improves task performance.
 
@@ -72,6 +72,6 @@ FantasyVLN is a unified implicit reasoning framework for Vision-Language Navigat
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `FantasyVLN` --[[based_on]] ⚠️--> `Chain-of-Thought reasoning`
-- `FantasyVLN` --[[extends]] ⚠️ ⚠️--> `NavCoT`
-- `FantasyVLN` --[[extends]] ⚠️ ⚠️--> `NavGPT-2`
+- `FantasyVLN` --based_on ⚠️--> `Chain-of-Thought reasoning`
+- `FantasyVLN` --extends ⚠️ ⚠️--> `NavCoT`
+- `FantasyVLN` --extends ⚠️ ⚠️--> `NavGPT-2`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Open-Vocabulary Mapping
 
-**Open-Vocabulary Mapping** is an [[environment representation]] ⚠️ technique that allows a robot to query arbitrary object classes using natural language, without requiring a fixed, pre-defined label set. It is a core component of [[semantic mapping]] ⚠️ ⚠️ and [[embodied AI]], enabling systems to understand and interact with scenes in a flexible, human-interpretable way.
+**Open-Vocabulary Mapping** is an environment representation ⚠️ technique that allows a robot to query arbitrary object classes using natural language, without requiring a fixed, pre-defined label set. It is a core component of semantic mapping ⚠️ ⚠️ and embodied AI, enabling systems to understand and interact with scenes in a flexible, human-interpretable way.
 
 ## Overview
 
@@ -28,18 +28,18 @@ Traditional semantic maps rely on a fixed taxonomy of object categories (e.g., o
 
 ## Relationships
 
-- **Part of**: [[semantic mapping]] ⚠️ ⚠️ · [[embodied AI]]
-- **Used in**: [[OneMap]] · [[Zero-Shot Multi-Object Navigation]]
+- **Part of**: semantic mapping ⚠️ ⚠️ · embodied AI
+- **Used in**: OneMap · Zero-Shot Multi-Object Navigation
 
 ## Related Concepts
 
-- [[Embedding-based scene representation]] ⚠️
-- [[Natural language grounding]] ⚠️
-- [[Open-Vocabulary Vision Models]] ⚠️ (e.g., CLIP, ALIGN)
+- Embedding-based scene representation ⚠️
+- Natural language grounding ⚠️
+- Open-Vocabulary Vision Models ⚠️ (e.g., CLIP, ALIGN)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Open-Vocabulary Mapping` --[[related_to]] ⚠️ ⚠️--> `embodied AI`
+- `Open-Vocabulary Mapping` --related_to ⚠️ ⚠️--> `embodied AI`
 **Pending review:**
-- `Open-Vocabulary Mapping` --[[related_to]] ⚠️ ⚠️--> `OneMap` _(wikilink)_
+- `Open-Vocabulary Mapping` --related_to ⚠️ ⚠️--> `OneMap` _(wikilink)_

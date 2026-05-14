@@ -27,13 +27,13 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- Used by [[OpenGraph]] to construct a navigable hierarchical representation of the scene.
+- Used by OpenGraph to construct a navigable hierarchical representation of the scene.
 
 ### Role in OpenGraph
 
-In the [[OpenGraph]] framework, the environment is segmented based on lane graph connectivity to construct a hierarchical graph. This structure aids in navigation, querying, and reasoning about spatial relationships at multiple levels of abstraction.
+In the OpenGraph framework, the environment is segmented based on lane graph connectivity to construct a hierarchical graph. This structure aids in navigation, querying, and reasoning about spatial relationships at multiple levels of abstraction.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `lane graph connectivity` --[[related_to]] ⚠️--> `OpenGraph` _(wikilink)_
+- `lane graph connectivity` --related_to ⚠️--> `OpenGraph` _(wikilink)_

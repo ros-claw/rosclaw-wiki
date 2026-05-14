@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Hierarchical Cross-Modal (HCM) Agent
 
-The **Hierarchical Cross-Modal (HCM) Agent** is an algorithm for [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️ that decomposes the navigation task into specialized high- and low-level policies. It uses layered decision making and modularized training to handle continuous 3D environments with obstacles and longer trajectories.
+The **Hierarchical Cross-Modal (HCM) Agent** is an algorithm for Vision-and-Language Navigation (VLN) ⚠️ ⚠️ that decomposes the navigation task into specialized high- and low-level policies. It uses layered decision making and modularized training to handle continuous 3D environments with obstacles and longer trajectories.
 
 ## Overview
 
@@ -34,8 +34,8 @@ The HCM agent employs a **hierarchical high- and low-level policy architecture**
 
 ## Relationships
 
-- **uses**: [[Visual sensory inputs]] ⚠️, [[Natural language instructions]] ⚠️, [[Continuous action spaces]] ⚠️
-- **depends_on**: [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️
+- **uses**: Visual sensory inputs ⚠️, Natural language instructions ⚠️, Continuous action spaces ⚠️
+- **depends_on**: Vision-and-Language Navigation (VLN) ⚠️ ⚠️
 - **part_of**: None
 
 ## Sources

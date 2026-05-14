@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ### Multi-floor Navigation
 
-**Multi-floor Navigation** refers to the ability of a robot or agent to plan and execute movement across multiple levels of a building or structure, including transitions between floors (e.g., via stairs, ramps, or elevators). It is a specialized subfield of [[Navigation]] ⚠️ that introduces vertical spatial reasoning as a core requirement, moving beyond planar assumptions.
+**Multi-floor Navigation** refers to the ability of a robot or agent to plan and execute movement across multiple levels of a building or structure, including transitions between floors (e.g., via stairs, ramps, or elevators). It is a specialized subfield of Navigation ⚠️ that introduces vertical spatial reasoning as a core requirement, moving beyond planar assumptions.
 
 #### Capabilities
 
@@ -23,14 +23,14 @@ source_type: arxiv_paper
 
 #### Challenges
 
-- **Single-floor assumption**: Most conventional navigation stacks (e.g., [[ROS Navigation Stack]] ⚠️, [[MoveIt2]] ⚠️) assume a flat, single-floor environment, and do not natively support z-axis planning or floor transitions.
-- **Requirement for offline maps**: Many current approaches rely on pre‑built [[3D Map Representation]] ⚠️ or floor-plan overlays; dynamically constructing multi-floor maps online remains an open problem, particularly in unknown or unstructured environments.
+- **Single-floor assumption**: Most conventional navigation stacks (e.g., ROS Navigation Stack ⚠️, MoveIt2 ⚠️) assume a flat, single-floor environment, and do not natively support z-axis planning or floor transitions.
+- **Requirement for offline maps**: Many current approaches rely on pre‑built 3D Map Representation ⚠️ or floor-plan overlays; dynamically constructing multi-floor maps online remains an open problem, particularly in unknown or unstructured environments.
 
 #### Relationships
 
-- **Implements**: [[Vertical Spatial Reasoning]] ⚠️
-- **Depends on**: [[3D Semantic Mapping]] ⚠️, [[Multi-Level Path Planning]] ⚠️
-- **Challenged by**: [[Single-Floor Assumption]] ⚠️, [[Offline Map Requirement]] ⚠️
-- **Part of**: [[Embodied Indoor Navigation]] ⚠️
+- **Implements**: Vertical Spatial Reasoning ⚠️
+- **Depends on**: 3D Semantic Mapping ⚠️, Multi-Level Path Planning ⚠️
+- **Challenged by**: Single-Floor Assumption ⚠️, Offline Map Requirement ⚠️
+- **Part of**: Embodied Indoor Navigation ⚠️
 
 The source paper (arxiv:2505.23019) proposes a method to overcome the offline-map dependency by learning a latent representation that generalizes across floors without explicit map pre‑construction.

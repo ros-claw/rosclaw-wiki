@@ -33,7 +33,7 @@ This approach is closely related to methods like **auxiliary task learning** and
 
 ## Relationships
 
-- **Used by** [[Navigation Diffusion Policy]] ⚠️ (NavDP) – Privileged Information Guidance provides the critic supervision that allows NavDP to generate navigation trajectories that are both spatially coherent and risk-aware.
-- **Depends on** – [[Simulation]] ⚠️ environment capable of providing task-relevant privileged information (e.g., collision outcomes, goal distances, task completion metrics).
+- **Used by** Navigation Diffusion Policy ⚠️ (NavDP) – Privileged Information Guidance provides the critic supervision that allows NavDP to generate navigation trajectories that are both spatially coherent and risk-aware.
+- **Depends on** – Simulation ⚠️ environment capable of providing task-relevant privileged information (e.g., collision outcomes, goal distances, task completion metrics).
 
-> *See also:* [[Contrastive Learning]] ⚠️, [[Critic Networks]] ⚠️, [[Sim-to-Real Transfer]]
+> *See also:* Contrastive Learning ⚠️, Critic Networks ⚠️, Sim-to-Real Transfer

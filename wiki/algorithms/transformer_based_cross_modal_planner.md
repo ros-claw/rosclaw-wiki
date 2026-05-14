@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Transformer-based Cross-modal Planner** is a planning module that serves as a core component of the [[ETPNav]] framework. It fuses visual information from a [[Topological Map]] ⚠️ with textual [[Language Instructions]] ⚠️ to generate a high-level [[Navigation Plan]] ⚠️ composed of a sequence of [[Subgoal|subgoals]].
+The **Transformer-based Cross-modal Planner** is a planning module that serves as a core component of the ETPNav framework. It fuses visual information from a Topological Map ⚠️ with textual Language Instructions ⚠️ to generate a high-level Navigation Plan ⚠️ composed of a sequence of subgoals.
 
 ## Capabilities
 
@@ -23,7 +23,7 @@ The **Transformer-based Cross-modal Planner** is a planning module that serves a
 
 ## Architecture & Design
 
-The planner employs a [[Transformer]] ⚠️ ⚠️ backbone with [[Cross-modal Attention]] ⚠️ ⚠️ to align language instructions with nodes of the topological map. This alignment allows the model to produce a coherent sequence of subgoals that guides the robot toward the goal specified by the instructions.
+The planner employs a Transformer ⚠️ ⚠️ backbone with Cross-modal Attention ⚠️ ⚠️ to align language instructions with nodes of the topological map. This alignment allows the model to produce a coherent sequence of subgoals that guides the robot toward the goal specified by the instructions.
 
 ## Parameters
 
@@ -34,10 +34,10 @@ The planner employs a [[Transformer]] ⚠️ ⚠️ backbone with [[Cross-modal 
 
 ## Relationships
 
-- **Part of**: [[ETPNav]]
-- **Uses**: [[Transformer]] ⚠️ ⚠️, [[Cross-modal Attention]] ⚠️ ⚠️
+- **Part of**: ETPNav
+- **Uses**: Transformer ⚠️ ⚠️, Cross-modal Attention ⚠️ ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Transformer-based Cross-modal Planner` --[[extends]] ⚠️--> `ETPNav`
+- `Transformer-based Cross-modal Planner` --extends ⚠️--> `ETPNav`

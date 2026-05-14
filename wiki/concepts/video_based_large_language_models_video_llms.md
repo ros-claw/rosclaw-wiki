@@ -21,23 +21,23 @@ source_type: arxiv_paper
 - **Process video streams and language instructions**  
   Video-LLMs accept continuous video (or sampled frames) and accompanying text prompts, producing coherent responses grounded in the visual-temporal content.
 - **Drive progress in Vision-and-Language Navigation tasks**  
-  In embodied settings such as [[Vision-and-Language Navigation (VLN)]] ⚠️, these models allow agents to interpret real-time camera feeds and follow high-level linguistic commands, bridging the gap between perception and action.
+  In embodied settings such as Vision-and-Language Navigation (VLN) ⚠️, these models allow agents to interpret real-time camera feeds and follow high-level linguistic commands, bridging the gap between perception and action.
 
 ### Relationships
 
-- **Used by**: [[StreamVLN]] — the [[StreamVLN]] framework leverages Video-LLMs as its core perception backbone, using them to encode video observations and generate navigation decisions conditioned on language instructions.
+- **Used by**: StreamVLN — the StreamVLN framework leverages Video-LLMs as its core perception backbone, using them to encode video observations and generate navigation decisions conditioned on language instructions.
 
 ### Relevant Concepts
 
-- [[Vision-Language Models (VLMs)]] ⚠️
-- [[Embodied AI]]
-- [[Temporal Video Understanding]] ⚠️
-- [[Large Language Models (LLMs)]]
+- Vision-Language Models (VLMs) ⚠️
+- Embodied AI
+- Temporal Video Understanding ⚠️
+- Large Language Models (LLMs)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Video-based Large Language Models (Video-LLMs)` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
-- `Video-based Large Language Models (Video-LLMs)` --[[applies_to]] ⚠️--> `Large Language Models (LLMs)`
+- `Video-based Large Language Models (Video-LLMs)` --related_to ⚠️ ⚠️--> `Embodied AI`
+- `Video-based Large Language Models (Video-LLMs)` --applies_to ⚠️--> `Large Language Models (LLMs)`
 **Pending review:**
-- `Video-based Large Language Models (Video-LLMs)` --[[related_to]] ⚠️ ⚠️--> `StreamVLN` _(wikilink)_
+- `Video-based Large Language Models (Video-LLMs)` --related_to ⚠️ ⚠️--> `StreamVLN` _(wikilink)_

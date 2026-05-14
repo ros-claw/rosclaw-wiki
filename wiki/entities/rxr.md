@@ -41,23 +41,23 @@ The **Room-across-Room (RxR)** dataset is a large-scale, multilingual Vision-and
 
 ## Relationships
 
-- **Extends**: [[R2R]] — RxR uses the same Matterport3D environments as R2R but provides entirely new paths and multilingual instructions
-- **Related dataset**: [[REVERIE]] — both use high-level natural language instructions, but REVERIE focuses on remote object grounding while RxR focuses on multilingual path following
-- **Used by**: [[HAMT]] — HAMT demonstrates strong performance on RxR via hierarchical memory transformers
-- **Evaluates**: [[Vision-Language Navigation]] — RxR is a core benchmark for this research area
+- **Extends**: R2R — RxR uses the same Matterport3D environments as R2R but provides entirely new paths and multilingual instructions
+- **Related dataset**: REVERIE — both use high-level natural language instructions, but REVERIE focuses on remote object grounding while RxR focuses on multilingual path following
+- **Used by**: HAMT — HAMT demonstrates strong performance on RxR via hierarchical memory transformers
+- **Evaluates**: Vision-Language Navigation — RxR is a core benchmark for this research area
 
 ## See Also
 
-- [[Matterport3D]] ⚠️ — the underlying 3D environment dataset
-- [[Vision-Language Navigation]] — the broader research field
-- [[R2R]] — the original English-only VLN dataset
-- [[Embodied AI]] — the field in which this dataset sits
+- Matterport3D ⚠️ — the underlying 3D environment dataset
+- Vision-Language Navigation — the broader research field
+- R2R — the original English-only VLN dataset
+- Embodied AI — the field in which this dataset sits
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `RxR` --[[depends_on]] ⚠️ ⚠️--> `R2R`
-- `RxR` --[[depends_on]] ⚠️ ⚠️--> `REVERIE`
-- `RxR` --[[uses]] ⚠️--> `HAMT`
-- `RxR` --[[related_to]] ⚠️ ⚠️--> `Vision-Language Navigation`
-- `RxR` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `RxR` --depends_on ⚠️ ⚠️--> `R2R`
+- `RxR` --depends_on ⚠️ ⚠️--> `REVERIE`
+- `RxR` --uses ⚠️--> `HAMT`
+- `RxR` --related_to ⚠️ ⚠️--> `Vision-Language Navigation`
+- `RxR` --related_to ⚠️ ⚠️--> `Embodied AI`

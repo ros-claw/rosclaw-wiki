@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**IGL-Nav** is an **incremental 3D Gaussian localization framework** for [[Image-Goal Navigation]]. It incrementally builds and updates a [[3D Gaussian Splatting (3DGS)]] ⚠️ ⚠️ scene representation from monocular RGB input, enabling **efficient goal localization** and **free-view image-goal navigation**.
+**IGL-Nav** is an **incremental 3D Gaussian localization framework** for Image-Goal Navigation. It incrementally builds and updates a 3D Gaussian Splatting (3DGS) ⚠️ ⚠️ scene representation from monocular RGB input, enabling **efficient goal localization** and **free-view image-goal navigation**.
 
 The framework operates in two stages:
 
@@ -42,9 +42,9 @@ This approach allows **real‑world deployment** with goal images captured by a 
 
 ## Relationships
 
-- **uses** → [[3D Gaussian Splatting (3DGS)]] ⚠️ ⚠️, [[Differentiable Rendering]] ⚠️, [[Monocular Prediction]] ⚠️
-- **depends_on** → [[3DGS optimization]] ⚠️
-- **improves_upon** → prior end-to-end RL policies and modular-based policies using topological graphs or [[Bird’s Eye View (BEV)]] ⚠️ representations
+- **uses** → 3D Gaussian Splatting (3DGS) ⚠️ ⚠️, Differentiable Rendering ⚠️, Monocular Prediction ⚠️
+- **depends_on** → 3DGS optimization ⚠️
+- **improves_upon** → prior end-to-end RL policies and modular-based policies using topological graphs or Bird’s Eye View (BEV) ⚠️ representations
 
 ## Source
 

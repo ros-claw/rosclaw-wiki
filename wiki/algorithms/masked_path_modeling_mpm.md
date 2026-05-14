@@ -48,8 +48,8 @@ These gains demonstrate that self-supervised path reconstruction provides a usef
 
 ## Relationships
 
-- **Used for**: [[Vision-and-Language Navigation]] (VLN) as the task domain.
-- **Depends on**: [[agent exploration]] ⚠️ for unsupervised data collection; self-collected path data.
+- **Used for**: Vision-and-Language Navigation (VLN) as the task domain.
+- **Depends on**: agent exploration ⚠️ for unsupervised data collection; self-collected path data.
 - **Related to**: Other self-supervised pretraining techniques for embodied agents, such as masked autoencoding.
 
 ## Source
@@ -59,4 +59,4 @@ This article is based on the arXiv paper *Masked Path Modeling for Vision-and-La
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Masked Path Modeling (MPM)` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
+- `Masked Path Modeling (MPM)` --based_on ⚠️--> `Vision-and-Language Navigation`

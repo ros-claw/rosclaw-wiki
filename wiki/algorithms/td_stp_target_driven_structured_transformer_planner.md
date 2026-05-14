@@ -26,8 +26,8 @@ TD-STP is a transformer-based planner for vision-language navigation (VLN) that 
 
 ## Relationships
 
-- **Uses**: [[Imaginary Scene Tokenization]] ⚠️, [[Structured Transformer Planner]] ⚠️
-- **Depends on**: [[Vision-Language Navigation]]
+- **Uses**: Imaginary Scene Tokenization ⚠️, Structured Transformer Planner ⚠️
+- **Depends on**: Vision-Language Navigation
 
 ## Results
 

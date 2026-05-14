@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Relative Change in Success (RCS)
 
-**Relative Change in Success (RCS)** is a metric used to evaluate generalization across environments within the field of [[Vision-and-Language Navigation]] (VLN). It quantifies the relative improvement or degradation in success rate when a model is transferred from a source environment (e.g., training distribution) to a target environment (e.g., unseen scenes), thereby measuring transfer capability and robustness.
+**Relative Change in Success (RCS)** is a metric used to evaluate generalization across environments within the field of Vision-and-Language Navigation (VLN). It quantifies the relative improvement or degradation in success rate when a model is transferred from a source environment (e.g., training distribution) to a target environment (e.g., unseen scenes), thereby measuring transfer capability and robustness.
 
 ## Definition
 
@@ -22,7 +22,7 @@ RCS is defined as the percentage change in the success rate between two experime
 
 ## Relationship
 
-This metric is part of the broader set of [[Evaluation Metrics for VLN]] ⚠️. Unlike absolute success rate (SR) or navigation error (NE), RCS focuses on *relative* change, making it more informative for cross‑setting comparisons. It is typically reported alongside standard metrics such as:
+This metric is part of the broader set of Evaluation Metrics for VLN ⚠️. Unlike absolute success rate (SR) or navigation error (NE), RCS focuses on *relative* change, making it more informative for cross‑setting comparisons. It is typically reported alongside standard metrics such as:
 
 - **Success Rate (SR)**
 - **Oracle Success Rate (OSR)**
@@ -48,4 +48,4 @@ This metric is particularly relevant in works that evaluate sim‑to‑real tran
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Relative Change in Success (RCS)` --[[related_to]] ⚠️--> `Vision-and-Language Navigation`
+- `Relative Change in Success (RCS)` --related_to ⚠️--> `Vision-and-Language Navigation`

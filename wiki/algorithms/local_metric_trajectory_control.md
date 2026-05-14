@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Local Metric Trajectory Control
 
-**Local Metric Trajectory Control** is an algorithm within the [[TANGO]] framework that computes continuous local trajectories for a robot based on monocular depth and traversability estimates. Its primary inputs are [[Monocular Depth and Traversability Estimation]] outputs, which it uses to generate smooth, collision-free paths in real-time.
+**Local Metric Trajectory Control** is an algorithm within the TANGO framework that computes continuous local trajectories for a robot based on monocular depth and traversability estimates. Its primary inputs are Monocular Depth and Traversability Estimation outputs, which it uses to generate smooth, collision-free paths in real-time.
 
 ## Overview
 
@@ -27,17 +27,17 @@ The algorithm operates as a closed-loop controller that reconciles a local metri
 
 ## Input & Output
 
-- **Input**: Monocular depth and traversability estimates (see [[Monocular Depth and Traversability Estimation]]).
+- **Input**: Monocular depth and traversability estimates (see Monocular Depth and Traversability Estimation).
 - **Output**: A set of control commands (e.g., linear/angular velocities) or pose sequences that the robot can execute.
 
-## Role in [[TANGO]]
+## Role in TANGO
 
-Local Metric Trajectory Control is a core component of TANGO’s control pipeline. It bridges perception and action by translating learned terrain understanding into executable motion. It depends on accurate depth estimation and traversability scoring, and its output is sent to low-level motor controllers or a [[ROS2 Navigation Stack]] ⚠️ node.
+Local Metric Trajectory Control is a core component of TANGO’s control pipeline. It bridges perception and action by translating learned terrain understanding into executable motion. It depends on accurate depth estimation and traversability scoring, and its output is sent to low-level motor controllers or a ROS2 Navigation Stack ⚠️ node.
 
 ## Relationships
 
-- **part_of** [[TANGO]]
-- **uses** [[Monocular Depth and Traversability Estimation]]
+- **part_of** TANGO
+- **uses** Monocular Depth and Traversability Estimation
 
 ## Implementation Notes
 
@@ -46,4 +46,4 @@ The algorithm is designed for real-time execution on edge hardware (e.g., NVIDIA
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Local Metric Trajectory Control` --[[extends]] ⚠️--> `TANGO`
+- `Local Metric Trajectory Control` --extends ⚠️--> `TANGO`

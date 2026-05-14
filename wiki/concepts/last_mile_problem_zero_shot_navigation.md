@@ -17,7 +17,7 @@ source_type: arxiv_paper
 **Also known as:** Last-Mile Navigation, Final Viewpoint Determination  
 
 **Type:** [[concept]] ⚠️  
-**Related domain:** [[Embodied AI]], [[Zero-Shot Navigation]], [[Visual Navigation]]  
+**Related domain:** Embodied AI, Zero-Shot Navigation, Visual Navigation  
 
 ---
 
@@ -31,7 +31,7 @@ This problem is particularly acute in open-vocabulary or language-guided navigat
 
 #### Identified In
 
-- [[MSGNav (Multi-Scale Geometric Navigation)]] ⚠️ ⚠️ — the [[MSGNav paper]] ⚠️ explicitly identifies and resolves the last mile problem with its **Visibility-based Viewpoint Decision module**.
+- MSGNav (Multi-Scale Geometric Navigation) ⚠️ ⚠️ — the MSGNav paper ⚠️ explicitly identifies and resolves the last mile problem with its **Visibility-based Viewpoint Decision module**.
 
 ---
 
@@ -46,18 +46,18 @@ This problem is particularly acute in open-vocabulary or language-guided navigat
 
 #### Related Concepts
 
-- [[Zero-Shot Navigation]] — the broader problem setting in which the last mile problem arises.
-- [[Visibility-based Viewpoint Decision]] — a module that explicitly resolves the last mile by scoring candidate poses based on visibility and semantic alignment.
-- [[Goal Conditioned Reinforcement Learning]] ⚠️ — often used to train navigation policies, but zero-shot variants must handle last-mile reasoning without task-specific reward shaping.
-- [[Sim-to-Real Transfer]] — last mile failure modes often emerge when sim-trained policies lack real-world occlusion reasoning.
+- Zero-Shot Navigation — the broader problem setting in which the last mile problem arises.
+- Visibility-based Viewpoint Decision — a module that explicitly resolves the last mile by scoring candidate poses based on visibility and semantic alignment.
+- Goal Conditioned Reinforcement Learning ⚠️ — often used to train navigation policies, but zero-shot variants must handle last-mile reasoning without task-specific reward shaping.
+- Sim-to-Real Transfer — last mile failure modes often emerge when sim-trained policies lack real-world occlusion reasoning.
 
 ---
 
 #### Relationships
 
-- [[MSGNav (Multi-Scale Geometric Navigation)]] ⚠️ ⚠️ `implements` a solution to this problem via its [[Visibility-based Viewpoint Decision]] module.
-- This problem `depends_on` [[Partial Observability]] ⚠️ and [[Semantic Goal Specification]] ⚠️.
-- Solving this problem `enables` [[Deployable Zero-Shot Navigation]] ⚠️ in cluttered environments.
+- MSGNav (Multi-Scale Geometric Navigation) ⚠️ ⚠️ `implements` a solution to this problem via its Visibility-based Viewpoint Decision module.
+- This problem `depends_on` Partial Observability ⚠️ and Semantic Goal Specification ⚠️.
+- Solving this problem `enables` Deployable Zero-Shot Navigation ⚠️ in cluttered environments.
 
 ---
 
@@ -68,4 +68,4 @@ This problem is particularly acute in open-vocabulary or language-guided navigat
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Last Mile Problem (Zero-Shot Navigation)` --[[related_to]] ⚠️--> `Embodied AI`
+- `Last Mile Problem (Zero-Shot Navigation)` --related_to ⚠️--> `Embodied AI`

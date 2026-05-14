@@ -14,7 +14,7 @@ source_type: blog_post
 
 ## Error Analysis in EmbodiedBench
 
-**Error Analysis in EmbodiedBench** is a conceptual framework that categorizes and diagnoses the failure modes of embodied AI agents evaluated on the [[EmbodiedBench]] benchmark. By systematically classifying errors, researchers can identify bottlenecks in current vision-language-action pipelines and guide improvements. The analysis is based on failure episodes from [[GPT-4o]] ⚠️ runs.
+**Error Analysis in EmbodiedBench** is a conceptual framework that categorizes and diagnoses the failure modes of embodied AI agents evaluated on the EmbodiedBench benchmark. By systematically classifying errors, researchers can identify bottlenecks in current vision-language-action pipelines and guide improvements. The analysis is based on failure episodes from GPT-4o ⚠️ runs.
 
 ### Error Types
 
@@ -28,7 +28,7 @@ These error types are interdependent: a perception error may propagate into reas
 
 ### Relationship with EmbodiedBench
 
-This error analysis is a sub-concept of [[EmbodiedBench]], used to interpret benchmark results and prioritize research directions. It depends on the benchmark’s design, which exposes failures across diverse tasks and environments.
+This error analysis is a sub-concept of EmbodiedBench, used to interpret benchmark results and prioritize research directions. It depends on the benchmark’s design, which exposes failures across diverse tasks and environments.
 
 ### Sources
 
@@ -37,4 +37,4 @@ This error analysis is a sub-concept of [[EmbodiedBench]], used to interpret ben
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Error Analysis in EmbodiedBench` --[[applies_to]] ⚠️--> `EmbodiedBench`
+- `Error Analysis in EmbodiedBench` --applies_to ⚠️--> `EmbodiedBench`

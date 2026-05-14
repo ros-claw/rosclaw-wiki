@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Coarse-to-Fine Feature Extraction
 
-**Coarse-to-Fine Feature Extraction** is a multi-scale feature extraction algorithm that processes a [[Volumetric Environment Representation]] (VER) by progressively refining details from coarse to fine granularity. It enables hierarchical scene understanding, allowing an embodied agent to first capture global spatial structure and then focus on local details relevant to navigation or manipulation tasks.
+**Coarse-to-Fine Feature Extraction** is a multi-scale feature extraction algorithm that processes a Volumetric Environment Representation (VER) by progressively refining details from coarse to fine granularity. It enables hierarchical scene understanding, allowing an embodied agent to first capture global spatial structure and then focus on local details relevant to navigation or manipulation tasks.
 
 ## Description
 
@@ -27,8 +27,8 @@ A multi-scale feature extraction approach that processes volumetric representati
 
 ## Relationships
 
-- **Part of**: [[Volumetric Environment Representation]], [[Multi-Task Learning for VLN]]
-- **Depends on**: [[Volumetric Grid Representation]] ⚠️, hierarchical feature extraction techniques (e.g., U-Net, Feature Pyramid Networks)
+- **Part of**: Volumetric Environment Representation, Multi-Task Learning for VLN
+- **Depends on**: Volumetric Grid Representation ⚠️, hierarchical feature extraction techniques (e.g., U-Net, Feature Pyramid Networks)
 - **Used by**: Vision-language navigation architectures that require both global and local context from 3D representations
 
 ## Integration

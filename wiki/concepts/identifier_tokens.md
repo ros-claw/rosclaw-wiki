@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Identifier Tokens
 
-**Identifier Tokens** are a key design element of the [[NavFoM architecture]] ⚠️ ⚠️ that encode contextual information about the embodiment and temporal state of a visual navigation task. They act as learnable embeddings that condition the model on the specific camera configuration and navigation horizon being used, enabling the same network to generalize across diverse robotic platforms and task settings.
+**Identifier Tokens** are a key design element of the NavFoM architecture ⚠️ ⚠️ that encode contextual information about the embodiment and temporal state of a visual navigation task. They act as learnable embeddings that condition the model on the specific camera configuration and navigation horizon being used, enabling the same network to generalize across diverse robotic platforms and task settings.
 
 ## Function
 
@@ -27,7 +27,7 @@ Identifier tokens allow NavFoM to handle varying camera configurations and navig
 
 ## Relationships
 
-- `part_of` [[NavFoM architecture]] ⚠️ ⚠️ – Identifier tokens are a core component of the NavFoM framework, used alongside other modules (e.g., the token mixer, the action head).
+- `part_of` NavFoM architecture ⚠️ ⚠️ – Identifier tokens are a core component of the NavFoM framework, used alongside other modules (e.g., the token mixer, the action head).
 - `enables` unified processing of diverse camera setups and horizons – Without these tokens, NavFoM would require separate models or manual feature normalization for each robotic platform; with them, a single set of weights can operate on data from multiple embodiments in a zero‑shot manner.
 
 ## Source

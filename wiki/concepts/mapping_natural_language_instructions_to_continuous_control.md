@@ -28,20 +28,20 @@ A framework for translating natural language navigation commands, combined with 
 
 - Enables a quadcopter to follow natural language navigation commands (e.g., "fly forward and turn left at the red door")
 - Integrates language understanding directly with low-level control, bypassing high-level waypoint planning
-- Supports sim-to-real transfer through the [[Joint Simulation and Real-World Learning Framework]]
+- Supports sim-to-real transfer through the Joint Simulation and Real-World Learning Framework
 
 ## Relationships
 
-- **Part of** [[Joint Simulation and Real-World Learning Framework]] – this mapping is a key component that bridges language understanding with continuous control in both simulated and real environments.
-- **Enabled by** [[SuReAL]] – the [[SuReAL]] algorithm provides the reinforcement learning structure that supports joint training across simulation and reality, making the language-to-control mapping feasible.
+- **Part of** Joint Simulation and Real-World Learning Framework – this mapping is a key component that bridges language understanding with continuous control in both simulated and real environments.
+- **Enabled by** SuReAL – the SuReAL algorithm provides the reinforcement learning structure that supports joint training across simulation and reality, making the language-to-control mapping feasible.
 
 ## Source
 
-Derived from paper: [[1910.09664]] ⚠️ *"Mapping Natural Language Instructions to Continuous Control"* (arxiv source: `papers/1910.09664.pdf`).
+Derived from paper: 1910.09664 ⚠️ *"Mapping Natural Language Instructions to Continuous Control"* (arxiv source: `papers/1910.09664.pdf`).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Mapping Natural Language Instructions to Continuous Control` --[[related_to]] ⚠️ ⚠️--> `Joint Simulation and Real-World Learning Framework`
+- `Mapping Natural Language Instructions to Continuous Control` --related_to ⚠️ ⚠️--> `Joint Simulation and Real-World Learning Framework`
 **Pending review:**
-- `Mapping Natural Language Instructions to Continuous Control` --[[related_to]] ⚠️ ⚠️--> `SuReAL` _(wikilink)_
+- `Mapping Natural Language Instructions to Continuous Control` --related_to ⚠️ ⚠️--> `SuReAL` _(wikilink)_

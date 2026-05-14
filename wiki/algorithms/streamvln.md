@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**StreamVLN** is a streaming Vision-and-Language Navigation (VLN) framework that employs a hybrid slow‑fast context modeling strategy. It uses a fast-streaming dialogue context (sliding-window) for responsive action generation and a slow-updating memory context with [[3D-aware token pruning]] to compress historical visual states. This design enables coherent, low‑latency interaction in real‑world deployments by efficiently managing long video streams and dialogue contexts with bounded context size and inference cost.
+**StreamVLN** is a streaming Vision-and-Language Navigation (VLN) framework that employs a hybrid slow‑fast context modeling strategy. It uses a fast-streaming dialogue context (sliding-window) for responsive action generation and a slow-updating memory context with 3D-aware token pruning to compress historical visual states. This design enables coherent, low‑latency interaction in real‑world deployments by efficiently managing long video streams and dialogue contexts with bounded context size and inference cost.
 
 ## Context Modeling Strategy
 
@@ -47,7 +47,7 @@ To keep inference costs bounded, StreamVLN reuses key‑value (KV) caches across
 - Generate actions with low latency grounded in language instructions.
 - Coherent multi‑turn dialogue through efficient KV cache reuse.
 - Support long video streams with bounded context size and inference cost.
-- Achieve state-of-the-art performance on [[VLN-CE benchmarks]] ⚠️ ⚠️ with stable low latency.
+- Achieve state-of-the-art performance on VLN-CE benchmarks ⚠️ ⚠️ with stable low latency.
 
 ## Evaluation
 
@@ -55,15 +55,15 @@ StreamVLN has been evaluated on the **VLN-CE (Vision-and-Language Navigation in 
 
 ## Relationships
 
-- **Uses**: [[Video-LLMs]], [[slow-fast context modeling]] ⚠️, [[3D-aware token pruning]], [[KV cache reuse]]
-- **Depends on**: [[language instructions]] ⚠️, [[visual streams]] ⚠️
-- **Evaluated on**: [[VLN-CE benchmarks]] ⚠️ ⚠️
-- **Implements**: [[streaming vision-and-language navigation]]
+- **Uses**: Video-LLMs, slow-fast context modeling ⚠️, 3D-aware token pruning, KV cache reuse
+- **Depends on**: language instructions ⚠️, visual streams ⚠️
+- **Evaluated on**: VLN-CE benchmarks ⚠️ ⚠️
+- **Implements**: streaming vision-and-language navigation
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `StreamVLN` --[[implements]] ⚠️--> `Video-LLMs`
-- `StreamVLN` --[[extends]] ⚠️ ⚠️--> `3D-aware token pruning`
-- `StreamVLN` --[[extends]] ⚠️ ⚠️--> `KV cache reuse`
-- `StreamVLN` --[[based_on]] ⚠️--> `streaming vision-and-language navigation`
+- `StreamVLN` --implements ⚠️--> `Video-LLMs`
+- `StreamVLN` --extends ⚠️ ⚠️--> `3D-aware token pruning`
+- `StreamVLN` --extends ⚠️ ⚠️--> `KV cache reuse`
+- `StreamVLN` --based_on ⚠️--> `streaming vision-and-language navigation`

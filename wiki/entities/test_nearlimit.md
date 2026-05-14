@@ -4,7 +4,7 @@ title: Test-NearLimit
 type: entity
 tags: [test, safety]
 confidence: 0.80
-sources: ["[[Test-Safety]] ⚠️"]
+sources: ["Test-Safety ⚠️"]
 ---
 
 # Test-NearLimit

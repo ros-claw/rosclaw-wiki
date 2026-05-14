@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Dual-Relation Reasoning
 
-**Dual-relation reasoning** is a conceptual framework used in [[Nav-R^2]] that explicitly models two critical types of relationships to improve navigation and decision-making in embodied agents. It separates reasoning into **target–environment modeling** and **environment–action planning**, allowing the agent to understand how goals relate to the environment and how the environment informs action sequences.
+**Dual-relation reasoning** is a conceptual framework used in Nav-R^2 that explicitly models two critical types of relationships to improve navigation and decision-making in embodied agents. It separates reasoning into **target–environment modeling** and **environment–action planning**, allowing the agent to understand how goals relate to the environment and how the environment informs action sequences.
 
 ## Capabilities
 
@@ -23,7 +23,7 @@ source_type: arxiv_paper
 
 ## Relationship
 
-- **part_of**: [[Nav-R^2]] — Dual-relation reasoning is a core component of the Nav-R^2 architecture.
+- **part_of**: Nav-R^2 — Dual-relation reasoning is a core component of the Nav-R^2 architecture.
 
 ## Source
 
@@ -32,4 +32,4 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Dual-relation reasoning` --[[related_to]] ⚠️--> `Nav-R^2` _(wikilink)_
+- `Dual-relation reasoning` --related_to ⚠️--> `Nav-R^2` _(wikilink)_

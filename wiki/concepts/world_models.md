@@ -27,15 +27,15 @@ In visual navigation, world models bridge perception and action by simulating th
 
 ## Relationships
 
-- **Uses**: [[Visual Foresight]] ⚠️ – World models often rely on visual foresight techniques to generate plausible future frames.
-- **Depends on**: [[Memory-Augmented Planning]] – To maintain coherence over long sequences, world models require memory mechanisms that store and retrieve relevant past experiences.
+- **Uses**: Visual Foresight ⚠️ – World models often rely on visual foresight techniques to generate plausible future frames.
+- **Depends on**: Memory-Augmented Planning – To maintain coherence over long sequences, world models require memory mechanisms that store and retrieve relevant past experiences.
 
 ## Further Reading
 
-- Integration with [[Embodied AI]] frameworks
-- Connection to [[Sim-to-Real Transfer]] when policies are trained entirely inside learned world models
+- Integration with Embodied AI frameworks
+- Connection to Sim-to-Real Transfer when policies are trained entirely inside learned world models
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `World Models` --[[related_to]] ⚠️--> `Embodied AI`
+- `World Models` --related_to ⚠️--> `Embodied AI`

@@ -14,11 +14,11 @@ source_type: blog_post
 
 # EB-ALFRED
 
-**EB-ALFRED** is a high-level planning component within the [[EmbodiedBench]] suite. It is designed for high-level task decomposition and planning, operating at an abstract action level (e.g., "put a book on the desk") rather than low-level motor commands.
+**EB-ALFRED** is a high-level planning component within the EmbodiedBench suite. It is designed for high-level task decomposition and planning, operating at an abstract action level (e.g., "put a book on the desk") rather than low-level motor commands.
 
 ## Overview
 
-EB-ALFRED leverages the [[ALFRED environment]] ⚠️ ⚠️ to generate executable plans from natural language instructions. It focuses on breaking down complex, long-horizon tasks into sequences of subgoals, enabling downstream agents to execute them in a simulated or real-world setting.
+EB-ALFRED leverages the ALFRED environment ⚠️ ⚠️ to generate executable plans from natural language instructions. It focuses on breaking down complex, long-horizon tasks into sequences of subgoals, enabling downstream agents to execute them in a simulated or real-world setting.
 
 ## Capabilities
 
@@ -26,8 +26,8 @@ EB-ALFRED leverages the [[ALFRED environment]] ⚠️ ⚠️ to generate executa
 
 ## Relationships
 
-- **part_of**: [[EmbodiedBench]] — EB-ALFRED is one of the benchmark tasks within the EmbodiedBench framework.
-- **uses**: [[ALFRED environment]] ⚠️ ⚠️ — The planning component relies on the ALFRED simulation environment to define valid actions, object interactions, and scene configurations.
+- **part_of**: EmbodiedBench — EB-ALFRED is one of the benchmark tasks within the EmbodiedBench framework.
+- **uses**: ALFRED environment ⚠️ ⚠️ — The planning component relies on the ALFRED simulation environment to define valid actions, object interactions, and scene configurations.
 
 ## Usage Notes
 
@@ -36,4 +36,4 @@ While EB-ALFRED provides the planning layer, it does not include low-level contr
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EB-ALFRED` --[[depends_on]] ⚠️--> `EmbodiedBench`
+- `EB-ALFRED` --depends_on ⚠️--> `EmbodiedBench`

@@ -22,16 +22,16 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **used by**: [[Semantic Similarity Network (SSNet)]] — This network leverages AI2-THOR for training and evaluating its approach to object navigation through semantic similarity learning.
+- **used by**: Semantic Similarity Network (SSNet) — This network leverages AI2-THOR for training and evaluating its approach to object navigation through semantic similarity learning.
 
 ## Related Pages
 
-- [[Embodied AI]] — AI2-THOR is a common platform for embodied AI research.
-- [[Object Navigation]] ⚠️ — The primary task benchmarked within AI2-THOR.
-- [[Simulation Environments]] ⚠️ — Broader category of platforms like AI2-THOR.
+- Embodied AI — AI2-THOR is a common platform for embodied AI research.
+- Object Navigation ⚠️ — The primary task benchmarked within AI2-THOR.
+- Simulation Environments ⚠️ — Broader category of platforms like AI2-THOR.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `AI2-THOR` --[[uses]] ⚠️--> `Semantic Similarity Network (SSNet)`
-- `AI2-THOR` --[[related_to]] ⚠️--> `Embodied AI`
+- `AI2-THOR` --uses ⚠️--> `Semantic Similarity Network (SSNet)`
+- `AI2-THOR` --related_to ⚠️--> `Embodied AI`

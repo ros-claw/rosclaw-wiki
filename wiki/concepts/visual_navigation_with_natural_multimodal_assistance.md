@@ -33,8 +33,8 @@ The core idea is that the agent, when uncertain or lacking sufficient informatio
 
 ### Relationships
 
-- **Used by**: [[HANNA]]  
-- **Depends on**: [[natural language understanding]] ⚠️, [[visual grounding]]
+- **Used by**: HANNA  
+- **Depends on**: natural language understanding ⚠️, visual grounding
 
 ### Description
 
@@ -47,4 +47,4 @@ A paradigm where a mobile agent navigates toward objects by requesting and inter
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual navigation with natural multimodal assistance` --[[applies_to]] ⚠️--> `HANNA`
+- `Visual navigation with natural multimodal assistance` --applies_to ⚠️--> `HANNA`

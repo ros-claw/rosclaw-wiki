@@ -17,7 +17,7 @@ source_type: arxiv_paper
 **Type:** concept  
 **Tags:** #neural-network-architecture, #multi-expert, #gating-mechanism, #efficient-inference
 
-**Related Pages:** [[State-Adaptive Mixture of Experts (SAME)]], [[Gating Network]] ⚠️ ⚠️, [[Expert Network]] ⚠️, [[Neural Network Architecture]] ⚠️
+**Related Pages:** State-Adaptive Mixture of Experts (SAME), Gating Network ⚠️ ⚠️, Expert Network ⚠️, Neural Network Architecture ⚠️
 
 ---
 
@@ -44,14 +44,14 @@ The routing can be learned end-to-end, often with constraints (e.g., load balanc
 
 ### State-Adaptive Mixture of Experts (SAME)
 
-In the context of navigation, [[State-Adaptive Mixture of Experts (SAME)]] extends MoE by conditioning the routing on both the robot’s **observation** (e.g., sensor data) and the **language instruction**. This allows the model to dynamically select expert policies tailored to the current scene and goal, improving generalization across diverse environments and instruction complexities.
+In the context of navigation, State-Adaptive Mixture of Experts (SAME) extends MoE by conditioning the routing on both the robot’s **observation** (e.g., sensor data) and the **language instruction**. This allows the model to dynamically select expert policies tailored to the current scene and goal, improving generalization across diverse environments and instruction complexities.
 
 SAME uses a state-adaptive router that replaces the standard learned gating with a function that processes the combined state (vision + language) before selecting experts. This variant is specifically designed for embodied navigation tasks and demonstrates superior performance on benchmarks like Vision-and-Language Navigation (VLN).
 
 ## Relationships
 
-- [[State-Adaptive Mixture of Experts (SAME)]] **implements** Mixture of Experts.
-- MoE **depends on** a [[Gating Network]] ⚠️ ⚠️ for expert selection.
+- State-Adaptive Mixture of Experts (SAME) **implements** Mixture of Experts.
+- MoE **depends on** a Gating Network ⚠️ ⚠️ for expert selection.
 - MoE **improves** over monolithic models by enabling modular specialization.
 
 ## Benefits in Embodied AI
@@ -60,9 +60,9 @@ SAME uses a state-adaptive router that replaces the standard learned gating with
 - **Scalability**: Adding new skills corresponds to adding a new expert without retraining the entire network.
 - **Interpretability**: The gating weights can reveal which behavioral mode the robot is relying on at a given moment.
 
-For more detail on the SAME variant, see the dedicated [[State-Adaptive Mixture of Experts (SAME)]] page.
+For more detail on the SAME variant, see the dedicated State-Adaptive Mixture of Experts (SAME) page.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Mixture of Experts` --[[related_to]] ⚠️--> `State-Adaptive Mixture of Experts (SAME)` _(wikilink)_
+- `Mixture of Experts` --related_to ⚠️--> `State-Adaptive Mixture of Experts (SAME)` _(wikilink)_

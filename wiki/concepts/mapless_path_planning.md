@@ -23,18 +23,18 @@ source_type: arxiv_paper
 - Operates in zero-shot settings where no prior map of the environment is available.
 
 ## Evaluation
-This concept is evaluated by [[Target-Bench]], a benchmarking framework designed to test semantic goal‑conditioned navigation without maps.
+This concept is evaluated by Target-Bench, a benchmarking framework designed to test semantic goal‑conditioned navigation without maps.
 
 ## Related Concepts
-- [[Semantic Navigation]] ⚠️ — navigation governed by language or categorical goals.
-- [[Video World Model]] ⚠️ — the predictive model that substitutes for a classical metric map.
-- [[Path Planning]] ⚠️ — the broader field of generating motion trajectories.
-- [[Implicit Map Representation]] ⚠️ — alternative to explicit maps, often used in mapless systems.
+- Semantic Navigation ⚠️ — navigation governed by language or categorical goals.
+- Video World Model ⚠️ — the predictive model that substitutes for a classical metric map.
+- Path Planning ⚠️ — the broader field of generating motion trajectories.
+- Implicit Map Representation ⚠️ — alternative to explicit maps, often used in mapless systems.
 
 ## References
-- arxiv paper 2511.17792 — describes the method and its evaluation on [[Target-Bench]].
+- arxiv paper 2511.17792 — describes the method and its evaluation on Target-Bench.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Mapless Path Planning` --[[applies_to]] ⚠️--> `Target-Bench`
+- `Mapless Path Planning` --applies_to ⚠️--> `Target-Bench`

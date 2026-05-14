@@ -24,16 +24,16 @@ The task of interacting naturally with users is particularly suitable for domest
 
 ## Relationship
 
-- `uses` → [[Vision-and-Language Navigation (VLN)]] ⚠️: Domestic service robots leverage VLN to interpret natural-language instructions (e.g., “Bring me the cup from the kitchen”) and execute navigation actions based on visual cues.
+- `uses` → Vision-and-Language Navigation (VLN) ⚠️: Domestic service robots leverage VLN to interpret natural-language instructions (e.g., “Bring me the cup from the kitchen”) and execute navigation actions based on visual cues.
 
 ## Related Pages
 
-- [[Service Robot]] ⚠️
-- [[Human-Robot Interaction]] ⚠️
-- [[Embodied AI]]
-- [[Task Planning]] ⚠️
+- Service Robot ⚠️
+- Human-Robot Interaction ⚠️
+- Embodied AI
+- Task Planning ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Domestic Service Robot` --[[related_to]] ⚠️--> `Embodied AI`
+- `Domestic Service Robot` --related_to ⚠️--> `Embodied AI`

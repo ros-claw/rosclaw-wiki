@@ -38,14 +38,14 @@ UrbanNav is a scalable framework that trains embodied agents to navigate complex
 
 ## Dependencies & Relationships
 
-- **Uses**: [[Language Instructions]] ⚠️, [[Web-Scale City Walking Videos]] ⚠️, [[Annotation Pipeline]] ⚠️
+- **Uses**: Language Instructions ⚠️, Web-Scale City Walking Videos ⚠️, Annotation Pipeline ⚠️
 - **Depends on**: Web-scale city walking videos and the scalable annotation pipeline
-- **Implements**: [[Language-Guided Navigation Policy]] ⚠️ ⚠️ ⚠️
-- **Contradicts**: Existing navigation methods that restrict training to [[Simulated Environments]] ⚠️ or off-street datasets
+- **Implements**: Language-Guided Navigation Policy ⚠️ ⚠️ ⚠️
+- **Contradicts**: Existing navigation methods that restrict training to Simulated Environments ⚠️ or off-street datasets
 
 ## Methodology
 
-UrbanNav first collects a large corpus of city walking videos from the web. A scalable annotation pipeline extracts trajectory and landmark information from each video and pairs them with synthetic natural-language instructions grounded in real-world landmarks. The resulting 3 million instruction–trajectory–landmark triplets (spanning over 1,500 hours) are used to train a [[Language-Guided Navigation Policy]] ⚠️ ⚠️ ⚠️ via imitation or reinforcement learning. The framework learns robust navigation policies that understand directional phrases, landmark references, and environmental context, remaining effective even when instructions contain noise or incomplete references.
+UrbanNav first collects a large corpus of city walking videos from the web. A scalable annotation pipeline extracts trajectory and landmark information from each video and pairs them with synthetic natural-language instructions grounded in real-world landmarks. The resulting 3 million instruction–trajectory–landmark triplets (spanning over 1,500 hours) are used to train a Language-Guided Navigation Policy ⚠️ ⚠️ ⚠️ via imitation or reinforcement learning. The framework learns robust navigation policies that understand directional phrases, landmark references, and environmental context, remaining effective even when instructions contain noise or incomplete references.
 
 ## Results
 
@@ -57,17 +57,17 @@ UrbanNav outperforms existing methods in three key areas:
 
 ## See Also
 
-- [[Embodied AI]]
-- [[Visual Navigation]]
-- [[Sim-to-Real Transfer]] (for generalization aspects)
-- [[Spatial Reasoning]] ⚠️
-- [[Language-Guided Navigation]]
-- [[Language-Guided Navigation Policy]] ⚠️ ⚠️ ⚠️
-- [[Trajectory Alignment with Language Instructions]] ⚠️
+- Embodied AI
+- Visual Navigation
+- Sim-to-Real Transfer (for generalization aspects)
+- Spatial Reasoning ⚠️
+- Language-Guided Navigation
+- Language-Guided Navigation Policy ⚠️ ⚠️ ⚠️
+- Trajectory Alignment with Language Instructions ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `UrbanNav` --[[based_on]] ⚠️ ⚠️--> `Embodied AI`
-- `UrbanNav` --[[based_on]] ⚠️ ⚠️--> `Language-Guided Navigation`
-- `UrbanNav` --[[implements]] ⚠️--> `Language-Guided Navigation Policy`
+- `UrbanNav` --based_on ⚠️ ⚠️--> `Embodied AI`
+- `UrbanNav` --based_on ⚠️ ⚠️--> `Language-Guided Navigation`
+- `UrbanNav` --implements ⚠️--> `Language-Guided Navigation Policy`

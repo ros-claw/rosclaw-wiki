@@ -23,10 +23,10 @@ Object Goal Navigation (ObjectNav or ObjNav) is a common and fundamental embodie
 
 ## Evaluation
 
-Object Goal Navigation is typically evaluated using **[[SPL (Success weighted by Path Length)]] ⚠️**, which measures both success in reaching the goal and the efficiency of the path taken.
+Object Goal Navigation is typically evaluated using **SPL (Success weighted by Path Length) ⚠️**, which measures both success in reaching the goal and the efficiency of the path taken.
 
 ## Related Concepts
 
-- **[[VLFM (Value‑Driven Latent Flow Model)]] ⚠️** – an approach that frames Object Goal Navigation as a problem of learning a latent flow field, using reward‑driven navigation to improve performance and generalisation.
-- **[[Embodied AI]]** – Object Goal Navigation is a core task within this broader field.
-- **[[EfficientNav]]** – a system that addresses the Object Goal Navigation task, focusing on efficient exploration and goal‑directed navigation.
+- **VLFM (Value‑Driven Latent Flow Model) ⚠️** – an approach that frames Object Goal Navigation as a problem of learning a latent flow field, using reward‑driven navigation to improve performance and generalisation.
+- **Embodied AI** – Object Goal Navigation is a core task within this broader field.
+- **EfficientNav** – a system that addresses the Object Goal Navigation task, focusing on efficient exploration and goal‑directed navigation.

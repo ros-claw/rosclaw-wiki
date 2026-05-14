@@ -18,11 +18,11 @@ source_type: arxiv_paper
 
 ## Overview
 
-UAVs combine airframe, propulsion, avionics, and onboard computing to perform autonomous flight. They are increasingly integrated with advanced perception and planning systems, enabling complex missions such as [[Vision-Language Navigation]] (VLN) in outdoor environments.
+UAVs combine airframe, propulsion, avionics, and onboard computing to perform autonomous flight. They are increasingly integrated with advanced perception and planning systems, enabling complex missions such as Vision-Language Navigation (VLN) in outdoor environments.
 
 ## Capabilities (entity: capability)
 
-- **Language-guided flight**: UAVs can interpret natural language instructions to plan and execute flight paths, enabled by [[Vision-Language Models]] ⚠️ ⚠️ ⚠️ (VLMs).
+- **Language-guided flight**: UAVs can interpret natural language instructions to plan and execute flight paths, enabled by Vision-Language Models ⚠️ ⚠️ ⚠️ (VLMs).
 - **Long-horizon trajectory planning**: UAVs are capable of reasoning over extended time horizons to generate collision-free, goal-directed trajectories through complex 3D space.
 
 ## Navigation Challenges
@@ -33,14 +33,14 @@ UAVs operating in outdoor aerial environments face several unique obstacles:
 - **Data acquisition difficulties**: Collecting high-quality, labeled training data for aerial VLN is expensive and logistically demanding, due to the need for multiple viewpoints and diverse conditions.
 - **Long-horizon planning requirements**: Successful navigation often requires reasoning over long sequences of actions with delayed feedback, demanding robust planning algorithms.
 
-The **[[OpenVLN framework]] ⚠️ ⚠️** directly addresses these challenges by fine-tuning [[Vision-Language Models]] ⚠️ ⚠️ ⚠️ with rule-based policies and a dedicated long-horizon planner tailored for UAV flight.
+The **OpenVLN framework ⚠️ ⚠️** directly addresses these challenges by fine-tuning Vision-Language Models ⚠️ ⚠️ ⚠️ with rule-based policies and a dedicated long-horizon planner tailored for UAV flight.
 
 ## Relationships
 
-- **`uses`**: [[Vision-Language Models]] ⚠️ ⚠️ ⚠️ — VLMs provide the visual-language grounding that enables language-guided flight.
-- **`uses`**: [[OpenVLN framework]] ⚠️ ⚠️ — This framework delivers end-to-end VLN capabilities specifically adapted for UAVs.
-- **`depends_on`**: [[Rule-based policies]] — Used during fine-tuning to inject structured prior knowledge into the VLM.
-- **`depends_on`**: [[Long-horizon planner]] ⚠️ — Generates feasible, long-term trajectories respecting vehicle dynamics and environmental constraints.
+- **`uses`**: Vision-Language Models ⚠️ ⚠️ ⚠️ — VLMs provide the visual-language grounding that enables language-guided flight.
+- **`uses`**: OpenVLN framework ⚠️ ⚠️ — This framework delivers end-to-end VLN capabilities specifically adapted for UAVs.
+- **`depends_on`**: Rule-based policies — Used during fine-tuning to inject structured prior knowledge into the VLM.
+- **`depends_on`**: Long-horizon planner ⚠️ — Generates feasible, long-term trajectories respecting vehicle dynamics and environmental constraints.
 
 ## Applications
 

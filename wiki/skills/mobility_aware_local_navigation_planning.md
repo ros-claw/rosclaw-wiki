@@ -18,13 +18,13 @@ source_type: arxiv_paper
 
 ## Overview
 
-Traditional local planners treat the robot as a rigid body with simple kinematic constraints. In contrast, mobility-aware planning leverages real-time estimates of the robot’s mobility envelope (e.g., reachable footholds, torque limits, stability margins) to produce trajectories that are dynamically feasible. This approach is critical for [[Wheeled-Legged Robots]] ⚠️ such as the [[Unitree G1]] or [[ANYmal]], where hybrid locomotion modes require adaptive terrain responses.
+Traditional local planners treat the robot as a rigid body with simple kinematic constraints. In contrast, mobility-aware planning leverages real-time estimates of the robot’s mobility envelope (e.g., reachable footholds, torque limits, stability margins) to produce trajectories that are dynamically feasible. This approach is critical for Wheeled-Legged Robots ⚠️ such as the Unitree G1 or ANYmal, where hybrid locomotion modes require adaptive terrain responses.
 
 ## Capabilities
 
 - Plan smooth paths in cluttered environments  
 - Adapt to terrain and obstacles in real-time  
-- Integrate with a [[low-level locomotion controller]] ⚠️ ⚠️ to execute motion commands  
+- Integrate with a low-level locomotion controller ⚠️ ⚠️ to execute motion commands  
 
 ## Parameters
 
@@ -39,8 +39,8 @@ Generates feasible local trajectories that respect the robot’s locomotion cons
 
 ## Relationships
 
-- **part_of** → [[Autonomous Navigation for Wheeled-Legged Robots]]  
-- **uses** → [[Hierarchical Reinforcement Learning]] (to learn mapping from state/mobility to optimal local paths)  
+- **part_of** → Autonomous Navigation for Wheeled-Legged Robots  
+- **uses** → Hierarchical Reinforcement Learning (to learn mapping from state/mobility to optimal local paths)  
 
 ## Implementation Notes
 
@@ -50,19 +50,19 @@ In practice, the planner often runs as a ROS node subscribing to:
 - `/odometry` and `/joint_states`  
 - `/elevation_map` or `/terrain_costmap`  
 
-It publishes a locally smoothed path (e.g., on `/local_plan`) that the [[low-level locomotion controller]] ⚠️ ⚠️ tracks via inverse kinematics or model-predictive control ([[MPC]] ⚠️). The mobility model can be pre-computed from the robot’s digital twin or learned online through [[Reinforcement Learning]].
+It publishes a locally smoothed path (e.g., on `/local_plan`) that the low-level locomotion controller ⚠️ ⚠️ tracks via inverse kinematics or model-predictive control (MPC ⚠️). The mobility model can be pre-computed from the robot’s digital twin or learned online through Reinforcement Learning.
 
 ## Related Skills
 
-- [[Global Path Planning]] ⚠️ (provides the high‑level route to be refined)  
-- [[Terrain Traversability Estimation]] ⚠️ (feeds mobility constraints)  
-- [[Locomotion Control]] ⚠️ (executes the planned trajectories)
+- Global Path Planning ⚠️ (provides the high‑level route to be refined)  
+- Terrain Traversability Estimation ⚠️ (feeds mobility constraints)  
+- Locomotion Control ⚠️ (executes the planned trajectories)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
 - `Mobility-Aware Local Navigation Planning` --[[operates_on]] ⚠️ ⚠️--> `Unitree G1`
 - `Mobility-Aware Local Navigation Planning` --[[operates_on]] ⚠️ ⚠️--> `ANYmal`
-- `Mobility-Aware Local Navigation Planning` --[[uses]] ⚠️--> `Hierarchical Reinforcement Learning`
+- `Mobility-Aware Local Navigation Planning` --uses ⚠️--> `Hierarchical Reinforcement Learning`
 **Pending review:**
-- `Mobility-Aware Local Navigation Planning` --[[related_to]] ⚠️--> `Autonomous Navigation for Wheeled-Legged Robots` _(wikilink)_
+- `Mobility-Aware Local Navigation Planning` --related_to ⚠️--> `Autonomous Navigation for Wheeled-Legged Robots` _(wikilink)_

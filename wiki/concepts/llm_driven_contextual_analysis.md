@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # LLM-driven Contextual Analysis
 
-**LLM-driven Contextual Analysis** is a reasoning approach that leverages [[Large Language Models]] (LLMs) to interpret environmental context and make informed navigation decisions at a fine-grained level. It is a core component of a [[Coarse-to-Fine Reasoning]] pipeline, bridging high-level spatial understanding with precise motion planning.
+**LLM-driven Contextual Analysis** is a reasoning approach that leverages Large Language Models (LLMs) to interpret environmental context and make informed navigation decisions at a fine-grained level. It is a core component of a Coarse-to-Fine Reasoning pipeline, bridging high-level spatial understanding with precise motion planning.
 
 ## Conceptual Overview
 
@@ -31,12 +31,12 @@ This analysis is *contextual* because it depends on the robot’s current situat
 
 | Relationship | Entity | Description |
 |--------------|--------|-------------|
-| part_of      | [[Coarse-to-Fine Reasoning]] | LLM-driven Contextual Analysis is the fine-grained stage that refines coarse path proposals. |
-| uses         | [[LLM]] ⚠️ ⚠️ | A pre-trained large language model (e.g., GPT, LLaMA) provides the reasoning engine. |
+| part_of      | Coarse-to-Fine Reasoning | LLM-driven Contextual Analysis is the fine-grained stage that refines coarse path proposals. |
+| uses         | LLM ⚠️ ⚠️ | A pre-trained large language model (e.g., GPT, LLaMA) provides the reasoning engine. |
 
 ## Example Usage
 
-In a typical [[Coarse-to-Fine Reasoning]] system:
+In a typical Coarse-to-Fine Reasoning system:
 1. A high-level planner generates a coarse trajectory (e.g., "go through the doorway").
 2. LLM-driven Contextual Analysis examines the immediate scene around the doorway (e.g., foot placement, clearance, dynamic obstacles) and suggests a fine-grained adjustment.
 3. The low-level controller executes the adjusted motion.
@@ -45,11 +45,11 @@ This decomposition reduces the computational burden of directly generating preci
 
 ---
 
-**Related pages:** [[Coarse-to-Fine Reasoning]], [[LLM]] ⚠️ ⚠️, [[Semantic Navigation]] ⚠️, [[Context-Aware Planning]] ⚠️, [[Embodied AI]]
+**Related pages:** Coarse-to-Fine Reasoning, LLM ⚠️ ⚠️, Semantic Navigation ⚠️, Context-Aware Planning ⚠️, Embodied AI
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `LLM-driven Contextual Analysis` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `LLM-driven Contextual Analysis` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `LLM-driven Contextual Analysis` --[[related_to]] ⚠️ ⚠️--> `Coarse-to-Fine Reasoning` _(wikilink)_
+- `LLM-driven Contextual Analysis` --related_to ⚠️ ⚠️--> `Coarse-to-Fine Reasoning` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # DROID (Distributed Robot Interaction Dataset)
 
-**DROID** is a large-scale, distributed robot interaction dataset comprising 76,000 demonstration trajectories (350 hours of interaction data) collected across 564 scenes and 84 tasks by 50 human data collectors over 12 months in [[North America]] ⚠️ ⚠️, [[Asia]] ⚠️ ⚠️, and [[Europe]] ⚠️ ⚠️. The dataset is designed to improve the performance and generalization of [[Robot Manipulation Policies]] ⚠️ ⚠️ ⚠️.
+**DROID** is a large-scale, distributed robot interaction dataset comprising 76,000 demonstration trajectories (350 hours of interaction data) collected across 564 scenes and 84 tasks by 50 human data collectors over 12 months in North America ⚠️ ⚠️, Asia ⚠️ ⚠️, and Europe ⚠️ ⚠️. The dataset is designed to improve the performance and generalization of Robot Manipulation Policies ⚠️ ⚠️ ⚠️.
 
 ## Overview
 
@@ -24,7 +24,7 @@ source_type: arxiv_paper
 - **Tasks covered**: 84
 - **Data collectors**: 50
 - **Collection duration**: 12 months
-- **Collection regions**: [[North America]] ⚠️ ⚠️, [[Asia]] ⚠️ ⚠️, [[Europe]] ⚠️ ⚠️
+- **Collection regions**: North America ⚠️ ⚠️, Asia ⚠️ ⚠️, Europe ⚠️ ⚠️
 
 ## Significance
 
@@ -32,16 +32,16 @@ DROID addresses the challenge of creating large, diverse, and high-quality robot
 
 ## Capabilities
 
-- Enables training [[Robot Manipulation Policies]] ⚠️ ⚠️ ⚠️ with higher performance
+- Enables training Robot Manipulation Policies ⚠️ ⚠️ ⚠️ with higher performance
 - Improves generalization ability across diverse scenes, tasks, and objects
 
 ## Dependencies
 
-- DROID depends on [[Robot Hardware Setup]] ⚠️ for consistent data collection across platforms.
-- DROID depends on [[Human Labor]] ⚠️ for collecting and curating demonstrations.
+- DROID depends on Robot Hardware Setup ⚠️ for consistent data collection across platforms.
+- DROID depends on Human Labor ⚠️ for collecting and curating demonstrations.
 
 ## Related Entities
 
-- **Used by**: [[Robot Manipulation Policies]] ⚠️ ⚠️ ⚠️
-- **Part of**: [[Embodied AI Datasets]] ⚠️
-- **Related**: [[Distributed Data Collection]] ⚠️, [[Demonstration Learning]] ⚠️, [[Generalization in Robotics]] ⚠️
+- **Used by**: Robot Manipulation Policies ⚠️ ⚠️ ⚠️
+- **Part of**: Embodied AI Datasets ⚠️
+- **Related**: Distributed Data Collection ⚠️, Demonstration Learning ⚠️, Generalization in Robotics ⚠️

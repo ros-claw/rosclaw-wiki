@@ -30,13 +30,13 @@ source_type: official_manual
 
 - Provides densely sampled 360° indoor RGB-D images
 - Real (not synthetic) visual data with high visual complexity
-- Supports navigation research tasks (e.g., [[Visual Navigation]], [[Embodied AI]])
+- Supports navigation research tasks (e.g., Visual Navigation, Embodied AI)
 
 ## Relationships
 
-- Used by **[[Matterport3D Simulator]]** ‒ *uses*.
+- Used by **Matterport3D Simulator** ‒ *uses*.
 - Part of the **Matterport3D Simulator** project ‒ *part_of*.
-- Often used in conjunction with [[ROS2 Navigation Stack]] ⚠️ for real-world sim-to-real transfer.
+- Often used in conjunction with ROS2 Navigation Stack ⚠️ for real-world sim-to-real transfer.
 
 ## Source
 
@@ -45,5 +45,5 @@ This page is derived from the official Matterport3D Simulator README (`data/raw/
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Matterport3D Dataset` --[[related_to]] ⚠️--> `Embodied AI`
-- `Matterport3D Dataset` --[[depends_on]] ⚠️--> `Matterport3D Simulator`
+- `Matterport3D Dataset` --related_to ⚠️--> `Embodied AI`
+- `Matterport3D Dataset` --depends_on ⚠️--> `Matterport3D Simulator`

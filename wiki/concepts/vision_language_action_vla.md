@@ -17,7 +17,7 @@ source_type: arxiv_paper
 
 # Vision-Language-Action (VLA)
 
-A **Vision-Language-Action (VLA)** model is a paradigm in [[Embodied AI]] that integrates visual perception, natural language understanding, and motor action generation into a single end-to-end neural architecture. By processing camera images and textual commands (e.g., "pick up the red cup"), a VLA directly outputs mid-level actions in language form (e.g., "move forward 0.5 meters", "grasp the handle") or high-level action commands for a robotic system, bypassing the need for traditional modular pipelines of object detection, state estimation, and planning. VLA models combine vision, language, and action for embodied tasks.
+A **Vision-Language-Action (VLA)** model is a paradigm in Embodied AI that integrates visual perception, natural language understanding, and motor action generation into a single end-to-end neural architecture. By processing camera images and textual commands (e.g., "pick up the red cup"), a VLA directly outputs mid-level actions in language form (e.g., "move forward 0.5 meters", "grasp the handle") or high-level action commands for a robotic system, bypassing the need for traditional modular pipelines of object detection, state estimation, and planning. VLA models combine vision, language, and action for embodied tasks.
 
 ## General
 
@@ -46,38 +46,38 @@ Vision-Language-Action (VLA) refers to models that integrate visual input, langu
 
 ## Subconcepts
 
-- [[spatial grounding]] ⚠️ – Mapping language references (e.g., "to the left of the box") into spatial coordinates.
-- [[scene reasoning]] ⚠️ – Understanding object relationships, affordances, and task context from visual scenes.
-- [[long-horizon navigation]] ⚠️ – Generating sequences of actions that span long distances or multiple tasks using language guidance.
+- spatial grounding ⚠️ – Mapping language references (e.g., "to the left of the box") into spatial coordinates.
+- scene reasoning ⚠️ – Understanding object relationships, affordances, and task context from visual scenes.
+- long-horizon navigation ⚠️ – Generating sequences of actions that span long distances or multiple tasks using language guidance.
 
 ## Related Concepts
 
-- [[Embodied AI]] – VLA is a core architectural approach within embodied intelligence.
-- [[Visual Language Navigation]] ⚠️ – VLA models can be directly applied to navigation tasks that combine vision and language instructions.
+- Embodied AI – VLA is a core architectural approach within embodied intelligence.
+- Visual Language Navigation ⚠️ – VLA models can be directly applied to navigation tasks that combine vision and language instructions.
 
 ## Usage
 
-VLA is a foundational concept used in the [[VLA-AN]] architecture, where it forms the core perception-to-action loop.
+VLA is a foundational concept used in the VLA-AN architecture, where it forms the core perception-to-action loop.
 
 ### Used By
 
-- [[MM-Nav]] – Multimodal navigation system that applies VLA models to integrate vision and language for path planning in dynamic environments.
-- [[NaVILA]] – A navigation system that leverages a VLA model to output mid-level, language-form actions for zero-shot visual navigation.
+- MM-Nav – Multimodal navigation system that applies VLA models to integrate vision and language for path planning in dynamic environments.
+- NaVILA – A navigation system that leverages a VLA model to output mid-level, language-form actions for zero-shot visual navigation.
 
 ---
 
 ### Sources
 
-- [[data/raw/papers/2412.04453.pdf]] ⚠️ — arxiv preprint 2412.04453.
-- [[data/raw/papers/2512.15258.pdf]] ⚠️ — arxiv preprint 2512.15258.
-- [[data/raw/papers/2511.17889.pdf]] ⚠️ — arxiv preprint 2511.17889.
-- [[data/raw/papers/2510.03142.pdf]] ⚠️ — arxiv preprint 2510.03142.
+- data/raw/papers/2412.04453.pdf ⚠️ — arxiv preprint 2412.04453.
+- data/raw/papers/2512.15258.pdf ⚠️ — arxiv preprint 2512.15258.
+- data/raw/papers/2511.17889.pdf ⚠️ — arxiv preprint 2511.17889.
+- data/raw/papers/2510.03142.pdf ⚠️ — arxiv preprint 2510.03142.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Vision-Language-Action (VLA)` --[[related_to]] ⚠️ ⚠️ ⚠️--> `VLA-AN` _(wikilink)_
-- `Vision-Language-Action (VLA)` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Embodied AI` _(wikilink)_
-- `Vision-Language-Action (VLA)` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Visual Language Navigation` _(wikilink)_
-- `Vision-Language-Action (VLA)` --[[used_by]] ⚠️ ⚠️--> `MM-Nav` _(wikilink)_
-- `Vision-Language-Action (VLA)` --[[used_by]] ⚠️ ⚠️--> `NaVILA` _(wikilink)_
+- `Vision-Language-Action (VLA)` --related_to ⚠️ ⚠️ ⚠️--> `VLA-AN` _(wikilink)_
+- `Vision-Language-Action (VLA)` --related_to ⚠️ ⚠️ ⚠️--> `Embodied AI` _(wikilink)_
+- `Vision-Language-Action (VLA)` --related_to ⚠️ ⚠️ ⚠️--> `Visual Language Navigation` _(wikilink)_
+- `Vision-Language-Action (VLA)` --used_by ⚠️ ⚠️--> `MM-Nav` _(wikilink)_
+- `Vision-Language-Action (VLA)` --used_by ⚠️ ⚠️--> `NaVILA` _(wikilink)_

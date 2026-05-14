@@ -28,8 +28,8 @@ The agent incrementally builds a topological map by clustering the waypoints it 
 
 ## Related Pages
 
-- **Used by**: [[ETPNav]] employs this online topological mapping method to plan long-horizon trajectories.
-- **Depends on**: [[Waypoint Prediction]] ⚠️, which provides the initial point estimates that are clustered into topological nodes.
+- **Used by**: ETPNav employs this online topological mapping method to plan long-horizon trajectories.
+- **Depends on**: Waypoint Prediction ⚠️, which provides the initial point estimates that are clustered into topological nodes.
 
 ## Source
 
@@ -38,4 +38,4 @@ The agent incrementally builds a topological map by clustering the waypoints it 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Topological Mapping (Online)` --[[related_to]] ⚠️--> `ETPNav` _(wikilink)_
+- `Topological Mapping (Online)` --related_to ⚠️--> `ETPNav` _(wikilink)_

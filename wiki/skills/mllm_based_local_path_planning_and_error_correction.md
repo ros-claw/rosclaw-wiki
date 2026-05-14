@@ -15,7 +15,7 @@ source_type: arxiv_paper
 ## MLLM-based Local Path Planning and Error Correction
 
 **Definition**:  
-MLLM-based Local Path Planning and Error Correction is a **skill** that uses a [[Multimodal Large Language Model (MLLM)]] to select navigable waypoints and correct errors during robot navigation. It operates over a [[Topological Graph with Visitation Records]], reasoning about spatial structure and past visits to choose robust low-level actions.
+MLLM-based Local Path Planning and Error Correction is a **skill** that uses a Multimodal Large Language Model (MLLM) to select navigable waypoints and correct errors during robot navigation. It operates over a Topological Graph with Visitation Records, reasoning about spatial structure and past visits to choose robust low-level actions.
 
 ### Parameters
 
@@ -41,11 +41,11 @@ MLLM-based Local Path Planning and Error Correction is a **skill** that uses a [
 ### Relationships
 
 - **depends_on**  
-  - [[Topological Graph with Visitation Records]]  
-  - [[Multimodal Large Language Model (MLLM)]]  
+  - Topological Graph with Visitation Records  
+  - Multimodal Large Language Model (MLLM)  
 
 - **part_of**  
-  - [[TopoGraph-and-VisitInfo-Aware Prompting]]
+  - TopoGraph-and-VisitInfo-Aware Prompting
 
 ### Sources
 
@@ -54,7 +54,7 @@ MLLM-based Local Path Planning and Error Correction is a **skill** that uses a [
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MLLM-based Local Path Planning and Error Correction` --[[uses]] ⚠️ ⚠️--> `Multimodal Large Language Model (MLLM)`
-- `MLLM-based Local Path Planning and Error Correction` --[[uses]] ⚠️ ⚠️--> `TopoGraph-and-VisitInfo-Aware Prompting`
+- `MLLM-based Local Path Planning and Error Correction` --uses ⚠️ ⚠️--> `Multimodal Large Language Model (MLLM)`
+- `MLLM-based Local Path Planning and Error Correction` --uses ⚠️ ⚠️--> `TopoGraph-and-VisitInfo-Aware Prompting`
 **Pending review:**
-- `MLLM-based Local Path Planning and Error Correction` --[[related_to]] ⚠️--> `Topological Graph with Visitation Records` _(wikilink)_
+- `MLLM-based Local Path Planning and Error Correction` --related_to ⚠️--> `Topological Graph with Visitation Records` _(wikilink)_

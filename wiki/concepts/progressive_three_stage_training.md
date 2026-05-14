@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 ## Progressive Three-Stage Training
 
-**Progressive Three-Stage Training** is a pedagogical framework for embodied AI systems that sequentially reinforces capabilities from foundational to advanced levels. Designed as part of the [[VLA-AN]] architecture, this training regimen decomposes complex skill acquisition into three incremental stages, ensuring robust learning and transfer.
+**Progressive Three-Stage Training** is a pedagogical framework for embodied AI systems that sequentially reinforces capabilities from foundational to advanced levels. Designed as part of the VLA-AN architecture, this training regimen decomposes complex skill acquisition into three incremental stages, ensuring robust learning and transfer.
 
 ### Training Stages
 
@@ -33,13 +33,13 @@ The progressive approach avoids the instability of end-to-end training on comple
 
 ### Relationships
 
-- **Part of** [[VLA-AN]] — This training scheme is a core component of the VLA-AN framework, which combines vision-language-action models with adaptive navigation.
-- **Used by** [[VLA-AN]] — The training regimen is applied within VLA-AN to teach embodied agents progressively.
-- **Depends on** [[Sim-to-Real Transfer Techniques]] ⚠️ — To ensure skills learned in simulation generalize to real-world deployment.
-- **Implements** [[Curriculum Learning]] ⚠️ principles — By ordering tasks from easy to hard, progressive training aligns with established curriculum learning theory.
+- **Part of** VLA-AN — This training scheme is a core component of the VLA-AN framework, which combines vision-language-action models with adaptive navigation.
+- **Used by** VLA-AN — The training regimen is applied within VLA-AN to teach embodied agents progressively.
+- **Depends on** Sim-to-Real Transfer Techniques ⚠️ — To ensure skills learned in simulation generalize to real-world deployment.
+- **Implements** Curriculum Learning ⚠️ principles — By ordering tasks from easy to hard, progressive training aligns with established curriculum learning theory.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker and are reinforced by the latest source._
 
-- `Progressive Three-Stage Training` ––[[part_of]] ⚠️––> `[[VLA-AN]]` _(confirmed)_
-- `Progressive Three-Stage Training` ––[[used_by]] ⚠️––> `[[VLA-AN]]` _(confirmed)_
+- `Progressive Three-Stage Training` ––part_of ⚠️––> `VLA-AN` _(confirmed)_
+- `Progressive Three-Stage Training` ––used_by ⚠️––> `VLA-AN` _(confirmed)_

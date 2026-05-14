@@ -22,17 +22,17 @@ LLMs provide a powerful interface between natural language and robotic control. 
 
 ## Capabilities
 
-- **Task planning via primitive skill tree:** The LLM decomposes a high-level goal into a sequence of atomic skills drawn from a [[Primitive Skill Tree]].
-- **Adaptive replanning via Advisor and Arborist modules:** When the initial plan fails or new information arrives, the LLM leverages the [[Advisor]] module to assess alternatives and the [[Arborist]] module to restructure the plan, enabling dynamic re-planning.
+- **Task planning via primitive skill tree:** The LLM decomposes a high-level goal into a sequence of atomic skills drawn from a Primitive Skill Tree.
+- **Adaptive replanning via Advisor and Arborist modules:** When the initial plan fails or new information arrives, the LLM leverages the Advisor module to assess alternatives and the Arborist module to restructure the plan, enabling dynamic re-planning.
 
 ## Relationships
 
-- **Used by:** [[AINav]] — the navigation framework that employs the LLM for both initial task planning and adaptive replanning.
-- **Used by:** [[Primitive Skill Tree]] — the LLM selects and orders skills from this tree.
-- **Used by:** [[Adaptive Replanning]] — the LLM powers the Advisor and Arborist modules within this process.
+- **Used by:** AINav — the navigation framework that employs the LLM for both initial task planning and adaptive replanning.
+- **Used by:** Primitive Skill Tree — the LLM selects and orders skills from this tree.
+- **Used by:** Adaptive Replanning — the LLM powers the Advisor and Arborist modules within this process.
 
 ## Related Concepts
 
-- [[Large Language Models]] are a class of [[Foundation Models]].
-- Their integration with [[ROS2]] enables natural language command interfaces in robotic systems.
-- For task planning, they often rely on [[Symbolic Planners]] ⚠️ to ground abstract actions.
+- Large Language Models are a class of Foundation Models.
+- Their integration with ROS2 enables natural language command interfaces in robotic systems.
+- For task planning, they often rely on Symbolic Planners ⚠️ to ground abstract actions.

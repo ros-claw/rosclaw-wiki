@@ -20,8 +20,8 @@ source_type: official_manual
 
 - Enables efficient on-device **Object Goal Navigation** using smaller LLMs.
 - Reduces **KV-cache recomputation** and memory usage on local devices.
-- Improves navigation success rates on the [[HM3D Dataset]].
-- Outperforms [[GPT-4-based planners]] ⚠️ in success rate.
+- Improves navigation success rates on the HM3D Dataset.
+- Outperforms GPT-4-based planners ⚠️ in success rate.
 - Prunes redundant navigation map information using semantics-aware memory retrieval.
 - Reuses KV cache across planning steps to lower latency and peak memory consumption.
 - Recovers memory interactions lost during discretization via attention-based clustering.
@@ -30,19 +30,19 @@ source_type: official_manual
 
 EfficientNav incorporates three core mechanisms to reduce computational and memory overhead:
 
-- **[[Semantics-Aware Memory Retrieval]] ⚠️** – prunes redundant information from navigation maps, keeping only semantically relevant data.
-- **[[Discrete Memory Caching]] ⚠️** – saves and reuses KV-cache across steps, lowering latency and peak memory.
-- **[[Attention-Based Memory Clustering]] ⚠️** – recovers memory interactions that are lost during discretization, preserving planning quality.
+- **Semantics-Aware Memory Retrieval ⚠️** – prunes redundant information from navigation maps, keeping only semantically relevant data.
+- **Discrete Memory Caching ⚠️** – saves and reuses KV-cache across steps, lowering latency and peak memory.
+- **Attention-Based Memory Clustering ⚠️** – recovers memory interactions that are lost during discretization, preserving planning quality.
 
 ### Architecture & Components
 
-EfficientNav depends on a **[[LLaVA-34b]] ⚠️** as its planner model, with a **[[CLIP]]** visual encoder and **[[GroundingDINO]] ⚠️** object detector. The system uses **KV-cache caching** to avoid repeated full inference and is integrated with the [[Habitat]] simulation platform (including both habitat-sim and habitat-lab). Related memory modules, [[Navigation Map Caching]] ⚠️ and [[Navigation Map Retrieval]] ⚠️, support the semantic retrieval pipeline.
+EfficientNav depends on a **LLaVA-34b ⚠️** as its planner model, with a **CLIP** visual encoder and **GroundingDINO ⚠️** object detector. The system uses **KV-cache caching** to avoid repeated full inference and is integrated with the Habitat simulation platform (including both habitat-sim and habitat-lab). Related memory modules, Navigation Map Caching ⚠️ and Navigation Map Retrieval ⚠️, support the semantic retrieval pipeline.
 
 ### Evaluation & Performance
 
-Tested on the [[HM3D Dataset]], EfficientNav significantly reduces KV-cache recomputation and memory usage while improving navigation success rates, outperforming prior methods including those powered by GPT-4. The combination of discrete memory caching and semantic pruning allows it to run effectively on resource-constrained hardware while maintaining competitive navigation performance.
+Tested on the HM3D Dataset, EfficientNav significantly reduces KV-cache recomputation and memory usage while improving navigation success rates, outperforming prior methods including those powered by GPT-4. The combination of discrete memory caching and semantic pruning allows it to run effectively on resource-constrained hardware while maintaining competitive navigation performance.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EfficientNav` --[[extends]] ⚠️--> `CLIP`
+- `EfficientNav` --extends ⚠️--> `CLIP`

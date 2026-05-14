@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## MLLMs (Multimodal Large Language Models)
 
-**MLLMs** (Multimodal Large Language Models) are a class of foundation models that extend the reasoning and generation capabilities of large language models to multiple modalities—most commonly vision and language, but also including audio, tactile, and proprioceptive signals. In the context of [[Embodied AI]], MLLMs serve as a bridge between high-level symbolic reasoning and low-level sensorimotor control.
+**MLLMs** (Multimodal Large Language Models) are a class of foundation models that extend the reasoning and generation capabilities of large language models to multiple modalities—most commonly vision and language, but also including audio, tactile, and proprioceptive signals. In the context of Embodied AI, MLLMs serve as a bridge between high-level symbolic reasoning and low-level sensorimotor control.
 
 ### Capabilities
 
@@ -30,7 +30,7 @@ Different scales of MLLMs (in terms of parameter count and training data) are us
 
 ### Role in LaViRA
 
-In the [[LaViRA]] framework, MLLMs are employed at multiple stages, each leveraging a different scale to maximize performance for the specific subtask:
+In the LaViRA framework, MLLMs are employed at multiple stages, each leveraging a different scale to maximize performance for the specific subtask:
 
 - **Reasoning stage**: A large-scale MLLM handles high-level task decomposition and semantic understanding.
 - **Perceptual grounding stage**: A mid-scale MLLM relates language to visual features and object affordances.
@@ -40,13 +40,13 @@ This cascaded use enables LaViRA to combine the strengths of different MLLM scal
 
 ### Related Entities
 
-- [[LaViRA]] – uses MLLMs as described above.
-- [[Embodied AI]] – the broader field where MLLMs are applied.
-- [[VLA Model]] ⚠️ – a related concept integrating vision, language, and action.
+- LaViRA – uses MLLMs as described above.
+- Embodied AI – the broader field where MLLMs are applied.
+- VLA Model ⚠️ – a related concept integrating vision, language, and action.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MLLMs` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `MLLMs` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `MLLMs` --[[related_to]] ⚠️ ⚠️--> `LaViRA` _(wikilink)_
+- `MLLMs` --related_to ⚠️ ⚠️--> `LaViRA` _(wikilink)_

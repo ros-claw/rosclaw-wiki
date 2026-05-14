@@ -35,13 +35,13 @@ Given a target object and a dialog history between humans cooperating to find th
 
 ## Dependencies
 
-- Depends on the [[CVDN dataset]] ⚠️ ⚠️ (Cooperative Vision-and-Dialog Navigation), which provides pairs of dialogs, target objects, and human trajectories in homes.
-- Implements a core component of [[Cooperative Vision-and-Dialog Navigation]] ⚠️ ⚠️, where a human helper and a robotic navigator collaborate via dialog.
+- Depends on the CVDN dataset ⚠️ ⚠️ (Cooperative Vision-and-Dialog Navigation), which provides pairs of dialogs, target objects, and human trajectories in homes.
+- Implements a core component of Cooperative Vision-and-Dialog Navigation ⚠️ ⚠️, where a human helper and a robotic navigator collaborate via dialog.
 
 ## Relationships
 
-- **part_of**: [[Cooperative Vision-and-Dialog Navigation]] ⚠️ ⚠️
-- **depends_on**: [[CVDN dataset]] ⚠️ ⚠️
+- **part_of**: Cooperative Vision-and-Dialog Navigation ⚠️ ⚠️
+- **depends_on**: CVDN dataset ⚠️ ⚠️
 - **implements**: goal-oriented navigation from natural language instructions
 - **contrasts_with**: navigation from explicit metric path descriptions (e.g., "walk 5 meters forward") – this approach requires inference from ambiguous conversational cues.
 

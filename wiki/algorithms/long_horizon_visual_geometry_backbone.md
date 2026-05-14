@@ -32,20 +32,20 @@ The **Long-horizon Visual-geometry Backbone** is an algorithmic component that p
 
 ## Relationships
 
-- **Used by**: [[LoGoPlanner]] – this backbone feeds metric-aware features into the planner for long-horizon navigation.
+- **Used by**: LoGoPlanner – this backbone feeds metric-aware features into the planner for long-horizon navigation.
 - **Depends on**: Visual observations (e.g., camera streams), auxiliary tasks that enforce metric scale and geometric consistency during training.
 
 ## Training & Integration
 
-During training, the backbone is finetuned with auxiliary losses that encourage the hidden representation to encode metric-scale geometry. At inference time, the backbone consumes raw visual observations and outputs features that [[LoGoPlanner]] can directly use for grounding predictions without additional scale estimation modules.
+During training, the backbone is finetuned with auxiliary losses that encourage the hidden representation to encode metric-scale geometry. At inference time, the backbone consumes raw visual observations and outputs features that LoGoPlanner can directly use for grounding predictions without additional scale estimation modules.
 
 ## Related Topics
 
-- [[Visual-geometry Backbones]] ⚠️ (broader category)
-- [[Metric Scale Grounding]] ⚠️
-- [[Implicit State Estimation]] ⚠️
+- Visual-geometry Backbones ⚠️ (broader category)
+- Metric Scale Grounding ⚠️
+- Implicit State Estimation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Long-horizon Visual-geometry Backbone` --[[extends]] ⚠️--> `LoGoPlanner`
+- `Long-horizon Visual-geometry Backbone` --extends ⚠️--> `LoGoPlanner`

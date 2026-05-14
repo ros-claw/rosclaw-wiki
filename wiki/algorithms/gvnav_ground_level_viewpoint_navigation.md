@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-GVNav (Ground-level Viewpoint Navigation) is an algorithm that addresses the **generalization gap in [[Vision-and-Language Navigation]]** caused by varying heights of visual observation, particularly for low-height robots. It leverages **weighted historical observations** as enriched spatiotemporal contexts and transfers connectivity graphs from [[HM3D dataset|HM3D]] and [[Gibson dataset|Gibson]] to improve spatial priors. This approach overcomes visual obstructions and perceptual mismatches encountered when an agent’s camera is positioned near the ground, significantly improving waypoint predictor generalization to real-world settings.
+GVNav (Ground-level Viewpoint Navigation) is an algorithm that addresses the **generalization gap in Vision-and-Language Navigation** caused by varying heights of visual observation, particularly for low-height robots. It leverages **weighted historical observations** as enriched spatiotemporal contexts and transfers connectivity graphs from HM3D and Gibson to improve spatial priors. This approach overcomes visual obstructions and perceptual mismatches encountered when an agent’s camera is positioned near the ground, significantly improving waypoint predictor generalization to real-world settings.
 
 ## Parameters
 
@@ -30,24 +30,24 @@ The algorithm uses two key parameters:
 
 GVNav enables the following:
 
-- Improves [[Vision-and-Language Navigation|VLN]] performance for low-height robots (e.g., small ground vehicles, quadrupedal robots).
+- Improves VLN performance for low-height robots (e.g., small ground vehicles, quadrupedal robots).
 - Overcomes visual obstructions and perceptual mismatches that arise from a ground-level viewpoint.
-- Enhances [[waypoint predictor]] generalization to real-world scenes when trained on simulated data.
+- Enhances waypoint predictor generalization to real-world scenes when trained on simulated data.
 
 ## Relationships
 
-- **uses**: [[HM3D dataset]], [[Gibson dataset]], [[waypoint predictor]]
-- **depends_on**: [[Vision-and-Language Navigation|VLN]], spatiotemporal context
+- **uses**: HM3D dataset, Gibson dataset, waypoint predictor
+- **depends_on**: VLN, spatiotemporal context
 
 ## See Also
 
-- [[Unitree G1]] — Example robot platform that could benefit from low-height VLN.
-- [[Embodied AI]] — Broader context for navigation and grounding.
+- Unitree G1 — Example robot platform that could benefit from low-height VLN.
+- Embodied AI — Broader context for navigation and grounding.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `GVNav (Ground-level Viewpoint Navigation)` --[[based_on]] ⚠️ ⚠️--> `Vision-and-Language Navigation`
-- `GVNav (Ground-level Viewpoint Navigation)` --[[extends]] ⚠️--> `waypoint predictor`
-- `GVNav (Ground-level Viewpoint Navigation)` --[[implements]] ⚠️--> `Unitree G1`
-- `GVNav (Ground-level Viewpoint Navigation)` --[[based_on]] ⚠️ ⚠️--> `Embodied AI`
+- `GVNav (Ground-level Viewpoint Navigation)` --based_on ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `GVNav (Ground-level Viewpoint Navigation)` --extends ⚠️--> `waypoint predictor`
+- `GVNav (Ground-level Viewpoint Navigation)` --implements ⚠️--> `Unitree G1`
+- `GVNav (Ground-level Viewpoint Navigation)` --based_on ⚠️ ⚠️--> `Embodied AI`

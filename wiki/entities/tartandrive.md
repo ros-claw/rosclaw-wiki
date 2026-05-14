@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # TartanDrive
 
-TartanDrive is a large-scale, off-road driving dataset and benchmark designed for autonomous navigation research. It is part of the broader [[Navigation datasets]] ⚠️ ⚠️ collection and has been used as an unseen out-of-distribution test set to evaluate zero-shot generalization of the [[UniWM]] world model.
+TartanDrive is a large-scale, off-road driving dataset and benchmark designed for autonomous navigation research. It is part of the broader Navigation datasets ⚠️ ⚠️ collection and has been used as an unseen out-of-distribution test set to evaluate zero-shot generalization of the UniWM world model.
 
 ## Overview
 
@@ -22,13 +22,13 @@ TartanDrive provides multimodal sensor data (e.g., stereo imagery, LiDAR, IMU, a
 
 ## Relationships
 
-- **part\_of**: [[Navigation datasets]] ⚠️ ⚠️
-- **used\_by**: [[UniWM]] — the dataset serves as an out-of-distribution evaluation target for the UniWM world model’s zero-shot capabilities.
+- **part\_of**: Navigation datasets ⚠️ ⚠️
+- **used\_by**: UniWM — the dataset serves as an out-of-distribution evaluation target for the UniWM world model’s zero-shot capabilities.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `TartanDrive` --[[uses]] ⚠️--> `UniWM`
+- `TartanDrive` --uses ⚠️--> `UniWM`
 
 ---
 

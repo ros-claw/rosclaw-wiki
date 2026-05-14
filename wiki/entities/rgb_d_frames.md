@@ -26,6 +26,6 @@ The use of RGB-D frames enables:
 - **Direct spatial memory construction without explicit 3D reconstruction** – Instead of building a full dense mesh or point cloud, the system can organize spatial knowledge directly from the frames, often via learned embeddings or spatial indexing.
 
 ## Relationships
-- Used by **[[MTU3D]]** *(uses)* — MTU3D leverages RGB-D frames to perform online query-based representation learning and spatial memory construction.
+- Used by **MTU3D** *(uses)* — MTU3D leverages RGB-D frames to perform online query-based representation learning and spatial memory construction.
 
-> **See also:** [[Spatial Memory]] ⚠️, [[Representation Learning]] ⚠️, [[3D Reconstruction]] ⚠️
+> **See also:** Spatial Memory ⚠️, Representation Learning ⚠️, 3D Reconstruction ⚠️

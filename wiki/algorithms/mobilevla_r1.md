@@ -18,14 +18,14 @@ source_type: arxiv_paper
 
 ## Overview
 
-The framework integrates a vision-language backbone with a continuous control policy. It leverages the **[[MobileVLA-CoT Dataset]]** — a collection of expert demonstrations annotated with chain-of-thought reasoning traces — to bootstrap reasoning capabilities. A subsequent reinforcement learning stage using **[[GRPO reinforcement learning|GRPO]]** further improves reasoning consistency and control stability. This dual-phase approach results in improved long-horizon execution and robustness compared to prior methods.
+The framework integrates a vision-language backbone with a continuous control policy. It leverages the **MobileVLA-CoT Dataset** — a collection of expert demonstrations annotated with chain-of-thought reasoning traces — to bootstrap reasoning capabilities. A subsequent reinforcement learning stage using **GRPO** further improves reasoning consistency and control stability. This dual-phase approach results in improved long-horizon execution and robustness compared to prior methods.
 
 ## Training
 
 MobileVLA-R1 employs a two-stage training paradigm:
 
-- **Stage 1 – Supervised Chain-of-Thought Alignment**: The model is trained on the [[MobileVLA-CoT Dataset]] using a supervised learning objective. This stage bridges semantic reasoning and low-level actuation, aligning the model’s reasoning outputs with expert thought processes and action sequences.
-- **Stage 2 – GRPO Reinforcement Learning**: [[GRPO reinforcement learning|GRPO]] (group relative policy optimization) is applied to refine the policy. This stage enhances reasoning consistency, control stability, and long-horizon performance.
+- **Stage 1 – Supervised Chain-of-Thought Alignment**: The model is trained on the MobileVLA-CoT Dataset using a supervised learning objective. This stage bridges semantic reasoning and low-level actuation, aligning the model’s reasoning outputs with expert thought processes and action sequences.
+- **Stage 2 – GRPO Reinforcement Learning**: GRPO (group relative policy optimization) is applied to refine the policy. This stage enhances reasoning consistency, control stability, and long-horizon performance.
 
 ## Capabilities
 
@@ -45,13 +45,13 @@ The framework consistently outperformed prior methods, with a roughly 5% improve
 
 ## Relationships
 
-- **Uses**: [[MobileVLA-CoT Dataset]], [[Chain-of-thought reasoning|Chain-of-Thought reasoning]], [[GRPO reinforcement learning|GRPO]], [[Quadruped robot]] platform
-- **Depends on**: [[MobileVLA-CoT Dataset]]
+- **Uses**: MobileVLA-CoT Dataset, Chain-of-Thought reasoning, GRPO, Quadruped robot platform
+- **Depends on**: MobileVLA-CoT Dataset
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MobileVLA-R1` --[[based_on]] ⚠️--> `Chain-of-thought reasoning`
+- `MobileVLA-R1` --based_on ⚠️--> `Chain-of-thought reasoning`
 
 ## Sources
 

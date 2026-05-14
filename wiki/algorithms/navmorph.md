@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # NavMorph
 
-**NavMorph** is a self-evolving world model framework for [[Vision-and-Language Navigation in Continuous Environments]] ⚠️ ([[VLN-CE]]), inspired by human cognition. It employs compact latent representations to model environmental dynamics and integrates a novel **Contextual Evolution Memory** for online adaptability, enabling enhanced environmental understanding and decision-making in VLN-CE tasks.
+**NavMorph** is a self-evolving world model framework for Vision-and-Language Navigation in Continuous Environments ⚠️ (VLN-CE), inspired by human cognition. It employs compact latent representations to model environmental dynamics and integrates a novel **Contextual Evolution Memory** for online adaptability, enabling enhanced environmental understanding and decision-making in VLN-CE tasks.
 
 ## Overview
 
@@ -23,9 +23,9 @@ NavMorph (introduced in *arxiv:2506.23468*) addresses the challenge of navigatin
 ## Capabilities
 
 - Enhances environmental understanding and decision-making in VLN-CE tasks.
-- Models environmental dynamics using [[compact latent representations]] ⚠️ ⚠️.
+- Models environmental dynamics using compact latent representations ⚠️ ⚠️.
 - Provides foresight for adaptive planning and policy refinement.
-- Maintains online adaptability via [[Contextual Evolution Memory]].
+- Maintains online adaptability via Contextual Evolution Memory.
 
 ## Parameters
 
@@ -36,12 +36,12 @@ NavMorph (introduced in *arxiv:2506.23468*) addresses the challenge of navigatin
 
 ## Relationships
 
-- **Uses**: [[compact latent representations]] ⚠️ ⚠️, [[Contextual Evolution Memory]]
-- **Depends on**: [[VLN-CE benchmarks]] ⚠️ for training and evaluation
+- **Uses**: compact latent representations ⚠️ ⚠️, Contextual Evolution Memory
+- **Depends on**: VLN-CE benchmarks ⚠️ for training and evaluation
 
 ## Benchmark Performance
 
-NavMorph achieves notable performance improvements on popular VLN-CE benchmarks, including the [[VLN-CE]] standard tasks. The framework demonstrates superior success rates and path efficiency compared to prior methods.
+NavMorph achieves notable performance improvements on popular VLN-CE benchmarks, including the VLN-CE standard tasks. The framework demonstrates superior success rates and path efficiency compared to prior methods.
 
 ## Code
 
@@ -49,11 +49,11 @@ The implementation is publicly available at: [https://github.com/Feliciaxyao/Nav
 
 ## Further Reading
 
-- [[World Models]] — related concept
-- [[Self-Supervised Learning in Embodied AI]] ⚠️ — methodological background
-- [[Contextual Evolution Memory]] — core component of NavMorph
+- World Models — related concept
+- Self-Supervised Learning in Embodied AI ⚠️ — methodological background
+- Contextual Evolution Memory — core component of NavMorph
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `NavMorph` --[[based_on]] ⚠️--> `VLN-CE`
+- `NavMorph` --based_on ⚠️--> `VLN-CE`

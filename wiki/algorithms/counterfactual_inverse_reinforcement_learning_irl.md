@@ -30,17 +30,17 @@ The algorithm builds a set of candidate features from observed trajectories and 
 
 ## Relationships
 
-- **Used by**: [[CREStE]] — this algorithm forms the core learning component for navigation cost inference within the CREStE system.
+- **Used by**: CREStE — this algorithm forms the core learning component for navigation cost inference within the CREStE system.
 - **Depends on**: None (standalone algorithm)
 
 ## See Also
 
-- [[Inverse Reinforcement Learning]] ⚠️
-- [[Navigation]] ⚠️ (cost learning)
-- [[Active Learning]] ⚠️
-- [[CREStE]]
+- Inverse Reinforcement Learning ⚠️
+- Navigation ⚠️ (cost learning)
+- Active Learning ⚠️
+- CREStE
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Counterfactual Inverse Reinforcement Learning (IRL)` --[[extends]] ⚠️--> `CREStE`
+- `Counterfactual Inverse Reinforcement Learning (IRL)` --extends ⚠️--> `CREStE`

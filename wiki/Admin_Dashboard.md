@@ -60,6 +60,6 @@ WHERE length(file.inlinks) = 0
 
 - [ ] 低置信度页面已复核
 - [ ] 过期知识已更新或标记
-- [ ] 孤立页面已补充 `[[wikilink]] ⚠️`
+- [ ] 孤立页面已补充 `wikilink ⚠️`
 - [ ] `index.md` 与目录结构同步
 - [ ] `log.md` 无异常报错

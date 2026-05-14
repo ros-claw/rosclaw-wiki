@@ -24,15 +24,15 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Used by** → [[LoGoPlanner]]: The planner leverages metric-aware visual geometry to obtain reliable state and scene information.
-- **Component of** → [[long-horizon visual-geometry backbone]]: Metric-aware visual geometry is a finetuned specialization of this backbone, enabling metric-scale reasoning from images.
+- **Used by** → LoGoPlanner: The planner leverages metric-aware visual geometry to obtain reliable state and scene information.
+- **Component of** → long-horizon visual-geometry backbone: Metric-aware visual geometry is a finetuned specialization of this backbone, enabling metric-scale reasoning from images.
 
 ## Role in LoGoPlanner
 
-A long-horizon visual-geometry backbone is finetuned to become metric-aware, enabling the framework to estimate robot state and scene geometry in metric scale directly from images. This allows [[LoGoPlanner]] to plan and execute trajectories without external localization, relying solely on visual input for both state estimation and dense geometry reconstruction.
+A long-horizon visual-geometry backbone is finetuned to become metric-aware, enabling the framework to estimate robot state and scene geometry in metric scale directly from images. This allows LoGoPlanner to plan and execute trajectories without external localization, relying solely on visual input for both state estimation and dense geometry reconstruction.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Metric-aware visual geometry` --[[related_to]] ⚠️ ⚠️--> `LoGoPlanner` _(wikilink)_
-- `Metric-aware visual geometry` --[[related_to]] ⚠️ ⚠️--> `long-horizon visual-geometry backbone` _(wikilink)_
+- `Metric-aware visual geometry` --related_to ⚠️ ⚠️--> `LoGoPlanner` _(wikilink)_
+- `Metric-aware visual geometry` --related_to ⚠️ ⚠️--> `long-horizon visual-geometry backbone` _(wikilink)_

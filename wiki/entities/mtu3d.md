@@ -44,31 +44,31 @@ MTU3D achieves state‑of‑the‑art results on four widely‑used embodied nav
 
 | Benchmark | Improvement over previous best |
 |-----------|--------------------------------|
-| [[HM3D‑OVON]] ⚠️ ⚠️ | +14% in success rate |
-| [[GOAT‑Bench]] ⚠️ ⚠️ | +23% in success rate |
-| [[SG3D]] | +9% in success rate |
-| [[A‑EQA]] ⚠️ ⚠️ | +2% in success rate |
+| HM3D‑OVON ⚠️ ⚠️ | +14% in success rate |
+| GOAT‑Bench ⚠️ ⚠️ | +23% in success rate |
+| SG3D | +9% in success rate |
+| A‑EQA ⚠️ ⚠️ | +2% in success rate |
 
 ## Key Relationships
 
-- **Uses**: [[Online Query‑based Representation Learning]] ⚠️, [[Unified Objective for Grounding and Exploring]], [[End‑to‑End Trajectory Learning]] ⚠️, [[Vision‑Language‑Exploration Pre‑training]] ⚠️
-- **Depends on**: [[RGB‑D]] ⚠️ frames, frontier queries (candidate viewpoints derived from the agent’s current occupancy map)
-- **Inputs**: [[Language Descriptions]] ⚠️, [[Reference Images]] ⚠️, [[Object Categories]] ⚠️
-- **Implements**: [[Active Perception]] in the context of [[3D Vision‑Language Learning]] ⚠️
+- **Uses**: Online Query‑based Representation Learning ⚠️, Unified Objective for Grounding and Exploring, End‑to‑End Trajectory Learning ⚠️, Vision‑Language‑Exploration Pre‑training ⚠️
+- **Depends on**: RGB‑D ⚠️ frames, frontier queries (candidate viewpoints derived from the agent’s current occupancy map)
+- **Inputs**: Language Descriptions ⚠️, Reference Images ⚠️, Object Categories ⚠️
+- **Implements**: Active Perception in the context of 3D Vision‑Language Learning ⚠️
 - **Contrasts with**: modular pipelines that separate mapping, planning, and grounding into distinct components; MTU3D treats them as a single end‑to‑end learnable system.
 
 ## See Also
 
-- [[HM3D‑OVON]] ⚠️ ⚠️
-- [[GOAT‑Bench]] ⚠️ ⚠️
-- [[SG3D]]
-- [[A‑EQA]] ⚠️ ⚠️
-- [[Embodied AI]]
-- [[Vision‑Language Navigation]] ⚠️
+- HM3D‑OVON ⚠️ ⚠️
+- GOAT‑Bench ⚠️ ⚠️
+- SG3D
+- A‑EQA ⚠️ ⚠️
+- Embodied AI
+- Vision‑Language Navigation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MTU3D` --[[related_to]] ⚠️ ⚠️--> `SG3D`
-- `MTU3D` --[[uses]] ⚠️--> `Unified Objective for Grounding and Exploring`
-- `MTU3D` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `MTU3D` --related_to ⚠️ ⚠️--> `SG3D`
+- `MTU3D` --uses ⚠️--> `Unified Objective for Grounding and Exploring`
+- `MTU3D` --related_to ⚠️ ⚠️--> `Embodied AI`

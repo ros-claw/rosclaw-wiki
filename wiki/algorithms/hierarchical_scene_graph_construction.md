@@ -25,7 +25,7 @@ Traditional scene graphs flatten object relationships. This algorithm constructs
 | Aspect | Description |
 |--------|-------------|
 | **Input**  | Onboard sensory data (RGB-D, LiDAR, etc.) combined with open-vocabulary semantics (e.g., object categories, attributes) |
-| **Output** | A hierarchical scene graph derived from a continuously updated [[Semantic Object Map]] ⚠️ ⚠️ ⚠️ |
+| **Output** | A hierarchical scene graph derived from a continuously updated Semantic Object Map ⚠️ ⚠️ ⚠️ |
 
 ## Capabilities
 
@@ -35,15 +35,15 @@ Traditional scene graphs flatten object relationships. This algorithm constructs
 
 ## Usage
 
-This algorithm is used by the [[LLM-based Planner]] to generate context-aware navigation and manipulation plans. The planner queries the hierarchical scene graph for spatial relations, containment, and affordances, enabling grounded action selection.
+This algorithm is used by the LLM-based Planner to generate context-aware navigation and manipulation plans. The planner queries the hierarchical scene graph for spatial relations, containment, and affordances, enabling grounded action selection.
 
 ## Related Concepts
 
-- [[Semantic Object Map]] ⚠️ ⚠️ ⚠️ – The underlying map from which the scene graph is derived.
-- [[Scene Graph]] ⚠️ – General representation of objects and their relationships.
-- [[LLM-based Planner]] – Downstream component that consumes the graph for task planning.
+- Semantic Object Map ⚠️ ⚠️ ⚠️ – The underlying map from which the scene graph is derived.
+- Scene Graph ⚠️ – General representation of objects and their relationships.
+- LLM-based Planner – Downstream component that consumes the graph for task planning.
 
 ## Relationship Annotations
 
-- `[[Hierarchical Scene Graph Construction]]` **depends_on** `[[Semantic Object Map]] ⚠️ ⚠️ ⚠️`
-- `[[LLM-based Planner]]` **uses** `[[Hierarchical Scene Graph Construction]]`
+- `Hierarchical Scene Graph Construction` **depends_on** `Semantic Object Map ⚠️ ⚠️ ⚠️`
+- `LLM-based Planner` **uses** `Hierarchical Scene Graph Construction`

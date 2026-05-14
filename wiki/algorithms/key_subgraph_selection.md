@@ -16,12 +16,12 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Key Subgraph Selection** is an algorithm within the [[MSGNav]] system that enables efficient reasoning by selecting relevant subgraphs from a [[Multi-modal 3D Scene Graph]] ⚠️ ⚠️ ⚠️ (M3DSG). Instead of processing the entire global scene graph—which can be large and redundant—the algorithm identifies and extracts only those portions of the graph that are pertinent to the current navigation task or query. This selective approach reduces computational overhead, speeds up downstream reasoning, and improves the scalability of embodied navigation systems.
+**Key Subgraph Selection** is an algorithm within the MSGNav system that enables efficient reasoning by selecting relevant subgraphs from a Multi-modal 3D Scene Graph ⚠️ ⚠️ ⚠️ (M3DSG). Instead of processing the entire global scene graph—which can be large and redundant—the algorithm identifies and extracts only those portions of the graph that are pertinent to the current navigation task or query. This selective approach reduces computational overhead, speeds up downstream reasoning, and improves the scalability of embodied navigation systems.
 
 ## Relationships
 
-- **Part of**: [[MSGNav]] — Key Subgraph Selection is a core component of the MSGNav architecture.
-- **Depends on**: [[Multi-modal 3D Scene Graph]] ⚠️ ⚠️ ⚠️ — The algorithm operates on M3DSG representations, requiring both geometric and semantic information to evaluate subgraph relevance.
+- **Part of**: MSGNav — Key Subgraph Selection is a core component of the MSGNav architecture.
+- **Depends on**: Multi-modal 3D Scene Graph ⚠️ ⚠️ ⚠️ — The algorithm operates on M3DSG representations, requiring both geometric and semantic information to evaluate subgraph relevance.
 
 ## Capabilities
 
@@ -39,11 +39,11 @@ Key Subgraph Selection is particularly useful in:
 
 ## Further Reading
 
-- [[MSGNav]] — the overarching system that uses this algorithm.
-- [[Multi-modal 3D Scene Graph]] ⚠️ ⚠️ ⚠️ — the data structure from which subgraphs are extracted.
-- [[Efficient Reasoning]] ⚠️ — related concepts in embodied AI.
+- MSGNav — the overarching system that uses this algorithm.
+- Multi-modal 3D Scene Graph ⚠️ ⚠️ ⚠️ — the data structure from which subgraphs are extracted.
+- Efficient Reasoning ⚠️ — related concepts in embodied AI.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Key Subgraph Selection` --[[extends]] ⚠️--> `MSGNav`
+- `Key Subgraph Selection` --extends ⚠️--> `MSGNav`

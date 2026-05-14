@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Obstacle-avoiding controller
 
-The **obstacle-avoiding controller** is a low-level control skill designed to prevent a navigation agent from getting stuck on obstacles during autonomous navigation. It is a core component of the [[ETPNav]] framework and employs a **trial-and-error** heuristic to dynamically adjust the robot's behavior when faced with blockages or collision risks.
+The **obstacle-avoiding controller** is a low-level control skill designed to prevent a navigation agent from getting stuck on obstacles during autonomous navigation. It is a core component of the ETPNav framework and employs a **trial-and-error** heuristic to dynamically adjust the robot's behavior when faced with blockages or collision risks.
 
 ### Overview
 
@@ -32,7 +32,7 @@ In complex environments, standard path planners may lead a robot into dead ends 
 
 ### Relationships
 
-- **part_of** [[ETPNav]] – This controller is one of the low-level skills within the ETPNav system, which combines high-level topological planning with reactive obstacle avoidance.
+- **part_of** ETPNav – This controller is one of the low-level skills within the ETPNav system, which combines high-level topological planning with reactive obstacle avoidance.
 
 ### Source
 
@@ -41,9 +41,9 @@ The description is derived from:
 
 ---
 
-**Cross-references:** [[navigation]] ⚠️, [[obstacle avoidance]] ⚠️, [[low-level control]] ⚠️
+**Cross-references:** [[navigation]] ⚠️, obstacle avoidance ⚠️, low-level control ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Obstacle-avoiding controller` --[[uses]] ⚠️--> `ETPNav`
+- `Obstacle-avoiding controller` --uses ⚠️--> `ETPNav`

@@ -18,7 +18,7 @@ The **Annotation Pipeline for Trajectory-Language Alignment** is a scalable data
 
 ### Purpose
 
-The primary purpose of this pipeline is to eliminate the bottleneck of expensive human annotation in training embodied navigation models. By leveraging readily available urban walking videos from diverse sources (e.g., YouTube, dashcam archives), it generates aligned pairs of natural language instructions, egocentric trajectories, and salient landmark references, enabling the training of models like [[UrbanNav]] to follow language commands in real-world environments.
+The primary purpose of this pipeline is to eliminate the bottleneck of expensive human annotation in training embodied navigation models. By leveraging readily available urban walking videos from diverse sources (e.g., YouTube, dashcam archives), it generates aligned pairs of natural language instructions, egocentric trajectories, and salient landmark references, enabling the training of models like UrbanNav to follow language commands in real-world environments.
 
 ### Methodology
 
@@ -47,15 +47,15 @@ This structured output can be directly used for supervised fine-tuning of end-to
 
 ### Relationships
 
-- **Used by**: [[UrbanNav]] – this pipeline provides the core training data for the UrbanNav agent, enabling it to follow natural language instructions in city-scale environments.
-- **Depends on**: Visual odometry / [[SLAM]] for trajectory estimation; [[LLM]] ⚠️ / [[VLM]] ⚠️ for instruction and landmark generation; training video corpora from the web.
+- **Used by**: UrbanNav – this pipeline provides the core training data for the UrbanNav agent, enabling it to follow natural language instructions in city-scale environments.
+- **Depends on**: Visual odometry / SLAM for trajectory estimation; LLM ⚠️ / VLM ⚠️ for instruction and landmark generation; training video corpora from the web.
 
 ### Notice
 
-This pipeline intentionally avoids manual annotation, reducing cost and human bias while preserving diversity of instructions and environments. The resulting datasets are a key enabler for advancing [[Instruction Following]] ⚠️ in embodied AI.
+This pipeline intentionally avoids manual annotation, reducing cost and human bias while preserving diversity of instructions and environments. The resulting datasets are a key enabler for advancing Instruction Following ⚠️ in embodied AI.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Annotation Pipeline for Trajectory-Language Alignment` --[[related_to]] ⚠️ ⚠️--> `UrbanNav` _(wikilink)_
-- `Annotation Pipeline for Trajectory-Language Alignment` --[[related_to]] ⚠️ ⚠️--> `SLAM` _(wikilink)_
+- `Annotation Pipeline for Trajectory-Language Alignment` --related_to ⚠️ ⚠️--> `UrbanNav` _(wikilink)_
+- `Annotation Pipeline for Trajectory-Language Alignment` --related_to ⚠️ ⚠️--> `SLAM` _(wikilink)_

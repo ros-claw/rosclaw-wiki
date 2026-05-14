@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Model Predictive Path Integral (MPPI)** is a sampling-based model predictive control algorithm that optimizes control sequences by evaluating cost over multiple sampled trajectories. In this framework, MPPI is adapted for mobile robot navigation using a [[Learned Perceptive Forward Dynamics Model]] to predict future states and failure probabilities without requiring extensive cost function tuning.
+**Model Predictive Path Integral (MPPI)** is a sampling-based model predictive control algorithm that optimizes control sequences by evaluating cost over multiple sampled trajectories. In this framework, MPPI is adapted for mobile robot navigation using a Learned Perceptive Forward Dynamics Model to predict future states and failure probabilities without requiring extensive cost function tuning.
 
 ## Parameters
 
@@ -28,12 +28,12 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **uses** → [[Learned Perceptive Forward Dynamics Model]]: MPPI relies on this model to predict future states and failure probabilities from raw sensory inputs.
-- **implements** → [[Model Predictive Control]] ⚠️: Provides a real-time, receding-horizon control approach.
-- **depends_on** → [[Path Integral Control]] ⚠️: Inherits the stochastic sampling and importance-weighting formulation from the path integral family.
-- **part_of** → [[Embodied AI Navigation Stack]] ⚠️: Serves as the motion planning component in systems that integrate perception, dynamics learning, and control.
+- **uses** → Learned Perceptive Forward Dynamics Model: MPPI relies on this model to predict future states and failure probabilities from raw sensory inputs.
+- **implements** → Model Predictive Control ⚠️: Provides a real-time, receding-horizon control approach.
+- **depends_on** → Path Integral Control ⚠️: Inherits the stochastic sampling and importance-weighting formulation from the path integral family.
+- **part_of** → Embodied AI Navigation Stack ⚠️: Serves as the motion planning component in systems that integrate perception, dynamics learning, and control.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Model Predictive Path Integral (MPPI) planning framework` --[[extends]] ⚠️--> `Learned Perceptive Forward Dynamics Model`
+- `Model Predictive Path Integral (MPPI) planning framework` --extends ⚠️--> `Learned Perceptive Forward Dynamics Model`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Survey on Vision-Language-Action Models for Embodied AI (Ma et al.)
 
-This comprehensive survey by Ma et al. provides a systematic taxonomy of **Vision-Language-Action (VLA) models**, which form a critical component of modern [[Embodied AI]] systems. VLAs integrate visual perception, natural language understanding, and motor control into a unified framework, enabling robots and agents to perform complex tasks in real-world environments based on high-level instructions and visual inputs.
+This comprehensive survey by Ma et al. provides a systematic taxonomy of **Vision-Language-Action (VLA) models**, which form a critical component of modern Embodied AI systems. VLAs integrate visual perception, natural language understanding, and motor control into a unified framework, enabling robots and agents to perform complex tasks in real-world environments based on high-level instructions and visual inputs.
 
 ### Summary
 
@@ -29,8 +29,8 @@ It also catalogues relevant datasets, simulators, and benchmarks, and discusses 
 
 The paper decomposes VLA systems into three primary layers:
 
-1. **Perception & Representation** – how visual and linguistic inputs are encoded (e.g., using pretrained [[Vision-Language Models]] ⚠️ ⚠️ like CLIP or multimodal transformers).
-2. **Reasoning & Planning** – task planning and sequencing using [[Large Language Models]] or learned policies.
+1. **Perception & Representation** – how visual and linguistic inputs are encoded (e.g., using pretrained Vision-Language Models ⚠️ ⚠️ like CLIP or multimodal transformers).
+2. **Reasoning & Planning** – task planning and sequencing using Large Language Models or learned policies.
 3. **Action Execution** – low-level control policies that output motor commands or skill parameters.
 
 The taxonomy further distinguishes between **end-to-end** VLA architectures and **modular** designs where components are trained separately and composed at inference time.
@@ -47,8 +47,8 @@ The taxonomy further distinguishes between **end-to-end** VLA architectures and 
 The survey compiles a comprehensive list of resources, including:
 
 - **Datasets** for VLA training (e.g., RLBench, CALVIN, MetaWorld, task-specific kitchen datasets).
-- **Simulators** such as [[MuJoCo]] ⚠️, [[Isaac Gym]] ⚠️, [[Habitat]], and [[PyBullet]] ⚠️, which provide physics-realistic environments for training and evaluation.
-- **Benchmarks** like [[MetaWorld]] ⚠️, [[BabyAI]] ⚠️, and [[ALFRED]] ⚠️ for task completion and generalization.
+- **Simulators** such as MuJoCo ⚠️, Isaac Gym ⚠️, Habitat, and PyBullet ⚠️, which provide physics-realistic environments for training and evaluation.
+- **Benchmarks** like MetaWorld ⚠️, BabyAI ⚠️, and ALFRED ⚠️ for task completion and generalization.
 
 ### Challenges & Future Directions
 
@@ -62,11 +62,11 @@ The authors highlight unresolved issues:
 
 ### Related Pages
 
-- [[Embodied AI]] – broader field encompassing VLAs.
-- [[Vision-Language Models]] ⚠️ ⚠️ – foundation for multimodal perception.
-- [[Task Planning]] ⚠️ – high-level reasoning for VLA sequences.
-- [[Sim-to-Real Transfer]] – challenge addressed by many VLA works.
-- [[Action Models]] ⚠️ – general concept for policy learning.
+- Embodied AI – broader field encompassing VLAs.
+- Vision-Language Models ⚠️ ⚠️ – foundation for multimodal perception.
+- Task Planning ⚠️ – high-level reasoning for VLA sequences.
+- Sim-to-Real Transfer – challenge addressed by many VLA works.
+- Action Models ⚠️ – general concept for policy learning.
 
 ### Reference
 
@@ -75,4 +75,4 @@ Ma, Y, et al. "A Survey on Vision-Language-Action Models for Embodied AI." arXiv
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Survey on Vision-Language-Action Models for Embodied AI (Ma et al.)` --[[related_to]] ⚠️--> `Embodied AI` _(wikilink)_
+- `Survey on Vision-Language-Action Models for Embodied AI (Ma et al.)` --related_to ⚠️--> `Embodied AI` _(wikilink)_

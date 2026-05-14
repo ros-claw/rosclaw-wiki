@@ -60,5 +60,5 @@ MeshGraphNets has direct applications in embodied intelligence:
 
 - [[deepmind_learning_to_simulate|Learning to Simulate]]
 - [[graph_neural_network|Graph Neural Networks]]
-- [[differentiable_physics|Differentiable Physics]]
-- [[simulation|Physics Simulation for Robotics]]
+- Differentiable Physics
+- Physics Simulation for Robotics

@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-Back Translation for Navigation adapts the back-translation technique from machine translation to the embodied navigation domain. The core idea is to use a pre-trained model to generate new instructions from paths, and new paths from instructions, thereby creating additional training triplets. This approach falls under **semi-supervised learning** and leverages **[[Environmental Dropout]]** to generate new paths and instructions from environments where certain elements have been removed or masked, leading to more robust training data.
+Back Translation for Navigation adapts the back-translation technique from machine translation to the embodied navigation domain. The core idea is to use a pre-trained model to generate new instructions from paths, and new paths from instructions, thereby creating additional training triplets. This approach falls under **semi-supervised learning** and leverages **Environmental Dropout** to generate new paths and instructions from environments where certain elements have been removed or masked, leading to more robust training data.
 
 ## Parameters
 
@@ -35,7 +35,7 @@ Back Translation for Navigation adapts the back-translation technique from machi
 
 | Type | Entity | Description |
 |------|--------|-------------|
-| `depends_on` | [[Environmental Dropout]] | The back-translation process requires a mechanism to systematically remove or alter environmental elements, generating new training examples. |
+| `depends_on` | Environmental Dropout | The back-translation process requires a mechanism to systematically remove or alter environmental elements, generating new training examples. |
 
 ## Notes
 
@@ -45,12 +45,12 @@ Back Translation for Navigation adapts the back-translation technique from machi
 
 ## See Also
 
-- [[Self-Supervised Learning for Navigation]] ⚠️
-- [[Data Augmentation in Embodied AI]] ⚠️
-- [[Vision-and-Language Navigation]]
+- Self-Supervised Learning for Navigation ⚠️
+- Data Augmentation in Embodied AI ⚠️
+- Vision-and-Language Navigation
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Back Translation for Navigation` --[[extends]] ⚠️--> `Environmental Dropout`
-- `Back Translation for Navigation` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
+- `Back Translation for Navigation` --extends ⚠️--> `Environmental Dropout`
+- `Back Translation for Navigation` --based_on ⚠️--> `Vision-and-Language Navigation`

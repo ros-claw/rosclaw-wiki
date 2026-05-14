@@ -29,13 +29,13 @@ The primary purpose of Long-Short Memory Sampling is to prevent catastrophic for
 
 ## Relationships
 
-- **Used by** → [[VLN-R1]]: The algorithm is employed by the Vision-Language Navigation model VLN-R1 to sample training trajectories from its memory buffers, allowing it to learn from both past episodes and ongoing interactions.
+- **Used by** → VLN-R1: The algorithm is employed by the Vision-Language Navigation model VLN-R1 to sample training trajectories from its memory buffers, allowing it to learn from both past episodes and ongoing interactions.
 
 ---
 
-*This page is part of the ROSClaw Wiki. See also: [[Memory Sampling]] ⚠️, [[Training]] ⚠️, [[Vision-Language Navigation]].*
+*This page is part of the ROSClaw Wiki. See also: Memory Sampling ⚠️, Training ⚠️, Vision-Language Navigation.*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Long-Short Memory Sampling` --[[extends]] ⚠️--> `VLN-R1`
+- `Long-Short Memory Sampling` --extends ⚠️--> `VLN-R1`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Action Prediction with Image Generation (APIG)
 
-**Action Prediction with Image Generation (APIG)** is a proxy pre-training task designed for vision-and-language navigation (VLN). It trains a model to generate the visual semantics of the next navigation step, given the full instruction and the navigation history. This task serves as a bridge between language understanding and visual grounding during **[[in-domain pre-training]] ⚠️ ⚠️ ⚠️**. APIG is a core component of the **[[VLN-SIG]]** framework.
+**Action Prediction with Image Generation (APIG)** is a proxy pre-training task designed for vision-and-language navigation (VLN). It trains a model to generate the visual semantics of the next navigation step, given the full instruction and the navigation history. This task serves as a bridge between language understanding and visual grounding during **in-domain pre-training ⚠️ ⚠️ ⚠️**. APIG is a core component of the **VLN-SIG** framework.
 
 ## Description
 
@@ -36,12 +36,12 @@ APIG frames the next-step prediction as a conditional image generation problem. 
 
 ## Relationships
 
-- **Part of** [[VLN-SIG]]
-- **Used in** [[in-domain pre-training]] ⚠️ ⚠️ ⚠️
+- **Part of** VLN-SIG
+- **Used in** in-domain pre-training ⚠️ ⚠️ ⚠️
 
 ## Related Pages
 
-- [[VLN-SIG]]
-- [[in-domain pre-training]] ⚠️ ⚠️ ⚠️
-- [[Vision-and-Language Navigation (VLN)]] ⚠️
-- [[Proxy Pre-training Tasks]] ⚠️
+- VLN-SIG
+- in-domain pre-training ⚠️ ⚠️ ⚠️
+- Vision-and-Language Navigation (VLN) ⚠️
+- Proxy Pre-training Tasks ⚠️

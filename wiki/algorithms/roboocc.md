@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**RoboOcc** is a **3D occupancy prediction** algorithm designed for robots, providing enhanced fine-grained geometric and semantic scene understanding of the surrounding environment. It overcomes limitations of prior [[3D Gaussians]] ⚠️ ⚠️-based methods, such as overlapping Gaussian ambiguity, by introducing two novel components: an [[Opacity-guided Self-Encoder (OSE)]] and a [[Geometry-aware Cross-Encoder (GCE)]].
+**RoboOcc** is a **3D occupancy prediction** algorithm designed for robots, providing enhanced fine-grained geometric and semantic scene understanding of the surrounding environment. It overcomes limitations of prior 3D Gaussians ⚠️ ⚠️-based methods, such as overlapping Gaussian ambiguity, by introducing two novel components: an Opacity-guided Self-Encoder (OSE) and a Geometry-aware Cross-Encoder (GCE).
 
 ## Methodology
 
@@ -42,16 +42,16 @@ These consistent improvements across both metrics confirm the effectiveness of t
 
 | Relation     | Entity                                                       |
 |--------------|--------------------------------------------------------------|
-| uses         | [[Opacity-guided Self-Encoder (OSE)]]                      |
-| uses         | [[Geometry-aware Cross-Encoder (GCE)]]                     |
-| depends_on   | [[3D Gaussians]] ⚠️ ⚠️                                            |
-| evaluated_on | [[Occ‑ScanNet]] ⚠️                                             |
-| evaluated_on | [[EmbodiedOcc‑ScanNet]] ⚠️                                     |
+| uses         | Opacity-guided Self-Encoder (OSE)                      |
+| uses         | Geometry-aware Cross-Encoder (GCE)                     |
+| depends_on   | 3D Gaussians ⚠️ ⚠️                                            |
+| evaluated_on | Occ‑ScanNet ⚠️                                             |
+| evaluated_on | EmbodiedOcc‑ScanNet ⚠️                                     |
 
-RoboOcc is part of the broader field of [[Occupancy prediction]] ⚠️ and [[Semantic scene understanding]] ⚠️ for robotics.
+RoboOcc is part of the broader field of Occupancy prediction ⚠️ and Semantic scene understanding ⚠️ for robotics.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `RoboOcc` --[[extends]] ⚠️ ⚠️--> `Opacity-guided Self-Encoder (OSE)`
-- `RoboOcc` --[[extends]] ⚠️ ⚠️--> `Geometry-aware Cross-Encoder (GCE)`
+- `RoboOcc` --extends ⚠️ ⚠️--> `Opacity-guided Self-Encoder (OSE)`
+- `RoboOcc` --extends ⚠️ ⚠️--> `Geometry-aware Cross-Encoder (GCE)`

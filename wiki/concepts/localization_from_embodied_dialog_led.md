@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Localization from Embodied Dialog (LED)
 
-**Localization from Embodied Dialog (LED)** is the task of determining the physical location of an Observer (e.g., a robot or human) based solely on the history of a dialog. The goal is to predict the Observer's location within a radius of **3 meters** using conversational context that may include references to landmarks, directions, or spatial relationships described by participants. LED is one of three tasks defined on the [[Where Are You? Dataset]] (WAY), alongside other embodied dialog benchmarks.
+**Localization from Embodied Dialog (LED)** is the task of determining the physical location of an Observer (e.g., a robot or human) based solely on the history of a dialog. The goal is to predict the Observer's location within a radius of **3 meters** using conversational context that may include references to landmarks, directions, or spatial relationships described by participants. LED is one of three tasks defined on the Where Are You? Dataset (WAY), alongside other embodied dialog benchmarks.
 
 ## Task Definition
 
@@ -31,15 +31,15 @@ LED requires predicting the Observer's position given the dialog history. The mo
 
 LED **depends_on**:
 
-- [[Embodied Dialog]] ⚠️ ⚠️ — the broader framework in which an agent engages in conversation while situated in a physical environment. LEDs build on the assumption that dialog carries spatial information embedded in natural language.
-- [[Visual Dialog]] ⚠️ ⚠️ — because LED often uses visual grounding to link linguistic references to visual features. The dialog history typically originates from a visual dialog task where participants discuss images or video of the environment.
+- Embodied Dialog ⚠️ ⚠️ — the broader framework in which an agent engages in conversation while situated in a physical environment. LEDs build on the assumption that dialog carries spatial information embedded in natural language.
+- Visual Dialog ⚠️ ⚠️ — because LED often uses visual grounding to link linguistic references to visual features. The dialog history typically originates from a visual dialog task where participants discuss images or video of the environment.
 - **Dialog history** — the sequence of conversational turns between participants, which embeds spatial references.
 - **First-person views** — egocentric visual observations that accompany the dialog, providing visual context for location disambiguation.
 - **Top-down map** — a bird's-eye representation of the environment, used by baseline models to map linguistic spatial cues to candidate positions.
 
 ## Dataset
 
-LED is defined as one of three tasks in the [[Where Are You? Dataset]] (WAY). The dataset provides dialog histories paired with first-person views, top-down maps, and ground-truth observer positions. The task is evaluated on held-out buildings to test generalization.
+LED is defined as one of three tasks in the Where Are You? Dataset (WAY). The dataset provides dialog histories paired with first-person views, top-down maps, and ground-truth observer positions. The task is evaluated on held-out buildings to test generalization.
 
 ## Model and Ablations
 
@@ -53,10 +53,10 @@ The LED baseline model is a neural architecture that integrates dialog history, 
 
 | Relationship | Target            | Description |
 |--------------|-------------------|-------------|
-| depends_on   | [[Embodied Dialog]] ⚠️ ⚠️  | LED is a sub-task within embodied dialog, requiring situated conversation. |
-| depends_on   | [[Visual Dialog]] ⚠️ ⚠️    | Dialog history is generated in a visual dialog setting; spatial references are grounded in visual observations. |
-| part_of      | [[Where Are You? Dataset]] | LED is one of three tasks defined on the WAY dataset. |
-| uses         | [[Where Are You? Dataset]] | LED models are trained and evaluated on the WAY dataset. |
+| depends_on   | Embodied Dialog ⚠️ ⚠️  | LED is a sub-task within embodied dialog, requiring situated conversation. |
+| depends_on   | Visual Dialog ⚠️ ⚠️    | Dialog history is generated in a visual dialog setting; spatial references are grounded in visual observations. |
+| part_of      | Where Are You? Dataset | LED is one of three tasks defined on the WAY dataset. |
+| uses         | Where Are You? Dataset | LED models are trained and evaluated on the WAY dataset. |
 
 ## References
 

@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Visual Foundation Model (VFM) Distillation** is an algorithm that leverages pretrained [[Visual Foundation Model (VFM) | visual foundation models]] to transfer rich, open-set perceptual knowledge into a bird's-eye-view (BEV) representation. It is a core component of the [[CREStE]] framework and is designed to improve generalization to novel semantic classes, terrains, and dynamic entities.
+**Visual Foundation Model (VFM) Distillation** is an algorithm that leverages pretrained visual foundation models to transfer rich, open-set perceptual knowledge into a bird's-eye-view (BEV) representation. It is a core component of the CREStE framework and is designed to improve generalization to novel semantic classes, terrains, and dynamic entities.
 
 ## Description
 
@@ -33,8 +33,8 @@ No parameters are currently defined for this algorithm.
 
 ## Relationships
 
-- **Used by**: [[CREStE]]
-- **Depends on**: [[Visual Foundation Model (VFM)]] ⚠️ ⚠️ (pretrained encoders such as CLIP, DINOv2, or other foundation models).
+- **Used by**: CREStE
+- **Depends on**: Visual Foundation Model (VFM) ⚠️ ⚠️ (pretrained encoders such as CLIP, DINOv2, or other foundation models).
 
 ## References
 
@@ -43,4 +43,4 @@ No parameters are currently defined for this algorithm.
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual Foundation Model (VFM) Distillation` --[[extends]] ⚠️--> `CREStE`
+- `Visual Foundation Model (VFM) Distillation` --extends ⚠️--> `CREStE`

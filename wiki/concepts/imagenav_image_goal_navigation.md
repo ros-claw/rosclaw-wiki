@@ -24,21 +24,21 @@ This task is distinct from point-goal or language-goal navigation because the go
 
 ### Role in Training Mixtures
 
-ImageNav is a key component of the [[FiLM-Nav]] training data mixture. Its inclusion helps train navigation policies that can generalize across multiple goal modalities. The visual goal signal from ImageNav complements other tasks such as [[ObjectNav]] or [[LangNav]] ⚠️ within the mixture, improving the model’s ability to handle diverse goal representations.
+ImageNav is a key component of the FiLM-Nav training data mixture. Its inclusion helps train navigation policies that can generalize across multiple goal modalities. The visual goal signal from ImageNav complements other tasks such as ObjectNav or LangNav ⚠️ within the mixture, improving the model’s ability to handle diverse goal representations.
 
 ### Relationships
 
-- `part_of` → [[FiLM-Nav training data mixture]] ⚠️ — ImageNav samples are mixed with other navigation tasks during policy training.
-- `depends_on` → [[visual matching]] ⚠️ and [[spatial reasoning]] ⚠️ — the agent must compare its current view with the goal image and maintain a mental map of explored areas.
-- `contrasts_with` → [[PointGoal Navigation]] ⚠️ and [[Language Goal Navigation]] ⚠️ — the goal is given as an image rather than coordinates or natural language.
+- `part_of` → FiLM-Nav training data mixture ⚠️ — ImageNav samples are mixed with other navigation tasks during policy training.
+- `depends_on` → visual matching ⚠️ and spatial reasoning ⚠️ — the agent must compare its current view with the goal image and maintain a mental map of explored areas.
+- `contrasts_with` → PointGoal Navigation ⚠️ and Language Goal Navigation ⚠️ — the goal is given as an image rather than coordinates or natural language.
 
 ### See Also
 
-- [[Embodied AI navigation benchmarks]] ⚠️
-- [[Goal-conditioned reinforcement learning]] ⚠️
-- [[Sim-to-real transfer for visual navigation]] ⚠️
+- Embodied AI navigation benchmarks ⚠️
+- Goal-conditioned reinforcement learning ⚠️
+- Sim-to-real transfer for visual navigation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `ImageNav (Image Goal Navigation)` --[[related_to]] ⚠️--> `FiLM-Nav` _(wikilink)_
+- `ImageNav (Image Goal Navigation)` --related_to ⚠️--> `FiLM-Nav` _(wikilink)_

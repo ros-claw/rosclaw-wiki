@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## NeSy Exploration System
 
-The **NeSy Exploration System** (NeSy = Neural-Symbolic) is a hybrid exploration algorithm that couples [[Neural Semantic Cues]] ⚠️ ⚠️ ⚠️ with a [[Symbolic Heuristic Function]] ⚠️ ⚠️ ⚠️ to guide an agent’s exploration in unknown environments. It is designed for embodied navigation tasks where the agent must **efficiently gather task-related information** while **minimizing unnecessary repeat travel**.
+The **NeSy Exploration System** (NeSy = Neural-Symbolic) is a hybrid exploration algorithm that couples Neural Semantic Cues ⚠️ ⚠️ ⚠️ with a Symbolic Heuristic Function ⚠️ ⚠️ ⚠️ to guide an agent’s exploration in unknown environments. It is designed for embodied navigation tasks where the agent must **efficiently gather task-related information** while **minimizing unnecessary repeat travel**.
 
 ### Overview
 
@@ -28,8 +28,8 @@ NeSy combines the flexibility of neural scene understanding (e.g., semantic segm
 ### Relationships
 
 - **Implements**: Hybrid symbol grounding for exploration.
-- **Uses**: [[Neural Semantic Cues]] ⚠️ ⚠️ ⚠️ (e.g., object detection logits, semantic maps) and a [[Symbolic Heuristic Function]] ⚠️ ⚠️ ⚠️ (e.g., a frontier‑based utility that weighs novelty against semantic salience).
-- **Part of**: [[VL-Nav]] (Vision‑Language Navigation) – the NeSy exploration system is a core component that drives the physical navigation layer of a VL‑Nav agent.
+- **Uses**: Neural Semantic Cues ⚠️ ⚠️ ⚠️ (e.g., object detection logits, semantic maps) and a Symbolic Heuristic Function ⚠️ ⚠️ ⚠️ (e.g., a frontier‑based utility that weighs novelty against semantic salience).
+- **Part of**: VL-Nav (Vision‑Language Navigation) – the NeSy exploration system is a core component that drives the physical navigation layer of a VL‑Nav agent.
 
 ### Source
 
@@ -37,7 +37,7 @@ NeSy combines the flexibility of neural scene understanding (e.g., semantic segm
 
 ### See Also
 
-- [[Neural Semantic Cues]] ⚠️ ⚠️ ⚠️
-- [[Symbolic Heuristic Function]] ⚠️ ⚠️ ⚠️
-- [[VL-Nav]]
-- [[Hybrid Reasoning in Embodied AI]] ⚠️
+- Neural Semantic Cues ⚠️ ⚠️ ⚠️
+- Symbolic Heuristic Function ⚠️ ⚠️ ⚠️
+- VL-Nav
+- Hybrid Reasoning in Embodied AI ⚠️

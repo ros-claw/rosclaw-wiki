@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Template-based Instruction Generator
 
-A **Template-based instruction generator** is an [[Algorithm]] ⚠️ that produces navigational instructions for robots or agents by filling predefined sentence templates with spatial and object information. It represents a rule-based approach to natural language generation for human-robot interaction, serving as a baseline for more sophisticated methods.
+A **Template-based instruction generator** is an Algorithm ⚠️ that produces navigational instructions for robots or agents by filling predefined sentence templates with spatial and object information. It represents a rule-based approach to natural language generation for human-robot interaction, serving as a baseline for more sophisticated methods.
 
 ### Overview
 
@@ -22,7 +22,7 @@ Template-based generators operate by defining a set of syntactic frames (e.g., "
 
 ### Capabilities
 
-- Generates [[Navigation Instructions]] ⚠️ using fixed templates.
+- Generates Navigation Instructions ⚠️ using fixed templates.
 - Guarantees instruction comprehensibility by constraining output to known grammar patterns.
 - Suitable for controlled, low-resource environments where training data for neural methods is scarce.
 
@@ -30,8 +30,8 @@ Template-based generators operate by defining a set of syntactic frames (e.g., "
 
 The template-based instruction generator has been **compared_with** the following approaches:
 
-- **[[Automatic Instruction Generators]] ⚠️** – These include neural sequence-to-sequence models (e.g., LSTM-based or Transformer-based generators) that learn to produce instructions from demonstration or vision. Template-based generators are simpler, more interpretable, and require no training, but yield less diverse and less context-aware output.
-- **[[Human Instructors]] ⚠️** – Human-written instructions are natural, context-rich, and adaptive. The template method falls short in flexibility and expressiveness but can be preferred for consistency and repeatability in benchmarking.
+- **Automatic Instruction Generators ⚠️** – These include neural sequence-to-sequence models (e.g., LSTM-based or Transformer-based generators) that learn to produce instructions from demonstration or vision. Template-based generators are simpler, more interpretable, and require no training, but yield less diverse and less context-aware output.
+- **Human Instructors ⚠️** – Human-written instructions are natural, context-rich, and adaptive. The template method falls short in flexibility and expressiveness but can be preferred for consistency and repeatability in benchmarking.
 
 | Aspect | Template-based | Automatic (neural) | Human |
 |--------|----------------|--------------------|-------|
@@ -48,11 +48,11 @@ The template-based instruction generator has been **compared_with** the followin
 
 ### Sources
 
-- Primary: [[arXiv:2101.10504]] ⚠️ *"Comparing Template-based and Automatic Instruction Generators for Robot Navigation"* (2021).
+- Primary: arXiv:2101.10504 ⚠️ *"Comparing Template-based and Automatic Instruction Generators for Robot Navigation"* (2021).
 
 ### See Also
 
-- [[Automatic Instruction Generation]] ⚠️
-- [[Human Instruction Following]] ⚠️
-- [[Embodied Question Answering]] ⚠️
-- [[Sim-to-Real Transfer]] (for instruction generation evaluation)
+- Automatic Instruction Generation ⚠️
+- Human Instruction Following ⚠️
+- Embodied Question Answering ⚠️
+- Sim-to-Real Transfer (for instruction generation evaluation)

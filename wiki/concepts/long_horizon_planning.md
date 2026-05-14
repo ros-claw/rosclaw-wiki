@@ -29,14 +29,14 @@ Long-horizon planning involves generating a sequence of intermediate objectives 
 
 ## Relationships
 
-- **Achieved by** [[System 2]]. Long-horizon planning is a hallmark of System 2 thinking — slow, analytical, and rule-based — as opposed to the fast, intuitive responses of System 1.
+- **Achieved by** System 2. Long-horizon planning is a hallmark of System 2 thinking — slow, analytical, and rule-based — as opposed to the fast, intuitive responses of System 1.
 
 ## Related Concepts
 
-- [[Task and Motion Planning]] ⚠️ (TAMP) — often integrates long-horizon symbolic planning with geometric reasoning.
-- [[Hierarchical Reinforcement Learning]] — learns policies at multiple time scales.
-- [[Waypoint Tracking]] ⚠️ — execution layer that follows the planned milestones.
-- [[Model Predictive Control]] ⚠️ (MPC) — performs online receding-horizon optimization, a short-horizon counterpart.
+- Task and Motion Planning ⚠️ (TAMP) — often integrates long-horizon symbolic planning with geometric reasoning.
+- Hierarchical Reinforcement Learning — learns policies at multiple time scales.
+- Waypoint Tracking ⚠️ — execution layer that follows the planned milestones.
+- Model Predictive Control ⚠️ (MPC) — performs online receding-horizon optimization, a short-horizon counterpart.
 
 ## Usage in Embodied AI
 
@@ -48,9 +48,9 @@ In robotics and embodied agents, long-horizon planning enables systems to:
 
 ## Dependencies
 
-Long-horizon planning depends on [[World Models]] to simulate outcomes, [[State Estimation]] ⚠️ to maintain belief about the environment, and often [[Semantic Scene Graphs]] ⚠️ for spatial reasoning.
+Long-horizon planning depends on World Models to simulate outcomes, State Estimation ⚠️ to maintain belief about the environment, and often Semantic Scene Graphs ⚠️ for spatial reasoning.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `long-horizon planning` --[[related_to]] ⚠️--> `Hierarchical Reinforcement Learning` _(wikilink)_
+- `long-horizon planning` --related_to ⚠️--> `Hierarchical Reinforcement Learning` _(wikilink)_

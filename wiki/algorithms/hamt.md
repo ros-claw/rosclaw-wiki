@@ -31,7 +31,7 @@ source_type: arxiv_paper
 - **Text encoder**: BERT or RoBERTa language encoder
 - **Trajectory encoding**: Hierarchical temporal attention over history
 - **Action space**: Discrete (forward, turn left, turn right, stop)
-- **Datasets**: [[R2R]], [[R4R]] ⚠️ ⚠️ ⚠️, [[RxR]], [[REVERIE]]
+- **Datasets**: R2R, R4R ⚠️ ⚠️ ⚠️, RxR, REVERIE
 
 ## Architecture
 
@@ -57,37 +57,37 @@ An **adaptive routing module** dynamically decides which memory level to access 
 
 ## Performance
 
-On [[R2R]] test standard:
+On R2R test standard:
 - **Success Rate (SR)**: ~63%
 - **SPL (Success weighted by Path Length)**: ~57%
 
-On [[R4R]] ⚠️ ⚠️ ⚠️ validation:
+On R4R ⚠️ ⚠️ ⚠️ validation:
 - **Success Rate**: ~47%
 - **SPL**: ~42%
 
-On [[RxR]] test:
+On RxR test:
 - **Success Rate**: ~52%
 
 ## Relationships
 
-- **Evaluates on**: [[R2R]], [[R4R]] ⚠️ ⚠️ ⚠️, [[RxR]], [[REVERIE]] — comprehensive benchmark coverage
-- **Improves upon**: [[VLN-BERT]] — HAMT scales to longer trajectories via hierarchical memory
-- **Related to**: [[Recurrent-VLN-BERT]] — both use BERT-based encoders but HAMT adds explicit hierarchy
-- **Precedes**: [[DUET]] ⚠️ — later map-based methods build on HAMT's hierarchical reasoning
+- **Evaluates on**: R2R, R4R ⚠️ ⚠️ ⚠️, RxR, REVERIE — comprehensive benchmark coverage
+- **Improves upon**: VLN-BERT — HAMT scales to longer trajectories via hierarchical memory
+- **Related to**: Recurrent-VLN-BERT — both use BERT-based encoders but HAMT adds explicit hierarchy
+- **Precedes**: DUET ⚠️ — later map-based methods build on HAMT's hierarchical reasoning
 
 ## See Also
 
-- [[Vision-Language Navigation]] — the broader field
-- [[Transformer]] ⚠️ — the underlying architecture
-- [[Memory Networks]] ⚠️ — related memory-augmented neural architectures
-- [[R2R]] — the primary benchmark
+- Vision-Language Navigation — the broader field
+- Transformer ⚠️ — the underlying architecture
+- Memory Networks ⚠️ — related memory-augmented neural architectures
+- R2R — the primary benchmark
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `HAMT` --[[implements]] ⚠️ ⚠️ ⚠️--> `R2R`
-- `HAMT` --[[implements]] ⚠️ ⚠️ ⚠️--> `RxR`
-- `HAMT` --[[implements]] ⚠️ ⚠️ ⚠️--> `REVERIE`
-- `HAMT` --[[extends]] ⚠️ ⚠️--> `VLN-BERT`
-- `HAMT` --[[extends]] ⚠️ ⚠️--> `Recurrent-VLN-BERT`
-- `HAMT` --[[based_on]] ⚠️--> `Vision-Language Navigation`
+- `HAMT` --implements ⚠️ ⚠️ ⚠️--> `R2R`
+- `HAMT` --implements ⚠️ ⚠️ ⚠️--> `RxR`
+- `HAMT` --implements ⚠️ ⚠️ ⚠️--> `REVERIE`
+- `HAMT` --extends ⚠️ ⚠️--> `VLN-BERT`
+- `HAMT` --extends ⚠️ ⚠️--> `Recurrent-VLN-BERT`
+- `HAMT` --based_on ⚠️--> `Vision-Language Navigation`

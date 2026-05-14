@@ -41,7 +41,7 @@ Despite its strengths, the purely textual nature of NavCoT presents key limitati
 - **Lacks spatial grounding** — because reasoning is conducted entirely in language, the model cannot directly leverage geometric or visual features that are important for fine-grained navigation.
 - **Easily overfits to sparse annotated reasoning steps** — when training data contains only a limited set of reasoning patterns, the model tends to memorize them rather than learning generalizable spatial reasoning.
 
-These shortcomings have motivated subsequent work, such as [[FantasyVLN]], which explicitly improves spatial grounding in the chain-of-thought process.
+These shortcomings have motivated subsequent work, such as FantasyVLN, which explicitly improves spatial grounding in the chain-of-thought process.
 
 ## Training Data
 
@@ -57,14 +57,14 @@ Formalized labels for training enable the LLM to generate desired and reasonable
 
 ## Relationships
 
-- **uses** [[LLM]] ⚠️, [[world_model]], [[parameter_efficient_finetuning]]
+- **uses** LLM ⚠️, [[world_model]], [[parameter_efficient_finetuning]]
 - **depends_on** [[vision_and_language_navigation]]
-- **part_of** [[Chain-of-Thought methods for VLN]] ⚠️
-- **improved_by** [[FantasyVLN]]
+- **part_of** Chain-of-Thought methods for VLN ⚠️
+- **improved_by** FantasyVLN
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `navcot` --[[based_on]] ⚠️ ⚠️ ⚠️--> `world_model`
-- `navcot` --[[based_on]] ⚠️ ⚠️ ⚠️--> `parameter_efficient_finetuning`
-- `navcot` --[[based_on]] ⚠️ ⚠️ ⚠️--> `vision_and_language_navigation`
+- `navcot` --based_on ⚠️ ⚠️ ⚠️--> `world_model`
+- `navcot` --based_on ⚠️ ⚠️ ⚠️--> `parameter_efficient_finetuning`
+- `navcot` --based_on ⚠️ ⚠️ ⚠️--> `vision_and_language_navigation`

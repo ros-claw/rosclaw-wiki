@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # PathAgent
 
-**PathAgent** is an algorithmic component of the [[AO-Planner]] framework. It functions as a **high-level planner**, integrating path planning with visual context. The agent marks planned paths directly into image input and reasons the most probable trajectory by comprehending the full environmental information.
+**PathAgent** is an algorithmic component of the AO-Planner framework. It functions as a **high-level planner**, integrating path planning with visual context. The agent marks planned paths directly into image input and reasons the most probable trajectory by comprehending the full environmental information.
 
 ## Capabilities
 
@@ -30,12 +30,12 @@ source_type: arxiv_paper
 
 ## Dependencies
 
-- **Depends on** → [[Visual Affordances Prompting]] ⚠️ ⚠️: PathAgent relies on visual affordance cues to evaluate trajectory candidates in the image space.
+- **Depends on** → Visual Affordances Prompting ⚠️ ⚠️: PathAgent relies on visual affordance cues to evaluate trajectory candidates in the image space.
 
 ## Relationships
 
-- **Part of** → [[AO-Planner]]: PathAgent functions as the planning perception layer within the AO-Planner architecture.
-- **Depends on** → [[Visual Affordances Prompting]] ⚠️ ⚠️: For environmental understanding and path feasibility assessment.
+- **Part of** → AO-Planner: PathAgent functions as the planning perception layer within the AO-Planner architecture.
+- **Depends on** → Visual Affordances Prompting ⚠️ ⚠️: For environmental understanding and path feasibility assessment.
 
 ## Source
 
@@ -44,5 +44,5 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `PathAgent` --[[extends]] ⚠️--> `AO-Planner`
-- `PathAgent` --[[depends_on]] ⚠️--> `Visual Affordances Prompting`
+- `PathAgent` --extends ⚠️--> `AO-Planner`
+- `PathAgent` --depends_on ⚠️--> `Visual Affordances Prompting`

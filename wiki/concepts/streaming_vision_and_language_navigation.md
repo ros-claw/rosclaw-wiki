@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-Traditional [[Vision-and-Language Navigation (VLN)]] ⚠️ often assumes discrete snapshots or static observations. In contrast, Streaming VLN addresses the challenge of continuous perception and action in dynamic real-world settings. Agents must interpret a constant video feed while executing movement commands derived from human language, requiring tight integration of perception, reasoning, and control under strict latency constraints.
+Traditional Vision-and-Language Navigation (VLN) ⚠️ often assumes discrete snapshots or static observations. In contrast, Streaming VLN addresses the challenge of continuous perception and action in dynamic real-world settings. Agents must interpret a constant video feed while executing movement commands derived from human language, requiring tight integration of perception, reasoning, and control under strict latency constraints.
 
 ### Task Definition
 
@@ -32,20 +32,20 @@ Traditional [[Vision-and-Language Navigation (VLN)]] ⚠️ often assumes discre
 
 ### Implemented By
 
-- **[[StreamVLN]]** — a specific system or framework that realizes the Streaming VLN paradigm.
+- **StreamVLN** — a specific system or framework that realizes the Streaming VLN paradigm.
 
 ### Uses
 
-- **[[Video-LLMs]]** — large language models trained on video data, which can process continuous visual input and generate language-grounded outputs for action selection.
+- **Video-LLMs** — large language models trained on video data, which can process continuous visual input and generate language-grounded outputs for action selection.
 
 ### Related Concepts
 
-- [[Embodied AI]] — the broader field of agents that perceive and act in physical environments.
-- [[Sim-to-Real Transfer]] — techniques to bridge simulated training and real-world deployment, relevant to Streaming VLN's low-latency requirements.
+- Embodied AI — the broader field of agents that perceive and act in physical environments.
+- Sim-to-Real Transfer — techniques to bridge simulated training and real-world deployment, relevant to Streaming VLN's low-latency requirements.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Streaming Vision-and-Language Navigation` --[[applies_to]] ⚠️--> `Video-LLMs`
+- `Streaming Vision-and-Language Navigation` --applies_to ⚠️--> `Video-LLMs`
 **Pending review:**
-- `Streaming Vision-and-Language Navigation` --[[related_to]] ⚠️--> `StreamVLN` _(wikilink)_
+- `Streaming Vision-and-Language Navigation` --related_to ⚠️--> `StreamVLN` _(wikilink)_

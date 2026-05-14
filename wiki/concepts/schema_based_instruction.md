@@ -37,17 +37,17 @@ Schema-based instruction is a flexible framework that casts various navigation t
 
 ## Usage in Models
 
-Schema-based instruction is explicitly **used by** [[NaviLLM]], a large language model–based navigation agent that leverages this approach to perform visual navigation, question answering, and dense captioning with a single learned policy.
+Schema-based instruction is explicitly **used by** NaviLLM, a large language model–based navigation agent that leverages this approach to perform visual navigation, question answering, and dense captioning with a single learned policy.
 
 ## Relationship Annotations
 
-- **[[NaviLLM]]** `implements` *Schema-based instruction*
+- **NaviLLM** `implements` *Schema-based instruction*
 - *Schema-based instruction* `depends_on` `sequence-to-sequence generation` (implicit)
-- *Schema-based instruction* `part_of` `task unification` in `embodied AI` (see [[Embodied AI]])
+- *Schema-based instruction* `part_of` `task unification` in `embodied AI` (see Embodied AI)
 
 ## Additional Context
 
-By treating navigation commands, object grounding queries, and descriptive prompts as variations of a generative task, schema-based instruction reduces the need for handcrafted reward functions and auxiliary heads. This design aligns with the broader trend in [[Vision-Language-Action Models]] ⚠️ ⚠️ (VLA) that favor generative formulations over discriminative ones.
+By treating navigation commands, object grounding queries, and descriptive prompts as variations of a generative task, schema-based instruction reduces the need for handcrafted reward functions and auxiliary heads. This design aligns with the broader trend in Vision-Language-Action Models ⚠️ ⚠️ (VLA) that favor generative formulations over discriminative ones.
 
 ## Summary
 
@@ -55,12 +55,12 @@ Schema-based instruction allows LLMs to handle multiple embodied navigation task
 
 ## Related Pages
 
-- [[NaviLLM]]
-- [[Embodied AI]]
-- [[Vision-Language-Action Models]] ⚠️ ⚠️
-- [[Task Unification]] ⚠️
+- NaviLLM
+- Embodied AI
+- Vision-Language-Action Models ⚠️ ⚠️
+- Task Unification ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Schema-based Instruction` --[[related_to]] ⚠️--> `NaviLLM` _(wikilink)_
+- `Schema-based Instruction` --related_to ⚠️--> `NaviLLM` _(wikilink)_

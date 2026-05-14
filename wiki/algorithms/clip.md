@@ -17,7 +17,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-CLIP is a cross-modal pretrained model that learns joint representations of vision and language from large-scale image-text pairs. Developed by OpenAI, it enables zero-shot transfer of visual concepts by aligning images and their natural language descriptions in a shared embedding space. In the ROSClaw knowledge base, CLIP serves as a foundational algorithm for bridging perception and language in embodied AI systems, notably as a component of [[ProbES]] and [[CLIP-Nav]].
+CLIP is a cross-modal pretrained model that learns joint representations of vision and language from large-scale image-text pairs. Developed by OpenAI, it enables zero-shot transfer of visual concepts by aligning images and their natural language descriptions in a shared embedding space. In the ROSClaw knowledge base, CLIP serves as a foundational algorithm for bridging perception and language in embodied AI systems, notably as a component of ProbES and CLIP-Nav.
 
 ## Parameters
 
@@ -32,18 +32,18 @@ CLIP is a cross-modal pretrained model that learns joint representations of visi
 - **Zero-shot language grounding**: CLIP links natural language expressions (e.g., "the red mug") directly to corresponding visual regions, enabling vision-language navigation and instruction following.
 - **Image-text matching**: CLIP computes similarity scores between images and textual descriptions, enabling retrieval and verification tasks.
 - **Cross-modal representation learning**: The model learns a shared embedding space where images and their captions are pulled close together, while misaligned pairs are pushed apart.
-- **Sequential navigational decision making**: In integrated systems, CLIP embeddings can guide step-by-step navigation decisions by grounding subsequent language commands or subgoals in visual observations (e.g., in [[CLIP-Nav]]).
+- **Sequential navigational decision making**: In integrated systems, CLIP embeddings can guide step-by-step navigation decisions by grounding subsequent language commands or subgoals in visual observations (e.g., in CLIP-Nav).
 
 ## Relationships
 
-- Used by: [[ProbES]], [[CLIP-Nav]]
+- Used by: ProbES, CLIP-Nav
 
-In [[ProbES]], CLIP is integrated as the vision-language backbone that enables automatic generation of structured instructions for sampled robot trajectories.  
-In [[CLIP-Nav]], CLIP provides zero-shot language grounding and object recognition to drive sequential navigational decisions in unseen environments.
+In ProbES, CLIP is integrated as the vision-language backbone that enables automatic generation of structured instructions for sampled robot trajectories.  
+In CLIP-Nav, CLIP provides zero-shot language grounding and object recognition to drive sequential navigational decisions in unseen environments.
 
 ## Role in ProbES
 
-CLIP provides the knowledge to automatically generate structured instructions for sampled trajectories, enabling self-supervised data generation. Specifically, [[ProbES]] leverages CLIP’s zero-shot image-language alignment to label visual observations from robot execution with natural language descriptions, which are then used to train downstream policies or reward models. This removes the need for manual annotation and allows scalable, self-supervised data collection across diverse manipulation tasks.
+CLIP provides the knowledge to automatically generate structured instructions for sampled trajectories, enabling self-supervised data generation. Specifically, ProbES leverages CLIP’s zero-shot image-language alignment to label visual observations from robot execution with natural language descriptions, which are then used to train downstream policies or reward models. This removes the need for manual annotation and allows scalable, self-supervised data collection across diverse manipulation tasks.
 
 ## Role in CLIP-Nav
 
@@ -52,5 +52,5 @@ In the CLIP-Nav framework, CLIP acts as the core perceptual module for zero-shot
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `CLIP` --[[extends]] ⚠️ ⚠️--> `ProbES`
-- `CLIP` --[[extends]] ⚠️ ⚠️--> `CLIP-Nav`
+- `CLIP` --extends ⚠️ ⚠️--> `ProbES`
+- `CLIP` --extends ⚠️ ⚠️--> `CLIP-Nav`

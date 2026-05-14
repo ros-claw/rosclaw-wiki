@@ -24,17 +24,17 @@ The core difficulty of Sim2Real is bridging the *reality gap*—the discrepancy 
 
 ### Gap Sources
 
-Traditional Sim2Real approaches rely on map or depth inputs, which can introduce significant transfer gaps due to differences in sensor fidelity, lighting, or scene geometry. The video-only approach of [[NaVid]] eliminates these gaps entirely, enabling a more direct and robust transfer from simulation to reality.
+Traditional Sim2Real approaches rely on map or depth inputs, which can introduce significant transfer gaps due to differences in sensor fidelity, lighting, or scene geometry. The video-only approach of NaVid eliminates these gaps entirely, enabling a more direct and robust transfer from simulation to reality.
 
 ## Approaches
 
-One notable advancement in Sim2Real is the work of NaVid, a vision-language navigation policy that demonstrates **superior Sim2Real transfer** without requiring depth or map information. NaVid is a key mitigator of the Sim2Real gap (*is mitigated by [[NaVid]]*), showing that careful design of input modalities and training procedures can dramatically reduce the obstacles to real-world deployment.
+One notable advancement in Sim2Real is the work of NaVid, a vision-language navigation policy that demonstrates **superior Sim2Real transfer** without requiring depth or map information. NaVid is a key mitigator of the Sim2Real gap (*is mitigated by NaVid*), showing that careful design of input modalities and training procedures can dramatically reduce the obstacles to real-world deployment.
 
 ## Relationships
 
-- **Depends on**: [[Domain Randomization]] ⚠️, [[Domain Adaptation]] ⚠️
-- **Is mitigated by**: [[NaVid]]
-- **Related concepts**: [[Embodied AI]], [[Sim-to-Real Gap]] ⚠️, [[Reality Gap]] ⚠️
+- **Depends on**: Domain Randomization ⚠️, Domain Adaptation ⚠️
+- **Is mitigated by**: NaVid
+- **Related concepts**: Embodied AI, Sim-to-Real Gap ⚠️, Reality Gap ⚠️
 
 ---
 
@@ -43,6 +43,6 @@ One notable advancement in Sim2Real is the work of NaVid, a vision-language navi
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Sim2Real` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Sim2Real` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Sim2Real` --[[related_to]] ⚠️ ⚠️--> `NaVid` _(wikilink)_
+- `Sim2Real` --related_to ⚠️ ⚠️--> `NaVid` _(wikilink)_

@@ -24,14 +24,14 @@ source_type: arxiv_paper
 
 ### Applications
 
-Dual-System Design is applied to [[DualVLN]], a vision-language navigation system that uses this architecture to combine reasoning with local action selection.
+Dual-System Design is applied to DualVLN, a vision-language navigation system that uses this architecture to combine reasoning with local action selection.
 
 ### Related Concepts
 
-- Contrasts with [[end-to-end pipelines]] ⚠️, which typically couple reasoning and action in a single monolithic model, often at the cost of interpretability and modularity.
-- Draws inspiration from [[System 1 / System 2]] ⚠️ cognitive theory (often referenced in AI literature).
-- Shares principles with [[hierarchical reinforcement learning]] (HRL) and [[mixture of experts]] (MoE) architectures.
-- Directly related to [[vision-language navigation]], as DualVLN exemplifies the dual-system paradigm in that domain.
+- Contrasts with end-to-end pipelines ⚠️, which typically couple reasoning and action in a single monolithic model, often at the cost of interpretability and modularity.
+- Draws inspiration from System 1 / System 2 ⚠️ cognitive theory (often referenced in AI literature).
+- Shares principles with hierarchical reinforcement learning (HRL) and mixture of experts (MoE) architectures.
+- Directly related to vision-language navigation, as DualVLN exemplifies the dual-system paradigm in that domain.
 
 ### Sources
 

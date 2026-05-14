@@ -14,15 +14,15 @@ source_type: arxiv_paper
 
 # MC-GPT
 
-**MC-GPT** (Memory, Strategies, and Chain-of-Thoughts) is a suite of techniques for **[[Vision-and-Language Navigation]] (VLN)** that integrates a **[[Topological Map]] ⚠️ ⚠️ ⚠️** for memory, **[[Navigation Chain of Thoughts]]** for diverse reasoning, and a pipeline connecting perception and action prediction modules. It leverages **[[Large Language Models]] (LLMs)** to enhance navigation ability and interpretability in embodied agents, addressing key limitations in memory construction and navigation strategy diversity found in existing LLM-based VLN methods.
+**MC-GPT** (Memory, Strategies, and Chain-of-Thoughts) is a suite of techniques for **Vision-and-Language Navigation (VLN)** that integrates a **Topological Map ⚠️ ⚠️ ⚠️** for memory, **Navigation Chain of Thoughts** for diverse reasoning, and a pipeline connecting perception and action prediction modules. It leverages **Large Language Models (LLMs)** to enhance navigation ability and interpretability in embodied agents, addressing key limitations in memory construction and navigation strategy diversity found in existing LLM-based VLN methods.
 
 ## Capabilities
 
 MC-GPT provides the following capabilities:
 
 - Navigate to a destination following natural language instructions
-- Maintain a **[[Topological Map]] ⚠️ ⚠️ ⚠️** of navigation history
-- Use **[[Navigation Chain of Thoughts]]** for diverse action strategies
+- Maintain a **Topological Map ⚠️ ⚠️ ⚠️** of navigation history
+- Use **Navigation Chain of Thoughts** for diverse action strategies
 - Leverage human navigation examples to enrich strategy generation
 - Improve interpretability of navigation reasoning compared to black-box models
 
@@ -30,11 +30,11 @@ MC-GPT provides the following capabilities:
 
 MC-GPT **depends_on**:
 
-- [[Large Language Models]] – for reasoning and instruction understanding
-- [[Topological Map]] ⚠️ ⚠️ ⚠️ (serves as the memory representation) – to represent and recall spatial history
-- [[Navigation Chain of Thoughts]] – to generate diverse strategies
-- [[Perception Module]] ⚠️ – to process egocentric visual observations
-- [[Action Prediction Module]] ⚠️ – to select and execute the next navigation action
+- Large Language Models – for reasoning and instruction understanding
+- Topological Map ⚠️ ⚠️ ⚠️ (serves as the memory representation) – to represent and recall spatial history
+- Navigation Chain of Thoughts – to generate diverse strategies
+- Perception Module ⚠️ – to process egocentric visual observations
+- Action Prediction Module ⚠️ – to select and execute the next navigation action
 
 ## Components
 
@@ -53,7 +53,7 @@ At each step, the agent receives a natural language instruction and an egocentri
 3. Feeds the map, current observation, instruction, and chain-of-thought into an LLM.
 4. The LLM outputs a reasoning trace and selects the next action via the action prediction module, improving both success rate and interpretability.
 
-This modular design makes MC-GPT an [[embodied AI]] framework adaptable to different robot platforms and environments.
+This modular design makes MC-GPT an embodied AI framework adaptable to different robot platforms and environments.
 
 ## Key Insights
 
@@ -65,7 +65,7 @@ MC-GPT addresses two core limitations of prior LLM-based VLN methods:
 
 MC-GPT is evaluated on standard VLN benchmarks:
 
-- **[[REVERIE]]** – Remote Visual Referring Expression Instruction following in Embodied environments
-- **[[R2R]]** – Room-to-Room navigation dataset
+- **REVERIE** – Remote Visual Referring Expression Instruction following in Embodied environments
+- **R2R** – Room-to-Room navigation dataset
 
 These datasets test the agent’s ability to follow natural language instructions in realistic indoor environments.

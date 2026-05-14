@@ -27,8 +27,8 @@ The Primitive Skill Tree framework encodes low-level robot capabilities (e.g., p
 
 ## Relationships
 
-- `used_by` → [[AINav]] – The [[AINav]] system employs the Primitive Skill Tree to plan navigation and manipulation tasks.
-- `implements` → [[Task Planning with LLMs]] ⚠️ ⚠️ – This method realizes the broader concept of [[Task Planning with LLMs]] ⚠️ ⚠️ by providing a concrete skill representation for LLM-based decomposition.
+- `used_by` → AINav – The AINav system employs the Primitive Skill Tree to plan navigation and manipulation tasks.
+- `implements` → Task Planning with LLMs ⚠️ ⚠️ – This method realizes the broader concept of Task Planning with LLMs ⚠️ ⚠️ by providing a concrete skill representation for LLM-based decomposition.
 
 ## Notes
 

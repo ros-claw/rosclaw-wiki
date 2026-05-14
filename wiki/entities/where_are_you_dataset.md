@@ -40,9 +40,9 @@ The Observer and Locator roles are clearly separated, forcing the agents to disa
 
 The dataset defines three distinct tasks, each highlighted in the original paper:
 
-1. **[[Localization from Embodied Dialog (LED)]]** — The Locator must locate the Observer based solely on dialog history and map information.
-2. **[[Embodied Visual Dialog]]** — The Observer must answer visual questions about its surroundings while the Locator uses those answers to infer location.
-3. **[[Cooperative Localization]]** — Both agents actively communicate and act to determine the Observer’s position.
+1. **Localization from Embodied Dialog (LED)** — The Locator must locate the Observer based solely on dialog history and map information.
+2. **Embodied Visual Dialog** — The Observer must answer visual questions about its surroundings while the Locator uses those answers to infer location.
+3. **Cooperative Localization** — Both agents actively communicate and act to determine the Observer’s position.
 
 These tasks benchmark different aspects of spatial awareness, dialog grounding, and cooperative reasoning.
 
@@ -50,18 +50,18 @@ These tasks benchmark different aspects of spatial awareness, dialog grounding, 
 
 ### Relationships
 
-- **Used by:** [[Localization from Embodied Dialog (LED)]], [[Embodied Visual Dialog]], [[Cooperative Localization]]
-- **Depends on:** [[3D environment]] ⚠️, [[top-down map]] ⚠️
+- **Used by:** Localization from Embodied Dialog (LED), Embodied Visual Dialog, Cooperative Localization
+- **Depends on:** 3D environment ⚠️, top-down map ⚠️
 
 ---
 
 ### See Also
 
-- [[Human-Robot Dialog Datasets]] ⚠️  
-- [[Spatial Language Grounding]] ⚠️  
-- [[Sim-to-Real Transfer for Localization]] ⚠️
+- Human-Robot Dialog Datasets ⚠️  
+- Spatial Language Grounding ⚠️  
+- Sim-to-Real Transfer for Localization ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Where Are You? Dataset` --[[related_to]] ⚠️--> `Localization from Embodied Dialog (LED)`
+- `Where Are You? Dataset` --related_to ⚠️--> `Localization from Embodied Dialog (LED)`

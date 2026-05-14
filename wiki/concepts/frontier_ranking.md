@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Frontier Ranking
 
-**Frontier Ranking** is a concept within [[Coarse-to-Fine Reasoning]] that selects promising exploration frontiers during a coarse exploration step. It acts as a filtering mechanism to prioritize regions of interest before finer-grained analysis or action selection.
+**Frontier Ranking** is a concept within Coarse-to-Fine Reasoning that selects promising exploration frontiers during a coarse exploration step. It acts as a filtering mechanism to prioritize regions of interest before finer-grained analysis or action selection.
 
 ## Capabilities
 
@@ -23,9 +23,9 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **part of** [[Coarse-to-Fine Reasoning]]
-- **uses** [[Frontier Detection]] ⚠️ to identify candidate regions
-- **depends_on** [[Exploration Policy]] to define criteria for "promising"
+- **part of** Coarse-to-Fine Reasoning
+- **uses** Frontier Detection ⚠️ to identify candidate regions
+- **depends_on** Exploration Policy to define criteria for "promising"
 - **implements** a filtering function that reduces the state space for subsequent fine-grained reasoning
 
 ## Source
@@ -35,4 +35,4 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Frontier Ranking` --[[related_to]] ⚠️--> `Coarse-to-Fine Reasoning` _(wikilink)_
+- `Frontier Ranking` --related_to ⚠️--> `Coarse-to-Fine Reasoning` _(wikilink)_

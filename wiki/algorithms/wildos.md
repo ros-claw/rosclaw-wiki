@@ -24,10 +24,10 @@ source_type: arxiv_paper
 | **Type** | Unified system for long-range open-vocabulary object search |
 | **Inputs** | Depth images, RGB images, open-vocabulary query |
 | **Outputs** | Navigation commands to the target object |
-| **Modules** | [[ExploRFM]], [[Particle Filter Coarse Localization]], [[Sparse Navigation Graph]] ⚠️ ⚠️ ⚠️ ⚠️, [[Hierarchical Planner]] |
-| **Vision Module** | [[ExploRFM]] |
-| **Goal Localization** | [[Particle Filter]] ⚠️ ⚠️ (probabilistic triangulation) |
-| **Planner** | [[Hierarchical Planner]] |
+| **Modules** | ExploRFM, Particle Filter Coarse Localization, Sparse Navigation Graph ⚠️ ⚠️ ⚠️ ⚠️, Hierarchical Planner |
+| **Vision Module** | ExploRFM |
+| **Goal Localization** | Particle Filter ⚠️ ⚠️ (probabilistic triangulation) |
+| **Planner** | Hierarchical Planner |
 
 ## Capabilities
 
@@ -46,11 +46,11 @@ WildOS consists of five integrated components:
 2. **ExploRFM Vision Module** – computes visual traversability, identifies frontiers, and evaluates visual similarity to the query using foundation models.
 3. **Probabilistic Goal Triangulation via Particle Filter** – fuses multiple observations to estimate the location of the target object, even when the object is beyond the depth sensor range.
 4. **Frontier Node Scoring** – combines geometric frontier exploration with visual-semantic cues from ExploRFM to prioritize promising regions.
-5. **Hierarchical Planning** – uses a [[Hierarchical Planner]] to generate safe, efficient navigation commands toward the estimated goal.
+5. **Hierarchical Planning** – uses a Hierarchical Planner to generate safe, efficient navigation commands toward the estimated goal.
 
 ## System Architecture
 
-WildOS combines a **[[Sparse Navigation Graph]] ⚠️ ⚠️ ⚠️ ⚠️** for spatial memory with **[[ExploRFM]]**, a foundation-model-based vision module that scores frontier nodes. A **[[Particle Filter Coarse Localization]]** then probabilistically triangulates candidate goal positions for the target open-vocabulary query, extending the robot's perception horizon beyond its depth sensor range. The [[Hierarchical Planner]] orchestrates exploration and goal‑directed navigation, ensuring both semantic awareness and geometric safety. This architecture allows the system to maintain a rough mental map while focusing exploration on semantically promising regions.
+WildOS combines a **Sparse Navigation Graph ⚠️ ⚠️ ⚠️ ⚠️** for spatial memory with **ExploRFM**, a foundation-model-based vision module that scores frontier nodes. A **Particle Filter Coarse Localization** then probabilistically triangulates candidate goal positions for the target open-vocabulary query, extending the robot's perception horizon beyond its depth sensor range. The Hierarchical Planner orchestrates exploration and goal‑directed navigation, ensuring both semantic awareness and geometric safety. This architecture allows the system to maintain a rough mental map while focusing exploration on semantically promising regions.
 
 ## Key Insight
 
@@ -62,24 +62,24 @@ In field experiments across off-road and urban terrains, WildOS significantly ou
 
 ## Relationships
 
-- **Uses:** [[ROS2]], [[ExploRFM]], [[Particle Filter]] ⚠️ ⚠️, [[Hierarchical Planner]], [[Sparse Navigation Graph]] ⚠️ ⚠️ ⚠️ ⚠️
-- **Depends On:** [[Vision Foundation Models]] ⚠️ ⚠️, [[Depth Sensing]] ⚠️ ⚠️, [[Geometric Frontier Exploration]] ⚠️ ⚠️
-- **Implements:** [[Open-Vocabulary Object Search]] (long-range variant)
+- **Uses:** ROS2, ExploRFM, Particle Filter ⚠️ ⚠️, Hierarchical Planner, Sparse Navigation Graph ⚠️ ⚠️ ⚠️ ⚠️
+- **Depends On:** Vision Foundation Models ⚠️ ⚠️, Depth Sensing ⚠️ ⚠️, Geometric Frontier Exploration ⚠️ ⚠️
+- **Implements:** Open-Vocabulary Object Search (long-range variant)
 
 ## See Also
 
-- [[ExploRFM]] – vision foundation module used by WildOS
-- [[Particle Filter Coarse Localization]] – probabilistic goal estimation component
-- [[Sparse Navigation Graph]] ⚠️ ⚠️ ⚠️ ⚠️ – topological memory structure
-- [[Hierarchical Planner]] – navigation planner used in WildOS
-- [[Vision Foundation Models]] ⚠️ ⚠️ – backbone for open-vocabulary understanding
-- [[Depth Sensing]] ⚠️ ⚠️ – sensor modality for geometric safety
-- [[Geometric Frontier Exploration]] ⚠️ ⚠️ – safety‑guaranteed exploration strategy
-- [[Open-Vocabulary Object Search]] – the general problem WildOS solves
+- ExploRFM – vision foundation module used by WildOS
+- Particle Filter Coarse Localization – probabilistic goal estimation component
+- Sparse Navigation Graph ⚠️ ⚠️ ⚠️ ⚠️ – topological memory structure
+- Hierarchical Planner – navigation planner used in WildOS
+- Vision Foundation Models ⚠️ ⚠️ – backbone for open-vocabulary understanding
+- Depth Sensing ⚠️ ⚠️ – sensor modality for geometric safety
+- Geometric Frontier Exploration ⚠️ ⚠️ – safety‑guaranteed exploration strategy
+- Open-Vocabulary Object Search – the general problem WildOS solves
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `WildOS` --[[extends]] ⚠️ ⚠️--> `ExploRFM`
-- `WildOS` --[[extends]] ⚠️ ⚠️--> `Particle Filter Coarse Localization`
-- `WildOS` --[[based_on]] ⚠️--> `Open-Vocabulary Object Search`
+- `WildOS` --extends ⚠️ ⚠️--> `ExploRFM`
+- `WildOS` --extends ⚠️ ⚠️--> `Particle Filter Coarse Localization`
+- `WildOS` --based_on ⚠️--> `Open-Vocabulary Object Search`

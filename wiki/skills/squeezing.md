@@ -22,22 +22,22 @@ source_type: arxiv_paper
 
 #### Learning Source
 
-Squeezing is **learned_from** an [[Reinforcement Learning Expert]] ⚠️ specifically trained in a squeezing-dense environment. The expert demonstrates optimal behavior for tight passages, which is then distilled into the agent's policy.
+Squeezing is **learned_from** an Reinforcement Learning Expert ⚠️ specifically trained in a squeezing-dense environment. The expert demonstrates optimal behavior for tight passages, which is then distilled into the agent's policy.
 
-#### Role in [[MM-Nav]]
+#### Role in MM-Nav
 
 Squeezing is a core component of the **MM-Nav** (Multi-Modal Navigation) system. It is **part_of** the suite of capabilities that allow MM-Nav to handle diverse terrain and obstacle configurations. Without squeezing, the navigator would be unable to exploit short routes through narrow corridors or between closely spaced objects.
 
 #### Related Skills
 
-- [[Local Obstacle Avoidance]] ⚠️ — complements squeezing by providing reactive collision avoidance.
-- [[Path Planning in Constrained Spaces]] ⚠️ — higher-level planning that invokes squeezing when needed.
+- Local Obstacle Avoidance ⚠️ — complements squeezing by providing reactive collision avoidance.
+- Path Planning in Constrained Spaces ⚠️ — higher-level planning that invokes squeezing when needed.
 
 ---
 
-*Source: [[arxiv paper|papers/2510.03142.pdf]]*
+*Source: papers/2510.03142.pdf*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Squeezing` --[[uses]] ⚠️--> `MM-Nav`
+- `Squeezing` --uses ⚠️--> `MM-Nav`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Supervised Reinforcement Asynchronous Learning (SRAL)
 
-**Supervised Reinforcement Asynchronous Learning** (SRAL) is a hybrid algorithm that combines [[Supervised Learning]] ⚠️ ⚠️ for position prediction with [[Reinforcement Learning]] for continuous control in the context of instruction-following autonomous flight. It enables a [[Quadcopter]] ⚠️ to map natural language instructions and first-person observations to continuous flight commands without requiring autonomous flight in the physical environment during training.
+**Supervised Reinforcement Asynchronous Learning** (SRAL) is a hybrid algorithm that combines Supervised Learning ⚠️ ⚠️ for position prediction with Reinforcement Learning for continuous control in the context of instruction-following autonomous flight. It enables a Quadcopter ⚠️ to map natural language instructions and first-person observations to continuous flight commands without requiring autonomous flight in the physical environment during training.
 
 ### Overview
 
@@ -24,7 +24,7 @@ SRAL addresses the challenge of grounding natural language instructions in conti
 
 - **Composition**: Supervised learning for position prediction + Reinforcement learning for continuous control.
 - **Training Requirement**: No autonomous flight in the physical environment during training.
-- **Framework**: Joint simulation and real-world learning ([[Sim-to-Real]] ⚠️ ⚠️).
+- **Framework**: Joint simulation and real-world learning (Sim-to-Real ⚠️ ⚠️).
 
 ### Capabilities
 
@@ -39,10 +39,10 @@ Learning uses both simulation and real environments without requiring autonomous
 
 ### Relationships
 
-- **Uses**: [[Simulated Flight]] ⚠️, [[Real Quadcopter]] ⚠️, [[First-Person Observations]] ⚠️
-- **Implements**: [[Instruction Following]] ⚠️, [[Continuous Control Mapping]] ⚠️
-- **Depends on**: [[Supervised Learning]] ⚠️ ⚠️, [[Reinforcement Learning]], [[Sim-to-Real]] ⚠️ ⚠️ transfer techniques
-- **Related to**: [[Embodied AI]], [[Vision-Language Models]] ⚠️, [[Asynchronous Learning]] ⚠️
+- **Uses**: Simulated Flight ⚠️, Real Quadcopter ⚠️, First-Person Observations ⚠️
+- **Implements**: Instruction Following ⚠️, Continuous Control Mapping ⚠️
+- **Depends on**: Supervised Learning ⚠️ ⚠️, Reinforcement Learning, Sim-to-Real ⚠️ ⚠️ transfer techniques
+- **Related to**: Embodied AI, Vision-Language Models ⚠️, Asynchronous Learning ⚠️
 
 ### References
 
@@ -51,4 +51,4 @@ Learning uses both simulation and real environments without requiring autonomous
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Supervised Reinforcement Asynchronous Learning` --[[based_on]] ⚠️--> `Embodied AI`
+- `Supervised Reinforcement Asynchronous Learning` --based_on ⚠️--> `Embodied AI`

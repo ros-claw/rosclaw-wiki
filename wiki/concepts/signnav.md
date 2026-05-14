@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**SignNav** is a novel [[Embodied Navigation]] task in which an agent must interpret **[[Semantic Hints]] ⚠️ ⚠️** provided by [[Signage Placement]] ⚠️ ⚠️ (e.g., directional signs in hospitals, airports, or shopping malls) to reach a destination within a novel [[Large-Scale Indoor Environments (LSI)]] ⚠️. Unlike traditional navigation tasks that rely solely on geometric maps or pre-defined paths, SignNav requires understanding human-readable signs and reasoning about their spatial semantics.
+**SignNav** is a novel Embodied Navigation task in which an agent must interpret **Semantic Hints ⚠️ ⚠️** provided by Signage Placement ⚠️ ⚠️ (e.g., directional signs in hospitals, airports, or shopping malls) to reach a destination within a novel Large-Scale Indoor Environments (LSI) ⚠️. Unlike traditional navigation tasks that rely solely on geometric maps or pre-defined paths, SignNav requires understanding human-readable signs and reasoning about their spatial semantics.
 
 ## Definition
 
@@ -35,18 +35,18 @@ SignNav is defined as an embodied navigation task where an agent leverages seman
 
 ## Relationships
 
-- **part_of**: [[Embodied Navigation]] – SignNav is a specialized form of embodied navigation.
-- **relies_on**: [[Signage Placement]] ⚠️ ⚠️ – The task assumes signs exist and are placed in the environment according to typical human design.
-- **relies_on**: [[Semantic Hints]] ⚠️ ⚠️ – The core information source is semantic content extracted from signs.
-- **depends_on**: [[Large-Scale Indoor Environments]] ⚠️ – The context is novel, large-scale indoor spaces where prior maps are unavailable.
+- **part_of**: Embodied Navigation – SignNav is a specialized form of embodied navigation.
+- **relies_on**: Signage Placement ⚠️ ⚠️ – The task assumes signs exist and are placed in the environment according to typical human design.
+- **relies_on**: Semantic Hints ⚠️ ⚠️ – The core information source is semantic content extracted from signs.
+- **depends_on**: Large-Scale Indoor Environments ⚠️ – The context is novel, large-scale indoor spaces where prior maps are unavailable.
 
 ## See Also
 
-- [[Embodied AI]]
-- [[VLM for Navigation]] ⚠️
-- [[Visual Language Models]] ⚠️
+- Embodied AI
+- VLM for Navigation ⚠️
+- Visual Language Models ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `SignNav` --[[related_to]] ⚠️--> `Embodied AI`
+- `SignNav` --related_to ⚠️--> `Embodied AI`

@@ -15,7 +15,7 @@ source_type: arxiv_paper
 # Future-view Image Semantics
 
 **Type:** concept  
-**Source:** [[2304.04907.pdf]] ⚠️ (arxiv)
+**Source:** 2304.04907.pdf ⚠️ (arxiv)
 
 ## Definition
 
@@ -28,8 +28,8 @@ Future-view image semantics refers to the semantic content—such as objects, la
 
 ## Relationships
 
-- Used by **[[VLN-SIG]]** (`used_by`) to condition action prediction on anticipatory semantics.
-- Related to **[[Vision-and-Language Navigation]]** (`related_to`) as a mechanism for grounding language instructions in expected visual outcomes.
+- Used by **VLN-SIG** (`used_by`) to condition action prediction on anticipatory semantics.
+- Related to **Vision-and-Language Navigation** (`related_to`) as a mechanism for grounding language instructions in expected visual outcomes.
 
 ## Significance
 
@@ -38,4 +38,4 @@ By modeling what the agent *will see*, future-view image semantics bridges the g
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Future-view image semantics` --[[related_to]] ⚠️--> `Vision-and-Language Navigation`
+- `Future-view image semantics` --related_to ⚠️--> `Vision-and-Language Navigation`

@@ -28,19 +28,19 @@ The dataset serves primarily as an evaluation tool for assessing how well agents
 
 ## Context
 
-The OC-VLN Dataset was introduced alongside the [[Language-Inferred Factor Graph for Instruction Following (LIFGIF)]] system in the same paper (arXiv:2411.07848). LIFGIF uses this dataset to demonstrate its ability to infer object-centric grounding without explicit training on the task.
+The OC-VLN Dataset was introduced alongside the Language-Inferred Factor Graph for Instruction Following (LIFGIF) system in the same paper (arXiv:2411.07848). LIFGIF uses this dataset to demonstrate its ability to infer object-centric grounding without explicit training on the task.
 
 ## Relationships
 
-- **used_by**: [[Language-Inferred Factor Graph for Instruction Following (LIFGIF)]] – the dataset was specifically created to evaluate LIFGIF's zero-shot performance on object-centric navigation.
+- **used_by**: Language-Inferred Factor Graph for Instruction Following (LIFGIF) – the dataset was specifically created to evaluate LIFGIF's zero-shot performance on object-centric navigation.
 
 ## Related Entities
 
-- [[Visual Language Navigation (VLN)]] ⚠️ – the broader research area that this dataset contributes to.
-- [[Object-Centric Perception]] ⚠️ – the underlying concept of grounding language to objects in the environment.
-- [[Zero-Shot Navigation]] – the evaluation setting the dataset targets.
+- Visual Language Navigation (VLN) ⚠️ – the broader research area that this dataset contributes to.
+- Object-Centric Perception ⚠️ – the underlying concept of grounding language to objects in the environment.
+- Zero-Shot Navigation – the evaluation setting the dataset targets.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Object-Centric VLN (OC-VLN) Dataset` --[[related_to]] ⚠️--> `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` _(wikilink)_
+- `Object-Centric VLN (OC-VLN) Dataset` --related_to ⚠️--> `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` _(wikilink)_

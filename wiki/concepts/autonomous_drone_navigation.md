@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Autonomous Drone Navigation
 
-**Autonomous Drone Navigation** refers to the capability of an unmanned aerial vehicle (UAV) to perceive its environment, plan a path, and execute self-directed flight toward a goal while avoiding obstacles—all without human intervention. It is a central challenge in [[Embodied AI]] and [[Robotics]] ⚠️ ⚠️, requiring integration of perception, planning, control, and onboard computation.
+**Autonomous Drone Navigation** refers to the capability of an unmanned aerial vehicle (UAV) to perceive its environment, plan a path, and execute self-directed flight toward a goal while avoiding obstacles—all without human intervention. It is a central challenge in Embodied AI and Robotics ⚠️ ⚠️, requiring integration of perception, planning, control, and onboard computation.
 
 ## Capabilities
 
@@ -25,7 +25,7 @@ source_type: arxiv_paper
 ## Approaches
 
 This problem is *addressed_by*:
-- [[VLA-AN]] – a vision-language-action architecture specifically designed for autonomous drone navigation.
+- VLA-AN – a vision-language-action architecture specifically designed for autonomous drone navigation.
 
 ## Challenges
 
@@ -36,13 +36,13 @@ This problem is *addressed_by*:
 
 ## Relationships
 
-- *related_to*: [[Embodied AI]], [[Robotics]] ⚠️ ⚠️
-- *depends_on*: [[Computer Vision]] ⚠️, [[Path Planning]] ⚠️, [[Control Theory]] ⚠️
-- *implements*: [[Autonomous Navigation]] ⚠️ in aerial platforms
+- *related_to*: Embodied AI, Robotics ⚠️ ⚠️
+- *depends_on*: Computer Vision ⚠️, Path Planning ⚠️, Control Theory ⚠️
+- *implements*: Autonomous Navigation ⚠️ in aerial platforms
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Autonomous Drone Navigation` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Autonomous Drone Navigation` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Autonomous Drone Navigation` --[[related_to]] ⚠️ ⚠️--> `VLA-AN` _(wikilink)_
+- `Autonomous Drone Navigation` --related_to ⚠️ ⚠️--> `VLA-AN` _(wikilink)_

@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The benchmark tests the ability of VLN agents to navigate through realistic scenes while grounding language instructions in visual observations. It is used as the primary evaluation suite in the [[SeeNav-Agent]] paper.
+The benchmark tests the ability of VLN agents to navigate through realistic scenes while grounding language instructions in visual observations. It is used as the primary evaluation suite in the SeeNav-Agent paper.
 
 ## Capabilities
 
@@ -27,14 +27,14 @@ The benchmark tests the ability of VLN agents to navigate through realistic scen
 
 ## Evaluation
 
-All reported navigation success rates in the [[SeeNav-Agent]] paper are on the EmbodiedBench Navigation benchmark. This includes results for baseline models such as [[GPT-4.1]] and [[Qwen2.5-VL-3B]].
+All reported navigation success rates in the SeeNav-Agent paper are on the EmbodiedBench Navigation benchmark. This includes results for baseline models such as GPT-4.1 and Qwen2.5-VL-3B.
 
 ## Related Entities
 
-- Used by: [[SeeNav-Agent]], [[GPT-4.1]], [[Qwen2.5-VL-3B]]
+- Used by: SeeNav-Agent, GPT-4.1, Qwen2.5-VL-3B
 - Source: paper `papers/2512.02631.pdf`
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EmbodiedBench Navigation benchmark` --[[uses]] ⚠️--> `SeeNav-Agent`
+- `EmbodiedBench Navigation benchmark` --uses ⚠️--> `SeeNav-Agent`

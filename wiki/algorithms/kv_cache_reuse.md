@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Description
 
-KV Cache Reuse is a memory optimization technique employed in [[StreamVLN]] to enable coherent multi-turn dialogue while maintaining a **bounded context size** and controlled inference cost. It leverages reused key-value (KV) caches from previous turns, avoiding full recomputation of long sequences and thereby enabling fast, scalable dialogue streaming. This mechanism is a core component of both the [[fast-streaming dialogue context]] ⚠️ ⚠️ architecture and [[StreamVLN's slow-fast design]] ⚠️ ⚠️.
+KV Cache Reuse is a memory optimization technique employed in StreamVLN to enable coherent multi-turn dialogue while maintaining a **bounded context size** and controlled inference cost. It leverages reused key-value (KV) caches from previous turns, avoiding full recomputation of long sequences and thereby enabling fast, scalable dialogue streaming. This mechanism is a core component of both the fast-streaming dialogue context ⚠️ ⚠️ architecture and StreamVLN's slow-fast design ⚠️ ⚠️.
 
 ## Parameters
 
@@ -32,17 +32,17 @@ KV Cache Reuse is a memory optimization technique employed in [[StreamVLN]] to e
 
 ## Relationships
 
-- **used_by**: [[StreamVLN]] — StreamVLN depends on KV Cache Reuse to maintain long-context coherence in real-time navigation dialogues.
-- **part_of**: [[fast-streaming dialogue context]] ⚠️ ⚠️ — KV Cache Reuse is a building block of the larger fast-streaming dialogue system.
-- **part_of**: [[StreamVLN's slow-fast design]] ⚠️ ⚠️ — KV Cache Reuse is a key enabler of the slow (high-frequency) streaming path in StreamVLN's hybrid architecture.
+- **used_by**: StreamVLN — StreamVLN depends on KV Cache Reuse to maintain long-context coherence in real-time navigation dialogues.
+- **part_of**: fast-streaming dialogue context ⚠️ ⚠️ — KV Cache Reuse is a building block of the larger fast-streaming dialogue system.
+- **part_of**: StreamVLN's slow-fast design ⚠️ ⚠️ — KV Cache Reuse is a key enabler of the slow (high-frequency) streaming path in StreamVLN's hybrid architecture.
 
 ## Source
 
 This page is derived from the research described in arxiv paper **2507.05240**.
 
-<!-- Cross-reference: see also [[KV Cache]] ⚠️, [[Inference Optimization]] ⚠️, [[Multi-turn Dialogue]] ⚠️ -->
+<!-- Cross-reference: see also KV Cache ⚠️, Inference Optimization ⚠️, Multi-turn Dialogue ⚠️ -->
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `KV Cache Reuse` --[[extends]] ⚠️--> `StreamVLN`
+- `KV Cache Reuse` --extends ⚠️--> `StreamVLN`

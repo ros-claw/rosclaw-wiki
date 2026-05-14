@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # EmbodiedOcc
 
-**EmbodiedOcc** is a Gaussian-based framework for **embodied 3D occupancy prediction** from monocular images. It enables a robot or agent to progressively build a full 3D occupancy map of its environment by exploring and integrating observations over time, using an explicit memory represented as [[3D Semantic Gaussians]] ⚠️ ⚠️ ⚠️ ⚠️.
+**EmbodiedOcc** is a Gaussian-based framework for **embodied 3D occupancy prediction** from monocular images. It enables a robot or agent to progressively build a full 3D occupancy map of its environment by exploring and integrating observations over time, using an explicit memory represented as 3D Semantic Gaussians ⚠️ ⚠️ ⚠️ ⚠️.
 
 ## Parameters
 
@@ -24,15 +24,15 @@ source_type: arxiv_paper
 
 ## Overview
 
-EmbodiedOcc initializes a global scene representation with uniformly distributed 3D semantic Gaussians. As the embodied agent moves and observes new regions, the model extracts features from each incoming RGB image and uses [[Deformable Cross-Attention]] to refine the Gaussians within that local region. After each refinement, [[Gaussian-to-voxel Splatting]] produces a global occupancy grid that integrates all past observations, enabling complete predictions even for occluded or unobserved parts of the scene.
+EmbodiedOcc initializes a global scene representation with uniformly distributed 3D semantic Gaussians. As the embodied agent moves and observes new regions, the model extracts features from each incoming RGB image and uses Deformable Cross-Attention to refine the Gaussians within that local region. After each refinement, Gaussian-to-voxel Splatting produces a global occupancy grid that integrates all past observations, enabling complete predictions even for occluded or unobserved parts of the scene.
 
 ## Capabilities
 
 - Embodied 3D occupancy prediction from monocular images.
 - Progressive scene understanding via embodied exploration.
-- Maintains explicit global memory with [[3D Semantic Gaussians]] ⚠️ ⚠️ ⚠️ ⚠️.
-- Local refinement of regional Gaussians using [[Deformable Cross-Attention]].
-- [[Gaussian-to-voxel Splatting]] for occupancy output.
+- Maintains explicit global memory with 3D Semantic Gaussians ⚠️ ⚠️ ⚠️ ⚠️.
+- Local refinement of regional Gaussians using Deformable Cross-Attention.
+- Gaussian-to-voxel Splatting for occupancy output.
 
 ## Architecture
 
@@ -46,12 +46,12 @@ The pipeline consists of three main stages:
 
 | Relationship | Entity |
 |--------------|--------|
-| `uses` | [[3D Semantic Gaussians]] ⚠️ ⚠️ ⚠️ ⚠️ (Gaussian representation) |
-| `uses` | [[Deformable Cross-Attention]] |
-| `uses` | [[Gaussian-to-voxel Splatting]] |
-| `depends_on` | [[Embodied agent]] (e.g., robot with camera) |
-| `depends_on` | [[Monocular camera images]] ⚠️ |
-| `depends_on` | [[Embodied 3D Occupancy Prediction]] |
+| `uses` | 3D Semantic Gaussians ⚠️ ⚠️ ⚠️ ⚠️ (Gaussian representation) |
+| `uses` | Deformable Cross-Attention |
+| `uses` | Gaussian-to-voxel Splatting |
+| `depends_on` | Embodied agent (e.g., robot with camera) |
+| `depends_on` | Monocular camera images ⚠️ |
+| `depends_on` | Embodied 3D Occupancy Prediction |
 
 ## Performance
 
@@ -66,4 +66,4 @@ EmbodiedOcc achieves state-of-the-art results on the **EmbodiedOcc-ScanNet** ben
 ## References
 
 - Paper: [arXiv 2412.04380](https://arxiv.org/abs/2412.04380)
-- Related: [[Embodied 3D Occupancy Prediction]], [[3D Semantic Gaussians]] ⚠️ ⚠️ ⚠️ ⚠️, [[Occupancy Networks]] ⚠️
+- Related: Embodied 3D Occupancy Prediction, 3D Semantic Gaussians ⚠️ ⚠️ ⚠️ ⚠️, Occupancy Networks ⚠️

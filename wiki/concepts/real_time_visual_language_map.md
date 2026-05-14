@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Real-time Visual-Language Map
 
-A **real-time visual-language map** (RTVLM) is an [[online map representation]] ⚠️ that associates each spatial location with both **visual features** and **language embeddings**. By fusing these modalities, the map enables a robot to reason about its environment through natural language queries and commands, bridging perception and symbolic grounding.
+A **real-time visual-language map** (RTVLM) is an online map representation ⚠️ that associates each spatial location with both **visual features** and **language embeddings**. By fusing these modalities, the map enables a robot to reason about its environment through natural language queries and commands, bridging perception and symbolic grounding.
 
 ## Description
 
@@ -22,7 +22,7 @@ A map that associates each spatial location with both visual descriptors and lan
 
 ## Parameters
 
-- **Type**: [[Online map representation]] ⚠️
+- **Type**: Online map representation ⚠️
 - **Components**:
   - Visual features (e.g., from a deep neural network)
   - Language embeddings (e.g., from a text encoder aligned with visual features)
@@ -35,19 +35,19 @@ A map that associates each spatial location with both visual descriptors and lan
 
 ## Relationships
 
-- **`built_by`** → [[Online visual-language mapper]] — constructs and updates the RTVLM from sensor data and language inputs.
-- **`used_by`** → [[Language indexing-based localizer]] — queries the map to localize the robot in terms of semantically meaningful places.
+- **`built_by`** → Online visual-language mapper — constructs and updates the RTVLM from sensor data and language inputs.
+- **`used_by`** → Language indexing-based localizer — queries the map to localize the robot in terms of semantically meaningful places.
 
 ## Related Concepts
 
-- [[Embodied AI]]
-- [[Visual-language navigation]] ⚠️
-- [[Semantic mapping]] ⚠️
-- [[Sim-to-real transfer]]
+- Embodied AI
+- Visual-language navigation ⚠️
+- Semantic mapping ⚠️
+- Sim-to-real transfer
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Real-time visual-language map` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Real-time visual-language map` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Real-time visual-language map` --[[related_to]] ⚠️ ⚠️--> `Online visual-language mapper` _(wikilink)_
+- `Real-time visual-language map` --related_to ⚠️ ⚠️--> `Online visual-language mapper` _(wikilink)_

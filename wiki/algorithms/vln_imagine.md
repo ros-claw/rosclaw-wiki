@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-VLN-Imagine is a method that augments [[Vision-and-Language Navigation Agents]] ⚠️ ⚠️ ⚠️ with visual imagination. It uses a [[Text-to-Image Diffusion Model]] to generate synthetic sub‑goal images from natural language instructions. These visual imaginations are provided as an extra modality to the agent, along with an auxiliary loss that encourages correspondence between generated images and referring expressions.
+VLN-Imagine is a method that augments Vision-and-Language Navigation Agents ⚠️ ⚠️ ⚠️ with visual imagination. It uses a Text-to-Image Diffusion Model to generate synthetic sub‑goal images from natural language instructions. These visual imaginations are provided as an extra modality to the agent, along with an auxiliary loss that encourages correspondence between generated images and referring expressions.
 
 ## Capabilities
 
@@ -33,19 +33,19 @@ VLN-Imagine is a method that augments [[Vision-and-Language Navigation Agents]] 
 The approach works in three stages:
 
 1. **Instruction Segmentation:** The natural language instruction is segmented to extract landmark references.
-2. **Image Synthesis:** The extracted landmarks are passed to a [[Text-to-Image Diffusion Model]] to synthesize visual imaginations.
-3. **Auxiliary Training:** The generated images are fed as an extra input modality to the [[Vision-and-Language Navigation Agents|VLN agent]] along with an auxiliary loss that encourages correspondence between imaginations and referring expressions.
+2. **Image Synthesis:** The extracted landmarks are passed to a Text-to-Image Diffusion Model to synthesize visual imaginations.
+3. **Auxiliary Training:** The generated images are fed as an extra input modality to the VLN agent along with an auxiliary loss that encourages correspondence between imaginations and referring expressions.
 
 This allows the agent to leverage synthesized visual cues when following language‑guided navigation commands, improving performance in challenging environments where landmark recognition is ambiguous.
 
 ## Relationships
 
 - **depends\_on:**
-  - [[Vision-and-Language Navigation Agents]] ⚠️ ⚠️ ⚠️
-  - [[Language Instructions]] ⚠️
-  - [[Landmark References]] ⚠️
+  - Vision-and-Language Navigation Agents ⚠️ ⚠️ ⚠️
+  - Language Instructions ⚠️
+  - Landmark References ⚠️
 - **uses:**
-  - [[Text-to-Image Diffusion Model]]
+  - Text-to-Image Diffusion Model
 - **part\_of:** (none)
 
 ## References
@@ -55,4 +55,4 @@ This allows the agent to leverage synthesized visual cues when following languag
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `VLN-Imagine` --[[extends]] ⚠️--> `Text-to-Image Diffusion Model`
+- `VLN-Imagine` --extends ⚠️--> `Text-to-Image Diffusion Model`

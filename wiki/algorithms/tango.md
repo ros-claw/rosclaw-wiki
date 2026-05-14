@@ -39,9 +39,9 @@ The TANGO system is composed of four key modules:
 
 ## Dependencies & Relationships
 
-- Uses: [[Global Topological Path Planning]], [[Local Metric Trajectory Control]], [[Monocular Depth and Traversability Estimation]], [[Auto-Switching Mechanism]]
-- Depends on: [[Foundational Models]] ⚠️, [[Monocular Depth Estimation]] ⚠️
-- Implements: [[Object-Level Topometric Navigation]]
+- Uses: Global Topological Path Planning, Local Metric Trajectory Control, Monocular Depth and Traversability Estimation, Auto-Switching Mechanism
+- Depends on: Foundational Models ⚠️, Monocular Depth Estimation ⚠️
+- Implements: Object-Level Topometric Navigation
 
 ## Performance
 
@@ -50,7 +50,7 @@ TANGO outperforms existing state-of-the-art methods in both simulated and real-w
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `TANGO` --[[extends]] ⚠️ ⚠️ ⚠️ ⚠️--> `Global Topological Path Planning`
-- `TANGO` --[[extends]] ⚠️ ⚠️ ⚠️ ⚠️--> `Local Metric Trajectory Control`
-- `TANGO` --[[extends]] ⚠️ ⚠️ ⚠️ ⚠️--> `Monocular Depth and Traversability Estimation`
-- `TANGO` --[[extends]] ⚠️ ⚠️ ⚠️ ⚠️--> `Auto-Switching Mechanism`
+- `TANGO` --extends ⚠️ ⚠️ ⚠️ ⚠️--> `Global Topological Path Planning`
+- `TANGO` --extends ⚠️ ⚠️ ⚠️ ⚠️--> `Local Metric Trajectory Control`
+- `TANGO` --extends ⚠️ ⚠️ ⚠️ ⚠️--> `Monocular Depth and Traversability Estimation`
+- `TANGO` --extends ⚠️ ⚠️ ⚠️ ⚠️--> `Auto-Switching Mechanism`

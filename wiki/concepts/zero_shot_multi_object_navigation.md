@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-In standard [[object navigation]] ⚠️ ⚠️ tasks, a robot is asked to locate a single instance of a target object class in an unfamiliar environment. Zero-shot methods accomplish this without training on the specific object categories, relying instead on [[open-vocabulary mapping]] to ground natural-language labels in the visual world. **Zero-Shot Multi-Object Navigation** extends this paradigm to sequential multi-object search, where the robot accumulates and leverages past observations to inform future searches.
+In standard object navigation ⚠️ ⚠️ tasks, a robot is asked to locate a single instance of a target object class in an unfamiliar environment. Zero-shot methods accomplish this without training on the specific object categories, relying instead on open-vocabulary mapping to ground natural-language labels in the visual world. **Zero-Shot Multi-Object Navigation** extends this paradigm to sequential multi-object search, where the robot accumulates and leverages past observations to inform future searches.
 
 ## Motivation
 
@@ -33,8 +33,8 @@ Existing zero-shot methods treat each query as independent, discarding potential
 
 The method integrates two key components:
 
-- **[[open-vocabulary mapping]]** – The robot constructs a continuous semantic map using vision-language features (e.g., CLIP or OWL-ViT), allowing it to query for arbitrary object categories without task-specific fine-tuning.
-- **[[probabilistic-semantic updates]] ⚠️ ⚠️** – As the robot explores, it maintains a probabilistic belief over object locations. This belief is updated with each observation, and crucially, the posterior from one search is carried forward as prior knowledge for the next search. This allows spatial and semantic dependencies (e.g., "keys are often near doors") to emerge from experience.
+- **open-vocabulary mapping** – The robot constructs a continuous semantic map using vision-language features (e.g., CLIP or OWL-ViT), allowing it to query for arbitrary object categories without task-specific fine-tuning.
+- **probabilistic-semantic updates ⚠️ ⚠️** – As the robot explores, it maintains a probabilistic belief over object locations. This belief is updated with each observation, and crucially, the posterior from one search is carried forward as prior knowledge for the next search. This allows spatial and semantic dependencies (e.g., "keys are often near doors") to emerge from experience.
 
 ## Benchmark
 
@@ -42,18 +42,18 @@ As part of this work, a dedicated benchmark was created to evaluate sequential m
 
 ## Relationships
 
-- **part_of**: [[object navigation]] ⚠️ ⚠️  
-- **uses**: [[open-vocabulary mapping]], [[probabilistic-semantic updates]] ⚠️ ⚠️  
-- **depends_on**: [[embodied AI]], [[semantic mapping]] ⚠️, [[sim-to-real]] ⚠️  
+- **part_of**: object navigation ⚠️ ⚠️  
+- **uses**: open-vocabulary mapping, probabilistic-semantic updates ⚠️ ⚠️  
+- **depends_on**: embodied AI, semantic mapping ⚠️, sim-to-real ⚠️  
 
 ## See Also
 
-- [[Object Navigation]] ⚠️ – the parent task category.  
-- [[Zero-Shot Navigation]] – the single-query variant.  
-- [[Probabilistic Semantic Mapping]] ⚠️ – the underlying mapping framework.  
-- [[Open-Vocabulary Mapping]] – the representation used for flexible object queries.
+- Object Navigation ⚠️ – the parent task category.  
+- Zero-Shot Navigation – the single-query variant.  
+- Probabilistic Semantic Mapping ⚠️ – the underlying mapping framework.  
+- Open-Vocabulary Mapping – the representation used for flexible object queries.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Zero-Shot Multi-Object Navigation` --[[related_to]] ⚠️--> `embodied AI`
+- `Zero-Shot Multi-Object Navigation` --related_to ⚠️--> `embodied AI`

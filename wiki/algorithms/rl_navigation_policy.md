@@ -31,17 +31,17 @@ The **RL Navigation Policy** is a reinforcement learning (RL) algorithm for goal
 
 ### Relationships
 
-- **part of** [[REASAN]] — The RL Navigation Policy is a core component of the REASAN architecture, which combines reasoning, attention, and sequential action for long-horizon navigation tasks.
-- **implements** [[Goal-Oriented Navigation]] — This policy is a learned instantiation of the navigation primitive that drives the robot toward a given waypoint or goal.
-- **depends on** [[Reinforcement Learning Framework]] ⚠️ — Training requires a simulator (e.g., Habitat, Isaac Gym) and a reward shaping scheme that encourages collision‑free goal reaching.
+- **part of** REASAN — The RL Navigation Policy is a core component of the REASAN architecture, which combines reasoning, attention, and sequential action for long-horizon navigation tasks.
+- **implements** Goal-Oriented Navigation — This policy is a learned instantiation of the navigation primitive that drives the robot toward a given waypoint or goal.
+- **depends on** Reinforcement Learning Framework ⚠️ — Training requires a simulator (e.g., Habitat, Isaac Gym) and a reward shaping scheme that encourages collision‑free goal reaching.
 
 ### See Also
 
-- [[REASAN]] (parent system)
-- [[Classical Navigation Stacks]] ⚠️ (contrasting approach)
-- [[Sim-to-Real Transfer]] (critical for deployment)
+- REASAN (parent system)
+- Classical Navigation Stacks ⚠️ (contrasting approach)
+- Sim-to-Real Transfer (critical for deployment)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `RL Navigation Policy` --[[extends]] ⚠️--> `REASAN`
+- `RL Navigation Policy` --extends ⚠️--> `REASAN`

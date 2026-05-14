@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # NavForesee
 
-**NavForesee** is a novel [[Vision-Language Model (VLM)]] that unifies high-level language planning with predictive world model imagination for embodied navigation. It takes a full natural language instruction and historical observations, decomposes the navigation task into sub‑goals, tracks progress, and simultaneously predicts short‑term environmental dynamics and long‑term navigation milestones. The architecture creates an internal feedback loop where planning guides prediction, and prediction informs action selection.
+**NavForesee** is a novel Vision-Language Model (VLM) that unifies high-level language planning with predictive world model imagination for embodied navigation. It takes a full natural language instruction and historical observations, decomposes the navigation task into sub‑goals, tracks progress, and simultaneously predicts short‑term environmental dynamics and long‑term navigation milestones. The architecture creates an internal feedback loop where planning guides prediction, and prediction informs action selection.
 
 ## Parameters
 
@@ -26,7 +26,7 @@ source_type: arxiv_paper
 | Outputs | sub‑goals, short‑term predictions, long‑term predictions |
 | Framework | Unified high‑level language planning and predictive world model |
 | Training data | Natural language instructions and historical observations (R2R‑CE, RxR‑CE) |
-| Evaluation benchmarks | [[R2R-CE]], [[RxR-CE]] |
+| Evaluation benchmarks | R2R-CE, RxR-CE |
 
 ## Capabilities
 
@@ -44,9 +44,9 @@ The model takes the full instruction and history, decomposes the task into sub�
 
 ## Relationships
 
-- **uses**: [[Vision-Language Model (VLM)]], [[World Model]], [[R2R-CE]], [[RxR-CE]]
+- **uses**: Vision-Language Model (VLM), World Model, R2R-CE, RxR-CE
 - **depends_on**: natural language instructions, historical observations
 
 ## Summary
 
-NavForesee unifies high‑level language planning and generative world model prediction within a single VLM, enabling embodied agents to reason about unseen environments over long horizons. It achieves competitive performance on the [[R2R-CE]] and [[RxR-CE]] benchmarks.
+NavForesee unifies high‑level language planning and generative world model prediction within a single VLM, enabling embodied agents to reason about unseen environments over long horizons. It achieves competitive performance on the R2R-CE and RxR-CE benchmarks.

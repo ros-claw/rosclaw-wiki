@@ -28,9 +28,9 @@ By decomposing the navigation task into these interpretable stages, the NavR^2-C
 
 ## Relationship
 
-The dataset is used by the [[Nav-R^2]] architecture to provide training examples that enforce structured reasoning. In turn, [[Nav-R^2]] implements the reasoning pipeline that consumes this dataset during training.
+The dataset is used by the Nav-R^2 architecture to provide training examples that enforce structured reasoning. In turn, Nav-R^2 implements the reasoning pipeline that consumes this dataset during training.
 
-- **used_by**: [[Nav-R^2]]
+- **used_by**: Nav-R^2
 
 ## Source
 
@@ -39,4 +39,4 @@ Derived from the paper introducing Nav-R^2: *Nav-R^2: Chain-of-Thought Reasoning
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `NavR^2-CoT dataset` --[[uses]] ⚠️--> `Nav-R^2`
+- `NavR^2-CoT dataset` --uses ⚠️--> `Nav-R^2`

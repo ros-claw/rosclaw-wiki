@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Hybrid Map (Local Metric + Global Topological)
 
-A **hybrid map** combines a [[Local Metric Map]] ⚠️ with a [[Global Topological Map]] ⚠️ to balance short-term spatial reasoning and long-term planning in [[Vision-Language Navigation]] (VLN). Proposed within the [[BEVBert]] framework, this representation explicitly aggregates incomplete, partial observations while maintaining a high‑level connectivity structure for path planning.
+A **hybrid map** combines a Local Metric Map ⚠️ with a Global Topological Map ⚠️ to balance short-term spatial reasoning and long-term planning in Vision-Language Navigation (VLN). Proposed within the BEVBert framework, this representation explicitly aggregates incomplete, partial observations while maintaining a high‑level connectivity structure for path planning.
 
 ### Components
 
@@ -38,8 +38,8 @@ The hybrid design explicitly addresses the tension between local precision and g
 
 ### Relationships
 
-- **Used by** → [[BEVBert]] – BEVBert’s architecture relies on this hybrid map to jointly train a Transformer‑based policy with both metric and topological priors.
-- **Depends on** → [[Multimodal Map Representation]] ⚠️ – The hybrid map assumes a multimodal backbone (vision, language, occasionally depth) to populate its metric and topological structures. Without a unified feature space, the two maps cannot be aligned during training.
+- **Used by** → BEVBert – BEVBert’s architecture relies on this hybrid map to jointly train a Transformer‑based policy with both metric and topological priors.
+- **Depends on** → Multimodal Map Representation ⚠️ – The hybrid map assumes a multimodal backbone (vision, language, occasionally depth) to populate its metric and topological structures. Without a unified feature space, the two maps cannot be aligned during training.
 
 ### Source
 
@@ -48,4 +48,4 @@ Introduced in the BEVBert paper (arXiv:2212.04385) as an explicit solution to th
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Hybrid Map (Local Metric + Global Topological)` --[[related_to]] ⚠️--> `BEVBert` _(wikilink)_
+- `Hybrid Map (Local Metric + Global Topological)` --related_to ⚠️--> `BEVBert` _(wikilink)_

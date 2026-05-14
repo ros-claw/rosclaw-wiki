@@ -16,11 +16,11 @@ source_type: arxiv_paper
 
 ## Summary
 
-A component of [[SeqWalker]] that decomposes long-horizon instructions into sub‑instructions relevant to the current observation.
+A component of SeqWalker that decomposes long-horizon instructions into sub‑instructions relevant to the current observation.
 
 ## Overview
 
-The **High-Level Planner** is a core module within the [[SeqWalker]] architecture responsible for dynamic sub‑instruction selection. It receives [[global instructions]] ⚠️ and current [[visual observations]] ⚠️, then outputs the most contextually relevant [[sub‑instructions]] ⚠️ to guide the agent’s low‑level actions. By filtering irrelevant information in real time, the planner reduces the cognitive load on downstream components and sharpens the agent’s attention toward observationally important details. This decomposition of long‑horizon instructions into sub‑instructions grounded in the current visual context is essential for efficient task execution.
+The **High-Level Planner** is a core module within the SeqWalker architecture responsible for dynamic sub‑instruction selection. It receives global instructions ⚠️ and current visual observations ⚠️, then outputs the most contextually relevant sub‑instructions ⚠️ to guide the agent’s low‑level actions. By filtering irrelevant information in real time, the planner reduces the cognitive load on downstream components and sharpens the agent’s attention toward observationally important details. This decomposition of long‑horizon instructions into sub‑instructions grounded in the current visual context is essential for efficient task execution.
 
 ## Parameters
 
@@ -38,8 +38,8 @@ The **High-Level Planner** is a core module within the [[SeqWalker]] architectur
 
 ## Relationships
 
-- **Part of** [[SeqWalker]] — the High‑Level Planner is one of the core modules within the SeqWalker system.
-- **Uses** [[Global Instructions]] ⚠️ as high‑level guidance.
-- **Uses** [[Visual Observations]] ⚠️ from the environment to ground instruction selection in real‑time perception.
+- **Part of** SeqWalker — the High‑Level Planner is one of the core modules within the SeqWalker system.
+- **Uses** Global Instructions ⚠️ as high‑level guidance.
+- **Uses** Visual Observations ⚠️ from the environment to ground instruction selection in real‑time perception.
 
 _Source: arxiv:2601.04699_

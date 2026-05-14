@@ -15,14 +15,14 @@ supersedes: []
 *Disclaimer: This is not an official Google product.*
 
 ## Relationships
-- **Implements / Related to**: [[Gibson dataset]]
-- **Implements / Related to**: [[AI Habitat]]
-- **Implements / Related to**: [[HM3D dataset]]
-- **Implements / Related to**: [[RxR]]
-- **Implements / Related to**: [[Habitat]]
+- **Implements / Related to**: Gibson dataset
+- **Implements / Related to**: AI Habitat
+- **Implements / Related to**: HM3D dataset
+- **Implements / Related to**: RxR
+- **Implements / Related to**: Habitat
 
 ## See Also
-- [[Code Repository]] ⚠️ — general code entity guidelines
-- [[Gibson dataset]]
-- [[AI Habitat]]
-- [[HM3D dataset]]
+- Code Repository ⚠️ — general code entity guidelines
+- Gibson dataset
+- AI Habitat
+- HM3D dataset

@@ -35,10 +35,10 @@ CoT reasoning in VLN operates in three primary modes:
 
 ## Relationships
 
-- **Implemented by** → [[FantasyVLN]] (uses implicit latent-space reasoning to avoid token inflation)
-- **Used in** → [[NavCoT]], [[NavGPT-2]], [[OctoNav-R1]], [[CoT-VLA]], [[Nav-R²]] ⚠️
-- **Depends on** → [[Vision-Language Models]] ⚠️ (VLMs) that can generate or process structured reasoning tokens
-- **Related to** → [[Implicit Planning]] ⚠️ (as an alternative that foregoes explicit intermediate steps)
+- **Implemented by** → FantasyVLN (uses implicit latent-space reasoning to avoid token inflation)
+- **Used in** → NavCoT, NavGPT-2, OctoNav-R1, CoT-VLA, Nav-R² ⚠️
+- **Depends on** → Vision-Language Models ⚠️ (VLMs) that can generate or process structured reasoning tokens
+- **Related to** → Implicit Planning ⚠️ (as an alternative that foregoes explicit intermediate steps)
 
 ## Role in Nav-R²
 
@@ -46,11 +46,11 @@ Nav-R² uses structured Chain-of-Thought (CoT) reasoning coupled with SA-Mem to 
 
 ## Challenges
 
-Textual CoT lacks spatial grounding — verbal descriptions of visual scenes often omit geometric precision, leading to ambiguous or incorrect navigational cues. Multimodal CoT incurs significant token inflation, making it computationally expensive for real-time deployment. [[FantasyVLN]] addresses both limitations by operating in an implicit latent space, generating reasoning without explicit tokenization.
+Textual CoT lacks spatial grounding — verbal descriptions of visual scenes often omit geometric precision, leading to ambiguous or incorrect navigational cues. Multimodal CoT incurs significant token inflation, making it computationally expensive for real-time deployment. FantasyVLN addresses both limitations by operating in an implicit latent space, generating reasoning without explicit tokenization.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Chain-of-Thought (CoT) reasoning` --[[related_to]] ⚠️ ⚠️ ⚠️--> `FantasyVLN` _(wikilink)_
-- `Chain-of-Thought (CoT) reasoning` --[[related_to]] ⚠️ ⚠️ ⚠️--> `NavCoT` _(wikilink)_
-- `Chain-of-Thought (CoT) reasoning` --[[related_to]] ⚠️ ⚠️ ⚠️--> `NavGPT-2` _(wikilink)_
+- `Chain-of-Thought (CoT) reasoning` --related_to ⚠️ ⚠️ ⚠️--> `FantasyVLN` _(wikilink)_
+- `Chain-of-Thought (CoT) reasoning` --related_to ⚠️ ⚠️ ⚠️--> `NavCoT` _(wikilink)_
+- `Chain-of-Thought (CoT) reasoning` --related_to ⚠️ ⚠️ ⚠️--> `NavGPT-2` _(wikilink)_

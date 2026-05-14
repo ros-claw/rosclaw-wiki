@@ -24,7 +24,7 @@ A factor graph is a probabilistic graphical model that represents the joint dist
 
 - **Type**: Probabilistic graphical model
 - **Technique**: 3D graph of landmarks estimated jointly with robot poses
-- **Application**: Mapping large‑scale scenes with a 3D graph of landmarks estimated jointly with robot poses. This approach is particularly effective for [[SLAM|Simultaneous Localization and Mapping]] tasks, including robustly and efficiently mapping multifloor homes by capturing spatial constraints across levels.
+- **Application**: Mapping large‑scale scenes with a 3D graph of landmarks estimated jointly with robot poses. This approach is particularly effective for Simultaneous Localization and Mapping tasks, including robustly and efficiently mapping multifloor homes by capturing spatial constraints across levels.
 
 ## Capabilities
 
@@ -34,7 +34,7 @@ A factor graph is a probabilistic graphical model that represents the joint dist
 
 ## Relationships
 
-- **Used by**: [[Language-Inferred Factor Graph for Instruction Following (LIFGIF)]] – LIFGIF extends the factor graph paradigm to incorporate language grounding for zero‑shot instruction following.
+- **Used by**: Language-Inferred Factor Graph for Instruction Following (LIFGIF) – LIFGIF extends the factor graph paradigm to incorporate language grounding for zero‑shot instruction following.
 - **Used by**: Commercial robots such as drones and robot vacuums rely on factor graphs for real‑time mapping and localization.
 
 ## In Context of LIFGIF
@@ -43,11 +43,11 @@ LIFGIF extends the factor graph approach by inferring language grounding within 
 
 ## See Also
 
-- [[Probabilistic Graphical Model]] ⚠️
-- [[Robot Pose Estimation]] ⚠️
-- [[Zero-Shot Instruction Following]]
+- Probabilistic Graphical Model ⚠️
+- Robot Pose Estimation ⚠️
+- Zero-Shot Instruction Following
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Factor Graph` --[[related_to]] ⚠️--> `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` _(wikilink)_
+- `Factor Graph` --related_to ⚠️--> `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` _(wikilink)_

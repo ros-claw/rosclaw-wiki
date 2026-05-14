@@ -15,10 +15,10 @@ source_type: arxiv_paper
 # Multi-sourced Value Maps
 
 **Type:** Algorithm  
-**Part of:** [[InstructNav]]  
-**Used by:** [[InstructNav]]
+**Part of:** InstructNav  
+**Used by:** InstructNav
 
-Multi-sourced Value Maps are a core algorithmic component within the [[InstructNav]] framework. They convert linguistic plans from the [[DCoN]] ⚠️ (Discriminative Cost‑of‑Navigation) planner into robot‑actionable trajectories by modeling key navigation elements as multiple value layers.
+Multi-sourced Value Maps are a core algorithmic component within the InstructNav framework. They convert linguistic plans from the DCoN ⚠️ (Discriminative Cost‑of‑Navigation) planner into robot‑actionable trajectories by modeling key navigation elements as multiple value layers.
 
 ## Description
 
@@ -35,8 +35,8 @@ The primary purpose of Multi-sourced Value Maps is to model key elements in inst
 
 ## Relationships
 
-- **`part_of`** [[InstructNav]] – Multi-sourced Value Maps are a component of the InstructNav navigation system.
-- **`used_by`** [[InstructNav]] – The InstructNav framework employs these value maps to realize its instruction‑following behavior.
+- **`part_of`** InstructNav – Multi-sourced Value Maps are a component of the InstructNav navigation system.
+- **`used_by`** InstructNav – The InstructNav framework employs these value maps to realize its instruction‑following behavior.
 
 ## Sources
 

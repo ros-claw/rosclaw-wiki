@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # ANNA
 
-**ANNA (Automatic Natural Navigation Assistant)** is a simulated human assistant within the [[HANNA]] framework. It provides multimodal guidance—using both natural language and visual cues—to direct an agent toward its object goals.
+**ANNA (Automatic Natural Navigation Assistant)** is a simulated human assistant within the HANNA framework. It provides multimodal guidance—using both natural language and visual cues—to direct an agent toward its object goals.
 
 ## Description
 
@@ -32,9 +32,9 @@ ANNA acts as an interactive aid, reducing the agent's reliance on internal navig
 
 ## Relationships
 
-- **Part of**: ANNA is a component of the [[HANNA]] system.
-- **Used by**: The [[HANNA]] agent requests guidance from ANNA.
+- **Part of**: ANNA is a component of the HANNA system.
+- **Used by**: The HANNA agent requests guidance from ANNA.
 - **Assists**: ANNA supports agent navigation through its multimodal output.
 
 ### Correction to automatic links
-The earlier automatic link `ANNA --[[depends_on]] ⚠️--> HANNA` was reversed: ANNA is actually a sub‑module of HANNA, not a dependency. The correct relation is `part_of`.
+The earlier automatic link `ANNA --depends_on ⚠️--> HANNA` was reversed: ANNA is actually a sub‑module of HANNA, not a dependency. The correct relation is `part_of`.

@@ -23,16 +23,16 @@ source_type: arxiv_paper
 
 ## Use in ProbES
 
-[[ProbES]] introduces prompt-based learning to achieve fast adaptation for language embeddings, substantially improving learning efficiency in the context of probabilistic embedding spaces.
+ProbES introduces prompt-based learning to achieve fast adaptation for language embeddings, substantially improving learning efficiency in the context of probabilistic embedding spaces.
 
 ## Related Concepts
 
-- [[Transfer Learning]] ⚠️
-- [[Few-shot Learning]] ⚠️
-- [[Language Model Fine-tuning]] ⚠️ (conventional approach, contradicted by prompt-based methods)
-- [[ProbES]] (uses prompt-based learning)
+- Transfer Learning ⚠️
+- Few-shot Learning ⚠️
+- Language Model Fine-tuning ⚠️ (conventional approach, contradicted by prompt-based methods)
+- ProbES (uses prompt-based learning)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Prompt-based Learning` --[[related_to]] ⚠️--> `ProbES` _(wikilink)_
+- `Prompt-based Learning` --related_to ⚠️--> `ProbES` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Reinforcement Learning Fine-tuning
 
-**Reinforcement Learning Fine-tuning** is a post‑distillation stage in the [[Agile Locomotion]] pipeline. After a distilled policy is produced via [[Multi-expert Distillation]], it is further refined through reinforcement learning on a broader set of terrains — including real‑world 3D scans — to improve its adaptability and robustness.
+**Reinforcement Learning Fine-tuning** is a post‑distillation stage in the Agile Locomotion pipeline. After a distilled policy is produced via Multi-expert Distillation, it is further refined through reinforcement learning on a broader set of terrains — including real‑world 3D scans — to improve its adaptability and robustness.
 
 ### Parameters
 - **Input**: Real‑world 3D scans of diverse terrain geometries.
@@ -25,8 +25,8 @@ source_type: arxiv_paper
 - Improve overall robustness of the locomotion policy against varied ground conditions.
 
 ### Relationships
-- **Part of** → [[Agile Locomotion]] (as a downstream stage)
-- **Used after** → [[Multi-expert Distillation]] (the fine‑tuning step directly follows policy distillation)
+- **Part of** → Agile Locomotion (as a downstream stage)
+- **Used after** → Multi-expert Distillation (the fine‑tuning step directly follows policy distillation)
 
 ### Fine‑tuning Stage
 After distillation, the learned policy is not final. A second reinforcement learning phase is executed on an expanded terrain distribution that includes high‑fidelity 3D scans collected from real environments. This stage corrects biases or over‑specialization that may have arisen during distillation and ensures the controller generalizes to the messy, irregular surfaces typical of outdoor or unstructured settings.
@@ -36,4 +36,4 @@ After distillation, the learned policy is not final. A second reinforcement lear
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Reinforcement Learning Fine-tuning` --[[extends]] ⚠️--> `Multi-expert Distillation`
+- `Reinforcement Learning Fine-tuning` --extends ⚠️--> `Multi-expert Distillation`

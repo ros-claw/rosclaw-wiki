@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **low-level action decoder** is a neural network component that bridges the gap between high-level view selection and low-level motor commands. It is trained jointly with the [[high-level action prediction]] policy, enabling the system to ground selected visual views directly to executable controls. This joint training allows the decoder to learn spatial reasoning within low-level movements, rather than treating high-level planning and low-level control as separate modules.
+The **low-level action decoder** is a neural network component that bridges the gap between high-level view selection and low-level motor commands. It is trained jointly with the high-level action prediction policy, enabling the system to ground selected visual views directly to executable controls. This joint training allows the decoder to learn spatial reasoning within low-level movements, rather than treating high-level planning and low-level control as separate modules.
 
 ## Capabilities
 
@@ -28,8 +28,8 @@ The **low-level action decoder** is a neural network component that bridges the 
 
 | Type | Related Entity |
 |------|----------------|
-| `depends_on` | [[high-level action prediction]] – The decoder receives the high-level policy’s output (e.g., selected views) as input. |
-| `uses` | [[visual representations with rich semantic information]] ⚠️ – The decoder operates on visual features that encode object identities, spatial layouts, and task‑relevant cues. |
+| `depends_on` | high-level action prediction – The decoder receives the high-level policy’s output (e.g., selected views) as input. |
+| `uses` | visual representations with rich semantic information ⚠️ – The decoder operates on visual features that encode object identities, spatial layouts, and task‑relevant cues. |
 
 ## Implementation
 
@@ -47,4 +47,4 @@ It outputs continuous action vectors (joint angles, velocities, or end‑effecto
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `low-level action decoder` --[[based_on]] ⚠️--> `high-level action prediction`
+- `low-level action decoder` --based_on ⚠️--> `high-level action prediction`

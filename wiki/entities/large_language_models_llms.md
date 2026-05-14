@@ -19,18 +19,18 @@ source_type: arxiv_paper
 
 #### Role in Multi-Robot & Navigation Systems
 
-In systems like **[[SayCoNav]]**, **[[EvolveNav]]**, and **[[NaviLLM]]**, the LLM functions as a decision-making hub that:
+In systems like **SayCoNav**, **EvolveNav**, and **NaviLLM**, the LLM functions as a decision-making hub that:
 
 - Generates collaboration strategies automatically, adapting to dynamic environments and mission objectives.
 - Produces step-by-step plans for each robot, converting high-level goals into actionable sequences.
 - Processes shared information (e.g., sensor data, status reports) to continuously refine and update plans.
 - Supports **navigational decision making**, especially in vision-language navigation (VLN) tasks, where the LLM reasons over visual and linguistic inputs to guide robot movement.
 
-LLMs also serve as the base model for **[[NaviLLM]]**, where their broad language comprehension is directly adapted for embodied navigation tasks, bridging general language understanding with spatial reasoning.
+LLMs also serve as the base model for **NaviLLM**, where their broad language comprehension is directly adapted for embodied navigation tasks, bridging general language understanding with spatial reasoning.
 
 #### Role in Retrieval-Augmented Navigation (NavRAG)
 
-In the **[[NavRAG]]** framework, the LLM takes on two specialized roles:
+In the **NavRAG** framework, the LLM takes on two specialized roles:
 
 - **Building a scene description tree** — Given a 3D environment, the LLM constructs a hierarchical representation of the scene, capturing spatial layout and object relationships.
 - **Generating diverse natural-language instructions** — Using the scene tree and retrieved contextual information, the LLM produces user-directed navigation instructions that are both **grounded in the 3D layout** and **adaptable to varying user demands**.
@@ -60,12 +60,12 @@ The LLM contributes the following core capabilities to robotic systems:
 
 #### Relationships
 
-- **Used by**: [[SayCoNav]], [[EvolveNav]], [[NavRAG]], [[NaviLLM]] — core reasoning engine for navigation, collaboration, and instruction generation.
-- **Improves**: [[Vision-Language Navigation (VLN)]] — LLMs enhance spatial reasoning and instruction following.
-- **Depends on**: [[Natural Language Processing]] ⚠️, [[Deep Learning]] ⚠️ — for language understanding and generation.
-- **Implements**: [[Collaboration Strategy]] ⚠️ generation — provides a flexible, learned approach to multi-robot coordination.
+- **Used by**: SayCoNav, EvolveNav, NavRAG, NaviLLM — core reasoning engine for navigation, collaboration, and instruction generation.
+- **Improves**: Vision-Language Navigation (VLN) — LLMs enhance spatial reasoning and instruction following.
+- **Depends on**: Natural Language Processing ⚠️, Deep Learning ⚠️ — for language understanding and generation.
+- **Implements**: Collaboration Strategy ⚠️ generation — provides a flexible, learned approach to multi-robot coordination.
 
-> **Note on automatic linkers**: A heuristic entity linker previously reported `Large Language Models (LLMs) --[[uses]] ⚠️--> SayCoNav`, but the correct relationship (as documented above) is the reverse: LLMs are *used by* SayCoNav. Users should verify automatically generated links.
+> **Note on automatic linkers**: A heuristic entity linker previously reported `Large Language Models (LLMs) --uses ⚠️--> SayCoNav`, but the correct relationship (as documented above) is the reverse: LLMs are *used by* SayCoNav. Users should verify automatically generated links.
 
 #### Future Considerations
 
@@ -73,4 +73,4 @@ As LLMs grow more capable, their integration into real-time robotics will requir
 
 #### Summary
 
-LLMs provide a promising foundation for embodied navigation due to their general language comprehension and generation abilities. Their semantic understanding across fields, combined with techniques like RAG and domain‑specific adaptation (e.g., in [[NaviLLM]]), makes them a versatile and powerful component in modern robotics systems.
+LLMs provide a promising foundation for embodied navigation due to their general language comprehension and generation abilities. Their semantic understanding across fields, combined with techniques like RAG and domain‑specific adaptation (e.g., in NaviLLM), makes them a versatile and powerful component in modern robotics systems.

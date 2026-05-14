@@ -59,5 +59,5 @@ L2S is trained on ground-truth trajectories from traditional physics engines (Mu
 
 - [[deepmind_meshgraphnets|MeshGraphNets]] — Mesh-based learned simulation
 - [[graph_neural_network|Graph Neural Networks]]
-- [[differentiable_simulation|Differentiable Simulation]]
-- [[particle_methods|Particle-Based Methods]]
+- Differentiable Simulation
+- Particle-Based Methods

@@ -28,17 +28,17 @@ A **Navigation Graph** is a sparse topological representation of an environment 
 - Identifies **geometric frontier nodes** that represent safe, informative exploration targets
 - Enables **replanning from dead-ends** by allowing the robot to backtrack along stored graph edges and choose alternative frontier nodes
 
-### Role in [[WildOS]]
+### Role in WildOS
 
-[[WildOS]] builds a sparse navigation graph from geometric sensing to maintain persistent spatial memory and identify geometric frontier nodes. These geometric frontier nodes are then projected into the camera image and scored using visual-semantic cues from [[ExploRFM]], producing a semantically scored graph. This integrated representation allows [[WildOS]] to choose exploration goals that are both geometrically safe and semantically meaningful (e.g., “explore toward the dark opening”, “avoid the crumbling ledge”).
+WildOS builds a sparse navigation graph from geometric sensing to maintain persistent spatial memory and identify geometric frontier nodes. These geometric frontier nodes are then projected into the camera image and scored using visual-semantic cues from ExploRFM, producing a semantically scored graph. This integrated representation allows WildOS to choose exploration goals that are both geometrically safe and semantically meaningful (e.g., “explore toward the dark opening”, “avoid the crumbling ledge”).
 
 ### Relationships
 
-- **Used by:** [[WildOS]] (depends on the navigation graph for spatial reasoning and frontier selection)
-- **Related to:** [[Geometric Frontiers]] ⚠️ (the specific frontier type used as nodes), [[Visual Frontiers]] ⚠️ (an alternative frontier definition based on visual/semantic information)
+- **Used by:** WildOS (depends on the navigation graph for spatial reasoning and frontier selection)
+- **Related to:** Geometric Frontiers ⚠️ (the specific frontier type used as nodes), Visual Frontiers ⚠️ (an alternative frontier definition based on visual/semantic information)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Navigation Graph` --[[related_to]] ⚠️ ⚠️--> `WildOS` _(wikilink)_
-- `Navigation Graph` --[[related_to]] ⚠️ ⚠️--> `ExploRFM` _(wikilink)_
+- `Navigation Graph` --related_to ⚠️ ⚠️--> `WildOS` _(wikilink)_
+- `Navigation Graph` --related_to ⚠️ ⚠️--> `ExploRFM` _(wikilink)_

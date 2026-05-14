@@ -27,21 +27,21 @@ LLMs in navigation demonstrate two key capabilities:
 
 LLMs are integrated with navigation policy networks to produce both actions and accompanying reasoning chains. In typical architectures, the LLM receives textual observations (e.g., a description of the scene or a list of detected objects) and outputs action tokens (e.g., "turn left", "move forward") which are then mapped to low-level motor commands by a separate policy network. This dual-output design allows the system to explain its decisions in natural language while simultaneously executing commands.
 
-Notable implementations include [[NavGPT-2]], which uses an LLM-powered tokenization of visual and language inputs to generate navigational reasoning and action sequences. The LLM also serves as the backbone for reasoning about subgoals (e.g., "first go to the corridor, then the living room") and handling replanning when obstacles are encountered.
+Notable implementations include NavGPT-2, which uses an LLM-powered tokenization of visual and language inputs to generate navigational reasoning and action sequences. The LLM also serves as the backbone for reasoning about subgoals (e.g., "first go to the corridor, then the living room") and handling replanning when obstacles are encountered.
 
 ## Relationships
 
-- **Used in**: [[NavGPT-2]], [[LLM-based navigation paradigms]] ⚠️
+- **Used in**: NavGPT-2, LLM-based navigation paradigms ⚠️
 - **Implements**: *navigational reasoning* (concept), *language instruction following* (concept)
-- **Depends on**: [[Navigation policy networks]] ⚠️ for low-level control, [[pretrained language models]] ⚠️ as backbone
+- **Depends on**: Navigation policy networks ⚠️ for low-level control, pretrained language models ⚠️ as backbone
 - **Contradicts**: traditional rule-based or ML-only navigators that cannot handle open-ended language
 - **Labels**: concept, reasoning, navigation, language understanding, embodied AI
 
 ## Key Observations
 
-The integration of LLMs into navigation systems enables zero-shot generalization to new instructions and environments, at the cost of increased inference latency and computational overhead. The paper from which this page is derived ([[sources: papers/2407.12366]] ⚠️) emphasizes that LLM-based navigators like NavGPT-2 can match or exceed state-of-the-art task completion rates on benchmarks such as R2R and REVERIE, while providing transparent reasoning logs.
+The integration of LLMs into navigation systems enables zero-shot generalization to new instructions and environments, at the cost of increased inference latency and computational overhead. The paper from which this page is derived (sources: papers/2407.12366 ⚠️) emphasizes that LLM-based navigators like NavGPT-2 can match or exceed state-of-the-art task completion rates on benchmarks such as R2R and REVERIE, while providing transparent reasoning logs.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Large Language Models (LLMs) in Navigation` --[[related_to]] ⚠️--> `NavGPT-2` _(wikilink)_
+- `Large Language Models (LLMs) in Navigation` --related_to ⚠️--> `NavGPT-2` _(wikilink)_

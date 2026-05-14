@@ -30,13 +30,13 @@ This concept is particularly relevant in **crowded environments in navigation ta
 
 ## Relationships
 
-- **Modeled in:** The dynamics are captured by the `[[HAPS 2.0 dataset]]` and various **simulators** that generate realistic multi-agent scenarios for training and evaluation.
-- **Studied in:** `[[HA-VLN 2.0]]` — an embodied vision-and-language navigation benchmark that introduces human-aware reasoning within multi-human settings.
+- **Modeled in:** The dynamics are captured by the `HAPS 2.0 dataset` and various **simulators** that generate realistic multi-agent scenarios for training and evaluation.
+- **Studied in:** `HA-VLN 2.0` — an embodied vision-and-language navigation benchmark that introduces human-aware reasoning within multi-human settings.
 
-These relationships indicate that the concept `depends_on` robust simulation and dataset infrastructure, and `implements` the social intelligence component of HA-VLN 2.0. Dynamic Multi-Human Interactions also `uses` principles from `[[Human-Robot Interaction]] ⚠️` and `[[Crowd Navigation]] ⚠️`.
+These relationships indicate that the concept `depends_on` robust simulation and dataset infrastructure, and `implements` the social intelligence component of HA-VLN 2.0. Dynamic Multi-Human Interactions also `uses` principles from `Human-Robot Interaction ⚠️` and `Crowd Navigation ⚠️`.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Dynamic Multi-Human Interactions` --[[applies_to]] ⚠️ ⚠️--> `HAPS 2.0 dataset`
-- `Dynamic Multi-Human Interactions` --[[applies_to]] ⚠️ ⚠️--> `HA-VLN 2.0`
+- `Dynamic Multi-Human Interactions` --applies_to ⚠️ ⚠️--> `HAPS 2.0 dataset`
+- `Dynamic Multi-Human Interactions` --applies_to ⚠️ ⚠️--> `HA-VLN 2.0`

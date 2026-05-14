@@ -24,8 +24,8 @@ This novel approach models spatial-geometric and visual-semantic memory separate
 
 Dual Implicit Neural Memory consists of two specialized memory modules:
 
-- **[[Spatial-Geometric Memory]] ⚠️**: Represents 3D spatial layout and geometric properties of the environment, enabling the agent to reason about positions, distances, and physical constraints.
-- **[[Visual-Semantic Memory]] ⚠️**: Encodes high‐level semantic features of images and language grounding, allowing the agent to remember visually relevant objects, scenes, and linguistic cues.
+- **Spatial-Geometric Memory ⚠️**: Represents 3D spatial layout and geometric properties of the environment, enabling the agent to reason about positions, distances, and physical constraints.
+- **Visual-Semantic Memory ⚠️**: Encodes high‐level semantic features of images and language grounding, allowing the agent to remember visually relevant objects, scenes, and linguistic cues.
 
 Both are implemented as compact fixed‐size key‐value caches that are incrementally updated as the agent navigates.
 
@@ -40,13 +40,13 @@ Both are implemented as compact fixed‐size key‐value caches that are increme
 
 | Relation | Entity | Description |
 |----------|--------|-------------|
-| `used_by` | [[JanusVLN]] | Dual Implicit Neural Memory is employed as the memory module in the JanusVLN framework. |
-| `depends_on` | [[Spatial-Geometric Encoder]] ⚠️ | Relies on a spatial-geometric encoder to produce the geometric feature cache. |
-| `depends_on` | [[Visual-Semantic Encoder]] ⚠️ | Uses a visual-semantic encoder to generate the semantic feature cache. |
+| `used_by` | JanusVLN | Dual Implicit Neural Memory is employed as the memory module in the JanusVLN framework. |
+| `depends_on` | Spatial-Geometric Encoder ⚠️ | Relies on a spatial-geometric encoder to produce the geometric feature cache. |
+| `depends_on` | Visual-Semantic Encoder ⚠️ | Uses a visual-semantic encoder to generate the semantic feature cache. |
 
 This approach is designed to be agnostic to the specific encoder implementations, making it a general memory architecture for embodied navigation.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Dual Implicit Neural Memory` --[[related_to]] ⚠️--> `JanusVLN` _(wikilink)_
+- `Dual Implicit Neural Memory` --related_to ⚠️--> `JanusVLN` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Obstacle-avoiding Controller with Trial-and-Error Heuristic** is a low-level control module designed to prevent navigation agents from becoming stuck on obstacles during continuous environment traversal. It forms an integral part of the [[ETPNav]] system, bridging high-level plans with reactive obstacle handling through a simple, repeated-attempt strategy.
+The **Obstacle-avoiding Controller with Trial-and-Error Heuristic** is a low-level control module designed to prevent navigation agents from becoming stuck on obstacles during continuous environment traversal. It forms an integral part of the ETPNav system, bridging high-level plans with reactive obstacle handling through a simple, repeated-attempt strategy.
 
 ## Parameters & Heuristic
 
@@ -24,7 +24,7 @@ The **Obstacle-avoiding Controller with Trial-and-Error Heuristic** is a low-lev
 
 ## Capabilities
 
-- Executes high‑level plans issued by [[High-level Planning]] ⚠️ ⚠️ ⚠️ in continuous, unstructured environments.  
+- Executes high‑level plans issued by High-level Planning ⚠️ ⚠️ ⚠️ in continuous, unstructured environments.  
 - Adapts to obstacles in real‑time via repeated attempts, without requiring explicit obstacle geometry or detailed maps.  
 - Operates as a fallback when the planned path becomes infeasible, enabling robust recovery.
 
@@ -34,12 +34,12 @@ When the agent encounters an obstacle, it tries alternative actions in a trial�
 
 ## Relationships
 
-- **Part of** [[ETPNav]] — the controller is one of the core modules within the ETPNav architecture.  
-- **Depends on** [[High-level Planning]] ⚠️ ⚠️ ⚠️ — the controller relies on a high‑level plan (e.g., a sequence of sub‑goals) to guide its local search.  
+- **Part of** ETPNav — the controller is one of the core modules within the ETPNav architecture.  
+- **Depends on** High-level Planning ⚠️ ⚠️ ⚠️ — the controller relies on a high‑level plan (e.g., a sequence of sub‑goals) to guide its local search.  
 
-> *See also:* [[ETPNav]] for the full system overview, and [[High-level Planning]] ⚠️ ⚠️ ⚠️ for the upstream component that directs this controller.
+> *See also:* ETPNav for the full system overview, and High-level Planning ⚠️ ⚠️ ⚠️ for the upstream component that directs this controller.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Obstacle-avoiding Controller with Trial-and-Error Heuristic` --[[extends]] ⚠️--> `ETPNav`
+- `Obstacle-avoiding Controller with Trial-and-Error Heuristic` --extends ⚠️--> `ETPNav`

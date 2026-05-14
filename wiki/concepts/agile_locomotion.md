@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Agile Locomotion
 
-**Agile locomotion** refers to the ability of [[legged robots|Legged Robots]] to move quickly and adaptively across varied terrains. It combines reactive control with learned policies to maintain stability, speed, and manoeuvrability even in unstructured environments.
+**Agile locomotion** refers to the ability of Legged Robots to move quickly and adaptively across varied terrains. It combines reactive control with learned policies to maintain stability, speed, and manoeuvrability even in unstructured environments.
 
 ## Key Components
 
@@ -33,9 +33,9 @@ Systems designed for agile locomotion can:
 
 ## Related Entities
 
-- **Applied to**: [[ANYmal D]] – the quadrupedal platform on which this approach has been deployed.
-- **Uses**: [[Depth Images]] ⚠️ as exteroceptive input; implements [[Multi-Expert Distillation]] and [[Reinforcement Learning]] (RL fine-tuning).
-- **Depends on**: [[Sim-to-Real Transfer]] techniques to bridge simulation and hardware; [[Legged Locomotion]] ⚠️ as the broader domain.
+- **Applied to**: ANYmal D – the quadrupedal platform on which this approach has been deployed.
+- **Uses**: Depth Images ⚠️ as exteroceptive input; implements Multi-Expert Distillation and Reinforcement Learning (RL fine-tuning).
+- **Depends on**: Sim-to-Real Transfer techniques to bridge simulation and hardware; Legged Locomotion ⚠️ as the broader domain.
 
 ## References
 
@@ -44,7 +44,7 @@ Systems designed for agile locomotion can:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Agile Locomotion` --[[applies_to]] ⚠️ ⚠️--> `legged robots`
-- `Agile Locomotion` --[[applies_to]] ⚠️ ⚠️--> `ANYmal D`
+- `Agile Locomotion` --applies_to ⚠️ ⚠️--> `legged robots`
+- `Agile Locomotion` --applies_to ⚠️ ⚠️--> `ANYmal D`
 **Pending review:**
-- `Agile Locomotion` --[[related_to]] ⚠️--> `Multi-Expert Distillation` _(wikilink)_
+- `Agile Locomotion` --related_to ⚠️--> `Multi-Expert Distillation` _(wikilink)_

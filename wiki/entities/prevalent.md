@@ -26,22 +26,22 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **uses** → [[Self-supervised learning]]  
+- **uses** → Self-supervised learning  
   The pre-training stage relies on self-supervised objectives (e.g., masked language modeling, action prediction) to learn useful representations without explicit human annotations.
 
-- **uses** → [[Image-text-action triplets]]  
+- **uses** → Image-text-action triplets  
   Prevalent collects large-scale triplets from navigation episodes and uses them during pre-training to align visual and textual modalities with action prediction.
 
-- **depends_on** → [[Multimodal representations]] ⚠️  
+- **depends_on** → Multimodal representations ⚠️  
   The agent requires joint understanding of vision and language; pre-training builds these cross-modal embeddings.
 
-- **depends_on** → [[VLN tasks]] ⚠️  
+- **depends_on** → VLN tasks ⚠️  
   Prevalent is designed for and evaluated on standard vision-and-language navigation tasks.
 
-- **improves** → [[Conventional VLN agents]] ⚠️  
+- **improves** → Conventional VLN agents ⚠️  
   It outperforms earlier methods by 4% on the success rate weighted by path length metric, demonstrating clear improvements.
 
-- **evaluated_on** → [[Room-to-Room benchmark]]  
+- **evaluated_on** → Room-to-Room benchmark  
   Official results are reported on the R2R test split with standardized evaluation.
 
 ## Performance

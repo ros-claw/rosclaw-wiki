@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # InstructNav
 
-**InstructNav** is a zero-shot system for generic instruction navigation in unexplored environments. It unifies planning via [[Dynamic Chain-of-Navigation]] and converts plans to robot trajectories via [[Multi-sourced Value Maps]].
+**InstructNav** is a zero-shot system for generic instruction navigation in unexplored environments. It unifies planning via Dynamic Chain-of-Navigation and converts plans to robot trajectories via Multi-sourced Value Maps.
 
 ## Overview
 
-InstructNav tackles diverse instruction-following navigation tasks without any navigation training. It operates in previously unseen environments and does not require pre-built maps, making it the first zero-shot system capable of performing on the [[R2R-CE]] benchmark.
+InstructNav tackles diverse instruction-following navigation tasks without any navigation training. It operates in previously unseen environments and does not require pre-built maps, making it the first zero-shot system capable of performing on the R2R-CE benchmark.
 
 ## Parameters
 
@@ -30,20 +30,20 @@ InstructNav tackles diverse instruction-following navigation tasks without any n
 
 - Handles diverse instruction navigation tasks without navigation training
 - Operates in unexplored environments without pre-built maps
-- First zero-shot system for the [[R2R-CE]] task
+- First zero-shot system for the R2R-CE task
 
 ## Related Components
 
 InstructNav `uses`:
-- [[Dynamic Chain-of-Navigation]] – plan synthesis from natural language instructions
-- [[Multi-sourced Value Maps]] – converts high-level plans into robot trajectories
+- Dynamic Chain-of-Navigation – plan synthesis from natural language instructions
+- Multi-sourced Value Maps – converts high-level plans into robot trajectories
 
 ## Evaluation
 
 InstructNav has been `tested_on`:
-- [[R2R-CE]] (Room-to-Room with Continuous Environment)
-- [[Habitat ObjNav]] (Object Navigation in Habitat)
-- [[DDN]] (Diverse Domain Navigation)
+- R2R-CE (Room-to-Room with Continuous Environment)
+- Habitat ObjNav (Object Navigation in Habitat)
+- DDN (Diverse Domain Navigation)
 
 ## References
 
@@ -52,4 +52,4 @@ InstructNav has been `tested_on`:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `InstructNav` --[[implements]] ⚠️--> `R2R-CE`
+- `InstructNav` --implements ⚠️--> `R2R-CE`

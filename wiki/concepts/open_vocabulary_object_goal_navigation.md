@@ -27,21 +27,21 @@ Open-vocabulary object-goal navigation refers to the ability of a robotic system
 
 ### Related Concepts
 
-- [[Object-Goal Navigation]] – The base task, extended here to open-vocabulary settings.
-- [[Embodied AI]] – The broader field of intelligence situated in physical agents.
-- [[Vision-Language Models]] ⚠️ ⚠️ – Used to align visual observations with textual or conceptual queries.
-- [[Zero-shot Learning]] – Agents transfer knowledge to unseen object categories.
-- [[Sim-to-Real]] ⚠️ – Training in simulation with domain randomization to enable real-world open-vocabulary performance.
+- Object-Goal Navigation – The base task, extended here to open-vocabulary settings.
+- Embodied AI – The broader field of intelligence situated in physical agents.
+- Vision-Language Models ⚠️ ⚠️ – Used to align visual observations with textual or conceptual queries.
+- Zero-shot Learning – Agents transfer knowledge to unseen object categories.
+- Sim-to-Real ⚠️ – Training in simulation with domain randomization to enable real-world open-vocabulary performance.
 
 ### Approaches
 
 Open-vocabulary navigation typically combines:
-1. **Visual grounding** – e.g., [[CLIP]]-based detectors that match image regions to arbitrary text queries.
+1. **Visual grounding** – e.g., CLIP-based detectors that match image regions to arbitrary text queries.
 2. **Semantic mapping** – Building spatial memory with object-centric representations.
 3. **Exploration policies** – Learned or heuristic strategies to cover the environment efficiently.
 4. **Language-conditioned planning** – Using natural language instructions or goal descriptions to guide the agent.
 
-A recent example is [[LOVON]], a method that implements open-vocabulary navigation through learned open-vocabulary object pointers and a hierarchical exploration policy.
+A recent example is LOVON, a method that implements open-vocabulary navigation through learned open-vocabulary object pointers and a hierarchical exploration policy.
 
 ### Challenges
 
@@ -52,21 +52,21 @@ A recent example is [[LOVON]], a method that implements open-vocabulary navigati
 
 ### Standard Benchmarks
 
-Common evaluation suites include [[HM3D ObjectNav]] ⚠️, [[Gibson ObjectNav]] ⚠️, and [[Habitat Open Vocabulary ObjectNav]] ⚠️, where agents are tested on novel object categories held out from training.
+Common evaluation suites include HM3D ObjectNav ⚠️, Gibson ObjectNav ⚠️, and Habitat Open Vocabulary ObjectNav ⚠️, where agents are tested on novel object categories held out from training.
 
 ### Relationship Annotations
 
-- *uses* → [[Vision-Language Models]] ⚠️ ⚠️
-- *depends_on* → [[Object-Goal Navigation]]
-- *implements* → [[Zero-shot Learning]] in embodied contexts
-- *part_of* → [[Embodied AI]]
-- *implemented_by* → [[LOVON]]
+- *uses* → Vision-Language Models ⚠️ ⚠️
+- *depends_on* → Object-Goal Navigation
+- *implements* → Zero-shot Learning in embodied contexts
+- *part_of* → Embodied AI
+- *implemented_by* → LOVON
 
 *For further details, see the sources: arXix 2512.02400 and arXix 2507.06747.*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Open-vocabulary object-goal navigation` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Open-vocabulary object-goal navigation` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Open-vocabulary object-goal navigation` --[[related_to]] ⚠️ ⚠️--> `CLIP` _(wikilink)_
+- `Open-vocabulary object-goal navigation` --related_to ⚠️ ⚠️--> `CLIP` _(wikilink)_

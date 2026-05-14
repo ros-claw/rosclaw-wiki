@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Visual Prompt (VP) Technique
 
-The **Visual Prompt (VP) technique** is a **dual-view visual prompt** algorithm designed to reduce **perception hallucinations** and improve **spatial understanding** in robotic navigation agents. It operates in a **zero-shot** manner, requiring no additional training or fine-tuning, and is a core component of the [[SeeNav-Agent]] system.
+The **Visual Prompt (VP) technique** is a **dual-view visual prompt** algorithm designed to reduce **perception hallucinations** and improve **spatial understanding** in robotic navigation agents. It operates in a **zero-shot** manner, requiring no additional training or fine-tuning, and is a core component of the SeeNav-Agent system.
 
 ## Description
 
@@ -31,7 +31,7 @@ The Visual Prompt technique introduces a dual-view input representation that pro
 
 - Achieves **zero-shot improvement** in navigation success rate across diverse environments.
 - Enhances the agent's ability to reason about spatial layouts without additional training data.
-- Integrates seamlessly into existing vision-language-action (VLA) models used by [[SeeNav-Agent]].
+- Integrates seamlessly into existing vision-language-action (VLA) models used by SeeNav-Agent.
 
 ## Relationships
 
@@ -43,17 +43,17 @@ flowchart LR
     VP -->|implements| DualView[Dual-View Input Processing]
 ```
 
-- **Part of**: [[SeeNav-Agent]] — the VP technique is a key algorithmic component of this navigation system.
-- **Depends on**: [[Vision-Language-Action Model]] — the technique is applied on top of a VLA backbone to condition its spatial reasoning.
+- **Part of**: SeeNav-Agent — the VP technique is a key algorithmic component of this navigation system.
+- **Depends on**: Vision-Language-Action Model — the technique is applied on top of a VLA backbone to condition its spatial reasoning.
 - **Implements**: Dual-view input processing — the core mechanism of combining two visual perspectives into a single prompt.
 
 ## See Also
 
-- [[Perception Hallucination]] ⚠️ — the problem the VP technique addresses.
-- [[Spatial Understanding]] ⚠️ — the capability improved by the VP technique.
-- [[Zero-Shot Navigation]] — the paradigm within which VP operates.
+- Perception Hallucination ⚠️ — the problem the VP technique addresses.
+- Spatial Understanding ⚠️ — the capability improved by the VP technique.
+- Zero-Shot Navigation — the paradigm within which VP operates.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual Prompt (VP) technique` --[[extends]] ⚠️--> `SeeNav-Agent`
+- `Visual Prompt (VP) technique` --extends ⚠️--> `SeeNav-Agent`

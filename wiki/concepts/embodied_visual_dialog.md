@@ -34,7 +34,7 @@ The core of the task is **modeling the Observer** — the agent that must:
 2. Plan and execute navigation actions.
 3. Produce natural language answers to questions from the Locator.
 
-The task is formally defined as part of the **[[Where Are You? Dataset]]** (WAY dataset), which provides:
+The task is formally defined as part of the **Where Are You? Dataset** (WAY dataset), which provides:
 
 - 3D indoor scenes.
 - Human-written dialog trajectories.
@@ -50,18 +50,18 @@ An Embodied Visual Dialog system must be able to:
 
 ## Relationships
 
-- **Part of** tasks defined in the [[Where Are You? Dataset]].  
-- **Depends on** the [[Where Are You? Dataset]] for training and evaluation.  
-- **Uses** concepts from [[Visual Dialog]] ⚠️, [[Embodied Navigation]], and [[Sim-to-Real Transfer]].  
-- **Related to** [[Visual Question Answering]] ⚠️ (VQA) but extended to an interactive, sequential setting with physical action.
+- **Part of** tasks defined in the Where Are You? Dataset.  
+- **Depends on** the Where Are You? Dataset for training and evaluation.  
+- **Uses** concepts from Visual Dialog ⚠️, Embodied Navigation, and Sim-to-Real Transfer.  
+- **Related to** Visual Question Answering ⚠️ (VQA) but extended to an interactive, sequential setting with physical action.
 
 ## Background
 
 The work is introduced in the paper *“Where Are You? Localization from Embodied Dialog”* (arXiv:2011.08277). It highlights the challenge of **active perception through conversation** — where the robot’s movements and a human’s questions are coupled.
 
-For further reading, see also: [[Embodied AI]], [[Way Dataset]] ⚠️, [[Observer-Locator Framework]] ⚠️.
+For further reading, see also: Embodied AI, Way Dataset ⚠️, Observer-Locator Framework ⚠️.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Embodied Visual Dialog` --[[related_to]] ⚠️--> `Embodied AI`
+- `Embodied Visual Dialog` --related_to ⚠️--> `Embodied AI`

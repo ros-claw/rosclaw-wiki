@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-Self-Occlusion-Aware Ray Casting is a technique used in synthetic depth image generation that explicitly models the occlusion of the camera's line-of-sight by the robot's own body parts. Unlike naive [[Ray Casting]] ⚠️ ⚠️ methods that assume the robot's geometry is invisible to its own onboard cameras, this approach accurately renders depth shadows caused by the robot's limbs, torso, or other components. This yields significantly more realistic depth observations for simulation-based training and evaluation.
+Self-Occlusion-Aware Ray Casting is a technique used in synthetic depth image generation that explicitly models the occlusion of the camera's line-of-sight by the robot's own body parts. Unlike naive Ray Casting ⚠️ ⚠️ methods that assume the robot's geometry is invisible to its own onboard cameras, this approach accurately renders depth shadows caused by the robot's limbs, torso, or other components. This yields significantly more realistic depth observations for simulation-based training and evaluation.
 
 ## Description
 
@@ -29,15 +29,15 @@ In typical sim-to-real pipelines, rendering depth from a camera mounted on a rob
 
 ## Relationships
 
-- **Part of** [[Realistic Depth Images Synthetic Method]] – a broader methodology for creating lifelike synthetic depth data.
-- **Related to** [[Ray Casting]] ⚠️ ⚠️ and [[Depth Rendering]] ⚠️ – builds upon these base techniques by adding self-occlusion handling.
+- **Part of** Realistic Depth Images Synthetic Method – a broader methodology for creating lifelike synthetic depth data.
+- **Related to** Ray Casting ⚠️ ⚠️ and Depth Rendering ⚠️ – builds upon these base techniques by adding self-occlusion handling.
 
 ## See Also
 
-- [[Sim-to-Real Transfer]]
-- [[Domain Randomization]] ⚠️ (often combined with realistic rendering)
+- Sim-to-Real Transfer
+- Domain Randomization ⚠️ (often combined with realistic rendering)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Self-Occlusion-Aware Ray Casting` --[[related_to]] ⚠️--> `Realistic Depth Images Synthetic Method` _(wikilink)_
+- `Self-Occlusion-Aware Ray Casting` --related_to ⚠️--> `Realistic Depth Images Synthetic Method` _(wikilink)_

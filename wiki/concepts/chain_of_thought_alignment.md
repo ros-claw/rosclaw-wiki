@@ -21,7 +21,7 @@ source_type: arxiv_paper
 | Parameter      | Value                              |
 |----------------|------------------------------------|
 | Granularity    | Multi-granularity                  |
-| Dataset        | [[MobileVLA-CoT Dataset]]          |
+| Dataset        | MobileVLA-CoT Dataset          |
 | Purpose        | Bridge semantic reasoning and low-level actuation |
 
 ### Capabilities
@@ -31,8 +31,8 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **Part of**: [[MobileVLA-R1]] training pipeline.
-- **Uses**: [[MobileVLA-CoT Dataset]] as the source of supervised multi‑granularity reasoning traces.
+- **Part of**: MobileVLA-R1 training pipeline.
+- **Uses**: MobileVLA-CoT Dataset as the source of supervised multi‑granularity reasoning traces.
 
 ### How It Works
 
@@ -40,9 +40,9 @@ During training, the model is fed observation sequences paired with intermediate
 
 ### Importance
 
-By making reasoning explicit, chain‑of‑thought alignment improves interpretability, sample efficiency, and generalization. It is a key component of [[MobileVLA-R1]], which leverages this technique to achieve robust mobile manipulation in unstructured environments.
+By making reasoning explicit, chain‑of‑thought alignment improves interpretability, sample efficiency, and generalization. It is a key component of MobileVLA-R1, which leverages this technique to achieve robust mobile manipulation in unstructured environments.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Chain-of-Thought Alignment` --[[related_to]] ⚠️--> `MobileVLA-R1` _(wikilink)_
+- `Chain-of-Thought Alignment` --related_to ⚠️--> `MobileVLA-R1` _(wikilink)_

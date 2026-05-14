@@ -44,8 +44,8 @@ The agent’s decision‑making is structured hierarchically with a memory compo
 
 ### Relationships
 
-- **[[HANNA Agent]]** — This algorithm is part of the [[HANNA Agent]] system. It provides the decision‑making backbone for the HANNA agent.  
-- **[[Retrospective Curiosity-Encouraging Imitation Learning]]** (RCIL) — The algorithm is trained using RCIL, a method that combines imitation learning with intrinsic curiosity rewards.  
+- **HANNA Agent** — This algorithm is part of the HANNA Agent system. It provides the decision‑making backbone for the HANNA agent.  
+- **Retrospective Curiosity-Encouraging Imitation Learning** (RCIL) — The algorithm is trained using RCIL, a method that combines imitation learning with intrinsic curiosity rewards.  
 
 ---
 
@@ -62,5 +62,5 @@ Memory‑augmented hierarchical decision‑making is particularly suitable for e
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Memory-Augmented Hierarchical Decision-Making` --[[implements]] ⚠️--> `HANNA Agent`
-- `Memory-Augmented Hierarchical Decision-Making` --[[extends]] ⚠️--> `Retrospective Curiosity-Encouraging Imitation Learning`
+- `Memory-Augmented Hierarchical Decision-Making` --implements ⚠️--> `HANNA Agent`
+- `Memory-Augmented Hierarchical Decision-Making` --extends ⚠️--> `Retrospective Curiosity-Encouraging Imitation Learning`

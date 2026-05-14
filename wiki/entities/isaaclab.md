@@ -23,16 +23,16 @@ source_type: arxiv_paper
 
 ## Usage
 
-IsaacLab is used by the [[NaVILA]] system to assess navigation performance in simulation before real‑world transfer. The benchmark’s support for real‑world experiments enables seamless evaluation across domains.
+IsaacLab is used by the NaVILA system to assess navigation performance in simulation before real‑world transfer. The benchmark’s support for real‑world experiments enables seamless evaluation across domains.
 
 ## Related Pages
 
-- [[Legged Robots]]
-- [[Robot Navigation]] ⚠️
-- [[Simulation Benchmarks]] ⚠️
+- Legged Robots
+- Robot Navigation ⚠️
+- Simulation Benchmarks ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `IsaacLab` --[[uses]] ⚠️--> `NaVILA`
-- `IsaacLab` --[[depends_on]] ⚠️--> `Legged Robots`
+- `IsaacLab` --uses ⚠️--> `NaVILA`
+- `IsaacLab` --depends_on ⚠️--> `Legged Robots`

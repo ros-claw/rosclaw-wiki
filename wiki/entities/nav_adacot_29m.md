@@ -28,12 +28,12 @@ source_type: arxiv_paper
 ### Capabilities
 
 - **Largest embodied navigation dataset** with reasoning annotations, providing a rich resource for training complex navigation policies.
-- Enables training of **[[VLingNav]]** agents with adaptive CoT reasoning, improving both interpretability and performance in long-horizon navigation tasks.
+- Enables training of **VLingNav** agents with adaptive CoT reasoning, improving both interpretability and performance in long-horizon navigation tasks.
 - Supports research into reasoning-grounded action selection and sim-to-real transfer in embodied AI.
 
 ### Relationships
 
-- **Used by**: [[VLingNav]] — the dataset is explicitly constructed to train VLingNav models, which leverage visual-language inputs and adaptive reasoning to navigate.
+- **Used by**: VLingNav — the dataset is explicitly constructed to train VLingNav models, which leverage visual-language inputs and adaptive reasoning to navigate.
 
 ### Dataset Composition
 
@@ -42,4 +42,4 @@ The dataset contains navigation episodes collected from simulated environments. 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Nav-AdaCoT-2.9M` --[[uses]] ⚠️--> `VLingNav`
+- `Nav-AdaCoT-2.9M` --uses ⚠️--> `VLingNav`

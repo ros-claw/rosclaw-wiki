@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Language-Grounded Value Map
 
-The **Language-grounded value map** is a key component of the [[VLFM]] (Vision-Language Frontier Maps) system. It assigns a semantic relevance score to each frontier in an exploration map, indicating how likely that frontier is to lead to a target object specified by a natural language category. By leveraging a pre-trained vision-language model, the map grounds spatial exploration in language, enabling robots to efficiently search for objects described by text.
+The **Language-grounded value map** is a key component of the VLFM (Vision-Language Frontier Maps) system. It assigns a semantic relevance score to each frontier in an exploration map, indicating how likely that frontier is to lead to a target object specified by a natural language category. By leveraging a pre-trained vision-language model, the map grounds spatial exploration in language, enabling robots to efficiently search for objects described by text.
 
 ## Inputs & Outputs
 
@@ -43,12 +43,12 @@ The **Language-grounded value map** is a key component of the [[VLFM]] (Vision-L
 
 ## Relationships
 
-- **Part of**: [[VLFM]] — the language-grounded value map is a core module that implements the semantic grounding for frontier selection.
-- **Uses**: [[Pre-trained vision-language model]] (e.g., CLIP) to compute cross-modal similarity.
-- **Depends on**: [[Frontier exploration]] ⚠️ to supply candidate locations and corresponding RGB images.
+- **Part of**: VLFM — the language-grounded value map is a core module that implements the semantic grounding for frontier selection.
+- **Uses**: Pre-trained vision-language model (e.g., CLIP) to compute cross-modal similarity.
+- **Depends on**: Frontier exploration ⚠️ to supply candidate locations and corresponding RGB images.
 
 ## References
 
 - Source: [arxiv 2312.03275](https://arxiv.org/abs/2312.03275) — *VLFM: Vision-Language Frontier Maps for Zero-Shot Object Goal Navigation*.
 
-*(This page was created from structured facts extracted from the paper; see also [[VLFM]] for the overall system architecture.)*
+*(This page was created from structured facts extracted from the paper; see also VLFM for the overall system architecture.)*

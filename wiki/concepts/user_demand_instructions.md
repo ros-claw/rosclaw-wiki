@@ -29,8 +29,8 @@ User demand instructions are navigation commands that reflect natural user prefe
 
 ## Relationships
 
-- `generated_by`: [[NavRAG]] — User demand instructions are produced by the NavRAG framework to create more realistic and diverse training data.
-- `used_in`: [[Vision-and-Language Navigation (VLN)]] ⚠️ — These instructions serve as input queries in VLN tasks, replacing artificial step-by-step directions with human-like commands.
+- `generated_by`: NavRAG — User demand instructions are produced by the NavRAG framework to create more realistic and diverse training data.
+- `used_in`: Vision-and-Language Navigation (VLN) ⚠️ — These instructions serve as input queries in VLN tasks, replacing artificial step-by-step directions with human-like commands.
 
 ## Additional Context
 
@@ -39,4 +39,4 @@ User demand instructions are essential for bridging the gap between synthetic na
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `User Demand Instructions` --[[related_to]] ⚠️--> `NavRAG` _(wikilink)_
+- `User Demand Instructions` --related_to ⚠️--> `NavRAG` _(wikilink)_

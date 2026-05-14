@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Role in Affordances-Oriented Planning
 
-In the context of our knowledge base, Foundation Models are integrated into the [[AO-Planner]] architecture to achieve **affordances-oriented planning in a zero-shot setting**. Specifically, they are used to:
+In the context of our knowledge base, Foundation Models are integrated into the AO-Planner architecture to achieve **affordances-oriented planning in a zero-shot setting**. Specifically, they are used to:
 
 - Provide generalizable perception and reasoning across diverse environments and tasks.
 - Interpret high-level task goals and infer actionable affordances without prior environment-specific data.
@@ -30,7 +30,7 @@ In the context of our knowledge base, Foundation Models are integrated into the 
 
 ## Relationships
 
-- **Used by**: [[AO-Planner]] – The AO-Planner relies on Foundation Models as its core reasoning and perception module to perform zero-shot affordance planning.
+- **Used by**: AO-Planner – The AO-Planner relies on Foundation Models as its core reasoning and perception module to perform zero-shot affordance planning.
 
 ## Source
 
@@ -39,4 +39,4 @@ In the context of our knowledge base, Foundation Models are integrated into the 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Foundation Models` --[[related_to]] ⚠️--> `AO-Planner` _(wikilink)_
+- `Foundation Models` --related_to ⚠️--> `AO-Planner` _(wikilink)_

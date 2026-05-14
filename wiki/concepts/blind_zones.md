@@ -20,4 +20,4 @@ These unmonitored areas can arise from sensor placement, field-of-view limitatio
 
 ## Relationship
 
-- **challenge_for**: [[LOVON]] — In the [[LOVON]] architecture, blind zones must be actively mitigated to prevent target loss and ensure robust long-term navigation.
+- **challenge_for**: LOVON — In the LOVON architecture, blind zones must be actively mitigated to prevent target loss and ensure robust long-term navigation.

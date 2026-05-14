@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**GELA (Grounded Entity-Landmark Adaptive Pre-training)** is a pre-training paradigm within the [[VLN pre-training paradigm]] ⚠️ ⚠️ for [[Vision-and-Language Navigation (VLN)]] ⚠️. It explicitly supervises fine-grained alignment at the entity level using grounded entity-landmark annotations. GELA addresses the limitation of previous VLN pre-training methods that focus on image-level or region-level alignment, lacking explicit grounding of textual entities (e.g., "the red chair") to specific landmarks in the environment.
+**GELA (Grounded Entity-Landmark Adaptive Pre-training)** is a pre-training paradigm within the VLN pre-training paradigm ⚠️ ⚠️ for Vision-and-Language Navigation (VLN) ⚠️. It explicitly supervises fine-grained alignment at the entity level using grounded entity-landmark annotations. GELA addresses the limitation of previous VLN pre-training methods that focus on image-level or region-level alignment, lacking explicit grounding of textual entities (e.g., "the red chair") to specific landmarks in the environment.
 
 ## Parameters
 
@@ -33,15 +33,15 @@ These three objectives work together to produce a representation that is both li
 ## Capabilities
 
 - Achieves **fine-grained cross-modal alignment** at the entity level, significantly improving instruction understanding and visual grounding.
-- **State-of-the-art performance** on the [[Room-to-Room (R2R)]] benchmark and the [[CVDN (Cooperative Vision-and-Dialog Navigation)]] benchmark, demonstrating strong generalization to both descriptive (single-step) and dialogue-based navigation tasks.
+- **State-of-the-art performance** on the Room-to-Room (R2R) benchmark and the CVDN (Cooperative Vision-and-Dialog Navigation) benchmark, demonstrating strong generalization to both descriptive (single-step) and dialogue-based navigation tasks.
 - The learned representations are **generalizable across descriptive and dialogue instruction VLN tasks**, making GELA a versatile backbone for diverse navigation settings.
 
 ## Relationships
 
-- **uses**: [[GEL-R2R dataset]], [[Room-to-Room (R2R) dataset]], [[CVDN dataset]] ⚠️
-- **depends_on**: [[vision-and-language navigation]], [[cross-modal alignment]]
-- **part_of**: [[VLN pre-training paradigm]] ⚠️ ⚠️
-- **evaluated_on**: [[R2R]], [[CVDN]]
+- **uses**: GEL-R2R dataset, Room-to-Room (R2R) dataset, CVDN dataset ⚠️
+- **depends_on**: vision-and-language navigation, cross-modal alignment
+- **part_of**: VLN pre-training paradigm ⚠️ ⚠️
+- **evaluated_on**: R2R, CVDN
 
 ## References
 

@@ -29,10 +29,10 @@ The ability to explicitly predict the ultimate goal location, even when it is no
 
 | Relationship | Linked Page | Notes |
 |---|---|---|
-| `related_to` | [[TD-STP]] ⚠️ | Explicit long-term target estimation is a core idea within the TD-STP (Temporal Distance and Spatial Temporal Planning) framework. |
-| `implements` | [[Imaginary Scene Tokenization]] ⚠️ ⚠️ | [[Imaginary Scene Tokenization]] ⚠️ ⚠️ is a method that realizes explicit long-term target estimation by generating "imaginary" scene tokens representing the target location. |
-| `depends_on` | [[Visual-Linguistic Grounding]] ⚠️ | The estimation requires aligning visual features with linguistic descriptions to infer the target. |
-| `used_in` | [[Embodied Navigation]] | This concept is a key component in advanced goal-conditioned navigation systems. |
+| `related_to` | TD-STP ⚠️ | Explicit long-term target estimation is a core idea within the TD-STP (Temporal Distance and Spatial Temporal Planning) framework. |
+| `implements` | Imaginary Scene Tokenization ⚠️ ⚠️ | Imaginary Scene Tokenization ⚠️ ⚠️ is a method that realizes explicit long-term target estimation by generating "imaginary" scene tokens representing the target location. |
+| `depends_on` | Visual-Linguistic Grounding ⚠️ | The estimation requires aligning visual features with linguistic descriptions to infer the target. |
+| `used_in` | Embodied Navigation | This concept is a key component in advanced goal-conditioned navigation systems. |
 
 ### References
 

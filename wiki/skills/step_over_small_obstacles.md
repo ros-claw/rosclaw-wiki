@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 **Step over small obstacles** is a locomotion skill that enables a robot to lift its feet over small objects on the ground, such as shoes, toys, or cables, without contacting or disrupting them. The skill is analogous to how humans and pets step over items on the floor, allowing continuous traversal in cluttered environments.
 
-This skill is a component of the [[ViNL]] framework and requires a [[Visual Locomotion Policy]] ⚠️ ⚠️ to operate.
+This skill is a component of the ViNL framework and requires a Visual Locomotion Policy ⚠️ ⚠️ to operate.
 
 ## Parameters
 
@@ -31,8 +31,8 @@ This skill is a component of the [[ViNL]] framework and requires a [[Visual Loco
 
 ## Relationships
 
-- **Part of**: [[ViNL]]
-- **Requires**: [[Visual Locomotion Policy]] ⚠️ ⚠️
+- **Part of**: ViNL
+- **Requires**: Visual Locomotion Policy ⚠️ ⚠️
 
 ## Source
 
@@ -41,4 +41,4 @@ This skill is a component of the [[ViNL]] framework and requires a [[Visual Loco
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Step over small obstacles` --[[uses]] ⚠️--> `ViNL`
+- `Step over small obstacles` --uses ⚠️--> `ViNL`

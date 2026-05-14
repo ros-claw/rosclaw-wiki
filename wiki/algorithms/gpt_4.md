@@ -15,19 +15,19 @@ source_type: arxiv_paper
 
 # GPT-4o
 
-GPT-4o is a proprietary multimodal large language model (MLLM) developed by [[OpenAI]] ⚠️, serving as the cognitive core for embodied agents. It builds upon the capabilities of [[GPT-4]] and [[GPT-4V]] ⚠️, adding native multimodality across text, vision, and audio. In robotics and embodied AI, GPT-4o functions as a high-level planner and reasoning engine, enabling agents to interpret natural language instructions, process visual inputs, and generate complex action sequences.
+GPT-4o is a proprietary multimodal large language model (MLLM) developed by OpenAI ⚠️, serving as the cognitive core for embodied agents. It builds upon the capabilities of GPT-4 and GPT-4V ⚠️, adding native multimodality across text, vision, and audio. In robotics and embodied AI, GPT-4o functions as a high-level planner and reasoning engine, enabling agents to interpret natural language instructions, process visual inputs, and generate complex action sequences.
 
 ## GPT-4V (Vision Variant)
 
-GPT-4V extends GPT-4 with multimodal (vision-and-language) understanding. It can process visual inputs such as camera images, maps, or environmental layouts alongside textual commands, making it especially suitable for embodied navigation tasks. In architectures like [[MapGPT]], GPT-4V is prompted with a map representation of the environment to generate zero-shot navigation plans—without any finetuning on the target environment.
+GPT-4V extends GPT-4 with multimodal (vision-and-language) understanding. It can process visual inputs such as camera images, maps, or environmental layouts alongside textual commands, making it especially suitable for embodied navigation tasks. In architectures like MapGPT, GPT-4V is prompted with a map representation of the environment to generate zero-shot navigation plans—without any finetuning on the target environment.
 
 ## GPT-4o (Omni)
 
-GPT-4o is the latest iteration from OpenAI, integrating vision, language, and audio understanding into a single model. It is part of the broader family of [[Multi-modal Large Language Models (MLLMs)]] ⚠️ ⚠️ ⚠️. Compared to GPT-4V, GPT-4o offers improved efficiency and native support for multiple modalities without separate processing pipelines.
+GPT-4o is the latest iteration from OpenAI, integrating vision, language, and audio understanding into a single model. It is part of the broader family of Multi-modal Large Language Models (MLLMs) ⚠️ ⚠️ ⚠️. Compared to GPT-4V, GPT-4o offers improved efficiency and native support for multiple modalities without separate processing pipelines.
 
 ### Performance on EmbodiedBench
 
-In the comprehensive [[EmbodiedBench]] evaluation (covering high-level planning, low-level manipulation, and navigation tasks across 24 MLLMs), GPT-4o achieved the **highest average score of 28.9%**. It excelled at high-level tasks such as task decomposition and abstract reasoning, but **struggled with low-level manipulation tasks** that require fine-grained motor control or precise spatial awareness. This performance gap highlights a common limitation of current MLLMs in grounding high-level reasoning to precise physical actions.
+In the comprehensive EmbodiedBench evaluation (covering high-level planning, low-level manipulation, and navigation tasks across 24 MLLMs), GPT-4o achieved the **highest average score of 28.9%**. It excelled at high-level tasks such as task decomposition and abstract reasoning, but **struggled with low-level manipulation tasks** that require fine-grained motor control or precise spatial awareness. This performance gap highlights a common limitation of current MLLMs in grounding high-level reasoning to precise physical actions.
 
 ## Role in Embodied AI
 
@@ -44,11 +44,11 @@ GPT-4 and its variants function as the central decision-making component in high
 
 ## Relationships
 
-- **Depends on**: [[Large Language Models]] (as foundational technology), [[Transformer Architecture]] ⚠️, [[Multi-modal Large Language Models (MLLMs)]] ⚠️ ⚠️ ⚠️.
-- **Part of**: [[Multi-modal Large Language Models (MLLMs)]] ⚠️ ⚠️ ⚠️.
-- **Used by**: [[MapGPT]] — MapGPT depends on GPT-4, GPT-4V, and GPT-4o for decision-making and planning. The vision variants are particularly leveraged when map images are provided as input.
-- **Evaluated in**: [[EmbodiedBench]] — GPT-4o achieved the highest average score (28.9%) among 24 MLLMs.
-- **Related to**: [[Embodied AI]], [[Zero-shot Learning]], [[Foundation Models for Robotics]] ⚠️, [[Multimodal Learning]] ⚠️
+- **Depends on**: Large Language Models (as foundational technology), Transformer Architecture ⚠️, Multi-modal Large Language Models (MLLMs) ⚠️ ⚠️ ⚠️.
+- **Part of**: Multi-modal Large Language Models (MLLMs) ⚠️ ⚠️ ⚠️.
+- **Used by**: MapGPT — MapGPT depends on GPT-4, GPT-4V, and GPT-4o for decision-making and planning. The vision variants are particularly leveraged when map images are provided as input.
+- **Evaluated in**: EmbodiedBench — GPT-4o achieved the highest average score (28.9%) among 24 MLLMs.
+- **Related to**: Embodied AI, Zero-shot Learning, Foundation Models for Robotics ⚠️, Multimodal Learning ⚠️
 
 ## Sources
 
@@ -58,7 +58,7 @@ GPT-4 and its variants function as the central decision-making component in high
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `GPT-4o` --[[extends]] ⚠️--> `GPT-4`
-- `GPT-4o` --[[part_of]] ⚠️--> `Multi-modal Large Language Models (MLLMs)`
-- `GPT-4o` --[[evaluated_in]] ⚠️--> `EmbodiedBench`
-- `EmbodiedBench` --[[benchmark_for]] ⚠️--> `GPT-4o`
+- `GPT-4o` --extends ⚠️--> `GPT-4`
+- `GPT-4o` --part_of ⚠️--> `Multi-modal Large Language Models (MLLMs)`
+- `GPT-4o` --evaluated_in ⚠️--> `EmbodiedBench`
+- `EmbodiedBench` --benchmark_for ⚠️--> `GPT-4o`

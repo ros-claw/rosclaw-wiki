@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Navigation Diffusion Policy (NavDP)
 
-**Navigation Diffusion Policy (NavDP)** is a [[transformer-based]] ⚠️ algorithm that jointly learns trajectory generation and trajectory evaluation for mobile robot navigation. It takes as input a local [[RGB-D observation]] ⚠️ and outputs both a generated trajectory and its predicted safety value (critic score). NavDP is trained end-to-end in [[simulation]] ⚠️ and achieves zero-shot [[sim-to-real]] ⚠️ transfer across diverse environments and robot embodiments.
+**Navigation Diffusion Policy (NavDP)** is a transformer-based ⚠️ algorithm that jointly learns trajectory generation and trajectory evaluation for mobile robot navigation. It takes as input a local RGB-D observation ⚠️ and outputs both a generated trajectory and its predicted safety value (critic score). NavDP is trained end-to-end in simulation ⚠️ and achieves zero-shot sim-to-real ⚠️ transfer across diverse environments and robot embodiments.
 
 ### Capabilities
 
@@ -33,14 +33,14 @@ The architecture is designed to reason over both spatial context and temporal de
 
 ### Training Details
 
-NavDP is trained **exclusively in simulation** using a large-scale dataset of **over one million meters** of navigation experience across **3,000 unique scenes**. It leverages [[privileged information]] ⚠️ ⚠️ available only in simulation (e.g., ground‑truth occupancy, exact dynamics) to supervise critic values for **contrastive trajectory samples** – pairs of safe and unsafe trajectories that teach the model to evaluate risk.
+NavDP is trained **exclusively in simulation** using a large-scale dataset of **over one million meters** of navigation experience across **3,000 unique scenes**. It leverages privileged information ⚠️ ⚠️ available only in simulation (e.g., ground‑truth occupancy, exact dynamics) to supervise critic values for **contrastive trajectory samples** – pairs of safe and unsafe trajectories that teach the model to evaluate risk.
 
 The learning objective combines:
 
-- [[behavior cloning]] ⚠️ for trajectory generation
+- behavior cloning ⚠️ for trajectory generation
 - contrastive loss over critic values for trajectory evaluation
 
-Training uses [[simulation data]] ⚠️ ⚠️ and does not require any real-world interaction.
+Training uses simulation data ⚠️ ⚠️ and does not require any real-world interaction.
 
 ### Evaluation
 
@@ -48,8 +48,8 @@ Empirical experiments in both simulated and real-world environments show NavDP *
 
 ### Relationships
 
-- **uses**: [[simulation data]] ⚠️ ⚠️, [[privileged information]] ⚠️ ⚠️, [[contrastive trajectory samples]] ⚠️
+- **uses**: simulation data ⚠️ ⚠️, privileged information ⚠️ ⚠️, contrastive trajectory samples ⚠️
 - **depends_on**: (none explicitly required; standalone algorithm)
 - **implements**: end-to-end learning for navigation
 - **capable_of**: zero-shot sim-to-real transfer, joint generation and evaluation
-- **related_to**: [[Diffusion Policy]] ⚠️, [[Imitation Learning for Navigation]] ⚠️, [[Safety-Critical Control]] ⚠️
+- **related_to**: Diffusion Policy ⚠️, Imitation Learning for Navigation ⚠️, Safety-Critical Control ⚠️

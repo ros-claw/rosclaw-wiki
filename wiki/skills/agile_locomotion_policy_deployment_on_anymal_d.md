@@ -16,13 +16,13 @@ source_type: arxiv_paper
 
 ## Definition
 
-The **Agile Locomotion Policy Deployment on ANYmal D** is a skill that enables the [[ANYmal D]] quadruped robot to execute agile, dynamic locomotion behaviors in real-world complex environments. The policy is a trained unified controller that takes depth images as input and generalizes to unseen terrains without retraining.
+The **Agile Locomotion Policy Deployment on ANYmal D** is a skill that enables the ANYmal D quadruped robot to execute agile, dynamic locomotion behaviors in real-world complex environments. The policy is a trained unified controller that takes depth images as input and generalizes to unseen terrains without retraining.
 
 ## Parameters
 
 | Parameter   | Value                                  |
 |-------------|----------------------------------------|
-| Robot       | [[ANYmal D]]                           |
+| Robot       | ANYmal D                           |
 | Controller  | Trained unified policy                 |
 | Input       | Depth images                           |
 
@@ -35,16 +35,16 @@ The **Agile Locomotion Policy Deployment on ANYmal D** is a skill that enables t
 
 This skill depends on the following:
 
-- [[Multi-expert Distillation]] — used to distill multiple expert policies into a single unified policy.
-- [[Reinforcement Learning Fine-tuning]] — applied during training to refine the distilled policy for robustness and agility.
+- Multi-expert Distillation — used to distill multiple expert policies into a single unified policy.
+- Reinforcement Learning Fine-tuning — applied during training to refine the distilled policy for robustness and agility.
 
 ## Implements
 
-- [[Agile Locomotion]] — the skill directly implements a core capability of agile locomotion on the ANYmal D platform.
+- Agile Locomotion — the skill directly implements a core capability of agile locomotion on the ANYmal D platform.
 
 ## Procedure
 
-1. Prepare the [[ANYmal D]] robot with onboard depth camera.
+1. Prepare the ANYmal D robot with onboard depth camera.
 2. Load the trained unified policy onto the robot's onboard computer (e.g., ROS 2 node or dedicated controller).
 3. Provide depth images as input to the policy at runtime.
 4. The policy outputs joint-level commands that drive agile locomotion behaviors.
@@ -53,13 +53,13 @@ This skill depends on the following:
 
 ## Related Pages
 
-- [[ANYmal D]] (entity)
-- [[Multi-expert Distillation]] (algorithm)
-- [[Reinforcement Learning Fine-tuning]] (algorithm)
-- [[Agile Locomotion]] (concept)
+- ANYmal D (entity)
+- Multi-expert Distillation (algorithm)
+- Reinforcement Learning Fine-tuning (algorithm)
+- Agile Locomotion (concept)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
 - `Agile Locomotion Policy Deployment on ANYmal D` --[[operates_on]] ⚠️--> `ANYmal D`
-- `Agile Locomotion Policy Deployment on ANYmal D` --[[uses]] ⚠️--> `Multi-expert Distillation`
+- `Agile Locomotion Policy Deployment on ANYmal D` --uses ⚠️--> `Multi-expert Distillation`

@@ -26,14 +26,14 @@ HM3D consists of thousands of scanned interiors (apartments, offices, houses, mu
 - **HM3D ObjectNav** – Classic object‑goal navigation where the agent must locate a specific category (e.g., "chair") in an unseen scene.
 - **HM3D‑OVON** – Open‑vocabulary variant where object targets are described by free‑form language (e.g., "the red mug on the kitchen counter").
 
-Both benchmarks are used to evaluate navigation policies in the [[Habitat Simulator]]. HM3D is also employed as an **object‑goal navigation benchmark** for evaluating newer methods such as [[ASCENT]] (source: `papers/2505.23019.pdf`).
+Both benchmarks are used to evaluate navigation policies in the Habitat Simulator. HM3D is also employed as an **object‑goal navigation benchmark** for evaluating newer methods such as ASCENT (source: `papers/2505.23019.pdf`).
 
 ### Relationships
 
-- Used by [[FiLM-Nav]] as the primary evaluation environment for ObjectNav and OVON tasks.
-- Used by [[ASCENT]] for evaluation of multi‑floor, language‑specified navigation.
-- Part of the broader [[Habitat]] ecosystem, which includes the habitat‑lab framework and habitat‑sim simulator.
-- Supplements other datasets such as [[Matterport3D]] ⚠️ with higher‑resolution reconstructions and expanded room coverage.
+- Used by FiLM-Nav as the primary evaluation environment for ObjectNav and OVON tasks.
+- Used by ASCENT for evaluation of multi‑floor, language‑specified navigation.
+- Part of the broader Habitat ecosystem, which includes the habitat‑lab framework and habitat‑sim simulator.
+- Supplements other datasets such as Matterport3D ⚠️ with higher‑resolution reconstructions and expanded room coverage.
 
 ### Key Capabilities
 
@@ -45,11 +45,11 @@ Both benchmarks are used to evaluate navigation policies in the [[Habitat Simula
 ### References
 
 - Defined in the Habitat‑Matterport 3D Dataset paper (Ramakrishnan et al., 2021).
-- Used in evaluation of [[ASCENT]] (source: `papers/2505.23019.pdf`).
-- For usage in FiLM‑Nav, see [[FiLM-Nav]] and associated paper (source: `papers/2509.16445.pdf`).
+- Used in evaluation of ASCENT (source: `papers/2505.23019.pdf`).
+- For usage in FiLM‑Nav, see FiLM-Nav and associated paper (source: `papers/2509.16445.pdf`).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Pending review:**
-- `HM3D` --[[related_to]] ⚠️--> `FiLM-Nav` _(wikilink)_
-- `HM3D` --[[used_in]] ⚠️--> `ASCENT` _(wikilink)_
+- `HM3D` --related_to ⚠️--> `FiLM-Nav` _(wikilink)_
+- `HM3D` --used_in ⚠️--> `ASCENT` _(wikilink)_

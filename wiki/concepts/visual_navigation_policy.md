@@ -33,7 +33,7 @@ Visual navigation policies are a core component of **embodied AI** and are funda
 - **Egocentric navigation**: The policy can guide an agent from a starting point to a goal using only first-person camera feeds, without external localization or pre-built maps.  
 - **Obstacle avoidance** (implicit): Learned visual features often encode spatial cues that allow the policy to sidestep obstacles, even though no explicit depth measurement is used.  
 - **Goal-conditioned behavior**: Many visual navigation policies accept a target image or a high-level command, enabling flexible task execution.  
-- **Real‑world deployment (example)**: In the context of [[ViNL]], the policy guides a quadruped robot to a goal coordinate in unfamiliar indoor environments by outputting velocity commands that are fed to a separate visual locomotion policy.
+- **Real‑world deployment (example)**: In the context of ViNL, the policy guides a quadruped robot to a goal coordinate in unfamiliar indoor environments by outputting velocity commands that are fed to a separate visual locomotion policy.
 
 #### Architecture / Function
 
@@ -41,10 +41,10 @@ The visual navigation policy outputs linear and angular velocity commands. These
 
 #### Relationships
 
-- **Part of** [[ViNL]] (Visual Navigation and Locomotion), where it serves as the high‑level planner.  
+- **Part of** ViNL (Visual Navigation and Locomotion), where it serves as the high‑level planner.  
 - **Depends on** visual input (egocentric camera images).  
-- **Contrasts with** [[LiDAR-based Navigation]] ⚠️ and [[Depth-based Navigation]] ⚠️: Unlike geometric approaches that rely on structured light or stereo depth, visual navigation policies treat optical information as a high-dimensional, semantically rich signal that must be interpreted via learned models.  
-- **Uses** [[Egocentric Vision]] ⚠️ as its sole sensory input modality.
+- **Contrasts with** LiDAR-based Navigation ⚠️ and Depth-based Navigation ⚠️: Unlike geometric approaches that rely on structured light or stereo depth, visual navigation policies treat optical information as a high-dimensional, semantically rich signal that must be interpreted via learned models.  
+- **Uses** Egocentric Vision ⚠️ as its sole sensory input modality.
 
 #### Challenge
 
@@ -52,15 +52,15 @@ Optical information is difficult to model explicitly. Traditional computer visio
 
 #### See also
 
-- [[Visual Navigation]]
-- [[End-to-End Imitation Learning]] ⚠️
-- [[Sim-to-Real Transfer]]
-- [[Embodied AI]]
-- [[ViNL]]
+- Visual Navigation
+- End-to-End Imitation Learning ⚠️
+- Sim-to-Real Transfer
+- Embodied AI
+- ViNL
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual Navigation Policy` --[[related_to]] ⚠️--> `Embodied AI`
-- `Visual Navigation Policy` --[[part_of]] ⚠️--> `ViNL`
-- `Visual Navigation Policy` --[[depends_on]] ⚠️--> `Visual input`
+- `Visual Navigation Policy` --related_to ⚠️--> `Embodied AI`
+- `Visual Navigation Policy` --part_of ⚠️--> `ViNL`
+- `Visual Navigation Policy` --depends_on ⚠️--> `Visual input`

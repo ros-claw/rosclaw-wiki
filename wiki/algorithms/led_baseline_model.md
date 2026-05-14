@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## LED Baseline Model
 
-The **LED Baseline Model** is a baseline algorithm for the task of **Localization from Embodied Dialog (LED)**. It processes a dialog history and first‑person visual observations to localize an Observer agent within a building, achieving 32.7% success within a 3‑meter radius on unseen buildings in the [[Where Are You? Dataset]].
+The **LED Baseline Model** is a baseline algorithm for the task of **Localization from Embodied Dialog (LED)**. It processes a dialog history and first‑person visual observations to localize an Observer agent within a building, achieving 32.7% success within a 3‑meter radius on unseen buildings in the Where Are You? Dataset.
 
 ### Capabilities
 
@@ -28,10 +28,10 @@ The exact architecture is not detailed in the original abstract, but the model w
 
 ### Performance
 
-Tested on the [[Where Are You? Dataset]], the baseline achieves **32.7% success** (within 3 meters of the ground‑truth location) on unseen buildings. This performance establishes a strong foundation for the LED task and provides a benchmark for future work.
+Tested on the Where Are You? Dataset, the baseline achieves **32.7% success** (within 3 meters of the ground‑truth location) on unseen buildings. This performance establishes a strong foundation for the LED task and provides a benchmark for future work.
 
 ### Dependencies
 
-- **uses**:: [[Where Are You? Dataset]]
-- **depends_on**:: [[dialog history]] ⚠️, [[visual observations]] ⚠️
-- **task**:: [[Localization from Embodied Dialog]] ⚠️
+- **uses**:: Where Are You? Dataset
+- **depends_on**:: dialog history ⚠️, visual observations ⚠️
+- **task**:: Localization from Embodied Dialog ⚠️

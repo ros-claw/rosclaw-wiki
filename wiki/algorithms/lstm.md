@@ -24,23 +24,23 @@ LSTM serves as a backbone for many **speaker models** in VLN, where the network 
 
 ## Performance Comparison
 
-Recent work has shown that LSTM-based speakers can be outperformed by transformer-based alternatives. According to [[PASTS]] (Paper 2305.11918), the PASTS architecture achieves superior performance on speaker-conditioned VLN tasks compared to LSTM-based speakers. This suggests a trend towards replacing recurrent architectures with parallelizable, attention-based models for instruction generation in embodied navigation.
+Recent work has shown that LSTM-based speakers can be outperformed by transformer-based alternatives. According to PASTS (Paper 2305.11918), the PASTS architecture achieves superior performance on speaker-conditioned VLN tasks compared to LSTM-based speakers. This suggests a trend towards replacing recurrent architectures with parallelizable, attention-based models for instruction generation in embodied navigation.
 
 ## Related Concepts
 
-- [[PASTS]] – a transformer-based speaker architecture that outperforms LSTM-based approaches.
-- [[Vision-Language Navigation (VLN)]] – the primary domain where LSTM speakers are applied.
-- [[Recurrent Neural Network (RNN)]] ⚠️ – the broader family to which LSTM belongs.
-- [[Sequence-to-Sequence Learning]] ⚠️ – the paradigm used by LSTM-based speakers.
-- [[Transformer]] ⚠️ – the architecture that has supplanted LSTM in many speaker models.
+- PASTS – a transformer-based speaker architecture that outperforms LSTM-based approaches.
+- Vision-Language Navigation (VLN) – the primary domain where LSTM speakers are applied.
+- Recurrent Neural Network (RNN) ⚠️ – the broader family to which LSTM belongs.
+- Sequence-to-Sequence Learning ⚠️ – the paradigm used by LSTM-based speakers.
+- Transformer ⚠️ – the architecture that has supplanted LSTM in many speaker models.
 
 ## Relationship Annotations
 
-- [[PASTS]] `outperforms` LSTM-based speakers (comparison)
-- LSTM `is used_by` speaker models in [[Vision-Language Navigation (VLN)]] (used_by)
-- LSTM `depends_on` [[Gated Recurrent Mechanisms]] ⚠️ (implicit)
+- PASTS `outperforms` LSTM-based speakers (comparison)
+- LSTM `is used_by` speaker models in Vision-Language Navigation (VLN) (used_by)
+- LSTM `depends_on` Gated Recurrent Mechanisms ⚠️ (implicit)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `LSTM` --[[extends]] ⚠️--> `PASTS`
+- `LSTM` --extends ⚠️--> `PASTS`

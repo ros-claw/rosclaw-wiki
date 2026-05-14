@@ -21,7 +21,7 @@ source_type: arxiv_paper
 
 A framework where perception and control are integrated into a single learned process rather than separate modules. In this paradigm, raw sensory data (e.g., point clouds) is directly transformed into control commands, bypassing intermediate representations such as object detection maps or trajectory plans. This tight coupling aims to minimize information loss and latency that accumulate in classical modular pipelines.
 
-The approach is exemplified by [[NeuPAN]], which takes raw point cloud as input and generates motions without relying on explicit intermediate representations like semantic maps or path plans.
+The approach is exemplified by NeuPAN, which takes raw point cloud as input and generates motions without relying on explicit intermediate representations like semantic maps or path plans.
 
 ## Capabilities
 
@@ -30,8 +30,8 @@ The approach is exemplified by [[NeuPAN]], which takes raw point cloud as input 
 
 ## Relationships
 
-- **Contrasts with:** [[Modular Perception-Planning-Control Pipeline]] ⚠️ – the traditional architecture where perception, planning, and control operate as distinct, sequentially chained modules  
-- **Used by:** [[NeuPAN]] – implements a tightly coupled perception-to-control framework powered by neural networks  
+- **Contrasts with:** Modular Perception-Planning-Control Pipeline ⚠️ – the traditional architecture where perception, planning, and control operate as distinct, sequentially chained modules  
+- **Used by:** NeuPAN – implements a tightly coupled perception-to-control framework powered by neural networks  
 
 ## Benefits
 
@@ -39,11 +39,11 @@ By fusing perception and control into a single end-to-end process, the system av
 
 ## Related Concepts
 
-- [[End-to-End Learning]]  
-- [[Imitation Learning]]  
-- [[Sensorimotor Control]] ⚠️
+- End-to-End Learning  
+- Imitation Learning  
+- Sensorimotor Control ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Tightly coupled perception-to-control` --[[related_to]] ⚠️--> `NeuPAN` _(wikilink)_
+- `Tightly coupled perception-to-control` --related_to ⚠️--> `NeuPAN` _(wikilink)_

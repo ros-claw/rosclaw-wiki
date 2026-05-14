@@ -23,15 +23,15 @@ source_type: arxiv_paper
 
 ### Relationships
 
-*   **Implemented by** → [[ProbES]] (Probabilistic Exploration with Self-supervision), which uses self-exploration to build in-domain datasets for downstream policy learning.
+*   **Implemented by** → ProbES (Probabilistic Exploration with Self-supervision), which uses self-exploration to build in-domain datasets for downstream policy learning.
 
 ### See also
 
-*   [[Exploration vs Exploitation]] ⚠️
-*   [[Sim-to-Real Transfer]]
-*   [[Reinforcement Learning]]
+*   Exploration vs Exploitation ⚠️
+*   Sim-to-Real Transfer
+*   Reinforcement Learning
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Self-exploration` --[[related_to]] ⚠️--> `ProbES` _(wikilink)_
+- `Self-exploration` --related_to ⚠️--> `ProbES` _(wikilink)_

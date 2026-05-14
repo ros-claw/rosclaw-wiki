@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Target-Bench
 
-Target-Bench is the first benchmark specifically designed to evaluate [[Video World Models]] on semantic reasoning, spatial estimation, and planning capabilities. It provides 450 robot-collected scenarios spanning 47 semantic categories, with [[SLAM]]-based trajectories serving as motion tendency references. The benchmark is accompanied by a [[Metric Scale Recovery Mechanism]] to enable accurate spatial evaluation.
+Target-Bench is the first benchmark specifically designed to evaluate Video World Models on semantic reasoning, spatial estimation, and planning capabilities. It provides 450 robot-collected scenarios spanning 47 semantic categories, with SLAM-based trajectories serving as motion tendency references. The benchmark is accompanied by a Metric Scale Recovery Mechanism to enable accurate spatial evaluation.
 
 ### Description
 
@@ -49,13 +49,13 @@ Five complementary metrics focus on two key performance aspects:
 
 ### Relationships
 
-- **uses**: [[Video World Models]], [[SLAM]], [[Metric Scale Recovery Mechanism]]
-- **depends_on**: robot-collected scenarios, [[SLAM]]-based trajectories
+- **uses**: Video World Models, SLAM, Metric Scale Recovery Mechanism
+- **depends_on**: robot-collected scenarios, SLAM-based trajectories
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Target-Bench` --[[uses]] ⚠️ ⚠️ ⚠️--> `Video World Models`
-- `Target-Bench` --[[uses]] ⚠️ ⚠️ ⚠️--> `SLAM`
-- `Target-Bench` --[[uses]] ⚠️ ⚠️ ⚠️--> `Metric Scale Recovery Mechanism`
-- `Target-Bench` --[[depends_on]] ⚠️--> `SLAM`-based trajectories
+- `Target-Bench` --uses ⚠️ ⚠️ ⚠️--> `Video World Models`
+- `Target-Bench` --uses ⚠️ ⚠️ ⚠️--> `SLAM`
+- `Target-Bench` --uses ⚠️ ⚠️ ⚠️--> `Metric Scale Recovery Mechanism`
+- `Target-Bench` --depends_on ⚠️--> `SLAM`-based trajectories

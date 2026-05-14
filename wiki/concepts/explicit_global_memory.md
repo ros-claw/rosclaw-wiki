@@ -20,9 +20,9 @@ source_type: arxiv_paper
 
 | Property | Value |
 |----------|-------|
-| **Storage format** | [[3D Gaussians]] ⚠️ |
+| **Storage format** | 3D Gaussians ⚠️ |
 | **Update mechanism** | Local refinement |
-| **Primary user** | [[EmbodiedOcc]] |
+| **Primary user** | EmbodiedOcc |
 
 ## Capabilities
 
@@ -31,7 +31,7 @@ source_type: arxiv_paper
 
 ## Relationship with EmbodiedOcc
 
-Explicit Global Memory is actively used by [[EmbodiedOcc]], an occupancy prediction framework for embodied agents. The memory provides the underlying scene structure that EmbodiedOcc queries to generate occupancy predictions grounded in the agent’s accumulated knowledge.
+Explicit Global Memory is actively used by EmbodiedOcc, an occupancy prediction framework for embodied agents. The memory provides the underlying scene structure that EmbodiedOcc queries to generate occupancy predictions grounded in the agent’s accumulated knowledge.
 
 ## Source
 
@@ -40,4 +40,4 @@ This concept is derived from the paper *EmbodiedOcc: Embodied 3D Occupancy Predi
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Explicit Global Memory` --[[related_to]] ⚠️--> `EmbodiedOcc` _(wikilink)_
+- `Explicit Global Memory` --related_to ⚠️--> `EmbodiedOcc` _(wikilink)_

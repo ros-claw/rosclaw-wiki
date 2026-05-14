@@ -22,7 +22,7 @@ The VLA paradigm builds upon vision-language models (VLMs) but extends them to d
 
 ## Application to Aerial Navigation (VLA-AN)
 
-The VLA framework has been instantiated for **aerial navigation** as [[VLA-AN]] (Vision-Language-Action for Aerial Navigation). In this domain, the agent (aerial vehicle) receives:
+The VLA framework has been instantiated for **aerial navigation** as VLA-AN (Vision-Language-Action for Aerial Navigation). In this domain, the agent (aerial vehicle) receives:
 
 - **Vision**: onboard camera feeds or depth maps.
 - **Language**: natural language commands such as "fly to the red building" or "avoid the obstacle ahead".
@@ -47,20 +47,20 @@ The VLA-AN system targets four major challenges:
 
 ## Related Concepts
 
-- [[Vision-Language Model]] – the perceptual backbone often used in VLA systems.
-- [[Embodied AI]] – the broader field of grounding AI in physical interaction.
-- [[End-to-End Control]] ⚠️ – a design paradigm where raw sensor inputs directly map to actions.
-- [[Sim-to-Real Transfer]] – technique for addressing the domain gap.
+- Vision-Language Model – the perceptual backbone often used in VLA systems.
+- Embodied AI – the broader field of grounding AI in physical interaction.
+- End-to-End Control ⚠️ – a design paradigm where raw sensor inputs directly map to actions.
+- Sim-to-Real Transfer – technique for addressing the domain gap.
 
-VLA frameworks like [[VLA-AN]] depend on [[ROS2]] for sensor integration and control pipelines, and they frequently implement [[Reinforcement Learning]] or [[Imitation Learning]] for policy training.
+VLA frameworks like VLA-AN depend on ROS2 for sensor integration and control pipelines, and they frequently implement Reinforcement Learning or Imitation Learning for policy training.
 
 ## Relationships
 
-- **implements**: [[VLA-AN]] is an instance of the VLA Framework.
-- **uses**: The VLA Framework uses [[Vision-Language Models]] ⚠️ and [[Control Theory]] ⚠️.
-- **depends_on**: Effective VLA deployment depends on onboard computing resources ([[Onboard Constraints]] ⚠️).
+- **implements**: VLA-AN is an instance of the VLA Framework.
+- **uses**: The VLA Framework uses Vision-Language Models ⚠️ and Control Theory ⚠️.
+- **depends_on**: Effective VLA deployment depends on onboard computing resources (Onboard Constraints ⚠️).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Vision-Language-Action (VLA) Framework` --[[related_to]] ⚠️--> `VLA-AN` _(wikilink)_
+- `Vision-Language-Action (VLA) Framework` --related_to ⚠️--> `VLA-AN` _(wikilink)_

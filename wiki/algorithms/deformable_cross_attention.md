@@ -28,13 +28,13 @@ Deformable Cross-Attention is an attention mechanism that efficiently incorporat
 
 ## Role in EmbodiedOcc
 
-Within [[EmbodiedOcc]], deformable cross-attention is used to update regional Gaussians based on image features. It enables the model to selectively attend to relevant image regions and propagate visual semantics into the 3D Gaussian representation, facilitating fine-grained occupancy prediction from embodied observation. The query (regional Gaussians) attends to the keys/values (image features) via deformable sampling points.
+Within EmbodiedOcc, deformable cross-attention is used to update regional Gaussians based on image features. It enables the model to selectively attend to relevant image regions and propagate visual semantics into the 3D Gaussian representation, facilitating fine-grained occupancy prediction from embodied observation. The query (regional Gaussians) attends to the keys/values (image features) via deformable sampling points.
 
 ## Relationships
 
-- **Used by**: [[EmbodiedOcc]] – Deformable cross-attention is a core component of the EmbodiedOcc architecture for updating regional Gaussians based on image features.
+- **Used by**: EmbodiedOcc – Deformable cross-attention is a core component of the EmbodiedOcc architecture for updating regional Gaussians based on image features.
 
 ### 自动链接关系  
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Confirmed links:**  
-- `Deformable Cross-Attention` --[[extends]] ⚠️--> `EmbodiedOcc`
+- `Deformable Cross-Attention` --extends ⚠️--> `EmbodiedOcc`

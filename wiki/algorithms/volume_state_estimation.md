@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Volume State Estimation
 
-**Volume State Estimation** is a crucial algorithm in [[Vision-Language Navigation]] systems that uses current volumetric representations to maintain an [[Episodic Memory]] ⚠️ ⚠️ and predict the next navigation step. It encodes the agent’s state into a latent representation based on online collected [[Volumetric Environment Representation]] (VER) data.
+**Volume State Estimation** is a crucial algorithm in Vision-Language Navigation systems that uses current volumetric representations to maintain an Episodic Memory ⚠️ ⚠️ and predict the next navigation step. It encodes the agent’s state into a latent representation based on online collected Volumetric Environment Representation (VER) data.
 
 ## Description
 
-Volume State Estimation leverages the current [[Volumetric Environment Representation]] to keep an episodic memory of the agent’s trajectory and surroundings. This memory is then used to predict the next navigation step, enabling closed-loop decision-making without full map reconstruction.
+Volume State Estimation leverages the current Volumetric Environment Representation to keep an episodic memory of the agent’s trajectory and surroundings. This memory is then used to predict the next navigation step, enabling closed-loop decision-making without full map reconstruction.
 
 ## Capabilities
 
@@ -29,6 +29,6 @@ Volume State Estimation leverages the current [[Volumetric Environment Represent
 
 | Relationship | Entity |
 |---|---|
-| uses | [[Volumetric Environment Representation]] |
-| depends_on | [[Episodic Memory]] ⚠️ ⚠️ |
-| part_of | [[Vision-Language Navigation]] |
+| uses | Volumetric Environment Representation |
+| depends_on | Episodic Memory ⚠️ ⚠️ |
+| part_of | Vision-Language Navigation |

@@ -17,7 +17,7 @@ source_type: arxiv_paper
 
 The **R2R dataset** (Room-to-Room) is a fine-grained **Vision-and-Language Navigation (VLN)** benchmark. It provides paired instructions and visual trajectories in photorealistic environments, serving as the standard evaluation suite for measuring state-of-the-art performance in VLN tasks. The dataset is also referred to as the **RxR dataset** in some literature.
 
-The R2R dataset evaluates models on their ability to follow natural language instructions to navigate through real-world indoor spaces. It is closely related to the broader field of [[Embodied AI]] and is widely used to benchmark [[Vision-Language Models]] ⚠️ in grounded, sequential decision-making.
+The R2R dataset evaluates models on their ability to follow natural language instructions to navigate through real-world indoor spaces. It is closely related to the broader field of Embodied AI and is widely used to benchmark Vision-Language Models ⚠️ in grounded, sequential decision-making.
 
 ## Naming Note
 
@@ -41,7 +41,7 @@ These scores are representative of current leading methods on the standard R2R s
 
 ## Relationships
 
-- The R2R dataset evaluates **[[Actional Atomic-Concept Learning (AACL)]]**, a method that decomposes navigation instructions into atomic action concepts for more robust policy learning. Implicitly, R2R *depends_on* photorealistic scene databases such as [[Matterport3D]] ⚠️.
+- The R2R dataset evaluates **Actional Atomic-Concept Learning (AACL)**, a method that decomposes navigation instructions into atomic action concepts for more robust policy learning. Implicitly, R2R *depends_on* photorealistic scene databases such as Matterport3D ⚠️.
 - It implements the standard train/val/test splits commonly used in VLN competitions.
 - Used in state-of-the-art comparisons across numerous VLN papers.
 
@@ -53,6 +53,6 @@ Anderson et al., *Vision-and-Language Navigation: Interpreting visually-grounded
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Confirmed links:**
-- `R2R dataset` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`  
+- `R2R dataset` --related_to ⚠️ ⚠️--> `Embodied AI`  
 **Pending review:**
-- `R2R dataset` --[[related_to]] ⚠️ ⚠️--> `Actional Atomic-Concept Learning (AACL)` _(wikilink)_
+- `R2R dataset` --related_to ⚠️ ⚠️--> `Actional Atomic-Concept Learning (AACL)` _(wikilink)_

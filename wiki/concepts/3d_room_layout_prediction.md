@@ -25,14 +25,14 @@ source_type: arxiv_paper
 
 ## Role
 
-3D room layout prediction gives semantic context to navigation decisions. By knowing where walls and openings are, a robot or embodied agent can plan collision-free paths, identify doorways and corridors, and anticipate occluded regions—all of which are critical for robust [[Visual Language Navigation (VLN)]] ⚠️ and general embodied intelligence.
+3D room layout prediction gives semantic context to navigation decisions. By knowing where walls and openings are, a robot or embodied agent can plan collision-free paths, identify doorways and corridors, and anticipate occluded regions—all of which are critical for robust Visual Language Navigation (VLN) ⚠️ and general embodied intelligence.
 
 ## Relationships
 
-- **Part of** [[Multi-Task Learning for VLN]]: Layout prediction is often learned jointly with other spatial reasoning tasks (e.g., object detection, depth estimation) to improve generalization in novel environments.
-- **Part of** [[Volumetric Environment Representation]]: The output of layout prediction contributes to a volumetric map of the environment, which can be used for path planning, obstacle avoidance, and memory of visited spaces.
-- **Depends on** [[3D Scene Understanding]] ⚠️: Layout prediction typically relies on geometric features derived from depth sensors or monocular depth estimation.
-- **Implements** elements of [[Semantic Mapping]] ⚠️ by providing a structured, class-aware decomposition of the scene.
+- **Part of** Multi-Task Learning for VLN: Layout prediction is often learned jointly with other spatial reasoning tasks (e.g., object detection, depth estimation) to improve generalization in novel environments.
+- **Part of** Volumetric Environment Representation: The output of layout prediction contributes to a volumetric map of the environment, which can be used for path planning, obstacle avoidance, and memory of visited spaces.
+- **Depends on** 3D Scene Understanding ⚠️: Layout prediction typically relies on geometric features derived from depth sensors or monocular depth estimation.
+- **Implements** elements of Semantic Mapping ⚠️ by providing a structured, class-aware decomposition of the scene.
 
 ## Source
 

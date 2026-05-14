@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Cooperative Localization
 
-**Cooperative Localization** is a task from the [[Where Are You? (WAY) Dataset]] ⚠️ ⚠️ ⚠️ ⚠️ that models collaborative spatial reasoning between two agents — an **Observer** and an **Locator** — who must complete a localization objective entirely through dialog. Unlike single-agent localization benchmarks, this task captures the full interactive loop of question‑asking, description, and grounding.
+**Cooperative Localization** is a task from the Where Are You? (WAY) Dataset ⚠️ ⚠️ ⚠️ ⚠️ that models collaborative spatial reasoning between two agents — an **Observer** and an **Locator** — who must complete a localization objective entirely through dialog. Unlike single-agent localization benchmarks, this task captures the full interactive loop of question‑asking, description, and grounding.
 
 ## Task
 
@@ -24,7 +24,7 @@ The goal of Cooperative Localization is to simulate a **full cooperative localiz
 - **Dialog state tracking** — maintaining shared context across turns.
 - **Mutual grounding** — reaching common understanding incrementally.
 
-This task is a key component of the [[Where Are You? (WAY) Dataset]] ⚠️ ⚠️ ⚠️ ⚠️, where examples are annotated with full dialog histories and final successful localizations.
+This task is a key component of the Where Are You? (WAY) Dataset ⚠️ ⚠️ ⚠️ ⚠️, where examples are annotated with full dialog histories and final successful localizations.
 
 ## Capabilities
 
@@ -36,12 +36,12 @@ A model trained on Cooperative Localization can:
 
 ## Relationships
 
-- **Part of**: [[Where Are You? (WAY) Dataset]] ⚠️ ⚠️ ⚠️ ⚠️ – Cooperative Localization is one of the core tasks defined in the WAY dataset.
-- **Depends on**: [[Where Are You? (WAY) Dataset]] ⚠️ ⚠️ ⚠️ ⚠️ – the task relies on the dialog‑grounding annotations and spatial scenarios provided by the dataset.
-- **Implements**: [[Embodied Dialog]] ⚠️ – cooperative localization is a concrete instantiation of embodied dialog where both agents operate in a real or simulated space.
-- **Contrasts with**: [[Single-Agent Localization]] ⚠️ – where one agent independently determines its position; Cooperative Localization requires joint reasoning through dialog.
+- **Part of**: Where Are You? (WAY) Dataset ⚠️ ⚠️ ⚠️ ⚠️ – Cooperative Localization is one of the core tasks defined in the WAY dataset.
+- **Depends on**: Where Are You? (WAY) Dataset ⚠️ ⚠️ ⚠️ ⚠️ – the task relies on the dialog‑grounding annotations and spatial scenarios provided by the dataset.
+- **Implements**: Embodied Dialog ⚠️ – cooperative localization is a concrete instantiation of embodied dialog where both agents operate in a real or simulated space.
+- **Contrasts with**: Single-Agent Localization ⚠️ – where one agent independently determines its position; Cooperative Localization requires joint reasoning through dialog.
 
 ## See Also
 
-- [[Spatial Language Grounding]] ⚠️
-- [[Multi‑Agent Systems]] ⚠️
+- Spatial Language Grounding ⚠️
+- Multi‑Agent Systems ⚠️

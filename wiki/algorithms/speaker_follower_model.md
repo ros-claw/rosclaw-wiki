@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Speaker-Follower Model** is an architecture for [[Vision-and-Language Navigation]] (VLN) that incorporates an explicit **speaker** component alongside the standard **follower** (or navigator). It was introduced by Fried et al. (2018, arxiv:1806.02724) to address two core limitations of earlier VLN models: the scarcity of human‑annotated instruction–trajectory pairs, and the lack of pragmatic reasoning about which actions best satisfy a given instruction. The speaker generates synthetic instructions from observed trajectories (data augmentation) and later acts as a pragmatic listener that scores candidate action sequences, enabling the follower to disambiguate instructions.  Both steps are supported by a [[Panoramic Action Space]] that reflects the granularity of human‑generated instructions.
+The **Speaker-Follower Model** is an architecture for Vision-and-Language Navigation (VLN) that incorporates an explicit **speaker** component alongside the standard **follower** (or navigator). It was introduced by Fried et al. (2018, arxiv:1806.02724) to address two core limitations of earlier VLN models: the scarcity of human‑annotated instruction–trajectory pairs, and the lack of pragmatic reasoning about which actions best satisfy a given instruction. The speaker generates synthetic instructions from observed trajectories (data augmentation) and later acts as a pragmatic listener that scores candidate action sequences, enabling the follower to disambiguate instructions.  Both steps are supported by a Panoramic Action Space that reflects the granularity of human‑generated instructions.
 
 ## Components
 
@@ -54,24 +54,24 @@ The approach more than doubles the success rate over the best existing approach 
 ## Relationships
 
 - **Uses**:
-  - [[Speaker Model]] ⚠️
-  - [[Follower Model]] ⚠️
-  - [[Panoramic Action Space]]
-  - [[Pragmatic Reasoning]]
+  - Speaker Model ⚠️
+  - Follower Model ⚠️
+  - Panoramic Action Space
+  - Pragmatic Reasoning
 - **Depends on**:
-  - [[Vision-and-Language Navigation]]
-  - [[Pragmatic Reasoning]] (specifically the Rational Speech Acts framework)
-  - [[Panoramic Action Space]]
-  - [[Data Augmentation for VLN]] ⚠️ ⚠️
+  - Vision-and-Language Navigation
+  - Pragmatic Reasoning (specifically the Rational Speech Acts framework)
+  - Panoramic Action Space
+  - Data Augmentation for VLN ⚠️ ⚠️
   - **perceptual context** – visual observations from the environment.
   - **human‑generated instructions** – both for initial training and as the target for pragmatic scoring.
 - **Implements**:
-  - [[Data Augmentation for VLN]] ⚠️ ⚠️
-  - [[Pragmatic Listener]] ⚠️
+  - Data Augmentation for VLN ⚠️ ⚠️
+  - Pragmatic Listener ⚠️
 
 ## Applications
 
-This model served as a foundation for many later VLN systems (e.g., [[Reinforced Cross‑Modal Matching (RCM)]] ⚠️, [[EnvDrop]]) and demonstrated that explicit speaker–follower interaction can substantially improve both success rate and path fidelity in navigation tasks.
+This model served as a foundation for many later VLN systems (e.g., Reinforced Cross‑Modal Matching (RCM) ⚠️, EnvDrop) and demonstrated that explicit speaker–follower interaction can substantially improve both success rate and path fidelity in navigation tasks.
 
 ## References
 
@@ -80,4 +80,4 @@ This model served as a foundation for many later VLN systems (e.g., [[Reinforced
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Speaker-Follower Model` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
+- `Speaker-Follower Model` --based_on ⚠️--> `Vision-and-Language Navigation`

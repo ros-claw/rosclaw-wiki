@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 ## SNav 🧭
 
-**SNav** is a **spatially intelligent navigation** model designed to establish a strong baseline for future work in **[[Embodied Navigation]]**. It introduces a structured approach to handling spatial reasoning in real-world environments by integrating geometric and semantic cues.
+**SNav** is a **spatially intelligent navigation** model designed to establish a strong baseline for future work in **Embodied Navigation**. It introduces a structured approach to handling spatial reasoning in real-world environments by integrating geometric and semantic cues.
 
 ### Overview
 
@@ -23,32 +23,32 @@ SNav builds upon existing navigation frameworks but adds explicit spatial reason
 
 ### Methodology & Fine‑tuning Pipeline
 
-SNav is built on **[[LLaVA-Video-7B-Qwen2]] ⚠️ ⚠️** and fine‑tuned using **[[DeepSpeed]] ⚠️ ⚠️** for stage‑1 vanilla supervised fine‑tuning (SFT). Training renders scenes through **[[Habitat-Sim]]** to generate navigation‑relevant vision‑language data. The open‑source baseline includes Stage‑1 SFT; a full recipe optionally adds:
+SNav is built on **LLaVA-Video-7B-Qwen2 ⚠️ ⚠️** and fine‑tuned using **DeepSpeed ⚠️ ⚠️** for stage‑1 vanilla supervised fine‑tuning (SFT). Training renders scenes through **Habitat-Sim** to generate navigation‑relevant vision‑language data. The open‑source baseline includes Stage‑1 SFT; a full recipe optionally adds:
 
 - **Video‑QA mixing** for richer temporal grounding,
 - **Height/lighting perturbation** for robustness,
 - **Stage‑2/3 data augmentation** for improved generalization.
 
-The action space is identical to that of the **[[NavSpace]]** benchmark, ensuring direct comparability.
+The action space is identical to that of the **NavSpace** benchmark, ensuring direct comparability.
 
 ### Capabilities
 
-- **State‑of‑the‑art performance**: Outperforms prior navigation agents on the [[NavSpace]] benchmark and in real‑robot tests.
+- **State‑of‑the‑art performance**: Outperforms prior navigation agents on the NavSpace benchmark and in real‑robot tests.
 - **Handles all six spatial intelligence subtasks** defined in the NavSpace suite.
 - **Generalizes across scenes**: Operates reliably in cluttered indoor spaces, changing lighting conditions, and novel room layouts.
 - **Embodied reasoning**: Plans paths that consider not only collision avoidance but also **spatial affordances** (e.g., which side of a table to pass).
 
 ### Evaluation
 
-SNav is evaluated on the [[NavSpace]] benchmark, a curated suite of hundreds of embodied navigation tasks. It also undergoes physical trials on **robots** (e.g., a wheeled mobile manipulator) to validate sim‑to‑real transfer. The results demonstrate significant improvements in **success rate** and **path efficiency** over previous methods.
+SNav is evaluated on the NavSpace benchmark, a curated suite of hundreds of embodied navigation tasks. It also undergoes physical trials on **robots** (e.g., a wheeled mobile manipulator) to validate sim‑to‑real transfer. The results demonstrate significant improvements in **success rate** and **path efficiency** over previous methods.
 
 ### Relationships
 
-- **uses** → [[LLaVA-Video-7B-Qwen2]] ⚠️ ⚠️, [[DeepSpeed]] ⚠️ ⚠️, [[Habitat-Sim]]
-- **depends_on** → [[NavSpace]] benchmark (for systematic evaluation)
-- **implements** → [[Spatial Intelligence]] ⚠️ in the context of embodied navigation
-- **improves upon** → prior navigation agents (e.g., [[Habitat‑based Navigators]] ⚠️, [[RL‑based Planners]] ⚠️)
-- **used_by** → [[Embodied AI Research Group]] ⚠️ (in real‑robot experiments)
+- **uses** → LLaVA-Video-7B-Qwen2 ⚠️ ⚠️, DeepSpeed ⚠️ ⚠️, Habitat-Sim
+- **depends_on** → NavSpace benchmark (for systematic evaluation)
+- **implements** → Spatial Intelligence ⚠️ in the context of embodied navigation
+- **improves upon** → prior navigation agents (e.g., Habitat‑based Navigators ⚠️, RL‑based Planners ⚠️)
+- **used_by** → Embodied AI Research Group ⚠️ (in real‑robot experiments)
 
 ### References
 

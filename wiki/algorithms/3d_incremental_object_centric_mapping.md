@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## 3D Incremental Object-Centric Mapping
 
-**3D Incremental Object-Centric Mapping** is an algorithmic approach that builds a 3D map of objects incrementally by associating visual features (including VLM captions) with LiDAR points. By embedding semantic and visual features from [[Visual-Language Models (VLMs)]] into [[LiDAR point clouds]] ⚠️ ⚠️ ⚠️, the method enables object-level reasoning in dynamic environments, trading dense metric reconstruction for structured, semantically rich object hypotheses.
+**3D Incremental Object-Centric Mapping** is an algorithmic approach that builds a 3D map of objects incrementally by associating visual features (including VLM captions) with LiDAR points. By embedding semantic and visual features from Visual-Language Models (VLMs) into LiDAR point clouds ⚠️ ⚠️ ⚠️, the method enables object-level reasoning in dynamic environments, trading dense metric reconstruction for structured, semantically rich object hypotheses.
 
 ### Overview
 
@@ -33,9 +33,9 @@ Traditional dense SLAM methods build a continuous environment model; object‑ce
 
 ### Relationships
 
-- **Part of** → [[OpenGraph]]
-- **Used by** → [[OpenGraph]] (employs this mapping for open‑vocabulary scene understanding).
-- **Depends on** → [[Visual-Language Models (VLMs)]] for generating semantically rich 2D features (including captions), [[LiDAR point clouds]] ⚠️ ⚠️ ⚠️ for geometric grounding, and [[visual images]] ⚠️ ⚠️ for extracting VLM features.
+- **Part of** → OpenGraph
+- **Used by** → OpenGraph (employs this mapping for open‑vocabulary scene understanding).
+- **Depends on** → Visual-Language Models (VLMs) for generating semantically rich 2D features (including captions), LiDAR point clouds ⚠️ ⚠️ ⚠️ for geometric grounding, and visual images ⚠️ ⚠️ for extracting VLM features.
 
 ### Implementation
 
@@ -43,19 +43,19 @@ Achieved by embedding visual features from VLMs into 3D points via projection, a
 
 ### Integration
 
-[[OpenGraph]] projects VLM-extracted instance captions onto LiDAR point clouds to create a persistent object-level map. This integration enables the system to maintain a continuously updated representation where each object is associated with a natural language caption, facilitating high-level reasoning and querying.
+OpenGraph projects VLM-extracted instance captions onto LiDAR point clouds to create a persistent object-level map. This integration enables the system to maintain a continuously updated representation where each object is associated with a natural language caption, facilitating high-level reasoning and querying.
 
 ### Related Concepts
 
-- [[SLAM]]
-- [[Object‑Level Mapping]] ⚠️
-- [[Semantic Mapping]] ⚠️
-- [[Incremental Learning]] ⚠️
+- SLAM
+- Object‑Level Mapping ⚠️
+- Semantic Mapping ⚠️
+- Incremental Learning ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `3D Incremental Object-Centric Mapping` --[[extends]] ⚠️--> [[Visual-Language Models (VLMs)]]
-- `3D Incremental Object-Centric Mapping` --[[part_of]] ⚠️--> [[OpenGraph]]
-- `3D Incremental Object-Centric Mapping` --[[depends_on]] ⚠️ ⚠️--> [[LiDAR point clouds]] ⚠️ ⚠️ ⚠️
-- `3D Incremental Object-Centric Mapping` --[[depends_on]] ⚠️ ⚠️--> [[visual images]] ⚠️ ⚠️
+- `3D Incremental Object-Centric Mapping` --extends ⚠️--> Visual-Language Models (VLMs)
+- `3D Incremental Object-Centric Mapping` --part_of ⚠️--> OpenGraph
+- `3D Incremental Object-Centric Mapping` --depends_on ⚠️ ⚠️--> LiDAR point clouds ⚠️ ⚠️ ⚠️
+- `3D Incremental Object-Centric Mapping` --depends_on ⚠️ ⚠️--> visual images ⚠️ ⚠️

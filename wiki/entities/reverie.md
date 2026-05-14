@@ -40,20 +40,20 @@ REVERIE is a benchmark for coarse-grained instruction following in VLN. It provi
 
 Several models have been designed to improve performance on REVERIE:
 
-- **[[ProbES]]** improves generalization on REVERIE without requiring human-labeled data, leveraging probabilistic exploration strategies.
-- **[[EvolveNav]]** uses dynamic policy evolution and has been evaluated on the REVERIE benchmark.
-- **[[CLIP-Nav]]** leverages CLIP-based visual representations and has been used on the REVERIE benchmark for coarse-grained object‑grounded navigation.
+- **ProbES** improves generalization on REVERIE without requiring human-labeled data, leveraging probabilistic exploration strategies.
+- **EvolveNav** uses dynamic policy evolution and has been evaluated on the REVERIE benchmark.
+- **CLIP-Nav** leverages CLIP-based visual representations and has been used on the REVERIE benchmark for coarse-grained object‑grounded navigation.
 
 ## Relationships
 
-- **is_subtask_of**: [[Visual Language Navigation (VLN)]] ⚠️
-- **addressed_by**: [[ProbES]], [[EvolveNav]]
-- **used_by**: [[CLIP-Nav]]
-- **used_in**: Evaluation of [[EvolveNav]]
+- **is_subtask_of**: Visual Language Navigation (VLN) ⚠️
+- **addressed_by**: ProbES, EvolveNav
+- **used_by**: CLIP-Nav
+- **used_in**: Evaluation of EvolveNav
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `REVERIE` --[[uses]] ⚠️--> `EvolveNav`
-- `REVERIE` --[[is_subtask_of]] ⚠️--> `Visual Language Navigation (VLN)`
-- `REVERIE` --[[used_by]] ⚠️--> `CLIP-Nav`
+- `REVERIE` --uses ⚠️--> `EvolveNav`
+- `REVERIE` --is_subtask_of ⚠️--> `Visual Language Navigation (VLN)`
+- `REVERIE` --used_by ⚠️--> `CLIP-Nav`

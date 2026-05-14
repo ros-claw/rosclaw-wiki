@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Multi-Modality Cross-Attention Transformer
 
-The **Multi-Modality Cross-Attention Transformer** is a transformer-based module that reconstructs clean, structured terrain maps from noisy depth observations. By leveraging cross-attention mechanisms, it preserves critical terrain features for robust generalization, enabling dependable terrain understanding despite sensor noise. It is a core component of the [[DPL (Depth-only Perceptive Locomotion) Framework]] ⚠️ ⚠️.
+The **Multi-Modality Cross-Attention Transformer** is a transformer-based module that reconstructs clean, structured terrain maps from noisy depth observations. By leveraging cross-attention mechanisms, it preserves critical terrain features for robust generalization, enabling dependable terrain understanding despite sensor noise. It is a core component of the DPL (Depth-only Perceptive Locomotion) Framework ⚠️ ⚠️.
 
 ## Overview
 
@@ -35,8 +35,8 @@ This algorithm addresses the challenge of reconstructing structured terrain repr
 
 ## Relationships
 
-- `depends_on`: [[Depth Images]] ⚠️, [[Cross-Attention]] ⚠️
-- `part_of`: [[DPL (Depth-only Perceptive Locomotion) Framework]] ⚠️ ⚠️
+- `depends_on`: Depth Images ⚠️, Cross-Attention ⚠️
+- `part_of`: DPL (Depth-only Perceptive Locomotion) Framework ⚠️ ⚠️
 
 ## Source
 

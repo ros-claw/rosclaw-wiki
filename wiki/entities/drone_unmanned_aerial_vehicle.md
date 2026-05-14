@@ -24,8 +24,8 @@ A **Drone**, or Unmanned Aerial Vehicle (UAV), is an aircraft operated without a
 
 ### Relationships
 
-- **Uses** [[Natural Language Processing]] ⚠️ to understand and generate conversational responses.
-- **Uses** [[Computer Vision]] ⚠️ for environment perception, obstacle avoidance, and target recognition.
-- **Uses** [[Human Attention]] ⚠️ modeling to infer user focus and coordinate shared attention during tasks.
+- **Uses** Natural Language Processing ⚠️ to understand and generate conversational responses.
+- **Uses** Computer Vision ⚠️ for environment perception, obstacle avoidance, and target recognition.
+- **Uses** Human Attention ⚠️ modeling to infer user focus and coordinate shared attention during tasks.
 
 These capabilities are sourced from the paper *Language-Guided Human-Robot Collaboration on a Drone* (arXiv:2205.12219). The drone’s architecture integrates large language models and vision transformers to enable real-time, grounded dialogue between the operator and the aerial platform.

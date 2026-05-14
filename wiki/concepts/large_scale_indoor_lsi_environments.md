@@ -29,15 +29,15 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **used_in**: [[SignNav]] — The SignNav system is designed to operate specifically within LSI environments, leveraging their semantic signage to provide instruction-based navigation.
+- **used_in**: SignNav — The SignNav system is designed to operate specifically within LSI environments, leveraging their semantic signage to provide instruction-based navigation.
 
 ## See Also
 
-- [[Sign Navigation]] ⚠️ (related approach)
-- [[Semantic Localization]] ⚠️
-- [[Large-Scale Indoor Mapping]] ⚠️
+- Sign Navigation ⚠️ (related approach)
+- Semantic Localization ⚠️
+- Large-Scale Indoor Mapping ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Large-Scale Indoor (LSI) environments` --[[related_to]] ⚠️--> `SignNav`
+- `Large-Scale Indoor (LSI) environments` --related_to ⚠️--> `SignNav`

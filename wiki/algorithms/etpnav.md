@@ -19,13 +19,13 @@ source_type: arxiv_paper
 
 ## Method
 ETPNav consists of two main components:
-- **[[Transformer-based Cross-modal Planner]]**: a high-level planner that generates long-range navigation plans by attending over topological maps and natural language instructions.
-- **[[Obstacle-avoiding Controller]]**: a low-level controller that uses a [[Trial-and-error Heuristic]] ⚠️ ⚠️ to prevent the agent from getting stuck in local obstacles during continuous execution.
+- **Transformer-based Cross-modal Planner**: a high-level planner that generates long-range navigation plans by attending over topological maps and natural language instructions.
+- **Obstacle-avoiding Controller**: a low-level controller that uses a Trial-and-error Heuristic ⚠️ ⚠️ to prevent the agent from getting stuck in local obstacles during continuous execution.
 
 The system builds an online topological map by self-organizing predicted waypoints along the agent’s path, allowing it to abstract environments and plan over longer horizons.
 
 ## Results
-ETPNav achieves state-of-the-art performance on both the [[R2R-CE dataset]] and [[RxR-CE dataset]] ⚠️ ⚠️:
+ETPNav achieves state-of-the-art performance on both the R2R-CE dataset and RxR-CE dataset ⚠️ ⚠️:
 - **R2R-CE**: >10% improvement over prior SOTA.
 - **RxR-CE**: >20% improvement over prior SOTA.
 
@@ -45,14 +45,14 @@ ETPNav achieves state-of-the-art performance on both the [[R2R-CE dataset]] and 
 - Cross-modal planning using a transformer-based planner
 
 ## Relationships
-- **uses** [[Topological Mapping]]
-- **uses** [[Transformer-based Cross-modal Planner]]
-- **uses** [[Obstacle-avoiding Controller]]
-- **uses** [[Trial-and-error Heuristic]] ⚠️ ⚠️
-- **depends_on** [[Vision-Language Navigation in Continuous Environments (VLN-CE)]] ⚠️
-- **depends_on** [[Transformer architecture]] ⚠️
-- **evaluated_on** [[R2R-CE dataset]]
-- **evaluated_on** [[RxR-CE dataset]] ⚠️ ⚠️
+- **uses** Topological Mapping
+- **uses** Transformer-based Cross-modal Planner
+- **uses** Obstacle-avoiding Controller
+- **uses** Trial-and-error Heuristic ⚠️ ⚠️
+- **depends_on** Vision-Language Navigation in Continuous Environments (VLN-CE) ⚠️
+- **depends_on** Transformer architecture ⚠️
+- **evaluated_on** R2R-CE dataset
+- **evaluated_on** RxR-CE dataset ⚠️ ⚠️
 
 ## Code
 The open-source implementation is available at [https://github.com/MarSaKi/ETPNav](https://github.com/MarSaKi/ETPNav).

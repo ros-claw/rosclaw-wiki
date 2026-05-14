@@ -27,14 +27,14 @@ These instructions contrast with low-level commands (e.g., "move forward 0.5 met
 
 ## Relationships
 
-- **Used in**: [[Grounded Semantic Mapping Network (GSMN)]] — this architecture explicitly consumes high-level navigation instructions to produce spatially grounded action sequences for visual navigation.
+- **Used in**: Grounded Semantic Mapping Network (GSMN) — this architecture explicitly consumes high-level navigation instructions to produce spatially grounded action sequences for visual navigation.
 
 ## Related Concepts
 
-- [[Natural Language Instruction Following]] ⚠️
-- [[Embodied AI]]
-- [[Sim-to-Real Transfer]] (often used to train models that map language commands to control)
-- [[Visual Navigation]]
+- Natural Language Instruction Following ⚠️
+- Embodied AI
+- Sim-to-Real Transfer (often used to train models that map language commands to control)
+- Visual Navigation
 
 ## References
 
@@ -43,6 +43,6 @@ These instructions contrast with low-level commands (e.g., "move forward 0.5 met
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `High-level Navigation Instructions` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `High-level Navigation Instructions` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `High-level Navigation Instructions` --[[related_to]] ⚠️ ⚠️--> `Grounded Semantic Mapping Network (GSMN)` _(wikilink)_
+- `High-level Navigation Instructions` --related_to ⚠️ ⚠️--> `Grounded Semantic Mapping Network (GSMN)` _(wikilink)_

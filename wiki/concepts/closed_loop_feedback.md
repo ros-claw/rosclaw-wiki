@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Closed-Loop Feedback** is a training mechanism used in embodied navigation systems that incorporates detection and reasoning confidence scores back into the learning process. By feeding model certainty into training, it creates a self-correcting loop that improves the reliability of behavior generation. This concept is central to the [[CL-CoTNav]] architecture, where it forms a closed-loop variant of chain-of-thought reasoning.
+**Closed-Loop Feedback** is a training mechanism used in embodied navigation systems that incorporates detection and reasoning confidence scores back into the learning process. By feeding model certainty into training, it creates a self-correcting loop that improves the reliability of behavior generation. This concept is central to the CL-CoTNav architecture, where it forms a closed-loop variant of chain-of-thought reasoning.
 
 ## Parameters
 
@@ -28,21 +28,21 @@ source_type: arxiv_paper
 
 ## Roles
 
-Closed-Loop Feedback is the key enabler of **closed-loop H-CoT** (Hierarchical Chain-of-Thought) in [[CL-CoTNav]]. By continually feeding confidence signals back into the model during training, it creates a self-reinforcing loop that aligns the model’s internal reasoning with actual environmental perception and task success.
+Closed-Loop Feedback is the key enabler of **closed-loop H-CoT** (Hierarchical Chain-of-Thought) in CL-CoTNav. By continually feeding confidence signals back into the model during training, it creates a self-reinforcing loop that aligns the model’s internal reasoning with actual environmental perception and task success.
 
 ## Relationships
 
-- **Part of** [[CL-CoTNav]] — Closed-Loop Feedback is an integral component of the CL-CoTNav framework.
-- **Enhances** [[Robustness]] ⚠️ — the mechanism directly strengthens the system’s ability to handle uncertainty and variability in real-world deployment.
+- **Part of** CL-CoTNav — Closed-Loop Feedback is an integral component of the CL-CoTNav framework.
+- **Enhances** Robustness ⚠️ — the mechanism directly strengthens the system’s ability to handle uncertainty and variability in real-world deployment.
 
 ## Related Concepts
 
-- [[Chain-of-Thought]] ⚠️ reasoning
-- [[Confidence Calibration]] ⚠️
-- [[Hierarchical Planning]]
-- [[Sim-to-Real Transfer]]
+- Chain-of-Thought ⚠️ reasoning
+- Confidence Calibration ⚠️
+- Hierarchical Planning
+- Sim-to-Real Transfer
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Closed-Loop Feedback` --[[related_to]] ⚠️--> `CL-CoTNav` _(wikilink)_
+- `Closed-Loop Feedback` --related_to ⚠️--> `CL-CoTNav` _(wikilink)_

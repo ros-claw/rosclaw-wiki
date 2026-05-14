@@ -18,7 +18,7 @@ source_type: arxiv_paper
 **Related to:** NeuPAN
 
 **Overview**  
-PAN is a plug-and-play proximal alternating-minimization network that acts as the core solver within the [[NeuPAN]] framework. It is designed to handle numerous point-level constraints simultaneously, enabling real‑time generation of collision‑free robot motion.
+PAN is a plug-and-play proximal alternating-minimization network that acts as the core solver within the NeuPAN framework. It is designed to handle numerous point-level constraints simultaneously, enabling real‑time generation of collision‑free robot motion.
 
 ## Description
 
@@ -29,7 +29,7 @@ PAN solves constrained optimization problems by alternating minimization in a le
 | Attribute | Value |
 |-----------|-------|
 | Type | Plug-and-play network |
-| Role | Solves point-level constraints in [[NeuPAN]] |
+| Role | Solves point-level constraints in NeuPAN |
 | Learning method | Backpropagation fine-tuning |
 | Architectural feature | Neurons in the loop |
 
@@ -41,16 +41,16 @@ PAN solves constrained optimization problems by alternating minimization in a le
 
 ## Relationships
 
-- `part_of:: [[NeuPAN]]` – PAN is a core solver module inside the NeuPAN algorithm.
-- `used_by:: [[NeuPAN]]` – NeuPAN calls PAN to enforce point‑level constraints throughout its motion planning pipeline.
-- `depends_on:: [[NeuPAN]]` – PAN operates only within the context of the larger NeuPAN framework.
+- `part_of:: NeuPAN` – PAN is a core solver module inside the NeuPAN algorithm.
+- `used_by:: NeuPAN` – NeuPAN calls PAN to enforce point‑level constraints throughout its motion planning pipeline.
+- `depends_on:: NeuPAN` – PAN operates only within the context of the larger NeuPAN framework.
 
 **Relation annotations**  
 - Implements: proximal alternating minimization for constrained motion.  
-- Used by: [[NeuPAN]].  
+- Used by: NeuPAN.  
 - Supports: collision‑free trajectory generation in real time.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Proximal Alternating-minimization Network (PAN)` --[[extends]] ⚠️--> `NeuPAN`
+- `Proximal Alternating-minimization Network (PAN)` --extends ⚠️--> `NeuPAN`

@@ -14,13 +14,13 @@ source_type: arxiv_paper
 
 # Joint Simulation and Real-World Learning Framework
 
-The **Joint Simulation and Real-World Learning Framework** is a learning approach for embodied instruction following that integrates data from both [[Simulation]] ⚠️ ⚠️ and [[Real Environment|real environments]] to train models capable of performing physical tasks. It is designed to bridge the gap between simulated training and real-world deployment, reducing or eliminating the need for autonomous operation in the real world during the training phase. The framework combines [[Supervised Learning]] ⚠️ ⚠️ techniques with [[Reinforcement Learning]] elements to achieve effective behavior.
+The **Joint Simulation and Real-World Learning Framework** is a learning approach for embodied instruction following that integrates data from both Simulation ⚠️ ⚠️ and real environments to train models capable of performing physical tasks. It is designed to bridge the gap between simulated training and real-world deployment, reducing or eliminating the need for autonomous operation in the real world during the training phase. The framework combines Supervised Learning ⚠️ ⚠️ techniques with Reinforcement Learning elements to achieve effective behavior.
 
 ## Overview
 
 This framework leverages the strengths of both simulated and real-world data. Simulation provides unlimited, safe, and controllable training data, while real-world data grounds the model in actual physical dynamics. The framework learns a shared representation or policy that generalizes from simulation to reality without requiring the robot to fly or act autonomously in the real environment during training.
 
-In its specific implementation for natural language–guided quadcopter control, the framework uses the [[SuReAL]] (Simulation and Real-World Alignment Learning) algorithm to map language instructions to low-level control commands. The framework takes raw first-person observations and navigation instructions as input and produces continuous control outputs.
+In its specific implementation for natural language–guided quadcopter control, the framework uses the SuReAL (Simulation and Real-World Alignment Learning) algorithm to map language instructions to low-level control commands. The framework takes raw first-person observations and navigation instructions as input and produces continuous control outputs.
 
 ## Capabilities
 
@@ -37,13 +37,13 @@ The framework was evaluated on a natural language instruction-following task usi
 
 ## Relationships
 
-- **Uses**: [[SuReAL]] — the specific algorithm employed to align simulated and real-world data representations.
-- **Involves**: [[Simulation]] ⚠️ ⚠️ for synthetic data generation and safe exploration; [[Real Environment]] ⚠️ ⚠️ for grounding and validation; [[Supervised Learning]] ⚠️ ⚠️ for training on paired data; [[Reinforcement Learning]] for improving exploration and control.
+- **Uses**: SuReAL — the specific algorithm employed to align simulated and real-world data representations.
+- **Involves**: Simulation ⚠️ ⚠️ for synthetic data generation and safe exploration; Real Environment ⚠️ ⚠️ for grounding and validation; Supervised Learning ⚠️ ⚠️ for training on paired data; Reinforcement Learning for improving exploration and control.
 - **Applied to**: Physical quadcopter navigation in the source paper.
 
 ## Applications
 
-- **Language-Guided Quadcopter Control**: In the source paper ([[papers/1910.09664.pdf]] ⚠️), the framework is applied to map natural language instructions (e.g., "fly to the red marker") into control actions for a quadcopter. The model is trained in a simulator and deployed on a real drone without any autonomous flight data from the real world.
+- **Language-Guided Quadcopter Control**: In the source paper (papers/1910.09664.pdf ⚠️), the framework is applied to map natural language instructions (e.g., "fly to the red marker") into control actions for a quadcopter. The model is trained in a simulator and deployed on a real drone without any autonomous flight data from the real world.
 
 ## References
 
@@ -52,4 +52,4 @@ The framework was evaluated on a natural language instruction-following task usi
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Joint Simulation and Real-World Learning Framework` --[[related_to]] ⚠️--> `SuReAL` _(wikilink)_
+- `Joint Simulation and Real-World Learning Framework` --related_to ⚠️--> `SuReAL` _(wikilink)_

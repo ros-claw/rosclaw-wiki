@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 # CVDN Dataset
 
-The **CVDN Dataset** (Cooperative Vision-and-Dialog Navigation) is a large-scale benchmark for [[Vision-and-Dialog Navigation]], collected through human-human asynchronous dialogs between commanders and followers in a continuous photorealistic simulation. It provides over 3k recorded trajectories with annotations including the follower's attention on visual observations, enabling the training and evaluation of models that perform goal-oriented navigation guided by natural language dialog. The dataset captures human-human dialogues for navigation, testing agents in interactive settings, and serves as a key benchmark for dialog-enabled [[Vision-and-Language Navigation]] (VLN).
+The **CVDN Dataset** (Cooperative Vision-and-Dialog Navigation) is a large-scale benchmark for Vision-and-Dialog Navigation, collected through human-human asynchronous dialogs between commanders and followers in a continuous photorealistic simulation. It provides over 3k recorded trajectories with annotations including the follower's attention on visual observations, enabling the training and evaluation of models that perform goal-oriented navigation guided by natural language dialog. The dataset captures human-human dialogues for navigation, testing agents in interactive settings, and serves as a key benchmark for dialog-enabled Vision-and-Language Navigation (VLN).
 
 ## Parameters
 
@@ -36,25 +36,25 @@ The **CVDN Dataset** (Cooperative Vision-and-Dialog Navigation) is a large-scale
 
 ## Relationships
 
-- **Part of**: [[Vision-and-Dialog Navigation]] — the dataset is a core component of this research area, enabling reproducible experiments in human-robot dialog for navigation.
-- **Used by**: [[VLN-SIG]], [[Vision-and-Language Navigation]] — the dataset is employed in these research communities to benchmark and advance cooperative navigation agents.
-- **Contrasts with**: [[AVDN Dataset]] — the AVDN dataset focuses on aerial (drone) navigation, whereas CVDN covers ground-level cooperative navigation in indoor environments. Both use dialog but differ in embodiment and simulation.
+- **Part of**: Vision-and-Dialog Navigation — the dataset is a core component of this research area, enabling reproducible experiments in human-robot dialog for navigation.
+- **Used by**: VLN-SIG, Vision-and-Language Navigation — the dataset is employed in these research communities to benchmark and advance cooperative navigation agents.
+- **Contrasts with**: AVDN Dataset — the AVDN dataset focuses on aerial (drone) navigation, whereas CVDN covers ground-level cooperative navigation in indoor environments. Both use dialog but differ in embodiment and simulation.
 
 ### 待核实冲突
 
-- **Previous title**: This page was originally titled *AVDN Dataset*, which refers to a separate, aerial-based dataset. The source paper (arXiv:2308.12587) is specifically the *CVDN* benchmark. The parameters (size, collection paradigm, annotations) match CVDN; the aerial context and the relationship to [[HAA-Transformer]] likely belong to the AVDN dataset and are removed pending verification. A separate page for AVDN should be created or linked.
+- **Previous title**: This page was originally titled *AVDN Dataset*, which refers to a separate, aerial-based dataset. The source paper (arXiv:2308.12587) is specifically the *CVDN* benchmark. The parameters (size, collection paradigm, annotations) match CVDN; the aerial context and the relationship to HAA-Transformer likely belong to the AVDN dataset and are removed pending verification. A separate page for AVDN should be created or linked.
 
 ## See Also
 
-- [[Vision-and-Dialog Navigation]] — the broader concept of navigation guided by human-robot dialog.
-- [[Embodied AI]] — the field in which this dataset sits.
-- [[AVDN Dataset]] — related aerial benchmark (note: may need creation).
-- [[VLN-SIG]] — research group that uses this dataset.
-- [[Vision-and-Language Navigation]] — broader VLN task family.
+- Vision-and-Dialog Navigation — the broader concept of navigation guided by human-robot dialog.
+- Embodied AI — the field in which this dataset sits.
+- AVDN Dataset — related aerial benchmark (note: may need creation).
+- VLN-SIG — research group that uses this dataset.
+- Vision-and-Language Navigation — broader VLN task family.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `AVDN Dataset` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `AVDN Dataset` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `AVDN Dataset` --[[related_to]] ⚠️ ⚠️--> `HAA-Transformer` _(wikilink)_
+- `AVDN Dataset` --related_to ⚠️ ⚠️--> `HAA-Transformer` _(wikilink)_

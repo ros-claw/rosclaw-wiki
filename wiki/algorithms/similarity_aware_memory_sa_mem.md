@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 **Source**: [arXiv paper 2512.02400](papers/2512.02400.pdf)
 
-Similarity-Aware Memory (SA-Mem) is an algorithm component used in the [[Nav-R^2]] architecture. It serves as a parameter‑free memory mechanism that compresses video frames and fuses historical observations by preserving features with high relevance along both temporal and semantic dimensions, enabling efficient reasoning without introducing any additional learnable parameters.
+Similarity-Aware Memory (SA-Mem) is an algorithm component used in the Nav-R^2 architecture. It serves as a parameter‑free memory mechanism that compresses video frames and fuses historical observations by preserving features with high relevance along both temporal and semantic dimensions, enabling efficient reasoning without introducing any additional learnable parameters.
 
 ### Description
 
@@ -36,10 +36,10 @@ This dual‑axis selection ensures that SA‑Mem maintains a compact yet informa
 
 ### Relationships
 
-- **Part of**: [[Nav-R^2]] – a navigation framework that leverages similarity‑aware memory to improve long‑horizon visual navigation.
-- SA‑Mem acts as the episodic memory module within [[Nav-R^2]], feeding compact historical representations to downstream policy or value networks.
+- **Part of**: Nav-R^2 – a navigation framework that leverages similarity‑aware memory to improve long‑horizon visual navigation.
+- SA‑Mem acts as the episodic memory module within Nav-R^2, feeding compact historical representations to downstream policy or value networks.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Similarity-Aware Memory (SA-Mem)` –[[extends]] ⚠️–> `Nav-R^2`
+- `Similarity-Aware Memory (SA-Mem)` –extends ⚠️–> `Nav-R^2`

@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 ## R2R Benchmark
 
-The **R2R benchmark** is a standard public benchmark for evaluating **vision-and-language navigation ([[VLN]] ⚠️ ⚠️)** agents. Based on the [[Matterport3D]] ⚠️ dataset, it provides room-to-room navigation tasks where agents must follow natural language instructions to traverse indoor environments. The benchmark offers standardized tasks and metrics to measure an agent’s ability to follow instructions while navigating through photorealistic scenes.
+The **R2R benchmark** is a standard public benchmark for evaluating **vision-and-language navigation (VLN ⚠️ ⚠️)** agents. Based on the Matterport3D ⚠️ dataset, it provides room-to-room navigation tasks where agents must follow natural language instructions to traverse indoor environments. The benchmark offers standardized tasks and metrics to measure an agent’s ability to follow instructions while navigating through photorealistic scenes.
 
 ### Parameters
 
@@ -24,14 +24,14 @@ The **R2R benchmark** is a standard public benchmark for evaluating **vision-and
 
 ### Capabilities
 
-- Used to evaluate [[VLN]] ⚠️ ⚠️ agents on instruction following and path planning under realistic visual conditions.
+- Used to evaluate VLN ⚠️ ⚠️ agents on instruction following and path planning under realistic visual conditions.
 - Measures both navigation success and linguistic alignment between the instruction and the agent’s trajectory.
 - Evaluates agents on following natural language instructions to navigate through indoor environments across diverse room layouts.
 
 ### Relationships
 
-- **Evaluates** → [[MiniVLN]], [[teacher model]] ⚠️, [[Target-Driven Structured Transformer Planner (TD-STP)]]: These agents are commonly benchmarked on R2R to assess their visual grounding, language comprehension, and structured planning capabilities.
-- **Used by** → [[TD-STP]] ⚠️: The Target-Driven Structured Transformer Planner is evaluated on the R2R benchmark to demonstrate its instruction-following performance in continuous environments.
+- **Evaluates** → MiniVLN, teacher model ⚠️, Target-Driven Structured Transformer Planner (TD-STP): These agents are commonly benchmarked on R2R to assess their visual grounding, language comprehension, and structured planning capabilities.
+- **Used by** → TD-STP ⚠️: The Target-Driven Structured Transformer Planner is evaluated on the R2R benchmark to demonstrate its instruction-following performance in continuous environments.
 
 ### Source
 
@@ -41,4 +41,4 @@ The **R2R benchmark** is a standard public benchmark for evaluating **vision-and
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `R2R benchmark` --[[uses]] ⚠️--> `MiniVLN`
+- `R2R benchmark` --uses ⚠️--> `MiniVLN`

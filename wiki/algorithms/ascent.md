@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # ASCENT
 
-**ASCENT** is an online framework for Zero-Shot Object-Goal Navigation that enables robots to navigate multi-floor buildings without pre-built maps or retraining on new object categories. The system combines a [[Multi-Floor Abstraction]] module with [[Coarse-to-Fine Reasoning]] to achieve floor-aware, staircase-adaptive exploration in real-world environments.
+**ASCENT** is an online framework for Zero-Shot Object-Goal Navigation that enables robots to navigate multi-floor buildings without pre-built maps or retraining on new object categories. The system combines a Multi-Floor Abstraction module with Coarse-to-Fine Reasoning to achieve floor-aware, staircase-adaptive exploration in real-world environments.
 
 ## Overview
 
-ASCENT operates as an online, zero-shot navigation algorithm. It does not require prior mapping of the environment nor fine-tuning on novel object categories. The framework relies on Large Language Models ([[LLM]] ⚠️ ⚠️) for contextual analysis, uses **[[Frontier Ranking]]** to prioritize exploration frontiers, and employs stair-aware obstacle mapping and cross-floor topology modeling to handle multi-level buildings. Its coarse-to-fine exploration strategy allows efficient search over both global floor layout and local object targets.
+ASCENT operates as an online, zero-shot navigation algorithm. It does not require prior mapping of the environment nor fine-tuning on novel object categories. The framework relies on Large Language Models (LLM ⚠️ ⚠️) for contextual analysis, uses **Frontier Ranking** to prioritize exploration frontiers, and employs stair-aware obstacle mapping and cross-floor topology modeling to handle multi-level buildings. Its coarse-to-fine exploration strategy allows efficient search over both global floor layout and local object targets.
 
 ## Capabilities
 
@@ -37,7 +37,7 @@ ASCENT operates as an online, zero-shot navigation algorithm. It does not requir
 ASCENT is composed of two main modules:
 
 - **Multi-Floor Abstraction Module** – Models floor boundaries, stair connections, and cross-floor topology to build a compact representation of the building structure.
-- **Coarse-to-Fine Reasoning Module** – First performs global floor-level search using LLM-derived context, then refines to local object search via zero-shot object-Goal navigation. Exploration decisions are guided by **[[Frontier Ranking]]**, which scores candidate frontiers based on semantic relevance and spatial priors.
+- **Coarse-to-Fine Reasoning Module** – First performs global floor-level search using LLM-derived context, then refines to local object search via zero-shot object-Goal navigation. Exploration decisions are guided by **Frontier Ranking**, which scores candidate frontiers based on semantic relevance and spatial priors.
 
 The system integrates floor-aware sensing, online map building, and stair-aware obstacle mapping, making it suitable for real-time operation on legged platforms.
 
@@ -53,13 +53,13 @@ The system integrates floor-aware sensing, online map building, and stair-aware 
 
 ## Performance
 
-ASCENT was evaluated on two standard multi-floor navigation benchmarks: [[HM3D]] and [[MP3D]]. It achieves state-of-the-art results in zero-shot multi-floor object-goal navigation, surpassing prior approaches without needing floor-specific retraining or precomputed maps.
+ASCENT was evaluated on two standard multi-floor navigation benchmarks: HM3D and MP3D. It achieves state-of-the-art results in zero-shot multi-floor object-goal navigation, surpassing prior approaches without needing floor-specific retraining or precomputed maps.
 
 ## Relationships
 
-- **Uses**: [[Multi-Floor Abstraction]], [[Coarse-to-Fine Reasoning]], [[LLM]] ⚠️ ⚠️, [[Frontier Ranking]]
-- **Depends on**: [[Zero-Shot Object-Goal Navigation]], [[Multi-floor navigation]], [[Stair-aware Obstacle Mapping]], [[Cross-floor Topology Modeling]]
-- **Evaluated on**: [[HM3D]], [[MP3D]]
+- **Uses**: Multi-Floor Abstraction, Coarse-to-Fine Reasoning, LLM ⚠️ ⚠️, Frontier Ranking
+- **Depends on**: Zero-Shot Object-Goal Navigation, Multi-floor navigation, Stair-aware Obstacle Mapping, Cross-floor Topology Modeling
+- **Evaluated on**: HM3D, MP3D
 - **Supersedes**: Prior zero-shot approaches to object-goal navigation in multi-floor environments
 
 ## Deployment
@@ -69,5 +69,5 @@ ASCENT has been validated on a quadruped robot in real-world multi-floor buildin
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `ASCENT` --[[extends]] ⚠️ ⚠️--> `Multi-Floor Abstraction`
-- `ASCENT` --[[extends]] ⚠️ ⚠️--> `Coarse-to-Fine Reasoning`
+- `ASCENT` --extends ⚠️ ⚠️--> `Multi-Floor Abstraction`
+- `ASCENT` --extends ⚠️ ⚠️--> `Coarse-to-Fine Reasoning`

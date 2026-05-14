@@ -45,17 +45,17 @@ These results indicate that pure simulation‑based training with domain randomi
 
 ## Capabilities
 
-- [[High Jump]] ⚠️ over tall obstacles
-- [[Long Jump]] ⚠️ across wide gaps
-- [[Handstand]] ⚠️
-- [[Ramp Traversal]] ⚠️
-- [[Novel Obstacle Generalization]] ⚠️
+- High Jump ⚠️ over tall obstacles
+- Long Jump ⚠️ across wide gaps
+- Handstand ⚠️
+- Ramp Traversal ⚠️
+- Novel Obstacle Generalization ⚠️
 
 ## Relationships
 
-- **Uses:** [[Sim-to-Real Transfer]], [[Large-Scale RL]] ⚠️, [[Domain Randomization]] ⚠️
-- **Depends on:** [[Single Depth Camera]] ⚠️ (noisy, low‑resolution perception), [[Imprecise Actuation]] ⚠️ (noisy servos, imperfect torque control)
-- **Implements:** [[End-to-End Control]] ⚠️, [[Visuomotor Policy]] ⚠️
+- **Uses:** Sim-to-Real Transfer, Large-Scale RL ⚠️, Domain Randomization ⚠️
+- **Depends on:** Single Depth Camera ⚠️ (noisy, low‑resolution perception), Imprecise Actuation ⚠️ (noisy servos, imperfect torque control)
+- **Implements:** End-to-End Control ⚠️, Visuomotor Policy ⚠️
 
 ## Source
 

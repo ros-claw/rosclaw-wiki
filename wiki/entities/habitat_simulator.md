@@ -21,13 +21,13 @@ Habitat Simulator is a photorealistic 3D environment simulation platform designe
 ## Capabilities
 
 - **Photorealistic 3D environment simulation** – Renders high-quality visual observations with configurable sensors (RGB, depth, semantic, etc.).
-- **Supports multiple large-scale datasets** – Can load and simulate scenes from **[[Gibson dataset]]**, **[[HM3D dataset]]**, and **[[MP3D dataset]] ⚠️ ⚠️**, enabling cross-dataset generalization studies.
+- **Supports multiple large-scale datasets** – Can load and simulate scenes from **Gibson dataset**, **HM3D dataset**, and **MP3D dataset ⚠️ ⚠️**, enabling cross-dataset generalization studies.
 
 ## Relationships
 
-- **Used by** – The Habitat Simulator is the evaluation backend for **[[VLFM]]** (Vision-Language Foundation Models), providing a consistent testbed across diverse 3D scenes.
-- **Hosts** – It directly loads and manages scene assets from [[Gibson dataset]], [[HM3D dataset]], and [[MP3D dataset]] ⚠️ ⚠️, acting as a dataset integration layer.
+- **Used by** – The Habitat Simulator is the evaluation backend for **VLFM** (Vision-Language Foundation Models), providing a consistent testbed across diverse 3D scenes.
+- **Hosts** – It directly loads and manages scene assets from Gibson dataset, HM3D dataset, and MP3D dataset ⚠️ ⚠️, acting as a dataset integration layer.
 
 ## Usage
 
-In the context of the [[VLFM]] system, Habitat Simulator supplies the interactive environment for goal-conditioned navigation and object search. Agents receive first-person RGB observations and perform actions (e.g., move, rotate, pick) while the simulator updates state and provides reward signals. This setup allows reproducible evaluation of embodied agents without requiring a physical robot.
+In the context of the VLFM system, Habitat Simulator supplies the interactive environment for goal-conditioned navigation and object search. Agents receive first-person RGB observations and perform actions (e.g., move, rotate, pick) while the simulator updates state and provides reward signals. This setup allows reproducible evaluation of embodied agents without requiring a physical robot.

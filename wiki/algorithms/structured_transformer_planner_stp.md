@@ -30,13 +30,13 @@ The key innovation is the integration of **explored room layout information** in
 
 ## Relationships
 
-- **[[TD-STP]] ⚠️ ⚠️ ⚠️** ─ STP is a core component of the **Target-Driven Structured Transformer Planner (TD-STP)** framework, where it provides the structured planning backbone. In the full Teacher-Student framework, STP serves as the teacher policy for imitation learning and distillation. STP is **used by** [[TD-STP]] ⚠️ ⚠️ ⚠️ as the central planner to achieve target-driven navigation.
-- **[[Transformer]] ⚠️ ⚠️** ─ The base computational primitive of STP; the model uses transformer attention mechanisms and extends them with spatial constraints.
+- **TD-STP ⚠️ ⚠️ ⚠️** ─ STP is a core component of the **Target-Driven Structured Transformer Planner (TD-STP)** framework, where it provides the structured planning backbone. In the full Teacher-Student framework, STP serves as the teacher policy for imitation learning and distillation. STP is **used by** TD-STP ⚠️ ⚠️ ⚠️ as the central planner to achieve target-driven navigation.
+- **Transformer ⚠️ ⚠️** ─ The base computational primitive of STP; the model uses transformer attention mechanisms and extends them with spatial constraints.
 
 ## Dependencies
 
 - Relies on a room layout estimator or semantic map (not part of the algorithm itself).
-- Uses [[Transformer]] ⚠️ ⚠️ attention mechanisms as the base computational primitive.
+- Uses Transformer ⚠️ ⚠️ attention mechanisms as the base computational primitive.
 
 ## Source
 
@@ -44,6 +44,6 @@ The key innovation is the integration of **explored room layout information** in
 
 ## See also
 
-- [[Embodied Navigation]], [[Neural Attention]] ⚠️, [[Room Layout Estimation]] ⚠️
-- [[Partially Observable Markov Decision Process (POMDP)]] ⚠️ formalisms for navigation
-- [[TD-STP]] ⚠️ ⚠️ ⚠️ for the target-driven variant
+- Embodied Navigation, Neural Attention ⚠️, Room Layout Estimation ⚠️
+- Partially Observable Markov Decision Process (POMDP) ⚠️ formalisms for navigation
+- TD-STP ⚠️ ⚠️ ⚠️ for the target-driven variant

@@ -21,7 +21,7 @@ source_type: arxiv_paper
 - **Type**: Open‑vocabulary feature mapping
 - **Map update**: Probabilistic‑semantic
 - **Uncertainty handling**: Semantic uncertainty for informed exploration
-- **Runtime**: Real‑time (validated on [[Jetson Orin AGX]])
+- **Runtime**: Real‑time (validated on Jetson Orin AGX)
 - **Queries**: Zero‑shot multi‑object navigation
 
 ## Capabilities
@@ -36,7 +36,7 @@ source_type: arxiv_paper
 
 ## Method
 
-OneMap employs a probabilistic‑semantic map update that actively mitigates errors in semantic feature extraction. Uncertainty is used to guide exploration: the robot decides where to look next based on which areas are most uncertain and likely to contain target objects. The map is built using [[Open‑Vocabulary Vision Models]] ⚠️ ⚠️ ⚠️ for semantic feature extraction, and features are fused probabilistically to produce a reusable open‑vocabulary representation.
+OneMap employs a probabilistic‑semantic map update that actively mitigates errors in semantic feature extraction. Uncertainty is used to guide exploration: the robot decides where to look next based on which areas are most uncertain and likely to contain target objects. The map is built using Open‑Vocabulary Vision Models ⚠️ ⚠️ ⚠️ for semantic feature extraction, and features are fused probabilistically to produce a reusable open‑vocabulary representation.
 
 ## Benchmark
 
@@ -44,12 +44,12 @@ The paper introduces a new benchmark for zero‑shot multi‑object navigation t
 
 ## Evaluation
 
-OneMap was validated on object‑navigation tasks both in simulation and on a real robot. It runs in real‑time on a [[Jetson Orin AGX]] and uses [[Open‑Vocabulary Vision Models]] ⚠️ ⚠️ ⚠️ for semantic feature extraction. The algorithm achieves state‑of‑the‑art results on both single‑object and multi‑object navigation tasks.
+OneMap was validated on object‑navigation tasks both in simulation and on a real robot. It runs in real‑time on a Jetson Orin AGX and uses Open‑Vocabulary Vision Models ⚠️ ⚠️ ⚠️ for semantic feature extraction. The algorithm achieves state‑of‑the‑art results on both single‑object and multi‑object navigation tasks.
 
 ## Relationships
 
-- **Uses**: [[Jetson Orin AGX]], [[Open‑Vocabulary Vision Models]] ⚠️ ⚠️ ⚠️
-- **Depends on**: [[Semantic Feature Extraction]] ⚠️, [[Probabilistic Map Fusion]] ⚠️
+- **Uses**: Jetson Orin AGX, Open‑Vocabulary Vision Models ⚠️ ⚠️ ⚠️
+- **Depends on**: Semantic Feature Extraction ⚠️, Probabilistic Map Fusion ⚠️
 
 ---
 

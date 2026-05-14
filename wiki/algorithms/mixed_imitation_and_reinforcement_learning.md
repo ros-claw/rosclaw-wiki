@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-Mixed Imitation and Reinforcement Learning (MIRL) is a training paradigm that combines [[Imitation Learning]] with [[Reinforcement Learning]] to leverage the stability of imitation and the exploration capabilities of reinforcement learning. By integrating off-policy imitation learning with on-policy reinforcement learning, this approach aims to accelerate policy acquisition while maintaining robustness. It typically trains the agent in a first stage using imitation to bootstrap behavior, followed by a reinforcement stage for refinement beyond demonstrations.
+Mixed Imitation and Reinforcement Learning (MIRL) is a training paradigm that combines Imitation Learning with Reinforcement Learning to leverage the stability of imitation and the exploration capabilities of reinforcement learning. By integrating off-policy imitation learning with on-policy reinforcement learning, this approach aims to accelerate policy acquisition while maintaining robustness. It typically trains the agent in a first stage using imitation to bootstrap behavior, followed by a reinforcement stage for refinement beyond demonstrations.
 
 ## Capabilities
 
@@ -27,17 +27,17 @@ Mixed Imitation and Reinforcement Learning (MIRL) is a training paradigm that co
 
 MIRL typically operates through a dual-objective framework:
 
-1. **Imitation phase**: An agent learns from expert demonstrations via behavioral cloning or [[Inverse Reinforcement Learning]] ⚠️, often using off-policy updates to maximize data efficiency.
-2. **Reinforcement phase**: The same agent interacts with the environment using on-policy RL algorithms (e.g., [[Proximal Policy Optimization]] ⚠️) to explore and improve upon the imitation policy.
+1. **Imitation phase**: An agent learns from expert demonstrations via behavioral cloning or Inverse Reinforcement Learning ⚠️, often using off-policy updates to maximize data efficiency.
+2. **Reinforcement phase**: The same agent interacts with the environment using on-policy RL algorithms (e.g., Proximal Policy Optimization ⚠️) to explore and improve upon the imitation policy.
 
 The two phases are interleaved or blended, with a schedule that gradually shifts weight from imitation to reinforcement as the agent’s confidence increases.
 
 ## Relationship to Other Approaches
 
-- **Uses** [[Off-Policy Learning]] ⚠️ for imitation and [[On-Policy Learning]] ⚠️ for RL.
-- **Depends on** a source of expert demonstrations (e.g., [[Human Demonstration]] ⚠️ or [[Optimal Control Trajectories]] ⚠️).
-- **Contrasts with** pure [[Behavioral Cloning]] ⚠️ (which lacks exploration) and pure [[Deep Reinforcement Learning]] ⚠️ (which can be sample-inefficient).
-- **Used in** [[Generalizable Navigational Agent]] — MIRL provides the hybrid training strategy that allows navigation agents to learn from both demonstration data and trial-and-error interaction in diverse environments.
+- **Uses** Off-Policy Learning ⚠️ for imitation and On-Policy Learning ⚠️ for RL.
+- **Depends on** a source of expert demonstrations (e.g., Human Demonstration ⚠️ or Optimal Control Trajectories ⚠️).
+- **Contrasts with** pure Behavioral Cloning ⚠️ (which lacks exploration) and pure Deep Reinforcement Learning ⚠️ (which can be sample-inefficient).
+- **Used in** Generalizable Navigational Agent — MIRL provides the hybrid training strategy that allows navigation agents to learn from both demonstration data and trial-and-error interaction in diverse environments.
 
 ## Applications
 
@@ -52,4 +52,4 @@ MIRL is particularly effective in:
 
 - **Source**: *arXiv:1904.04195* — "Integrating Imitation Learning and Reinforcement Learning" (or similar title, based on source paper).
 
-> For a list of related algorithms and concepts, see [[Algorithm Index]] ⚠️.
+> For a list of related algorithms and concepts, see Algorithm Index ⚠️.

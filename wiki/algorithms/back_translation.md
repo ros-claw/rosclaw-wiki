@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 **Back Translation** is a semi-supervised learning technique designed to improve the generalizability of navigational agents. It works by generating new paths and corresponding instructions from unlabeled trajectory data, effectively expanding the training distribution without requiring additional human annotations.
 
-The method is particularly effective when combined with [[Environmental Dropout]] — a technique that creates diverse visual variations of the environment — and is a key component of the [[Generalizable Navigational Agent]] framework.
+The method is particularly effective when combined with Environmental Dropout — a technique that creates diverse visual variations of the environment — and is a key component of the Generalizable Navigational Agent framework.
 
 ### Capabilities
 
@@ -25,8 +25,8 @@ The method is particularly effective when combined with [[Environmental Dropout]
 
 ### Relationships
 
-- **Depends on** [[Environmental Dropout]] for creating the visual perturbations used in the back‑translation pipeline.
-- **Used in** [[Generalizable Navigational Agent]] to enhance the agent’s ability to generalize across unseen environments.
+- **Depends on** Environmental Dropout for creating the visual perturbations used in the back‑translation pipeline.
+- **Used in** Generalizable Navigational Agent to enhance the agent’s ability to generalize across unseen environments.
 
 ### Source
 
@@ -35,4 +35,4 @@ The method is particularly effective when combined with [[Environmental Dropout]
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Back Translation` --[[extends]] ⚠️--> `Environmental Dropout`
+- `Back Translation` --extends ⚠️--> `Environmental Dropout`

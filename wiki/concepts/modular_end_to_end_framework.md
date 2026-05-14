@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Modular End-to-End Framework
 
-The **Modular End-to-End Framework** is a [[concept]] ⚠️ in motor-control architecture design that decomposes complex control tasks into a set of lightweight neural networks with simple architectures. This decomposition [[simplifies training of complex motor-control tasks]] ⚠️ by allowing each module to specialize on a subtask, and it [[enables modular upgrades]] ⚠️ — individual components can be swapped or refined without retraining the entire system.
+The **Modular End-to-End Framework** is a [[concept]] ⚠️ in motor-control architecture design that decomposes complex control tasks into a set of lightweight neural networks with simple architectures. This decomposition simplifies training of complex motor-control tasks ⚠️ by allowing each module to specialize on a subtask, and it enables modular upgrades ⚠️ — individual components can be swapped or refined without retraining the entire system.
 
 ## Decomposition
 
@@ -27,7 +27,7 @@ At its core, the framework relies on **lightweight neural networks with simple a
 
 ## Usage
 
-The framework is adopted by [[REASAN]] (used_by), a system that leverages its modular design to achieve robust and adaptive motor control in robotic platforms.
+The framework is adopted by REASAN (used_by), a system that leverages its modular design to achieve robust and adaptive motor control in robotic platforms.
 
 ## Relationships
 
@@ -38,4 +38,4 @@ The framework is adopted by [[REASAN]] (used_by), a system that leverages its mo
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Modular End-to-End Framework` --[[related_to]] ⚠️--> `REASAN` _(wikilink)_
+- `Modular End-to-End Framework` --related_to ⚠️--> `REASAN` _(wikilink)_

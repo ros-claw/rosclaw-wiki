@@ -29,10 +29,10 @@ The robot performs a **handstand** — an inverted stance on its hands (or equiv
 
 ## Relationships
 
-- **Performed by**: [[Extreme Parkour Robot]]
-- **Controlled by**: [[Extreme Parkour Policy]]
+- **Performed by**: Extreme Parkour Robot
+- **Controlled by**: Extreme Parkour Policy
 
-The skill `depends_on` the [[Extreme Parkour Policy]] for core control and `uses` the [[Extreme Parkour Robot]]'s hardware to execute. It is `part_of` a broader parkour repertoire.
+The skill `depends_on` the Extreme Parkour Policy for core control and `uses` the Extreme Parkour Robot's hardware to execute. It is `part_of` a broader parkour repertoire.
 
 ## Sources
 

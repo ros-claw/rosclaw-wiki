@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Model Predictive Path Integral (MPPI)
 
-**Model Predictive Path Integral (MPPI)** is a sampling-based [[Model Predictive Control]] ⚠️ (MPC) algorithm that optimizes control sequences by evaluating a cost function over many randomly sampled trajectories. In this implementation, MPPI is integrated zero-shot with a learned forward dynamics model, enabling safe navigation without task-specific tuning or heuristic cost design.
+**Model Predictive Path Integral (MPPI)** is a sampling-based Model Predictive Control ⚠️ (MPC) algorithm that optimizes control sequences by evaluating a cost function over many randomly sampled trajectories. In this implementation, MPPI is integrated zero-shot with a learned forward dynamics model, enabling safe navigation without task-specific tuning or heuristic cost design.
 
 ### Parameters
 
@@ -28,8 +28,8 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **`uses`**: [[Learned Perceptive Forward Dynamics Model]] – MPPI relies on this learned model to predict state transitions and failure probabilities.
-- **`used_by`**: [[ANYmal]] – the quadruped robot that deploys this MPPI planner for locomotion and navigation tasks.
+- **`uses`**: Learned Perceptive Forward Dynamics Model – MPPI relies on this learned model to predict state transitions and failure probabilities.
+- **`used_by`**: ANYmal – the quadruped robot that deploys this MPPI planner for locomotion and navigation tasks.
 
 ### Framework
 
@@ -38,5 +38,5 @@ A zero-shot model predictive path integral planning framework that uses the lear
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Model Predictive Path Integral (MPPI)` --[[extends]] ⚠️--> `Learned Perceptive Forward Dynamics Model`
-- `Model Predictive Path Integral (MPPI)` --[[implements]] ⚠️--> `ANYmal`
+- `Model Predictive Path Integral (MPPI)` --extends ⚠️--> `Learned Perceptive Forward Dynamics Model`
+- `Model Predictive Path Integral (MPPI)` --implements ⚠️--> `ANYmal`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # CLIP-Nav
 
-**CLIP-Nav** is a zero-shot algorithm for [[vision-and-language navigation]] (VLN) that uses the [[CLIP]] model to make sequential navigational decisions from natural language referring expressions, without requiring any dataset-specific finetuning.
+**CLIP-Nav** is a zero-shot algorithm for vision-and-language navigation (VLN) that uses the CLIP model to make sequential navigational decisions from natural language referring expressions, without requiring any dataset-specific finetuning.
 
 ## Capabilities
 
@@ -34,15 +34,15 @@ CLIP-Nav was evaluated on the **REVERIE** benchmark. Performance metrics include
 - **SPL** (Success weighted by Path Length)
 - **RCS** (Relative Change Score)
 
-These metrics demonstrate competitive results compared to a [[supervised baseline]] ⚠️ ⚠️, despite using no training data or fine-tuning.
+These metrics demonstrate competitive results compared to a supervised baseline ⚠️ ⚠️, despite using no training data or fine-tuning.
 
 ## Relationships
 
-- **Uses**: [[CLIP]] – the core vision–language model for cross-modal matching.
-- **Compared to**: [[supervised baseline]] ⚠️ ⚠️ – a typical trained navigation policy used as a reference point for zero-shot performance.
+- **Uses**: CLIP – the core vision–language model for cross-modal matching.
+- **Compared to**: supervised baseline ⚠️ ⚠️ – a typical trained navigation policy used as a reference point for zero-shot performance.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `CLIP-Nav` --[[based_on]] ⚠️--> `vision-and-language navigation`
-- `CLIP-Nav` --[[extends]] ⚠️--> `CLIP`
+- `CLIP-Nav` --based_on ⚠️--> `vision-and-language navigation`
+- `CLIP-Nav` --extends ⚠️--> `CLIP`

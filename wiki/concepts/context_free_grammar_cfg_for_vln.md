@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Context-Free Grammar (CFG) for VLN
 
-A **Context-Free Grammar (CFG) for VLN** is a formal structure used to decompose [[Visual-and-Language Navigation (VLN)]] ⚠️ tasks into constituent instruction categories. It provides a systematic framework for designing fine-grained evaluation metrics by categorizing the types of instructions that an agent must follow.
+A **Context-Free Grammar (CFG) for VLN** is a formal structure used to decompose Visual-and-Language Navigation (VLN) ⚠️ tasks into constituent instruction categories. It provides a systematic framework for designing fine-grained evaluation metrics by categorizing the types of instructions that an agent must follow.
 
 ## Purpose
 
@@ -27,7 +27,7 @@ The CFG supports **problem decomposition in VLN evaluation**, breaking down comp
 
 ## Relationships
 
-- **used_in** → [[Fine-grained evaluation framework for VLN]] – the CFG underpins the evaluation taxonomy, allowing each instruction type to be tested separately.
+- **used_in** → Fine-grained evaluation framework for VLN – the CFG underpins the evaluation taxonomy, allowing each instruction type to be tested separately.
 
 ## Role
 

@@ -19,7 +19,7 @@ source_type: arxiv_paper
 
 ## Description
 
-DDN (Demand-Driven Navigation) is a navigation benchmark designed to evaluate goal-oriented navigation based on user demand. The robot must interpret a natural language demand (e.g., "Find a cup on the table") and navigate to the correct object. The [[InstructNav]] system achieves an 86.34% improvement over previous state-of-the-art (SOTA) methods on this benchmark.
+DDN (Demand-Driven Navigation) is a navigation benchmark designed to evaluate goal-oriented navigation based on user demand. The robot must interpret a natural language demand (e.g., "Find a cup on the table") and navigate to the correct object. The InstructNav system achieves an 86.34% improvement over previous state-of-the-art (SOTA) methods on this benchmark.
 
 ## Capabilities
 
@@ -28,8 +28,8 @@ DDN (Demand-Driven Navigation) is a navigation benchmark designed to evaluate go
 
 ## Relationships
 
-- **Used by:** [[InstructNav]] uses DDN as an evaluation benchmark.
-- **Related to:** DDN is conceptually related to [[R2R-CE]] (Room-to-Room with Commonsense Extensions) and [[Habitat ObjNav]] (Object Navigation in Habitat), but differs in its emphasis on dynamic, demand-driven goals rather than static target lists.
+- **Used by:** InstructNav uses DDN as an evaluation benchmark.
+- **Related to:** DDN is conceptually related to R2R-CE (Room-to-Room with Commonsense Extensions) and Habitat ObjNav (Object Navigation in Habitat), but differs in its emphasis on dynamic, demand-driven goals rather than static target lists.
 
 ## References
 
@@ -38,4 +38,4 @@ DDN (Demand-Driven Navigation) is a navigation benchmark designed to evaluate go
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `DDN` --[[applies_to]] ⚠️--> `R2R-CE`
+- `DDN` --applies_to ⚠️--> `R2R-CE`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Language-Guided Visual Navigation
 
-**Language-guided visual navigation** is a core task in [[embodied AI]], where an agent moves through a physical or simulated environment by following natural language instructions. The instructions vary in granularity, from high-level goals (e.g., "find the kitchen") to detailed step-by-step directions (e.g., "turn left at the sofa, then go straight until you see a red door"). This capability bridges [[vision]] ⚠️ and [[language understanding]] ⚠️ with continuous [[control]] ⚠️ in real-world spaces.
+**Language-guided visual navigation** is a core task in embodied AI, where an agent moves through a physical or simulated environment by following natural language instructions. The instructions vary in granularity, from high-level goals (e.g., "find the kitchen") to detailed step-by-step directions (e.g., "turn left at the sofa, then go straight until you see a red door"). This capability bridges vision ⚠️ and language understanding ⚠️ with continuous control ⚠️ in real-world spaces.
 
 ## Task Structure
 
@@ -31,7 +31,7 @@ source_type: arxiv_paper
 
 ## Relationship: Implementation
 
-`Language-Guided Visual Navigation` **is implemented by** [[State-Adaptive Mixture of Experts (SAME)]]. SAME adaptively selects expert modules based on the current state and instruction, enabling the agent to share general navigation knowledge while exploiting task-specific cues.
+`Language-Guided Visual Navigation` **is implemented by** State-Adaptive Mixture of Experts (SAME). SAME adaptively selects expert modules based on the current state and instruction, enabling the agent to share general navigation knowledge while exploiting task-specific cues.
 
 ## Challenges
 
@@ -41,15 +41,15 @@ source_type: arxiv_paper
 
 ## See Also
 
-- [[Embodied AI]]
-- [[Visual Language Action (VLA) Models]] ⚠️
-- [[Sim-to-Real Transfer]]
-- [[ROS2 Navigation Stack]] ⚠️
+- Embodied AI
+- Visual Language Action (VLA) Models ⚠️
+- Sim-to-Real Transfer
+- ROS2 Navigation Stack ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Language-Guided Visual Navigation` --[[related_to]] ⚠️ ⚠️ ⚠️--> `embodied AI`
-- `Language-Guided Visual Navigation` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Embodied AI`
+- `Language-Guided Visual Navigation` --related_to ⚠️ ⚠️ ⚠️--> `embodied AI`
+- `Language-Guided Visual Navigation` --related_to ⚠️ ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Language-Guided Visual Navigation` --[[related_to]] ⚠️ ⚠️ ⚠️--> `State-Adaptive Mixture of Experts (SAME)` _(wikilink)_
+- `Language-Guided Visual Navigation` --related_to ⚠️ ⚠️ ⚠️--> `State-Adaptive Mixture of Experts (SAME)` _(wikilink)_

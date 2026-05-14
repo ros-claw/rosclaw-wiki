@@ -27,20 +27,20 @@ Unlike purely end-to-end neural methods, neurosymbolic planning leverages explic
 
 ## Capabilities
 
-- Reason over [[Scene Graphs]] and environmental observations to infer spatial relationships, object locations, and action affordances.
+- Reason over Scene Graphs and environmental observations to infer spatial relationships, object locations, and action affordances.
 - Generate executable plans (e.g., sequences of movement commands) that satisfy a given natural language instruction.
 
 ## Relationships
 
-- **Used by** → [[VLN-Zero]]: The [[VLN-Zero]] system implements a neurosymbolic planner to achieve zero-shot vision-language navigation.
-- **Depends on** → [[Scene Graphs]]: The planner requires a structured scene graph as input, which encodes objects, their attributes, and spatial relations.
+- **Used by** → VLN-Zero: The VLN-Zero system implements a neurosymbolic planner to achieve zero-shot vision-language navigation.
+- **Depends on** → Scene Graphs: The planner requires a structured scene graph as input, which encodes objects, their attributes, and spatial relations.
 
 ## Deployment Phase
 
 In deployment, a neurosymbolic planner reasons over the scene graph and observations to produce plans. The process typically involves:
 
 1. Parsing a natural language instruction into a high-level goal.
-2. Querying the [[Scene Graphs|scene graph]] to identify relevant objects and paths.
+2. Querying the scene graph to identify relevant objects and paths.
 3. Applying symbolic reasoning (e.g., predicate logic, action sequencing) to generate a step-by-step plan.
 4. Executing the plan via low-level control while monitoring observations for failure or replanning.
 
@@ -48,12 +48,12 @@ This design eliminates the need for environment-specific fine-tuning, making it 
 
 ## See Also
 
-- [[VLN-Zero]]
-- [[Scene Graphs]]
-- [[Embodied AI]]
-- [[Zero-Shot Navigation]]
+- VLN-Zero
+- Scene Graphs
+- Embodied AI
+- Zero-Shot Navigation
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Neurosymbolic Planning` --[[related_to]] ⚠️--> `Embodied AI`
+- `Neurosymbolic Planning` --related_to ⚠️--> `Embodied AI`

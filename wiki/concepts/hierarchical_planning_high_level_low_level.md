@@ -36,20 +36,20 @@ Separating planning and control allows the agent to reason at a higher level of 
 
 ### Relationships
 
-- **used_by** – [[ETPNav]] implements hierarchical planning to achieve robust vision-language navigation across unseen environments.
-- **part_of** – The paradigm is a key component of [[Vision-Language Navigation]] systems that require both semantic understanding and real‑world action.
-- **depends_on** – High-level planning often relies on [[Semantic Mapping]] ⚠️ or [[Topological Graphs]] ⚠️, while low-level control integrates [[Reactive Control]] ⚠️ or [[Model Predictive Control]] ⚠️.
+- **used_by** – ETPNav implements hierarchical planning to achieve robust vision-language navigation across unseen environments.
+- **part_of** – The paradigm is a key component of Vision-Language Navigation systems that require both semantic understanding and real‑world action.
+- **depends_on** – High-level planning often relies on Semantic Mapping ⚠️ or Topological Graphs ⚠️, while low-level control integrates Reactive Control ⚠️ or Model Predictive Control ⚠️.
 
 ### See Also
 
-- [[ETPNav]]
-- [[Vision-Language Navigation]]
-- [[Hierarchical Reinforcement Learning]]
-- [[Sim-to-Real Transfer]] (for training the low-level controller)
+- ETPNav
+- Vision-Language Navigation
+- Hierarchical Reinforcement Learning
+- Sim-to-Real Transfer (for training the low-level controller)
 
 *Source: arXiv:2304.03047*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Hierarchical Planning (High-level + Low-level)` --[[related_to]] ⚠️--> `ETPNav` _(wikilink)_
+- `Hierarchical Planning (High-level + Low-level)` --related_to ⚠️--> `ETPNav` _(wikilink)_

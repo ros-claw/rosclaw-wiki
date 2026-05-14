@@ -20,7 +20,7 @@ LoGoPlanner is a fully end-to-end navigation framework that integrates localizat
 
 ## Method
 
-The approach fine‑tunes a long‑horizon visual‑geometry backbone to predict absolute metric scale, reconstructs surrounding scene geometry from historical observations, and conditions the policy on implicit geometry bootstrapped by auxiliary tasks. The framework uses [[Long-horizon Visual-geometry Backbone]] to encode temporal visual sequences, [[Implicit Geometry Bootstrapping]] ⚠️ ⚠️ to infer latent spatial structure, and [[Auxiliary Task Conditioning]] ⚠️ ⚠️ to ground the policy in metric scale and scene geometry.
+The approach fine‑tunes a long‑horizon visual‑geometry backbone to predict absolute metric scale, reconstructs surrounding scene geometry from historical observations, and conditions the policy on implicit geometry bootstrapped by auxiliary tasks. The framework uses Long-horizon Visual-geometry Backbone to encode temporal visual sequences, Implicit Geometry Bootstrapping ⚠️ ⚠️ to infer latent spatial structure, and Auxiliary Task Conditioning ⚠️ ⚠️ to ground the policy in metric scale and scene geometry.
 
 Key auxiliary tasks include:
 - **Metric scale grounding** – learns to recover real‑world distances from monocular input
@@ -51,8 +51,8 @@ In both simulation and real‑world settings, LoGoPlanner achieves more than **2
 
 ## Relationships
 
-- **Uses:** [[Long-horizon Visual-geometry Backbone]], [[Implicit Geometry Bootstrapping]] ⚠️ ⚠️, [[Auxiliary Task Conditioning]] ⚠️ ⚠️, auxiliary tasks for metric scale grounding
-- **Part of:** [[Navigation Pipeline for Mobile Robots]] ⚠️
+- **Uses:** Long-horizon Visual-geometry Backbone, Implicit Geometry Bootstrapping ⚠️ ⚠️, Auxiliary Task Conditioning ⚠️ ⚠️, auxiliary tasks for metric scale grounding
+- **Part of:** Navigation Pipeline for Mobile Robots ⚠️
 - **Depends on:** metric‑aware visual geometry, implicit state estimation, surrounding scene geometry reconstruction
 - **Evaluated in:** simulation, real‑world environments
 - **Contradicts:** traditional modular pipelines (perception → localization → planning) that suffer from cascading errors; end‑to‑end methods that rely on separate localization modules or explicit pose estimation
@@ -64,4 +64,4 @@ In both simulation and real‑world settings, LoGoPlanner achieves more than **2
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `LoGoPlanner` --[[extends]] ⚠️--> `Long-horizon Visual-geometry Backbone`
+- `LoGoPlanner` --extends ⚠️--> `Long-horizon Visual-geometry Backbone`

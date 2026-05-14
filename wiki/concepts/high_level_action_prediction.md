@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # High-Level Action Prediction
 
-**High-level action prediction** is a conceptual approach in embodied AI where an agent selects a coarse behavioral goal—such as a viewing direction or a waypoint—rather than specifying exact low-level motor commands. This technique simplifies the action space and is commonly employed in **[[Vision and Language Navigation in the Continuous Environment (VLN-CE)]] ⚠️ ⚠️** to reduce computational complexity.
+**High-level action prediction** is a conceptual approach in embodied AI where an agent selects a coarse behavioral goal—such as a viewing direction or a waypoint—rather than specifying exact low-level motor commands. This technique simplifies the action space and is commonly employed in **Vision and Language Navigation in the Continuous Environment (VLN-CE) ⚠️ ⚠️** to reduce computational complexity.
 
 ## Role
 
@@ -22,12 +22,12 @@ High-level action prediction selects a viewing direction or waypoint, but does n
 
 ## Capabilities
 
-- **View selection task in [[VLN-CE]]**: The predictor outputs a target viewpoint or heading, which is then executed by a lower-level controller (e.g., a motion planner or a low-level policy).
+- **View selection task in VLN-CE**: The predictor outputs a target viewpoint or heading, which is then executed by a lower-level controller (e.g., a motion planner or a low-level policy).
 
 ## Relationships
 
-- **part_of**: `[[High-level action prediction]]` is a component of `[[Vision and Language Navigation in the Continuous Environment (VLN-CE)]] ⚠️ ⚠️`.
-- **limitation**: This approach ignores crucial spatial reasoning within low-level action movements. [[Spatial reasoning]] ⚠️ in fine-grained motion (e.g., obstacle avoidance, precise turning angles, and velocity control) is not addressed by purely high‑level predictions.
+- **part_of**: `High-level action prediction` is a component of `Vision and Language Navigation in the Continuous Environment (VLN-CE) ⚠️ ⚠️`.
+- **limitation**: This approach ignores crucial spatial reasoning within low-level action movements. Spatial reasoning ⚠️ in fine-grained motion (e.g., obstacle avoidance, precise turning angles, and velocity control) is not addressed by purely high‑level predictions.
 
 ## Source
 
@@ -36,4 +36,4 @@ High-level action prediction selects a viewing direction or waypoint, but does n
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `high-level action prediction` --[[related_to]] ⚠️--> `VLN-CE`
+- `high-level action prediction` --related_to ⚠️--> `VLN-CE`

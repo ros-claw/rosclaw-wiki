@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-A **full‑sized humanoid robot** capable of terrain‑aware locomotion using a **depth‑only perceptive framework ([[DPL (Depth-only Perceptive Locomotion) Framework]] ⚠️ ⚠️ ⚠️)**. The robot is the physical platform evaluated in the context of agile and adaptive locomotion across diverse and challenging terrains, relying solely on depth sensor input for perception.
+A **full‑sized humanoid robot** capable of terrain‑aware locomotion using a **depth‑only perceptive framework (DPL (Depth-only Perceptive Locomotion) Framework ⚠️ ⚠️ ⚠️)**. The robot is the physical platform evaluated in the context of agile and adaptive locomotion across diverse and challenging terrains, relying solely on depth sensor input for perception.
 
 This embodiment is at the center of the DPL approach, which enables real‑time adaptation without explicit terrain classification or an onboard map.
 
@@ -25,10 +25,10 @@ This embodiment is at the center of the DPL approach, which enables real‑time 
 
 ## Relationships
 
-- **uses**: [[DPL (Depth-only Perceptive Locomotion) Framework]] ⚠️ ⚠️ ⚠️ – the full‑sized humanoid robot serves as the test‑bed for the depth‑only locomotion policy.
+- **uses**: DPL (Depth-only Perceptive Locomotion) Framework ⚠️ ⚠️ ⚠️ – the full‑sized humanoid robot serves as the test‑bed for the depth‑only locomotion policy.
 
 ## Related Pages
 
-- [[DPL (Depth-only Perceptive Locomotion) Framework]] ⚠️ ⚠️ ⚠️
-- [[Humanoid Locomotion]] ⚠️
-- [[Perceptive Control]] ⚠️
+- DPL (Depth-only Perceptive Locomotion) Framework ⚠️ ⚠️ ⚠️
+- Humanoid Locomotion ⚠️
+- Perceptive Control ⚠️

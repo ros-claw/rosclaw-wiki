@@ -33,7 +33,7 @@ The robot performs a long jump across gaps twice its own body length, demonstrat
 
 ## Relationships
 
-- **Performed by**: [[Extreme Parkour Robot]]
-- **Controlled by**: [[Extreme Parkour Policy]] (the policy outputs the joint trajectories and timing required to execute this skill)
+- **Performed by**: Extreme Parkour Robot
+- **Controlled by**: Extreme Parkour Policy (the policy outputs the joint trajectories and timing required to execute this skill)
 
 *Source: arxiv 2309.14341*

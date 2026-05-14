@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Embodied Agents in Urban Navigation
 
-**Embodied Agents in Urban Navigation** refers to AI systems that perceive and act within real or simulated cities, following [[free-form natural language instructions]] ⚠️ to reach destinations. These agents combine language understanding, spatial reasoning, and dynamic path planning to operate in complex, unstructured environments.
+**Embodied Agents in Urban Navigation** refers to AI systems that perceive and act within real or simulated cities, following free-form natural language instructions ⚠️ to reach destinations. These agents combine language understanding, spatial reasoning, and dynamic path planning to operate in complex, unstructured environments.
 
 ## Domain & Inputs
 
@@ -41,18 +41,18 @@ The task introduces several key difficulties:
 
 ## Relationships
 
-- **Part of [[UrbanNav]]** — a broader framework or dataset for urban navigation tasks  
-- **Implements** [[Visual Language Models (VLMs)]] to ground language in visual observations  
-- **Depends on** [[Map Representations]] ⚠️ and [[Social Navigation]] ⚠️ to handle crowds and traffic
+- **Part of UrbanNav** — a broader framework or dataset for urban navigation tasks  
+- **Implements** Visual Language Models (VLMs) to ground language in visual observations  
+- **Depends on** Map Representations ⚠️ and Social Navigation ⚠️ to handle crowds and traffic
 
 ## See Also
 
-- [[Instruction Following in Robotics]] ⚠️  
-- [[Sim‑to‑Real Transfer for Navigation]] ⚠️  
-- [[Landmark Localization]] ⚠️
+- Instruction Following in Robotics ⚠️  
+- Sim‑to‑Real Transfer for Navigation ⚠️  
+- Landmark Localization ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Embodied Agents in Urban Navigation` --[[related_to]] ⚠️ ⚠️--> `UrbanNav` _(wikilink)_
-- `Embodied Agents in Urban Navigation` --[[related_to]] ⚠️ ⚠️--> `Visual Language Models (VLMs)` _(wikilink)_
+- `Embodied Agents in Urban Navigation` --related_to ⚠️ ⚠️--> `UrbanNav` _(wikilink)_
+- `Embodied Agents in Urban Navigation` --related_to ⚠️ ⚠️--> `Visual Language Models (VLMs)` _(wikilink)_

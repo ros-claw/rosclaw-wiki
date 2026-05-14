@@ -19,11 +19,11 @@ source_type: arxiv_paper
 **Type**: Algorithm  
 **Confidence**: 0.85 *(reinforced by peer-reviewed arxiv paper 2409.18794)*
 
-**Open-Nav** is a novel method for zero-shot [[Vision-and-Language Navigation]] (VLN) that employs open-source [[Large Language Models]] (LLMs) with [[spatial-temporal chain-of-thought]] ⚠️ reasoning to navigate continuous 3D environments from [[natural language instructions]] ⚠️. It breaks down navigation tasks into instruction comprehension, progress estimation, and decision-making using spatial-temporal CoT reasoning.
+**Open-Nav** is a novel method for zero-shot Vision-and-Language Navigation (VLN) that employs open-source Large Language Models (LLMs) with spatial-temporal chain-of-thought ⚠️ reasoning to navigate continuous 3D environments from natural language instructions ⚠️. It breaks down navigation tasks into instruction comprehension, progress estimation, and decision-making using spatial-temporal CoT reasoning.
 
 ## Methodology
 
-Open-Nav employs a spatial-temporal chain-of-thought (CoT) reasoning approach that decomposes the VLN task into instruction comprehension, progress estimation, and decision-making. It enhances [[scene perception]] ⚠️ with fine-grained object and spatial knowledge to improve LLM reasoning. This decomposition allows the model to iteratively process visual observations and linguistic cues without requiring task-specific training.
+Open-Nav employs a spatial-temporal chain-of-thought (CoT) reasoning approach that decomposes the VLN task into instruction comprehension, progress estimation, and decision-making. It enhances scene perception ⚠️ with fine-grained object and spatial knowledge to improve LLM reasoning. This decomposition allows the model to iteratively process visual observations and linguistic cues without requiring task-specific training.
 
 ## Capabilities
 
@@ -42,13 +42,13 @@ Open-Nav employs a spatial-temporal chain-of-thought (CoT) reasoning approach th
 
 ## Relationships
 
-- **uses**: [[Large Language Models (LLMs)]], [[Spatial-temporal chain-of-thought reasoning]]
-- **depends_on**: [[open-source LLMs]] ⚠️, [[scene perception models]] ⚠️, [[LLM reasoning]] ⚠️
-- **contradicts**: [[closed-source LLM approaches]] ⚠️ (e.g., GPT-4) used for VLN, as Open-Nav avoids token costs and data breach risks while achieving competitive performance
+- **uses**: Large Language Models (LLMs), Spatial-temporal chain-of-thought reasoning
+- **depends_on**: open-source LLMs ⚠️, scene perception models ⚠️, LLM reasoning ⚠️
+- **contradicts**: closed-source LLM approaches ⚠️ (e.g., GPT-4) used for VLN, as Open-Nav avoids token costs and data breach risks while achieving competitive performance
 
 ## Comparison
 
-Open-Nav achieves competitive performance compared to closed-source LLM methods (such as [[GPT-4]]-based VLN agents) while avoiding token costs and data breach risks. It demonstrates that open-source LLMs, when combined with structured reasoning, can match or approach the performance of proprietary models in embodied navigation tasks.
+Open-Nav achieves competitive performance compared to closed-source LLM methods (such as GPT-4-based VLN agents) while avoiding token costs and data breach risks. It demonstrates that open-source LLMs, when combined with structured reasoning, can match or approach the performance of proprietary models in embodied navigation tasks.
 
 ## References
 
@@ -57,4 +57,4 @@ Open-Nav achieves competitive performance compared to closed-source LLM methods 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Confirmed links:**
-- `Open-Nav` --[[implements]] ⚠️--> `Large Language Models (LLMs)`
+- `Open-Nav` --implements ⚠️--> `Large Language Models (LLMs)`

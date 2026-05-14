@@ -32,11 +32,11 @@ Temporary target loss breaks the continuity of visual feedback, which is essenti
 
 ## Relationship
 
-- [[LOVON]] – Temporary target loss is a key challenge for the [[LOVON]] agent, which must maintain robust target tracking despite such disruptions.
+- LOVON – Temporary target loss is a key challenge for the LOVON agent, which must maintain robust target tracking despite such disruptions.
 
 ## Related Concepts
 
-- [[Occlusion Handling]] ⚠️
-- [[Visual Tracking]] ⚠️
-- [[Sim-to-Real Transfer]] (often exacerbates temporary loss due to domain gaps)
-- [[Reacquisition]] ⚠️ – the process of relocating the target after loss.
+- Occlusion Handling ⚠️
+- Visual Tracking ⚠️
+- Sim-to-Real Transfer (often exacerbates temporary loss due to domain gaps)
+- Reacquisition ⚠️ – the process of relocating the target after loss.

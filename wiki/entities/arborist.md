@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Arborist
 
-**Arborist** is an [[LLM]] ⚠️-based module designed for autonomous plan adjustment in robotic task execution. It enables re-planning without human intervention by reasoning over task failures and generating revised action sequences.
+**Arborist** is an LLM ⚠️-based module designed for autonomous plan adjustment in robotic task execution. It enables re-planning without human intervention by reasoning over task failures and generating revised action sequences.
 
 ## Capabilities
 
@@ -22,15 +22,15 @@ source_type: arxiv_paper
 
 ## Role in Adaptive Replanning
 
-Arborist functions as a core component within an [[Adaptive Replanning]] framework. It receives feedback from execution monitors and uses [[Prompt Engineering]] ⚠️ or [[In-Context Learning]] ⚠️ to produce updated task sequences. Its decisions may be conditioned on [[Task and Motion Planning]] ⚠️ (TAMP) primitives or low-level [[Controller]] ⚠️ interfaces.
+Arborist functions as a core component within an Adaptive Replanning framework. It receives feedback from execution monitors and uses Prompt Engineering ⚠️ or In-Context Learning ⚠️ to produce updated task sequences. Its decisions may be conditioned on Task and Motion Planning ⚠️ (TAMP) primitives or low-level Controller ⚠️ interfaces.
 
 ## Relationship to Other Entities
 
-- **depends_on**: [[Large Language Model]] (LLM) as its underlying reasoning engine.
-- **implements**: [[Autonomous Replanning]] ⚠️ (a skill or algorithm for adapting to execution failures).
-- **part_of**: [[Adaptive Replanning]] (a broader framework or algorithm class).
-- **related_to**: [[Failure Recovery]] ⚠️ — Arborist’s replanning can be seen as a form of online failure recovery.
+- **depends_on**: Large Language Model (LLM) as its underlying reasoning engine.
+- **implements**: Autonomous Replanning ⚠️ (a skill or algorithm for adapting to execution failures).
+- **part_of**: Adaptive Replanning (a broader framework or algorithm class).
+- **related_to**: Failure Recovery ⚠️ — Arborist’s replanning can be seen as a form of online failure recovery.
 
 ## Source
 
-This definition is derived from *arxiv paper 2503.22942* (see [[Sources: Adaptive Replanning via LLMs]] ⚠️).
+This definition is derived from *arxiv paper 2503.22942* (see Sources: Adaptive Replanning via LLMs ⚠️).

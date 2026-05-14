@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## HANNA Agent
 
-**HANNA** (Hierarchical Attention-based Navigation and Assistance agent) is a memory-augmented neural agent designed for interactive embodied tasks. It operates in tandem with its counterpart [[ANNA Agent]] ⚠️ ⚠️ ⚠️ ⚠️ to complete goal-driven navigation and object retrieval while proactively requesting human assistance when uncertain.
+**HANNA** (Hierarchical Attention-based Navigation and Assistance agent) is a memory-augmented neural agent designed for interactive embodied tasks. It operates in tandem with its counterpart ANNA Agent ⚠️ ⚠️ ⚠️ ⚠️ to complete goal-driven navigation and object retrieval while proactively requesting human assistance when uncertain.
 
 ---
 
@@ -30,13 +30,13 @@ The agent employs a **memory-augmented neural network** that models multiple lev
 
 - Maintain a long-term memory of past episodes, obstacles, and successful strategies.
 - Reason over goals at different granularities (e.g., room-level navigation vs. object-level interaction).
-- Integrate visual and linguistic inputs from both its own sensors and assistance provided by [[ANNA Agent]] ⚠️ ⚠️ ⚠️ ⚠️.
+- Integrate visual and linguistic inputs from both its own sensors and assistance provided by ANNA Agent ⚠️ ⚠️ ⚠️ ⚠️.
 
 ---
 
 ### Capabilities
 
-- **Help-seeking**: When the agent encounters uncertainty (e.g., ambiguous object location or occluded view), it can explicitly request help from [[ANNA Agent]] ⚠️ ⚠️ ⚠️ ⚠️.
+- **Help-seeking**: When the agent encounters uncertainty (e.g., ambiguous object location or occluded view), it can explicitly request help from ANNA Agent ⚠️ ⚠️ ⚠️ ⚠️.
 - **Multimodal interpretation**: Understands natural language commands and visual cues (e.g., pointing gestures or highlighted areas).
 - **Navigation and object search**: Uses hierarchical reasoning to explore environments efficiently.
 - **Error correction**: Learns to identify and avoid actions that previously led to failures.
@@ -58,8 +58,8 @@ This algorithm helps the agent develop robust policies that generalize to unseen
 
 ### Relationships
 
-- `uses`: [[ANNA Agent]] ⚠️ ⚠️ ⚠️ ⚠️ (cooperative assistant)
-- `trained_with`: [[Retrospective Curiosity-Encouraging Imitation Learning]]
+- `uses`: ANNA Agent ⚠️ ⚠️ ⚠️ ⚠️ (cooperative assistant)
+- `trained_with`: Retrospective Curiosity-Encouraging Imitation Learning
 
 ---
 
@@ -70,4 +70,4 @@ This algorithm helps the agent develop robust policies that generalize to unseen
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `HANNA Agent` --[[uses]] ⚠️--> `Retrospective Curiosity-Encouraging Imitation Learning`
+- `HANNA Agent` --uses ⚠️--> `Retrospective Curiosity-Encouraging Imitation Learning`

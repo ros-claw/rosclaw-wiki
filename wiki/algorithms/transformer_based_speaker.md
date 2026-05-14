@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Transformer-based Speaker
 
-**Transformer-based Speaker** is a neural network algorithm within the [[Double Back-Translation]] framework. It generates natural language navigation instructions from input path representations (e.g., sequences of waypoints or spatial coordinates).
+**Transformer-based Speaker** is a neural network algorithm within the Double Back-Translation framework. It generates natural language navigation instructions from input path representations (e.g., sequences of waypoints or spatial coordinates).
 
 ## Overview
 
-Building on the Transformer architecture [[Transformer Architecture]] ⚠️ ⚠️ (Vaswani et al., 2017), the Transformer-based Speaker maps a planned route (typically encoded as a sequence of grid cells or metric coordinates) to a sequence of words describing how to follow that route. It is trained jointly with a **Listener** model as part of the Double Back‑Translation loop, where the Speaker produces instructions that the Listener must reconstruct the original path from. This cycle enforces instruction‑path consistency and improves instruction quality through iterative refinement.
+Building on the Transformer architecture Transformer Architecture ⚠️ ⚠️ (Vaswani et al., 2017), the Transformer-based Speaker maps a planned route (typically encoded as a sequence of grid cells or metric coordinates) to a sequence of words describing how to follow that route. It is trained jointly with a **Listener** model as part of the Double Back‑Translation loop, where the Speaker produces instructions that the Listener must reconstruct the original path from. This cycle enforces instruction‑path consistency and improves instruction quality through iterative refinement.
 
 ## Capabilities
 
@@ -28,10 +28,10 @@ Building on the Transformer architecture [[Transformer Architecture]] ⚠️ ⚠
 
 ## Relationships
 
-- **Part of** → [[Double Back-Translation]]
-- **Uses** → [[Transformer Architecture]] ⚠️ ⚠️ (attention mechanisms for sequence generation)
-- **Depends on** → [[Path representation]] ⚠️ (input format), [[Vocabulary]] ⚠️ (output tokens)
-- **Interacts with** → [[Listener]] ⚠️ (partner in back‑translation), [[Navigation instruction dataset]] ⚠️
+- **Part of** → Double Back-Translation
+- **Uses** → Transformer Architecture ⚠️ ⚠️ (attention mechanisms for sequence generation)
+- **Depends on** → Path representation ⚠️ (input format), Vocabulary ⚠️ (output tokens)
+- **Interacts with** → Listener ⚠️ (partner in back‑translation), Navigation instruction dataset ⚠️
 - **Implements** → Instruction generation from geometric plans
 
 ## Source
@@ -41,4 +41,4 @@ Building on the Transformer architecture [[Transformer Architecture]] ⚠️ ⚠
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Transformer-based Speaker` --[[extends]] ⚠️--> `Double Back-Translation`
+- `Transformer-based Speaker` --extends ⚠️--> `Double Back-Translation`

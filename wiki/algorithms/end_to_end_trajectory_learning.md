@@ -19,12 +19,12 @@ source_type: arxiv_paper
 ## Capabilities
 
 - Learns navigation policies directly from RGB-D input, processing egocentric video frames alongside natural language commands.
-- Combines [[Vision-Language-Exploration pre-training]] over **more than a million diverse trajectories** drawn from simulated and real-world RGB-D sequences, enabling the model to generalize across scenes, objects, and instruction formats without hand‑crafted features or heuristic planners.
+- Combines Vision-Language-Exploration pre-training over **more than a million diverse trajectories** drawn from simulated and real-world RGB-D sequences, enabling the model to generalize across scenes, objects, and instruction formats without hand‑crafted features or heuristic planners.
 
 ## Relationships
 
-- **Part of**: [[MTU3D (Move to Understand 3D)]] – this algorithm serves as the core trajectory generation component within the MTU3D system.
-- **Depends on**: [[Vision-Language-Exploration pre-training]] – the pre‑trained embeddings provide the visual‑language grounding necessary for trajectory decoding.
+- **Part of**: MTU3D (Move to Understand 3D) – this algorithm serves as the core trajectory generation component within the MTU3D system.
+- **Depends on**: Vision-Language-Exploration pre-training – the pre‑trained embeddings provide the visual‑language grounding necessary for trajectory decoding.
 
 ## Key Characteristics
 
@@ -34,9 +34,9 @@ source_type: arxiv_paper
 
 ## Connections to Other Knowledge
 
-- Closely related to [[behavior cloning]] ⚠️ and [[imitation learning]], but end‑to‑end trajectory learning typically avoids intermediate state‑action decompositions.
-- Often used in conjunction with [[large vision-language models]] ⚠️ to interpret complex, long‑horizon instructions.
-- Contrasts with modular approaches that separate perception, planning, and control (e.g., [[classical robotics pipeline]] ⚠️).
+- Closely related to behavior cloning ⚠️ and imitation learning, but end‑to‑end trajectory learning typically avoids intermediate state‑action decompositions.
+- Often used in conjunction with large vision-language models ⚠️ to interpret complex, long‑horizon instructions.
+- Contrasts with modular approaches that separate perception, planning, and control (e.g., classical robotics pipeline ⚠️).
 
 ## References
 

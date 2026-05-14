@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-The Self-Refining Data Flywheel (SRDF) is an iterative training framework that autonomously generates high-quality navigational instruction–trajectory pairs without human annotation. Through a closed-loop collaboration between an **[[Instruction Generator]]** and a **[[Navigator]]**, the SRDF continuously refines its own data pool, simultaneously improving the performance of both components over multiple rounds.
+The Self-Refining Data Flywheel (SRDF) is an iterative training framework that autonomously generates high-quality navigational instruction–trajectory pairs without human annotation. Through a closed-loop collaboration between an **Instruction Generator** and a **Navigator**, the SRDF continuously refines its own data pool, simultaneously improving the performance of both components over multiple rounds.
 
 ---
 
@@ -47,7 +47,7 @@ This self‑reinforcing loop forms a **self‑refining flywheel** that progressi
 ## Capabilities
 
 - Generates high‑quality navigational instruction–trajectory pairs **without any human annotation**.
-- Self‑refines its data pool through collaboration between the [[Instruction Generator]] and [[Navigator]].
+- Self‑refines its data pool through collaboration between the Instruction Generator and Navigator.
 - Continuously improves **both** generator and navigator performance over iterative rounds.
 - Achieves navigator **SPL** improvement from 70% to 78% on R2R, **surpassing the previous human‑performance baseline of 76%**.
 - Improves generator **SPICE** score from 23.5 to 26.2, outperforming prior VLN (Vision‑and‑Language Navigation) instruction generation methods.
@@ -65,10 +65,10 @@ Experimental evaluation on the **R2R** dataset demonstrated substantial gains:
 
 ## Relationships
 
-- **Uses:** [[Instruction Generator]], [[Navigator]]
+- **Uses:** Instruction Generator, Navigator
 - **Produces:** refined instruction–trajectory pairs (improving in quality per round)
-- **Depends on:** [[R2R Dataset]] (for training and evaluation)
-- **Related:** [[Vision-and-Language Navigation (VLN)]] ⚠️, [[SPL]] metric, [[SPICE]] metric
+- **Depends on:** R2R Dataset (for training and evaluation)
+- **Related:** Vision-and-Language Navigation (VLN) ⚠️, SPL metric, SPICE metric
 
 ---
 

@@ -21,7 +21,7 @@ An **Abstract Obstacle Map** is a simplified representation of the environment t
 ## Parameters
 
 - **Representation**: compressed/abstracted obstacle layout (e.g., occupancy grid with reduced resolution, convex hulls of obstacles, or free-space approximations).
-- **Source**: derived from depth sensors (LiDAR, RGB-D cameras) or an existing [[Occupancy Grid Map]] ⚠️ ⚠️.
+- **Source**: derived from depth sensors (LiDAR, RGB-D cameras) or an existing Occupancy Grid Map ⚠️ ⚠️.
 
 ## Capabilities
 
@@ -32,7 +32,7 @@ An **Abstract Obstacle Map** is a simplified representation of the environment t
 
 ## Relationships
 
-- **Used by** [[Abstract Obstacle Map-Based Waypoint Predictor]] — this predictor leverages the abstract map to generate candidate waypoints for local navigation.
+- **Used by** Abstract Obstacle Map-Based Waypoint Predictor — this predictor leverages the abstract map to generate candidate waypoints for local navigation.
 
 ## Usage
 
@@ -40,12 +40,12 @@ In a typical navigation pipeline, the Abstract Obstacle Map is constructed from 
 
 ## Related Concepts
 
-- [[Waypoint Prediction]] ⚠️
-- [[Local Navigation]] ⚠️
-- [[Occupancy Grid Map]] ⚠️ ⚠️ — a more detailed alternative representation; often used as source for the abstract map
-- [[Cost Map]] ⚠️ — another abstraction used in path planning
+- Waypoint Prediction ⚠️
+- Local Navigation ⚠️
+- Occupancy Grid Map ⚠️ ⚠️ — a more detailed alternative representation; often used as source for the abstract map
+- Cost Map ⚠️ — another abstraction used in path planning
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Abstract Obstacle Map` --[[related_to]] ⚠️--> `Abstract Obstacle Map-Based Waypoint Predictor` _(wikilink)_
+- `Abstract Obstacle Map` --related_to ⚠️--> `Abstract Obstacle Map-Based Waypoint Predictor` _(wikilink)_

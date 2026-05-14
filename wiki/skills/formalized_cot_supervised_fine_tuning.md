@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**Formalized CoT Supervised Fine-Tuning** is a skill within the [[EvolveNav]] pipeline. It applies structured [[Chain-of-Thought]] ⚠️ ⚠️ reasoning labels during supervised fine-tuning to activate navigational reasoning capabilities in a vision-language model and increase its reasoning speed. This skill constitutes the first training stage of EvolveNav, preparing the model for subsequent self-reflective post-training.
+**Formalized CoT Supervised Fine-Tuning** is a skill within the EvolveNav pipeline. It applies structured Chain-of-Thought ⚠️ ⚠️ reasoning labels during supervised fine-tuning to activate navigational reasoning capabilities in a vision-language model and increase its reasoning speed. This skill constitutes the first training stage of EvolveNav, preparing the model for subsequent self-reflective post-training.
 
 ## Purpose
 
@@ -22,7 +22,7 @@ The primary purpose of Formalized CoT Supervised Fine-Tuning is to:
 - Activate the model's navigational reasoning.
 - Increase overall reasoning speed during navigation tasks.
 
-It serves as the foundational stage (`stage: "first"`) in the [[EvolveNav]] training sequence.
+It serves as the foundational stage (`stage: "first"`) in the EvolveNav training sequence.
 
 ## Capabilities
 
@@ -33,11 +33,11 @@ It serves as the foundational stage (`stage: "first"`) in the [[EvolveNav]] trai
 
 | Relationship | Target | Description |
 |--------------|--------|-------------|
-| `part_of` | [[EvolveNav]] | Formalized CoT SFT is the initial training stage of the EvolveNav framework. |
-| `uses` | [[Chain-of-Thought|formalized CoT labels]] | The skill relies on curated, formalized CoT annotations as supervision. |
-| `outputs_to` | [[Self-Reflective Post-Training]] | The fine-tuned model is passed to the next stage for self-reflective enhancement. |
+| `part_of` | EvolveNav | Formalized CoT SFT is the initial training stage of the EvolveNav framework. |
+| `uses` | formalized CoT labels | The skill relies on curated, formalized CoT annotations as supervision. |
+| `outputs_to` | Self-Reflective Post-Training | The fine-tuned model is passed to the next stage for self-reflective enhancement. |
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Formalized CoT Supervised Fine-Tuning` --[[uses]] ⚠️--> `EvolveNav`
+- `Formalized CoT Supervised Fine-Tuning` --uses ⚠️--> `EvolveNav`

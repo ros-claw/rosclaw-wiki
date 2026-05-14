@@ -22,17 +22,17 @@ The **Zero-Shot VLN Framework with TopoGraph Prompting** is a state-of-the-art a
 
 The framework comprises two core components:
 
-- **[[Abstract Obstacle Map-Based Waypoint Predictor]]** – A lightweight module that converts sensor observations into an abstract obstacle map and outputs linearly reachable candidate waypoints. This provides a geometric basis for local navigation.
+- **Abstract Obstacle Map-Based Waypoint Predictor** – A lightweight module that converts sensor observations into an abstract obstacle map and outputs linearly reachable candidate waypoints. This provides a geometric basis for local navigation.
 
-- **[[TopoGraph-and-VisitInfo-Aware Prompting]]** – A prompting mechanism that dynamically constructs a topological graph from visited and candidate waypoints, annotated with visitation records. This graph, along with relevant visit information, is encoded into prompts for the MLLM.
+- **TopoGraph-and-VisitInfo-Aware Prompting** – A prompting mechanism that dynamically constructs a topological graph from visited and candidate waypoints, annotated with visitation records. This graph, along with relevant visit information, is encoded into prompts for the MLLM.
 
-These components are fed into a **[[Multimodal Large Language Model (MLLM)]]**, which reasons over both visual and textual information to select the next waypoint and generate low-level control commands (e.g., heading changes, forward motion). The agent thus performs local path planning and error correction within a continuous environment.
+These components are fed into a **Multimodal Large Language Model (MLLM)**, which reasons over both visual and textual information to select the next waypoint and generate low-level control commands (e.g., heading changes, forward motion). The agent thus performs local path planning and error correction within a continuous environment.
 
 ## Performance
 
-- **Dataset**: [[R2R-CE]] (continuous evaluation of Room-to-Room)
+- **Dataset**: R2R-CE (continuous evaluation of Room-to-Room)
   - **Success rate**: 41%
-- **Dataset**: [[RxR-CE]] (continuous evaluation of Room-x-Room)
+- **Dataset**: RxR-CE (continuous evaluation of Room-x-Room)
   - **Success rate**: 36%
 - This system achieves **state-of-the-art results among zero-shot methods** on both benchmarks, demonstrating that zero-shot VLN in continuous spaces is feasible without any training on the target environments.
 
@@ -44,18 +44,18 @@ These components are fed into a **[[Multimodal Large Language Model (MLLM)]]**, 
 
 ## Relationships
 
-- **Implements**: [[Vision-Language Navigation (VLN)]]
-- **Comprises**: [[Abstract Obstacle Map-Based Waypoint Predictor]], [[TopoGraph-and-VisitInfo-Aware Prompting]]
-- **Uses**: [[Multimodal Large Language Model (MLLM)]]
+- **Implements**: Vision-Language Navigation (VLN)
+- **Comprises**: Abstract Obstacle Map-Based Waypoint Predictor, TopoGraph-and-VisitInfo-Aware Prompting
+- **Uses**: Multimodal Large Language Model (MLLM)
 - **Depends on**: Topological graph construction, abstract obstacle map generation
-- **Applies to**: [[R2R-CE]], [[RxR-CE]] benchmarks, any continuous VLN task requiring zero-shot generalization.
+- **Applies to**: R2R-CE, RxR-CE benchmarks, any continuous VLN task requiring zero-shot generalization.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Zero-Shot VLN Framework with TopoGraph Prompting` --[[applies_to]] ⚠️ ⚠️--> `R2R-CE`
-- `Zero-Shot VLN Framework with TopoGraph Prompting` --[[applies_to]] ⚠️ ⚠️--> `RxR-CE`
+- `Zero-Shot VLN Framework with TopoGraph Prompting` --applies_to ⚠️ ⚠️--> `R2R-CE`
+- `Zero-Shot VLN Framework with TopoGraph Prompting` --applies_to ⚠️ ⚠️--> `RxR-CE`
 **Pending review:**
-- `Zero-Shot VLN Framework with TopoGraph Prompting` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Abstract Obstacle Map-Based Waypoint Predictor` _(wikilink)_
-- `Zero-Shot VLN Framework with TopoGraph Prompting` --[[related_to]] ⚠️ ⚠️ ⚠️--> `TopoGraph-and-VisitInfo-Aware Prompting` _(wikilink)_
-- `Zero-Shot VLN Framework with TopoGraph Prompting` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Multimodal Large Language Model (MLLM)` _(wikilink)_
+- `Zero-Shot VLN Framework with TopoGraph Prompting` --related_to ⚠️ ⚠️ ⚠️--> `Abstract Obstacle Map-Based Waypoint Predictor` _(wikilink)_
+- `Zero-Shot VLN Framework with TopoGraph Prompting` --related_to ⚠️ ⚠️ ⚠️--> `TopoGraph-and-VisitInfo-Aware Prompting` _(wikilink)_
+- `Zero-Shot VLN Framework with TopoGraph Prompting` --related_to ⚠️ ⚠️ ⚠️--> `Multimodal Large Language Model (MLLM)` _(wikilink)_

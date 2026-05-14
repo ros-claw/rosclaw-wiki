@@ -18,15 +18,15 @@ source_type: arxiv_paper
 
 ## Overview
 
-H-CoT extends the standard [[Chain-of-Thought (CoT)]] paradigm by organizing reasoning steps into a hierarchy rather than a flat sequence. This enables an agent to decompose complex tasks into multi‑level abstractions, where higher‑level steps capture global scene understanding and lower‑level steps refine local details. The method is inspired by how humans iteratively localize themselves in an environment: first recognizing the general area, then pinpointing exact locations, and finally focusing on actionable elements.
+H-CoT extends the standard Chain-of-Thought (CoT) paradigm by organizing reasoning steps into a hierarchy rather than a flat sequence. This enables an agent to decompose complex tasks into multi‑level abstractions, where higher‑level steps capture global scene understanding and lower‑level steps refine local details. The method is inspired by how humans iteratively localize themselves in an environment: first recognizing the general area, then pinpointing exact locations, and finally focusing on actionable elements.
 
-## Relationship to [[CL-CoTNav]]
+## Relationship to CL-CoTNav
 
-H-CoT is a core component of the [[CL-CoTNav]] framework (Compositional Learning with Chain-of-Thought Navigation). It **part_of** the [[CL-CoTNav]] pipeline, providing the hierarchical reasoning mechanism that drives the system's ability to integrate natural language instructions with spatial perception.
+H-CoT is a core component of the CL-CoTNav framework (Compositional Learning with Chain-of-Thought Navigation). It **part_of** the CL-CoTNav pipeline, providing the hierarchical reasoning mechanism that drives the system's ability to integrate natural language instructions with spatial perception.
 
-- **depends_on**: [[Chain-of-Thought (CoT)]] for the basic step‑by‑step reasoning structure.
-- **part_of**: [[CL-CoTNav]] as the structured reasoning module.
-- **used_by**: [[Embodied AI]] agents for navigation and manipulation tasks requiring compositional understanding.
+- **depends_on**: Chain-of-Thought (CoT) for the basic step‑by‑step reasoning structure.
+- **part_of**: CL-CoTNav as the structured reasoning module.
+- **used_by**: Embodied AI agents for navigation and manipulation tasks requiring compositional understanding.
 
 ## Capabilities
 
@@ -36,10 +36,10 @@ H-CoT is a core component of the [[CL-CoTNav]] framework (Compositional Learning
 
 ## Further Reading
 
-- See [[CL-CoTNav]] for the full framework that integrates H-CoT with reinforcement learning and vision‑language models.
-- Compare with [[Tree-of-Thought (ToT)]] ⚠️ for alternative hierarchical reasoning strategies.
+- See CL-CoTNav for the full framework that integrates H-CoT with reinforcement learning and vision‑language models.
+- Compare with Tree-of-Thought (ToT) ⚠️ for alternative hierarchical reasoning strategies.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Hierarchical Chain-of-Thought (H-CoT)` --[[extends]] ⚠️--> `CL-CoTNav`
+- `Hierarchical Chain-of-Thought (H-CoT)` --extends ⚠️--> `CL-CoTNav`

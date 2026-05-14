@@ -16,11 +16,11 @@ source_type: arxiv_paper
 
 ### Overview
 
-**OpenVLN** is a data-efficient open-world aerial [[Vision-Language Navigation]] framework. It uses a reinforcement learning framework to fine-tune a [[Vision-Language Model]] (VLM) for UAV navigation tasks under limited training data. The method incorporates rule-based policies and a long-horizon planner that generates UAV actions via value-based rewards, enabling language-guided flight in complex aerial environments. Validation is conducted on the [[TravelUAV benchmark]].
+**OpenVLN** is a data-efficient open-world aerial Vision-Language Navigation framework. It uses a reinforcement learning framework to fine-tune a Vision-Language Model (VLM) for UAV navigation tasks under limited training data. The method incorporates rule-based policies and a long-horizon planner that generates UAV actions via value-based rewards, enabling language-guided flight in complex aerial environments. Validation is conducted on the TravelUAV benchmark.
 
 ### Approach
 
-OpenVLN reconfigures a [[Reinforcement Learning]] framework to optimize the VLM using rule-based policies under constrained data conditions. It introduces a long-horizon planner that dynamically synthesizes precise UAV actions through value-based rewards, enabling efficient exploration and trajectory generation.
+OpenVLN reconfigures a Reinforcement Learning framework to optimize the VLM using rule-based policies under constrained data conditions. It introduces a long-horizon planner that dynamically synthesizes precise UAV actions through value-based rewards, enabling efficient exploration and trajectory generation.
 
 ### Training
 
@@ -55,6 +55,6 @@ These improvements demonstrate the framework's ability to enhance long-horizon t
 
 ### Relationships
 
-- **Uses**: [[Vision-Language Model]], [[Reinforcement Learning]]
-- **Depends on**: [[TravelUAV benchmark]]
-- **Implements**: [[Airborne Vision-Language Navigation]] ⚠️
+- **Uses**: Vision-Language Model, Reinforcement Learning
+- **Depends on**: TravelUAV benchmark
+- **Implements**: Airborne Vision-Language Navigation ⚠️

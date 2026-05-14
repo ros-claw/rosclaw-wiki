@@ -18,12 +18,12 @@ source_type: arxiv_paper
 
 ### Capabilities
 
-- Combine [[neural networks]] ⚠️ with symbolic reasoning
+- Combine neural networks ⚠️ with symbolic reasoning
 - Improve interpretability and planning in autonomous agents
 
 ### Usage
 
-This paradigm is used by [[VL-Nav]], a vision-language navigation system that leverages neuro-symbolic reasoning to decompose high-level instructions into executable subgoals and guide exploration efficiently.
+This paradigm is used by VL-Nav, a vision-language navigation system that leverages neuro-symbolic reasoning to decompose high-level instructions into executable subgoals and guide exploration efficiently.
 
 ### Source
 

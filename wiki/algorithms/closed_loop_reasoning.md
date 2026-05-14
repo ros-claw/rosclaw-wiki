@@ -22,7 +22,7 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **part_of [[MSGNav]]** – [[MSGNav]] leverages closed-loop reasoning as a core component to enable robust navigation in unknown or changing environments.
+- **part_of MSGNav** – MSGNav leverages closed-loop reasoning as a core component to enable robust navigation in unknown or changing environments.
 
 ### How It Works
 
@@ -30,12 +30,12 @@ The reasoning module receives inputs from the robot's sensors (e.g., cameras, Li
 
 ### See Also
 
-- [[Exploration]] ⚠️
-- [[Feedback Control]] ⚠️
-- [[Sensor Fusion]] ⚠️
-- [[ROS2 Navigation Stack]] ⚠️
+- Exploration ⚠️
+- Feedback Control ⚠️
+- Sensor Fusion ⚠️
+- ROS2 Navigation Stack ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Closed-Loop Reasoning` --[[extends]] ⚠️--> `MSGNav`
+- `Closed-Loop Reasoning` --extends ⚠️--> `MSGNav`

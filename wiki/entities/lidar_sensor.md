@@ -19,14 +19,14 @@ source_type: arxiv_paper
 ## Capabilities
 
 - **Produces point-cloud data**: Each scan outputs a set of 3D points representing object surfaces, enabling downstream tasks such as detection, tracking, and localization.
-- **Single-sensor input for [[REASAN]]**: The REASAN system is designed to operate exclusively on LiDAR point clouds, without fusing camera or other sensor modalities. This makes it a self-contained perception pipeline that relies solely on the geometric information provided by the LiDAR.
+- **Single-sensor input for REASAN**: The REASAN system is designed to operate exclusively on LiDAR point clouds, without fusing camera or other sensor modalities. This makes it a self-contained perception pipeline that relies solely on the geometric information provided by the LiDAR.
 
 ## Relationships
 
-- **Used by**: [[REASAN]] (as its sole sensor input; the algorithm depends on LiDAR point clouds for environment understanding)
-- **Related technologies**: [[Point Cloud]] ⚠️, [[3D Perception]] ⚠️, [[Autonomous Navigation]] ⚠️
+- **Used by**: REASAN (as its sole sensor input; the algorithm depends on LiDAR point clouds for environment understanding)
+- **Related technologies**: Point Cloud ⚠️, 3D Perception ⚠️, Autonomous Navigation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `LiDAR Sensor` --[[uses]] ⚠️--> `REASAN`
+- `LiDAR Sensor` --uses ⚠️--> `REASAN`

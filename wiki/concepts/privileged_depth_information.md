@@ -18,13 +18,13 @@ source_type: arxiv_paper
 
 ### Role
 
-Privileged depth information is used to **train RL teachers** in simulation ([[Sim-to-Real]] ⚠️ ⚠️). The teacher uses this data to learn optimal control policies under ideal sensing conditions. These policies are then distilled into a student policy via techniques like **teacher-student training** or **behavior cloning**. This approach mitigates the **sim-to-real gap** by allowing the student to learn from the teacher’s performance without requiring direct access to the privileged data.
+Privileged depth information is used to **train RL teachers** in simulation (Sim-to-Real ⚠️ ⚠️). The teacher uses this data to learn optimal control policies under ideal sensing conditions. These policies are then distilled into a student policy via techniques like **teacher-student training** or **behavior cloning**. This approach mitigates the **sim-to-real gap** by allowing the student to learn from the teacher’s performance without requiring direct access to the privileged data.
 
 ### Relationships
 
-- **Used by** → [[Reinforcement Learning]] experts during policy training.
-- **Depends on** → [[Simulation environments]] ⚠️ capable of rendering depth maps.
-- **Related to** → [[Sim-to-Real]] ⚠️ ⚠️, [[Teacher-Student Training]] ⚠️, [[Domain Randomization]] ⚠️.
+- **Used by** → Reinforcement Learning experts during policy training.
+- **Depends on** → Simulation environments ⚠️ capable of rendering depth maps.
+- **Related to** → Sim-to-Real ⚠️ ⚠️, Teacher-Student Training ⚠️, Domain Randomization ⚠️.
 
 ### Notes
 

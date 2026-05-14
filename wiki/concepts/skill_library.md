@@ -16,17 +16,17 @@ source_type: arxiv_paper
 
 ## Definition
 
-The **Skill Library** is a comprehensive repository of learned motor and interaction behaviors, pre-trained via [[Reinforcement Learning]] to enable robust, reusable subtask execution in mobile manipulation. It serves as a foundational component for higher-level planners like [[AINav]], providing versatile building blocks for both locomotion and object interaction.
+The **Skill Library** is a comprehensive repository of learned motor and interaction behaviors, pre-trained via Reinforcement Learning to enable robust, reusable subtask execution in mobile manipulation. It serves as a foundational component for higher-level planners like AINav, providing versatile building blocks for both locomotion and object interaction.
 
 ## Description
 
-The Skill Library contains a diverse set of **versatile locomotion and interaction behaviors** suitable for motion planning in embodied AI systems. Its skills are **pre-trained** using [[Reinforcement Learning]] to guarantee robustness when executed as subtasks within a larger mission (e.g., reaching a goal, picking an object). By decoupling skill acquisition from task planning, the library allows planners to focus on composition rather than low-level control.
+The Skill Library contains a diverse set of **versatile locomotion and interaction behaviors** suitable for motion planning in embodied AI systems. Its skills are **pre-trained** using Reinforcement Learning to guarantee robustness when executed as subtasks within a larger mission (e.g., reaching a goal, picking an object). By decoupling skill acquisition from task planning, the library allows planners to focus on composition rather than low-level control.
 
 ## Parameters
 
 | Parameter        | Value                  |
 |------------------|------------------------|
-| Training method  | [[Reinforcement Learning]] |
+| Training method  | Reinforcement Learning |
 
 ## Capabilities
 
@@ -35,5 +35,5 @@ The Skill Library contains a diverse set of **versatile locomotion and interacti
 
 ## Relationships
 
-- **used_by**: [[AINav]] — the Skill Library supplies pre-trained primitives that [[AINav]] composes into sequential plans.
-- **depends_on**: [[Reinforcement Learning]] — each skill is trained via RL to achieve reliable performance before deployment.
+- **used_by**: AINav — the Skill Library supplies pre-trained primitives that AINav composes into sequential plans.
+- **depends_on**: Reinforcement Learning — each skill is trained via RL to achieve reliable performance before deployment.

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## HAPS 2.0
 
-**HAPS 2.0** is an enhanced dataset for human-aware navigation, providing socially grounded instructions in both discrete and continuous environments with dynamic multi-human interactions. It is part of the larger **[[HA-VLN 2.0]]** framework, which targets language-guided navigation with human interaction awareness.
+**HAPS 2.0** is an enhanced dataset for human-aware navigation, providing socially grounded instructions in both discrete and continuous environments with dynamic multi-human interactions. It is part of the larger **HA-VLN 2.0** framework, which targets language-guided navigation with human interaction awareness.
 
 ### Overview
 
@@ -43,10 +43,10 @@ HAPS 2.0 enables:
 
 ### Relationships
 
-- **Part of:** [[HA-VLN 2.0]] – HAPS 2.0 is the socially-grounded dataset component within the larger HA-VLN 2.0 ecosystem.  
-- **Used by:** [[Navigation Agents]] ⚠️ and baselines for benchmarking social navigation.  
-- **Depends on:** [[Human-aware Navigation]] principles, [[Language-Motion Alignment]] ⚠️ techniques, and simulation backends (e.g., [[Habitat Sim]]).  
-- **Supports:** [[Social Navigation]] ⚠️ benchmarks and evaluation of [[VLA Models]] ⚠️ for real-world interaction.  
+- **Part of:** HA-VLN 2.0 – HAPS 2.0 is the socially-grounded dataset component within the larger HA-VLN 2.0 ecosystem.  
+- **Used by:** Navigation Agents ⚠️ and baselines for benchmarking social navigation.  
+- **Depends on:** Human-aware Navigation principles, Language-Motion Alignment ⚠️ techniques, and simulation backends (e.g., Habitat Sim).  
+- **Supports:** Social Navigation ⚠️ benchmarks and evaluation of VLA Models ⚠️ for real-world interaction.  
 
 ### Source
 
@@ -55,4 +55,4 @@ HAPS 2.0 enables:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `HAPS 2.0 dataset` --[[depends_on]] ⚠️--> `HA-VLN 2.0`
+- `HAPS 2.0 dataset` --depends_on ⚠️--> `HA-VLN 2.0`

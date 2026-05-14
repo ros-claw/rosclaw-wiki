@@ -29,21 +29,21 @@ source_type: arxiv_paper
 
 ## Architecture
 
-A hierarchical RL framework is used where a high-level navigation planner issues commands to a low-level locomotion controller, both learned via reinforcement learning. The high-level planner outputs subgoals or motion directives, and the low-level controller maps those into joint torques or wheel velocities. The hierarchy allows the two controllers to be trained separately or jointly using techniques such as [[Model-Free Reinforcement Learning]].
+A hierarchical RL framework is used where a high-level navigation planner issues commands to a low-level locomotion controller, both learned via reinforcement learning. The high-level planner outputs subgoals or motion directives, and the low-level controller maps those into joint torques or wheel velocities. The hierarchy allows the two controllers to be trained separately or jointly using techniques such as Model-Free Reinforcement Learning.
 
 ## Relationships
 
 - **Uses**:
-  - [[Model-Free Reinforcement Learning]] – both controllers are trained with model-free RL algorithms without requiring an explicit dynamics model.
-  - [[Privileged Learning]] – the low-level controller may leverage privileged information (e.g., terrain height maps during training) to improve policy robustness.
+  - Model-Free Reinforcement Learning – both controllers are trained with model-free RL algorithms without requiring an explicit dynamics model.
+  - Privileged Learning – the low-level controller may leverage privileged information (e.g., terrain height maps during training) to improve policy robustness.
 - **Used by**:
-  - [[Wheeled-Legged Robot]] – this HRL structure is applied to wheeled-legged platforms to combine agile locomotion with efficient rolling, as described in the source paper.
+  - Wheeled-Legged Robot – this HRL structure is applied to wheeled-legged platforms to combine agile locomotion with efficient rolling, as described in the source paper.
 
 **Source**: arxiv paper `2405.01792.pdf`
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Hierarchical Reinforcement Learning` --[[extends]] ⚠️ ⚠️--> `Model-Free Reinforcement Learning`
-- `Hierarchical Reinforcement Learning` --[[extends]] ⚠️ ⚠️--> `Privileged Learning`
-- `Hierarchical Reinforcement Learning` --[[implements]] ⚠️--> `Wheeled-Legged Robot`
+- `Hierarchical Reinforcement Learning` --extends ⚠️ ⚠️--> `Model-Free Reinforcement Learning`
+- `Hierarchical Reinforcement Learning` --extends ⚠️ ⚠️--> `Privileged Learning`
+- `Hierarchical Reinforcement Learning` --implements ⚠️--> `Wheeled-Legged Robot`

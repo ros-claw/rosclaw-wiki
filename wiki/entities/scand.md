@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## SCAND
 
-**SCAND** is a benchmark for visual navigation, used in the evaluation of [[UniWM]]. It is part of the broader category of [[Navigation benchmarks]] ⚠️ ⚠️ that test embodied agents' ability to navigate environments using visual inputs.
+**SCAND** is a benchmark for visual navigation, used in the evaluation of UniWM. It is part of the broader category of Navigation benchmarks ⚠️ ⚠️ that test embodied agents' ability to navigate environments using visual inputs.
 
 ### Description
 
@@ -22,8 +22,8 @@ SCAND provides standardized tasks and metrics for assessing visual navigation pe
 
 ### Relationships
 
-- **part_of**: [[Navigation benchmarks]] ⚠️ ⚠️
-- **used_by**: [[UniWM]] (for evaluation)
+- **part_of**: Navigation benchmarks ⚠️ ⚠️
+- **used_by**: UniWM (for evaluation)
 
 ---
 
@@ -32,4 +32,4 @@ SCAND provides standardized tasks and metrics for assessing visual navigation pe
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `SCAND` --[[uses]] ⚠️--> `UniWM`
+- `SCAND` --uses ⚠️--> `UniWM`

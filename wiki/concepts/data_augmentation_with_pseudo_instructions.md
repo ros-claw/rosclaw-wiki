@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Definition
 
-**Data augmentation with pseudo instructions** is a technique used in [[Vision-and-Language Navigation]] (VLN) training to improve model generalization. It generates additional training data by having an independent speaker model produce synthetic natural language instructions for unlabeled navigation trajectories. This expands the training set beyond human‑annotated data, helping the agent learn to follow instructions in novel environments.
+**Data augmentation with pseudo instructions** is a technique used in Vision-and-Language Navigation (VLN) training to improve model generalization. It generates additional training data by having an independent speaker model produce synthetic natural language instructions for unlabeled navigation trajectories. This expands the training set beyond human‑annotated data, helping the agent learn to follow instructions in novel environments.
 
 ## Capabilities
 
@@ -24,8 +24,8 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **used_in**: [[Vision-and-Language Navigation]] training — the pseudo instructions augment the standard VLN dataset.
-- **improved_by**: [[PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)]] — a more advanced speaker model that yields higher‑quality pseudo instructions.
+- **used_in**: Vision-and-Language Navigation training — the pseudo instructions augment the standard VLN dataset.
+- **improved_by**: PASTS (Progress-Aware Spatio-Temporal Transformer Speaker) — a more advanced speaker model that yields higher‑quality pseudo instructions.
 
 ## Description
 
@@ -34,4 +34,4 @@ By decoupling instruction generation from the navigation task, this method allow
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Data augmentation with pseudo instructions` --[[related_to]] ⚠️--> `Vision-and-Language Navigation`
+- `Data augmentation with pseudo instructions` --related_to ⚠️--> `Vision-and-Language Navigation`

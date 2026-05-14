@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 # ExploRFM
 
-**ExploRFM** is a vision‑language foundation model designed for onboard semantic navigation tasks in autonomous robots. It integrates with the [[WildOS]] system to enable real‑time traversability prediction, visual frontier detection, and open‑vocabulary object similarity scoring over a long‑range visual horizon.
+**ExploRFM** is a vision‑language foundation model designed for onboard semantic navigation tasks in autonomous robots. It integrates with the WildOS system to enable real‑time traversability prediction, visual frontier detection, and open‑vocabulary object similarity scoring over a long‑range visual horizon.
 
 ## Parameters
 
@@ -35,9 +35,9 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Part of**: [[WildOS]]  
-- **Uses**: [[Vision Foundation Models]] ⚠️ (a class of [[Foundation model]] ⚠️)  
-- **Implements**: [[Traversability prediction]] ⚠️, [[Visual frontier detection]] ⚠️, [[Object similarity scoring]] ⚠️  
+- **Part of**: WildOS  
+- **Uses**: Vision Foundation Models ⚠️ (a class of Foundation model ⚠️)  
+- **Implements**: Traversability prediction ⚠️, Visual frontier detection ⚠️, Object similarity scoring ⚠️  
 
 > **🔄 Discrepancy note**: The automated linker previously recorded an `extends` relationship from ExploRFM to WildOS. The source data confirms the relationship is `part_of`. Both are valid in different granularities – ExploRFM is a component *part of* WildOS, and its design also *extends* the capabilities of WildOS.
 
@@ -48,6 +48,6 @@ ExploRFM processes the current camera image together with an open‑vocabulary t
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._  
 **Confirmed links:**  
-- `ExploRFM` --[[extends]] ⚠️--> `WildOS`  
+- `ExploRFM` --extends ⚠️--> `WildOS`  
 
 *Note: see discrepancy note above.*

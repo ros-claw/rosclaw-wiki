@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Spatial-Temporal Aware Transformer (START)
 
-**START** is a transformer-based algorithm designed for end-to-end decision-making in the Sign Navigation ([[SignNav]]) task. It interprets semantic hints from physical signage and enables real-world deployment without reliance on pre-built maps.
+**START** is a transformer-based algorithm designed for end-to-end decision-making in the Sign Navigation (SignNav) task. It interprets semantic hints from physical signage and enables real-world deployment without reliance on pre-built maps.
 
 ## Architecture
 
@@ -27,7 +27,7 @@ The combination allows the model to understand both where to look and how past d
 
 ## Training Strategy
 
-START employs a **two-stage training** procedure using **[[Dataset Aggregation (DAgger)]]**. This interactive imitation learning approach iteratively collects expert demonstrations on the policy's own state distribution, improving robustness and generalization.
+START employs a **two-stage training** procedure using **Dataset Aggregation (DAgger)**. This interactive imitation learning approach iteratively collects expert demonstrations on the policy's own state distribution, improving robustness and generalization.
 
 ## Performance
 
@@ -47,18 +47,18 @@ Real-world deployment confirms the algorithm's practicality, successfully naviga
 
 ## Relationships
 
-- **uses**: [[Dataset Aggregation (DAgger)]]
-- **depends_on**: [[spatial grounding]] ⚠️, [[temporal dependencies]] ⚠️
+- **uses**: Dataset Aggregation (DAgger)
+- **depends_on**: spatial grounding ⚠️, temporal dependencies ⚠️
 
 ## Related Pages
 
-- [[SignNav]]
-- [[Dataset Aggregation (DAgger)]]
-- [[Spatial Grounding]] ⚠️
-- [[Temporal Dependencies]] ⚠️
+- SignNav
+- Dataset Aggregation (DAgger)
+- Spatial Grounding ⚠️
+- Temporal Dependencies ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Spatial-Temporal Aware Transformer (START)` --[[based_on]] ⚠️--> `SignNav`
-- `Spatial-Temporal Aware Transformer (START)` --[[extends]] ⚠️--> `Dataset Aggregation (DAgger)`
+- `Spatial-Temporal Aware Transformer (START)` --based_on ⚠️--> `SignNav`
+- `Spatial-Temporal Aware Transformer (START)` --extends ⚠️--> `Dataset Aggregation (DAgger)`

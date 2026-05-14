@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Coverage weighted by Length Score (CLS)
 
-**Coverage weighted by Length Score (CLS)** is a metric proposed for evaluating instruction-following agents in embodied navigation tasks, particularly on the [[Room-to-Room (R2R) Dataset]]. Unlike traditional goal-completion metrics that only assess whether an agent reaches the final target location, CLS measures **how faithfully the agent follows the entire sequence of instructions** by weighting the agent’s path coverage relative to the length of the natural-language instruction.
+**Coverage weighted by Length Score (CLS)** is a metric proposed for evaluating instruction-following agents in embodied navigation tasks, particularly on the Room-to-Room (R2R) Dataset. Unlike traditional goal-completion metrics that only assess whether an agent reaches the final target location, CLS measures **how faithfully the agent follows the entire sequence of instructions** by weighting the agent’s path coverage relative to the length of the natural-language instruction.
 
 ## Overview
 
@@ -23,7 +23,7 @@ CLS addresses a fundamental shortcoming of existing metrics for the Room-to-Room
 ## Capabilities
 
 - **Measures instruction fidelity** by weighting coverage of the path relative to the instruction length.
-- **Addresses shortcomings of goal-completion metrics** for the [[Room-to-Room (R2R) Dataset]], providing a more nuanced evaluation of embodied instruction-following.
+- **Addresses shortcomings of goal-completion metrics** for the Room-to-Room (R2R) Dataset, providing a more nuanced evaluation of embodied instruction-following.
 
 ## Relationship to Other Metrics
 
@@ -31,9 +31,9 @@ CLS addresses a fundamental shortcoming of existing metrics for the Room-to-Room
 
 ## Usage
 
-CLS is commonly used alongside traditional metrics (e.g., success rate, path length) to holistically evaluate [[Vision-Language Navigation (VLN)]] agents. It is especially relevant for systems trained on the R2R dataset and is cited in subsequent VLN benchmarks and model analyses.
+CLS is commonly used alongside traditional metrics (e.g., success rate, path length) to holistically evaluate Vision-Language Navigation (VLN) agents. It is especially relevant for systems trained on the R2R dataset and is cited in subsequent VLN benchmarks and model analyses.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Coverage weighted by Length Score (CLS)` --[[implements]] ⚠️--> `Room-to-Room (R2R) Dataset`
+- `Coverage weighted by Length Score (CLS)` --implements ⚠️--> `Room-to-Room (R2R) Dataset`

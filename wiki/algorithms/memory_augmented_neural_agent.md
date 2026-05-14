@@ -20,7 +20,7 @@ A **memory-augmented neural agent** is an artificial intelligence architecture t
 
 Memory-augmented neural agents extend standard deep reinforcement learning architectures by incorporating a differentiable memory store that can retain relevant information across time steps. This memory allows the agent to recall past experiences, model temporal dependencies, and make more informed decisions at multiple levels of abstraction. The hierarchical structure separates high-level goal selection from low-level action execution, while the memory module supports both short-term and long-term recall.
 
-HANNA, introduced in [paper (1909.01871)](https://arxiv.org/abs/1909.01871), exemplifies this paradigm. It uses a [[Hierarchical Reinforcement Learning]] backbone augmented with neural memory. The agent can request human assistance when its confidence is low, and it interprets both natural language and visual instructions to guide its behavior.
+HANNA, introduced in [paper (1909.01871)](https://arxiv.org/abs/1909.01871), exemplifies this paradigm. It uses a Hierarchical Reinforcement Learning backbone augmented with neural memory. The agent can request human assistance when its confidence is low, and it interprets both natural language and visual instructions to guide its behavior.
 
 ## Parameters
 
@@ -37,9 +37,9 @@ HANNA, introduced in [paper (1909.01871)](https://arxiv.org/abs/1909.01871), exe
 
 ## Relationships
 
-- **uses** → [[Retrospective Curiosity-Encouraging Imitation Learning]] – The agent leverages this learning method to improve exploration and imitation from demonstrations.
-- **depends_on** → [[Hierarchical Reinforcement Learning]] – The core decision‑making architecture relies on hierarchical RL principles.
-- **depends_on** → [[Language-Vision Models]] ⚠️ – Natural language and visual understanding components depend on pretrained or jointly learned multimodal models.
+- **uses** → Retrospective Curiosity-Encouraging Imitation Learning – The agent leverages this learning method to improve exploration and imitation from demonstrations.
+- **depends_on** → Hierarchical Reinforcement Learning – The core decision‑making architecture relies on hierarchical RL principles.
+- **depends_on** → Language-Vision Models ⚠️ – Natural language and visual understanding components depend on pretrained or jointly learned multimodal models.
 
 ## Description
 
@@ -47,13 +47,13 @@ HANNA, introduced in [paper (1909.01871)](https://arxiv.org/abs/1909.01871), exe
 
 ## See also
 
-- [[Hierarchical Reinforcement Learning]]
-- [[Episodic Memory in Robotics]] ⚠️
-- [[Human-in-the-loop Reinforcement Learning]] ⚠️
-- [[Imitation Learning]]
+- Hierarchical Reinforcement Learning
+- Episodic Memory in Robotics ⚠️
+- Human-in-the-loop Reinforcement Learning ⚠️
+- Imitation Learning
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Memory-augmented neural agent` --[[extends]] ⚠️ ⚠️--> `Hierarchical Reinforcement Learning`
-- `Memory-augmented neural agent` --[[extends]] ⚠️ ⚠️--> `Retrospective Curiosity-Encouraging Imitation Learning`
+- `Memory-augmented neural agent` --extends ⚠️ ⚠️--> `Hierarchical Reinforcement Learning`
+- `Memory-augmented neural agent` --extends ⚠️ ⚠️--> `Retrospective Curiosity-Encouraging Imitation Learning`

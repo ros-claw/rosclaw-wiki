@@ -23,17 +23,17 @@ source_type: arxiv_paper
 ## Capabilities
 
 - Provides a framework for combining fast intuitive and slow deliberate reasoning.
-- Inspires the [[Adaptive Chain-of-Thought Mechanism]] in [[VLingNav]].
+- Inspires the Adaptive Chain-of-Thought Mechanism in VLingNav.
 
 ## Relationships
 
-- **used_by**: [[Adaptive Chain-of-Thought Mechanism]]
+- **used_by**: Adaptive Chain-of-Thought Mechanism
 
 ## Application in VLingNav
 
-The [[Adaptive Chain-of-Thought Mechanism]] mirrors dual-process theory by dynamically deciding when to rely on reactive intuition versus deliberative reasoning. This allows a visually grounded navigation agent to oscillate between quick, habitual actions (System 1) and slower, multi-step reasoning (System 2) depending on the complexity of the task or environment.
+The Adaptive Chain-of-Thought Mechanism mirrors dual-process theory by dynamically deciding when to rely on reactive intuition versus deliberative reasoning. This allows a visually grounded navigation agent to oscillate between quick, habitual actions (System 1) and slower, multi-step reasoning (System 2) depending on the complexity of the task or environment.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Dual-process theory` --[[related_to]] ⚠️--> `VLingNav` _(wikilink)_
+- `Dual-process theory` --related_to ⚠️--> `VLingNav` _(wikilink)_

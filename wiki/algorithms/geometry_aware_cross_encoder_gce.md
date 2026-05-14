@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Geometry-aware Cross-Encoder (GCE)
 
-**Geometry-aware Cross-Encoder (GCE)** is a neural network component designed for fine-grained geometric modeling of the surrounding scene. It is a core algorithmic module within the [[RoboOcc]] framework, where it enhances the spatial accuracy of 3D occupancy predictions by performing detailed geometric encoding.
+**Geometry-aware Cross-Encoder (GCE)** is a neural network component designed for fine-grained geometric modeling of the surrounding scene. It is a core algorithmic module within the RoboOcc framework, where it enhances the spatial accuracy of 3D occupancy predictions by performing detailed geometric encoding.
 
 ## Overview
 
@@ -25,13 +25,13 @@ The module takes multi-modal inputs (e.g., camera images, LiDAR point clouds) an
 ## Key Capabilities
 
 - **Fine-grained geometric modeling**: GCE excels at capturing local shape details and spatial relationships, which is critical for tasks like autonomous driving (e.g., detecting small obstacles, precise curb boundaries).
-- **Seamless integration with RoboOcc**: As a part of [[RoboOcc]], GCE contributes to the overall occupancy prediction pipeline (relationship: `part_of`).
+- **Seamless integration with RoboOcc**: As a part of RoboOcc, GCE contributes to the overall occupancy prediction pipeline (relationship: `part_of`).
 
 ## Relationships
 
 | Type        | Related Entity                                 |
 |-------------|-----------------------------------------------|
-| `part_of`   | [[RoboOcc]]                                    |
+| `part_of`   | RoboOcc                                    |
 | `depends_on`| General transformer or cross-attention blocks  |
 | `used_by`   | 3D Occupancy decoders in RoboOcc               |
 
@@ -39,7 +39,7 @@ The module takes multi-modal inputs (e.g., camera images, LiDAR point clouds) an
 
 ## Application Context
 
-GCE is typically employed in conjunction with a [[3D Occupancy Prediction]] head. By enriching the per-point or per-voxel features with geometric awareness, it enables the model to produce occupancy maps that align more closely with the real-world structure.
+GCE is typically employed in conjunction with a 3D Occupancy Prediction head. By enriching the per-point or per-voxel features with geometric awareness, it enables the model to produce occupancy maps that align more closely with the real-world structure.
 
 ## References
 
@@ -48,4 +48,4 @@ GCE is typically employed in conjunction with a [[3D Occupancy Prediction]] head
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Geometry-aware Cross-Encoder (GCE)` --[[extends]] ⚠️--> `RoboOcc`
+- `Geometry-aware Cross-Encoder (GCE)` --extends ⚠️--> `RoboOcc`

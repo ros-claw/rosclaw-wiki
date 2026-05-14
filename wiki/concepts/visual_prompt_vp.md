@@ -20,7 +20,7 @@ The technique inserts additional structured visual cues into the LVLM’s input 
 
 ### Key Parameters
 - **Type**: Dual-view visual prompting technique  
-- **Usage**: Zero-shot module for [[LVLM]] ⚠️-based navigation  
+- **Usage**: Zero-shot module for LVLM ⚠️-based navigation  
 - **Purpose**: Reduce perception hallucinations and improve spatial state understanding  
 
 ### Capabilities
@@ -28,8 +28,8 @@ The technique inserts additional structured visual cues into the LVLM’s input 
 - Enables zero-shot navigation improvement — no fine-tuning of the vision-language model is required  
 
 ### Relationships
-- **Used in**: [[SeeNav-Agent]] (as a core component) and [[GPT-4.1]] (in its zero-shot VP variant)  
-- **Complemented by**: [[Step Reward Group Policy Optimization (SRGPO)]] — a reinforcement learning method that further improves navigation behavior  
+- **Used in**: SeeNav-Agent (as a core component) and GPT-4.1 (in its zero-shot VP variant)  
+- **Complemented by**: Step Reward Group Policy Optimization (SRGPO) — a reinforcement learning method that further improves navigation behavior  
 
 ### Background
 Visual Prompt was introduced in the paper *"SeeNav-Agent: See Before You Navigate for Zero-Shot VLN with Embodied Error"* (arxiv 2512.02631). It forms part of the effort to bridge sim-to-real gaps by providing robust visual grounding without requiring task-specific training data.
@@ -37,5 +37,5 @@ Visual Prompt was introduced in the paper *"SeeNav-Agent: See Before You Navigat
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Visual Prompt (VP)` --[[related_to]] ⚠️ ⚠️--> `SeeNav-Agent` _(wikilink)_
-- `Visual Prompt (VP)` --[[related_to]] ⚠️ ⚠️--> `Step Reward Group Policy Optimization (SRGPO)` _(wikilink)_
+- `Visual Prompt (VP)` --related_to ⚠️ ⚠️--> `SeeNav-Agent` _(wikilink)_
+- `Visual Prompt (VP)` --related_to ⚠️ ⚠️--> `Step Reward Group Policy Optimization (SRGPO)` _(wikilink)_

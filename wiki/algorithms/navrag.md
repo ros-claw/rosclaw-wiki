@@ -16,15 +16,15 @@ source_type: arxiv_paper
 
 # NavRAG
 
-**NavRAG** is a retrieval-augmented generation framework for embodied navigation instruction generation. It addresses limitations of previous step-by-step instruction generation by leveraging a [[Large Language Model (LLM)]] ⚠️ ⚠️ ⚠️ to produce diverse navigation instructions that match user communication styles. At its core, the framework builds a **hierarchical scene description tree** from 3D scenes and uses a [[Retrieval-Augmented Generation (RAG)]] mechanism to tailor instructions to different user roles and requests.
+**NavRAG** is a retrieval-augmented generation framework for embodied navigation instruction generation. It addresses limitations of previous step-by-step instruction generation by leveraging a Large Language Model (LLM) ⚠️ ⚠️ ⚠️ to produce diverse navigation instructions that match user communication styles. At its core, the framework builds a **hierarchical scene description tree** from 3D scenes and uses a Retrieval-Augmented Generation (RAG) mechanism to tailor instructions to different user roles and requests.
 
 ## Method
 
-NavRAG operates in two stages. First, a [[Large Language Model (LLM)]] ⚠️ ⚠️ ⚠️ constructs a hierarchical scene description tree that captures the 3D scene from its global layout down to local details. Second, the system simulates various user roles with specific navigation demands and retrieves relevant branches from this scene tree to generate instructions that reflect those users' communication styles and informational needs.
+NavRAG operates in two stages. First, a Large Language Model (LLM) ⚠️ ⚠️ ⚠️ constructs a hierarchical scene description tree that captures the 3D scene from its global layout down to local details. Second, the system simulates various user roles with specific navigation demands and retrieves relevant branches from this scene tree to generate instructions that reflect those users' communication styles and informational needs.
 
 ## Data Generation
 
-The framework has been used to annotate **over 2 million navigation instructions** across **861 scenes**. This large-scale dataset supports training and evaluation in [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️ tasks.
+The framework has been used to annotate **over 2 million navigation instructions** across **861 scenes**. This large-scale dataset supports training and evaluation in Vision-and-Language Navigation (VLN) ⚠️ ⚠️ tasks.
 
 ## Capabilities
 
@@ -36,8 +36,8 @@ The framework has been used to annotate **over 2 million navigation instructions
 
 ## Dependencies & Relationships
 
-- **Uses:** [[Large Language Model (LLM)]] ⚠️ ⚠️ ⚠️, [[Retrieval-Augmented Generation (RAG)]]
-- **Depends on:** [[3D scene understanding]] ⚠️, hierarchical scene description tree, [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️
+- **Uses:** Large Language Model (LLM) ⚠️ ⚠️ ⚠️, Retrieval-Augmented Generation (RAG)
+- **Depends on:** 3D scene understanding ⚠️, hierarchical scene description tree, Vision-and-Language Navigation (VLN) ⚠️ ⚠️
 
 ## References
 

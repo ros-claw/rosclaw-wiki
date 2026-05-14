@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Spatio-temporal Encoder
 
-The **Spatio-temporal encoder** is a core algorithmic component of the [[PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)]] framework. It fuses panoramic representations and encodes intermediate connections across successive steps, enabling the system to capture both spatial structure and temporal dynamics in a unified representation.
+The **Spatio-temporal encoder** is a core algorithmic component of the PASTS (Progress-Aware Spatio-Temporal Transformer Speaker) framework. It fuses panoramic representations and encodes intermediate connections across successive steps, enabling the system to capture both spatial structure and temporal dynamics in a unified representation.
 
 ### Overview
 
@@ -27,11 +27,11 @@ The spatio-temporal encoder processes input sequences by integrating panoramic o
 
 ### Relationships
 
-- **part_of** [[PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)]] – The spatio-temporal encoder is a building block of the overall PASTS architecture, which stands for *Progress-Aware Spatio-Temporal Transformer Speaker*.
+- **part_of** PASTS (Progress-Aware Spatio-Temporal Transformer Speaker) – The spatio-temporal encoder is a building block of the overall PASTS architecture, which stands for *Progress-Aware Spatio-Temporal Transformer Speaker*.
 
 ### Usage
 
-The encoder is typically paired with a [[Spatio-temporal decoder]] ⚠️ or other downstream modules in PASTS to produce sequence outputs (e.g., action sequences, predictions). It may depend on [[Panoramic Representations]] ⚠️ and temporal attention mechanisms.
+The encoder is typically paired with a Spatio-temporal decoder ⚠️ or other downstream modules in PASTS to produce sequence outputs (e.g., action sequences, predictions). It may depend on Panoramic Representations ⚠️ and temporal attention mechanisms.
 
 ### References
 
@@ -40,4 +40,4 @@ The encoder is typically paired with a [[Spatio-temporal decoder]] ⚠️ or oth
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Spatio-temporal encoder` --[[extends]] ⚠️--> `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)`
+- `Spatio-temporal encoder` --extends ⚠️--> `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)`

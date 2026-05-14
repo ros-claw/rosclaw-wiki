@@ -18,7 +18,7 @@ The **VLN-CE datasets** (Vision-Language Navigation in Continuous Environments) 
 
 ## Overview
 
-VLN-CE datasets are part of the broader [[VLN-CE challenge]] ⚠️ ⚠️ ⚠️. They provide a standardized benchmark that includes:
+VLN-CE datasets are part of the broader VLN-CE challenge ⚠️ ⚠️ ⚠️. They provide a standardized benchmark that includes:
 
 - **Continuous action spaces**: agents move with velocity and rotation commands rather than graph-based node transitions.
 - **Realistic 3D environments**: built from Matterport3D, Habitat-Matterport 3D, or Gibson scans.
@@ -27,9 +27,9 @@ VLN-CE datasets are part of the broader [[VLN-CE challenge]] ⚠️ ⚠️ ⚠�
 
 ## Relationship
 
-- **Used by**: The [[lookahead VLN model]] ⚠️ ⚠️ (and many other continuous VLN agents) for training and evaluation.
-- **Part of**: The [[VLN-CE challenge]] ⚠️ ⚠️ ⚠️, a benchmark series that tracks progress in continuous VLN.
-- **Depends on**: The [[Habitat Simulator]] platform for rendering and physics; the datasets are typically released as a set of episodes compatible with [[Habitat-Lab]] ⚠️.
+- **Used by**: The lookahead VLN model ⚠️ ⚠️ (and many other continuous VLN agents) for training and evaluation.
+- **Part of**: The VLN-CE challenge ⚠️ ⚠️ ⚠️, a benchmark series that tracks progress in continuous VLN.
+- **Depends on**: The Habitat Simulator platform for rendering and physics; the datasets are typically released as a set of episodes compatible with Habitat-Lab ⚠️.
 
 ## Capabilities
 
@@ -39,7 +39,7 @@ VLN-CE datasets are part of the broader [[VLN-CE challenge]] ⚠️ ⚠️ ⚠�
 
 ## See also
 
-- [[lookahead VLN model]] ⚠️ ⚠️
-- [[VLN-CE challenge]] ⚠️ ⚠️ ⚠️
-- [[Habitat Simulator]]
-- [[Continuous Vision-Language Navigation]] ⚠️
+- lookahead VLN model ⚠️ ⚠️
+- VLN-CE challenge ⚠️ ⚠️ ⚠️
+- Habitat Simulator
+- Continuous Vision-Language Navigation ⚠️

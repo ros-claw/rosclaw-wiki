@@ -37,16 +37,16 @@ The framework treats past observations as a structured memory: each recorded fra
 
 ## Relationships
 
-- **Used by** → **[[GVNav]]** – The [[GVNav]] navigation framework adopts spatiotemporal context as a core component of its perception pipeline, enabling it to ground language commands in a dynamic, continuously updated world model.
+- **Used by** → **GVNav** – The GVNav navigation framework adopts spatiotemporal context as a core component of its perception pipeline, enabling it to ground language commands in a dynamic, continuously updated world model.
 
 ---
 
 ## References
 
 - Original formulation: arxiv paper `2502.19024` (GVNav system paper)
-- Related concepts: [[Visual Memory]] ⚠️, [[Temporal Attention]] ⚠️, [[Embodied Grounding]] ⚠️
+- Related concepts: Visual Memory ⚠️, Temporal Attention ⚠️, Embodied Grounding ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Spatiotemporal Context` --[[related_to]] ⚠️--> `GVNav` _(wikilink)_
+- `Spatiotemporal Context` --related_to ⚠️--> `GVNav` _(wikilink)_

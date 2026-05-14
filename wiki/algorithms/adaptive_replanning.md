@@ -14,27 +14,27 @@ source_type: arxiv_paper
 
 # Adaptive Replanning
 
-**Adaptive Replanning** is an algorithm for dynamic plan adjustment in robotic navigation. It is a core component of [[AINav]], providing flexibility and autonomy in response to changing environments or task requirements.
+**Adaptive Replanning** is an algorithm for dynamic plan adjustment in robotic navigation. It is a core component of AINav, providing flexibility and autonomy in response to changing environments or task requirements.
 
 ## Parameters
 
 The algorithm consists of two LLM-based modules:
 
-- **[[Advisor]]**: Determines *when* replanning is needed, acting as a flexible trigger.
-- **[[Arborist]]**: Performs the actual plan adjustment by adding or removing nodes in the primitive [[skill tree]] ⚠️ ⚠️.
+- **Advisor**: Determines *when* replanning is needed, acting as a flexible trigger.
+- **Arborist**: Performs the actual plan adjustment by adding or removing nodes in the primitive skill tree ⚠️ ⚠️.
 
 ## Capabilities
 
-- Flexible replanning trigger (via [[Advisor]])
-- Autonomous plan adjustment (via [[Arborist]])
-- Rapid plan adaptation through node addition and pruning in the [[skill tree]] ⚠️ ⚠️
+- Flexible replanning trigger (via Advisor)
+- Autonomous plan adjustment (via Arborist)
+- Rapid plan adaptation through node addition and pruning in the skill tree ⚠️ ⚠️
 
 The system supports efficient, online adaptation without requiring full recomputation from scratch.
 
 ## Relationships
 
-- `part_of`: [[AINav]]
-- `uses`: [[Large Language Models]] (to drive both modules)
+- `part_of`: AINav
+- `uses`: Large Language Models (to drive both modules)
 
 ## Mechanism
 

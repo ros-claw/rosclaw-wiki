@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # HAA-Transformer
 
-**Definition:** The HAA-Transformer (Human Attention Augmented Transformer) is a neural architecture that integrates human attention predictions into a transformer model for the task of **[[Aerial Vision-and-Dialog Navigation]] ⚠️ ⚠️**. It jointly predicts navigation waypoints and human attention maps from a history of dialog utterances and visual observations.
+**Definition:** The HAA-Transformer (Human Attention Augmented Transformer) is a neural architecture that integrates human attention predictions into a transformer model for the task of **Aerial Vision-and-Dialog Navigation ⚠️ ⚠️**. It jointly predicts navigation waypoints and human attention maps from a history of dialog utterances and visual observations.
 
 ---
 
@@ -29,17 +29,17 @@ The model extends a standard transformer backbone by adding a **human attention 
 
 ## Capabilities
 
-- Predicts navigation waypoints from [[Dialog History]] ⚠️ in a continuous visual environment.
+- Predicts navigation waypoints from Dialog History ⚠️ in a continuous visual environment.
 - Predicts human attention on visual observations, enabling the system to align its decision-making with human saliency.
 
 ---
 
 ## Relationships
 
-- **used_for:** [[Aerial Vision-and-Dialog Navigation]] ⚠️ ⚠️
-- **depends_on:** [[Vision-and-Language Navigation]] and [[Human Attention Modeling]] ⚠️ ⚠️
+- **used_for:** Aerial Vision-and-Dialog Navigation ⚠️ ⚠️
+- **depends_on:** Vision-and-Language Navigation and Human Attention Modeling ⚠️ ⚠️
 
-The HAA-Transformer builds upon prior work in [[Vision-and-Language Navigation]] by adding a task-specific dialog understanding component, and it incorporates techniques from [[Human Attention Modeling]] ⚠️ ⚠️ to generate attention maps that guide the spatial reasoning.
+The HAA-Transformer builds upon prior work in Vision-and-Language Navigation by adding a task-specific dialog understanding component, and it incorporates techniques from Human Attention Modeling ⚠️ ⚠️ to generate attention maps that guide the spatial reasoning.
 
 ---
 
@@ -51,4 +51,4 @@ The HAA-Transformer builds upon prior work in [[Vision-and-Language Navigation]]
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `HAA-Transformer` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
+- `HAA-Transformer` --based_on ⚠️--> `Vision-and-Language Navigation`

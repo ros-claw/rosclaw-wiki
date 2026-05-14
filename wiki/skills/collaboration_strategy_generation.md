@@ -16,15 +16,15 @@ source_type: arxiv_paper
 
 **Description**: The skill of automatically generating a collaboration strategy using LLMs, which determines how robots should coordinate based on their individual capabilities and the current state of the task.
 
-**Method**: [[LLM]] ⚠️ ⚠️-based
+**Method**: LLM ⚠️ ⚠️-based
 
 **Output**: A strategy for a team of robots
 
 **Capabilities**  
-- Adapts based on [[Robot Skills]] ⚠️ ⚠️ and [[Robot Status]] ⚠️  
+- Adapts based on Robot Skills ⚠️ ⚠️ and Robot Status ⚠️  
 - Generated automatically without human intervention
 
-**Part of** [[SayCoNav]]
+**Part of** SayCoNav
 
 ## Overview
 
@@ -34,16 +34,16 @@ Because the generation is driven by a large language model, it can adapt to nove
 
 ## Dependencies
 
-- Uses [[LLM]] ⚠️ ⚠️ for reasoning and plan generation  
-- Depends on access to [[Robot Skills]] ⚠️ ⚠️ representation and [[Task State]] ⚠️ tracking
+- Uses LLM ⚠️ ⚠️ for reasoning and plan generation  
+- Depends on access to Robot Skills ⚠️ ⚠️ representation and Task State ⚠️ tracking
 
 ## Related Pages
 
-- [[SayCoNav]] – the system containing this skill  
-- [[Multi-Robot Coordination]] ⚠️ – broader context  
-- [[Skill Representation]] ⚠️ – how robot capabilities are modeled for input
+- SayCoNav – the system containing this skill  
+- Multi-Robot Coordination ⚠️ – broader context  
+- Skill Representation ⚠️ – how robot capabilities are modeled for input
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Collaboration Strategy Generation` --[[uses]] ⚠️--> `SayCoNav`
+- `Collaboration Strategy Generation` --uses ⚠️--> `SayCoNav`

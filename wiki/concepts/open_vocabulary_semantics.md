@@ -28,23 +28,23 @@ In embodied AI, open-vocabulary semantics bridges the gap between sensory percep
 
 ## Usage
 
-Open-vocabulary semantics is used in [[Hierarchical Scene Graph Construction]]. In that context, raw sensory data is paired with language embeddings to produce a structured representation of the environment at multiple levels of abstraction—objects, rooms, zones, and their relationships. The resulting semantic object maps serve as a foundation for planning and reasoning.
+Open-vocabulary semantics is used in Hierarchical Scene Graph Construction. In that context, raw sensory data is paired with language embeddings to produce a structured representation of the environment at multiple levels of abstraction—objects, rooms, zones, and their relationships. The resulting semantic object maps serve as a foundation for planning and reasoning.
 
 ## Relationship Annotations
 
-- **uses**: Open-Vocabulary Semantics uses [[Vision-Language Models]] ⚠️ or [[Large Language Models]] (LLMs) to map natural language to sensory data.
-- **used_in**: The concept is a core component of [[Hierarchical Scene Graph Construction]], where it provides the language-grounded labelling of nodes and edges.
-- **depends_on**: Relies on pre-trained [[Multimodal Embeddings]] ⚠️ and sensor data pipelines (e.g., [[RGB-D Segmentation]] ⚠️).
-- **part_of**: Belongs to the broader field of [[Embodied AI]] and [[Semantic Mapping]] ⚠️.
+- **uses**: Open-Vocabulary Semantics uses Vision-Language Models ⚠️ or Large Language Models (LLMs) to map natural language to sensory data.
+- **used_in**: The concept is a core component of Hierarchical Scene Graph Construction, where it provides the language-grounded labelling of nodes and edges.
+- **depends_on**: Relies on pre-trained Multimodal Embeddings ⚠️ and sensor data pipelines (e.g., RGB-D Segmentation ⚠️).
+- **part_of**: Belongs to the broader field of Embodied AI and Semantic Mapping ⚠️.
 
 ## Further Reading
 
-- Related algorithms: [[CLIP]], [[GLIP]] ⚠️, [[OpenScene]] ⚠️
-- Related concepts: [[Sim-to-Real Transfer]], [[Language Grounding]] ⚠️, [[Object-Centric Representation]] ⚠️
+- Related algorithms: CLIP, GLIP ⚠️, OpenScene ⚠️
+- Related concepts: Sim-to-Real Transfer, Language Grounding ⚠️, Object-Centric Representation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Open-Vocabulary Semantics` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Open-Vocabulary Semantics` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Open-Vocabulary Semantics` --[[related_to]] ⚠️ ⚠️--> `CLIP` _(wikilink)_
+- `Open-Vocabulary Semantics` --related_to ⚠️ ⚠️--> `CLIP` _(wikilink)_

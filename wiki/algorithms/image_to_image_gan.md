@@ -22,13 +22,13 @@ source_type: arxiv_paper
 
 #### Usage
 
-- **Used for [[data augmentation]] ⚠️ in [[VLN]] ⚠️** – By generating synthetic views, the model augments training datasets for vision-and-language navigation tasks, improving the robustness and generalization of navigation policies.
+- **Used for data augmentation ⚠️ in VLN ⚠️** – By generating synthetic views, the model augments training datasets for vision-and-language navigation tasks, improving the robustness and generalization of navigation policies.
 
 #### Relationship Notes
 
-- `Image-to-Image GAN` implements the general [[GAN]] ⚠️ architecture.
+- `Image-to-Image GAN` implements the general GAN ⚠️ architecture.
 - It depends on paired input-output image data for training (e.g., a source view and a target view from a different camera pose).
-- The output of this algorithm is used as input to downstream navigation models, such as [[VLN-BERT]] or [[decision transformers]] ⚠️.
+- The output of this algorithm is used as input to downstream navigation models, such as VLN-BERT or decision transformers ⚠️.
 
 #### Source
 

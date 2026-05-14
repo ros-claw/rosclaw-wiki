@@ -23,7 +23,7 @@ Enformer combines:
 
 ## Key Innovation
 
-The use of [[attention_mechanism|attention]] allows Enformer to model regulatory interactions across distances of 100kb+ in the genome, far beyond the receptive field of convolutional models. The architecture is inspired by [[vision_transformer|Vision Transformers (ViT)]] adapted to 1D sequence data.
+The use of [[attention_mechanism|attention]] allows Enformer to model regulatory interactions across distances of 100kb+ in the genome, far beyond the receptive field of convolutional models. The architecture is inspired by Vision Transformers (ViT) adapted to 1D sequence data.
 
 ## Technical Details
 
@@ -38,8 +38,8 @@ The use of [[attention_mechanism|attention]] allows Enformer to model regulatory
 
 Enformer has been used to:
 - Predict the impact of genetic variants on gene expression
-- Identify regulatory elements and [[enhancer|enhancers]]
-- Understand [[gene_regulation|gene regulation]] mechanisms
+- Identify regulatory elements and enhancers
+- Understand gene regulation mechanisms
 
 ## Connection to Embodied Intelligence
 

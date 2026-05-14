@@ -16,11 +16,11 @@ source_type: arxiv_paper
 
 ## Overview
 
-The Cross-modal Planner is a transformer-based algorithm that generates high-level navigation plans from [[Topological map]] ⚠️ ⚠️ and [[language instructions]] ⚠️. It is a core component of the [[ETPNav]] system, enabling embodied agents to navigate complex environments by grounding linguistic commands in topological representations of space.
+The Cross-modal Planner is a transformer-based algorithm that generates high-level navigation plans from Topological map ⚠️ ⚠️ and language instructions ⚠️. It is a core component of the ETPNav system, enabling embodied agents to navigate complex environments by grounding linguistic commands in topological representations of space.
 
 ## Architecture
 
-The planner uses a [[Transformer]] ⚠️ architecture to process multi‑modal inputs—topological maps and natural language instructions—and outputs a sequence of subgoals or waypoints that form a navigation plan. The cross-modal attention mechanism aligns spatial and linguistic features to produce coherent, executable routes.
+The planner uses a Transformer ⚠️ architecture to process multi‑modal inputs—topological maps and natural language instructions—and outputs a sequence of subgoals or waypoints that form a navigation plan. The cross-modal attention mechanism aligns spatial and linguistic features to produce coherent, executable routes.
 
 ## Capabilities
 
@@ -30,10 +30,10 @@ The planner uses a [[Transformer]] ⚠️ architecture to process multi‑modal 
 
 ## Relationships
 
-- **part_of**: [[ETPNav]]
-- **uses**: [[Topological map]] ⚠️ ⚠️, [[Instructions]] ⚠️
+- **part_of**: ETPNav
+- **uses**: Topological map ⚠️ ⚠️, Instructions ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Cross-modal planner` --[[extends]] ⚠️--> `ETPNav`
+- `Cross-modal planner` --extends ⚠️--> `ETPNav`

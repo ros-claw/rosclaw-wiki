@@ -26,10 +26,10 @@ Collision avoidance that is not limited to a forward-facing direction but consid
 
 ## Relationships
 
-- **Used by** [[Omni-Perception]] as the downstream collision‑avoidance component that processes the omnidirectional perception input.
+- **Used by** Omni-Perception as the downstream collision‑avoidance component that processes the omnidirectional perception input.
 - **Enables** safe locomotion in complex 3D environments, particularly for legged or aerial robots that must negotiate obstacles from any angle without requiring reorientation.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Omnidirectional Collision Avoidance` --[[related_to]] ⚠️--> `Omni-Perception` _(wikilink)_
+- `Omnidirectional Collision Avoidance` --related_to ⚠️--> `Omni-Perception` _(wikilink)_

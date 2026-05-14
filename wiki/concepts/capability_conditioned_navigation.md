@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-Capability-Conditioned Navigation refers to the evaluation paradigm introduced by the **CapNav** benchmark, which tests [[Vision-Language Models]] ⚠️ ⚠️ ⚠️ (VLMs) on indoor navigation tasks that are explicitly conditioned on the physical and mobility constraints of an embodied agent. The benchmark bridges the gap between typical vision-language navigation and real‑world robot deployment, where agents vary in size, shape, and locomotion abilities. CapNav is a part of the broader field of **[[Embodied AI]]** and directly **uses** [[Vision-Language Navigation]] as its core task framework.
+Capability-Conditioned Navigation refers to the evaluation paradigm introduced by the **CapNav** benchmark, which tests Vision-Language Models ⚠️ ⚠️ ⚠️ (VLMs) on indoor navigation tasks that are explicitly conditioned on the physical and mobility constraints of an embodied agent. The benchmark bridges the gap between typical vision-language navigation and real‑world robot deployment, where agents vary in size, shape, and locomotion abilities. CapNav is a part of the broader field of **Embodied AI** and directly **uses** Vision-Language Navigation as its core task framework.
 
 ### Benchmark Design
 
@@ -27,7 +27,7 @@ CapNav comprises:
 - **5** distinct agent types (both human and robot)
 - **13** state‑of‑the‑art VLM models evaluated
 
-The benchmark **depends on** [[Vision-Language Models]] ⚠️ ⚠️ ⚠️ to interpret visual scenes and language instructions, and then to plan a path that respects the agent’s unique capabilities.
+The benchmark **depends on** Vision-Language Models ⚠️ ⚠️ ⚠️ to interpret visual scenes and language instructions, and then to plan a path that respects the agent’s unique capabilities.
 
 ### Capabilities
 
@@ -54,13 +54,13 @@ The study revealed that VLM performance drops sharply when constraints become mo
 
 ### Relationships
 
-- **uses** → [[Vision-Language Navigation]]
-- **depends_on** → [[Vision-Language Models]] ⚠️ ⚠️ ⚠️
-- **part_of** → [[Embodied AI]]
+- **uses** → Vision-Language Navigation
+- **depends_on** → Vision-Language Models ⚠️ ⚠️ ⚠️
+- **part_of** → Embodied AI
 
-**Cross-references**: See also [[Spatial Reasoning]] ⚠️, [[Sim-to-Real Transfer]], and [[Mobility Constraints]] ⚠️ for related concepts in embodied intelligence.
+**Cross-references**: See also Spatial Reasoning ⚠️, Sim-to-Real Transfer, and Mobility Constraints ⚠️ for related concepts in embodied intelligence.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Capability-Conditioned Navigation` --[[related_to]] ⚠️--> `Embodied AI`
+- `Capability-Conditioned Navigation` --related_to ⚠️--> `Embodied AI`

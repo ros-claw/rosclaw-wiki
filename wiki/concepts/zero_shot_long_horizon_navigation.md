@@ -27,7 +27,7 @@ Traditional navigation pipelines typically require either offline map building, 
 
 ## Relationships
 
-Zero-shot long-horizon navigation is **used_by** [[TANGO]], a system that integrates this capability to achieve flexible, long-duration autonomy in real-world settings. The concept also draws on principles from [[Zero-shot Learning]] and [[Long-horizon Planning]], and contrasts with traditional [[SLAM]]-based or learned navigation methods that require prior environment exposure.
+Zero-shot long-horizon navigation is **used_by** TANGO, a system that integrates this capability to achieve flexible, long-duration autonomy in real-world settings. The concept also draws on principles from Zero-shot Learning and Long-horizon Planning, and contrasts with traditional SLAM-based or learned navigation methods that require prior environment exposure.
 
 ## Source
 
@@ -36,5 +36,5 @@ This page is based on the findings presented in arxiv paper 2509.08699 (December
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Zero-shot long-horizon navigation` --[[related_to]] ⚠️ ⚠️--> `TANGO` _(wikilink)_
-- `Zero-shot long-horizon navigation` --[[related_to]] ⚠️ ⚠️--> `SLAM` _(wikilink)_
+- `Zero-shot long-horizon navigation` --related_to ⚠️ ⚠️--> `TANGO` _(wikilink)_
+- `Zero-shot long-horizon navigation` --related_to ⚠️ ⚠️--> `SLAM` _(wikilink)_

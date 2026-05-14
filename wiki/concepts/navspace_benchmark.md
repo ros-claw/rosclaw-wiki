@@ -19,7 +19,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-NavSpace probes the spatial intelligence of [[navigation agents]] ⚠️ ⚠️ by providing a diverse set of trajectory-instruction pairs across multiple task categories. The benchmark aims to isolate and measure the core spatial reasoning capabilities required for grounding natural language instructions to physical movement in real or simulated environments. It is built on the [[VLN framework]] ⚠️ ⚠️ and uses [[Habitat-Sim]] as the simulator with [[HM3D]] scenes.
+NavSpace probes the spatial intelligence of navigation agents ⚠️ ⚠️ by providing a diverse set of trajectory-instruction pairs across multiple task categories. The benchmark aims to isolate and measure the core spatial reasoning capabilities required for grounding natural language instructions to physical movement in real or simulated environments. It is built on the VLN framework ⚠️ ⚠️ and uses Habitat-Sim as the simulator with HM3D scenes.
 
 ## Parameters
 
@@ -61,16 +61,16 @@ The agent's action space is defined as:
 
 ## Capabilities
 
-- Evaluate spatial perception and reasoning of [[navigation agents]] ⚠️ ⚠️
+- Evaluate spatial perception and reasoning of navigation agents ⚠️ ⚠️
 - Provide six task categories covering different spatial intelligence skills
 - Serve as a benchmark for instruction-following navigation
-- Probe spatial intelligence in [[embodied navigation]]
+- Probe spatial intelligence in embodied navigation
 
 ## Relationships
 
-- **Depends on**: [[VLN framework]] ⚠️ ⚠️
-- **Uses**: [[Habitat-Sim]], [[HM3D]]
-- **Evaluates**: 22 navigation agents, including [[SNav]], [[StreamVLN]], and [[LLM evaluation route]] ⚠️
+- **Depends on**: VLN framework ⚠️ ⚠️
+- **Uses**: Habitat-Sim, HM3D
+- **Evaluates**: 22 navigation agents, including SNav, StreamVLN, and LLM evaluation route ⚠️
 - **Includes**: 6 subtasks (environment state, space structure, precise movement, viewpoint shifting, vertical perception, spatial relationship)
 
 > **Note on SNav**: Earlier sources described SNav as using NavSpace as an evaluation tool; newer data lists SNav among the agents evaluated by the benchmark. Both usages are compatible—SNav is both an evaluated agent and a methodology that reports results on NavSpace.
@@ -78,5 +78,5 @@ The agent's action space is defined as:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `NavSpace benchmark` --[[related_to]] ⚠️ ⚠️--> `SNav` _(wikilink)_
-- `NavSpace benchmark` --[[related_to]] ⚠️ ⚠️--> `StreamVLN` _(wikilink)_
+- `NavSpace benchmark` --related_to ⚠️ ⚠️--> `SNav` _(wikilink)_
+- `NavSpace benchmark` --related_to ⚠️ ⚠️--> `StreamVLN` _(wikilink)_

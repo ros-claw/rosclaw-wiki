@@ -18,16 +18,16 @@ source_type: arxiv_paper
 
 ## Capabilities
 
-- Understanding and reasoning about [[semantic targets]] ⚠️ in video, including identifying objects, their properties, and their relevance to a task.
-- Integrating semantic understanding with [[path planning]] ⚠️ to navigate toward goal regions or objects based on meaning rather than raw coordinates.
+- Understanding and reasoning about semantic targets ⚠️ in video, including identifying objects, their properties, and their relevance to a task.
+- Integrating semantic understanding with path planning ⚠️ to navigate toward goal regions or objects based on meaning rather than raw coordinates.
 
 ## Evaluation
 
-Semantic reasoning is measured by [[Target-Bench]], a benchmark that evaluates target-approaching performance in path planning tasks. Target-Bench assesses how well an agent can interpret semantic cues and translate them into effective navigation behaviors.
+Semantic reasoning is measured by Target-Bench, a benchmark that evaluates target-approaching performance in path planning tasks. Target-Bench assesses how well an agent can interpret semantic cues and translate them into effective navigation behaviors.
 
 ### Relationship with Target-Bench
 
-- **Depends on**: [[Target-Bench]] provides quantitative metrics for semantic reasoning.
+- **Depends on**: Target-Bench provides quantitative metrics for semantic reasoning.
 - **Evaluated by**: Target-Bench measures semantic reasoning through target-approaching metrics in path planning tasks.
 
 ## Context
@@ -37,4 +37,4 @@ This concept is drawn from the paper *arxiv:2511.17792*, which introduces a fram
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Semantic Reasoning` --[[applies_to]] ⚠️--> `Target-Bench`
+- `Semantic Reasoning` --applies_to ⚠️--> `Target-Bench`

@@ -21,15 +21,15 @@ An **occupancy-based representation** encodes both occupancy status (occupied vs
 ### Capabilities
 
 - Provides rich semantic and 3D geometric information of the surrounding environment.
-- Suitable for [[Humanoid Occupancy]] perception tasks, enabling robust scene understanding.
+- Suitable for Humanoid Occupancy perception tasks, enabling robust scene understanding.
 - Integrates occupancy status with object-level semantics to support higher-level reasoning.
 
 ### Relationships
 
-- **Used by**: [[Humanoid Occupancy]] — the representation serves as the core perceptual backbone for humanoid robots to model their surroundings.
+- **Used by**: Humanoid Occupancy — the representation serves as the core perceptual backbone for humanoid robots to model their surroundings.
 - **Related to**:
-  - [[Task planning]] ⚠️ — semantic occupancy grids facilitate object-aware task decomposition and manipulation.
-  - [[Navigation]] ⚠️ — occupancy information directly supports path planning and obstacle avoidance in 3D space.
+  - Task planning ⚠️ — semantic occupancy grids facilitate object-aware task decomposition and manipulation.
+  - Navigation ⚠️ — occupancy information directly supports path planning and obstacle avoidance in 3D space.
 
 ### Description
 
@@ -42,4 +42,4 @@ This concept is extracted from the arxiv paper `papers/2507.20217.pdf`.
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Occupancy-based representation` --[[related_to]] ⚠️--> `Humanoid Occupancy` _(wikilink)_
+- `Occupancy-based representation` --related_to ⚠️--> `Humanoid Occupancy` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Confidence-Calibrated Semantic Evidence Arbitration
 
-**Confidence-Calibrated Semantic Evidence Arbitration** is an algorithmic component within the [[Decision-Driven Semantic Object Exploration (DD-SOE)]] framework. It addresses the problem of transforming noisy and heterogeneous semantic observations from perception systems into stable, executable exploration decisions by explicitly calibrating the confidence assigned to each piece of semantic evidence.
+**Confidence-Calibrated Semantic Evidence Arbitration** is an algorithmic component within the Decision-Driven Semantic Object Exploration (DD-SOE) framework. It addresses the problem of transforming noisy and heterogeneous semantic observations from perception systems into stable, executable exploration decisions by explicitly calibrating the confidence assigned to each piece of semantic evidence.
 
 ## Purpose
 
@@ -28,13 +28,13 @@ This component explicitly addresses the challenge of transforming noisy semantic
 
 ## Relationship to DD-SOE
 
-This algorithm **is part of** the larger [[Decision-Driven Semantic Object Exploration (DD-SOE)]] pipeline. Within that framework, it serves as a preprocessing layer between perception and planning: raw semantic observations are fed into the arbitration module, which outputs calibrated, confidence-weighted evidence that the exploration module then uses to guide actions.
+This algorithm **is part of** the larger Decision-Driven Semantic Object Exploration (DD-SOE) pipeline. Within that framework, it serves as a preprocessing layer between perception and planning: raw semantic observations are fed into the arbitration module, which outputs calibrated, confidence-weighted evidence that the exploration module then uses to guide actions.
 
-*Related:* [[Calibrated Confidence]] ⚠️ (concept), [[Semantic Perception]] ⚠️, [[Active Exploration]] ⚠️
+*Related:* Calibrated Confidence ⚠️ (concept), Semantic Perception ⚠️, Active Exploration ⚠️
 
 *Source:* Introduced in arxiv paper `2509.20739`.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Confidence-Calibrated Semantic Evidence Arbitration` --[[extends]] ⚠️--> `Decision-Driven Semantic Object Exploration (DD-SOE)`
+- `Confidence-Calibrated Semantic Evidence Arbitration` --extends ⚠️--> `Decision-Driven Semantic Object Exploration (DD-SOE)`

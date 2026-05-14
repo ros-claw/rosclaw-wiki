@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Extreme Parkour Policy
 
-**Extreme Parkour Policy** is a [[Single Neural Net Policy]] ⚠️ trained via [[Large-scale RL]] ⚠️ ⚠️ ⚠️ that enables a low-cost robot to perform dynamic parkour maneuvers — including high jumps, long jumps, handstands, and ramp running — by directly mapping a single front-facing depth camera image to precise control commands. The approach demonstrates robust end-to-end control that overcomes imprecise sensing and actuation, and generalizes to novel obstacle courses.
+**Extreme Parkour Policy** is a Single Neural Net Policy ⚠️ trained via Large-scale RL ⚠️ ⚠️ ⚠️ that enables a low-cost robot to perform dynamic parkour maneuvers — including high jumps, long jumps, handstands, and ramp running — by directly mapping a single front-facing depth camera image to precise control commands. The approach demonstrates robust end-to-end control that overcomes imprecise sensing and actuation, and generalizes to novel obstacle courses.
 
 ## Overview
 
@@ -23,7 +23,7 @@ The policy operates **end-to-end**: it takes a single depth image from a front-f
 - **Input**: single front-facing depth camera image
 - **Output**: precise control commands
 - **Architecture**: monolithic neural network policy
-- **Training method**: [[Large-scale RL]] ⚠️ ⚠️ ⚠️ entirely in simulation
+- **Training method**: Large-scale RL ⚠️ ⚠️ ⚠️ entirely in simulation
 - **Inference format**: end-to-end (camera → control)
 
 ## Learning Approach
@@ -43,5 +43,5 @@ Despite using a low-cost robot with imprecise actuation and a jittery, low-frequ
 
 ## Related Dependencies
 
-- **depends_on** → [[Sim-to-real transfer]], [[Large-scale RL]] ⚠️ ⚠️ ⚠️
-- **controls** → [[Extreme Parkour Robot]]
+- **depends_on** → Sim-to-real transfer, Large-scale RL ⚠️ ⚠️ ⚠️
+- **controls** → Extreme Parkour Robot

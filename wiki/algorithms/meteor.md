@@ -22,13 +22,13 @@ Despite its design purpose, empirical evaluation reveals that METEOR demonstrate
 
 ## Relationships
 
-- `ineffective_for` :: [[Grounded Navigation Instructions Evaluation]] ⚠️ – METEOR does not reliably assess instructions in grounded navigation contexts.
-- `depends_on` :: [[Semantic Similarity Metrics]] ⚠️ – Uses token-level semantic matching.
-- `related_to` :: [[BLEU]], [[ROUGE]] – Shares lineage with n-gram-based metrics but adds grounding.
+- `ineffective_for` :: Grounded Navigation Instructions Evaluation ⚠️ – METEOR does not reliably assess instructions in grounded navigation contexts.
+- `depends_on` :: Semantic Similarity Metrics ⚠️ – Uses token-level semantic matching.
+- `related_to` :: BLEU, ROUGE – Shares lineage with n-gram-based metrics but adds grounding.
 
 ## Usage Notes
 
-METEOR should not be used as a primary metric for evaluating embodied instruction generation without significant adaptation. Alternative metrics like [[Task Success Rate]] ⚠️ or [[Human Likert Ratings]] ⚠️ are more appropriate for grounded settings.
+METEOR should not be used as a primary metric for evaluating embodied instruction generation without significant adaptation. Alternative metrics like Task Success Rate ⚠️ or Human Likert Ratings ⚠️ are more appropriate for grounded settings.
 
 ---
 

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Multi-expert Distillation
 
-**Multi-expert Distillation** is a training framework for [[Embodied AI]] that trains terrain-specific expert policies and distills them into a unified policy using [[DAgger]], followed by [[Reinforcement Learning Fine-tuning]]. This approach produces a single controller capable of robust generalization across diverse real-world terrains without requiring a single, large expert network.
+**Multi-expert Distillation** is a training framework for Embodied AI that trains terrain-specific expert policies and distills them into a unified policy using DAgger, followed by Reinforcement Learning Fine-tuning. This approach produces a single controller capable of robust generalization across diverse real-world terrains without requiring a single, large expert network.
 
 ## Overview
 
@@ -22,8 +22,8 @@ Multi-expert distillation trains terrain-specific experts and distills them into
 
 ## Parameters
 
-- **Method**: Distillation using [[DAgger]] (Dataset Aggregation)
-- **Input**: [[Depth images]] ⚠️ ⚠️
+- **Method**: Distillation using DAgger (Dataset Aggregation)
+- **Input**: Depth images ⚠️ ⚠️
 - **Output**: Unified foundation policy
 
 ## Capabilities
@@ -42,15 +42,15 @@ Multi-expert distillation trains terrain-specific experts and distills them into
 
 ## Relationships
 
-- **Uses** `01-uses` :: [[DAgger]], [[Reinforcement Learning Fine-tuning]]
-- **Depends on** `01-depends_on` :: [[Terrain-specific expert policies]] ⚠️, [[Depth images]] ⚠️ ⚠️
-- **Part of** `01-part_of` :: [[Agile Locomotion]]
+- **Uses** `01-uses` :: DAgger, Reinforcement Learning Fine-tuning
+- **Depends on** `01-depends_on` :: Terrain-specific expert policies ⚠️, Depth images ⚠️ ⚠️
+- **Part of** `01-part_of` :: Agile Locomotion
 
 ## Source
 
-- arxiv paper: [[2505.11164]] ⚠️ (Multi‑expert Distillation for Scalable Locomotion in Unstructured Environments)
+- arxiv paper: 2505.11164 ⚠️ (Multi‑expert Distillation for Scalable Locomotion in Unstructured Environments)
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Multi-expert Distillation` --[[based_on]] ⚠️--> `Embodied AI`
+- `Multi-expert Distillation` --based_on ⚠️--> `Embodied AI`

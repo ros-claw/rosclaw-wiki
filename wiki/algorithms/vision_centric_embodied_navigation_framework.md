@@ -40,14 +40,14 @@ To handle the scarcity of real-world out-to-in navigation data, the authors intr
 ## Relationships
 
 - **Uses:**  
-  - [[Image-Based Prompts]] ⚠️  
-  - [[Trajectory-Conditioned Video Synthesis]] ⚠️  
+  - Image-Based Prompts ⚠️  
+  - Trajectory-Conditioned Video Synthesis ⚠️  
 
 - **Implements:**  
-  - [[Out-to-In Prior-Free Instruction-Driven Embodied Navigation]]  
+  - Out-to-In Prior-Free Instruction-Driven Embodied Navigation  
 
 - **Part of:**  
-  - [[Embodied Navigation]] (algorithm family)  
+  - Embodied Navigation (algorithm family)  
 
 ## Sources
 
@@ -55,13 +55,13 @@ To handle the scarcity of real-world out-to-in navigation data, the authors intr
 
 ## Relevant Pages
 
-- [[Embodied AI]]  
-- [[Sim-to-Real Transfer]]  
-- [[Egocentric Vision]] ⚠️  
-- [[Navigation Policy]] ⚠️
+- Embodied AI  
+- Sim-to-Real Transfer  
+- Egocentric Vision ⚠️  
+- Navigation Policy ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Vision-Centric Embodied Navigation Framework` --[[based_on]] ⚠️ ⚠️--> `Out-to-In Prior-Free Instruction-Driven Embodied Navigation`
-- `Vision-Centric Embodied Navigation Framework` --[[based_on]] ⚠️ ⚠️--> `Embodied AI`
+- `Vision-Centric Embodied Navigation Framework` --based_on ⚠️ ⚠️--> `Out-to-In Prior-Free Instruction-Driven Embodied Navigation`
+- `Vision-Centric Embodied Navigation Framework` --based_on ⚠️ ⚠️--> `Embodied AI`

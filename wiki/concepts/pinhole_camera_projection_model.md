@@ -18,7 +18,7 @@ The **Pinhole Camera Projection Model** is a foundational geometric model in com
 
 ## Description
 
-A camera model that assumes a single viewpoint and rectilinear projection, used within [[Grounded Semantic Mapping Network (GSMN)]] to compute local-to-world transformations.
+A camera model that assumes a single viewpoint and rectilinear projection, used within Grounded Semantic Mapping Network (GSMN) to compute local-to-world transformations.
 
 ## Capabilities
 
@@ -27,7 +27,7 @@ A camera model that assumes a single viewpoint and rectilinear projection, used 
 
 ## Relationships
 
-- **used_by**: [[Grounded Semantic Mapping Network (GSMN)]] – employs the pinhole model to project visual observations into a consistent world coordinate frame for semantic mapping.
+- **used_by**: Grounded Semantic Mapping Network (GSMN) – employs the pinhole model to project visual observations into a consistent world coordinate frame for semantic mapping.
 
 ## Key Properties
 
@@ -37,9 +37,9 @@ A camera model that assumes a single viewpoint and rectilinear projection, used 
 
 ## Source
 
-This page is derived from the paper *1806.00047*, which describes the [[Grounded Semantic Mapping Network (GSMN)]] and its use of the pinhole camera model for projection.
+This page is derived from the paper *1806.00047*, which describes the Grounded Semantic Mapping Network (GSMN) and its use of the pinhole camera model for projection.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Pinhole Camera Projection Model` --[[related_to]] ⚠️--> `Grounded Semantic Mapping Network (GSMN)` _(wikilink)_
+- `Pinhole Camera Projection Model` --related_to ⚠️--> `Grounded Semantic Mapping Network (GSMN)` _(wikilink)_

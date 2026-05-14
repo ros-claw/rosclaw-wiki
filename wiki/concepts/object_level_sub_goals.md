@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 **Object-Level Sub-Goals** are semantically meaningful navigation targets defined at the object level — e.g., "go to the chair" — rather than coordinate-based or geometric waypoints. They enable an agent to decompose complex navigation tasks into interpretable, reusable steps that generalize across environments.
 
-This concept is central to [[Embodied AI]] systems that require zero-shot transfer between different spaces. By abstracting goals to object classes or instances, the agent can plan and execute without retraining on each new layout.
+This concept is central to Embodied AI systems that require zero-shot transfer between different spaces. By abstracting goals to object classes or instances, the agent can plan and execute without retraining on each new layout.
 
 ## Capabilities
 
@@ -27,13 +27,13 @@ This concept is central to [[Embodied AI]] systems that require zero-shot transf
 
 ## Usage
 
-Object-Level Sub-Goals are used by the [[TANGO]] system, which leverages them as intermediate steps in long-horizon tasks. TANGO dynamically generates such sub-goals from a high-level instruction, then executes each with a low-level policy.
+Object-Level Sub-Goals are used by the TANGO system, which leverages them as intermediate steps in long-horizon tasks. TANGO dynamically generates such sub-goals from a high-level instruction, then executes each with a low-level policy.
 
 ## Related Concepts
 
-- [[Goal-Conditioned Reinforcement Learning]] ⚠️ — often uses state-based or position-based goals; object-level sub-goals provide a complementary semantic abstraction.
-- [[Semantic Mapping]] ⚠️ — required to locate objects in the environment and feed them into the sub-goal planner.
-- [[Hierarchical Task Decomposition]] ⚠️ — object-level sub-goals naturally fit into a layered architecture where high-level reasoning selects object targets and low-level control reaches them.
+- Goal-Conditioned Reinforcement Learning ⚠️ — often uses state-based or position-based goals; object-level sub-goals provide a complementary semantic abstraction.
+- Semantic Mapping ⚠️ — required to locate objects in the environment and feed them into the sub-goal planner.
+- Hierarchical Task Decomposition ⚠️ — object-level sub-goals naturally fit into a layered architecture where high-level reasoning selects object targets and low-level control reaches them.
 
 ## Notes
 
@@ -42,6 +42,6 @@ The concept is drawn from the paper [2509.08699](data/raw/papers/2509.08699.pdf)
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Object-Level Sub-Goals` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Object-Level Sub-Goals` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Object-Level Sub-Goals` --[[related_to]] ⚠️ ⚠️--> `TANGO` _(wikilink)_
+- `Object-Level Sub-Goals` --related_to ⚠️ ⚠️--> `TANGO` _(wikilink)_

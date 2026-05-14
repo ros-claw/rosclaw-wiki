@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Open-world Generalization
 
-**Open-world Generalization** is the ability of a robotic system to generalize to environments and objects not seen during training. It is a key challenge for [[Outdoor Navigation]] ⚠️ and [[Embodied AI]], requiring the robot to handle open-set factors such as novel semantic classes, terrains, and dynamic entities that were absent from the training distribution.
+**Open-world Generalization** is the ability of a robotic system to generalize to environments and objects not seen during training. It is a key challenge for Outdoor Navigation ⚠️ and Embodied AI, requiring the robot to handle open-set factors such as novel semantic classes, terrains, and dynamic entities that were absent from the training distribution.
 
 ## Description
 
@@ -26,14 +26,14 @@ The ability of a robotic system to generalize to environments and objects not se
 
 ## Addressed By
 
-- [[CREStE]] (implements) — a method designed to address open-world generalization for vision-language navigation in outdoor scenes.
+- CREStE (implements) — a method designed to address open-world generalization for vision-language navigation in outdoor scenes.
 
 ## Related Concepts
 
-- [[Generalization]] ⚠️ (broader machine learning concept)
-- [[Open-set Recognition]] ⚠️
-- [[Domain Randomization]] ⚠️
-- [[Sim-to-Real Transfer]]
+- Generalization ⚠️ (broader machine learning concept)
+- Open-set Recognition ⚠️
+- Domain Randomization ⚠️
+- Sim-to-Real Transfer
 
 ## Source
 
@@ -42,6 +42,6 @@ The ability of a robotic system to generalize to environments and objects not se
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Open-world Generalization` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Open-world Generalization` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Open-world Generalization` --[[related_to]] ⚠️ ⚠️--> `CREStE` _(wikilink)_
+- `Open-world Generalization` --related_to ⚠️ ⚠️--> `CREStE` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Data Augmentation via Speaker Model
 
-**Data Augmentation via Speaker Model** is a technique used in [[Vision-and-Language Navigation]] to synthetically expand the training dataset by generating new natural-language instructions for existing visual trajectories. It is a core component of the **Speaker-Follower Model**.
+**Data Augmentation via Speaker Model** is a technique used in Vision-and-Language Navigation to synthetically expand the training dataset by generating new natural-language instructions for existing visual trajectories. It is a core component of the **Speaker-Follower Model**.
 
 ### Overview
 
@@ -35,8 +35,8 @@ In vision-and-language navigation, obtaining large-scale human-annotated instruc
 
 ### Relationships
 
-- **Depends on**: [[Speaker-Follower Model]] (the speaker component must first be trained on real data)
-- **Part of**: [[Speaker-Follower Model]] (this augmentation strategy is integral to the original architecture)
+- **Depends on**: Speaker-Follower Model (the speaker component must first be trained on real data)
+- **Part of**: Speaker-Follower Model (this augmentation strategy is integral to the original architecture)
 
 ### Usage in Training
 
@@ -45,5 +45,5 @@ The augmented dataset—composed of real human annotations plus synthetic instru
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Data Augmentation via Speaker Model` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
-- `Data Augmentation via Speaker Model` --[[extends]] ⚠️--> `Speaker-Follower Model`
+- `Data Augmentation via Speaker Model` --based_on ⚠️--> `Vision-and-Language Navigation`
+- `Data Augmentation via Speaker Model` --extends ⚠️--> `Speaker-Follower Model`

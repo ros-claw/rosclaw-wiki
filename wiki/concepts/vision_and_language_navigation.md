@@ -20,7 +20,7 @@ Vision-and-Language Navigation (VLN) is a task where an agent navigates through 
 
 ## Task Formulation
 
-VLN is an **embodied AI task** (type: `navigation with natural language instructions`). At each time step, the agent receives a natural language instruction and an egocentric visual observation; it must select the next action from an **action space** defined as the set of navigable locations available at that step. The agent must integrate multimodal understanding and spatial reasoning in real-time, inheriting the core challenges of [[Embodied AI]]: grounding language, memory, planning, and adaptation to dynamic environments.
+VLN is an **embodied AI task** (type: `navigation with natural language instructions`). At each time step, the agent receives a natural language instruction and an egocentric visual observation; it must select the next action from an **action space** defined as the set of navigable locations available at that step. The agent must integrate multimodal understanding and spatial reasoning in real-time, inheriting the core challenges of Embodied AI: grounding language, memory, planning, and adaptation to dynamic environments.
 
 ## Capabilities
 
@@ -37,36 +37,36 @@ VLN agents are evaluated in **complex 3D** environments, typically photorealisti
 
 Standard benchmarks include:
 
-- **[[Room-to-Room (R2R)]]** — the foundational VLN dataset built on Matterport3D.
-- **[[Room-across-Room (RxR)]]** — extends R2R with longer, multilingual instructions.
-- **[[Room-for-Room (R4R)]] ⚠️** — a variant focusing on diversity in path instructions.
+- **Room-to-Room (R2R)** — the foundational VLN dataset built on Matterport3D.
+- **Room-across-Room (RxR)** — extends R2R with longer, multilingual instructions.
+- **Room-for-Room (R4R) ⚠️** — a variant focusing on diversity in path instructions.
 - **CVDN (Cooperative Vision-and-Dialog Navigation)** — a dataset that combines dialogue and navigation, evaluating an agent's ability to follow instructions in a collaborative setting.
 
 These benchmarks test instruction-following and spatial reasoning across varying environmental complexity and instruction length.
 
 ## Dependencies and Usage
 
-- **Direct inputs**: The agent receives and uses [[Natural Language Instructions]] ⚠️ and [[Visual Perception]] ⚠️ as its primary inputs.
-- **Depends on**: [[Natural Language Processing]] ⚠️ for instruction comprehension, [[Computer Vision]] ⚠️ for visual perception.
-- **Uses**: [[LLM]] ⚠️, [[large_language_model]] — modern VLN systems often leverage large language models for instruction comprehension, reasoning, and action planning. Additionally, advanced VLN methods exploit **future-view semantics** to anticipate upcoming visual observations and improve navigation decisions.
+- **Direct inputs**: The agent receives and uses Natural Language Instructions ⚠️ and Visual Perception ⚠️ as its primary inputs.
+- **Depends on**: Natural Language Processing ⚠️ for instruction comprehension, Computer Vision ⚠️ for visual perception.
+- **Uses**: LLM ⚠️, [[large_language_model]] — modern VLN systems often leverage large language models for instruction comprehension, reasoning, and action planning. Additionally, advanced VLN methods exploit **future-view semantics** to anticipate upcoming visual observations and improve navigation decisions.
 
 ## Relationships
 
 - **Part of**: [[embodied_ai]]
-- **Used by**: [[VLN-SIG]] — a special interest group that coordinates research and benchmarks in this area.
-- **Evaluated on**: [[Room-to-Room (R2R)]] dataset, CVDN dataset.
+- **Used by**: VLN-SIG — a special interest group that coordinates research and benchmarks in this area.
+- **Evaluated on**: Room-to-Room (R2R) dataset, CVDN dataset.
 
 ## Related Pages
 
-- [[Embodied AI]] — parent concept
-- [[Large Language Model]] — supporting technology
-- [[Visual Navigation]] — closely related task without explicit language grounding
-- [[Instruction Following]] ⚠️ — broader paradigm
-- [[Matterport3D]] ⚠️ — common simulation environment for VLN
+- Embodied AI — parent concept
+- Large Language Model — supporting technology
+- Visual Navigation — closely related task without explicit language grounding
+- Instruction Following ⚠️ — broader paradigm
+- Matterport3D ⚠️ — common simulation environment for VLN
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `vision_and_language_navigation` --[[related_to]] ⚠️ ⚠️ ⚠️--> `embodied_ai`
-- `vision_and_language_navigation` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Embodied AI`
-- `vision_and_language_navigation` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Room-across-Room (RxR)`
+- `vision_and_language_navigation` --related_to ⚠️ ⚠️ ⚠️--> `embodied_ai`
+- `vision_and_language_navigation` --related_to ⚠️ ⚠️ ⚠️--> `Embodied AI`
+- `vision_and_language_navigation` --related_to ⚠️ ⚠️ ⚠️--> `Room-across-Room (RxR)`

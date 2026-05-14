@@ -28,15 +28,15 @@ MLLMs provide powerful semantic understanding of both visual and textual data, a
 
 **Relationships**
 
-- **Used by** [[JanusVLN]] – JanusVLN builds on top of an MLLM backbone to achieve instruction following in 3D scenes.  
-- **Used by** many recent [[VLN methods]] ⚠️ – MLLMs have become a standard component in state‑of‑the‑art VLN pipelines.  
-- **Enhanced by** [[spatial-geometric encoder]] ⚠️ ⚠️ – In JanusVLN, the MLLM’s spatial reasoning is augmented with 3D prior knowledge from a dedicated encoder.
+- **Used by** JanusVLN – JanusVLN builds on top of an MLLM backbone to achieve instruction following in 3D scenes.  
+- **Used by** many recent VLN methods ⚠️ – MLLMs have become a standard component in state‑of‑the‑art VLN pipelines.  
+- **Enhanced by** spatial-geometric encoder ⚠️ ⚠️ – In JanusVLN, the MLLM’s spatial reasoning is augmented with 3D prior knowledge from a dedicated encoder.
 
 **Role in JanusVLN**
 
-JanusVLN extends a pre‑trained MLLM to incorporate 3D prior knowledge from a [[spatial-geometric encoder]] ⚠️ ⚠️. This encoder provides geometric and depth cues (e.g., object distances, room layouts) that the MLLM alone cannot easily infer from 2D images. The integration substantially improves the agent’s ability to reason about spatial arrangements and navigate to goal locations described in natural language.
+JanusVLN extends a pre‑trained MLLM to incorporate 3D prior knowledge from a spatial-geometric encoder ⚠️ ⚠️. This encoder provides geometric and depth cues (e.g., object distances, room layouts) that the MLLM alone cannot easily infer from 2D images. The integration substantially improves the agent’s ability to reason about spatial arrangements and navigate to goal locations described in natural language.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MLLM` --[[extends]] ⚠️--> `JanusVLN`
+- `MLLM` --extends ⚠️--> `JanusVLN`

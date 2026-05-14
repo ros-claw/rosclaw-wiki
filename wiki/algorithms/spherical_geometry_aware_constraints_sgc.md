@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Spherical Geometry-aware Constraints (SGC)
 
-**Spherical Geometry-aware Constraints (SGC)** is an algorithm designed to exploit the unique geometric properties of panoramic camera rays. It guides distortion-regularized sampling offsets to achieve robust geometric alignment, particularly in the context of humanoid perception and mapping. SGC is a core component of the [[HumanoidPano]] system, enabling accurate visual correspondence despite the severe distortion inherent in wide‑field‑of‑view panoramic imagery.
+**Spherical Geometry-aware Constraints (SGC)** is an algorithm designed to exploit the unique geometric properties of panoramic camera rays. It guides distortion-regularized sampling offsets to achieve robust geometric alignment, particularly in the context of humanoid perception and mapping. SGC is a core component of the HumanoidPano system, enabling accurate visual correspondence despite the severe distortion inherent in wide‑field‑of‑view panoramic imagery.
 
 ## Key Capabilities
 
@@ -24,11 +24,11 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **part_of** [[HumanoidPano]] – SGC is implemented as a geometric constraint module within the HumanoidPano pipeline, handling the panoramic‑specific alignment needed for humanoid egocentric perception.
+- **part_of** HumanoidPano – SGC is implemented as a geometric constraint module within the HumanoidPano pipeline, handling the panoramic‑specific alignment needed for humanoid egocentric perception.
 
 ## Usage
 
-In the [[HumanoidPano]] framework, SGC works alongside other modules (e.g., feature extraction, pose estimation) to maintain consistent geometric relationships in spherical image space. By accounting for radial distortion and spherical projection, SGC reduces drift and enhances the quality of the reconstructed environment.
+In the HumanoidPano framework, SGC works alongside other modules (e.g., feature extraction, pose estimation) to maintain consistent geometric relationships in spherical image space. By accounting for radial distortion and spherical projection, SGC reduces drift and enhances the quality of the reconstructed environment.
 
 ## Source
 
@@ -37,4 +37,4 @@ In the [[HumanoidPano]] framework, SGC works alongside other modules (e.g., feat
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Spherical Geometry-aware Constraints (SGC)` --[[extends]] ⚠️--> `HumanoidPano`
+- `Spherical Geometry-aware Constraints (SGC)` --extends ⚠️--> `HumanoidPano`

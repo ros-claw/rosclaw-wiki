@@ -18,7 +18,7 @@ Temporal information integration refers to the mechanism by which a perception s
 
 ## Role in Humanoid Occupancy Network
 
-Temporal information is integrated directly into the architecture of the [[Humanoid Occupancy Network]] ⚠️ to ensure robust perception despite occlusions, sensor noise, or rapid movements. The network processes a temporal window of observations, aligning and aggregating features to produce occupancy estimates that remain stable and reliable over time.
+Temporal information is integrated directly into the architecture of the Humanoid Occupancy Network ⚠️ to ensure robust perception despite occlusions, sensor noise, or rapid movements. The network processes a temporal window of observations, aligning and aggregating features to produce occupancy estimates that remain stable and reliable over time.
 
 ## Capabilities
 
@@ -26,8 +26,8 @@ Temporal information is integrated directly into the architecture of the [[Human
 
 ## Relationships
 
-- **part_of** — [[Humanoid Occupancy Network Architecture]] ⚠️: temporal information integration is a core component of the overall network design.
-- **uses** — [[Temporal Context]] ⚠️: the integration mechanism depends on a stream of temporally ordered sensory data.
+- **part_of** — Humanoid Occupancy Network Architecture ⚠️: temporal information integration is a core component of the overall network design.
+- **uses** — Temporal Context ⚠️: the integration mechanism depends on a stream of temporally ordered sensory data.
 
 ## Benefits
 

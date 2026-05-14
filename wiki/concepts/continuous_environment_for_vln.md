@@ -23,7 +23,7 @@ Continuous environments are a critical step toward bridging the gap between simu
 
 ## Task Definition
 
-A language-guided navigation task set in a [[Continuous 3D Environment]] ⚠️ where agents must execute low-level actions (e.g., `move_forward`, `turn`) to follow natural language navigation directions. The agent receives no oracle assistance, has no a priori knowledge of the environment topology, and must rely solely on its own perception and control to reach the goal.
+A language-guided navigation task set in a Continuous 3D Environment ⚠️ where agents must execute low-level actions (e.g., `move_forward`, `turn`) to follow natural language navigation directions. The agent receives no oracle assistance, has no a priori knowledge of the environment topology, and must rely solely on its own perception and control to reach the goal.
 
 ## Capabilities
 
@@ -44,11 +44,11 @@ Continuous VLN drops several key assumptions that made earlier (graph-based) VLN
 
 ## Relation to Embodied AI
 
-Continuous environments for VLN are a core component of [[Embodied AI]]. They test an agent's ability to integrate vision, language understanding, and motor control under realistic physical constraints. The environment serves as a bridge between high-level semantic reasoning (language comprehension) and low-level continuous control (movement execution). This relationship is often formalized as:
+Continuous environments for VLN are a core component of Embodied AI. They test an agent's ability to integrate vision, language understanding, and motor control under realistic physical constraints. The environment serves as a bridge between high-level semantic reasoning (language comprehension) and low-level continuous control (movement execution). This relationship is often formalized as:
 
-- `[[Continuous Environment for VLN]]` *implements* `[[Realistic Navigation Scenarios]] ⚠️`
-- `[[Continuous Environment for VLN]]` *part_of* `[[Embodied AI]]`
-- `[[Continuous Environment for VLN]]` *supersedes* `[[Vision-and-Language Navigation (VLN) in Navigation-Graph Settings]] ⚠️`
+- `Continuous Environment for VLN` *implements* `Realistic Navigation Scenarios ⚠️`
+- `Continuous Environment for VLN` *part_of* `Embodied AI`
+- `Continuous Environment for VLN` *supersedes* `Vision-and-Language Navigation (VLN) in Navigation-Graph Settings ⚠️`
 
 ## Example Platforms
 
@@ -58,15 +58,15 @@ Continuous environments for VLN are a core component of [[Embodied AI]]. They te
 
 ## See Also
 
-- [[Vision-and-Language Navigation]]
-- [[Discrete Grid-Based Environment]] ⚠️
-- [[Continuous Control in Embodied Agents]] ⚠️
-- [[Sim-to-Real Transfer for VLN]] ⚠️
-- [[Low-Level Actions]] ⚠️
-- [[Continuous 3D Environments]] ⚠️
+- Vision-and-Language Navigation
+- Discrete Grid-Based Environment ⚠️
+- Continuous Control in Embodied Agents ⚠️
+- Sim-to-Real Transfer for VLN ⚠️
+- Low-Level Actions ⚠️
+- Continuous 3D Environments ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Continuous environment for VLN` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
-- `Continuous environment for VLN` --[[related_to]] ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `Continuous environment for VLN` --related_to ⚠️ ⚠️--> `Embodied AI`
+- `Continuous environment for VLN` --related_to ⚠️ ⚠️--> `Vision-and-Language Navigation`

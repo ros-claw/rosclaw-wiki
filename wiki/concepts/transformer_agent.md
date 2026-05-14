@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Transformer Agent
 
-The **Transformer Agent** is a neural network-based agent that uses a [[Transformer Architecture]] ⚠️ ⚠️ to process navigation instructions and generate action trajectories. It is trained via [[Imitation Learning]] on synthetic instruction-trajectory pairs, achieving state-of-the-art performance on the [[RxR]] (Room-to-Room) benchmark.
+The **Transformer Agent** is a neural network-based agent that uses a Transformer Architecture ⚠️ ⚠️ to process navigation instructions and generate action trajectories. It is trained via Imitation Learning on synthetic instruction-trajectory pairs, achieving state-of-the-art performance on the RxR (Room-to-Room) benchmark.
 
 ### Architecture
 
@@ -28,10 +28,10 @@ The agent employs a simple transformer model that encodes natural language instr
 
 ### Training
 
-- **Trained with**: [[Imitation Learning]]
+- **Trained with**: Imitation Learning
 - Uses behavioral cloning to mimic expert demonstrations derived from synthetic data.
 - Training data consists of pairs of natural language instructions and corresponding ground-truth trajectories, generated automatically from simulator-based exploration.
 
-*Key relationships*: [[Transformer Agent]] **uses** → [[Transformer Architecture]] ⚠️ ⚠️, **trained_with** → [[Imitation Learning]], **evaluated_on** → [[RxR]].
+*Key relationships*: Transformer Agent **uses** → Transformer Architecture ⚠️ ⚠️, **trained_with** → Imitation Learning, **evaluated_on** → RxR.
 
 *Source*: arxiv paper [2210.03112](https://arxiv.org/abs/2210.03112)

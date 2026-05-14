@@ -29,8 +29,8 @@ source_type: arxiv_paper
 
 ## Relationships
 
-* **Implemented by**: [[Model Predictive Path Integral]] ⚠️ — this algorithm uses the learned dynamics to perform sampling-based optimization during planning.
-* **Depends on**: [[Learned Perceptive Forward Dynamics Model]] — a neural dynamics model that takes observations and actions to predict future states, enabling the planner to reason about environment physics without explicit programming.
+* **Implemented by**: Model Predictive Path Integral ⚠️ — this algorithm uses the learned dynamics to perform sampling-based optimization during planning.
+* **Depends on**: Learned Perceptive Forward Dynamics Model — a neural dynamics model that takes observations and actions to predict future states, enabling the planner to reason about environment physics without explicit programming.
 
 ## Details
 
@@ -43,4 +43,4 @@ In traditional model-predictive control (MPC), a cost function must be carefully
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Zero-shot planning with learned dynamics` --[[related_to]] ⚠️--> `Learned Perceptive Forward Dynamics Model` _(wikilink)_
+- `Zero-shot planning with learned dynamics` --related_to ⚠️--> `Learned Perceptive Forward Dynamics Model` _(wikilink)_

@@ -29,22 +29,22 @@ This approach is particularly suited for embodied agents that must understand an
 
 ## Relationships
 
-- **Core component of** [[MTU3D (Move to Understand 3D)]] — this algorithm is the central representation engine of the MTU3D pipeline, which employs active perception to improve spatial understanding.
-- **Depends on** [[RGB-D Sensing]] ⚠️ and [[Online Learning]] ⚠️ techniques.
-- **Implements** a form of [[Embodied Spatial Memory]] ⚠️.
+- **Core component of** MTU3D (Move to Understand 3D) — this algorithm is the central representation engine of the MTU3D pipeline, which employs active perception to improve spatial understanding.
+- **Depends on** RGB-D Sensing ⚠️ and Online Learning ⚠️ techniques.
+- **Implements** a form of Embodied Spatial Memory ⚠️.
 
 ## Technical Context
 
-Online query-based representation learning sits at the intersection of [[Neural Fields]] ⚠️, [[Active Perception]], and [[Real-Time SLAM]] ⚠️. Unlike offline NeRFs or 3D Gaussian Splatting that require batch processing of collected data, this algorithm updates its representation continuously. This makes it suitable for tasks like exploration, manipulation, and mobile manipulation where the environment is initially unknown.
+Online query-based representation learning sits at the intersection of Neural Fields ⚠️, Active Perception, and Real-Time SLAM ⚠️. Unlike offline NeRFs or 3D Gaussian Splatting that require batch processing of collected data, this algorithm updates its representation continuously. This makes it suitable for tasks like exploration, manipulation, and mobile manipulation where the environment is initially unknown.
 
 ## Related
 
-- [[MTU3D (Move to Understand 3D)]] — uses this algorithm for active 3D scene understanding.
-- [[Representation Learning for Robotics]] ⚠️
-- [[Real-Time Neural Rendering]] ⚠️
+- MTU3D (Move to Understand 3D) — uses this algorithm for active 3D scene understanding.
+- Representation Learning for Robotics ⚠️
+- Real-Time Neural Rendering ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Online query-based representation learning` --[[extends]] ⚠️--> `MTU3D (Move to Understand 3D)`
-- `Online query-based representation learning` --[[part_of]] ⚠️--> `MTU3D`
+- `Online query-based representation learning` --extends ⚠️--> `MTU3D (Move to Understand 3D)`
+- `Online query-based representation learning` --part_of ⚠️--> `MTU3D`

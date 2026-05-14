@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Navigate to Goal in Unfamiliar Indoor Environments
 
-**Navigate to Goal** is a high-level skill that enables a mobile robot to reach distant goal coordinates in unfamiliar indoor environments using only egocentric vision. It is a core capability of the [[ViNL]] system.
+**Navigate to Goal** is a high-level skill that enables a mobile robot to reach distant goal coordinates in unfamiliar indoor environments using only egocentric vision. It is a core capability of the ViNL system.
 
 ## Overview
 
@@ -34,26 +34,26 @@ This skill allows a robot to safely navigate from its current position to a spec
 
 ## Description
 
-The skill is performed by [[ViNL]] through the combination of two sub‑policies:
+The skill is performed by ViNL through the combination of two sub‑policies:
 
-1. A **[[Visual Navigation Policy]]** → handles wayfinding (global direction toward the goal).
+1. A **Visual Navigation Policy** → handles wayfinding (global direction toward the goal).
 2. A **visual locomotion policy** → handles local obstacle avoidance and low‑level motion control.
 
 This decomposition allows the system to navigate over long horizons while reacting to obstacles in real time, without requiring explicit mapping or planning.
 
 ## Relationships
 
-- **Part of**: [[ViNL]]
-- **Requires**: [[Visual Navigation Policy]] (for wayfinding)
+- **Part of**: ViNL
+- **Requires**: Visual Navigation Policy (for wayfinding)
 - **Depends on**: visual locomotion policy (for obstacle avoidance)
 
 ## See Also
 
-- [[ViNL]] — the overall framework that implements this skill
-- [[Visual Navigation Policy]] — the higher‑level policy that provides directional commands
-- [[Obstacle Avoidance]] ⚠️ — the local reactive behavior used during navigation
+- ViNL — the overall framework that implements this skill
+- Visual Navigation Policy — the higher‑level policy that provides directional commands
+- Obstacle Avoidance ⚠️ — the local reactive behavior used during navigation
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Navigate to goal in unfamiliar indoor environments` --[[uses]] ⚠️--> `ViNL`
+- `Navigate to goal in unfamiliar indoor environments` --uses ⚠️--> `ViNL`

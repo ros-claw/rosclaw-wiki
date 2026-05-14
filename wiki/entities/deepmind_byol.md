@@ -15,7 +15,7 @@ BYOL is a self-supervised learning algorithm for visual representation learning 
 
 ## Core Idea
 
-Unlike [[simclr|SimCLR]] or [[moco|MoCo]] which rely on contrasting positive and negative samples, BYOL uses:
+Unlike SimCLR or MoCo which rely on contrasting positive and negative samples, BYOL uses:
 
 - **Online Network**: Produces predictions from augmented views
 - **Target Network**: Generates regression targets via exponential moving average of online weights
@@ -32,7 +32,7 @@ Augmented View 2 → Target Encoder ──────┘
 
 ## Key Insight
 
-The method works because the predictor must learn to align representations across augmentations, effectively bootstrapping useful features without explicit negatives. The [[batch_normalization|batch normalization]] layers play a crucial role in preventing collapse.
+The method works because the predictor must learn to align representations across augmentations, effectively bootstrapping useful features without explicit negatives. The batch normalization layers play a crucial role in preventing collapse.
 
 ## Applications in Robotics
 
@@ -55,4 +55,4 @@ BYOL's representation learning is particularly valuable for [[embodied_ai|embodi
 
 - [[deepmind_curl|CURL]] — Contrastive unsupervised representations
 - [[self_supervised_learning|Self-Supervised Learning]]
-- [[visual_representation_learning|Visual Representation Learning]]
+- Visual Representation Learning

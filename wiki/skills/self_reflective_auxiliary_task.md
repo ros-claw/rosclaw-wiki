@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Self-Reflective Auxiliary Task
 
-A **Self-Reflective Auxiliary Task** is a training signal employed during [[Self-Reflective Post-Training]] to guide a model toward correct reasoning by explicitly contrasting its predictions with incorrect alternatives. It is one component of the post-training pipeline used in [[EvolveNav]].
+A **Self-Reflective Auxiliary Task** is a training signal employed during Self-Reflective Post-Training to guide a model toward correct reasoning by explicitly contrasting its predictions with incorrect alternatives. It is one component of the post-training pipeline used in EvolveNav.
 
 ### Objective
 
@@ -26,10 +26,10 @@ The primary objective of the self-reflective auxiliary task is to **encourage th
 
 ### Relationships
 
-- **part_of** [[Self-Reflective Post-Training]] – the auxiliary task is integrated into the multi-stage post-training process that refines the model’s internal representations.
-- **used_in** [[EvolveNav]] – this specific post-training technique is applied within the EvolveNav framework to enhance navigation-oriented reasoning.
+- **part_of** Self-Reflective Post-Training – the auxiliary task is integrated into the multi-stage post-training process that refines the model’s internal representations.
+- **used_in** EvolveNav – this specific post-training technique is applied within the EvolveNav framework to enhance navigation-oriented reasoning.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Self-Reflective Auxiliary Task` --[[uses]] ⚠️--> `EvolveNav`
+- `Self-Reflective Auxiliary Task` --uses ⚠️--> `EvolveNav`

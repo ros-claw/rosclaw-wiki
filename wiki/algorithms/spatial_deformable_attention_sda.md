@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Spatial Deformable Attention (SDA)
 
-**Spatial Deformable Attention (SDA)** is a novel attention mechanism introduced in the context of the [[HumanoidPano]] framework. It is designed to efficiently aggregate hierarchical 3D features by leveraging spherical offsets, enabling geometrically complete object representations for 360°-to-BEV (Bird's Eye View) fusion.
+**Spatial Deformable Attention (SDA)** is a novel attention mechanism introduced in the context of the HumanoidPano framework. It is designed to efficiently aggregate hierarchical 3D features by leveraging spherical offsets, enabling geometrically complete object representations for 360°-to-BEV (Bird's Eye View) fusion.
 
 ## Overview
 
@@ -27,9 +27,9 @@ Traditional attention mechanisms struggle with the irregular sampling required f
 
 ## Relationships
 
-- **Part of** [[HumanoidPano]] – SDA is a core component of the HumanoidPano architecture, which integrates panoramic perception and BEV representation for humanoid robotics.
-- **Depends on** deformable attention primitives (e.g., [[Deformable Attention]] ⚠️ in transformers) extended to 3D spherical coordinates.
-- **Used by** [[HumanoidPano]]’s feature extraction and fusion pipeline.
+- **Part of** HumanoidPano – SDA is a core component of the HumanoidPano architecture, which integrates panoramic perception and BEV representation for humanoid robotics.
+- **Depends on** deformable attention primitives (e.g., Deformable Attention ⚠️ in transformers) extended to 3D spherical coordinates.
+- **Used by** HumanoidPano’s feature extraction and fusion pipeline.
 
 ## References
 
@@ -38,4 +38,4 @@ Traditional attention mechanisms struggle with the irregular sampling required f
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Spatial Deformable Attention (SDA)` --[[extends]] ⚠️--> `HumanoidPano`
+- `Spatial Deformable Attention (SDA)` --extends ⚠️--> `HumanoidPano`

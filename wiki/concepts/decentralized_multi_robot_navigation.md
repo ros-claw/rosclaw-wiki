@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Decentralized Multi-Robot Navigation
 
-**Decentralized Multi-Robot Navigation** is a paradigm where each robot in a team independently generates its own motion plans, typically using an onboard LLM or other planning module, and coordinates with peers through local communication. This contrasts with [[Centralized Multi-Robot Navigation]] ⚠️ ⚠️, where a single planner issues commands to all agents.
+**Decentralized Multi-Robot Navigation** is a paradigm where each robot in a team independently generates its own motion plans, typically using an onboard LLM or other planning module, and coordinates with peers through local communication. This contrasts with Centralized Multi-Robot Navigation ⚠️ ⚠️, where a single planner issues commands to all agents.
 
 ## Approach
 
@@ -28,20 +28,20 @@ In a decentralized setup, every robot runs its own planner (e.g., a large langua
 
 ## Relationship Annotations
 
-- **Used by**: [[SayCoNav]] — SayCoNav implements a decentralized multi-robot navigation architecture where robots exchange verbal reasoning cues via LLMs.
-- **Depends on**: [[Multi-Agent Communication]] ⚠️, [[Local Planning]] ⚠️, [[LLM-Based Planning]] ⚠️.
-- **Contrasts with**: [[Centralized Multi-Robot Navigation]] ⚠️ ⚠️, [[Hierarchical Multi-Robot Control]] ⚠️.
+- **Used by**: SayCoNav — SayCoNav implements a decentralized multi-robot navigation architecture where robots exchange verbal reasoning cues via LLMs.
+- **Depends on**: Multi-Agent Communication ⚠️, Local Planning ⚠️, LLM-Based Planning ⚠️.
+- **Contrasts with**: Centralized Multi-Robot Navigation ⚠️ ⚠️, Hierarchical Multi-Robot Control ⚠️.
 
 ## Trade-offs
 
-Decentralized navigation offers robustness and scalability at the cost of potentially lower optimality compared to centralized solutions. Coordination may suffer from deadlocks if communication is unreliable, and global objectives (e.g., maximum throughput) are harder to guarantee. Recent work, such as [[SayCoNav]], addresses these challenges with negotiation protocols and shared situation awareness.
+Decentralized navigation offers robustness and scalability at the cost of potentially lower optimality compared to centralized solutions. Coordination may suffer from deadlocks if communication is unreliable, and global objectives (e.g., maximum throughput) are harder to guarantee. Recent work, such as SayCoNav, addresses these challenges with negotiation protocols and shared situation awareness.
 
 ## Further Reading
 
-- See [[Multi-Robot Coordination]] ⚠️ for a broader taxonomy.
-- [[SayCoNav]] paper (arXiv 2505.13729) provides a concrete implementation of this concept.
+- See Multi-Robot Coordination ⚠️ for a broader taxonomy.
+- SayCoNav paper (arXiv 2505.13729) provides a concrete implementation of this concept.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Decentralized Multi-Robot Navigation` --[[related_to]] ⚠️--> `SayCoNav` _(wikilink)_
+- `Decentralized Multi-Robot Navigation` --related_to ⚠️--> `SayCoNav` _(wikilink)_

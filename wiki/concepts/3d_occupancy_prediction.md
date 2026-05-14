@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 # 3D Occupancy Prediction
 
-3D Occupancy Prediction is a technique in embodied AI that predicts whether each voxel (3D cell) in a volumetric grid is occupied or free. It provides the agent with a geometric understanding of the environment, distinguishing between free space and obstacles. This forms a core component of [[Volumetric Environment Representation]] and enables reliable [[Navigation]] ⚠️ ⚠️.
+3D Occupancy Prediction is a technique in embodied AI that predicts whether each voxel (3D cell) in a volumetric grid is occupied or free. It provides the agent with a geometric understanding of the environment, distinguishing between free space and obstacles. This forms a core component of Volumetric Environment Representation and enables reliable Navigation ⚠️ ⚠️.
 
 ## Definition
 
@@ -29,21 +29,21 @@ source_type: arxiv_paper
 
 ## Role
 
-3D occupancy prediction helps the agent understand the free space, obstacles, and semantic content of the environment. This understanding is critical for planning collision‑free paths and making informed decisions during [[Visual Language Navigation (VLN)]] ⚠️.
+3D occupancy prediction helps the agent understand the free space, obstacles, and semantic content of the environment. This understanding is critical for planning collision‑free paths and making informed decisions during Visual Language Navigation (VLN) ⚠️.
 
 ## Relationships
 
 - **part_of**:
-  - [[Multi-Task Learning for VLN]] – occupancy prediction is often trained jointly with other objectives.
-  - [[Volumetric Environment Representation]] – it produces the scalar occupancy field that represents the environment.
-  - [[Semantic Scene Understanding]] ⚠️ – by predicting semantic labels alongside occupancy.
+  - Multi-Task Learning for VLN – occupancy prediction is often trained jointly with other objectives.
+  - Volumetric Environment Representation – it produces the scalar occupancy field that represents the environment.
+  - Semantic Scene Understanding ⚠️ – by predicting semantic labels alongside occupancy.
 - **depends_on**:
-  - [[Voxel Grid]] ⚠️ – the discretised 3D grid over which occupancy is predicted.
-  - [[3D Perception]] ⚠️ – input modalities such as [[Depth Sensors]] ⚠️ or monocular depth estimation.
-- **implements**: Geometric and semantic awareness required by [[Navigation]] ⚠️ ⚠️ and [[Path Planning]] ⚠️.
+  - Voxel Grid ⚠️ – the discretised 3D grid over which occupancy is predicted.
+  - 3D Perception ⚠️ – input modalities such as Depth Sensors ⚠️ or monocular depth estimation.
+- **implements**: Geometric and semantic awareness required by Navigation ⚠️ ⚠️ and Path Planning ⚠️.
 - **used_by**:
-  - [[Embodied Agents]] ⚠️ that operate in partially observable 3D environments.
-  - [[RoboOcc]] – a unified framework that leverages 3D occupancy prediction for robot perception and control.
+  - Embodied Agents ⚠️ that operate in partially observable 3D environments.
+  - RoboOcc – a unified framework that leverages 3D occupancy prediction for robot perception and control.
 
 ## References
 

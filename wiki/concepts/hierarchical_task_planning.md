@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Hierarchical Task Planning
 
-**Hierarchical Task Planning** is a concept in embodied AI where a high-level reasoning module — typically a [[Large Language Model]] (LLM) — decomposes long-horizon tasks into a sequence of manageable sub-tasks, each of which is executed by a lower-level controller. This approach bridges symbolic planning and continuous control, enabling robots to perform complex, multi-step operations in dynamic environments.
+**Hierarchical Task Planning** is a concept in embodied AI where a high-level reasoning module — typically a Large Language Model (LLM) — decomposes long-horizon tasks into a sequence of manageable sub-tasks, each of which is executed by a lower-level controller. This approach bridges symbolic planning and continuous control, enabling robots to perform complex, multi-step operations in dynamic environments.
 
 ## Description
 
@@ -28,22 +28,22 @@ A framework where high-level planning (via LLMs) is combined with lower-level co
 
 ## Relationships
 
-- **Part of** [[Open-Vocabulary Object Navigation]] ⚠️ ⚠️ — hierarchical planning is a core component that enables agents to navigate and interact with objects specified by free-form language.
-- **Used by** [[LOVON]] — the LOVON system implements this planning hierarchy to perform language-guided navigation in unknown environments.
-- **Depends on** [[LLM]] ⚠️ ⚠️ — the high-level planner relies on an LLM for task decomposition and world knowledge.
+- **Part of** Open-Vocabulary Object Navigation ⚠️ ⚠️ — hierarchical planning is a core component that enables agents to navigate and interact with objects specified by free-form language.
+- **Used by** LOVON — the LOVON system implements this planning hierarchy to perform language-guided navigation in unknown environments.
+- **Depends on** LLM ⚠️ ⚠️ — the high-level planner relies on an LLM for task decomposition and world knowledge.
 - **Implements** the **means-ends analysis** pattern common to classical AI planning, but adapted for continuous robotics.
 
 ## Example Workflow
 
 1. Receive an open-vocabulary instruction: “Bring me the red mug from the kitchen.”
 2. LLM decomposes this into: [navigate to kitchen, locate red mug, approach, grasp, return].
-3. Each sub-task is executed by a specialized controller (e.g., [[ROS2]] navigation stack for movement, grasp network for manipulation).
+3. Each sub-task is executed by a specialized controller (e.g., ROS2 navigation stack for movement, grasp network for manipulation).
 4. Feedback loops refine the plan if sub-tasks fail.
 
 ## Related Pages
 
-- [[LOVON]]
-- [[Open-Vocabulary Object Navigation]] ⚠️ ⚠️
-- [[LLM]] ⚠️ ⚠️
-- [[Task Planning in Robotics]] ⚠️
-- [[ROS2 Navigation Stack]] ⚠️
+- LOVON
+- Open-Vocabulary Object Navigation ⚠️ ⚠️
+- LLM ⚠️ ⚠️
+- Task Planning in Robotics ⚠️
+- ROS2 Navigation Stack ⚠️

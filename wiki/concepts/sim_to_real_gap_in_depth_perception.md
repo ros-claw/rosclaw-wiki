@@ -26,14 +26,14 @@ When training visual policies for manipulation or locomotion in simulation, agen
 - **Sensor noise**: Real depth data contains invalid pixels, Gaussian noise, and depth-dependent variance.
 - **Lighting effects**: Specular surfaces, transparency, and ambient light interfere with stereo matching or time-of-flight measurements.
 
-These differences cause a distribution shift that degrades policy performance upon deployment, as the agent encounters previously unseen input patterns. This gap is a subclass of the broader [[Sim-to-Real Transfer Problem|sim-to-real transfer problem]], specifically focusing on perceptual mismatch in depth modality.
+These differences cause a distribution shift that degrades policy performance upon deployment, as the agent encounters previously unseen input patterns. This gap is a subclass of the broader sim-to-real transfer problem, specifically focusing on perceptual mismatch in depth modality.
 
 ### Relationships
 
-- **Addressed by** `[[Realistic Depth Images Synthetic Method]]` — a technique that generates training depth images with simulated noise, occlusions, and lighting effects to better approximate real sensor outputs.
-- **Related to** `[[Depth Perception]] ⚠️` — the fundamental capability that the gap undermines.
-- **Related to** `[[Domain Randomization]] ⚠️` — a common approach for mitigating sim-to-real gaps by randomizing simulation parameters, though often tailored for RGB rather than depth.
-- **Related to** `[[Simulation]] ⚠️` — the environment that creates the idealized depth data.
+- **Addressed by** `Realistic Depth Images Synthetic Method` — a technique that generates training depth images with simulated noise, occlusions, and lighting effects to better approximate real sensor outputs.
+- **Related to** `Depth Perception ⚠️` — the fundamental capability that the gap undermines.
+- **Related to** `Domain Randomization ⚠️` — a common approach for mitigating sim-to-real gaps by randomizing simulation parameters, though often tailored for RGB rather than depth.
+- **Related to** `Simulation ⚠️` — the environment that creates the idealized depth data.
 
 ### Sources
 
@@ -42,4 +42,4 @@ These differences cause a distribution shift that degrades policy performance up
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Sim-to-Real Gap in Depth Perception` --[[related_to]] ⚠️--> `Realistic Depth Images Synthetic Method` _(wikilink)_
+- `Sim-to-Real Gap in Depth Perception` --related_to ⚠️--> `Realistic Depth Images Synthetic Method` _(wikilink)_

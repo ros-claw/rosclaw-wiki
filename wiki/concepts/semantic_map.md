@@ -31,7 +31,7 @@ Unlike traditional occupancy or costmap grids, a Semantic Map labels each cell (
 | **Type** | Spatial representation |
 | **Usage** | Top-down grid that encodes semantic categories of objects and regions |
 | **Common formats** | 2D grid with categorical labels per cell; sometimes multi-layered (e.g., separate channels for object, region, affordance) |
-| **Construction** | Often built by fusing geometric SLAM (e.g., [[Occupancy Grid]] ⚠️) with semantic segmentation from vision models |
+| **Construction** | Often built by fusing geometric SLAM (e.g., Occupancy Grid ⚠️) with semantic segmentation from vision models |
 
 ## Capabilities
 
@@ -40,17 +40,17 @@ Unlike traditional occupancy or costmap grids, a Semantic Map labels each cell (
 
 ## Relationships
 
-- **Used by**: [[Annotated Semantic Map (ASM)]] — the ASM extends this base concept by attaching additional annotations (e.g., affordances, task relevance flags) to the grid cells.
-- **Depends on**: [[SLAM]] or [[Semantic Segmentation]] ⚠️ for map building.
+- **Used by**: Annotated Semantic Map (ASM) — the ASM extends this base concept by attaching additional annotations (e.g., affordances, task relevance flags) to the grid cells.
+- **Depends on**: SLAM or Semantic Segmentation ⚠️ for map building.
 
 ## See Also
 
-- [[Semantic Mapping]] ⚠️
-- [[Spatial AI]] ⚠️
-- [[Semantic Navigation]] ⚠️
-- [[Environment Representation]] ⚠️
+- Semantic Mapping ⚠️
+- Spatial AI ⚠️
+- Semantic Navigation ⚠️
+- Environment Representation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Semantic Map` --[[related_to]] ⚠️--> `SLAM` _(wikilink)_
+- `Semantic Map` --related_to ⚠️--> `SLAM` _(wikilink)_

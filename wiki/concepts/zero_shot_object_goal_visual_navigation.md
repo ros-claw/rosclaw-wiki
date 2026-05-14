@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Zero-shot Object Goal Visual Navigation
 
-**Zero-shot object goal visual navigation** is a [[object goal visual navigation]] paradigm that extends the navigation capability to find target objects from **novel classes** that were not seen during training. Instead of relying on class-specific visual features or training samples for every possible target, this approach leverages **semantic similarities** between known and unknown classes to generalize the navigation policy.
+**Zero-shot object goal visual navigation** is a object goal visual navigation paradigm that extends the navigation capability to find target objects from **novel classes** that were not seen during training. Instead of relying on class-specific visual features or training samples for every possible target, this approach leverages **semantic similarities** between known and unknown classes to generalize the navigation policy.
 
 ## Description
 
@@ -27,19 +27,19 @@ Zero-shot object goal visual navigation addresses the limitation of traditional 
 
 ## Relationships
 
-- **is_a**: [[object goal visual navigation]] — it is a specialized form of navigation that incorporates zero-shot generalization.
-- **uses**: [[Semantic Similarity Network (SSNet)]] — a neural architecture that computes semantic similarity between the target object description and observed scene features, enabling zero-shot inference.
+- **is_a**: object goal visual navigation — it is a specialized form of navigation that incorporates zero-shot generalization.
+- **uses**: Semantic Similarity Network (SSNet) — a neural architecture that computes semantic similarity between the target object description and observed scene features, enabling zero-shot inference.
 
 ## Related Concepts
 
-- [[Embodied AI]]
-- [[Visual Navigation]]
-- [[Semantic Embeddings]] ⚠️
-- [[Novel Object Detection]] ⚠️
+- Embodied AI
+- Visual Navigation
+- Semantic Embeddings ⚠️
+- Novel Object Detection ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Zero-shot object goal visual navigation` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Zero-shot object goal visual navigation` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Zero-shot object goal visual navigation` --[[related_to]] ⚠️ ⚠️--> `Semantic Similarity Network (SSNet)` _(wikilink)_
+- `Zero-shot object goal visual navigation` --related_to ⚠️ ⚠️--> `Semantic Similarity Network (SSNet)` _(wikilink)_

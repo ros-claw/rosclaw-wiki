@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Visibility-based Viewpoint Decision
 
-**Visibility-based Viewpoint Decision** is an algorithm that explicitly addresses the [[Last Mile Problem]] ⚠️ ⚠️ ⚠️ in [[Zero-Shot Navigation]]. It determines a feasible target location along with a suitable final viewpoint, ensuring that the navigable path ends at a position where the target object is visible and reachable.
+**Visibility-based Viewpoint Decision** is an algorithm that explicitly addresses the Last Mile Problem ⚠️ ⚠️ ⚠️ in Zero-Shot Navigation. It determines a feasible target location along with a suitable final viewpoint, ensuring that the navigable path ends at a position where the target object is visible and reachable.
 
 ### Description
 
@@ -28,19 +28,19 @@ The algorithm resolves the last mile challenge by evaluating candidate viewpoint
 
 ### Relationships
 
-- **part_of** [[MSGNav]] — Visibility-based Viewpoint Decision is a component of the MSGNav pipeline, handling the terminal stage of navigation.
-- **depends_on** [[Last Mile Problem|Last Mile Problem formulation]] — the algorithm directly solves this known difficulty in goal-oriented navigation.
-- **implements** [[Zero-Shot Navigation]] principles by using only geometric and visibility reasoning without environment-specific training.
-- **uses** [[Viewpoint Planning]] ⚠️ ⚠️ concepts to rank candidate positions.
+- **part_of** MSGNav — Visibility-based Viewpoint Decision is a component of the MSGNav pipeline, handling the terminal stage of navigation.
+- **depends_on** Last Mile Problem formulation — the algorithm directly solves this known difficulty in goal-oriented navigation.
+- **implements** Zero-Shot Navigation principles by using only geometric and visibility reasoning without environment-specific training.
+- **uses** Viewpoint Planning ⚠️ ⚠️ concepts to rank candidate positions.
 
 ### Related Concepts
 
-- [[MSGNav]]
-- [[Zero-Shot Navigation]]
-- [[Viewpoint Planning]] ⚠️ ⚠️
-- [[Last Mile Problem]] ⚠️ ⚠️ ⚠️
+- MSGNav
+- Zero-Shot Navigation
+- Viewpoint Planning ⚠️ ⚠️
+- Last Mile Problem ⚠️ ⚠️ ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visibility-based Viewpoint Decision` --[[extends]] ⚠️--> `MSGNav`
+- `Visibility-based Viewpoint Decision` --extends ⚠️--> `MSGNav`

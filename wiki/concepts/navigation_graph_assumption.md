@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Definition
 
-The **Navigation-Graph Assumption** is a simplifying premise used in [[Vision-and-Language Navigation (VLN)]] ⚠️ research. It posits that the environment is represented as a graph of discrete panoramic nodes with known connectivity. Under this assumption, agents are granted short-range [[Oracle Navigation]] ⚠️ ⚠️ (the ability to move directly from one node to an adjacent node without low‑level control) and [[Perfect Localization]] ⚠️ ⚠️ (knowing exactly which node they occupy at all times).
+The **Navigation-Graph Assumption** is a simplifying premise used in Vision-and-Language Navigation (VLN) ⚠️ research. It posits that the environment is represented as a graph of discrete panoramic nodes with known connectivity. Under this assumption, agents are granted short-range Oracle Navigation ⚠️ ⚠️ (the ability to move directly from one node to an adjacent node without low‑level control) and Perfect Localization ⚠️ ⚠️ (knowing exactly which node they occupy at all times).
 
 This assumption dramatically reduces the difficulty of the navigation task by stripping away challenges of continuous motion, perceptual aliasing, and planning over unbounded action spaces. It has been the dominant paradigm in VLN benchmarks (e.g., Room‑to‑Room, Touchdown) since the field’s inception.
 
@@ -26,7 +26,7 @@ The Navigation-Graph Assumption significantly inflates reported model performanc
 
 ## Relationships
 
-- **Depends on**: [[Known Environment Topology]] ⚠️, [[Oracle Navigation]] ⚠️ ⚠️, [[Perfect Localization]] ⚠️ ⚠️
-- **Contradicts**: [[Continuous Environment VLN]] ⚠️
+- **Depends on**: Known Environment Topology ⚠️, Oracle Navigation ⚠️ ⚠️, Perfect Localization ⚠️ ⚠️
+- **Contradicts**: Continuous Environment VLN ⚠️
 
 *Source: arxiv paper 2004.02857*

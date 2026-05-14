@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## MM-Nav
 
-**MM-Nav** is a multi-view vision-language-action (VLA) model for robust visual navigation. It leverages pretrained [[Large Language Models (LLMs)]] and pretrained [[Visual Foundation Models]] ⚠️ to process multi-view 360° observations and produce navigation actions. The model is trained via a teacher-student paradigm using [[RL Experts]] ⚠️ ⚠️ ⚠️ and dynamically balanced online data collection.
+**MM-Nav** is a multi-view vision-language-action (VLA) model for robust visual navigation. It leverages pretrained Large Language Models (LLMs) and pretrained Visual Foundation Models ⚠️ to process multi-view 360° observations and produce navigation actions. The model is trained via a teacher-student paradigm using RL Experts ⚠️ ⚠️ ⚠️ and dynamically balanced online data collection.
 
 ### Overview
 
@@ -34,7 +34,7 @@ The model demonstrates four primary capabilities:
 MM-Nav is trained using an iterative teacher-student framework:
 
 - **Base model**: A student network initialized from pretrained LLMs and visual foundation models. These base models provide strong priors for language understanding and visual feature extraction.
-- **Teacher experts**: Three [[RL Experts]] ⚠️ ⚠️ ⚠️ are trained in custom simulation environments with access to **privileged depth information** (ground-truth depth). These experts provide high-quality demonstration data for the student.
+- **Teacher experts**: Three RL Experts ⚠️ ⚠️ ⚠️ are trained in custom simulation environments with access to **privileged depth information** (ground-truth depth). These experts provide high-quality demonstration data for the student.
 - **Data collection**: Training data is collected online from the RL experts (teacher policies). A **dynamically balanced training ratio** is applied: the proportion of data from each capability (reaching, squeezing, avoiding) is adjusted based on the student's per-capability performance. For example, if the student's reaching accuracy drops, more reaching examples are added to the next training batch.
 - **Training procedure**: The student is trained on this online mixture, then evaluated; the teacher may be refined, and the process repeats. This ensures continuous improvement and adaptation.
 
@@ -46,10 +46,10 @@ MM-Nav adopts a **multi-view VLA architecture** that processes 360° observation
 
 ### Relationships
 
-- **Depends on**: [[Pretrained Large Language Models]] ⚠️, [[Pretrained Visual Foundation Models]] ⚠️, [[RL Experts]] ⚠️ ⚠️ ⚠️, and **privileged depth information** (during teacher training).
+- **Depends on**: Pretrained Large Language Models ⚠️, Pretrained Visual Foundation Models ⚠️, RL Experts ⚠️ ⚠️ ⚠️, and **privileged depth information** (during teacher training).
 - **Uses**: reinforcement learning experts, online data collection, dynamic balancing.
 - **Implements**: A teacher-student imitation learning pipeline for visual navigation.
-- **Related to**: [[VLA Models]] ⚠️, [[Embodied Navigation]], [[Sim-to-Real Transfer]] (if applicable to the paper's test environments).
+- **Related to**: VLA Models ⚠️, Embodied Navigation, Sim-to-Real Transfer (if applicable to the paper's test environments).
 
 ### References
 
@@ -58,4 +58,4 @@ MM-Nav adopts a **multi-view VLA architecture** that processes 360° observation
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `MM-Nav` --[[implements]] ⚠️--> `Large Language Models (LLMs)`
+- `MM-Nav` --implements ⚠️--> `Large Language Models (LLMs)`

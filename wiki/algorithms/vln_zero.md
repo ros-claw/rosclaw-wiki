@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # VLN-Zero
 
-**VLN-Zero** is a two-phase vision-language navigation framework that combines rapid exploration with symbolic reasoning and cache-enabled execution for zero-shot transfer in robot navigation. It enables robots to navigate unfamiliar environments without prior training or fine-tuning, leveraging [[Vision-Language Models (VLM)]] ⚠️ ⚠️ ⚠️ and [[Scene Graphs]] to achieve robust decision-making.
+**VLN-Zero** is a two-phase vision-language navigation framework that combines rapid exploration with symbolic reasoning and cache-enabled execution for zero-shot transfer in robot navigation. It enables robots to navigate unfamiliar environments without prior training or fine-tuning, leveraging Vision-Language Models (VLM) ⚠️ ⚠️ ⚠️ and Scene Graphs to achieve robust decision-making.
 
 ## Overview
 
@@ -22,8 +22,8 @@ The framework operates in two distinct phases: **exploration** and **deployment*
 
 ## Phases
 
-- **Exploration Phase**: The agent builds a [[Scene Graph]] ⚠️ of the environment using structured prompts and [[Vision-Language Models (VLM)]] ⚠️ ⚠️ ⚠️ to recognize objects, regions, and spatial relationships.
-- **Deployment Phase**: A [[Neurosymbolic Planning]] module reasons over the scene graph to generate navigation plans, reusing cached trajectories from prior tasks via **Cache-Enabled Execution**.
+- **Exploration Phase**: The agent builds a Scene Graph ⚠️ of the environment using structured prompts and Vision-Language Models (VLM) ⚠️ ⚠️ ⚠️ to recognize objects, regions, and spatial relationships.
+- **Deployment Phase**: A Neurosymbolic Planning module reasons over the scene graph to generate navigation plans, reusing cached trajectories from prior tasks via **Cache-Enabled Execution**.
 
 ## Capabilities
 
@@ -39,7 +39,7 @@ VLN-Zero achieves **2x higher success rate** than state-of-the-art zero-shot mod
 
 ## Relationships
 
-- **Uses**: [[Vision-Language Models (VLM)]] ⚠️ ⚠️ ⚠️, [[Scene Graphs]], [[Neurosymbolic Planning]], [[Cache-Enabled Execution]]
+- **Uses**: Vision-Language Models (VLM) ⚠️ ⚠️ ⚠️, Scene Graphs, Neurosymbolic Planning, Cache-Enabled Execution
 - **Depends On**: structured prompts, scene graph construction
 - **Implements**: zero-shot visual language navigation
 

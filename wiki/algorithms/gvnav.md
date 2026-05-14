@@ -25,17 +25,17 @@ source_type: arxiv_paper
 
 ### Capabilities
 
-- Enables [[quadruped robots]] ⚠️ with low-height field of view to perform [[Vision-and-Language Navigation|VLN]] in continuous environments
+- Enables quadruped robots ⚠️ with low-height field of view to perform VLN in continuous environments
 - Overcomes visual obstructions and perceptual mismatches
 - Improves performance in both simulated and real-world deployments
 
 ### Methodology
 
-GVNav leverages weighted historical observations as enriched spatiotemporal contexts to manage feature collisions. It transfers connectivity graphs from [[HM3D]] and [[Gibson]] ⚠️ datasets to enhance spatial priors. The algorithm uses a [[waypoint predictor]] to generate candidate waypoints and then scores them using the weighted historical context, effectively compensating for the limited visual range of a ground-level camera.
+GVNav leverages weighted historical observations as enriched spatiotemporal contexts to manage feature collisions. It transfers connectivity graphs from HM3D and Gibson ⚠️ datasets to enhance spatial priors. The algorithm uses a waypoint predictor to generate candidate waypoints and then scores them using the weighted historical context, effectively compensating for the limited visual range of a ground-level camera.
 
-{{uses: [[Weighted historical observations]] ⚠️ ⚠️, [[Connectivity graph from HM3D and Gibson]] ⚠️ ⚠️}}
+{{uses: Weighted historical observations ⚠️ ⚠️, Connectivity graph from HM3D and Gibson ⚠️ ⚠️}}
 
-{{depends_on: [[Vision-and-Language Navigation]] (VLN), [[Waypoint predictor]]}}
+{{depends_on: Vision-and-Language Navigation (VLN), Waypoint predictor}}
 
 ### Significance
 
@@ -43,13 +43,13 @@ GVNav is the first attempt to highlight the generalization gap in VLN across var
 
 ### Relationships
 
-- **Uses** → [[Weighted historical observations]] ⚠️ ⚠️, [[Connectivity graph from HM3D and Gibson]] ⚠️ ⚠️
-- **Depends on** → [[Vision-and-Language Navigation]] (VLN), [[Waypoint predictor]]
-- **Related to** → [[Sim-to-real transfer]], [[Continuous Environment Navigation]] ⚠️
+- **Uses** → Weighted historical observations ⚠️ ⚠️, Connectivity graph from HM3D and Gibson ⚠️ ⚠️
+- **Depends on** → Vision-and-Language Navigation (VLN), Waypoint predictor
+- **Related to** → Sim-to-real transfer, Continuous Environment Navigation ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `GVNav` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
-- `GVNav` --[[extends]] ⚠️ ⚠️--> `waypoint predictor`
-- `GVNav` --[[extends]] ⚠️ ⚠️--> `Waypoint predictor`
+- `GVNav` --based_on ⚠️--> `Vision-and-Language Navigation`
+- `GVNav` --extends ⚠️ ⚠️--> `waypoint predictor`
+- `GVNav` --extends ⚠️ ⚠️--> `Waypoint predictor`

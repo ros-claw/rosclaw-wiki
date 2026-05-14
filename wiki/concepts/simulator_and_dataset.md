@@ -21,7 +21,7 @@ sources:
 | [[matterport3d_simulator|Matterport3D Simulator]] | First VLN simulator, discrete graph |
 | [[ai_habitat|AI Habitat]] | High-performance 3D simulator |
 | [[habitat_sim|Habitat-Sim]] | Photorealistic simulator |
-| [[vlnerse|VLNVerse]] | NVIDIA Isaac Sim-based, 263 scenes |
+| VLNVerse | NVIDIA Isaac Sim-based, 263 scenes |
 
 ## Datasets
 
@@ -33,6 +33,6 @@ sources:
 | [[reverie|REVERIE]] | 90 | 10K | Remote referring expression |
 | [[soon|SOON]] | 90 | 4K | Scenario-oriented object nav |
 | [[cvdn|CVDN]] | 83 | 2K | Dialog-based navigation |
-| [[alfred|ALFRED]] | 120 | 25K | Task-oriented household |
-| [[scale_vln|ScaleVLN]] | - | 4M+ | Scaled synthetic data |
+| ALFRED | 120 | 25K | Task-oriented household |
+| ScaleVLN | - | 4M+ | Scaled synthetic data |
 

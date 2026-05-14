@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-**Humanoid Occupancy** is a generalized multimodal occupancy perception system designed specifically for [[Humanoid Robot|humanoid robots]]. It integrates hardware configuration, software architecture, data acquisition, and an annotation pipeline to produce a holistic understanding of the robot's environment. The system outputs a grid-based occupancy representation that encodes both occupancy status and semantic labels, enabling higher-level tasks such as [[Task Planning|task planning]] and [[Navigation|navigation]].
+**Humanoid Occupancy** is a generalized multimodal occupancy perception system designed specifically for humanoid robots. It integrates hardware configuration, software architecture, data acquisition, and an annotation pipeline to produce a holistic understanding of the robot's environment. The system outputs a grid-based occupancy representation that encodes both occupancy status and semantic labels, enabling higher-level tasks such as task planning and navigation.
 
 ### Challenges Addressed
 
@@ -39,19 +39,19 @@ Humanoid robots face unique perception challenges that are explicitly handled by
 |--------|-------------|
 | **Input Modalities** | Multi-modal (implied, not fully specified in source) |
 | **Output Type** | Grid-based occupancy with per-cell semantic labels |
-| **Fusion Technique** | [[Multi-modal feature fusion]] |
+| **Fusion Technique** | Multi-modal feature fusion |
 
 The output grid provides a dense, structured representation of the environment that can be consumed by downstream planners and controllers.
 
 ### Relationships
 
 - **Uses**:
-  - [[Multi-modal feature fusion]]
-  - [[Temporal information integration]]
+  - Multi-modal feature fusion
+  - Temporal information integration
 - **Depends on**:
-  - [[Occupancy-based representation]]
+  - Occupancy-based representation
 - **Produces**:
-  - [[Environmental understanding|Environmental understanding for humanoid robots]]
+  - Environmental understanding for humanoid robots
 
 ### Parameters
 
@@ -61,12 +61,12 @@ The output grid provides a dense, structured representation of the environment t
 
 ### See Also
 
-- [[Occupancy Grid Mapping]] ⚠️
-- [[Semantic Segmentation]] ⚠️
-- [[Humanoid Robotics Perception]] ⚠️
-- [[Sensor Fusion]] ⚠️
+- Occupancy Grid Mapping ⚠️
+- Semantic Segmentation ⚠️
+- Humanoid Robotics Perception ⚠️
+- Sensor Fusion ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Humanoid Occupancy` --[[implements]] ⚠️--> `Humanoid Robot`
+- `Humanoid Occupancy` --implements ⚠️--> `Humanoid Robot`

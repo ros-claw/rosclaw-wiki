@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 ## Depth Images as Exteroceptive Input
 
-Depth images are a form of exteroceptive sensing that provide per-pixel distance measurements from a [[Depth Camera]] ⚠️ ⚠️ to objects in the environment. In the context of legged locomotion, depth images enable the policy to perceive the geometry of the terrain ahead, allowing reactive and anticipatory adjustments during movement. They serve as the primary perception input for terrain navigation, especially in unstructured outdoor environments where foot placement and body posture must adapt continuously.
+Depth images are a form of exteroceptive sensing that provide per-pixel distance measurements from a Depth Camera ⚠️ ⚠️ to objects in the environment. In the context of legged locomotion, depth images enable the policy to perceive the geometry of the terrain ahead, allowing reactive and anticipatory adjustments during movement. They serve as the primary perception input for terrain navigation, especially in unstructured outdoor environments where foot placement and body posture must adapt continuously.
 
 ### Sensor Role
 
-- **Sensor type**: [[Depth Camera]] ⚠️ ⚠️
+- **Sensor type**: Depth Camera ⚠️ ⚠️
 - **Role**: Perception for terrain navigation
 
 The depth camera captures a 2.5D representation of the surroundings, which is fed into the control policy as a visual observation. This allows the agent to build a spatial understanding of the ground surface, obstacles, and slopes without relying on explicit mapping or semantic labels.
@@ -34,16 +34,16 @@ Depth images provide exteroceptive information allowing the policy to perceive a
 ### Relationships
 
 - **Used by**:
-  - [[Agile Locomotion]] – Policies trained for high-speed, dynamic locomotion leverage depth perception to preemptively adjust gait and posture.
-  - [[ANYmal D]] – This quadruped platform integrates depth imagery as a core input for its locomotion controller, enabling autonomous deployment in rough terrain.
+  - Agile Locomotion – Policies trained for high-speed, dynamic locomotion leverage depth perception to preemptively adjust gait and posture.
+  - ANYmal D – This quadruped platform integrates depth imagery as a core input for its locomotion controller, enabling autonomous deployment in rough terrain.
 
 ### See Also
 
-- [[Exteroception]] ⚠️ – Broader concept of sensing the external environment.
-- [[Sim-to-Real Transfer]] – Depth images are often rendered in simulation and transferred to real sensors via domain randomization.
-- [[Terrain Classification]] ⚠️ – While depth images provide geometry, they can be combined with semantic labels for more informed decisions.
+- Exteroception ⚠️ – Broader concept of sensing the external environment.
+- Sim-to-Real Transfer – Depth images are often rendered in simulation and transferred to real sensors via domain randomization.
+- Terrain Classification ⚠️ – While depth images provide geometry, they can be combined with semantic labels for more informed decisions.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Depth Images as Exteroceptive Input` --[[applies_to]] ⚠️--> `ANYmal D`
+- `Depth Images as Exteroceptive Input` --applies_to ⚠️--> `ANYmal D`

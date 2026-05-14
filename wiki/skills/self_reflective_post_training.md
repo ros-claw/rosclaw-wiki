@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Self-Reflective Post-Training
 
-**Self-Reflective Post-Training** is a second-stage, iterative skill that enhances a model's reasoning by leveraging its own outputs in a [[Self-Reflective auxiliary task]]. It builds upon [[Formalized CoT Supervised Fine-Tuning]] to improve reasoning diversity and correctness. This skill is a core component of the [[EvolveNav]] framework.
+**Self-Reflective Post-Training** is a second-stage, iterative skill that enhances a model's reasoning by leveraging its own outputs in a Self-Reflective auxiliary task. It builds upon Formalized CoT Supervised Fine-Tuning to improve reasoning diversity and correctness. This skill is a core component of the EvolveNav framework.
 
 ## Key Characteristics
 
@@ -24,14 +24,14 @@ source_type: arxiv_paper
 
 ## Capabilities
 
-- **Enhances supervision diversity** by enriching [[Chain-of-Thought]] ⚠️ (CoT) labels using the model's own generated reasoning paths.
+- **Enhances supervision diversity** by enriching Chain-of-Thought ⚠️ (CoT) labels using the model's own generated reasoning paths.
 - **Encourages learning correct reasoning patterns** by contrasting them with incorrect ones (e.g., via contrastive learning or self‑critique).
 
 ## Relationships
 
-- **part_of**: [[EvolveNav]]
-- **uses**: The model’s own reasoning outputs, [[Self-Reflective auxiliary task]]
-- **depends_on**: [[Formalized CoT Supervised Fine-Tuning]]
+- **part_of**: EvolveNav
+- **uses**: The model’s own reasoning outputs, Self-Reflective auxiliary task
+- **depends_on**: Formalized CoT Supervised Fine-Tuning
 
 ## Source
 
@@ -44,4 +44,4 @@ This page is based on the paper *2506.01551.pdf* (arXiv).
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Self-Reflective Post-Training` --[[uses]] ⚠️--> `EvolveNav`
+- `Self-Reflective Post-Training` --uses ⚠️--> `EvolveNav`

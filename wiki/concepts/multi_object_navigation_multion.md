@@ -25,7 +25,7 @@ In MultiON, the goal is to search for and navigate to several different objects 
 - Leverage complementary sensing, mobility, or manipulation strengths.
 - Adapt their search strategies based on real-time discoveries.
 
-MultiON is a multi-agent extension of [[Object Navigation]] ⚠️ ⚠️ and serves as a benchmark for heterogeneous robot team coordination.
+MultiON is a multi-agent extension of Object Navigation ⚠️ ⚠️ and serves as a benchmark for heterogeneous robot team coordination.
 
 ## Key Characteristics
 
@@ -44,9 +44,9 @@ MultiON is a multi-agent extension of [[Object Navigation]] ⚠️ ⚠️ and se
 
 ## Relationship to Other Concepts
 
-- **Implements**: [[Object Navigation]] ⚠️ ⚠️ – MultiON generalizes single-object navigation to multiple, unseen objects.
-- **Used by**: [[SayCoNav]] (SayCan+Navigation) – a recent embodied agent that employs language-conditioned policies for MultiON tasks.
-- **Depends on**: [[Multi-Agent Coordination]] ⚠️ and [[Exploration vs. Exploitation]] ⚠️.
+- **Implements**: Object Navigation ⚠️ ⚠️ – MultiON generalizes single-object navigation to multiple, unseen objects.
+- **Used by**: SayCoNav (SayCan+Navigation) – a recent embodied agent that employs language-conditioned policies for MultiON tasks.
+- **Depends on**: Multi-Agent Coordination ⚠️ and Exploration vs. Exploitation ⚠️.
 
 ## Source
 
@@ -54,11 +54,11 @@ This page is based on arxiv paper **2505.13729** ( *SayCoNav: Language-Condition
 
 ## See Also
 
-- [[Object Goal Navigation]]
-- [[Embodied AI Benchmarks]] ⚠️
-- [[Heterogeneous Robot Teams]] ⚠️
+- Object Goal Navigation
+- Embodied AI Benchmarks ⚠️
+- Heterogeneous Robot Teams ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Multi-Object Navigation (MultiON)` --[[related_to]] ⚠️--> `SayCoNav` _(wikilink)_
+- `Multi-Object Navigation (MultiON)` --related_to ⚠️--> `SayCoNav` _(wikilink)_

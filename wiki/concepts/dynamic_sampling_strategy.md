@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Dynamic Sampling Strategy
 
-The **Dynamic Sampling Strategy** is a technique for controlling the number of observation tokens consumed by a model at inference time, subject to a **[[token length budget]] ⚠️**. By dynamically adjusting how many tokens are sampled for each observation, the strategy reduces computational load while preserving task performance, making it suitable for real-time or resource-constrained deployment.
+The **Dynamic Sampling Strategy** is a technique for controlling the number of observation tokens consumed by a model at inference time, subject to a **token length budget ⚠️**. By dynamically adjusting how many tokens are sampled for each observation, the strategy reduces computational load while preserving task performance, making it suitable for real-time or resource-constrained deployment.
 
 ## Parameters
 
@@ -29,7 +29,7 @@ The **Dynamic Sampling Strategy** is a technique for controlling the number of o
 
 | Relation | Entity | Description |
 |----------|--------|-------------|
-| `used_by` | [[NavFoM]] | The NavFoM system incorporates this strategy to stay within inference budgets. |
+| `used_by` | NavFoM | The NavFoM system incorporates this strategy to stay within inference budgets. |
 | `purpose` | — | Reduce computational load while maintaining performance. |
 
 ## Method
@@ -43,4 +43,4 @@ Observation tokens are dynamically adjusted under a token length budget to balan
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Dynamic Sampling Strategy` --[[related_to]] ⚠️--> `NavFoM` _(wikilink)_
+- `Dynamic Sampling Strategy` --related_to ⚠️--> `NavFoM` _(wikilink)_

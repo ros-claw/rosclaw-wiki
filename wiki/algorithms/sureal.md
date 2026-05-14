@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-Supervised Reinforcement Asynchronous Learning (SuReAL) is a learning framework that combines supervised learning for predicting positions to visit and reinforcement learning for continuous control. It is designed for mapping natural language instructions and first-person observations to continuous control in [[Quadcopter]] ⚠️ flight, using both [[Simulated Environment|simulated]] and [[Real Environment|real environments]] without requiring autonomous flight in the physical environment during training.
+Supervised Reinforcement Asynchronous Learning (SuReAL) is a learning framework that combines supervised learning for predicting positions to visit and reinforcement learning for continuous control. It is designed for mapping natural language instructions and first-person observations to continuous control in Quadcopter ⚠️ flight, using both simulated and real environments without requiring autonomous flight in the physical environment during training.
 
 ## Capabilities
 
@@ -26,8 +26,8 @@ Supervised Reinforcement Asynchronous Learning (SuReAL) is a learning framework 
 
 ## Relationships
 
-- **Uses**: [[Supervised Learning]] ⚠️ and [[Reinforcement Learning]].
-- **Depends on**: [[Simulated Environment]] ⚠️ ⚠️ and [[Real Environment]] ⚠️ ⚠️.
+- **Uses**: Supervised Learning ⚠️ and Reinforcement Learning.
+- **Depends on**: Simulated Environment ⚠️ ⚠️ and Real Environment ⚠️ ⚠️.
 
 ## Parameters
 

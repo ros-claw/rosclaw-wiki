@@ -24,8 +24,8 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Is property of** → [[NavFoM]]: The Navigation Foundation Model (NavFoM) architecture is designed around cross‑embodiment generalization, allowing it to control wheeled, legged, and aerial platforms from a unified policy.
-- **Contrasts with** → [[single‑embodiment architectures]] ⚠️: Traditional approaches train separate policies for each robot morphology, requiring significant redesign and retraining when hardware changes.
+- **Is property of** → NavFoM: The Navigation Foundation Model (NavFoM) architecture is designed around cross‑embodiment generalization, allowing it to control wheeled, legged, and aerial platforms from a unified policy.
+- **Contrasts with** → single‑embodiment architectures ⚠️: Traditional approaches train separate policies for each robot morphology, requiring significant redesign and retraining when hardware changes.
 
 ## Importance
 
@@ -38,4 +38,4 @@ Cross‑embodiment generalization is key to scalable deployment in real‑world 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Cross-embodiment` --[[related_to]] ⚠️--> `NavFoM` _(wikilink)_
+- `Cross-embodiment` --related_to ⚠️--> `NavFoM` _(wikilink)_

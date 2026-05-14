@@ -32,14 +32,14 @@ The alignment mechanism typically leverages attention-based or contrastive learn
 ```yaml
 relationships:
   used_in:
-    - [[Vision-and-Language Navigation]]
+    - Vision-and-Language Navigation
   implemented_by:
-    - [[GELA]] ⚠️ ⚠️
+    - GELA ⚠️ ⚠️
   depends_on:
-    - [[Cross-modal Alignment]] (broader concept)
-    - [[Entity-level grounding]] ⚠️ ⚠️
+    - Cross-modal Alignment (broader concept)
+    - Entity-level grounding ⚠️ ⚠️
   part_of:
-    - [[Fine-grained Visual Grounding]] ⚠️ ⚠️
+    - Fine-grained Visual Grounding ⚠️ ⚠️
 ```
 
 ## Implementation Details
@@ -50,14 +50,14 @@ relationships:
 
 ## Related Pages
 
-- [[Cross-modal Alignment]] – global and coarse variants
-- [[GELA]] ⚠️ ⚠️ – a system that implements fine-grained entity-level alignment for navigation
-- [[Vision-and-Language Navigation]] – the primary application domain
-- [[Entity-level grounding]] ⚠️ ⚠️ – broader concept in grounded language understanding
-- [[Fine-grained Visual Grounding]] ⚠️ ⚠️ – general task of localizing specific objects from language
+- Cross-modal Alignment – global and coarse variants
+- GELA ⚠️ ⚠️ – a system that implements fine-grained entity-level alignment for navigation
+- Vision-and-Language Navigation – the primary application domain
+- Entity-level grounding ⚠️ ⚠️ – broader concept in grounded language understanding
+- Fine-grained Visual Grounding ⚠️ ⚠️ – general task of localizing specific objects from language
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Cross-modal alignment (fine-grained entity-level)` --[[related_to]] ⚠️ ⚠️--> `Vision-and-Language Navigation`
-- `Cross-modal alignment (fine-grained entity-level)` --[[related_to]] ⚠️ ⚠️--> `Cross-modal Alignment`
+- `Cross-modal alignment (fine-grained entity-level)` --related_to ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `Cross-modal alignment (fine-grained entity-level)` --related_to ⚠️ ⚠️--> `Cross-modal Alignment`

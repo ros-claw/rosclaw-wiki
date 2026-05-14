@@ -26,13 +26,13 @@ source_type: arxiv_paper
 
 This concept **depends_on**:
 
-- [[Foundation models]] – for zero-shot language understanding and visual grounding.
-- [[Semantic reasoning]] – to interpret natural language queries and relate them to sensory data.
-- [[Geometric exploration]] ⚠️ – to plan and execute efficient search trajectories in unknown spaces.
+- Foundation models – for zero-shot language understanding and visual grounding.
+- Semantic reasoning – to interpret natural language queries and relate them to sensory data.
+- Geometric exploration ⚠️ – to plan and execute efficient search trajectories in unknown spaces.
 
 ### Implementations
 
-The primary known implementation is **[[WildOS]]**, which **implements** Open-Vocabulary Object Search in the context of long-range autonomous navigation.
+The primary known implementation is **WildOS**, which **implements** Open-Vocabulary Object Search in the context of long-range autonomous navigation.
 
 ### Importance
 
@@ -45,4 +45,4 @@ Open-vocabulary object search is crucial for long-range autonomous tasks such as
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Open-Vocabulary Object Search` --[[related_to]] ⚠️--> `WildOS` _(wikilink)_
+- `Open-Vocabulary Object Search` --related_to ⚠️--> `WildOS` _(wikilink)_

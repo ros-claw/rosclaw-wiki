@@ -30,8 +30,8 @@ An agile quadruped robot platform with an attached manipulator, designed for mob
 
 ## Relationships
 
-- Used by: [[ODYSSEY]] — this platform is the hardware substrate for the ODYSSEY system.
-- Part of: [[Legged Manipulator Platforms]] ⚠️ — a category of mobile robots combining walking and manipulation.
+- Used by: ODYSSEY — this platform is the hardware substrate for the ODYSSEY system.
+- Part of: Legged Manipulator Platforms ⚠️ — a category of mobile robots combining walking and manipulation.
 
 ## Source
 
@@ -40,4 +40,4 @@ Paper: `arxiv/2508.08240` — *ODYSSEY: Open-World Long-Horizon Mobile Manipulat
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Quadruped Robot with Manipulator` --[[uses]] ⚠️--> `ODYSSEY`
+- `Quadruped Robot with Manipulator` --uses ⚠️--> `ODYSSEY`

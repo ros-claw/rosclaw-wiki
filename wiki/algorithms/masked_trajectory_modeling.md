@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ### Masked Trajectory Modeling
 
-**Masked Trajectory Modeling (MTM)** is a proxy pre-training task designed for the **[[VLN-SIG]]** framework. It operates by randomly masking intermediate steps in a full navigation trajectory and training the model to reconstruct those missing steps. This forces the model to learn the underlying structure and dynamics of navigation sequences, improving its ability to generalize across unseen environments.
+**Masked Trajectory Modeling (MTM)** is a proxy pre-training task designed for the **VLN-SIG** framework. It operates by randomly masking intermediate steps in a full navigation trajectory and training the model to reconstruct those missing steps. This forces the model to learn the underlying structure and dynamics of navigation sequences, improving its ability to generalize across unseen environments.
 
 #### Description
 
@@ -31,12 +31,12 @@ Masked Trajectory Modeling (MTM) is a proxy task that masks intermediate steps i
 #### Capabilities
 
 - Teaches the model to predict missing steps in the full trajectory, thereby learning the sequential structure of navigation.
-- Enhances the model's ability to reason about intermediate positions and actions, which is critical for **[[Visual Language Navigation]] ⚠️**.
+- Enhances the model's ability to reason about intermediate positions and actions, which is critical for **Visual Language Navigation ⚠️**.
 - Serves as a self-supervised signal during in-domain pre-training, bootstrapping more generalizable representations.
 
 #### Relationships
 
-- **Part of** → [[VLN-SIG]]  
-- **Used in** → [[in-domain pre-training]] ⚠️ (within VLN-SIG)  
-- **Related to** → [[Masked Language Modeling]] ⚠️, [[Masked Autoencoding]] ⚠️ – shares the masked reconstruction principle
-- **Depends on** → [[Partial Trajectory Sampling]] ⚠️, [[Tokenization for Navigation Sequences]] ⚠️
+- **Part of** → VLN-SIG  
+- **Used in** → in-domain pre-training ⚠️ (within VLN-SIG)  
+- **Related to** → Masked Language Modeling ⚠️, Masked Autoencoding ⚠️ – shares the masked reconstruction principle
+- **Depends on** → Partial Trajectory Sampling ⚠️, Tokenization for Navigation Sequences ⚠️

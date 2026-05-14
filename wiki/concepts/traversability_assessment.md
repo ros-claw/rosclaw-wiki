@@ -30,19 +30,19 @@ A modern approach uses a **learned forward dynamics model** that predicts the pr
 
 ## Relationships
 
-- **Depends on**: [[Learned Perceptive Forward Dynamics Model]] — the forward dynamics model is the core enabler that maps perception directly to failure probability.
-- **Uses**: [[Failure Probability Prediction]] ⚠️ as the output metric for risk-aware decision-making.
-- **Related to**: [[Terrain Classification]] ⚠️, [[Risk-aware Control]] ⚠️, [[Model-based Reinforcement Learning]] ⚠️, [[Legged Locomotion]] ⚠️.
+- **Depends on**: Learned Perceptive Forward Dynamics Model — the forward dynamics model is the core enabler that maps perception directly to failure probability.
+- **Uses**: Failure Probability Prediction ⚠️ as the output metric for risk-aware decision-making.
+- **Related to**: Terrain Classification ⚠️, Risk-aware Control ⚠️, Model-based Reinforcement Learning ⚠️, Legged Locomotion ⚠️.
 
 ## Relevance
 
-Traversability assessment is particularly valuable for legged robots (e.g., [[Unitree G1]], [[Spot]] ⚠️) and outdoor autonomous vehicles operating on unstructured, unpredictable terrain. By replacing hand-tuned cost functions with a learned predictor, it reduces engineering effort and improves robustness to novel environments.
+Traversability assessment is particularly valuable for legged robots (e.g., Unitree G1, Spot ⚠️) and outdoor autonomous vehicles operating on unstructured, unpredictable terrain. By replacing hand-tuned cost functions with a learned predictor, it reduces engineering effort and improves robustness to novel environments.
 
 **Sources**: This page is based on arxiv paper 2504.19322.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Traversability assessment` --[[applies_to]] ⚠️--> `Unitree G1`
+- `Traversability assessment` --applies_to ⚠️--> `Unitree G1`
 **Pending review:**
-- `Traversability assessment` --[[related_to]] ⚠️--> `Learned Perceptive Forward Dynamics Model` _(wikilink)_
+- `Traversability assessment` --related_to ⚠️--> `Learned Perceptive Forward Dynamics Model` _(wikilink)_

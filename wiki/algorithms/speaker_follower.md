@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 # Speaker-Follower
 
-The **Speaker-Follower** model is a landmark approach to Vision-and-Language Navigation (VLN) that introduces a dual-model architecture: a **Speaker** that generates natural language instructions from trajectories, and a **Follower** that executes instructions to navigate. This framework enables data augmentation via synthetic instructions and significantly improved performance on the [[R2R]] benchmark.
+The **Speaker-Follower** model is a landmark approach to Vision-and-Language Navigation (VLN) that introduces a dual-model architecture: a **Speaker** that generates natural language instructions from trajectories, and a **Follower** that executes instructions to navigate. This framework enables data augmentation via synthetic instructions and significantly improved performance on the R2R benchmark.
 
 ## Parameters
 
@@ -28,7 +28,7 @@ The **Speaker-Follower** model is a landmark approach to Vision-and-Language Nav
 - **Visual encoder**: ResNet-152 CNN features from panoramic views
 - **Action space**: Discrete (forward, turn left, turn right, stop)
 - **Training**: Imitation learning + reinforcement learning (speaker-driven data augmentation)
-- **Datasets**: [[R2R]] (primary), [[R4R]] ⚠️ (extended)
+- **Datasets**: R2R (primary), R4R ⚠️ (extended)
 
 ## Architecture
 
@@ -51,29 +51,29 @@ The Speaker encodes a trajectory (sequence of visual observations) and generates
 
 ## Performance
 
-On [[R2R]] validation unseen:
+On R2R validation unseen:
 - **Navigation Error (NE)**: ~4.6m (with data augmentation)
 - **Success Rate (SR)**: ~53% (with data augmentation)
 - **Oracle Success Rate (OSR)**: ~63%
 
 ## Relationships
 
-- **Evaluates on**: [[R2R]] — the primary benchmark
-- **Improved by**: [[EnvDrop]] — combining EnvDrop with Speaker-Follower yields better generalization
-- **Extended by**: [[RCM]] ⚠️ — uses reinforcement learning to align speaker and follower more tightly
-- **Precedes**: [[PREVALENT]] — later pretraining methods leverage the speaker-follower intuition at scale
+- **Evaluates on**: R2R — the primary benchmark
+- **Improved by**: EnvDrop — combining EnvDrop with Speaker-Follower yields better generalization
+- **Extended by**: RCM ⚠️ — uses reinforcement learning to align speaker and follower more tightly
+- **Precedes**: PREVALENT — later pretraining methods leverage the speaker-follower intuition at scale
 
 ## See Also
 
-- [[Vision-Language Navigation]] — the broader research area
-- [[R2R]] — the benchmark dataset
-- [[Seq2Seq]] ⚠️ — the underlying sequence modeling paradigm
-- [[Data Augmentation]] ⚠️ — the technique enabled by the Speaker module
+- Vision-Language Navigation — the broader research area
+- R2R — the benchmark dataset
+- Seq2Seq ⚠️ — the underlying sequence modeling paradigm
+- Data Augmentation ⚠️ — the technique enabled by the Speaker module
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Speaker-Follower` --[[implements]] ⚠️ ⚠️--> `R2R`
-- `Speaker-Follower` --[[extends]] ⚠️--> `EnvDrop`
-- `Speaker-Follower` --[[implements]] ⚠️ ⚠️--> `PREVALENT`
-- `Speaker-Follower` --[[based_on]] ⚠️--> `Vision-Language Navigation`
+- `Speaker-Follower` --implements ⚠️ ⚠️--> `R2R`
+- `Speaker-Follower` --extends ⚠️--> `EnvDrop`
+- `Speaker-Follower` --implements ⚠️ ⚠️--> `PREVALENT`
+- `Speaker-Follower` --based_on ⚠️--> `Vision-Language Navigation`

@@ -19,14 +19,14 @@ supersedes: []
 **Languages:** Python, ROS/ROS2
 
 ## Relationships
-- **Implements / Related to**: [[Gibson dataset]]
-- **Implements / Related to**: [[AI Habitat]]
-- **Implements / Related to**: [[HM3D dataset]]
-- **Implements / Related to**: [[Jetson Orin AGX]]
-- **Implements / Related to**: [[RxR]]
+- **Implements / Related to**: Gibson dataset
+- **Implements / Related to**: AI Habitat
+- **Implements / Related to**: HM3D dataset
+- **Implements / Related to**: Jetson Orin AGX
+- **Implements / Related to**: RxR
 
 ## See Also
-- [[Code Repository]] ⚠️ — general code entity guidelines
-- [[Gibson dataset]]
-- [[AI Habitat]]
-- [[HM3D dataset]]
+- Code Repository ⚠️ — general code entity guidelines
+- Gibson dataset
+- AI Habitat
+- HM3D dataset

@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 **Uniform 3D Semantic Gaussians** is a scene representation concept where the initial state of a 3D environment is modeled as a **uniform distribution of Gaussian functions** that jointly encode both **semantic** (object class/label) and **geometric** (shape, density) features. Unlike typical neural radiance field approaches that rely on sparse or learned initialization, this representation starts from an evenly spaced lattice of Gaussians covering the entire space. This design provides a dense, unbiased global prior that can be **gradually refined** through downstream optimization or learning.
 
-The representation is closely tied to the [[EmbodiedOcc]] occupancy reasoning system, which uses this uniform Gaussian field as its initial scene hypothesis before iterative refinement.
+The representation is closely tied to the EmbodiedOcc occupancy reasoning system, which uses this uniform Gaussian field as its initial scene hypothesis before iterative refinement.
 
 ## Parameters
 
@@ -34,8 +34,8 @@ The representation is closely tied to the [[EmbodiedOcc]] occupancy reasoning sy
 
 ## Relationships
 
-- `uses` [[EmbodiedOcc]] — Uniform 3D Semantic Gaussians serve as the foundational representation used by the EmbodiedOcc system for occupancy reasoning.
-- `implements` [[Gaussian Splatting]] ⚠️ — The uniform distribution and feature structure are inspired by 3D Gaussian splatting techniques, but tailored for semantic occupancy.
+- `uses` EmbodiedOcc — Uniform 3D Semantic Gaussians serve as the foundational representation used by the EmbodiedOcc system for occupancy reasoning.
+- `implements` Gaussian Splatting ⚠️ — The uniform distribution and feature structure are inspired by 3D Gaussian splatting techniques, but tailored for semantic occupancy.
 
 ## Source
 
@@ -44,4 +44,4 @@ Based on the paper *"EmbodiedOcc: Embodied 3D Occupancy Prediction from Egocentr
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Uniform 3D Semantic Gaussians` --[[related_to]] ⚠️--> `EmbodiedOcc` _(wikilink)_
+- `Uniform 3D Semantic Gaussians` --related_to ⚠️--> `EmbodiedOcc` _(wikilink)_

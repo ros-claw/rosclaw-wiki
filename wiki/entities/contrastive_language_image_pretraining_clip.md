@@ -23,7 +23,7 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Used by** → [[Actional Atomic-Concept Learning (AACL)]]: CLIP provides the visuo-semantic backbone that enables AACL to learn task-relevant semantics directly from demonstrations.
+- **Used by** → Actional Atomic-Concept Learning (AACL): CLIP provides the visuo-semantic backbone that enables AACL to learn task-relevant semantics directly from demonstrations.
 
 ## References
 
@@ -33,4 +33,4 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Contrastive Language-Image Pretraining (CLIP)` --[[uses]] ⚠️--> `Actional Atomic-Concept Learning (AACL)`
+- `Contrastive Language-Image Pretraining (CLIP)` --uses ⚠️--> `Actional Atomic-Concept Learning (AACL)`

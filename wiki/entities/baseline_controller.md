@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Baseline Controller
 
-The **Baseline Controller** is a fallback navigation mechanism used by the [[TANGO]] system. It activates when TANGO's local metric control fails or returns low-confidence predictions, providing a robust alternative to maintain robot mobility in uncertain environments.
+The **Baseline Controller** is a fallback navigation mechanism used by the TANGO system. It activates when TANGO's local metric control fails or returns low-confidence predictions, providing a robust alternative to maintain robot mobility in uncertain environments.
 
 ## Overview
 
@@ -22,21 +22,21 @@ In the context of embodied navigation, local metric controllers can occasionally
 
 ## Capabilities
 
-- **Fallback redundancy**: Provides navigation when [[TANGO]]'s local metric control is uncertain or fails.
+- **Fallback redundancy**: Provides navigation when TANGO's local metric control is uncertain or fails.
 - **Robustness**: Ensures the robot can continue moving even under degraded perception conditions.
 - **Seamless switching**: Integrates with TANGO's decision pipeline to activate only when needed, without manual intervention.
 
 ## Relationships
 
-- **Used by**: This controller is part of the [[TANGO]] system, which depends on it as a fallback module. `[[Baseline Controller]]` is *used by* `[[TANGO]]`.
+- **Used by**: This controller is part of the TANGO system, which depends on it as a fallback module. `Baseline Controller` is *used by* `TANGO`.
 
 ## Related Concepts
 
-- [[Local Metric Control]] ⚠️ — the primary navigation method that this controller replaces when uncertain.
-- [[Embodied Navigation]] — broader field of robot movement in real-world environments.
-- [[Fallback Behavior]] ⚠️ — design pattern for robust autonomy.
+- Local Metric Control ⚠️ — the primary navigation method that this controller replaces when uncertain.
+- Embodied Navigation — broader field of robot movement in real-world environments.
+- Fallback Behavior ⚠️ — design pattern for robust autonomy.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Baseline Controller` --[[uses]] ⚠️--> `TANGO`
+- `Baseline Controller` --uses ⚠️--> `TANGO`

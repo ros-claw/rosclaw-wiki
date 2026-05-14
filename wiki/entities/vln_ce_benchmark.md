@@ -34,13 +34,13 @@ The VLN-CE benchmark evaluates a wide range of continuous navigation agents. Bey
 
 ## Relationships
 
-- **Evaluates**: [[VLN-R1]] – the benchmark is used to assess the VLN-R1 agent's performance in continuous environments.
-- **Evaluates**: [[StreamVLN]] – the benchmark is used to evaluate StreamVLN’s ability to handle real-time continuous navigation.
-- **Evaluates**: [[VLN methods]] ⚠️ – the benchmark serves as the primary evaluation platform for comparing the effectiveness of various VLN approaches in realistic, continuous settings.
+- **Evaluates**: VLN-R1 – the benchmark is used to assess the VLN-R1 agent's performance in continuous environments.
+- **Evaluates**: StreamVLN – the benchmark is used to evaluate StreamVLN’s ability to handle real-time continuous navigation.
+- **Evaluates**: VLN methods ⚠️ – the benchmark serves as the primary evaluation platform for comparing the effectiveness of various VLN approaches in realistic, continuous settings.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `VLN-CE benchmark` --[[uses]] ⚠️--> `VLN-R1`
-- `VLN-CE benchmark` --[[evaluates]] ⚠️ ⚠️--> `StreamVLN`
-- `VLN-CE benchmark` --[[evaluates]] ⚠️ ⚠️--> `VLN methods`
+- `VLN-CE benchmark` --uses ⚠️--> `VLN-R1`
+- `VLN-CE benchmark` --evaluates ⚠️ ⚠️--> `StreamVLN`
+- `VLN-CE benchmark` --evaluates ⚠️ ⚠️--> `VLN methods`

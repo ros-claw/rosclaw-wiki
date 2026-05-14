@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**VLNVerse** is a large-scale, extensible benchmark for **Versatile, Embodied, Realistic Simulation and Evaluation** of [[Vision-Language Navigation (VLN)]] agents. It was created to overcome the fragmentation of existing VLN benchmarks by unifying diverse subtasks (e.g., object-goal navigation, room-to-room travel, instruction following) into a single framework. The benchmark is powered by a robust physics engine that enables realistic motion dynamics through [[full-kinematics agents]] ⚠️, significantly narrowing the [[sim-to-real]] ⚠️ gap. VLNVerse is designed to be versatile (task unification), embodied (kinematics + physics), realistic (high‑fidelity simulation), and scalable (large‑scale environment support), while also providing an extensive evaluation toolkit that allows researchers to define custom metrics and protocols.
+**VLNVerse** is a large-scale, extensible benchmark for **Versatile, Embodied, Realistic Simulation and Evaluation** of Vision-Language Navigation (VLN) agents. It was created to overcome the fragmentation of existing VLN benchmarks by unifying diverse subtasks (e.g., object-goal navigation, room-to-room travel, instruction following) into a single framework. The benchmark is powered by a robust physics engine that enables realistic motion dynamics through full-kinematics agents ⚠️, significantly narrowing the sim-to-real ⚠️ gap. VLNVerse is designed to be versatile (task unification), embodied (kinematics + physics), realistic (high‑fidelity simulation), and scalable (large‑scale environment support), while also providing an extensive evaluation toolkit that allows researchers to define custom metrics and protocols.
 
 ## Capabilities
 
@@ -41,19 +41,19 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **depends_on**: [[Vision-Language Navigation (VLN)]] – builds on the core problem of language‑guided navigation.
-- **depends_on**: [[Simulation Environment]] ⚠️ ⚠️ – provides the virtual world for agent training and evaluation.
-- **depends_on**: [[Evaluation Metrics]] ⚠️ ⚠️ – relies on standardized metrics for performance assessment.
-- **uses**: [[Physics Engine]] ⚠️ – robust simulation backend for kinematics and interactions.
-- **uses**: [[Language Models]] ⚠️ – processes natural‑language instructions.
-- **addresses**: [[Sim-to-Real Generalization]] ⚠️ – aims to improve transfer of navigation policies from simulation to the real world.
-- **related_to**: [[Embodied AI]] – contributes to the broader field of embodied intelligence.
+- **depends_on**: Vision-Language Navigation (VLN) – builds on the core problem of language‑guided navigation.
+- **depends_on**: Simulation Environment ⚠️ ⚠️ – provides the virtual world for agent training and evaluation.
+- **depends_on**: Evaluation Metrics ⚠️ ⚠️ – relies on standardized metrics for performance assessment.
+- **uses**: Physics Engine ⚠️ – robust simulation backend for kinematics and interactions.
+- **uses**: Language Models ⚠️ – processes natural‑language instructions.
+- **addresses**: Sim-to-Real Generalization ⚠️ – aims to improve transfer of navigation policies from simulation to the real world.
+- **related_to**: Embodied AI – contributes to the broader field of embodied intelligence.
 
 ## Related Pages
 
-- [[VLN Agent]]  
-- [[Benchmark]] ⚠️  
-- [[Simulation Environments]] ⚠️  
-- [[Embodied AI]]  
-- [[Evaluation Metrics]] ⚠️ ⚠️  
-- [[Simulation Environment]] ⚠️ ⚠️
+- VLN Agent  
+- Benchmark ⚠️  
+- Simulation Environments ⚠️  
+- Embodied AI  
+- Evaluation Metrics ⚠️ ⚠️  
+- Simulation Environment ⚠️ ⚠️

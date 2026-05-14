@@ -24,8 +24,8 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Contradicts** [[Traditional Modular Pipelines]] ⚠️ — the classical approach separates navigation into distinct components (sensing → mapping → localization → planning → control), which can suffer from error accumulation and hand-tuned interfaces.
-- **Exemplified by** [[LoGoPlanner]] — a system that extends end-to-end design to include implicit localization, addressing a common weakness of pure end-to-end methods.
+- **Contradicts** Traditional Modular Pipelines ⚠️ — the classical approach separates navigation into distinct components (sensing → mapping → localization → planning → control), which can suffer from error accumulation and hand-tuned interfaces.
+- **Exemplified by** LoGoPlanner — a system that extends end-to-end design to include implicit localization, addressing a common weakness of pure end-to-end methods.
 
 ## Advantages
 
@@ -36,4 +36,4 @@ While end-to-end navigation has shown promise in simulation and controlled trial
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `End-to-end navigation` --[[related_to]] ⚠️--> `LoGoPlanner` _(wikilink)_
+- `End-to-end navigation` --related_to ⚠️--> `LoGoPlanner` _(wikilink)_

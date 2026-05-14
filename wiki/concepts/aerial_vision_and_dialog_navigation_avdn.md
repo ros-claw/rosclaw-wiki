@@ -27,7 +27,7 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Depends on:** [[Aerial Navigation]] ⚠️, [[Vision-and-Language Navigation]], [[Dialog Systems]] ⚠️
+- **Depends on:** Aerial Navigation ⚠️, Vision-and-Language Navigation, Dialog Systems ⚠️
 - **Supersedes:** Standard drone control with joystick/remote
 
 ## How It Works
@@ -46,4 +46,4 @@ AVDN bridges the gap between low-level drone control and high-level human commun
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Aerial Vision-and-Dialog Navigation (AVDN)` --[[related_to]] ⚠️--> `Vision-and-Language Navigation`
+- `Aerial Vision-and-Dialog Navigation (AVDN)` --related_to ⚠️--> `Vision-and-Language Navigation`

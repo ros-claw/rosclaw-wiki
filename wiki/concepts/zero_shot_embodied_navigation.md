@@ -20,7 +20,7 @@ source_type: arxiv_paper
 
 Zero-Shot Embodied Navigation eliminates the need for per-task RL training, which is typically expensive and time-consuming. Instead, it leverages large-scale pretrained models and compositional reasoning to interpret arbitrary language commands and translate them into actionable navigation policies. This approach drastically improves the generality and sample efficiency of embodied agents, making them practical for real-world deployment where tasks vary unpredictably.
 
-The method [[MSGNav]] implements Zero-Shot Embodied Navigation by combining a modular architecture with vision-language models, enabling the agent to parse open-vocabulary queries and plan paths in a zero-shot manner. MSGNav acts as a concrete instantiation of this paradigm, demonstrating that effective navigation can be achieved without any task-specific fine-tuning.
+The method MSGNav implements Zero-Shot Embodied Navigation by combining a modular architecture with vision-language models, enabling the agent to parse open-vocabulary queries and plan paths in a zero-shot manner. MSGNav acts as a concrete instantiation of this paradigm, demonstrating that effective navigation can be achieved without any task-specific fine-tuning.
 
 ## Core Principles
 
@@ -30,22 +30,22 @@ The method [[MSGNav]] implements Zero-Shot Embodied Navigation by combining a mo
 
 ## Relationship to Other Concepts
 
-- Zero-Shot Embodied Navigation is a subfield of [[Embodied AI]] that focuses on navigation capabilities.
-- It contrasts with traditional [[Navigation]] ⚠️ approaches that require task-specific [[Reinforcement Learning]] or explicit mapping.
-- The paradigm depends on [[Vision-Language Models]] ⚠️ for grounding language to visual observations.
-- It relates to [[Sim-to-Real Transfer]] by enabling trained models to operate in novel real-world scenes.
+- Zero-Shot Embodied Navigation is a subfield of Embodied AI that focuses on navigation capabilities.
+- It contrasts with traditional Navigation ⚠️ approaches that require task-specific Reinforcement Learning or explicit mapping.
+- The paradigm depends on Vision-Language Models ⚠️ for grounding language to visual observations.
+- It relates to Sim-to-Real Transfer by enabling trained models to operate in novel real-world scenes.
 
 ## Implemented By
 
-- [[MSGNav]] — a modular zero-shot navigation system that realizes this paradigm.
+- MSGNav — a modular zero-shot navigation system that realizes this paradigm.
 
 ## Future Directions
 
-Zero-Shot Embodied Navigation opens the door to scalable, generalist navigation agents. Future work may integrate [[Graph Neural Networks]] ⚠️ for spatial reasoning or combine with [[Object Manipulation]] ⚠️ skills to achieve full embodied intelligence.
+Zero-Shot Embodied Navigation opens the door to scalable, generalist navigation agents. Future work may integrate Graph Neural Networks ⚠️ for spatial reasoning or combine with Object Manipulation ⚠️ skills to achieve full embodied intelligence.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Zero-Shot Embodied Navigation` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Zero-Shot Embodied Navigation` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Zero-Shot Embodied Navigation` --[[related_to]] ⚠️ ⚠️--> `MSGNav` _(wikilink)_
+- `Zero-Shot Embodied Navigation` --related_to ⚠️ ⚠️--> `MSGNav` _(wikilink)_

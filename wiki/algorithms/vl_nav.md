@@ -26,15 +26,15 @@ VL-Nav is a **neuro-symbolic navigation algorithm** designed to enable robots to
 
 VL-Nav intertwines neural reasoning with symbolic guidance through two core components:
 
-- **NeSy task planner**: Decomposes high‑level instructions into a sequence of symbolic subgoals using a [[VLM]] ⚠️ ⚠️ and a symbolic 3D scene graph.
+- **NeSy task planner**: Decomposes high‑level instructions into a sequence of symbolic subgoals using a VLM ⚠️ ⚠️ and a symbolic 3D scene graph.
 - **NeSy exploration system**: Executes exploration actions, maintains an image memory system, and uses neuro‑symbolic inference to decide when to re‑localize or backtrack.
 
 The system relies on a **symbolic 3D scene graph** to represent the environment spatially and an **image memory system** to store visual observations for later retrieval. A **VLM** (vision‑language model) provides grounding and commonsense reasoning.
 
 ## Key Dependencies
 
-- `depends_on`: [[neuro-symbolic reasoning]], [[symbolic 3D scene graph]]
-- `uses`: [[NeSy task planner]], [[NeSy exploration system]], [[VLM]] ⚠️ ⚠️, [[image memory system]]
+- `depends_on`: neuro-symbolic reasoning, symbolic 3D scene graph
+- `uses`: NeSy task planner, NeSy exploration system, VLM ⚠️ ⚠️, image memory system
 
 ## Evaluation
 

@@ -23,21 +23,21 @@ source_type: arxiv_paper
 
 ## Usage
 
-DAgger is applied in the training of the [[Spatial-Temporal Aware Transformer (START)]] model as part of its learning framework. START uses DAgger to iteratively refine its policy by collecting rollouts and querying expert feedback, enabling the model to generalize better to novel spatial-temporal scenarios.
+DAgger is applied in the training of the Spatial-Temporal Aware Transformer (START) model as part of its learning framework. START uses DAgger to iteratively refine its policy by collecting rollouts and querying expert feedback, enabling the model to generalize better to novel spatial-temporal scenarios.
 
 ## Relationship Annotations
 
-- **[[Spatial-Temporal Aware Transformer (START)]]** → *implements* → [[Dataset Aggregation (DAgger)]]
-- [[Dataset Aggregation (DAgger)]] → *used_in* → [[Spatial-Temporal Aware Transformer (START)]]
+- **Spatial-Temporal Aware Transformer (START)** → *implements* → Dataset Aggregation (DAgger)
+- Dataset Aggregation (DAgger) → *used_in* → Spatial-Temporal Aware Transformer (START)
 
 ## Related Concepts
 
-- [[Imitation Learning]]
-- [[Behavioral Cloning]] ⚠️
-- [[Covariate Shift]] ⚠️
-- [[Interactive Imitation Learning]] ⚠️
+- Imitation Learning
+- Behavioral Cloning ⚠️
+- Covariate Shift ⚠️
+- Interactive Imitation Learning ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Dataset Aggregation (DAgger)` --[[extends]] ⚠️--> `Spatial-Temporal Aware Transformer (START)`
+- `Dataset Aggregation (DAgger)` --extends ⚠️--> `Spatial-Temporal Aware Transformer (START)`

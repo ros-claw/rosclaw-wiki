@@ -18,11 +18,11 @@ A **Sweeping Robot** is a wheeled mobile robot designed for cleaning flat surfac
 
 ### Overview
 
-Sweeping robots are a common type of domestic or commercial service robot. They rely on [[wheeled mobility]] ⚠️ for locomotion and often integrate sensors (e.g., bumpers, LiDAR, cameras) for navigation. Due to their wheeled design, they are limited to flat, obstacle-free surfaces and cannot handle stairs, thresholds, or steep inclines.
+Sweeping robots are a common type of domestic or commercial service robot. They rely on wheeled mobility ⚠️ for locomotion and often integrate sensors (e.g., bumpers, LiDAR, cameras) for navigation. Due to their wheeled design, they are limited to flat, obstacle-free surfaces and cannot handle stairs, thresholds, or steep inclines.
 
 ### Capabilities
 
-- **Mobility type**: [[wheeled]] ⚠️
+- **Mobility type**: wheeled ⚠️
 - **Can traverse stairs**: false  
 - **Operating domain**: limited to flat surfaces  
 - **Primary task**: floor sweeping / cleaning
@@ -31,6 +31,6 @@ Because they cannot ascend or descend stairs, sweeping robots are typically depl
 
 ### Relationships
 
-- **Example in**: [[Capability-Conditioned Navigation (CapNav)]] – The sweeping robot is used as one of several robot types in the CapNav framework to demonstrate how navigation policies can be conditioned on the robot’s physical capabilities. It serves as a contrast to robots that can traverse stairs, such as legged robots.
-- **Depends on**: [[Flat Surface Navigation]] ⚠️ – The robot’s control algorithms must assume a planar operating environment.
-- **Related to**: [[Domestic Service Robots]] ⚠️, [[Floor Cleaning Robots]] ⚠️, [[Wheeled Locomotion]] ⚠️
+- **Example in**: Capability-Conditioned Navigation (CapNav) – The sweeping robot is used as one of several robot types in the CapNav framework to demonstrate how navigation policies can be conditioned on the robot’s physical capabilities. It serves as a contrast to robots that can traverse stairs, such as legged robots.
+- **Depends on**: Flat Surface Navigation ⚠️ – The robot’s control algorithms must assume a planar operating environment.
+- **Related to**: Domestic Service Robots ⚠️, Floor Cleaning Robots ⚠️, Wheeled Locomotion ⚠️

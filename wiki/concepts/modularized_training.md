@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-In hierarchical systems, a [[Hierarchical Agent]] ⚠️ often consists of a high-level policy (responsible for abstract reasoning or task planning) and a low-level policy (executing fine-grained actions). Traditional joint training can be costly and unstable due to the complex interaction between levels. **Modularized Training** breaks this coupling: each module is optimized using its own reward structure or loss function, often leveraging distinct training techniques (e.g., reinforcement learning for the high level, behavioral cloning for the low level). This separation simplifies credit assignment and enables faster convergence.
+In hierarchical systems, a Hierarchical Agent ⚠️ often consists of a high-level policy (responsible for abstract reasoning or task planning) and a low-level policy (executing fine-grained actions). Traditional joint training can be costly and unstable due to the complex interaction between levels. **Modularized Training** breaks this coupling: each module is optimized using its own reward structure or loss function, often leveraging distinct training techniques (e.g., reinforcement learning for the high level, behavioral cloning for the low level). This separation simplifies credit assignment and enables faster convergence.
 
 ## Capabilities
 
@@ -28,9 +28,9 @@ In hierarchical systems, a [[Hierarchical Agent]] ⚠️ often consists of a hig
 
 ## Relationships
 
-- **Used by**: [[Hierarchical Cross-Modal (HCM) Agent]] — This agent architecture demonstrates modularized training to combine visual reasoning with motor imitation.
-- **Supports**: [[Imitation Learning]] and [[Reinforcement Learning]] — These techniques are commonly used for the low-level and high-level modules respectively.
-- **Depends on**: [[Hierarchical Reinforcement Learning]] for the overarching framework, and [[Behavioral Cloning]] ⚠️ for low-level skill acquisition.
+- **Used by**: Hierarchical Cross-Modal (HCM) Agent — This agent architecture demonstrates modularized training to combine visual reasoning with motor imitation.
+- **Supports**: Imitation Learning and Reinforcement Learning — These techniques are commonly used for the low-level and high-level modules respectively.
+- **Depends on**: Hierarchical Reinforcement Learning for the overarching framework, and Behavioral Cloning ⚠️ for low-level skill acquisition.
 
 ## Description
 
@@ -38,13 +38,13 @@ Modularized training involves training separate components of a system (e.g., hi
 
 ## See Also
 
-- [[End-to-End Training]] ⚠️
-- [[Hierarchical Imitation Learning]] ⚠️
-- [[Cross-Modal Embodied Agents]] ⚠️
+- End-to-End Training ⚠️
+- Hierarchical Imitation Learning ⚠️
+- Cross-Modal Embodied Agents ⚠️
 
 > *Source: arxiv paper 2104.10674*
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Modularized Training` --[[related_to]] ⚠️--> `Hierarchical Reinforcement Learning` _(wikilink)_
+- `Modularized Training` --related_to ⚠️--> `Hierarchical Reinforcement Learning` _(wikilink)_

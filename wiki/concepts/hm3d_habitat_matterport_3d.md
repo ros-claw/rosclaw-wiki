@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # HM3D (Habitat Matterport 3D)
 
-**HM3D** (Habitat Matterport 3D) is a large-scale benchmark dataset of photorealistic 3D indoor environments reconstructed from real-world Matterport scans. It is widely used for evaluating embodied navigation tasks within the [[Habitat Simulator]] ecosystem.
+**HM3D** (Habitat Matterport 3D) is a large-scale benchmark dataset of photorealistic 3D indoor environments reconstructed from real-world Matterport scans. It is widely used for evaluating embodied navigation tasks within the Habitat Simulator ecosystem.
 
 ## Overview
 
@@ -35,22 +35,22 @@ HM3D provides 90+ high-fidelity, semantically annotated scenes spanning diverse 
 
 ## Relationships
 
-- **Used by** [[FiLM-Nav]] for evaluation on [[ObjectNav]] and [[OVON]] tasks.
-- Part of the ecosystem of datasets supported by [[Habitat Simulator]] and [[Habitat Lab]] ⚠️.
+- **Used by** FiLM-Nav for evaluation on ObjectNav and OVON tasks.
+- Part of the ecosystem of datasets supported by Habitat Simulator and Habitat Lab ⚠️.
 - Depends on **Matterport 3D** sensor data (RGB-D, mesh) captured from real-world scans.
 
 ## Usage in Research
 
-HM3D is the primary evaluation benchmark in the [[Habitat Challenge]] ⚠️ competitions. Researchers use it to test navigation policies trained in simulation, then transfer to real robots. The dataset's realism helps assess generalization beyond simple synthetic environments like [[Gibson]] ⚠️ or [[Matterport3D]] ⚠️.
+HM3D is the primary evaluation benchmark in the Habitat Challenge ⚠️ competitions. Researchers use it to test navigation policies trained in simulation, then transfer to real robots. The dataset's realism helps assess generalization beyond simple synthetic environments like Gibson ⚠️ or Matterport3D ⚠️.
 
 ## See Also
 
-- [[ObjectNav]] – Task of navigating to an object instance by category.
-- [[OVON]] – Open-vocabulary object navigation.
-- [[Habitat Simulator]] – Platform for embodied agent simulation.
-- [[FiLM-Nav]] – Model that uses language-conditioned visual features for navigation.
+- ObjectNav – Task of navigating to an object instance by category.
+- OVON – Open-vocabulary object navigation.
+- Habitat Simulator – Platform for embodied agent simulation.
+- FiLM-Nav – Model that uses language-conditioned visual features for navigation.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `HM3D (Habitat Matterport 3D)` --[[related_to]] ⚠️--> `FiLM-Nav` _(wikilink)_
+- `HM3D (Habitat Matterport 3D)` --related_to ⚠️--> `FiLM-Nav` _(wikilink)_

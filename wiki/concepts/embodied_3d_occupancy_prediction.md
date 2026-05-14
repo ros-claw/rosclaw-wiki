@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Embodied 3D Occupancy Prediction
 
-**Embodied 3D Occupancy Prediction** is a task that requires an embodied agent to gradually perceive the scene through progressive exploration and build a 3D occupancy map. The agent actively explores an environment and **progressively builds a global 3D occupancy grid** from limited, first-person observations, unlike offline methods that require complete sensor sweeps or pre-collected datasets. This concept sits at the intersection of **[[3D occupancy prediction]]** and **[[Embodied AI]]**, extending standard geometric mapping with the constraints of active perception and sequential decision-making.
+**Embodied 3D Occupancy Prediction** is a task that requires an embodied agent to gradually perceive the scene through progressive exploration and build a 3D occupancy map. The agent actively explores an environment and **progressively builds a global 3D occupancy grid** from limited, first-person observations, unlike offline methods that require complete sensor sweeps or pre-collected datasets. This concept sits at the intersection of **3D occupancy prediction** and **Embodied AI**, extending standard geometric mapping with the constraints of active perception and sequential decision-making.
 
 ## Task Formulation
 
@@ -28,9 +28,9 @@ The task is formally defined as predicting 3D occupancy of a scene from an embod
 
 ## Relationship Annotations
 
-- `[[3D occupancy prediction]]` – this concept is a specific instance of the general problem, with the added constraint of embodiment. (implements)
-- `[[Embodied AI]]` – the task is a core capability of embodied agents that must understand their surroundings from first-person experience. (part_of)
-- `[[3D Perception]] ⚠️` – the task is closely related to 3D Perception, as it involves interpreting 3D geometry from sensory input. (related_to)
+- `3D occupancy prediction` – this concept is a specific instance of the general problem, with the added constraint of embodiment. (implements)
+- `Embodied AI` – the task is a core capability of embodied agents that must understand their surroundings from first-person experience. (part_of)
+- `3D Perception ⚠️` – the task is closely related to 3D Perception, as it involves interpreting 3D geometry from sensory input. (related_to)
 - The prediction model **depends_on** both a scene encoder (e.g., 3D convolutional or transformer backbone) and an exploration policy that schedules view selection.
 
 ## Sources
@@ -40,5 +40,5 @@ The task is formally defined as predicting 3D occupancy of a scene from an embod
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Embodied 3D Occupancy Prediction` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
-- `Embodied 3D Occupancy Prediction` --[[related_to]] ⚠️ ⚠️--> `3D Perception`
+- `Embodied 3D Occupancy Prediction` --related_to ⚠️ ⚠️--> `Embodied AI`
+- `Embodied 3D Occupancy Prediction` --related_to ⚠️ ⚠️--> `3D Perception`

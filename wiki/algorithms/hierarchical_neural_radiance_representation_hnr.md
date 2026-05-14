@@ -22,7 +22,7 @@ HNR is a neural radiance representation model that encodes future environments i
 
 ### Overview
 
-HNR extends [[neural radiance representation]] ⚠️ ⚠️ (NeRF) by introducing a hierarchical architecture that predicts not just color but structured semantic features at multiple abstraction levels. This makes it especially suited for robot exploration, navigation planning, and any scenario requiring rapid evaluation of unseen viewpoints without image distortion artefacts.
+HNR extends neural radiance representation ⚠️ ⚠️ (NeRF) by introducing a hierarchical architecture that predicts not just color but structured semantic features at multiple abstraction levels. This makes it especially suited for robot exploration, navigation planning, and any scenario requiring rapid evaluation of unseen viewpoints without image distortion artefacts.
 
 ### Key Parameters
 
@@ -33,7 +33,7 @@ HNR extends [[neural radiance representation]] ⚠️ ⚠️ (NeRF) by introduci
 ### Capabilities
 
 - **Multi‑level semantic feature generation** → HNR outputs hierarchical features that capture both low‑level geometry and high‑level semantic meaning, enabling context‑aware decision making.  
-- **Robust and efficient lookahead** → Compared to [[RGB image prediction for lookahead]] ⚠️ ⚠️, HNR is more robust to visual noise and distortion, and requires less compute per viewpoint query.  
+- **Robust and efficient lookahead** → Compared to RGB image prediction for lookahead ⚠️ ⚠️, HNR is more robust to visual noise and distortion, and requires less compute per viewpoint query.  
 - **Future environment encoding** → Encodes unseen environments into structured features, enabling downstream policies to reason about future states without rendering full images.
 
 ### Architecture
@@ -42,10 +42,10 @@ HNR uses a **hierarchical neural radiance field** as its core architecture. The 
 
 ### Relationships
 
-- **`improves_upon`** : [[RGB image prediction for lookahead]] ⚠️ ⚠️ – HNR replaces direct pixel‑wise RGB synthesis with semantic feature prediction, improving robustness and efficiency.  
-- **`uses`** : [[neural radiance representation]] ⚠️ ⚠️ – HNR builds on the neural radiance field concept, extending it to hierarchical semantic outputs.  
-- **`used_by`** : [[Lookahead Exploration Strategy]] – HNR provides the multi‑level semantic features required by lookahead exploration policies.
+- **`improves_upon`** : RGB image prediction for lookahead ⚠️ ⚠️ – HNR replaces direct pixel‑wise RGB synthesis with semantic feature prediction, improving robustness and efficiency.  
+- **`uses`** : neural radiance representation ⚠️ ⚠️ – HNR builds on the neural radiance field concept, extending it to hierarchical semantic outputs.  
+- **`used_by`** : Lookahead Exploration Strategy – HNR provides the multi‑level semantic features required by lookahead exploration policies.
 
 ### Usage Notes
 
-HNR is typically employed as a **pre‑trained backbone** for downstream tasks such as [[viewpoint selection]] ⚠️, [[exploration policy learning]] ⚠️, and [[sim‑to‑real transfer]] ⚠️. The multi‑level features can be directly fed into a policy network or used to compute information gain metrics without rendering full images.
+HNR is typically employed as a **pre‑trained backbone** for downstream tasks such as viewpoint selection ⚠️, exploration policy learning ⚠️, and sim‑to‑real transfer ⚠️. The multi‑level features can be directly fed into a policy network or used to compute information gain metrics without rendering full images.

@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Multitask Learning for VLN (RxR + R2R)
 
-**Multitask Learning for VLN** is an algorithm that jointly trains a Vision-and-Language Navigation (VLN) model on multiple annotated datasets, specifically [[Room-Across-Room (RxR)]] and [[Room-to-Room (R2R)]], to learn shared representations that improve navigation performance over single-dataset training. The approach supports both monolingual and multilingual settings.
+**Multitask Learning for VLN** is an algorithm that jointly trains a Vision-and-Language Navigation (VLN) model on multiple annotated datasets, specifically Room-Across-Room (RxR) and Room-to-Room (R2R), to learn shared representations that improve navigation performance over single-dataset training. The approach supports both monolingual and multilingual settings.
 
 ## Parameters
 
-- **Tasks**: [[Room-Across-Room (RxR)]], [[Room-to-Room (R2R)]]
+- **Tasks**: Room-Across-Room (RxR), Room-to-Room (R2R)
 - **Setting**: Monolingual and multilingual
 
 ## Capabilities
@@ -27,7 +27,7 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Depends on**: [[Room-Across-Room (RxR)]], [[Room-to-Room (R2R)]]
+- **Depends on**: Room-Across-Room (RxR), Room-to-Room (R2R)
 
 ## Description
 
@@ -40,4 +40,4 @@ Baseline results from this multitask learning approach combine RxR and R2R annot
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Multitask Learning for VLN (RxR + R2R)` --[[based_on]] ⚠️--> `Room-Across-Room (RxR)`
+- `Multitask Learning for VLN (RxR + R2R)` --based_on ⚠️--> `Room-Across-Room (RxR)`

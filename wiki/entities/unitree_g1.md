@@ -4,7 +4,7 @@ title: Unitree-G1
 type: entity
 tags: [humanoid, robot, hardware]
 confidence: 0.92
-sources: ["[[Unitree-G1-Spec]] ⚠️"]
+sources: ["Unitree-G1-Spec ⚠️"]
 ---
 
 # Unitree-G1

@@ -20,7 +20,7 @@ ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is a set of metrics or
 
 ## Background
 
-ROUGE was introduced by [[Lin & Hovy (2003)]] ⚠️ as a recall-based alternative to BLEU (precision-oriented). Common variants include ROUGE-N (n-gram overlap), ROUGE-L (longest common subsequence), ROUGE-W (weighted LCS), and ROUGE-S (skip-bigram co-occurrence). It has become a standard evaluation metric in [[Natural Language Processing]] ⚠️, particularly for summarization and generation tasks.
+ROUGE was introduced by Lin & Hovy (2003) ⚠️ as a recall-based alternative to BLEU (precision-oriented). Common variants include ROUGE-N (n-gram overlap), ROUGE-L (longest common subsequence), ROUGE-W (weighted LCS), and ROUGE-S (skip-bigram co-occurrence). It has become a standard evaluation metric in Natural Language Processing ⚠️, particularly for summarization and generation tasks.
 
 ## Usage
 
@@ -30,16 +30,16 @@ ROUGE is typically applied to measure the quality of machine-generated summaries
 
 ### Ineffectiveness for Grounded Navigation Instructions Evaluation
 
-ROUGE is known to correlate poorly with human judgment in tasks that require understanding of spatial, temporal, or referential grounding. Specifically, for [[Grounded Navigation Instructions Evaluation]] ⚠️ ⚠️, ROUGE fails to capture whether a generated instruction correctly guides an agent through an environment. The metric's reliance on surface form overlap cannot represent the correctness of action sequences, spatial relations, or object references that are critical in embodied tasks.
+ROUGE is known to correlate poorly with human judgment in tasks that require understanding of spatial, temporal, or referential grounding. Specifically, for Grounded Navigation Instructions Evaluation ⚠️ ⚠️, ROUGE fails to capture whether a generated instruction correctly guides an agent through an environment. The metric's reliance on surface form overlap cannot represent the correctness of action sequences, spatial relations, or object references that are critical in embodied tasks.
 
 ## Relations
 
-- `ineffective_for` → [[Grounded Navigation Instructions Evaluation]] ⚠️ ⚠️  
-- `used_in` → [[Text Summarization]] ⚠️ ([[automatic evaluation]] ⚠️)  
-- `similar_to` → [[BLEU]], [[METEOR]], [[CIDEr]]
+- `ineffective_for` → Grounded Navigation Instructions Evaluation ⚠️ ⚠️  
+- `used_in` → Text Summarization ⚠️ (automatic evaluation ⚠️)  
+- `similar_to` → BLEU, METEOR, CIDEr
 
 ## See Also
 
-- [[Evaluation Metrics]] ⚠️  
-- [[Recall]] ⚠️  
-- [[Natural Language Generation]] ⚠️
+- Evaluation Metrics ⚠️  
+- Recall ⚠️  
+- Natural Language Generation ⚠️

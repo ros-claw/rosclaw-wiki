@@ -22,14 +22,14 @@ Video-LLMs serve as the backbone for current vision-and-language navigation (VLN
 
 ## Capabilities
 
-- Drive recent progress in [[Vision-and-Language Navigation (VLN)]] ⚠️ by providing a unified framework for perceiving visual environments and grounding language instructions.
+- Drive recent progress in Vision-and-Language Navigation (VLN) ⚠️ by providing a unified framework for perceiving visual environments and grounding language instructions.
 - Enable zero-shot generalization to unseen environments when trained on large-scale video-language datasets.
 - Support interactive, real-time navigation through natural language commands in embodied agents.
 
 ## Relationships
 
-- **Used by**: [[StreamVLN]] — StreamVLN leverages Video-LLMs as its core reasoning engine to perform streaming vision-and-language navigation.
-- **Related to**: [[Streaming Vision-and-Language Navigation]] — Video-LLMs provide the multimodal understanding necessary for agents to navigate while processing continuous video input on-the-fly.
+- **Used by**: StreamVLN — StreamVLN leverages Video-LLMs as its core reasoning engine to perform streaming vision-and-language navigation.
+- **Related to**: Streaming Vision-and-Language Navigation — Video-LLMs provide the multimodal understanding necessary for agents to navigate while processing continuous video input on-the-fly.
 
 ## Key Characteristics
 
@@ -44,9 +44,9 @@ Video-LLMs serve as the backbone for current vision-and-language navigation (VLN
 
 - High computational cost for long video sequences.
 - Difficulty capturing fine-grained object interactions across many frames.
-- Trade-off between maintaining long-term context and real-time inference speed (central to [[StreamVLN]] research).
+- Trade-off between maintaining long-term context and real-time inference speed (central to StreamVLN research).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Video-LLMs` --[[uses]] ⚠️--> `StreamVLN`
+- `Video-LLMs` --uses ⚠️--> `StreamVLN`

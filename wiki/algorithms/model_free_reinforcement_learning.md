@@ -27,7 +27,7 @@ source_type: arxiv_paper
 
 Model‑free RL, as applied in the source paper, provides:
 
-- Development of a **versatile locomotion controller** for [[Wheeled-Legged Robot]]
+- Development of a **versatile locomotion controller** for Wheeled-Legged Robot
 - Achievement of **efficient and robust locomotion over rough terrains**
 - Enablement of **smooth walking–driving mode transitions**
 
@@ -39,10 +39,10 @@ Model‑free RL is employed to train a locomotion controller that handles varied
 
 ## Relationships
 
-- **Used by**: [[Wheeled-Legged Robot]] (used_by) — the trained controller is integrated into the robot’s software stack.
-- **Combined with**: [[Privileged Learning]] (depends_on) — the model‑free training is enhanced by privileged information (e.g., terrain height, friction coefficients) extracted from the simulator during training, which improves sample efficiency and final performance.
+- **Used by**: Wheeled-Legged Robot (used_by) — the trained controller is integrated into the robot’s software stack.
+- **Combined with**: Privileged Learning (depends_on) — the model‑free training is enhanced by privileged information (e.g., terrain height, friction coefficients) extracted from the simulator during training, which improves sample efficiency and final performance.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Model-Free Reinforcement Learning` --[[implements]] ⚠️--> `Wheeled-Legged Robot`
+- `Model-Free Reinforcement Learning` --implements ⚠️--> `Wheeled-Legged Robot`

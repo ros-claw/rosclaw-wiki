@@ -30,6 +30,6 @@ Out-to-In Prior-Free Instruction-Driven Embodied Navigation is a navigation task
 
 ### Relationships
 
-- **Depends on**: [[Egocentric Vision]] ⚠️, [[Instruction Following]] ⚠️
-- **Supersedes**: [[Indoor Embodied Navigation]] ⚠️, [[Outdoor Embodied Navigation]] ⚠️
-- **Part of**: [[Embodied Navigation]]
+- **Depends on**: Egocentric Vision ⚠️, Instruction Following ⚠️
+- **Supersedes**: Indoor Embodied Navigation ⚠️, Outdoor Embodied Navigation ⚠️
+- **Part of**: Embodied Navigation

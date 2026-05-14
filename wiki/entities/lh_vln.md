@@ -23,12 +23,12 @@ LH-VLN provides a standardized evaluation framework for long-horizon VLN models.
 ## Capabilities
 
 - Evaluates VLN methods on long-horizon navigation with extended language instructions.
-- Serves as the primary testbed for [[FantasyVLN]] and similar approaches.
+- Serves as the primary testbed for FantasyVLN and similar approaches.
 - Supports both simulated and real-world navigation scenarios (paper-specific details may vary).
 
 ## Relationships
 
-- **Used by**: [[FantasyVLN]] uses [[LH-VLN]] for benchmarking and evaluation.
+- **Used by**: FantasyVLN uses LH-VLN for benchmarking and evaluation.
 
 ## Source
 
@@ -37,4 +37,4 @@ This page is derived from ArXiv paper 2601.13976, which introduces LH-VLN as par
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `LH-VLN` --[[uses]] ⚠️--> `FantasyVLN`
+- `LH-VLN` --uses ⚠️--> `FantasyVLN`

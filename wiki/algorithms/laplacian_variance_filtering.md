@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Laplacian Variance Filtering
 
-**Laplacian Variance Filtering** is a technique used to reduce [[Visual Jittering]] during real-time object navigation for legged robots. It operates by computing the variance of the Laplacian of image frames to detect and suppress motion-induced blur or instability, thereby stabilizing the visual stream for downstream perception and control.
+**Laplacian Variance Filtering** is a technique used to reduce Visual Jittering during real-time object navigation for legged robots. It operates by computing the variance of the Laplacian of image frames to detect and suppress motion-induced blur or instability, thereby stabilizing the visual stream for downstream perception and control.
 
 ## Purpose
 
@@ -28,17 +28,17 @@ The primary purpose of Laplacian Variance Filtering is to enable robust visual s
 
 ## Capabilities
 
-- **[[Visual Stabilization]] ⚠️ for legged robot navigation** – Reduces motion-induced blur and jitter in real-time camera feeds, improving the reliability of downstream object localization and path planning.
+- **Visual Stabilization ⚠️ for legged robot navigation** – Reduces motion-induced blur and jitter in real-time camera feeds, improving the reliability of downstream object localization and path planning.
 
 ## Relationships
 
-- **used_by** → [[LOVON]] – Laplacian Variance Filtering is a component of the LOVON system, providing preprocessed visual input.
-- **addresses** → [[Visual Jittering]] – The filter directly targets and mitigates jitter caused by legged locomotion.
+- **used_by** → LOVON – Laplacian Variance Filtering is a component of the LOVON system, providing preprocessed visual input.
+- **addresses** → Visual Jittering – The filter directly targets and mitigates jitter caused by legged locomotion.
 
 ## See Also
 
-- [[Visual Odometry]] ⚠️ – Another approach to stabilizing visual input for robot navigation.
-- [[Image Preprocessing]] ⚠️ – Broader category of techniques to which this filter belongs.
+- Visual Odometry ⚠️ – Another approach to stabilizing visual input for robot navigation.
+- Image Preprocessing ⚠️ – Broader category of techniques to which this filter belongs.
 
 ## References
 

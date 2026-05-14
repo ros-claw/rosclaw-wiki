@@ -32,13 +32,13 @@ Wheeled-legged robots combine wheeled and legged mobility for enhanced efficienc
 ## Relationships
 
 - **Uses**:
-  - [[Model-Free Reinforcement Learning]]
-  - [[Privileged Learning]]
-  - [[Hierarchical Reinforcement Learning]]
+  - Model-Free Reinforcement Learning
+  - Privileged Learning
+  - Hierarchical Reinforcement Learning
 - **Depends on**:
-  - [[Adaptive Locomotion Control]]
-  - [[Mobility-Aware Local Navigation Planning]]
-  - [[Large-Scale Path Planning]]
+  - Adaptive Locomotion Control
+  - Mobility-Aware Local Navigation Planning
+  - Large-Scale Path Planning
 
 ## References
 
@@ -47,10 +47,10 @@ Wheeled-legged robots combine wheeled and legged mobility for enhanced efficienc
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Wheeled-Legged Robot` --[[uses]] ⚠️ ⚠️ ⚠️--> `Model-Free Reinforcement Learning`
-- `Wheeled-Legged Robot` --[[uses]] ⚠️ ⚠️ ⚠️--> `Privileged Learning`
-- `Wheeled-Legged Robot` --[[uses]] ⚠️ ⚠️ ⚠️--> `Hierarchical Reinforcement Learning`
+- `Wheeled-Legged Robot` --uses ⚠️ ⚠️ ⚠️--> `Model-Free Reinforcement Learning`
+- `Wheeled-Legged Robot` --uses ⚠️ ⚠️ ⚠️--> `Privileged Learning`
+- `Wheeled-Legged Robot` --uses ⚠️ ⚠️ ⚠️--> `Hierarchical Reinforcement Learning`
 **Pending review:**
-- `Wheeled-Legged Robot` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Adaptive Locomotion Control` _(wikilink)_
-- `Wheeled-Legged Robot` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Mobility-Aware Local Navigation Planning` _(wikilink)_
-- `Wheeled-Legged Robot` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Large-Scale Path Planning` _(wikilink)_
+- `Wheeled-Legged Robot` --related_to ⚠️ ⚠️ ⚠️--> `Adaptive Locomotion Control` _(wikilink)_
+- `Wheeled-Legged Robot` --related_to ⚠️ ⚠️ ⚠️--> `Mobility-Aware Local Navigation Planning` _(wikilink)_
+- `Wheeled-Legged Robot` --related_to ⚠️ ⚠️ ⚠️--> `Large-Scale Path Planning` _(wikilink)_

@@ -18,7 +18,7 @@ An **occupancy map** is a grid-based representation of the environment where eac
 
 ## Description
 
-An occupancy map divides the environment into grid cells indicating occupancy probability, built from depth observations in [[VLFM]].
+An occupancy map divides the environment into grid cells indicating occupancy probability, built from depth observations in VLFM.
 
 ## Capabilities
 
@@ -27,4 +27,4 @@ An occupancy map divides the environment into grid cells indicating occupancy pr
 
 ## Relationships
 
-- **Used by**: [[VLFM]] — the occupancy map is a core component that provides a metric map of the environment for frontier-based exploration and navigation.
+- **Used by**: VLFM — the occupancy map is a core component that provides a metric map of the environment for frontier-based exploration and navigation.

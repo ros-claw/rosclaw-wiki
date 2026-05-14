@@ -26,7 +26,7 @@ The primary function of Panoramic Scene Parsing is to extract spatial layout fro
 
 ## Relationships
 
-- **Used by [[PanoNav]]** – The PanoNav navigation system depends on Panoramic Scene Parsing to provide a global scene understanding from a single 360° image. PanoNav (uses) the parsed layout to fuse with additional sensors and plan collision-free trajectories.
+- **Used by PanoNav** – The PanoNav navigation system depends on Panoramic Scene Parsing to provide a global scene understanding from a single 360° image. PanoNav (uses) the parsed layout to fuse with additional sensors and plan collision-free trajectories.
 
 ## Dependencies
 
@@ -40,4 +40,4 @@ The primary function of Panoramic Scene Parsing is to extract spatial layout fro
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Panoramic Scene Parsing` --[[related_to]] ⚠️--> `PanoNav` _(wikilink)_
+- `Panoramic Scene Parsing` --related_to ⚠️--> `PanoNav` _(wikilink)_

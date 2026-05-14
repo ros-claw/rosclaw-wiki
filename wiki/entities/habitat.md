@@ -27,21 +27,21 @@ source_type: arxiv_paper
 
 ## Installation
 
-Habitat is distributed as two core components: [[Habitat-Sim]] and [[Habitat-Lab]] ⚠️ ⚠️. Both are installed from source; see the [official repository](https://github.com/facebookresearch/habitat-sim) for build instructions and dependencies.
+Habitat is distributed as two core components: Habitat-Sim and Habitat-Lab ⚠️ ⚠️. Both are installed from source; see the [official repository](https://github.com/facebookresearch/habitat-sim) for build instructions and dependencies.
 
 ## Relationships
 
-- [[Habitat]] **depends_on** [[PyTorch]] ⚠️ and [[OpenGL]] ⚠️ for rendering and GPU acceleration.
-- [[Habitat]] **used_to_construct** [[VLN-Ego dataset]], a dataset for egocentric vision‑language navigation that pairs photorealistic renderings with natural language instructions.
-- [[Habitat]] **used_by** [[VLN-R1]], a reinforcement‑learning architecture for vision‑language navigation tasks.
-- [[Habitat]] **used_by** [[EfficientNav]], a navigation policy that leverages the platform for training and evaluation.
+- Habitat **depends_on** PyTorch ⚠️ and OpenGL ⚠️ for rendering and GPU acceleration.
+- Habitat **used_to_construct** VLN-Ego dataset, a dataset for egocentric vision‑language navigation that pairs photorealistic renderings with natural language instructions.
+- Habitat **used_by** VLN-R1, a reinforcement‑learning architecture for vision‑language navigation tasks.
+- Habitat **used_by** EfficientNav, a navigation policy that leverages the platform for training and evaluation.
 
 ## Usage in Embodied AI
 
-The simulator is commonly integrated with learning frameworks such as [[Habitat-Lab]] ⚠️ ⚠️ (for training and evaluation) and [[Habitat-Sim]] (the core simulation engine). Researchers extend Habitat with custom tasks (e.g., ObjectNav, PointNav), and combine it with [[ROS2]] to serve as a testing ground for robot control policies before deployment on physical platforms like [[Unitree G1]] or [[UR5]] ⚠️.
+The simulator is commonly integrated with learning frameworks such as Habitat-Lab ⚠️ ⚠️ (for training and evaluation) and Habitat-Sim (the core simulation engine). Researchers extend Habitat with custom tasks (e.g., ObjectNav, PointNav), and combine it with ROS2 to serve as a testing ground for robot control policies before deployment on physical platforms like Unitree G1 or UR5 ⚠️.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Habitat` --[[uses]] ⚠️--> `VLN-R1`
-- `Habitat` --[[depends_on]] ⚠️--> `Unitree G1`
+- `Habitat` --uses ⚠️--> `VLN-R1`
+- `Habitat` --depends_on ⚠️--> `Unitree G1`

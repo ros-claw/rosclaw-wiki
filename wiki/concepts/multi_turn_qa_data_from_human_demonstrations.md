@@ -14,13 +14,13 @@ source_type: arxiv_paper
 
 # Multi-turn QA Data from Human Demonstrations
 
-**Multi-turn QA Data from Human Demonstrations** is a dataset format where sequences of human demonstration trajectories are converted into structured, multi-turn question-answering pairs. This data is specifically designed to fine-tune Vision-Language Models ([[VLM]] ⚠️ ⚠️) for navigation reasoning tasks, enabling them to perform compositional, hierarchical decision-making in embodied environments.
+**Multi-turn QA Data from Human Demonstrations** is a dataset format where sequences of human demonstration trajectories are converted into structured, multi-turn question-answering pairs. This data is specifically designed to fine-tune Vision-Language Models (VLM ⚠️ ⚠️) for navigation reasoning tasks, enabling them to perform compositional, hierarchical decision-making in embodied environments.
 
 ## Parameters
 
 | Parameter | Value |
 |-----------|-------|
-| Source | [[Human Demonstration Trajectories]] ⚠️ ⚠️ |
+| Source | Human Demonstration Trajectories ⚠️ ⚠️ |
 | Format | Multi-turn question-answering pairs |
 | Purpose | Fine-tune VLM for navigation reasoning |
 
@@ -33,12 +33,12 @@ Each human demonstration trajectory is segmented into a logical sequence of ques
 
 ## Relationships
 
-- **Used in**: This data construction method is a core component of [[CL-CoTNav]], which employs multi-turn QA derived from human demonstrations to fine‑tune a VLM for Chain‑of‑Thought (CoT) navigation in indoor environments.
-- **Depends on**: [[Human Demonstration Trajectories]] ⚠️ ⚠️ as the raw input; [[VLM]] ⚠️ ⚠️ as the target model to be fine‑tuned.
+- **Used in**: This data construction method is a core component of CL-CoTNav, which employs multi-turn QA derived from human demonstrations to fine‑tune a VLM for Chain‑of‑Thought (CoT) navigation in indoor environments.
+- **Depends on**: Human Demonstration Trajectories ⚠️ ⚠️ as the raw input; VLM ⚠️ ⚠️ as the target model to be fine‑tuned.
 
 The multi-turn QA data serves as a bridge between unstructured human behavior and structured model reasoning, enabling the VLM to learn interpretable and generalizable navigation policies.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Multi-turn QA Data from Human Demonstrations` --[[related_to]] ⚠️--> `CL-CoTNav` _(wikilink)_
+- `Multi-turn QA Data from Human Demonstrations` --related_to ⚠️--> `CL-CoTNav` _(wikilink)_

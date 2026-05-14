@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Large-scale Diverse Robot Manipulation Dataset
 
-A **large-scale diverse robot manipulation dataset** is a curated collection of robot interaction data—such as joint states, camera observations, gripper commands, and task metadata—captured across many environments, objects, and actions. These datasets are foundational for training [[generalizable manipulation policies]] ⚠️ that can adapt to novel tasks and settings without task-specific fine-tuning.
+A **large-scale diverse robot manipulation dataset** is a curated collection of robot interaction data—such as joint states, camera observations, gripper commands, and task metadata—captured across many environments, objects, and actions. These datasets are foundational for training generalizable manipulation policies ⚠️ that can adapt to novel tasks and settings without task-specific fine-tuning.
 
 ## Capabilities
 
@@ -24,12 +24,12 @@ A **large-scale diverse robot manipulation dataset** is a curated collection of 
 
 ## Instance
 
-This concept is instantiated by [[DROID]] ⚠️ ⚠️, the Distributed Robot Interaction Dataset, which contains hundreds of hours of in-the-wild manipulation data collected across multiple labs and robot platforms.
+This concept is instantiated by DROID ⚠️ ⚠️, the Distributed Robot Interaction Dataset, which contains hundreds of hours of in-the-wild manipulation data collected across multiple labs and robot platforms.
 
 ## Relationships
 
-- **instance_of**: [[DROID]] ⚠️ ⚠️
-- **related_to**: [[Distributed Data Collection]] ⚠️ — the methodology used to gather such datasets at scale.
+- **instance_of**: DROID ⚠️ ⚠️
+- **related_to**: Distributed Data Collection ⚠️ — the methodology used to gather such datasets at scale.
 
 ## Importance
 
@@ -43,7 +43,7 @@ Large-scale diverse datasets are crucial for developing robust and generalizable
 
 ## See Also
 
-- [[Robot Manipulation]] ⚠️  
-- [[Imitation Learning]]  
-- [[Policy Generalization]] ⚠️  
-- [[Sim-to-Real Transfer]]
+- Robot Manipulation ⚠️  
+- Imitation Learning  
+- Policy Generalization ⚠️  
+- Sim-to-Real Transfer

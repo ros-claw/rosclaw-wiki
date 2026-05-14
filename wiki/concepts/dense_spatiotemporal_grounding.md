@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Dense Spatiotemporal Grounding
 
-**Dense Spatiotemporal Grounding** is a concept in [[Embodied AI]] and [[Vision-and-Language Navigation]] that provides fine‑grained supervision for aligning natural language instructions with continuous agent motion. It was introduced in the [[Room-Across-Room (RxR)]] dataset to overcome the limitations of coarse, utterance‑level annotations.
+**Dense Spatiotemporal Grounding** is a concept in Embodied AI and Vision-and-Language Navigation that provides fine‑grained supervision for aligning natural language instructions with continuous agent motion. It was introduced in the Room-Across-Room (RxR) dataset to overcome the limitations of coarse, utterance‑level annotations.
 
 ## Description
 
@@ -33,19 +33,19 @@ Dense spatiotemporal grounding aligns each word of an instruction with the speci
 
 ## Relationships
 
-- **implemented_in**: [[Room-Across-Room (RxR)]] — the first dataset to collect densely grounded instructions using this paradigm
-- **depends_on**: [[Virtual Poses]] ⚠️ — the source of alignment data
-- **depends_on**: [[Human Annotation Pipeline]] ⚠️ — instruction creators and validators produce the pose‑word pairs
-- **uses**: [[Panorama Representations]] ⚠️ — attention mechanisms attend to relevant image regions based on the grounding
-- **improves**: [[Visual Navigation Models]] ⚠️ — by providing denser supervision than utterance‑level grounding
+- **implemented_in**: Room-Across-Room (RxR) — the first dataset to collect densely grounded instructions using this paradigm
+- **depends_on**: Virtual Poses ⚠️ — the source of alignment data
+- **depends_on**: Human Annotation Pipeline ⚠️ — instruction creators and validators produce the pose‑word pairs
+- **uses**: Panorama Representations ⚠️ — attention mechanisms attend to relevant image regions based on the grounding
+- **improves**: Visual Navigation Models ⚠️ — by providing denser supervision than utterance‑level grounding
 
 ## Significance
 
-Dense spatiotemporal grounding bridges the gap between discrete language tokens and continuous spatial context, making it a foundational concept for instruction‑following agents. It is a key component in modern [[Embodied Instruction Following]] ⚠️ pipelines and is often combined with [[Transformer‑based Policies]] ⚠️ that can leverage token‑wise attention over both text and visual features.
+Dense spatiotemporal grounding bridges the gap between discrete language tokens and continuous spatial context, making it a foundational concept for instruction‑following agents. It is a key component in modern Embodied Instruction Following ⚠️ pipelines and is often combined with Transformer‑based Policies ⚠️ that can leverage token‑wise attention over both text and visual features.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Dense Spatiotemporal Grounding` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Embodied AI`
-- `Dense Spatiotemporal Grounding` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Vision-and-Language Navigation`
-- `Dense Spatiotemporal Grounding` --[[related_to]] ⚠️ ⚠️ ⚠️--> `Room-Across-Room (RxR)`
+- `Dense Spatiotemporal Grounding` --related_to ⚠️ ⚠️ ⚠️--> `Embodied AI`
+- `Dense Spatiotemporal Grounding` --related_to ⚠️ ⚠️ ⚠️--> `Vision-and-Language Navigation`
+- `Dense Spatiotemporal Grounding` --related_to ⚠️ ⚠️ ⚠️--> `Room-Across-Room (RxR)`

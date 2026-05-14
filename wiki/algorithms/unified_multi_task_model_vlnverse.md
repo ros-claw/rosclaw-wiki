@@ -16,18 +16,18 @@ source_type: arxiv_paper
 
 ## Overview
 
-The **Unified Multi-Task Model** is a novel [[algorithm]] ⚠️ designed to jointly address all sub-tasks within the [[VLNVerse Benchmark]] ⚠️ ⚠️. It is the first unified model capable of handling every task defined in the benchmark, bridging the gap between simulated navigation and real-world generalization through shared representations and multi-task learning.
+The **Unified Multi-Task Model** is a novel algorithm ⚠️ designed to jointly address all sub-tasks within the VLNVerse Benchmark ⚠️ ⚠️. It is the first unified model capable of handling every task defined in the benchmark, bridging the gap between simulated navigation and real-world generalization through shared representations and multi-task learning.
 
 ## Capabilities
 
-- Addresses multiple [[Vision-Language Navigation]] sub-tasks simultaneously.
+- Addresses multiple Vision-Language Navigation sub-tasks simultaneously.
 - Leverages shared representations across tasks.
 - Potentially improves generalization by learning common navigation priors.
 
 ## Relationships
 
-- **Implements**: [[Multi-task Learning]] ⚠️, [[Vision-Language Navigation]]
-- **Depends on**: [[VLNVerse Benchmark]] ⚠️ ⚠️
+- **Implements**: Multi-task Learning ⚠️, Vision-Language Navigation
+- **Depends on**: VLNVerse Benchmark ⚠️ ⚠️
 
 ## Proposed Model
 

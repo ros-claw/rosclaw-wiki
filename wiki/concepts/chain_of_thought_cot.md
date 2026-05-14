@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 **Type**: concept
 
-**Source**: [[arxiv_paper source: 2506.01551.pdf]] ⚠️
+**Source**: arxiv_paper source: 2506.01551.pdf ⚠️
 
 ## Overview
 
@@ -25,7 +25,7 @@ Chain-of-Thought (CoT) is a reasoning chain that structures intermediate steps i
 ## Parameters
 
 - **Type**: reasoning chain
-- **Role in [[EvolveNav]]**: CoT provides formalized labels used for supervised fine-tuning and is self‑enriched during post‑training to refine the model’s reasoning capacity.
+- **Role in EvolveNav**: CoT provides formalized labels used for supervised fine-tuning and is self‑enriched during post‑training to refine the model’s reasoning capacity.
 
 ## Capabilities
 
@@ -34,11 +34,11 @@ Chain-of-Thought (CoT) is a reasoning chain that structures intermediate steps i
 
 ## Relationships
 
-- **Depends on**: [[LLM]] ⚠️ (Large Language Model) — CoT reasoning is generated and processed by an underlying LLM.
-- **Used by**: [[EvolveNav]] — CoT is a core component of the EvolveNav framework for both initial training and self‑reflective improvement.
+- **Depends on**: LLM ⚠️ (Large Language Model) — CoT reasoning is generated and processed by an underlying LLM.
+- **Used by**: EvolveNav — CoT is a core component of the EvolveNav framework for both initial training and self‑reflective improvement.
 - **Part of**: 
-  - [[Formalized CoT Supervised Fine-Tuning]] — CoT labels are used as targets for initial supervised fine‑tuning.
-  - [[Self-Reflective Post-Training]] — CoT chains are self‑enriched and refined during post‑training to improve consistency and generalization.
+  - Formalized CoT Supervised Fine-Tuning — CoT labels are used as targets for initial supervised fine‑tuning.
+  - Self-Reflective Post-Training — CoT chains are self‑enriched and refined during post‑training to improve consistency and generalization.
 
 ## References
 
@@ -47,4 +47,4 @@ Chain-of-Thought (CoT) is a reasoning chain that structures intermediate steps i
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Chain-of-Thought (CoT)` --[[related_to]] ⚠️--> `EvolveNav` _(wikilink)_
+- `Chain-of-Thought (CoT)` --related_to ⚠️--> `EvolveNav` _(wikilink)_

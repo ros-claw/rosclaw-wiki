@@ -12,7 +12,7 @@ sources:
 source_type: arxiv_paper
 ---
 
-**Low-level action prediction** refers to the ability of a robotic system to directly generate fine-grained motor commands—such as joint torques, end-effector positions, or velocity setpoints—from high-level perceptual and linguistic inputs. In the context of [[Vision-Language-Action Model]] based control policies, low-level action prediction serves as the final output stage that translates abstract reasoning into executable physical movements.
+**Low-level action prediction** refers to the ability of a robotic system to directly generate fine-grained motor commands—such as joint torques, end-effector positions, or velocity setpoints—from high-level perceptual and linguistic inputs. In the context of Vision-Language-Action Model based control policies, low-level action prediction serves as the final output stage that translates abstract reasoning into executable physical movements.
 
 ## Role in Embodied AI
 
@@ -24,18 +24,18 @@ Low-level action prediction bridges the gap between symbolic reasoning and physi
 
 ## Relationships
 
-- **Part of** [[Vision-Language-Action Model]] based control policies – Low-level action prediction is a core component within end-to-end [[VLA]] ⚠️ architectures, where a single model jointly processes visual observations, language instructions, and action histories to produce motor outputs.
-- **Depends on** [[Robot Kinematics]] ⚠️ – Accurate low-level predictions require understanding of the robot's kinematic structure, joint limits, and dynamics.
-- **Implements** [[Imitation Learning]] – Often trained on large datasets of human demonstrations or teleoperation logs.
-- **Contrasts with** [[High-Level Task Planning]] – Unlike symbolic planners that output goal states or subgoal sequences, low-level action prediction operates at the millisecond timescale directly on motor commands.
+- **Part of** Vision-Language-Action Model based control policies – Low-level action prediction is a core component within end-to-end VLA ⚠️ architectures, where a single model jointly processes visual observations, language instructions, and action histories to produce motor outputs.
+- **Depends on** Robot Kinematics ⚠️ – Accurate low-level predictions require understanding of the robot's kinematic structure, joint limits, and dynamics.
+- **Implements** Imitation Learning – Often trained on large datasets of human demonstrations or teleoperation logs.
+- **Contrasts with** High-Level Task Planning – Unlike symbolic planners that output goal states or subgoal sequences, low-level action prediction operates at the millisecond timescale directly on motor commands.
 
 ## Context from Literature
 
-The concept is central to recent VLA models such as [[RT-2]] ⚠️, [[Octo]] ⚠️, and [[OpenVLA]] ⚠️, where the model's output is a sequence of joint or Cartesian actions. The paper *2405.14093* (source: `papers/2405.14093.pdf`) discusses architectural choices for low-level action prediction, including discretization of continuous action spaces and the use of diffusion policies to model multi-modal action distributions.
+The concept is central to recent VLA models such as RT-2 ⚠️, Octo ⚠️, and OpenVLA ⚠️, where the model's output is a sequence of joint or Cartesian actions. The paper *2405.14093* (source: `papers/2405.14093.pdf`) discusses architectural choices for low-level action prediction, including discretization of continuous action spaces and the use of diffusion policies to model multi-modal action distributions.
 
 ## See Also
 
-- [[Low-Level Control]] ⚠️
-- [[Action Chunking]] ⚠️
-- [[Sim-to-Real Transfer]]
-- [[Torque Control]] ⚠️
+- Low-Level Control ⚠️
+- Action Chunking ⚠️
+- Sim-to-Real Transfer
+- Torque Control ⚠️

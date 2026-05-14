@@ -29,8 +29,8 @@ The **high jump** is a dynamic parkour skill that enables a robot to clear verti
 
 ## Relationships
 
-- **Performed by**: [[Extreme Parkour Robot]]
-- **Controlled by**: [[Extreme Parkour Policy]]
+- **Performed by**: Extreme Parkour Robot
+- **Controlled by**: Extreme Parkour Policy
 
 ## Description
 

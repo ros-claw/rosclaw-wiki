@@ -23,9 +23,9 @@ source_type: arxiv_paper
 
 ## Relationship
 
-- **used_by** → [[TANGO]]: The TANGO system implements an open-set navigation pipeline that combines language-conditioned affordance prediction with real-time perception, enabling navigation in environments with unknown obstructions and dynamic targets.
+- **used_by** → TANGO: The TANGO system implements an open-set navigation pipeline that combines language-conditioned affordance prediction with real-time perception, enabling navigation in environments with unknown obstructions and dynamic targets.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Open-set navigation` --[[related_to]] ⚠️--> `TANGO` _(wikilink)_
+- `Open-set navigation` --related_to ⚠️--> `TANGO` _(wikilink)_

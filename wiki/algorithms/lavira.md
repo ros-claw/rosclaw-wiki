@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # LaViRA
 
-**LaViRA** (Language-Vision-Robot Action) is a zero-shot framework for **[[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️ in Continuous Environments**. It decomposes robotic navigation into a coarse-to-fine action hierarchy, leveraging the distinct strengths of [[Multimodal Large Language Models (MLLMs)]] ⚠️ ⚠️ ⚠️ at different scales. The framework achieves state-of-the-art performance on the [[VLN-CE benchmark]] while maintaining transparency and suitability for real-world deployment.
+**LaViRA** (Language-Vision-Robot Action) is a zero-shot framework for **Vision-and-Language Navigation (VLN) ⚠️ ⚠️ in Continuous Environments**. It decomposes robotic navigation into a coarse-to-fine action hierarchy, leveraging the distinct strengths of Multimodal Large Language Models (MLLMs) ⚠️ ⚠️ ⚠️ at different scales. The framework achieves state-of-the-art performance on the VLN-CE benchmark while maintaining transparency and suitability for real-world deployment.
 
 ## Parameters
 
@@ -37,7 +37,7 @@ This staged design allows each level to operate at an appropriate scale of model
 ## Capabilities
 
 - **Zero-shot Vision-and-Language Navigation** in continuous, unseen environments – no task-specific training or environment-specific waypoint predictors are required.
-- **State-of-the-art performance** on the [[VLN-CE benchmark]], outperforming existing zero-shot methods.
+- **State-of-the-art performance** on the VLN-CE benchmark, outperforming existing zero-shot methods.
 - **Superior generalization** in unseen environments without additional adaptation.
 - **Transparency and efficiency** designed for real-world deployment, with interpretable intermediate representations at each hierarchy level.
 
@@ -47,9 +47,9 @@ LaViRA significantly outperforms existing zero-shot approaches on the VLN-CE ben
 
 ## Relationships
 
-- **Uses**: [[Multimodal Large Language Models (MLLMs)]] ⚠️ ⚠️ ⚠️ (at multiple scales) – LaViRA relies on MLLMs for language understanding, visual grounding, and control policy generation.
-- **Depends on**: [[VLN-CE benchmark]] for evaluation; [[Multimodal Large Language Models (MLLMs)]] ⚠️ ⚠️ ⚠️ as core reasoning engines.
-- **Implements**: A zero-shot [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️ framework, built on [[zero-shot learning]] principles – no training is required for new environments.
+- **Uses**: Multimodal Large Language Models (MLLMs) ⚠️ ⚠️ ⚠️ (at multiple scales) – LaViRA relies on MLLMs for language understanding, visual grounding, and control policy generation.
+- **Depends on**: VLN-CE benchmark for evaluation; Multimodal Large Language Models (MLLMs) ⚠️ ⚠️ ⚠️ as core reasoning engines.
+- **Implements**: A zero-shot Vision-and-Language Navigation (VLN) ⚠️ ⚠️ framework, built on zero-shot learning principles – no training is required for new environments.
 
 ## Source
 

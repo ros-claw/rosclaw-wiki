@@ -40,10 +40,10 @@ This enables the agent to smoothly transition between high-level goal searching 
 
 ## Relationships
 
-- **type**: [[Mixture of Experts]] model
+- **type**: Mixture of Experts model
 - **adaptation**: state-adaptive routing based on observations and language
-- **uses** → [[Mixture of Experts]], [[state-adaptive mechanism]] ⚠️, [[Language instructions]] ⚠️, [[Visual observations]] ⚠️
-- **depends_on** → [[instruction-guided visual navigation]], [[dynamic observations]] ⚠️ ⚠️, shared general knowledge, task-specific expert modules
+- **uses** → Mixture of Experts, state-adaptive mechanism ⚠️, Language instructions ⚠️, Visual observations ⚠️
+- **depends_on** → instruction-guided visual navigation, dynamic observations ⚠️ ⚠️, shared general knowledge, task-specific expert modules
 
 ---
 
@@ -64,9 +64,9 @@ The resulting mixed output drives the agent's action policy (velocity commands o
 ## References
 
 - Source: `data/raw/papers/2412.05552.pdf`
-- Related: [[Mixture of Experts]], [[instruction-guided visual navigation]], [[dynamic observations]] ⚠️ ⚠️, [[navigation tasks]] ⚠️
+- Related: Mixture of Experts, instruction-guided visual navigation, dynamic observations ⚠️ ⚠️, navigation tasks ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `State-Adaptive Mixture of Experts (SAME)` --[[based_on]] ⚠️--> `instruction-guided visual navigation`
+- `State-Adaptive Mixture of Experts (SAME)` --based_on ⚠️--> `instruction-guided visual navigation`

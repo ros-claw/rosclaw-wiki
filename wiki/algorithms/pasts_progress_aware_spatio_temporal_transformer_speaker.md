@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-PASTS is a speaker model for **[[Vision-and-Language Navigation]] (VLN)** that leverages a **[[Transformer]] ⚠️** core to attend to both spatial and temporal features of an agent's trajectory. It introduces a **Speaker Progress Monitor (SPM)** to align generated pseudo instructions with the agent's actual navigation progress, enabling high-quality data augmentation that boosts the generalization performance of downstream VLN agents.
+PASTS is a speaker model for **Vision-and-Language Navigation (VLN)** that leverages a **Transformer ⚠️** core to attend to both spatial and temporal features of an agent's trajectory. It introduces a **Speaker Progress Monitor (SPM)** to align generated pseudo instructions with the agent's actual navigation progress, enabling high-quality data augmentation that boosts the generalization performance of downstream VLN agents.
 
 ### Architecture
 
@@ -30,16 +30,16 @@ PASTS consists of several key components:
 
 - Generates pseudo instructions for data augmentation in VLN tasks.
 - Enhances generalization performance of VLN agents, especially under limited training data.
-- Outperforms existing **[[LSTM]]**-based speaker models on standard benchmarks.
-- Achieves state-of-the-art performance on the **[[Room-to-Room (R2R)]]** dataset when used as a data augmentation module.
-- Flexible: can be combined with any existing VLN model (e.g., [[VLN-BERT]], [[HAMT]]) to improve their navigation accuracy.
+- Outperforms existing **LSTM**-based speaker models on standard benchmarks.
+- Achieves state-of-the-art performance on the **Room-to-Room (R2R)** dataset when used as a data augmentation module.
+- Flexible: can be combined with any existing VLN model (e.g., VLN-BERT, HAMT) to improve their navigation accuracy.
 
 ### Relationships
 
-- **`uses`**: [[Transformer architecture]] ⚠️, [[Spatio-Temporal Encoder]], [[Speaker Progress Monitor]] ⚠️, [[Multifeature Dropout]] ⚠️
-- **`depends_on`**: [[Vision-and-Language Navigation]] task, [[Trajectory Dataset]] ⚠️ (e.g., [[R2R]])
-- **`improves_upon`**: [[LSTM-based speaker models]] ⚠️, [[Previous VLN models]] ⚠️ (when used for augmentation)
-- **`part_of`**: [[Data augmentation pipeline for VLN]] ⚠️
+- **`uses`**: Transformer architecture ⚠️, Spatio-Temporal Encoder, Speaker Progress Monitor ⚠️, Multifeature Dropout ⚠️
+- **`depends_on`**: Vision-and-Language Navigation task, Trajectory Dataset ⚠️ (e.g., R2R)
+- **`improves_upon`**: LSTM-based speaker models ⚠️, Previous VLN models ⚠️ (when used for augmentation)
+- **`part_of`**: Data augmentation pipeline for VLN ⚠️
 
 ### Performance Summary
 
@@ -52,6 +52,6 @@ On the R2R test set, PASTS-generated pseudo instructions improve the success rat
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)` --[[based_on]] ⚠️--> `Vision-and-Language Navigation`
-- `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)` --[[extends]] ⚠️ ⚠️--> `LSTM`
-- `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)` --[[extends]] ⚠️ ⚠️--> `Spatio-Temporal Encoder`
+- `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)` --based_on ⚠️--> `Vision-and-Language Navigation`
+- `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)` --extends ⚠️ ⚠️--> `LSTM`
+- `PASTS (Progress-Aware Spatio-Temporal Transformer Speaker)` --extends ⚠️ ⚠️--> `Spatio-Temporal Encoder`

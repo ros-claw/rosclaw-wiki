@@ -28,7 +28,7 @@ source_type: arxiv_paper
 - **Applied to**: Panoramic image features (36 views per node)
 - **Training paradigm**: Reinforcement learning with imitation learning pre-training
 - **Environments**: Matterport3D (discrete graph)
-- **Datasets**: [[R2R]], [[RxR]]
+- **Datasets**: R2R, RxR
 
 ## Method
 
@@ -46,21 +46,21 @@ EnvDrop applies dropout directly to the visual observation encoder's output feat
 
 ## Relationships
 
-- **Improves**: [[Speaker-Follower]] — EnvDrop is commonly combined with the speaker-follower framework for better results
-- **Used on**: [[R2R]] — primary benchmark for evaluation
-- **Related to**: [[Self-Monitoring]] ⚠️ — both are regularization techniques for VLN
-- **Precedes**: [[AuxRN]] ⚠️ — later methods build on the intuition that visual dropout helps language grounding
+- **Improves**: Speaker-Follower — EnvDrop is commonly combined with the speaker-follower framework for better results
+- **Used on**: R2R — primary benchmark for evaluation
+- **Related to**: Self-Monitoring ⚠️ — both are regularization techniques for VLN
+- **Precedes**: AuxRN ⚠️ — later methods build on the intuition that visual dropout helps language grounding
 
 ## See Also
 
-- [[Vision-Language Navigation]] — the broader field
-- [[Data Augmentation]] ⚠️ — general techniques for embodied AI
-- [[R2R]] — the primary benchmark dataset
+- Vision-Language Navigation — the broader field
+- Data Augmentation ⚠️ — general techniques for embodied AI
+- R2R — the primary benchmark dataset
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EnvDrop` --[[implements]] ⚠️ ⚠️--> `R2R`
-- `EnvDrop` --[[implements]] ⚠️ ⚠️--> `RxR`
-- `EnvDrop` --[[extends]] ⚠️--> `Speaker-Follower`
-- `EnvDrop` --[[based_on]] ⚠️--> `Vision-Language Navigation`
+- `EnvDrop` --implements ⚠️ ⚠️--> `R2R`
+- `EnvDrop` --implements ⚠️ ⚠️--> `RxR`
+- `EnvDrop` --extends ⚠️--> `Speaker-Follower`
+- `EnvDrop` --based_on ⚠️--> `Vision-Language Navigation`

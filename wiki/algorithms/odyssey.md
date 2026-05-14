@@ -22,10 +22,10 @@ source_type: arxiv_paper
 
 ODYSSEY adopts a hierarchical design composed of two core components:
 
-- **[[Hierarchical Planner]]**: A vision-language model (VLM) driven planner that decomposes long-horizon natural language instructions into actionable subgoals. It reasons over visual observations and robot state to generate feasible sequences of high-level commands.
-- **[[Whole-body Policy]]**: A novel control policy that coordinates the quadruped’s locomotion and the manipulator’s arm movements into a single, fluid action space. This policy is trained in simulation and directly zero-shot transferred to the real robot.
+- **Hierarchical Planner**: A vision-language model (VLM) driven planner that decomposes long-horizon natural language instructions into actionable subgoals. It reasons over visual observations and robot state to generate feasible sequences of high-level commands.
+- **Whole-body Policy**: A novel control policy that coordinates the quadruped’s locomotion and the manipulator’s arm movements into a single, fluid action space. This policy is trained in simulation and directly zero-shot transferred to the real robot.
 
-The planner depends on a [[Vision-Language Model]] to interpret environmental context and task semantics. Together, these components implement **[[Language-guided long-horizon mobile manipulation]] ⚠️ ⚠️**.
+The planner depends on a Vision-Language Model to interpret environmental context and task semantics. Together, these components implement **Language-guided long-horizon mobile manipulation ⚠️ ⚠️**.
 
 ## Capabilities
 
@@ -40,10 +40,10 @@ The planner depends on a [[Vision-Language Model]] to interpret environmental co
 
 ## Relationships
 
-- **Uses**: [[Hierarchical Planner]], [[Whole-body Policy]]
-- **Depends on**: [[Vision-Language Model]]
-- **Implements**: [[Language-guided long-horizon mobile manipulation]] ⚠️ ⚠️
-- **Deployed on**: [[Quadruped Robot with Manipulator]]
+- **Uses**: Hierarchical Planner, Whole-body Policy
+- **Depends on**: Vision-Language Model
+- **Implements**: Language-guided long-horizon mobile manipulation ⚠️ ⚠️
+- **Deployed on**: Quadruped Robot with Manipulator
 
 ## Sim-to-Real Transfer
 

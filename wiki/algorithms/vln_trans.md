@@ -16,9 +16,9 @@ source_type: arxiv_paper
 
 ## Overview
 
-VLN-Trans is a translator module designed for [[Vision and Language Navigation]] (VLN) agents. It addresses two instruction issues: **unrecognizable landmarks** due to differing vision abilities between humans and agents, and **non-distinctive landmarks** that could apply to multiple targets. The module converts complex navigation instructions into stepwise **sub-instruction representations** that emphasize landmarks that are both recognizable and distinctive given the agent’s visual capabilities and current viewpoint.
+VLN-Trans is a translator module designed for Vision and Language Navigation (VLN) agents. It addresses two instruction issues: **unrecognizable landmarks** due to differing vision abilities between humans and agents, and **non-distinctive landmarks** that could apply to multiple targets. The module converts complex navigation instructions into stepwise **sub-instruction representations** that emphasize landmarks that are both recognizable and distinctive given the agent’s visual capabilities and current viewpoint.
 
-The module acts as a bridge between raw human language and actionable agent plans, enabling the agent to focus on [[distinctive landmarks]] that are visible from its perspective rather than relying on ambiguous descriptions.
+The module acts as a bridge between raw human language and actionable agent plans, enabling the agent to focus on distinctive landmarks that are visible from its perspective rather than relying on ambiguous descriptions.
 
 ## Capabilities
 
@@ -29,26 +29,26 @@ These capabilities are learned jointly with the navigation agent using a synthet
 
 ## Methodology
 
-The translator module is trained jointly with the navigation agent using a newly constructed synthetic dataset of sub-instructions. The sub-instruction representation is learned to decompose long, complex routes into shorter segments, each aligned with a visible landmark. The training process explicitly accounts for the agent’s [[Navigation Agent Visual Abilities]] ⚠️ ⚠️, ensuring that the generated sub-instructions refer to landmarks the agent can perceive and distinguish.
+The translator module is trained jointly with the navigation agent using a newly constructed synthetic dataset of sub-instructions. The sub-instruction representation is learned to decompose long, complex routes into shorter segments, each aligned with a visible landmark. The training process explicitly accounts for the agent’s Navigation Agent Visual Abilities ⚠️ ⚠️, ensuring that the generated sub-instructions refer to landmarks the agent can perceive and distinguish.
 
 ## Training Data
 
 To support joint training of the translator and the navigation agent, a new **synthetic sub‑instruction dataset** was created. This dataset pairs original instructions with stepwise sub-instructions that highlight landmarks salient to the agent’s view. The dataset is used in conjunction with standard VLN benchmarks.
 
-- **Uses**: [[R2R dataset]], [[R4R dataset]] ⚠️ ⚠️, [[R2R-Last dataset]], [[Synthetic Sub-Instruction Dataset]]
-- **Depends on**: [[sub-instruction representation]], [[Navigation Agent Visual Abilities]] ⚠️ ⚠️
+- **Uses**: R2R dataset, R4R dataset ⚠️ ⚠️, R2R-Last dataset, Synthetic Sub-Instruction Dataset
+- **Depends on**: sub-instruction representation, Navigation Agent Visual Abilities ⚠️ ⚠️
 
 ## Relationships
 
-VLN‑Trans is a core component of a complete [[Vision and Language Navigation System]] ⚠️, where it acts as the front‑end translator that bridges language input and agent action.
+VLN‑Trans is a core component of a complete Vision and Language Navigation System ⚠️, where it acts as the front‑end translator that bridges language input and agent action.
 
 ## Evaluation
 
 VLN-Trans achieves **state-of-the-art results** on the following benchmarks:
 
-- [[R2R dataset]]
-- [[R4R dataset]] ⚠️ ⚠️
-- [[R2R-Last dataset]]
+- R2R dataset
+- R4R dataset ⚠️ ⚠️
+- R2R-Last dataset
 
 It demonstrates significant improvements in task completion rates and navigation efficiency compared to prior methods, particularly on instructions that contain ambiguous or landmark-poor language.
 

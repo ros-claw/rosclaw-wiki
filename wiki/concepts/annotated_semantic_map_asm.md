@@ -25,7 +25,7 @@ An **Annotated Semantic Map (ASM)** is a memory representation that transforms a
 | **Type** | Memory representation |
 | **Construction** | Top-down semantic map, initialized at episode onset, updated every timestep |
 | **Features** | Explicit textual labels for key regions, precise object mapping, structured navigation information |
-| **Source** | Derived from the [[MapNav]] framework (arxiv:2502.13451) |
+| **Source** | Derived from the MapNav framework (arxiv:2502.13451) |
 
 ### Capabilities
 
@@ -34,16 +34,16 @@ An **Annotated Semantic Map (ASM)** is a memory representation that transforms a
 
 ### Relationships
 
-- **Used by** → [[MapNav]]: The ASM serves as the core memory representation within the MapNav model.
-- **Part of** → [[MapNav]] model: The ASM is an integral component of the MapNav architecture, enabling it to perform semantic navigation without relying on historical visual frames.
+- **Used by** → MapNav: The ASM serves as the core memory representation within the MapNav model.
+- **Part of** → MapNav model: The ASM is an integral component of the MapNav architecture, enabling it to perform semantic navigation without relying on historical visual frames.
 
 ### See Also
 
-- [[Semantic Map]]
-- [[Top-Down Grid Representation]] ⚠️
-- [[MapNav]]
+- Semantic Map
+- Top-Down Grid Representation ⚠️
+- MapNav
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Annotated Semantic Map (ASM)` --[[related_to]] ⚠️--> `MapNav` _(wikilink)_
+- `Annotated Semantic Map (ASM)` --related_to ⚠️--> `MapNav` _(wikilink)_

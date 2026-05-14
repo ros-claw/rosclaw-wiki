@@ -26,5 +26,5 @@ source_type: arxiv_paper
 
 ### Relationships
 
-- **uses** – [[2D feature extraction]] ⚠️ to obtain per-view descriptors.
-- **part_of** – [[Volumetric Environment Representation]], a broader paradigm for encoding spatial knowledge in embodied agents.
+- **uses** – 2D feature extraction ⚠️ to obtain per-view descriptors.
+- **part_of** – Volumetric Environment Representation, a broader paradigm for encoding spatial knowledge in embodied agents.

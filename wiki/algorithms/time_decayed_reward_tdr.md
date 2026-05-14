@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Time-Decayed Reward (TDR)
 
-**Time-Decayed Reward (TDR)** is a mechanism in [[reinforcement fine-tuning]] ⚠️ ⚠️ ⚠️ ⚠️ that strategically weights multi-step future actions by applying a temporal decay to the reward signal. By attenuating the influence of rewards that are temporally distant from the current state, TDR focuses learning on immediate and near-future consequences, improving sample efficiency and policy stability in long-horizon tasks.
+**Time-Decayed Reward (TDR)** is a mechanism in reinforcement fine-tuning ⚠️ ⚠️ ⚠️ ⚠️ that strategically weights multi-step future actions by applying a temporal decay to the reward signal. By attenuating the influence of rewards that are temporally distant from the current state, TDR focuses learning on immediate and near-future consequences, improving sample efficiency and policy stability in long-horizon tasks.
 
 ## Overview
 
-TDR operates as a drop-in modification to the reward calculation in [[reinforcement learning]] based fine-tuning pipelines. Instead of treating all future rewards equally (as in standard discounted returns), it applies a **decay factor** that reduces the contribution of rewards proportional to their time-step distance from the decision point. This encourages the agent to prioritize actions that yield faster returns, naturally aligning with [[embodied AI]] tasks where delayed rewards are often less reliable.
+TDR operates as a drop-in modification to the reward calculation in reinforcement learning based fine-tuning pipelines. Instead of treating all future rewards equally (as in standard discounted returns), it applies a **decay factor** that reduces the contribution of rewards proportional to their time-step distance from the decision point. This encourages the agent to prioritize actions that yield faster returns, naturally aligning with embodied AI tasks where delayed rewards are often less reliable.
 
 ## Mechanism
 
@@ -44,31 +44,31 @@ The decay shape and strength are hyperparameters that control how aggressively f
 
 ## Capabilities
 
-- **Enhances [[reinforcement fine-tuning]] ⚠️ ⚠️ ⚠️ ⚠️** by decaying reward over time, leading to faster convergence and reduced variance in gradient estimates.
+- **Enhances reinforcement fine-tuning ⚠️ ⚠️ ⚠️ ⚠️** by decaying reward over time, leading to faster convergence and reduced variance in gradient estimates.
 - Improves policy robustness in environments where reward signals become noisy or sparse over long horizons.
-- Naturally integrates with existing [[RLHF]] ⚠️ and [[VLA model]] ⚠️ fine-tuning pipelines.
+- Naturally integrates with existing RLHF ⚠️ and VLA model ⚠️ fine-tuning pipelines.
 
 ## Usage in VLN-R1
 
-TDR is employed in the [[reinforcement fine-tuning]] ⚠️ ⚠️ ⚠️ ⚠️ (RFT) stage of the [[VLN-R1]] system for [[Vision-Language Navigation]]. In VLN-R1, an agent must follow natural‑language instructions through visual environments — a task where rewards (e.g., goal reached, subgoal success) often arrive many steps after the critical decision. TDR helps the agent attribute credit to actions that lead to near‑term progress, complementing the [[cross-modal attention]] ⚠️ backbone.
+TDR is employed in the reinforcement fine-tuning ⚠️ ⚠️ ⚠️ ⚠️ (RFT) stage of the VLN-R1 system for Vision-Language Navigation. In VLN-R1, an agent must follow natural‑language instructions through visual environments — a task where rewards (e.g., goal reached, subgoal success) often arrive many steps after the critical decision. TDR helps the agent attribute credit to actions that lead to near‑term progress, complementing the cross-modal attention ⚠️ backbone.
 
 The specific decay curve used in VLN‑R1 is an exponential decay with \(\lambda = 0.1\), chosen based on ablation studies that balanced long‑term planning against myopic convergence.
 
 ## Relationships
 
-- **depends_on**: [[reinforcement learning]], [[discounted return]] ⚠️
-- **implements**: [[credit assignment]] ⚠️ with temporal awareness
-- **used_in**: [[reinforcement fine-tuning]] ⚠️ ⚠️ ⚠️ ⚠️ of [[VLN-R1]]
-- **related_to**: [[Generalized Advantage Estimation (GAE)]] ⚠️ (both shape temporal weighting; TDR is simpler and decoupled from baseline estimation)
+- **depends_on**: reinforcement learning, discounted return ⚠️
+- **implements**: credit assignment ⚠️ with temporal awareness
+- **used_in**: reinforcement fine-tuning ⚠️ ⚠️ ⚠️ ⚠️ of VLN-R1
+- **related_to**: Generalized Advantage Estimation (GAE) ⚠️ (both shape temporal weighting; TDR is simpler and decoupled from baseline estimation)
 
 ## References
 
 - Source paper: arxiv 2506.17221 – *VLN-R1: Vision-Language Navigation via Reinforcement Fine-Tuning* (TDR introduced in Section 3.3).
-- See also [[Unitree G1]] for a hardware platform that may benefit from TDR in future manipulation fine-tuning.
+- See also Unitree G1 for a hardware platform that may benefit from TDR in future manipulation fine-tuning.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Time-Decayed Reward (TDR)` --[[based_on]] ⚠️--> `embodied AI`
-- `Time-Decayed Reward (TDR)` --[[extends]] ⚠️--> `VLN-R1`
-- `Time-Decayed Reward (TDR)` --[[implements]] ⚠️--> `Unitree G1`
+- `Time-Decayed Reward (TDR)` --based_on ⚠️--> `embodied AI`
+- `Time-Decayed Reward (TDR)` --extends ⚠️--> `VLN-R1`
+- `Time-Decayed Reward (TDR)` --implements ⚠️--> `Unitree G1`

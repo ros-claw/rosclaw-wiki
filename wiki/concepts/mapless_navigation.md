@@ -34,8 +34,8 @@ Reduces hardware requirements and pre‑mapping efforts, enabling deployment on 
 ---
 
 **Relationships**  
-- The approach is addressed by [[CREStE]], a system that enables robust mapless navigation over long distances.  
-- [[Mapless Navigation]] is related to [[Zero-shot navigation]], as both aim to operate without prior exposure to the environment.
+- The approach is addressed by CREStE, a system that enables robust mapless navigation over long distances.  
+- Mapless Navigation is related to Zero-shot navigation, as both aim to operate without prior exposure to the environment.
 
 ---
 
@@ -58,5 +58,5 @@ These two assertions are contradictory. The user is advised to consult the origi
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Mapless Navigation` --[[related_to]] ⚠️ ⚠️--> `CREStE` _(wikilink)_
-- `Mapless Navigation` --[[related_to]] ⚠️ ⚠️--> `Zero-shot navigation` _(wikilink)_
+- `Mapless Navigation` --related_to ⚠️ ⚠️--> `CREStE` _(wikilink)_
+- `Mapless Navigation` --related_to ⚠️ ⚠️--> `Zero-shot navigation` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Language-Inferred Factor Graph for Instruction Following (LIFGIF)
 
-**LIFGIF** grounds natural language instructions in a factor graph map without requiring pre-training on the target environment, enabling zero-shot operation. It uses a [[Factor Graph]] to jointly represent spatial landmarks and instruction semantics, performing inference to infer the correct path.
+**LIFGIF** grounds natural language instructions in a factor graph map without requiring pre-training on the target environment, enabling zero-shot operation. It uses a Factor Graph to jointly represent spatial landmarks and instruction semantics, performing inference to infer the correct path.
 
 ## Overview
 
@@ -40,9 +40,9 @@ LIFGIF grounds natural language instructions in a factor graph map without requi
 
 ## Relationships
 
-- **Uses**: [[Factor Graph]]; [[3D Landmark Graph]] ⚠️ (structured representation of the environment); [[Boston Dynamics Spot]] (hardware platform for deployment).
+- **Uses**: Factor Graph; 3D Landmark Graph ⚠️ (structured representation of the environment); Boston Dynamics Spot (hardware platform for deployment).
 - **Depends on**: factor graph mapping; natural language instructions; map construction during navigation.
-- **Evaluated against**: [[Object Goal Navigation]]; [[Vision Language Navigation]].
+- **Evaluated against**: Object Goal Navigation; Vision Language Navigation.
 
 ## Evaluation Dataset
 
@@ -55,5 +55,5 @@ On OC-VLN, LIFGIF **outperforms state‑of‑the‑art zero‑shot baselines** f
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` --[[based_on]] ⚠️--> `Factor Graph`
-- `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` --[[implements]] ⚠️--> `Boston Dynamics Spot`
+- `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` --based_on ⚠️--> `Factor Graph`
+- `Language-Inferred Factor Graph for Instruction Following (LIFGIF)` --implements ⚠️--> `Boston Dynamics Spot`

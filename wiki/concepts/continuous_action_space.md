@@ -18,12 +18,12 @@ source_type: arxiv_paper
 
 ### Relationship to Discrete Action Space
 
-Continuous Action Space [[contrasts_with::Discrete Action Space]] ⚠️. In discrete action spaces, the agent chooses from a small set of commands (e.g., "move forward 1 meter", "turn left 90°"). Continuous spaces allow arbitrary movement parameters (e.g., "linear velocity 0.73 m/s, angular velocity 0.15 rad/s"), which mirrors real-world robot control more closely but increases the difficulty of policy learning and collision avoidance.
+Continuous Action Space contrasts_with::Discrete Action Space ⚠️. In discrete action spaces, the agent chooses from a small set of commands (e.g., "move forward 1 meter", "turn left 90°"). Continuous spaces allow arbitrary movement parameters (e.g., "linear velocity 0.73 m/s, angular velocity 0.15 rad/s"), which mirrors real-world robot control more closely but increases the difficulty of policy learning and collision avoidance.
 
 ### Applications
 
-- Used by the [[Hierarchical Cross-Modal (HCM) Agent]] for vision-and-language navigation tasks.
-- Employed in the [[Robo-VLN]] system to achieve smoother and more flexible trajectory generation.
+- Used by the Hierarchical Cross-Modal (HCM) Agent for vision-and-language navigation tasks.
+- Employed in the Robo-VLN system to achieve smoother and more flexible trajectory generation.
 
 ### Challenges
 

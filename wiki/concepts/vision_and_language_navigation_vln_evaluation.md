@@ -22,12 +22,12 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **uses** [[BLEU]] (Bilingual Evaluation Understudy) – often applied to compare generated instructions against human references, but found to be poorly correlated with actual navigation success.
-- **uses** [[ROUGE]] (Recall-Oriented Understudy for Gisting Evaluation) – another reference-based metric for assessing instruction fluency.
-- **uses** [[METEOR]] (Metric for Evaluation of Translation with Explicit ORdering) – attempts to improve over BLEU by considering synonymy and stemming.
-- **uses** [[CIDEr]] (Consensus-based Image Description Evaluation) – designed for image captioning but adopted in VLN.
-- **uses** [[SPICE]] (Semantic Propositional Image Caption Evaluation) – recommended for ranking instruction generation systems when reference instructions are available.
-- **uses** [[Instruction-Trajectory Compatibility Model]] – a novel reference-free model that scores how well an instruction aligns with a robot’s actual path.
+- **uses** BLEU (Bilingual Evaluation Understudy) – often applied to compare generated instructions against human references, but found to be poorly correlated with actual navigation success.
+- **uses** ROUGE (Recall-Oriented Understudy for Gisting Evaluation) – another reference-based metric for assessing instruction fluency.
+- **uses** METEOR (Metric for Evaluation of Translation with Explicit ORdering) – attempts to improve over BLEU by considering synonymy and stemming.
+- **uses** CIDEr (Consensus-based Image Description Evaluation) – designed for image captioning but adopted in VLN.
+- **uses** SPICE (Semantic Propositional Image Caption Evaluation) – recommended for ranking instruction generation systems when reference instructions are available.
+- **uses** Instruction-Trajectory Compatibility Model – a novel reference-free model that scores how well an instruction aligns with a robot’s actual path.
 
 ## Key Findings
 
@@ -37,7 +37,7 @@ Automatic instruction generators (e.g., those based on language models trained o
 
 ### 2. Existing Metrics Are Ineffective
 
-Common reference-based metrics—[[BLEU]], [[ROUGE]], [[METEOR]], and [[CIDEr]]—have been discovered to be **ineffective** for evaluating grounded navigation instructions. Their correlation with human wayfinding outcomes (whether a person can follow the instruction) is weak, making them unreliable benchmarks for VLN.
+Common reference-based metrics—BLEU, ROUGE, METEOR, and CIDEr—have been discovered to be **ineffective** for evaluating grounded navigation instructions. Their correlation with human wayfinding outcomes (whether a person can follow the instruction) is weak, making them unreliable benchmarks for VLN.
 
 ## Proposed Evaluation Method
 
@@ -48,16 +48,16 @@ The **Instruction-Trajectory Compatibility Model** offers a more principled alte
 
 ## Recommendation for Ranking Systems
 
-When reference instructions are available (e.g., in supervised benchmarks), the metric **[[SPICE]]** is recommended for ranking instruction generation systems. Among the reference-based metrics, SPICE captures semantic propositions best and correlates more reliably with navigation performance than BLEU, ROUGE, METEOR, or CIDEr.
+When reference instructions are available (e.g., in supervised benchmarks), the metric **SPICE** is recommended for ranking instruction generation systems. Among the reference-based metrics, SPICE captures semantic propositions best and correlates more reliably with navigation performance than BLEU, ROUGE, METEOR, or CIDEr.
 
 ## See Also
 
-- [[Embodied AI]]
-- [[Sim-to-Real Transfer]]
-- [[Natural Language Grounding]] ⚠️
-- [[Navigation Policy]] ⚠️
+- Embodied AI
+- Sim-to-Real Transfer
+- Natural Language Grounding ⚠️
+- Navigation Policy ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Vision-and-Language Navigation (VLN) Evaluation` --[[related_to]] ⚠️--> `Embodied AI`
+- `Vision-and-Language Navigation (VLN) Evaluation` --related_to ⚠️--> `Embodied AI`

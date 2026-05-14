@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Observer
 
-The **Observer** is a virtual agent within the [[Where Are You? Dataset]]. It is spawned at a random location inside a [[3D Environment]] ⚠️ and is responsible for navigating that environment using only first-person views. The Observer's primary role is to answer spatial questions posed by the [[Locator]], thus enabling the dataset to study embodied question answering and grounded navigation.
+The **Observer** is a virtual agent within the Where Are You? Dataset. It is spawned at a random location inside a 3D Environment ⚠️ and is responsible for navigating that environment using only first-person views. The Observer's primary role is to answer spatial questions posed by the Locator, thus enabling the dataset to study embodied question answering and grounded navigation.
 
 ## Role
 
@@ -27,8 +27,8 @@ The Observer functions as a mobile sensor platform: it moves from a first‑pers
 
 ## Relationships
 
-- **Part of**: The Observer is a core component of the [[Where Are You? Dataset]].
-- **Interacts with**: The Observer engages in a question‑answer loop with the [[Locator]], receiving queries and returning answers.
+- **Part of**: The Observer is a core component of the Where Are You? Dataset.
+- **Interacts with**: The Observer engages in a question‑answer loop with the Locator, receiving queries and returning answers.
 - **Depends on**: The Observer depends on the environment model (including geometry, lighting, and object placements) provided by the dataset for its navigation and perception tasks.
 - **Uses**: The Observer uses first‑person camera views – corresponding to what a real robot or human would see – as its sole perceptual input.
 

@@ -14,7 +14,7 @@ source_type: blog_post
 
 # EB-Navigation
 
-**EB-Navigation** is a component of the [[EmbodiedBench]] suite that evaluates an agent’s ability to perform low‑level navigation tasks in simulated environments. It requires the agent to produce low‑level actions (translational and rotational control) to reach a goal, demanding precise perception and spatial reasoning.
+**EB-Navigation** is a component of the EmbodiedBench suite that evaluates an agent’s ability to perform low‑level navigation tasks in simulated environments. It requires the agent to produce low‑level actions (translational and rotational control) to reach a goal, demanding precise perception and spatial reasoning.
 
 ## Capabilities
 
@@ -31,7 +31,7 @@ source_type: blog_post
 
 ## Relationships
 
-- **part_of** → [[EmbodiedBench]] — EB‑Navigation is one of several tasks within the EmbodiedBench benchmark.
+- **part_of** → EmbodiedBench — EB‑Navigation is one of several tasks within the EmbodiedBench benchmark.
 
 ## Usage
 
@@ -40,4 +40,4 @@ Agents evaluated on EB‑Navigation typically receive sensor observations (e.g.,
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `EB-Navigation` --[[depends_on]] ⚠️--> `EmbodiedBench`
+- `EB-Navigation` --depends_on ⚠️--> `EmbodiedBench`

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Marky
 
-**Marky** is a high-quality, multilingual navigation instruction generator designed for creating visually grounded instructions paired with trajectories. It produces synthetic instruction–trajectory pairs at scale, with a released dataset of **4.2 million** pairs across multiple languages. Marky is primarily used for data augmentation and training in [[Embodied AI]] navigation tasks, enabling agents to follow natural-language commands in unseen environments.
+**Marky** is a high-quality, multilingual navigation instruction generator designed for creating visually grounded instructions paired with trajectories. It produces synthetic instruction–trajectory pairs at scale, with a released dataset of **4.2 million** pairs across multiple languages. Marky is primarily used for data augmentation and training in Embodied AI navigation tasks, enabling agents to follow natural-language commands in unseen environments.
 
 ## Capabilities
 
@@ -31,13 +31,13 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **`used_for`** → [[synthetic instruction generation]] ⚠️ – Marky is the core engine for creating large-scale training datasets for instruction-following agents.
-- **`depends_on`** → [[vision-language models]] ⚠️ – relies on cross-modal alignment to ground directions in visual input.
-- **`implements`** → [[instruction-to-trajectory mapping]] ⚠️ – converts a sequence of waypoints into natural language with spatial verbs and landmarks.
+- **`used_for`** → synthetic instruction generation ⚠️ – Marky is the core engine for creating large-scale training datasets for instruction-following agents.
+- **`depends_on`** → vision-language models ⚠️ – relies on cross-modal alignment to ground directions in visual input.
+- **`implements`** → instruction-to-trajectory mapping ⚠️ – converts a sequence of waypoints into natural language with spatial verbs and landmarks.
 
 ## Usage
 
-Marky is commonly employed in [[Sim-to-Real]] ⚠️ pipelines to augment real-world data with synthetic examples, improving generalization. Its multilingual capability makes it valuable for research in [[Cross-Lingual Embodied Agents]] ⚠️.
+Marky is commonly employed in Sim-to-Real ⚠️ pipelines to augment real-world data with synthetic examples, improving generalization. Its multilingual capability makes it valuable for research in Cross-Lingual Embodied Agents ⚠️.
 
 ## Dataset
 
@@ -46,10 +46,10 @@ The Marky-generated dataset includes 4.2M instruction–trajectory pairs, coveri
 ## References
 
 - ArXiv paper: 2210.03112 – *Marky: A Multilingual High-Quality Instruction Generator for Visual Navigation*
-- Related work: [[VLN-BERT]], [[HOP]] ⚠️, [[Room-to-Room (R2R) Dataset]]
+- Related work: VLN-BERT, HOP ⚠️, Room-to-Room (R2R) Dataset
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Marky` --[[based_on]] ⚠️--> `Embodied AI`
-- `Marky` --[[implements]] ⚠️--> `Room-to-Room (R2R) Dataset`
+- `Marky` --based_on ⚠️--> `Embodied AI`
+- `Marky` --implements ⚠️--> `Room-to-Room (R2R) Dataset`

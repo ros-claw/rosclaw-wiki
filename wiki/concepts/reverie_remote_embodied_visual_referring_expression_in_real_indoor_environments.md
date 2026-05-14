@@ -30,15 +30,15 @@ REVERIE (Remote Embodied Visual Referring Expression in Real Indoor Environments
 
 ## Relationships
 
-- **Depends on**: [[Embodied Visual Grounding]] — REVERIE extends the grounding problem to remote, unexplored spaces, where the object is not initially visible and must be actively searched for.
+- **Depends on**: Embodied Visual Grounding — REVERIE extends the grounding problem to remote, unexplored spaces, where the object is not initially visible and must be actively searched for.
 
 ## See also
 
-- [[Embodied AI]]
-- [[Visual Language Models]] ⚠️
-- [[Sim-to-Real Transfer]]
+- Embodied AI
+- Visual Language Models ⚠️
+- Sim-to-Real Transfer
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `REVERIE (Remote Embodied Visual Referring Expression in Real Indoor Environments)` --[[related_to]] ⚠️--> `Embodied AI`
+- `REVERIE (Remote Embodied Visual Referring Expression in Real Indoor Environments)` --related_to ⚠️--> `Embodied AI`

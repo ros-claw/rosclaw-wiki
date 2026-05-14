@@ -23,8 +23,8 @@ A representation approach that projects sensory data into a top-down, bird's-eye
 
 ## Relationships
 
-- **Learned by**: [[Visual Foundation Model (VFM) Distillation]] – BEV representations are distilled from general visual features.
-- **Used by**: [[CREStE]] – the system leverages BEV grids for closed-loop planning.
+- **Learned by**: Visual Foundation Model (VFM) Distillation – BEV representations are distilled from general visual features.
+- **Used by**: CREStE – the system leverages BEV grids for closed-loop planning.
 
 ## Source
 
@@ -33,5 +33,5 @@ Derived from the arxiv paper [2503.03921.pdf](data/raw/papers/2503.03921.pdf) (C
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Bird's-eye-view (BEV) Perceptual Representations` --[[related_to]] ⚠️ ⚠️--> `Visual Foundation Model (VFM) Distillation` _(wikilink)_
-- `Bird's-eye-view (BEV) Perceptual Representations` --[[related_to]] ⚠️ ⚠️--> `CREStE` _(wikilink)_
+- `Bird's-eye-view (BEV) Perceptual Representations` --related_to ⚠️ ⚠️--> `Visual Foundation Model (VFM) Distillation` _(wikilink)_
+- `Bird's-eye-view (BEV) Perceptual Representations` --related_to ⚠️ ⚠️--> `CREStE` _(wikilink)_

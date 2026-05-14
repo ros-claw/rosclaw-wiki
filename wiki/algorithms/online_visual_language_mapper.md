@@ -26,8 +26,8 @@ The mapper continuously constructs a map that fuses visual features and language
 
 - **Type**: Spatial-semantic map (online, real-time)
 - **Input**: RGB-D images, odometry
-- **Output**: Real-time visual-language map ([[Real-time visual-language map]])
-- **Builds**: [[Real-time visual-language map]]
+- **Output**: Real-time visual-language map (Real-time visual-language map)
+- **Builds**: Real-time visual-language map
 
 ## Capabilities
 
@@ -38,10 +38,10 @@ The mapper continuously constructs a map that fuses visual features and language
 
 ## Relationships
 
-- **Part of** → [[Vision and Language Navigation in the Real World via Online Visual Language Mapping]] ⚠️
-- **Uses** → [[Foundation models]] for language-aligned feature extraction.
-- **Depends on** → [[Visual input from robot sensors]] ⚠️ (e.g., RGB cameras, depth sensors, specifically [[RGB-D camera]] ⚠️).
-- **Used by** → [[Language indexing-based localizer]] for downstream navigation queries.
+- **Part of** → Vision and Language Navigation in the Real World via Online Visual Language Mapping ⚠️
+- **Uses** → Foundation models for language-aligned feature extraction.
+- **Depends on** → Visual input from robot sensors ⚠️ (e.g., RGB cameras, depth sensors, specifically RGB-D camera ⚠️).
+- **Used by** → Language indexing-based localizer for downstream navigation queries.
 
 ## Online Mapping
 

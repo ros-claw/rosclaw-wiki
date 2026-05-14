@@ -27,16 +27,16 @@ Dual-horizon prediction refers to the concurrent forecasting of immediate (short
 
 ## Relationships
 
-- **Part of**: [[NavForesee]] — Dual-horizon prediction is a core component of the NavForesee framework, which integrates short- and long-term forecasts to enhance navigation performance.
+- **Part of**: NavForesee — Dual-horizon prediction is a core component of the NavForesee framework, which integrates short- and long-term forecasts to enhance navigation performance.
 
 ## Related Concepts
 
-- [[Hierarchical Planning]]
-- [[Predictive Control]] ⚠️
-- [[Sim-to-Real Transfer]]
-- [[Reactive vs. Deliberative Behavior]] ⚠️
+- Hierarchical Planning
+- Predictive Control ⚠️
+- Sim-to-Real Transfer
+- Reactive vs. Deliberative Behavior ⚠️
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Dual-Horizon Prediction` --[[related_to]] ⚠️--> `NavForesee` _(wikilink)_
+- `Dual-Horizon Prediction` --related_to ⚠️--> `NavForesee` _(wikilink)_

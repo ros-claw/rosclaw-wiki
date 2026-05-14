@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 **Distributed Data Collection for Robotics** is a paradigm where robot training data is gathered across multiple geographically dispersed collectors, often over extended periods. This approach directly addresses the critical challenge of **data diversity** in robotics — enabling models to generalize across different environments, tasks, and conditions that a single lab could never reproduce.
 
-As implemented in the [[DROID]] ⚠️ ⚠️ project, distributed data collection has proven to be a tractable strategy for acquiring large-scale, diverse embodied datasets. It contrasts with centralized data collection efforts that are constrained by a single physical location, robot fleet, and human operator pool.
+As implemented in the DROID ⚠️ ⚠️ project, distributed data collection has proven to be a tractable strategy for acquiring large-scale, diverse embodied datasets. It contrasts with centralized data collection efforts that are constrained by a single physical location, robot fleet, and human operator pool.
 
 ## Capabilities
 
@@ -29,8 +29,8 @@ DROID used distributed data collection with **50 collectors across three contine
 
 ## Relationship to other concepts
 
-- **Used by**: [[DROID]] ⚠️ ⚠️ — DROID is the primary system that demonstrated this approach at scale.
-- **Related to**: [[Human-in-the-loop data collection]] ⚠️ — Distributed data collection often relies on human teleoperators or demonstrators, making the two concepts complementary. In DROID, humans collected the data via remote or local teleoperation.
+- **Used by**: DROID ⚠️ ⚠️ — DROID is the primary system that demonstrated this approach at scale.
+- **Related to**: Human-in-the-loop data collection ⚠️ — Distributed data collection often relies on human teleoperators or demonstrators, making the two concepts complementary. In DROID, humans collected the data via remote or local teleoperation.
 
 ## Practical considerations
 

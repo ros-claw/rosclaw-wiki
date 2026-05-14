@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Multi-Floor Abstraction
 
-The **Multi-Floor Abstraction** module is a hierarchical environment representation algorithm that enables mobile robots to understand and navigate vertical transitions between floors. It dynamically constructs structured models that incorporate stair-aware obstacle mapping and cross-floor topology modeling, allowing the robot to reason about multi-level spaces as part of the [[ASCENT]] system.
+The **Multi-Floor Abstraction** module is a hierarchical environment representation algorithm that enables mobile robots to understand and navigate vertical transitions between floors. It dynamically constructs structured models that incorporate stair-aware obstacle mapping and cross-floor topology modeling, allowing the robot to reason about multi-level spaces as part of the ASCENT system.
 
 ## Parameters
 
@@ -36,14 +36,14 @@ The Multi-Floor Abstraction module dynamically builds hierarchical environment r
 
 ## Relationships
 
-- **part_of**: [[ASCENT]] – this module is a core component of the broader ASCENT architecture, which provides end-to-end autonomous navigation in multi-story buildings.
-- **uses**: [[Hierarchical Representation]] ⚠️, [[Obstacle Mapping]] ⚠️, [[Topology Modeling]] ⚠️ – the algorithm relies on these general concepts to produce its output.
-- **depends_on**: [[Stair Detection]] ⚠️ – accurate stair detection and parameter estimation are prerequisites for stair-aware mapping.
-- **implements**: [[Vertical Transition Planning]] ⚠️ – by modeling cross-floor topology, the module implements a key capability for multi-floor navigation.
+- **part_of**: ASCENT – this module is a core component of the broader ASCENT architecture, which provides end-to-end autonomous navigation in multi-story buildings.
+- **uses**: Hierarchical Representation ⚠️, Obstacle Mapping ⚠️, Topology Modeling ⚠️ – the algorithm relies on these general concepts to produce its output.
+- **depends_on**: Stair Detection ⚠️ – accurate stair detection and parameter estimation are prerequisites for stair-aware mapping.
+- **implements**: Vertical Transition Planning ⚠️ – by modeling cross-floor topology, the module implements a key capability for multi-floor navigation.
 
 ## See Also
 
-- [[Sim-to-Real Transfer]] – techniques used to train the abstraction module in simulation before deployment.
-- [[Elevator Navigation]] ⚠️ – an alternative vertical transition method that may complement the stair-aware approach.
+- Sim-to-Real Transfer – techniques used to train the abstraction module in simulation before deployment.
+- Elevator Navigation ⚠️ – an alternative vertical transition method that may complement the stair-aware approach.
 
 > Based on the ASCENT system described in arXiv:2505.23019.

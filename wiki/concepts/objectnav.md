@@ -18,11 +18,11 @@ source_type: arxiv_paper
 
 ## Parameters
 
-- **Task type**: [[object goal navigation]]
-- **Benchmark**: [[HM3D ObjectNav]] ⚠️ (part of the Habitat-Matterport 3D dataset)
+- **Task type**: object goal navigation
+- **Benchmark**: HM3D ObjectNav ⚠️ (part of the Habitat-Matterport 3D dataset)
 - **Metrics**: 
-  - [[SPL]] (Success weighted by Path Length)
-  - [[success rate]] ⚠️
+  - SPL (Success weighted by Path Length)
+  - success rate ⚠️
 
 ## Capabilities
 
@@ -31,8 +31,8 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- `part_of`: [[FiLM-Nav]] training mixture — ObjectNav is one of the diverse task types used to train FiLM-Nav, a multi-task navigation model.
-- `used_in`: [[HM3D benchmark]] ⚠️ — ObjectNav is a standard evaluation in the HM3D benchmark suite.
+- `part_of`: FiLM-Nav training mixture — ObjectNav is one of the diverse task types used to train FiLM-Nav, a multi-task navigation model.
+- `used_in`: HM3D benchmark ⚠️ — ObjectNav is a standard evaluation in the HM3D benchmark suite.
 
 ## Description
 
@@ -41,4 +41,4 @@ ObjectNav is a fundamental task in embodied AI. The agent starts at a random loc
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `ObjectNav` --[[related_to]] ⚠️--> `FiLM-Nav` _(wikilink)_
+- `ObjectNav` --related_to ⚠️--> `FiLM-Nav` _(wikilink)_

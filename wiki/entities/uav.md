@@ -21,12 +21,12 @@ A **UAV** (Unmanned Aerial Vehicle) is a robotic aircraft operated without a hum
 
 ## Relationships
 
-- **Runs**: The UAV runs **[[VLA-AN]]** (Vision‑Language‑Action Autonomous Navigation), a model that integrates visual perception, natural language understanding, and action generation for closed‑loop control.
+- **Runs**: The UAV runs **VLA-AN** (Vision‑Language‑Action Autonomous Navigation), a model that integrates visual perception, natural language understanding, and action generation for closed‑loop control.
 
 > [!note]
-> These capabilities are derived from the paper *[10.48550/arXiv.2512.15258]* which evaluates VLA‑AN deployment on a UAV with an onboard GPU (e.g., NVIDIA Jetson). The platform’s resource constraints inform the design of the VLA‑AN architecture (see [[VLA-AN#Onboard Deployment]] ⚠️).
+> These capabilities are derived from the paper *[10.48550/arXiv.2512.15258]* which evaluates VLA‑AN deployment on a UAV with an onboard GPU (e.g., NVIDIA Jetson). The platform’s resource constraints inform the design of the VLA‑AN architecture (see VLA-AN#Onboard Deployment ⚠️).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `UAV` --[[uses]] ⚠️--> `VLA-AN`
+- `UAV` --uses ⚠️--> `VLA-AN`

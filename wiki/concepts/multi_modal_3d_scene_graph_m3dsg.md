@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Multi-modal 3D Scene Graph (M3DSG)
 
-A **Multi-modal 3D Scene Graph (M3DSG)** is a knowledge representation that extends traditional [[3D scene graph]] ⚠️ ⚠️ ⚠️s by preserving **visual cues** rather than compressing them into purely textual relational edges. In standard scene graphs, relationships between objects (e.g., “on top of”, “next to”) are encoded as text labels, which abstract away the rich visual detail of the real scene. M3DSG replaces these textual edges with **dynamically assigned images**, maintaining the original visual evidence (e.g., an image patch showing the actual spatial relationship) for each relation. This enables downstream tasks — such as querying or reasoning about the scene — to leverage full multimodal context instead of relying on abstracted text.
+A **Multi-modal 3D Scene Graph (M3DSG)** is a knowledge representation that extends traditional 3D scene graph ⚠️ ⚠️ ⚠️s by preserving **visual cues** rather than compressing them into purely textual relational edges. In standard scene graphs, relationships between objects (e.g., “on top of”, “next to”) are encoded as text labels, which abstract away the rich visual detail of the real scene. M3DSG replaces these textual edges with **dynamically assigned images**, maintaining the original visual evidence (e.g., an image patch showing the actual spatial relationship) for each relation. This enables downstream tasks — such as querying or reasoning about the scene — to leverage full multimodal context instead of relying on abstracted text.
 
 ## Description
 
@@ -27,7 +27,7 @@ M3DSG is a novel representation that keeps visual information by using images as
 
 ## Relationships
 
-- **uses**: [[3D scene graph]] ⚠️ ⚠️ ⚠️
-- **used_by**: [[MSGNav]]
-- **related_to**: [[3D scene graph]] ⚠️ ⚠️ ⚠️
+- **uses**: 3D scene graph ⚠️ ⚠️ ⚠️
+- **used_by**: MSGNav
+- **related_to**: 3D scene graph ⚠️ ⚠️ ⚠️
 - **depends_on**: none

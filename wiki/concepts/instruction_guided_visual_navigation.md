@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Instruction-Guided Visual Navigation
 
-**Instruction-Guided Visual Navigation** is a subfield of [[Embodied AI]] and [[Visual Navigation]] that focuses on learning to navigate physical environments based on natural language instructions. It spans a spectrum from coarse, high-level goals (e.g., “find a chair”) to detailed, low-level commands (e.g., “go straight, then turn left at the door”). The task requires an agent to interpret linguistic input, understand its surroundings through visual perception, and infer appropriate action decisions to reach the target.
+**Instruction-Guided Visual Navigation** is a subfield of Embodied AI and Visual Navigation that focuses on learning to navigate physical environments based on natural language instructions. It spans a spectrum from coarse, high-level goals (e.g., “find a chair”) to detailed, low-level commands (e.g., “go straight, then turn left at the door”). The task requires an agent to interpret linguistic input, understand its surroundings through visual perception, and infer appropriate action decisions to reach the target.
 
 ## Definition
 
@@ -28,17 +28,17 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Part of** [[Embodied AI]] and [[Visual Navigation]].
+- **Part of** Embodied AI and Visual Navigation.
 - **Has subtypes**:
-  - [[Category-specific search]] – navigation guided by a semantic category (e.g., “find a chair”).
-  - [[Low-level language-guided navigation]] ⚠️ ⚠️ – navigation following step-by-step instructions (e.g., “go straight, then turn left at the door”).
+  - Category-specific search – navigation guided by a semantic category (e.g., “find a chair”).
+  - Low-level language-guided navigation ⚠️ ⚠️ – navigation following step-by-step instructions (e.g., “go straight, then turn left at the door”).
 
 ## Related Entities
 
-- [[Embodied AI]] *implements* Instruction-Guided Visual Navigation as a core capability.
-- [[Visual Navigation]] *depends on* instruction understanding in this variant.
-- [[Category-specific search]] *is a subtype of* this concept.
-- [[Low-level language-guided navigation]] ⚠️ ⚠️ *is a subtype of* this concept.
+- Embodied AI *implements* Instruction-Guided Visual Navigation as a core capability.
+- Visual Navigation *depends on* instruction understanding in this variant.
+- Category-specific search *is a subtype of* this concept.
+- Low-level language-guided navigation ⚠️ ⚠️ *is a subtype of* this concept.
 
 ## References
 
@@ -47,5 +47,5 @@ source_type: arxiv_paper
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Instruction-Guided Visual Navigation` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
-- `Instruction-Guided Visual Navigation` --[[related_to]] ⚠️ ⚠️--> `Category-specific search`
+- `Instruction-Guided Visual Navigation` --related_to ⚠️ ⚠️--> `Embodied AI`
+- `Instruction-Guided Visual Navigation` --related_to ⚠️ ⚠️--> `Category-specific search`

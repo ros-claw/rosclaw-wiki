@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # IVLN Dataset
 
-The **IVLN Dataset** is a dataset for interactive vision-and-language navigation (IVLN). It serves as a core evaluation resource for semantic hierarchical VLN (SH-VLN) tasks. In the work introducing [[SeqWalker]], the dataset was extended to establish a new benchmark specifically designed for SH-VLN performance assessment.
+The **IVLN Dataset** is a dataset for interactive vision-and-language navigation (IVLN). It serves as a core evaluation resource for semantic hierarchical VLN (SH-VLN) tasks. In the work introducing SeqWalker, the dataset was extended to establish a new benchmark specifically designed for SH-VLN performance assessment.
 
 ## Capabilities
 
@@ -23,13 +23,13 @@ The **IVLN Dataset** is a dataset for interactive vision-and-language navigation
 
 ## Relationships
 
-- **used_by**: [[SeqWalker]] — The SeqWalker model uses this dataset both as an evaluation set and as the basis for constructing a new SH-VLN benchmark.
+- **used_by**: SeqWalker — The SeqWalker model uses this dataset both as an evaluation set and as the basis for constructing a new SH-VLN benchmark.
 
 ## Description
 
-A dataset for interactive vision-and-language navigation, extended by the authors of [[SeqWalker]] to create a benchmark for [[SH-VLN]] ⚠️.
+A dataset for interactive vision-and-language navigation, extended by the authors of SeqWalker to create a benchmark for SH-VLN ⚠️.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `IVLN Dataset` --[[uses]] ⚠️--> `SeqWalker`
+- `IVLN Dataset` --uses ⚠️--> `SeqWalker`

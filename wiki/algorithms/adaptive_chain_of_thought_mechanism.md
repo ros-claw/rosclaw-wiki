@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # Adaptive Chain-of-Thought Mechanism
 
-The **Adaptive Chain-of-Thought (CoT) Mechanism** is an algorithm inspired by the [[dual-process theory]] of human cognition. It enables an embodied agent to fluidly switch between fast, intuitive execution and slow, deliberate planning — dynamically triggering explicit reasoning only when necessary. This reduces unnecessary reasoning overhead while preserving the ability to handle complex or novel scenarios.
+The **Adaptive Chain-of-Thought (CoT) Mechanism** is an algorithm inspired by the dual-process theory of human cognition. It enables an embodied agent to fluidly switch between fast, intuitive execution and slow, deliberate planning — dynamically triggering explicit reasoning only when necessary. This reduces unnecessary reasoning overhead while preserving the ability to handle complex or novel scenarios.
 
 ## Parameters
 
-- **Inspiration**: [[Dual-process theory]] of human cognition
+- **Inspiration**: Dual-process theory of human cognition
 - **Modes**:
   - Fast intuitive execution
   - Slow deliberate planning
@@ -32,8 +32,8 @@ The **Adaptive Chain-of-Thought (CoT) Mechanism** is an algorithm inspired by th
 
 ## Relationships
 
-- **Part of**: [[VLingNav]]
-- **Uses**: [[Dual-process theory]]
+- **Part of**: VLingNav
+- **Uses**: Dual-process theory
 
 ## Motivation
 
@@ -46,4 +46,4 @@ The mechanism triggers explicit chain-of-thought reasoning only when uncertainty
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Adaptive Chain-of-Thought Mechanism` --[[extends]] ⚠️--> `VLingNav`
+- `Adaptive Chain-of-Thought Mechanism` --extends ⚠️--> `VLingNav`

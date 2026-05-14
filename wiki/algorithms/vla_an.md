@@ -15,7 +15,7 @@ source_type: arxiv_paper
 
 # VLA-AN
 
-VLA-AN is an efficient onboard **Vision-Language-Action (VLA)** framework for autonomous drone navigation in complex environments. It addresses key limitations such as the domain gap between simulation and reality, insufficient temporal navigation reasoning, safety risks of generative action policies, and onboard deployment constraints on resource‑constrained [[UAV]] platforms. By integrating [[3D Gaussian Splatting]]‑based scene representation, a [[Progressive Three‑Stage Training Framework]] ⚠️ ⚠️ ⚠️, and a [[Geometric Safety Correction Module]] ⚠️ ⚠️ ⚠️, VLA‑AN achieves collision‑free, stable command generation with state‑of‑the‑art performance in spatial grounding, scene reasoning, and long‑horizon navigation.
+VLA-AN is an efficient onboard **Vision-Language-Action (VLA)** framework for autonomous drone navigation in complex environments. It addresses key limitations such as the domain gap between simulation and reality, insufficient temporal navigation reasoning, safety risks of generative action policies, and onboard deployment constraints on resource‑constrained UAV platforms. By integrating 3D Gaussian Splatting‑based scene representation, a Progressive Three‑Stage Training Framework ⚠️ ⚠️ ⚠️, and a Geometric Safety Correction Module ⚠️ ⚠️ ⚠️, VLA‑AN achieves collision‑free, stable command generation with state‑of‑the‑art performance in spatial grounding, scene reasoning, and long‑horizon navigation.
 
 ## Capabilities
 
@@ -37,11 +37,11 @@ VLA-AN is an efficient onboard **Vision-Language-Action (VLA)** framework for au
 
 ## Dataset Generation
 
-VLA‑AN constructs a **high‑fidelity dataset** using [[3D Gaussian Splatting]] (3D‑GS) to bridge the domain gap between simulation and real‑world deployment. This dataset provides rich, grounded scene representations that enable the model to learn robust navigation policies from limited real‑world data.
+VLA‑AN constructs a **high‑fidelity dataset** using 3D Gaussian Splatting (3D‑GS) to bridge the domain gap between simulation and real‑world deployment. This dataset provides rich, grounded scene representations that enable the model to learn robust navigation policies from limited real‑world data.
 
 ## Training Framework
 
-The [[Progressive Three‑Stage Training Framework]] ⚠️ ⚠️ ⚠️ sequentially reinforces three core competencies:
+The Progressive Three‑Stage Training Framework ⚠️ ⚠️ ⚠️ sequentially reinforces three core competencies:
 
 1. **Scene Comprehension** – Ground language understanding to 3D Gaussian representations.
 2. **Core Flight Skills** – Train stable low‑level control policies.
@@ -49,11 +49,11 @@ The [[Progressive Three‑Stage Training Framework]] ⚠️ ⚠️ ⚠️ sequen
 
 ## Action Module and Safety
 
-A **lightweight real‑time action module** converts the trained model’s outputs into collision‑free commands. It integrates a [[Geometric Safety Correction Module]] ⚠️ ⚠️ ⚠️ that operates in the loop, applying real‑time geometric constraints to mitigate the stochastic nature of generative policies. This enables fast, stable decision‑making and ensures that commands remain dynamically feasible.
+A **lightweight real‑time action module** converts the trained model’s outputs into collision‑free commands. It integrates a Geometric Safety Correction Module ⚠️ ⚠️ ⚠️ that operates in the loop, applying real‑time geometric constraints to mitigate the stochastic nature of generative policies. This enables fast, stable decision‑making and ensures that commands remain dynamically feasible.
 
 ## Onboard Deployment Optimization
 
-Through deep optimization of the [[Onboard Deployment Pipeline]] ⚠️, VLA‑AN achieves an **8.3× improvement in inference throughput** on resource‑constrained UAV hardware, making real‑time deployment feasible without sacrificing performance.
+Through deep optimization of the Onboard Deployment Pipeline ⚠️, VLA‑AN achieves an **8.3× improvement in inference throughput** on resource‑constrained UAV hardware, making real‑time deployment feasible without sacrificing performance.
 
 ## Limitations Addressed
 
@@ -66,9 +66,9 @@ VLA‑AN tackles four principal limitations identified in prior VLA‑based navi
 
 ## Relationships
 
-- **Uses**: [[3D Gaussian Splatting]] (3D‑GS), [[Progressive Three‑Stage Training Framework]] ⚠️ ⚠️ ⚠️, [[Geometric Safety Correction Module]] ⚠️ ⚠️ ⚠️, [[Onboard Deployment Pipeline Optimization]]
-- **Depends on**: Lightweight action module, high‑fidelity dataset from 3D‑GS, [[Vision‑Language‑Action]] ⚠️ (VLA) architecture
-- **Platform**: Lightweight aerial robots ([[UAV]])
+- **Uses**: 3D Gaussian Splatting (3D‑GS), Progressive Three‑Stage Training Framework ⚠️ ⚠️ ⚠️, Geometric Safety Correction Module ⚠️ ⚠️ ⚠️, Onboard Deployment Pipeline Optimization
+- **Depends on**: Lightweight action module, high‑fidelity dataset from 3D‑GS, Vision‑Language‑Action ⚠️ (VLA) architecture
+- **Platform**: Lightweight aerial robots (UAV)
 
 ## Source
 
@@ -77,7 +77,7 @@ VLA‑AN tackles four principal limitations identified in prior VLA‑based navi
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `VLA-AN` --[[extends]] ⚠️--> `3D Gaussian Splatting`
-- `VLA-AN` --[[implements]] ⚠️--> `UAV`
+- `VLA-AN` --extends ⚠️--> `3D Gaussian Splatting`
+- `VLA-AN` --implements ⚠️--> `UAV`
 **Pending review:**
-- `VLA-AN` --[[related_to]] ⚠️--> `Onboard Deployment Pipeline Optimization` _(wikilink)_
+- `VLA-AN` --related_to ⚠️--> `Onboard Deployment Pipeline Optimization` _(wikilink)_

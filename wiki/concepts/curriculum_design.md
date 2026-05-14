@@ -23,7 +23,7 @@ source_type: arxiv_paper
 
 ### Usage
 
-Curriculum Design is a key component of the **[[REASAN]]** system, where it is used to structure the training phases of the embodied agent.
+Curriculum Design is a key component of the **REASAN** system, where it is used to structure the training phases of the embodied agent.
 
 ### Typical Parameters
 
@@ -35,10 +35,10 @@ While no fixed parameters are defined in the current source, common design varia
 
 ### Related Concepts
 
-- [[Reinforcement Learning]]
-- [[Sim-to-Real Transfer]]
-- [[Embodied AI]]
-- [[Domain Randomization]] ⚠️
+- Reinforcement Learning
+- Sim-to-Real Transfer
+- Embodied AI
+- Domain Randomization ⚠️
 
 ### References
 
@@ -47,6 +47,6 @@ While no fixed parameters are defined in the current source, common design varia
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Curriculum Design` --[[related_to]] ⚠️ ⚠️--> `Embodied AI`
+- `Curriculum Design` --related_to ⚠️ ⚠️--> `Embodied AI`
 **Pending review:**
-- `Curriculum Design` --[[related_to]] ⚠️ ⚠️--> `REASAN` _(wikilink)_
+- `Curriculum Design` --related_to ⚠️ ⚠️--> `REASAN` _(wikilink)_

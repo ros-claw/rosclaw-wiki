@@ -18,18 +18,18 @@ source_type: arxiv_paper
 
 ### Key Characteristics
 
-- **Real-time local decision-making** — Dynamic obstacle avoidance requires instantaneous responses to unexpected changes in the environment. This is enabled by a [[dual-system architecture]] ⚠️ where fast, reactive processes handle immediate threats.
+- **Real-time local decision-making** — Dynamic obstacle avoidance requires instantaneous responses to unexpected changes in the environment. This is enabled by a dual-system architecture ⚠️ where fast, reactive processes handle immediate threats.
 - The system must balance between maintaining progress toward a global goal and safely deviating from the nominal path around moving objects.
 
 ### Capabilities
 
-- [[adaptive navigation]] ⚠️ in dynamic environments — the robot can modify its motion based on sensor observations of obstacle velocity and direction.
+- adaptive navigation ⚠️ in dynamic environments — the robot can modify its motion based on sensor observations of obstacle velocity and direction.
 
 ### Relationships
 
-- **enabled_by** [[System 1]] — the reactive, high-speed component of a dual-system design that generates avoidance maneuvers without deliberation.
-- **depends_on** [[real-time perception]] ⚠️ — requires accurate sensor data (e.g., LiDAR, depth cameras) and fast obstacle tracking.
-- **implements** [[collision avoidance policy]] ⚠️ — many implementations use potential fields, velocity obstacles, or learning‑based reactive controllers.
+- **enabled_by** System 1 — the reactive, high-speed component of a dual-system design that generates avoidance maneuvers without deliberation.
+- **depends_on** real-time perception ⚠️ — requires accurate sensor data (e.g., LiDAR, depth cameras) and fast obstacle tracking.
+- **implements** collision avoidance policy ⚠️ — many implementations use potential fields, velocity obstacles, or learning‑based reactive controllers.
 
 ### Source
 

@@ -18,11 +18,11 @@ source_type: arxiv_paper
 
 ### Domain
 
-- **Embodied navigation** — part of the broader [[Room-Across-Room (RxR)]] dataset family.
+- **Embodied navigation** — part of the broader Room-Across-Room (RxR) dataset family.
 
 ### Relationships
 
-- **Used by** → [[NavForesee]] as the evaluation platform for long-horizon, instruction-following navigation.
+- **Used by** → NavForesee as the evaluation platform for long-horizon, instruction-following navigation.
 
 ### Description
 
@@ -37,4 +37,4 @@ RxR-CE extends the original RxR benchmark by removing discrete abstractions—ag
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `RxR-CE` --[[uses]] ⚠️--> `NavForesee`
+- `RxR-CE` --uses ⚠️--> `NavForesee`

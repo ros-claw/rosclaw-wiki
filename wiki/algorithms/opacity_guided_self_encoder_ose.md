@@ -15,10 +15,10 @@ source_type: arxiv_paper
 # Opacity-guided Self-Encoder (OSE)
 
 **Type**: Algorithm  
-**Part of**: [[RoboOcc]]  
+**Part of**: RoboOcc  
 **Source**: [arxiv:2504.14604](https://arxiv.org/abs/2504.14604)
 
-The **Opacity-guided Self-Encoder (OSE)** is a neural network module designed to resolve semantic ambiguities arising from overlapping 3D Gaussians in scene representations. It is a core component of the [[RoboOcc]] framework for occupancy prediction and robotic perception.
+The **Opacity-guided Self-Encoder (OSE)** is a neural network module designed to resolve semantic ambiguities arising from overlapping 3D Gaussians in scene representations. It is a core component of the RoboOcc framework for occupancy prediction and robotic perception.
 
 ## Description
 
@@ -33,12 +33,12 @@ OSE uses an encoder-decoder structure that takes per-Gaussian features (includin
 
 ## Relationship Annotations
 
-- `part_of` → [[RoboOcc]]
-- `used_in` → [[3D Gaussian Splatting]] (implied)
+- `part_of` → RoboOcc
+- `used_in` → 3D Gaussian Splatting (implied)
 - `implements` → Semantic disambiguation for occupancy prediction
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Opacity-guided Self-Encoder (OSE)` --[[extends]] ⚠️ ⚠️--> `RoboOcc`
-- `Opacity-guided Self-Encoder (OSE)` --[[extends]] ⚠️ ⚠️--> `3D Gaussian Splatting`
+- `Opacity-guided Self-Encoder (OSE)` --extends ⚠️ ⚠️--> `RoboOcc`
+- `Opacity-guided Self-Encoder (OSE)` --extends ⚠️ ⚠️--> `3D Gaussian Splatting`

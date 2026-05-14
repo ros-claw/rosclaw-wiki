@@ -30,27 +30,27 @@ source_type: arxiv_paper
 
 Zero-Shot Object-Goal Navigation is commonly evaluated on:
 
-- **[[HM3D]]** (Habitat-Matterport 3D): A large-scale photorealistic 3D dataset of indoor environments.
-- **[[MP3D]]** (Matterport3D): Another standard benchmark for embodied navigation tasks.
+- **HM3D** (Habitat-Matterport 3D): A large-scale photorealistic 3D dataset of indoor environments.
+- **MP3D** (Matterport3D): Another standard benchmark for embodied navigation tasks.
 
 These benchmarks test the ability to generalize across floorplans and object categories without prior exposure to the test environments.
 
 ### Relationships
 
-- **Used in**: The **[[ASCENT]]** system, which integrates zero-shot object-goal navigation as a core skill for multi-floor, open-vocabulary search.
+- **Used in**: The **ASCENT** system, which integrates zero-shot object-goal navigation as a core skill for multi-floor, open-vocabulary search.
 - **Related to**: 
-  - **[[Object-Goal Navigation]]** – the broader task of navigating to a specific object target.
-  - **[[Multi-floor Navigation]]** – extensions of the zero-shot principle to environments with multiple levels, where the robot must also handle vertical transitions.
+  - **Object-Goal Navigation** – the broader task of navigating to a specific object target.
+  - **Multi-floor Navigation** – extensions of the zero-shot principle to environments with multiple levels, where the robot must also handle vertical transitions.
 
 ### See Also
 
-- [[ASCENT]]
-- [[Object-Goal Navigation]]
-- [[Multi-floor Navigation]]
-- [[HM3D]]
-- [[MP3D]]
+- ASCENT
+- Object-Goal Navigation
+- Multi-floor Navigation
+- HM3D
+- MP3D
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Zero-Shot Object-Goal Navigation` --[[related_to]] ⚠️--> `ASCENT` _(wikilink)_
+- `Zero-Shot Object-Goal Navigation` --related_to ⚠️--> `ASCENT` _(wikilink)_

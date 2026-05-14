@@ -22,14 +22,14 @@ The **synergistic effect** describes a phenomenon in embodied intelligence and r
 
 > *Integrating multiple navigation capabilities from different experts yields better performance than any single expert.*
 
-This observation was empirically verified in the context of [[MM-Nav]], a multi-modal navigation framework. In MM-Nav, a student model trained via behavior cloning from multiple reinforcement learning (RL) teacher policies consistently outperformed each individual RL teacher in diverse navigation tasks. The student internalized distinct strategies (e.g., reactive avoidance, long‑range planning) and learned to select or blend them dynamically, resulting in a robust, superior policy.
+This observation was empirically verified in the context of MM-Nav, a multi-modal navigation framework. In MM-Nav, a student model trained via behavior cloning from multiple reinforcement learning (RL) teacher policies consistently outperformed each individual RL teacher in diverse navigation tasks. The student internalized distinct strategies (e.g., reactive avoidance, long‑range planning) and learned to select or blend them dynamically, resulting in a robust, superior policy.
 
 ## Relationships
 
-- **observed_in**: [[MM-Nav]] student outperforming RL teachers.
-- **depends_on**: [[Knowledge Distillation]], [[Multi-Task Learning]] ⚠️, [[Reinforcement Learning]]
-- **implements**: [[Behavior Cloning]] ⚠️ ⚠️ from multiple expert demonstrators
-- **related_to**: [[Ensemble Learning]] ⚠️, [[Model Averaging]] ⚠️, [[Mixture of Experts]]
+- **observed_in**: MM-Nav student outperforming RL teachers.
+- **depends_on**: Knowledge Distillation, Multi-Task Learning ⚠️, Reinforcement Learning
+- **implements**: Behavior Cloning ⚠️ ⚠️ from multiple expert demonstrators
+- **related_to**: Ensemble Learning ⚠️, Model Averaging ⚠️, Mixture of Experts
 - **contradicts**: the naïve assumption that a student’s performance is bounded by the best teacher’s
 
 ## Implications
@@ -40,17 +40,17 @@ The synergistic effect has profound implications for robot learning:
 - **Sample efficiency**: the student benefits from the combined experiences of multiple teachers without requiring additional real‑world data.
 - **Robustness**: policies derived from synergistic integration tend to generalize better across unseen environments.
 
-This principle encourages the design of teacher teams with complementary strengths, rather than relying on a single “oracle” teacher. It also motivates further research into [[Distillation with Diverse Teachers]] ⚠️, [[Multi‑Modal Fusion]] ⚠️, and [[Curriculum Learning]] ⚠️.
+This principle encourages the design of teacher teams with complementary strengths, rather than relying on a single “oracle” teacher. It also motivates further research into Distillation with Diverse Teachers ⚠️, Multi‑Modal Fusion ⚠️, and Curriculum Learning ⚠️.
 
 ## See Also
 
-- [[MM-Nav]]
-- [[Reinforcement Learning]]
-- [[Knowledge Distillation]]
-- [[Behavior Cloning]] ⚠️ ⚠️
-- [[Mixture of Experts]]
+- MM-Nav
+- Reinforcement Learning
+- Knowledge Distillation
+- Behavior Cloning ⚠️ ⚠️
+- Mixture of Experts
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Synergistic Effect` --[[related_to]] ⚠️--> `MM-Nav` _(wikilink)_
+- `Synergistic Effect` --related_to ⚠️--> `MM-Nav` _(wikilink)_

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Robo-VLN
 
-Robo-VLN is an advanced extension of [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️ that lifts the agent off the traditional navigation graph and introduces a more realistic continuous navigation setting. It operates in continuous 3D reconstructed environments, requiring the agent to handle longer trajectories, continuous action spaces, and physical obstacles — closely mirroring real-world navigation challenges.
+Robo-VLN is an advanced extension of Vision-and-Language Navigation (VLN) ⚠️ ⚠️ that lifts the agent off the traditional navigation graph and introduces a more realistic continuous navigation setting. It operates in continuous 3D reconstructed environments, requiring the agent to handle longer trajectories, continuous action spaces, and physical obstacles — closely mirroring real-world navigation challenges.
 
 ### Description
 
@@ -26,9 +26,9 @@ Robo-VLN supersedes the discrete VLN navigation graph setting by placing the age
 
 ### Relationships
 
-- **Uses**: [[Continuous 3D reconstructed environments]] ⚠️
-- **Depends on**: [[Vision-and-Language Navigation (VLN)]] ⚠️ ⚠️
-- **Supersedes**: [[Discrete VLN navigation graph setting]] ⚠️
+- **Uses**: Continuous 3D reconstructed environments ⚠️
+- **Depends on**: Vision-and-Language Navigation (VLN) ⚠️ ⚠️
+- **Supersedes**: Discrete VLN navigation graph setting ⚠️
 
 ### Parameters
 

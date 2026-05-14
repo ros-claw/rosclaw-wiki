@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Online Expert-Guided Reinforcement Learning
 
-**Online Expert-Guided Reinforcement Learning** is a post-supervised learning algorithm that refines a pretrained navigation model by combining [[Reinforcement Learning]] with expert demonstrations. Its objective is to acquire robust self-explored navigation behaviors beyond what pure [[Imitation Learning]] can provide.
+**Online Expert-Guided Reinforcement Learning** is a post-supervised learning algorithm that refines a pretrained navigation model by combining Reinforcement Learning with expert demonstrations. Its objective is to acquire robust self-explored navigation behaviors beyond what pure Imitation Learning can provide.
 
 ## Capabilities
 
@@ -23,7 +23,7 @@ source_type: arxiv_paper
 
 ## Training Strategy
 
-After pretraining on the [[Nav-AdaCoT-2.9M]] dataset, the model (part of the [[VLingNav]] training pipeline) undergoes online RL with a learned [[Reward Function]] ⚠️ guided by expert priors. This phase refines behavior beyond the initial supervised imitation, enabling the agent to discover more effective navigation policies through trial and error while staying anchored by expert knowledge.
+After pretraining on the Nav-AdaCoT-2.9M dataset, the model (part of the VLingNav training pipeline) undergoes online RL with a learned Reward Function ⚠️ guided by expert priors. This phase refines behavior beyond the initial supervised imitation, enabling the agent to discover more effective navigation policies through trial and error while staying anchored by expert knowledge.
 
 ## Parameters
 
@@ -35,10 +35,10 @@ After pretraining on the [[Nav-AdaCoT-2.9M]] dataset, the model (part of the [[V
 
 ## Relationships
 
-- **Part of:** [[VLingNav]] training pipeline (implements the post-supervised refinement stage).
-- **Depends on:** [[Reinforcement Learning]] (core learning paradigm), [[Expert Demonstrations]] ⚠️ (provides priors and reward shaping).
+- **Part of:** VLingNav training pipeline (implements the post-supervised refinement stage).
+- **Depends on:** Reinforcement Learning (core learning paradigm), Expert Demonstrations ⚠️ (provides priors and reward shaping).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Online Expert-Guided Reinforcement Learning` --[[extends]] ⚠️--> `VLingNav`
+- `Online Expert-Guided Reinforcement Learning` --extends ⚠️--> `VLingNav`

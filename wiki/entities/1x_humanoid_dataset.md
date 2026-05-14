@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # 1X Humanoid Dataset
 
-The **1X Humanoid Dataset** is a dataset of high-dimensional humanoid control trajectories used to evaluate the scaling properties of the [[UniWM]] model. It originates from the 1X Technologies humanoid platform and is part of broader [[Humanoid control datasets]] ⚠️ ⚠️ collections.
+The **1X Humanoid Dataset** is a dataset of high-dimensional humanoid control trajectories used to evaluate the scaling properties of the UniWM model. It originates from the 1X Technologies humanoid platform and is part of broader Humanoid control datasets ⚠️ ⚠️ collections.
 
 ## Description
 
@@ -22,10 +22,10 @@ This dataset provides trajectories of a full-body humanoid robot performing vari
 
 ## Relationships
 
-- **Part of** [[Humanoid control datasets]] ⚠️ ⚠️
-- **Used by** [[UniWM]]
+- **Part of** Humanoid control datasets ⚠️ ⚠️
+- **Used by** UniWM
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `1X Humanoid Dataset` --[[uses]] ⚠️--> `UniWM`
+- `1X Humanoid Dataset` --uses ⚠️--> `UniWM`

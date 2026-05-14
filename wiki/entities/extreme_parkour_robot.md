@@ -22,7 +22,7 @@ The robot is built around a small, low-cost platform with the following key char
 - **Size**: Small (dimensions not specified, but implied to be compact).
 - **Cost**: Low, making it accessible for research and experimentation.
 - **Actuation**: Imprecise—the robot does not rely on high-precision motors or joint encoders.
-- **Sensor**: A single [[Front-facing Depth Camera]] ⚠️ ⚠️ that is low-frequency, jittery, and prone to artifacts. This limited perception challenges the control system to operate under severe sensor noise.
+- **Sensor**: A single Front-facing Depth Camera ⚠️ ⚠️ that is low-frequency, jittery, and prone to artifacts. This limited perception challenges the control system to operate under severe sensor noise.
 
 The minimal hardware design deliberately reduces cost and complexity, pushing the control policy to handle real-world imperfections.
 
@@ -40,8 +40,8 @@ These capabilities are achieved without task-specific engineering; a single lear
 
 ## Relationships
 
-- **uses** → [[Front-facing Depth Camera]] ⚠️ ⚠️ for perception.
-- **uses** → [[Extreme Parkour Policy]] – a reinforcement-learning-based controller that handles the low-quality sensor data and imprecise actuation.
+- **uses** → Front-facing Depth Camera ⚠️ ⚠️ for perception.
+- **uses** → Extreme Parkour Policy – a reinforcement-learning-based controller that handles the low-quality sensor data and imprecise actuation.
 - **depends_on** → Imprecise actuation and low-cost hardware (from design choices).
 - **part_of** → Research in embodied AI and sim-to-real transfer for agile locomotion.
 

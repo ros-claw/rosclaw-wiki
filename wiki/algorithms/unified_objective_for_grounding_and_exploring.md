@@ -18,7 +18,7 @@ source_type: arxiv_paper
 
 The **Unified Objective for Grounding and Exploring** is an algorithmic approach that integrates the tasks of object grounding (identifying and localizing objects from natural language descriptions) with autonomous exploration (deciding where to move next to gather more information). It jointly optimizes these two objectives within a single framework, enabling a robot to efficiently locate and understand objects in an unknown environment by treating unexplored locations as potential sources of disambiguating information. The core objective **jointly optimizes object grounding and frontier selection** in a unified loss function.
 
-This algorithm is central to the [[MTU3D (Move to Understand 3D)]] system.
+This algorithm is central to the MTU3D (Move to Understand 3D) system.
 
 ## Capabilities
 
@@ -33,12 +33,12 @@ This algorithm is central to the [[MTU3D (Move to Understand 3D)]] system.
 
 ## Relationship with Other Entities
 
-- **Used by**: [[MTU3D (Move to Understand 3D)]] — The Unified Objective is a core algorithmic component of the MTU3D system, which implements active perception for 3D scene understanding.
+- **Used by**: MTU3D (Move to Understand 3D) — The Unified Objective is a core algorithmic component of the MTU3D system, which implements active perception for 3D scene understanding.
 
-- **Depends on**: [[Object Grounding]] ⚠️, [[Frontier-Based Exploration]]  
+- **Depends on**: Object Grounding ⚠️, Frontier-Based Exploration  
   The algorithm builds on standard techniques in object grounding (e.g., using language‑driven 3D segmentation) and frontier exploration (identifying boundaries between known and unknown space). It unifies these by converting frontiers into grounding queries.
 
-- **Related to**: [[Embodied AI]], [[Active Perception]]  
+- **Related to**: Embodied AI, Active Perception  
   The approach is a concrete instance of active perception where the agent’s movement is driven by reasoning about what it needs to learn, rather than generic coverage.
 
 ## Key Features
@@ -50,7 +50,7 @@ This algorithm is central to the [[MTU3D (Move to Understand 3D)]] system.
 
 ## Usage in MTU3D
 
-In the [[MTU3D (Move to Understand 3D)]] pipeline, the unified objective is used to:
+In the MTU3D (Move to Understand 3D) pipeline, the unified objective is used to:
 - Start from an initial partial scan of an environment.
 - For each candidate viewpoint (future robot pose), compute a score that combines expected grounding improvement and frontier information gain.
 - Execute the movement that maximizes the joint objective.
@@ -63,4 +63,4 @@ In the [[MTU3D (Move to Understand 3D)]] pipeline, the unified objective is used
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Unified objective for grounding and exploring` --[[extends]] ⚠️--> `MTU3D (Move to Understand 3D)`
+- `Unified objective for grounding and exploring` --extends ⚠️--> `MTU3D (Move to Understand 3D)`

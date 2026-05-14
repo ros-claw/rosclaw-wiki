@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # DAgger (Dataset Aggregation)
 
-**DAgger** (Dataset Aggregation) is a classic **[[imitation learning]]** algorithm designed to train policies by iteratively collecting human expert demonstrations in a closed-loop fashion. It addresses the distribution mismatch problem inherent in behavioral cloning by merging new expert trajectories into the dataset at each iteration, thereby enabling the learner to recover from its own mistakes during training.
+**DAgger** (Dataset Aggregation) is a classic **imitation learning** algorithm designed to train policies by iteratively collecting human expert demonstrations in a closed-loop fashion. It addresses the distribution mismatch problem inherent in behavioral cloning by merging new expert trajectories into the dataset at each iteration, thereby enabling the learner to recover from its own mistakes during training.
 
 ## Overview
 
@@ -31,8 +31,8 @@ This iterative process ensures the policy learns to correct its own induced erro
 
 ## Parameters
 
-- **Type**: [[imitation learning]] algorithm
-- **Variant**: [[DAggerFM]] is a modification of the original DAgger algorithm that introduces a fixed memory budget or curriculum to improve data efficiency and stability.
+- **Type**: imitation learning algorithm
+- **Variant**: DAggerFM is a modification of the original DAgger algorithm that introduces a fixed memory budget or curriculum to improve data efficiency and stability.
 
 ## Capabilities
 
@@ -40,9 +40,9 @@ This iterative process ensures the policy learns to correct its own induced erro
 
 ## Relationships
 
-- *used_by*: **[[DAggerFM]]** (DAggerFM modifies DAgger's aggregation scheme to handle fixed memory or a fixed number of expert queries, making it more practical for real-world applications)
+- *used_by*: **DAggerFM** (DAggerFM modifies DAgger's aggregation scheme to handle fixed memory or a fixed number of expert queries, making it more practical for real-world applications)
 
-DAgger is also a foundational component of many modern imitation learning frameworks and is often compared to [[behavioral cloning]] ⚠️ and [[inverse reinforcement learning]] ⚠️.
+DAgger is also a foundational component of many modern imitation learning frameworks and is often compared to behavioral cloning ⚠️ and inverse reinforcement learning ⚠️.
 
 ## References
 
@@ -52,4 +52,4 @@ DAgger is also a foundational component of many modern imitation learning framew
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `DAgger (Dataset Aggregation)` --[[extends]] ⚠️--> `DAggerFM`
+- `DAgger (Dataset Aggregation)` --extends ⚠️--> `DAggerFM`

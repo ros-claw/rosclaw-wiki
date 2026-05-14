@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Sequential-Horizon Vision-and-Language Navigation (SH-VLN)
 
-**SH-VLN** (Sequential-Horizon Vision-and-Language Navigation) is a challenging variant of [[Vision-and-Language Navigation (VLN)]] ⚠️ in which an agent must execute **multiple sequential navigation tasks** guided by complex, long-horizon language instructions. The multi-task nature and extended instruction length lead to **information overload** and significant **performance degradation** in standard VLN models.
+**SH-VLN** (Sequential-Horizon Vision-and-Language Navigation) is a challenging variant of Vision-and-Language Navigation (VLN) ⚠️ in which an agent must execute **multiple sequential navigation tasks** guided by complex, long-horizon language instructions. The multi-task nature and extended instruction length lead to **information overload** and significant **performance degradation** in standard VLN models.
 
 ## Overview
 
@@ -28,7 +28,7 @@ Traditional VLN involves a single instruction and a single goal. SH-VLN instead 
 
 ## Relationship to Standard VLN
 
-SH-VLN **supersedes** [[Standard VLN]] ⚠️ by introducing greater complexity:
+SH-VLN **supersedes** Standard VLN ⚠️ by introducing greater complexity:
 
 | Aspect | Standard VLN | SH-VLN |
 |--------|--------------|--------|
@@ -46,10 +46,10 @@ SH-VLN **supersedes** [[Standard VLN]] ⚠️ by introducing greater complexity:
 
 ## See Also
 
-- [[Embodied AI]] — broader field of intelligence in physical agents.
-- [[Long-horizon planning]] — core algorithmic challenge.
-- [[Instruction following]] ⚠️ — fundamental skill addressed by SH-VLN.
-- [[Multi-task learning]] ⚠️ — related training paradigm.
+- Embodied AI — broader field of intelligence in physical agents.
+- Long-horizon planning — core algorithmic challenge.
+- Instruction following ⚠️ — fundamental skill addressed by SH-VLN.
+- Multi-task learning ⚠️ — related training paradigm.
 
 ---
 
@@ -58,4 +58,4 @@ SH-VLN **supersedes** [[Standard VLN]] ⚠️ by introducing greater complexity:
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Sequential-Horizon Vision-and-Language Navigation (SH-VLN)` --[[related_to]] ⚠️--> `Embodied AI`
+- `Sequential-Horizon Vision-and-Language Navigation (SH-VLN)` --related_to ⚠️--> `Embodied AI`

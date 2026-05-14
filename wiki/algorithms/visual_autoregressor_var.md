@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 ## Visual AutoRegressor (VAR)
 
-The **Visual AutoRegressor (VAR)** is a pretrained visual auto-regressive model used to encode imagined visual observations into a compact latent representation. It serves as a critical component in [[FantasyVLN]], enabling implicit chain-of-thought (CoT) reasoning without the token overhead of explicit visual generation.
+The **Visual AutoRegressor (VAR)** is a pretrained visual auto-regressive model used to encode imagined visual observations into a compact latent representation. It serves as a critical component in FantasyVLN, enabling implicit chain-of-thought (CoT) reasoning without the token overhead of explicit visual generation.
 
 ### Role
 
-VAR takes high-level imagined visual tokens—produced by a [[visual imagination module]] ⚠️ or [[VLM]] ⚠️—and compresses them into a dense latent space. This latent representation can then be fed into downstream planners or language models without requiring pixel-level reconstruction.
+VAR takes high-level imagined visual tokens—produced by a visual imagination module ⚠️ or VLM ⚠️—and compresses them into a dense latent space. This latent representation can then be fed into downstream planners or language models without requiring pixel-level reconstruction.
 
 ### Function
 
@@ -31,16 +31,16 @@ VAR compresses imagined visual observations into a compact latent representation
 
 ### Relationships
 
-- **used_by**: [[FantasyVLN]] incorporates VAR as its visual encoder to support latent imagination during navigation planning.
+- **used_by**: FantasyVLN incorporates VAR as its visual encoder to support latent imagination during navigation planning.
 
 ### See Also
 
-- [[Visual Auto-Regressive Model]] ⚠️
-- [[Latent Space]] ⚠️
-- [[Chain-of-Thought Reasoning]]
+- Visual Auto-Regressive Model ⚠️
+- Latent Space ⚠️
+- Chain-of-Thought Reasoning
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Visual AutoRegressor (VAR)` --[[extends]] ⚠️--> `FantasyVLN`
-- `Visual AutoRegressor (VAR)` --[[based_on]] ⚠️--> `Chain-of-Thought Reasoning`
+- `Visual AutoRegressor (VAR)` --extends ⚠️--> `FantasyVLN`
+- `Visual AutoRegressor (VAR)` --based_on ⚠️--> `Chain-of-Thought Reasoning`

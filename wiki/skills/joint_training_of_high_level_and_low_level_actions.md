@@ -15,9 +15,9 @@ source_type: arxiv_paper
 # Joint Training of High-Level and Low-Level Actions
 
 **Type:** Skill  
-**Category:** [[Vision and Language Navigation]] / [[Embodied AI]]  
-**Dependencies:** uses [[low-level action decoder]], uses [[high-level action prediction]]  
-**Used in:** [[Vision and Language Navigation in the Continuous Environment (VLN-CE)]] ⚠️ ⚠️
+**Category:** Vision and Language Navigation / Embodied AI  
+**Dependencies:** uses low-level action decoder, uses high-level action prediction  
+**Used in:** Vision and Language Navigation in the Continuous Environment (VLN-CE) ⚠️ ⚠️
 
 ## Overview
 
@@ -38,13 +38,13 @@ The agent is trained with a dual-objective loss that combines high-level waypoin
 
 ## Relationships
 
-- **Uses** → [[low-level action decoder]], [[high-level action prediction]]
-- **Used in** → [[Vision and Language Navigation in the Continuous Environment (VLN-CE)]] ⚠️ ⚠️ where it has been shown to outperform decoupled training approaches.
+- **Uses** → low-level action decoder, high-level action prediction
+- **Used in** → Vision and Language Navigation in the Continuous Environment (VLN-CE) ⚠️ ⚠️ where it has been shown to outperform decoupled training approaches.
 - **Depends on** → an end-to-end trainable architecture that shares parameters between the high-level and low-level modules, as described in the source paper (arxiv: 2408.10388).
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `joint training of high-level and low-level actions` --[[uses]] ⚠️--> `low-level action decoder`
+- `joint training of high-level and low-level actions` --uses ⚠️--> `low-level action decoder`
 **Pending review:**
-- `joint training of high-level and low-level actions` --[[related_to]] ⚠️--> `high-level action prediction` _(wikilink)_
+- `joint training of high-level and low-level actions` --related_to ⚠️--> `high-level action prediction` _(wikilink)_

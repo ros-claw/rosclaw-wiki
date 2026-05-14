@@ -34,11 +34,11 @@ Despite the difficulty, mastering long-horizon mobile manipulation enables **com
 
 ## Related Concepts
 
-- **[[Mobile Manipulation]] ⚠️** — The broad field combining mobility and manipulation; long-horizon tasks are a subset with extended temporal reasoning.
-- **[[Whole-body Control]] ⚠️** — A key technical component that coordinates the mobile base and manipulator torques to achieve both stability and precision.
-- **[[Language-Conditioned Tasks]] ⚠️** — The ability to interpret natural language commands and map them to action sequences over long horizons.
+- **Mobile Manipulation ⚠️** — The broad field combining mobility and manipulation; long-horizon tasks are a subset with extended temporal reasoning.
+- **Whole-body Control ⚠️** — A key technical component that coordinates the mobile base and manipulator torques to achieve both stability and precision.
+- **Language-Conditioned Tasks ⚠️** — The ability to interpret natural language commands and map them to action sequences over long horizons.
 
-Additionally, the ODYSSEY benchmark builds on prior work in **[[Embodied AI]]** and **[[Sim-to-Real]] ⚠️** transfer, and its tasks are designed to be solved by **[[VLA Models]] ⚠️** (vision‑language‑action models) that handle both perception and motion planning.
+Additionally, the ODYSSEY benchmark builds on prior work in **Embodied AI** and **Sim-to-Real ⚠️** transfer, and its tasks are designed to be solved by **VLA Models ⚠️** (vision‑language‑action models) that handle both perception and motion planning.
 
 ## References
 
@@ -47,4 +47,4 @@ Additionally, the ODYSSEY benchmark builds on prior work in **[[Embodied AI]]** 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Long-Horizon Mobile Manipulation` --[[related_to]] ⚠️--> `Embodied AI`
+- `Long-Horizon Mobile Manipulation` --related_to ⚠️--> `Embodied AI`

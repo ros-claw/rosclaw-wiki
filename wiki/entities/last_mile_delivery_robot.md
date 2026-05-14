@@ -21,7 +21,7 @@ A **last-mile delivery robot** is an autonomous mobile platform designed to tran
 ## Parameters
 
 - **Application domain**: urban logistics  
-- **Navigation requirement**: [[language-guided navigation]] in unfamiliar cities – the robot must interpret free-form human instructions (e.g., "take the third left after the blue awning") to reach a drop-off point without relying on a pre‑mapped route.
+- **Navigation requirement**: language-guided navigation in unfamiliar cities – the robot must interpret free-form human instructions (e.g., "take the third left after the blue awning") to reach a drop-off point without relying on a pre‑mapped route.
 
 ## Capabilities
 
@@ -30,7 +30,7 @@ A **last-mile delivery robot** is an autonomous mobile platform designed to tran
 
 ## Relationships
 
-- **Uses** → [[UrbanNav]]: The last‑mile delivery robot is cited as a representative autonomous agent that would benefit from the UrbanNav framework, which enables language‑guided urban navigation in previously unvisited city districts.
+- **Uses** → UrbanNav: The last‑mile delivery robot is cited as a representative autonomous agent that would benefit from the UrbanNav framework, which enables language‑guided urban navigation in previously unvisited city districts.
 
 ## Context
 
@@ -39,5 +39,5 @@ As described in the source paper (`papers/2512.09607.pdf`), the last‑mile deli
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Last-Mile Delivery Robot` --[[related_to]] ⚠️--> `language-guided navigation`
-- `Last-Mile Delivery Robot` --[[uses]] ⚠️--> `UrbanNav`
+- `Last-Mile Delivery Robot` --related_to ⚠️--> `language-guided navigation`
+- `Last-Mile Delivery Robot` --uses ⚠️--> `UrbanNav`

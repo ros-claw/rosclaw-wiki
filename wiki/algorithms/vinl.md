@@ -14,11 +14,11 @@ source_type: arxiv_paper
 
 # ViNL
 
-**ViNL** (Visual Navigation and Locomotion) is a fully learned, model-free approach for quadrupedal robots that combines separate [[Visual Navigation Policy]] and [[Visual Locomotion Policy]] ⚠️ ⚠️ networks to navigate unknown indoor environments while stepping over small obstacles. It achieves zero-shot [[Sim-to-Real]] ⚠️ transfer without requiring co-training of the two policies.
+**ViNL** (Visual Navigation and Locomotion) is a fully learned, model-free approach for quadrupedal robots that combines separate Visual Navigation Policy and Visual Locomotion Policy ⚠️ ⚠️ networks to navigate unknown indoor environments while stepping over small obstacles. It achieves zero-shot Sim-to-Real ⚠️ transfer without requiring co-training of the two policies.
 
 ## Overview
 
-ViNL is designed to enable [[Quadrupedal Robots]] ⚠️ (e.g., [[Unitree Go1]] ⚠️, [[Spot Robot]] ⚠️) to traverse unseen apartments and similar indoor spaces, stepping over obstacles such as shoes, toys, and cables **without disrupting them**. The system takes as input **egocentric vision** and outputs linear and angular velocity commands that are then translated into joint-level control actions. ViNL is a **model-free** system — it requires no explicit obstacle maps, privileged terrain information, or pre-built environment models.
+ViNL is designed to enable Quadrupedal Robots ⚠️ (e.g., Unitree Go1 ⚠️, Spot Robot ⚠️) to traverse unseen apartments and similar indoor spaces, stepping over obstacles such as shoes, toys, and cables **without disrupting them**. The system takes as input **egocentric vision** and outputs linear and angular velocity commands that are then translated into joint-level control actions. ViNL is a **model-free** system — it requires no explicit obstacle maps, privileged terrain information, or pre-built environment models.
 
 ## System Architecture
 
@@ -48,12 +48,12 @@ Both policies are trained **end-to-end** using deep reinforcement learning, each
 
 ## Relationships
 
-- **[[uses]] ⚠️**: [[Visual Navigation Policy]], [[Visual Locomotion Policy]] ⚠️ ⚠️
-- **[[implements]] ⚠️**: model-free visual navigation, model-free visual locomotion
-- **[[depends_on]] ⚠️**: Two different simulators (without co-training)
-- **[[supersedes]] ⚠️**: Prior work on robust locomotion using privileged terrain maps (outperforms by +32.8% success, -4.42 collisions per meter)
+- **uses ⚠️**: Visual Navigation Policy, Visual Locomotion Policy ⚠️ ⚠️
+- **implements ⚠️**: model-free visual navigation, model-free visual locomotion
+- **depends_on ⚠️**: Two different simulators (without co-training)
+- **supersedes ⚠️**: Prior work on robust locomotion using privileged terrain maps (outperforms by +32.8% success, -4.42 collisions per meter)
 
 ## Further Reading
 
 - Paper: *ViNL: Visual Navigation and Locomotion Over Obstacles* (arXiv:2210.14791)
-- Related: [[Legged Locomotion]] ⚠️, [[Deep Reinforcement Learning]] ⚠️, [[Obstacle Avoidance]] ⚠️
+- Related: Legged Locomotion ⚠️, Deep Reinforcement Learning ⚠️, Obstacle Avoidance ⚠️

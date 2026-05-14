@@ -23,16 +23,16 @@ source_type: arxiv_paper
 
 ## Relationships
 
-- **Used by** → [[NeuPAN]] — the PAN network in NeuPAN is designed as a PnP component that slots into the motion planning pipeline.
-- **Related to** → [[proximal alternating-minimization network]] ⚠️ — the plug-and-play nature of the pipeline relies on the proximal alternating-minimization network to enable end-to-end differentiability and modular insertion.
+- **Used by** → NeuPAN — the PAN network in NeuPAN is designed as a PnP component that slots into the motion planning pipeline.
+- **Related to** → proximal alternating-minimization network ⚠️ — the plug-and-play nature of the pipeline relies on the proximal alternating-minimization network to enable end-to-end differentiability and modular insertion.
 
 ## Context in NeuPAN
 
-The PAN network (part of the [[NeuPAN]] system) is explicitly described as *plug-and-play*. This means that once the PAN network is trained or pre-trained, it can be inserted into the planning pipeline and fine-tuned via backpropagation without redesigning the entire motion planner. The rest of the pipeline (e.g., collision checkers, trajectory optimizers) remains unchanged, allowing practitioners to upgrade specific learned components incrementally. This aligns with the broader [[embodied AI]] principle of reusability and modular system design.
+The PAN network (part of the NeuPAN system) is explicitly described as *plug-and-play*. This means that once the PAN network is trained or pre-trained, it can be inserted into the planning pipeline and fine-tuned via backpropagation without redesigning the entire motion planner. The rest of the pipeline (e.g., collision checkers, trajectory optimizers) remains unchanged, allowing practitioners to upgrade specific learned components incrementally. This aligns with the broader embodied AI principle of reusability and modular system design.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Plug-and-play (PnP) in robotics` --[[related_to]] ⚠️ ⚠️--> `embodied AI`
+- `Plug-and-play (PnP) in robotics` --related_to ⚠️ ⚠️--> `embodied AI`
 **Pending review:**
-- `Plug-and-play (PnP) in robotics` --[[related_to]] ⚠️ ⚠️--> `NeuPAN` _(wikilink)_
+- `Plug-and-play (PnP) in robotics` --related_to ⚠️ ⚠️--> `NeuPAN` _(wikilink)_

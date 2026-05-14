@@ -24,13 +24,13 @@ This approach has been applied in robotics for tasks such as visuomotor control,
 
 ## Relationships
 
-- **Used by**: [[Active Visual Information Gathering (AVIG)]] — End-to-end learning provides a framework for AVIG systems to simultaneously learn where to look and how to move, maximizing information gain over time.
+- **Used by**: Active Visual Information Gathering (AVIG) — End-to-end learning provides a framework for AVIG systems to simultaneously learn where to look and how to move, maximizing information gain over time.
 
 ## Related Concepts
 
-- [[Reinforcement Learning]] (typically provides the reward signal for end-to-end training)
-- [[Sim-to-Real Transfer]] (end-to-end policies often require careful domain randomization to transfer from simulation to the real world)
-- [[Imitation Learning]] (an alternative to end-to-end reinforcement learning)
+- Reinforcement Learning (typically provides the reward signal for end-to-end training)
+- Sim-to-Real Transfer (end-to-end policies often require careful domain randomization to transfer from simulation to the real world)
+- Imitation Learning (an alternative to end-to-end reinforcement learning)
 
 ## Sources
 
@@ -39,4 +39,4 @@ This approach has been applied in robotics for tasks such as visuomotor control,
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `End-to-End Learning` --[[related_to]] ⚠️--> `Active Visual Information Gathering (AVIG)` _(wikilink)_
+- `End-to-End Learning` --related_to ⚠️--> `Active Visual Information Gathering (AVIG)` _(wikilink)_

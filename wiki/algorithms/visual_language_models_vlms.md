@@ -26,14 +26,14 @@ Visual-Language Models (VLMs) are a class of **open-vocabulary deep learning mod
 
 ## Relationship to Other Components
 
-- **Used by**: [[OpenGraph]] – VLMs provide the open-vocabulary semantics that enable [[OpenGraph]] to understand diverse objects without requiring predefined class taxonomies. This allows [[OpenGraph]] to generalize beyond the training data and adapt to novel environments.
-- **Related to**: [[Open-Vocabulary Mapping]] – VLMs are foundational for systems that construct semantic maps from free-form language descriptions, bridging perception and spatial representation.
+- **Used by**: OpenGraph – VLMs provide the open-vocabulary semantics that enable OpenGraph to understand diverse objects without requiring predefined class taxonomies. This allows OpenGraph to generalize beyond the training data and adapt to novel environments.
+- **Related to**: Open-Vocabulary Mapping – VLMs are foundational for systems that construct semantic maps from free-form language descriptions, bridging perception and spatial representation.
 
 ## Role in OpenGraph
 
-VLMs serve as the semantic backbone of [[OpenGraph]]. They extract instances and captions from visual images, which are then embedded into a 3D graph. This process maps visual features and language descriptions into a shared embedding space, allowing [[OpenGraph]] to perform zero-shot classification and open-vocabulary scene understanding. The VLM eliminates the need for task-specific fine-tuning and enables [[OpenGraph]] to operate in dynamic, unstructured environments.
+VLMs serve as the semantic backbone of OpenGraph. They extract instances and captions from visual images, which are then embedded into a 3D graph. This process maps visual features and language descriptions into a shared embedding space, allowing OpenGraph to perform zero-shot classification and open-vocabulary scene understanding. The VLM eliminates the need for task-specific fine-tuning and enables OpenGraph to operate in dynamic, unstructured environments.
 
 ## Dependencies
 
-- [[Deep Learning]] ⚠️ – VLMs are built on transformer architectures and large-scale pretraining.
-- [[Multimodal Embeddings]] ⚠️ – The shared embedding space is fundamental to VLM functionality.
+- Deep Learning ⚠️ – VLMs are built on transformer architectures and large-scale pretraining.
+- Multimodal Embeddings ⚠️ – The shared embedding space is fundamental to VLM functionality.

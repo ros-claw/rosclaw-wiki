@@ -27,15 +27,15 @@ The tree is built hierarchically, starting with the overall scene structure (e.g
 
 ### Construction and Usage
 
-The tree is constructed automatically by a [[Large Language Model (LLM)]] ⚠️ ⚠️ that analyzes raw scene data (e.g., point clouds, CAD models, or natural language descriptions) and organizes them into a coherent hierarchy.
+The tree is constructed automatically by a Large Language Model (LLM) ⚠️ ⚠️ that analyzes raw scene data (e.g., point clouds, CAD models, or natural language descriptions) and organizes them into a coherent hierarchy.
 
-It is used by [[NavRAG]] to generate detailed navigation instructions by retrieving relevant scene context at the appropriate level of detail.
+It is used by NavRAG to generate detailed navigation instructions by retrieving relevant scene context at the appropriate level of detail.
 
 ### Relationship Annotations
 
-- **built_by** → [[Large Language Model (LLM)]] ⚠️ ⚠️  
-- **used_by** → [[NavRAG]]  
-- **depends_on** → [[Scene Graph]] ⚠️, [[3D Object Detection]] ⚠️  
+- **built_by** → Large Language Model (LLM) ⚠️ ⚠️  
+- **used_by** → NavRAG  
+- **depends_on** → Scene Graph ⚠️, 3D Object Detection ⚠️  
 
 ### Example
 
@@ -60,7 +60,7 @@ Scene (House)
 └── Garage
 ```
 
-This tree allows [[NavRAG]] to answer queries like “go to the blue couch” by retrieving the exact node, or “describe the layout of the first floor” by summarizing the relevant sub-branch.
+This tree allows NavRAG to answer queries like “go to the blue couch” by retrieving the exact node, or “describe the layout of the first floor” by summarizing the relevant sub-branch.
 
 ### Sources
 
@@ -69,4 +69,4 @@ This tree allows [[NavRAG]] to answer queries like “go to the blue couch” by
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Pending review:**
-- `Hierarchical Scene Description Tree` --[[related_to]] ⚠️--> `NavRAG` _(wikilink)_
+- `Hierarchical Scene Description Tree` --related_to ⚠️--> `NavRAG` _(wikilink)_

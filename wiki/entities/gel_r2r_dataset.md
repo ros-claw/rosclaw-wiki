@@ -16,7 +16,7 @@ source_type: arxiv_paper
 
 ### Overview
 
-**GEL-R2R** (Grounded Entity-Landmark Room-to-Room) is an extension of the [[Room-to-Room (R2R)]] dataset that adds grounded entity-landmark human annotations. It was introduced alongside the [[GELA]] ⚠️ ⚠️ model for pre-training fine-grained cross-modal alignment in Vision-and-Language Navigation (VLN).
+**GEL-R2R** (Grounded Entity-Landmark Room-to-Room) is an extension of the Room-to-Room (R2R) dataset that adds grounded entity-landmark human annotations. It was introduced alongside the GELA ⚠️ ⚠️ model for pre-training fine-grained cross-modal alignment in Vision-and-Language Navigation (VLN).
 
 ### Description
 
@@ -29,7 +29,7 @@ The dataset is designed to support pre-training of the Grounded Entity-Landmark 
 | Parameter | Value |
 |-----------|-------|
 | Type | Dataset |
-| Base dataset | [[Room-to-Room (R2R)]] |
+| Base dataset | Room-to-Room (R2R) |
 | Annotations | Grounded entity–landmark human annotations |
 
 ### Capabilities
@@ -40,9 +40,9 @@ The dataset is designed to support pre-training of the Grounded Entity-Landmark 
 
 ### Relationships
 
-- **part_of** [[Room-to-Room (R2R)]] – GEL-R2R is a derivative dataset built on top of the original R2R data.
-- **used_by** [[GELA]] ⚠️ ⚠️ – The dataset was created to pre-train the GELA model.
-- **depends_on** [[Room-to-Room (R2R)]] – Inherits the path–instruction pairs and evaluation splits of R2R.
+- **part_of** Room-to-Room (R2R) – GEL-R2R is a derivative dataset built on top of the original R2R data.
+- **used_by** GELA ⚠️ ⚠️ – The dataset was created to pre-train the GELA model.
+- **depends_on** Room-to-Room (R2R) – Inherits the path–instruction pairs and evaluation splits of R2R.
 
 ### Source
 

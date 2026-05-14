@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 ## Overview
 
-**End-to-end control from depth camera** is a learning-based approach that maps raw depth image data directly to motor commands, bypassing the hand-crafted perception, state estimation, and control layers of classical robotics pipelines. By training a single neural network policy — typically via [[Deep Reinforcement Learning]] ⚠️ ⚠️ — this paradigm can handle noisy, high-dimensional sensor streams and produce robust locomotion behaviors without requiring precise engineered models.
+**End-to-end control from depth camera** is a learning-based approach that maps raw depth image data directly to motor commands, bypassing the hand-crafted perception, state estimation, and control layers of classical robotics pipelines. By training a single neural network policy — typically via Deep Reinforcement Learning ⚠️ ⚠️ — this paradigm can handle noisy, high-dimensional sensor streams and produce robust locomotion behaviors without requiring precise engineered models.
 
 ## Motivation
 
@@ -29,15 +29,15 @@ Classical approaches require independently engineering perception, actuation, an
 
 | Parameter | Value |
 |---|---|
-| Sensor | Single front-facing [[Depth Camera]] ⚠️ |
+| Sensor | Single front-facing Depth Camera ⚠️ |
 | Output | Control commands (e.g., joint torques or velocities) |
-| Learning paradigm | [[Deep Reinforcement Learning]] ⚠️ ⚠️ (DRL) |
-| Example application | [[Extreme Parkour Policy]] (see [[#Relationships]] ⚠️) |
+| Learning paradigm | Deep Reinforcement Learning ⚠️ ⚠️ (DRL) |
+| Example application | Extreme Parkour Policy (see #Relationships ⚠️) |
 
 ## Relationships
 
-- **Part of** → [[Extreme Parkour Policy]] — the end-to-end depth-to-control policy forms the core learning component of the larger parkour system.
-- **Contrasts with** → [[Classical modular perception-actuation-control systems]] ⚠️, which decompose the problem into separate modules (e.g., visual odometry, mapping, trajectory optimization, low-level control).
+- **Part of** → Extreme Parkour Policy — the end-to-end depth-to-control policy forms the core learning component of the larger parkour system.
+- **Contrasts with** → Classical modular perception-actuation-control systems ⚠️, which decompose the problem into separate modules (e.g., visual odometry, mapping, trajectory optimization, low-level control).
 
 ## References
 

@@ -14,7 +14,7 @@ source_type: arxiv_paper
 
 # Hierarchical Multi-modal Scene Graph
 
-**HMSG** (Hierarchical Multi-modal Scene Graph) is a multi-modal map representation algorithm designed to support progressive retrieval — moving from coarse room-level understanding down to fine-grained goal views and object identification. It provides a unified representation that integrates diverse sensory modalities, enabling efficient hierarchical querying from high-level room information to precise goal view and object-level details. HMSG is primarily used by the [[FSR-VLN]] navigation framework.
+**HMSG** (Hierarchical Multi-modal Scene Graph) is a multi-modal map representation algorithm designed to support progressive retrieval — moving from coarse room-level understanding down to fine-grained goal views and object identification. It provides a unified representation that integrates diverse sensory modalities, enabling efficient hierarchical querying from high-level room information to precise goal view and object-level details. HMSG is primarily used by the FSR-VLN navigation framework.
 
 ## Description
 
@@ -31,9 +31,9 @@ The algorithm itself is parameterized by its hierarchical structure rather than 
 
 ## Relationships
 
-- **used_by**: [[FSR-VLN]] — HMSG provides the map representation and retrieval pipeline for this visual language navigation system.
+- **used_by**: FSR-VLN — HMSG provides the map representation and retrieval pipeline for this visual language navigation system.
 
 ### 自动链接关系
 _These relationships were discovered automatically by the heuristic entity linker._
 **Confirmed links:**
-- `Hierarchical Multi-modal Scene Graph` --[[extends]] ⚠️--> `FSR-VLN`
+- `Hierarchical Multi-modal Scene Graph` --extends ⚠️--> `FSR-VLN`
