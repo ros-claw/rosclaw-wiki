@@ -609,15 +609,27 @@
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
         nodeReducer: (node, attrs) => {
-          // Selected node highlight
+          // Selected node: gold border + larger size + bigger label, keep original fill color
           if (selectedNode && selectedNode === node) {
             return {
               ...attrs,
-              color: '#fbbf24',
-              size: attrs.size * 1.6,
+              size: Math.min(attrs.size * 2.2, 28),
               zIndex: 10,
-              label: attrs.label,
-              highlighted: true,
+              labelSize: 16,
+              labelColor: { color: '#ffffff' },
+              borderColor: '#fbbf24',
+              borderSize: 3,
+            };
+          }
+          // Hovered node (not selected): cyan border + slight size bump
+          if (hoveredNode && hoveredNode === node && !selectedNode) {
+            return {
+              ...attrs,
+              size: Math.min(attrs.size * 1.4, 22),
+              zIndex: 8,
+              labelSize: 14,
+              borderColor: '#22d3ee',
+              borderSize: 2,
             };
           }
           // Dim non-connected nodes when hovering or selected
@@ -625,10 +637,17 @@
           if (focusNode && focusNode !== node) {
             const isNeighbor = graph.neighbors(focusNode).includes(node);
             if (!isNeighbor) {
-              return { ...attrs, color: 'rgba(30,41,59,0.6)', label: '', zIndex: 0 };
+              return { ...attrs, color: 'rgba(30,41,59,0.35)', label: '', zIndex: 0 };
             }
-            // Neighbor highlight
-            return { ...attrs, color: '#60a5fa', size: attrs.size * 1.2, zIndex: 5 };
+            // Neighbor highlight: blue border, keep original fill, bigger label
+            return {
+              ...attrs,
+              size: Math.min(attrs.size * 1.3, 20),
+              zIndex: 5,
+              labelSize: 14,
+              borderColor: '#60a5fa',
+              borderSize: 2,
+            };
           }
           // Filter by type
           if (activeFilter !== 'all' && attrs._type !== activeFilter) {
