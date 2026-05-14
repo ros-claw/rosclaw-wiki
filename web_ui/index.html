@@ -606,35 +606,30 @@
         labelSize: 14,
         labelFont: 'system-ui, -apple-system, sans-serif',
         labelColor: { color: '#f8fafc' },
-        labelBackgroundColor: (node, attrs) => {
-          if (attrs._selected) return '#78350f';
-          if (attrs._hovered) return '#155e75';
-          if (attrs._neighbor) return '#1e3a8a';
-          return null;
-        },
+        highlightedLabelBackgroundColor: null,
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
         nodeReducer: (node, attrs) => {
-          // Selected node: gold border + much larger + giant label
+          // Selected node: gold border + much larger + dark-brown label bg
           if (selectedNode && selectedNode === node) {
             return {
               ...attrs,
               size: Math.min(attrs.size * 2.5, 30),
               zIndex: 10,
               labelSize: 20,
-              _selected: true,
+              labelBackgroundColor: '#78350f',
               borderColor: '#fbbf24',
               borderSize: 3,
             };
           }
-          // Hovered node (not selected): cyan border + bigger
+          // Hovered node (not selected): cyan border + dark-cyan label bg
           if (hoveredNode && hoveredNode === node && !selectedNode) {
             return {
               ...attrs,
               size: Math.min(attrs.size * 1.6, 24),
               zIndex: 8,
               labelSize: 16,
-              _hovered: true,
+              labelBackgroundColor: '#155e75',
               borderColor: '#22d3ee',
               borderSize: 2,
             };
@@ -646,13 +641,13 @@
             if (!isNeighbor) {
               return { ...attrs, color: 'rgba(30,41,59,0.35)', label: '', zIndex: 0 };
             }
-            // Neighbor highlight: blue border, keep original fill, bigger label
+            // Neighbor highlight: blue border + dark-blue label bg
             return {
               ...attrs,
               size: Math.min(attrs.size * 1.4, 22),
               zIndex: 5,
               labelSize: 15,
-              _neighbor: true,
+              labelBackgroundColor: '#1e3a8a',
               borderColor: '#60a5fa',
               borderSize: 2,
             };
