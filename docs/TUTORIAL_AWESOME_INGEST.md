@@ -69,6 +69,20 @@ INFO [160/160] DRY zoom_automation (./zoom-automation/)
 INFO DONE: {'list': 'github.com_composiohq_awesome-claude-skills', 'pages_written': 0, 'total_seen': 0, 'errors': []}
 ```
 
+### Auto-detected source formats
+
+The orchestrator tries three parsers in order and automatically picks the one
+that yields entries:
+
+1. **Bullet-list** (default) — `-[*] [Name](url) - description` under `##` headings
+2. **Markdown-table** — `| [Name](url) | Description |` rows under `##` headings  
+   *Used by:* `hesamsheikh/awesome-openclaw-usecases`
+3. **CSV table** — `THE_RESOURCES_TABLE.csv` in repo root  
+   *Used by:* `hesreallyhim/awesome-claude-code`
+
+If the bullet parser returns 0 entries, the orchestrator automatically falls back
+to the table and CSV parsers — no manual intervention needed.
+
 **If the parsed count looks too high (1000+) or too low (< 10)**, look at the
 noise filters in `scripts/awesome_to_wiki.py`:
 - `NOISE_SECTIONS` — bullet sections that aren't real catalog entries
@@ -234,7 +248,7 @@ throughput, plus 30-60s for R2 upload. Run overnight or on CI.
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| `Parsed 0 entries` | README has unusual list structure (e.g., HTML table, image links) | Inspect README manually; relax the link regex in `parse_awesome_readme` |
+| `Parsed 0 entries` | README uses tables or CSV instead of bullet lists | The orchestrator auto-detects markdown tables and `THE_RESOURCES_TABLE.csv`; if still 0, inspect README manually |
 | LLM call hangs > 60s | DeepSeek rate-limit | Add `time.sleep(2)` between entries or back off in `llm_interface.py` |
 | Pages have generic summaries | LLM only had the bullet's short description as context | Run with `--skip-clone=false` so the linked repo's README is also passed |
 | `Failed to fetch README` | Repo was renamed, deleted, or made private | The orchestrator skips the entry and logs the error; safe to ignore |

@@ -45,6 +45,7 @@ State file:
 from __future__ import annotations
 
 import argparse
+import csv
 import datetime as dt
 import json
 import logging
@@ -55,8 +56,15 @@ import sys
 import time
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
+
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+except Exception:
+    pass
 
 # ── Path bootstrapping ──
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -222,6 +230,171 @@ def parse_awesome_readme(md: str) -> list[dict[str, Any]]:
     return entries
 
 
+def parse_markdown_tables(md: str, base_url: str = "") -> list[dict[str, Any]]:
+    """Parse markdown tables like | [Name](url) | Description | under ## section headings.
+
+    Handles repos such as hesamsheikh/awesome-openclaw-usecases where each entry is a
+    table row instead of a bullet list.  Relative URLs are resolved against *base_url*.
+    """
+    entries: list[dict[str, Any]] = []
+    seen_urls: set[str] = set()
+    current_section = ""
+    lines = md.splitlines()
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+
+        # Track section headings
+        m = SECTION_RE.match(line)
+        if m:
+            current_section = m.group(2).strip()
+            i += 1
+            continue
+
+        # Detect table separator  |---|---|
+        if re.match(r"^\s*\|[-:\s|]+\|\s*$", line):
+            # Read subsequent rows until blank line or non-table line
+            j = i + 1
+            while j < len(lines):
+                row = lines[j].strip()
+                if not row or not row.startswith("|"):
+                    break
+                # Skip separator-like rows
+                if re.match(r"^\|[-:\s|]+\|\s*$", row):
+                    j += 1
+                    continue
+
+                # Extract columns: | col1 | col2 | ... |
+                cells = [c.strip() for c in row.strip("|").split("|")]
+                if len(cells) < 2:
+                    j += 1
+                    continue
+
+                name_cell = cells[0]
+                desc = cells[1]
+
+                # Extract [name](url) from first cell
+                link_match = re.search(r"\[([^\]]+)\]\(([^)]+)\)", name_cell)
+                if link_match:
+                    name = link_match.group(1).strip()
+                    url = link_match.group(2).strip()
+                else:
+                    # Plain text in first column — treat as name, no URL
+                    name = name_cell.strip(" *")
+                    url = ""
+
+                if not url:
+                    j += 1
+                    continue
+
+                # Resolve relative URLs
+                if base_url and not re.match(r"^https?://", url, re.I):
+                    # Ensure base ends with / so urljoin appends rather than replaces
+                    base = base_url if base_url.endswith("/") else base_url + "/"
+                    url = urljoin(base, url)
+                    # For GitHub repo-relative .md paths, rewrite to raw content
+                    # so downstream fetchers can read them directly.
+                    m = re.match(
+                        r"https://github\.com/([^/]+)/([^/]+)/blob/([^/]+)/(.*)",
+                        url,
+                    )
+                    if m:
+                        owner, repo, branch, path = m.groups()
+                        url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{path}"
+                    elif url.endswith(".md") and "raw.githubusercontent.com" not in url:
+                        # Fallback: turn github.com/owner/repo/relative.md  → raw
+                        m2 = re.match(
+                            r"https://github\.com/([^/]+)/([^/]+)/(.*\.md)", url
+                        )
+                        if m2:
+                            owner, repo, path = m2.groups()
+                            url = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{path}"
+
+                # Noise filters
+                if current_section.lower() in NOISE_SECTIONS:
+                    j += 1
+                    continue
+                if any(p.search(url) for p in NOISE_URL_PATTERNS):
+                    j += 1
+                    continue
+                if url in seen_urls:
+                    j += 1
+                    continue
+                seen_urls.add(url)
+                entries.append({
+                    "name": name,
+                    "url": url,
+                    "description": desc.strip(" *"),
+                    "section": current_section,
+                })
+                j += 1
+            i = j
+            continue
+
+        i += 1
+
+    return entries
+
+
+def parse_csv_source(csv_text: str) -> list[dict[str, Any]]:
+    """Parse THE_RESOURCES_TABLE.csv style awesome lists.
+
+    Expected columns (case-insensitive):
+        Display Name, Primary Link, Description, Category, Sub-Category,
+        Active, Removed From Origin
+    """
+    entries: list[dict[str, Any]] = []
+    seen_urls: set[str] = set()
+
+    reader = csv.DictReader(csv_text.splitlines())
+    if not reader.fieldnames:
+        return entries
+
+    # Normalise headers to lower-case for robust matching
+    field_map = {h.lower().strip(): h for h in reader.fieldnames}
+
+    def get(row: dict[str, str], *keys: str) -> str:
+        for k in keys:
+            orig = field_map.get(k.lower().strip())
+            if orig and row.get(orig):
+                return row[orig].strip()
+        return ""
+
+    for row in reader:
+        active = get(row, "active").upper()
+        removed = get(row, "removed from origin").upper()
+        if active != "TRUE" or removed == "TRUE":
+            continue
+
+        name = get(row, "display name")
+        url = get(row, "primary link")
+        desc = get(row, "description")
+        category = get(row, "category")
+        sub = get(row, "sub-category", "sub category")
+
+        if not name or not url:
+            continue
+        if any(p.search(url) for p in NOISE_URL_PATTERNS):
+            continue
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
+
+        section = category
+        if sub and sub != category:
+            section = f"{category} > {sub}"
+
+        entries.append({
+            "name": name,
+            "url": url,
+            "description": desc,
+            "section": section,
+        })
+
+    return entries
+
+
 # ── Page generation ──
 
 
@@ -331,8 +504,26 @@ def run(
     md = github_raw(list_url, branch=branch, path="README.md")
     logger.info("README length: %d chars, branch=%s, sha=%s", len(md), branch, sha[:8] if sha else "?")
 
+    # ── Auto-detect source format ───────────────────────────
     entries = parse_awesome_readme(md)
-    logger.info("Parsed %d entries from %s", len(entries), key)
+    logger.info("Bullet-list parser: %d entries", len(entries))
+
+    if not entries:
+        # Try markdown-table parser (e.g. awesome-openclaw-usecases)
+        entries = parse_markdown_tables(md, base_url=list_url)
+        logger.info("Markdown-table parser: %d entries", len(entries))
+
+    if not entries:
+        # Try CSV table (e.g. awesome-claude-code / THE_RESOURCES_TABLE.csv)
+        logger.info("Trying THE_RESOURCES_TABLE.csv fallback ...")
+        try:
+            csv_text = github_raw(list_url, branch=branch, path="THE_RESOURCES_TABLE.csv")
+            entries = parse_csv_source(csv_text)
+            logger.info("CSV parser: %d entries", len(entries))
+        except Exception as exc:
+            logger.warning("CSV fallback failed: %s", exc)
+
+    logger.info("Parsed %d total entries from %s", len(entries), key)
     new_entries = [e for e in entries if e["url"] not in prior_urls]
     logger.info("New since last run: %d entries", len(new_entries))
 
