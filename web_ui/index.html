@@ -604,30 +604,41 @@
       renderer = new Sigma(graph, document.getElementById('sigma'), {
         renderEdgeLabels: false,
         labelSize: 13,
-        labelColor: { color: '#f8fafc' },
-        labelWeight: 'bold',
+        labelColor: (node, attrs) => {
+          if (attrs._selected) {
+            return { color: '#ffffff', backgroundColor: '#78350f' };
+          }
+          if (attrs._hovered) {
+            return { color: '#ffffff', backgroundColor: '#0e7490' };
+          }
+          if (attrs._neighbor) {
+            return { color: '#ffffff', backgroundColor: '#1e3a8a' };
+          }
+          return { color: '#f1f5f9' };
+        },
         hideEdgesOnMove: true,
         defaultNodeType: 'circle',
         nodeReducer: (node, attrs) => {
-          // Selected node: gold border + larger size + bigger label, keep original fill color
+          // Selected node: gold border + much larger + giant label
           if (selectedNode && selectedNode === node) {
             return {
               ...attrs,
-              size: Math.min(attrs.size * 2.2, 28),
+              size: Math.min(attrs.size * 2.5, 30),
               zIndex: 10,
-              labelSize: 16,
-              labelColor: { color: '#ffffff' },
+              labelSize: 20,
+              _selected: true,
               borderColor: '#fbbf24',
               borderSize: 3,
             };
           }
-          // Hovered node (not selected): cyan border + slight size bump
+          // Hovered node (not selected): cyan border + bigger
           if (hoveredNode && hoveredNode === node && !selectedNode) {
             return {
               ...attrs,
-              size: Math.min(attrs.size * 1.4, 22),
+              size: Math.min(attrs.size * 1.6, 24),
               zIndex: 8,
-              labelSize: 14,
+              labelSize: 16,
+              _hovered: true,
               borderColor: '#22d3ee',
               borderSize: 2,
             };
@@ -642,9 +653,10 @@
             // Neighbor highlight: blue border, keep original fill, bigger label
             return {
               ...attrs,
-              size: Math.min(attrs.size * 1.3, 20),
+              size: Math.min(attrs.size * 1.4, 22),
               zIndex: 5,
-              labelSize: 14,
+              labelSize: 15,
+              _neighbor: true,
               borderColor: '#60a5fa',
               borderSize: 2,
             };
