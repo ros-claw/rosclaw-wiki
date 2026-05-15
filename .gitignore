@@ -87,3 +87,8 @@ data/code_graph.json
 data/code_graph_external.json
 seekdb.db/
 *.db
+
+# Wiki pages are runtime data (merged via batch_sync) — keep only catalog + log
+wiki/**/*.md
+!wiki/index.md
+!wiki/log.md
