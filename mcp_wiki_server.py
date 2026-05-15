@@ -26,8 +26,12 @@ try:
 except ImportError as _import_err:
     FastMCP = None  # type: ignore[misc, assignment]
 
+import re
+
 import wiki_engine as engine
 from knowledge_synthesizer import KnowledgeSynthesizer, SOURCE_CONFIDENCE
+
+_WIKILINK_RE = re.compile(r"\[\[([^\]]+)\]\]")
 import retention_engine as retention
 import search_backend as search
 import vector_index
@@ -947,6 +951,164 @@ def main() -> int:
             return {"status": "done", **result}
         except Exception as exc:
             logger.exception("qa_ask failed")
+            return {"error": str(exc)}
+
+    # ── Tool 13: wiki_read_page ──
+
+    @mcp.tool()
+    def wiki_read_page(page_path: str) -> dict:
+        """Read a wiki page and return its frontmatter + body.
+
+        Args:
+            page_path: Relative path from wiki root (e.g. "skills/unitree_go2.md")
+                      or just the page id (e.g. "unitree_go2").
+
+        Returns:
+            Dict with keys: id, type, title, tags, confidence, sources, body, path.
+        """
+        path = wiki_root / page_path if ".md" in page_path else _find_page_by_id(page_path)
+        if not path or not path.exists():
+            return {"error": f"Page not found: {page_path}"}
+        try:
+            content = path.read_text(encoding="utf-8")
+            meta, body = engine.parse_frontmatter(content)
+            return {
+                "status": "ok",
+                "path": str(path.relative_to(wiki_root)),
+                "id": meta.get("id", ""),
+                "type": meta.get("type", ""),
+                "title": meta.get("title", ""),
+                "tags": meta.get("tags", []),
+                "confidence": meta.get("confidence", 0),
+                "sources": meta.get("sources", []),
+                "body": body,
+            }
+        except Exception as exc:
+            logger.exception("wiki_read_page failed")
+            return {"error": str(exc)}
+
+    def _find_page_by_id(page_id: str) -> Path | None:
+        for md_file in wiki_root.rglob("*.md"):
+            if md_file.name in ("index.md", "log.md"):
+                continue
+            try:
+                content = md_file.read_text(encoding="utf-8")
+                meta, _ = engine.parse_frontmatter(content)
+                if meta.get("id") == page_id:
+                    return md_file
+            except Exception:
+                continue
+        return None
+
+    # ── Tool 14: wiki_list_pages ──
+
+    @mcp.tool()
+    def wiki_list_pages(page_type: str | None = None, tag: str | None = None, limit: int = 50) -> dict:
+        """List wiki pages with optional filtering.
+
+        Args:
+            page_type: Filter by type (entity|algorithm|concept|skill|episode|judgment).
+            tag: Filter by tag (case-insensitive substring match).
+            limit: Max pages to return (default 50).
+
+        Returns:
+            Dict with key "pages" containing list of {id, title, type, tags, path}.
+        """
+        pages = []
+        for md_file in sorted(wiki_root.rglob("*.md")):
+            if md_file.name in ("index.md", "log.md"):
+                continue
+            try:
+                content = md_file.read_text(encoding="utf-8")
+                meta, _ = engine.parse_frontmatter(content)
+                if page_type and meta.get("type") != page_type:
+                    continue
+                tags = meta.get("tags", [])
+                if tag and not any(tag.lower() in t.lower() for t in tags):
+                    continue
+                pages.append({
+                    "id": meta.get("id", ""),
+                    "title": meta.get("title", md_file.stem),
+                    "type": meta.get("type", ""),
+                    "tags": tags,
+                    "path": str(md_file.relative_to(wiki_root)),
+                })
+                if len(pages) >= limit:
+                    break
+            except Exception:
+                continue
+        return {"status": "ok", "count": len(pages), "pages": pages}
+
+    # ── Tool 15: wiki_get_stats ──
+
+    @mcp.tool()
+    def wiki_get_stats() -> dict:
+        """Return statistics about the wiki: page counts by type, total wikilinks, orphans, etc."""
+        total = 0
+        by_type: dict[str, int] = {}
+        total_links = 0
+        for md_file in wiki_root.rglob("*.md"):
+            if md_file.name in ("index.md", "log.md"):
+                continue
+            try:
+                content = md_file.read_text(encoding="utf-8")
+                meta, body = engine.parse_frontmatter(content)
+                total += 1
+                t = meta.get("type", "unknown")
+                by_type[t] = by_type.get(t, 0) + 1
+                total_links += len(_WIKILINK_RE.findall(body))
+            except Exception:
+                continue
+        return {
+            "status": "ok",
+            "total_pages": total,
+            "by_type": by_type,
+            "total_wikilinks": total_links,
+        }
+
+    # ── Tool 16: wiki_search_by_tag ──
+
+    @mcp.tool()
+    def wiki_search_by_tag(tag: str, limit: int = 20) -> dict:
+        """Find all pages that contain a given tag.
+
+        Args:
+            tag: Tag to search for (case-insensitive substring match).
+            limit: Max results.
+
+        Returns:
+            Dict with key "pages" containing matching pages.
+        """
+        return wiki_list_pages(tag=tag, limit=limit)
+
+    # ── Tool 17: wiki_delete_page ──
+
+    @mcp.tool()
+    def wiki_delete_page(page_path: str, reason: str = "") -> dict:
+        """Move a wiki page to the archive directory.
+
+        Args:
+            page_path: Relative path from wiki root (e.g. "skills/old_page.md").
+            reason: Optional reason for deletion.
+
+        Returns:
+            Dict with status and archive path.
+        """
+        src = wiki_root / page_path
+        if not src.exists():
+            return {"error": f"Page not found: {page_path}"}
+        try:
+            archive_dir = wiki_root / "archive"
+            archive_dir.mkdir(parents=True, exist_ok=True)
+            dest = archive_dir / src.name
+            counter = 1
+            while dest.exists():
+                dest = archive_dir / f"{src.stem}_{counter}{src.suffix}"
+                counter += 1
+            engine.move_to_archive(str(src), str(wiki_root))
+            return {"status": "done", "archived_to": str(dest.relative_to(wiki_root)), "reason": reason}
+        except Exception as exc:
+            logger.exception("wiki_delete_page failed")
             return {"error": str(exc)}
 
     logger.info("Starting ROSClaw MCP Wiki Server 2.0 — wiki_root=%s", wiki_root)

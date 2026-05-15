@@ -68,6 +68,7 @@ docs/**/
 !docs/ENVIRONMENT.md
 !docs/TUTORIAL_AWESOME_INGEST.md
 !docs/api_spec_v1.json
+!docs/API_SKILL.md
 
 # Generated artifacts
 awesome_vln*.yml
