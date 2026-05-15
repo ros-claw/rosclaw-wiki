@@ -94,7 +94,7 @@ def detect_fragmentation(entity_name: str, wiki_root: str) -> list[dict[str, Any
         import numpy as np
         from sentence_transformers import SentenceTransformer
 
-        model = SentenceTransformer("all-MiniLM-L6-v2")
+        model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
         texts = [f"{p['title']}\n{p['body']}" for p in all_pages]
         embeddings = model.encode(texts, show_progress_bar=False)
 
@@ -188,7 +188,7 @@ def dedup_information(wiki_root: str, similarity_threshold: float = 0.85) -> lis
         import numpy as np
         from sentence_transformers import SentenceTransformer
 
-        model = SentenceTransformer("all-MiniLM-L6-v2")
+        model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
         texts = [f"{p['title']}\n{p['body']}" for p in pages]
         embeddings = model.encode(texts, show_progress_bar=False)
         norms = np.linalg.norm(embeddings, axis=1, keepdims=True)

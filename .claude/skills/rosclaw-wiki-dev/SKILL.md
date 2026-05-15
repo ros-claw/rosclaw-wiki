@@ -54,7 +54,7 @@ pip install -r requirements.txt
 pip install -e .
 
 # Download sentence-transformers model (auto-cached)
-python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
+python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')"
 ```
 
 ### Option B: Docker (Production-like)

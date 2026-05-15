@@ -105,7 +105,7 @@ CREATE TABLE api_usage (
 
 ## Migration Notes
 
-1. **Vector dimension**: 384 matches `all-MiniLM-L6-v2` embeddings.
+1. **Vector dimension**: 384 matches `paraphrase-multilingual-MiniLM-L12-v2` embeddings.
 2. **JSON fields**: Stored as JSON strings; SeekDB must support JSON type or TEXT with JSON functions.
 3. **Primary keys**: `wiki_pages.id` maps to existing page slugs.
 4. **Judgments FK**: Optional foreign key from `judgments.entity` to `wiki_pages.title` for referential integrity.

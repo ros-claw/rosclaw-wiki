@@ -1,6 +1,6 @@
 """ROSClaw Vector Semantic Search — sentence-transformers based indexing.
 
-Uses all-MiniLM-L6-v2 for lightweight local embeddings.
+Uses paraphrase-multilingual-MiniLM-L12-v2 for multilingual embeddings.
 Supports incremental updates and Reciprocal Rank Fusion (RRF) with whoosh.
 """
 

@@ -89,7 +89,7 @@ def import_to_seekdb(nodes: list[dict[str, Any]], batch_size: int = 200) -> dict
     from sentence_transformers import SentenceTransformer
 
     coll = get_wiki_collection()
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
     imported = 0
     errors = 0
