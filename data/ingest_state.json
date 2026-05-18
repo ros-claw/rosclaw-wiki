@@ -5,7 +5,7 @@
       "url": "https://github.com/ComposioHQ/awesome-claude-skills",
       "default_branch": "master",
       "last_commit_sha": "f2b5e29bc315f04c8e09591ba275f4c4f7d4b8fe",
-      "last_run_at": "2026-05-13T12:04:41Z",
+      "last_run_at": "2026-05-18T06:35:09Z",
       "processed_urls": [
         "./activecampaign-automation/",
         "./airtable-automation/",
@@ -174,10 +174,11 @@
     "github.com_voltagent_awesome-openclaw-skills": {
       "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
       "default_branch": "main",
-      "last_commit_sha": "0399eda05c2c9f80aef9bc701ac8287b9cc0af1b",
-      "last_run_at": "2026-05-13T17:26:49Z",
+      "last_commit_sha": "eaf196f9dd28bf13c6e44984d62a04939f7ac8db",
+      "last_run_at": "2026-05-18T06:35:11Z",
       "processed_urls": [
         "https://ai.gendigital.com/agent-trust-hub",
+        "https://clawhub.ai/gopaljigaur/accli-plus",
         "https://clawskills.sh/skills/0isone-0protocol",
         "https://clawskills.sh/skills/24601-agent-deep-research",
         "https://clawskills.sh/skills/aadipapp-android-transfer-skill",
@@ -967,20 +968,25 @@
         "https://github.com/openclaw/skills/tree/main/skills/duoplusofficial/duoplus-agent/SKILL.md",
         "https://github.com/openclaw/skills/tree/main/skills/msaleme/agent-security-harness/SKILL.md",
         "https://github.com/openclaw/skills/tree/main/skills/nevo-david/postiz/SKILL.md",
+        "https://github.com/openclaw/skills/tree/main/skills/revmischa/agentbase/SKILL.md",
         "https://github.com/openclaw/skills/tree/main/skills/socialecho-net/socialecho-social-media-management-agent/SKILL.md",
         "https://github.com/openclaw/skills/tree/main/skills/tonypk/boss-ai-agent/SKILL.md",
+        "https://github.com/openclaw/skills/tree/main/skills/trent-ai-release/trentclaw/SKILL.md",
         "https://github.com/snyk/agent-scan",
         "https://www.clawhub.ai/Gonzih/amai-id"
       ],
-      "page_count": 784,
+      "page_count": 787,
       "errors": []
     },
     "github.com_sickn33_antigravity-awesome-skills": {
       "url": "https://github.com/sickn33/antigravity-awesome-skills",
       "default_branch": "main",
-      "last_commit_sha": "d68b997a88272e1bf048b40c0dd6ac091fcfeb07",
-      "last_run_at": "2026-05-13T18:06:52Z",
+      "last_commit_sha": "7c55ad5908444255b5b58674972bf09333bc0424",
+      "last_run_at": "2026-05-18T06:35:17Z",
       "processed_urls": [
+        "./data/skills_index.json",
+        "./schemas/skills-index.v1.schema.json",
+        "./skills_index.json",
         "CATALOG.md",
         "CODE_OF_CONDUCT.md",
         "CONTRIBUTING.md",
@@ -997,6 +1003,7 @@
         "docs/users/claude-code-skills.md",
         "docs/users/codex-cli-skills.md",
         "docs/users/cursor-skills.md",
+        "docs/users/discovery-manifest.md",
         "docs/users/gemini-cli-skills.md",
         "docs/users/getting-started.md",
         "docs/users/plugins.md",
@@ -1227,6 +1234,7 @@
         "https://github.com/modi2meet",
         "https://github.com/monte-carlo-data/mc-agent-toolkit",
         "https://github.com/mrprewsh/seo-aeo-engine",
+        "https://github.com/mturac/recsys-pipeline-architect",
         "https://github.com/munir-abbasi",
         "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
         "https://github.com/nedcodes-ok",
@@ -1327,14 +1335,14 @@
         "package.json",
         "skills/"
       ],
-      "page_count": 345,
+      "page_count": 350,
       "errors": []
     },
     "github.com_hesreallyhim_awesome-claude-code": {
       "url": "https://github.com/hesreallyhim/awesome-claude-code",
       "default_branch": "main",
       "last_commit_sha": "614f102accbcd48206d63a21df64adc984026b40",
-      "last_run_at": "2026-05-14T09:02:47Z",
+      "last_run_at": "2026-05-18T06:35:21Z",
       "processed_urls": [
         "https://aipatternbook.com",
         "https://diwank.space/field-notes-from-shipping-real-code-with-claude",
@@ -1545,7 +1553,7 @@
       "url": "https://github.com/ComposioHQ/awesome-claude-plugins",
       "default_branch": "master",
       "last_commit_sha": "9ef49d0f2a270f569ec0baa987e64157b7d86858",
-      "last_run_at": "2026-05-13T18:10:21Z",
+      "last_run_at": "2026-05-18T06:35:21Z",
       "processed_urls": [
         "./agent-sdk-dev",
         "./artifacts-builder",
@@ -1593,7 +1601,7 @@
       "url": "https://github.com/VoltAgent/awesome-agent-skills",
       "default_branch": "main",
       "last_commit_sha": "95fa85de2b8044984d8ee790d0a4c1884ff2cf0b",
-      "last_run_at": "2026-05-13T19:45:14Z",
+      "last_run_at": "2026-05-18T06:35:22Z",
       "processed_urls": [
         "https://ai.gendigital.com/agent-trust-hub",
         "https://github.com/AgriciDaniel/claude-seo",
@@ -2536,7 +2544,7 @@
       "url": "https://github.com/hesamsheikh/awesome-openclaw-usecases",
       "default_branch": "main",
       "last_commit_sha": "659895e58e2105c6db8fbef39f446c8a786a480c",
-      "last_run_at": "2026-05-14T08:02:41Z",
+      "last_run_at": "2026-05-18T06:35:23Z",
       "processed_urls": [
         "https://raw.githubusercontent.com/hesamsheikh/awesome-openclaw-usecases/main/usecases/ai-video-editing.md",
         "https://raw.githubusercontent.com/hesamsheikh/awesome-openclaw-usecases/main/usecases/aionui-cowork-desktop.md",
@@ -2588,7 +2596,7 @@
       "url": "https://github.com/mergisi/awesome-openclaw-agents",
       "default_branch": "main",
       "last_commit_sha": "4c88d7cfd23b890b16fe5371682bc71c18960cd1",
-      "last_run_at": "2026-05-13T19:50:51Z",
+      "last_run_at": "2026-05-18T06:35:23Z",
       "processed_urls": [
         "./skills/claude/cost-optimizer/",
         "./skills/claude/excalidraw-architecture/",
@@ -2654,7 +2662,7 @@
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "default_branch": "main",
       "last_commit_sha": "39b5e990fe94734de271a2b13ec1513811da9cdd",
-      "last_run_at": "2026-05-13T22:57:08Z",
+      "last_run_at": "2026-05-18T06:35:24Z",
       "processed_urls": [
         "https://docs.braingrid.ai/mcp-server/installation",
         "https://docs.liquidmetal.ai/tutorials/claude-code-mcp-setup/",
@@ -4905,7 +4913,7 @@
       "url": "https://github.com/yzfly/Awesome-MCP-ZH",
       "default_branch": "main",
       "last_commit_sha": "3337f7452f5b6ee89449991f79efbde0d4f660b5",
-      "last_run_at": "2026-05-13T23:00:02Z",
+      "last_run_at": "2026-05-18T06:35:25Z",
       "processed_urls": [
         "http://github.com/liaokongVFX/MCP-Chinese-Getting-Started-Guide",
         "https://5ire.app/",
@@ -4952,7 +4960,7 @@
       "url": "https://github.com/walkinglabs/awesome-harness-engineering",
       "default_branch": "main",
       "last_commit_sha": "b8bf80c0b790c672b5c3661ec219fece80b18cd5",
-      "last_run_at": "2026-05-13T23:08:40Z",
+      "last_run_at": "2026-05-18T06:35:25Z",
       "processed_urls": [
         "https://appworld.dev/",
         "https://blog.langchain.com/agent-frameworks-runtimes-and-harnesses-oh-my/",
@@ -5065,7 +5073,7 @@
       "url": "https://github.com/alvinreal/awesome-autoresearch",
       "default_branch": "main",
       "last_commit_sha": "2f3eed30efd3f138ee550f306e17bb069e3e54ec",
-      "last_run_at": "2026-05-13T23:16:01Z",
+      "last_run_at": "2026-05-18T06:35:26Z",
       "processed_urls": [
         "https://addyosmani.com/blog/self-improving-agents/",
         "https://agenticscience.github.io/",
